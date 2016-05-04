@@ -18,5 +18,5 @@ compile:
 test:
 publish:
 	npm publish
-	cnpm sync svg-icons
+	cnpm sync svg-icon
 server:
