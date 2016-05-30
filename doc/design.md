@@ -6,14 +6,14 @@
 
 ```graph-LR
 external-icons((external icons)) --> | separator | internal-icons(internal icons)
-internal-icons --> | compiler  | svg-sprite((svg sprite))
+internal-icons --> | compiler  | svg-sprite((svg sprites))
 ```
 
 ### scan&render flow
 
 ```graph-LR
 raw-html((raw html)) --> | scanner  | icons-used(icons used)
-icons-used --> | compiler | svg-sprite(svg sprite)
+icons-used --> | compiler | svg-sprite(svg sprites)
 svg-sprite --> | renderer | rendered-html((rendered html))
 ```
 
@@ -21,9 +21,9 @@ svg-sprite --> | renderer | rendered-html((rendered html))
 
 ```graph-LR
 svg-icon((svg-icon)) --> separate
-separate --> | --format | separated-files
-separate --> | --output | separated-files
-separate --> | input    | separated-files
+separate -->|"--format"|separated-files
+separate -->|"--output"|separated-files
+separate -->|"input"|separated-files
 ```
 
 ### svg-icon separate --format <format> --output <outputRoot> inputFile1, inputFile2, ...

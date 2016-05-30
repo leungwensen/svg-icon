@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "eslint-config-airbnb"
+  ],
+  "rules": {
+    "max-len": [
+      2,
+      120,
+      4,
+      {
+        "ignoreUrls": true
+      }
+    ],
+    "no-param-reassign": 0,
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "strict": [
+      2,
+      "global"
+    ],
+    "id-length": [
+      2,
+      {
+        "min": 1
+      }
+    ]
+  }
+}
