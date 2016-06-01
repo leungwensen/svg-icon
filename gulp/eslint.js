@@ -4,12 +4,11 @@ const eslint = require('gulp-eslint');
 const gulp = require('gulp');
 const gulpIf = require('gulp-if');
 const gutil = require('gulp-util');
-
 const config = require('./config');
 
 function isFixed(file) {
   // Has ESLint fixed the file contents?
-  return file.eslint !== null && file.eslint.fixed;
+  return file.eslint != null && file.eslint.fixed;
 }
 
 _.forEach(config.lintingDirs, (dir) => {

@@ -1,17 +1,21 @@
+const path = require('path');
+
 // ports
 module.exports.ports = {
+  dev: 1024,
+  test: 2048
 };
 
 // for linting
 module.exports.lintingDirs = [
   'gulp',
-  'lib'
+  'src'
 ];
 
 // for jsdoc
 module.exports.jsdocDirs = [
   'gulp',
-  'lib'
+  'src'
 ];
 
 // for jsdoc
@@ -37,6 +41,13 @@ module.exports.jsdocConfig = {
     navType: 'vertical',
     linenums: true,
     dateFormat: 'YYYY-MM'
+  }
+};
+
+module.exports.babelTasks = {
+  src: {
+    src: path.resolve(__dirname, '../src/**/*.js'),
+    dest: path.resolve(__dirname, '../')
   }
 };
 
