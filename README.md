@@ -17,3 +17,10 @@ evil-icons | ei- | https://github.com/outpunk/evil-icons | yes
 flag-icon | fi- | https://github.com/lipis/flag-icon-css | yes
 font-awesome | fa- | https://github.com/FortAwesome/Font-Awesome | yes
 
+## references
+
+svg-icon is highly inspired by these projects:
+ 
+* [evil-icons](https://github.com/outpunk/evil-icons)
+* [Font-Awesome-SVG-PNG](https://github.com/encharm/Font-Awesome-SVG-PNG)
+
