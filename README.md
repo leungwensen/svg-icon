@@ -10,8 +10,10 @@ an ultimate svg icons collection done right.
 
 ### svg icon collections
 
-- [x] ant-design (http://ant.design/#/components/icon)
-- [x] font-awesome (https://github.com/FortAwesome/Font-Awesome)
-- [ ] flag-icon (https://github.com/lipis/flag-icon-css)
-- [ ] evil-icons (https://github.com/outpunk/evil-icons)
+type | prefix | source | supported
+----|----|----|----
+ant-design | anticon- | http://ant.design/#/components/icon | yes
+evil-icons | ei- | https://github.com/outpunk/evil-icons | yes
+flag-icon | fi- | https://github.com/lipis/flag-icon-css | yes
+font-awesome | fa- | https://github.com/FortAwesome/Font-Awesome | yes
 
