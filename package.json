@@ -1,6 +1,6 @@
 {
   "name": "svg-icon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "an ultimate svg icons collection done right",
   "main": "index.js",
   "homepage": "https://github.com/leungwensen/svg-icon#readme",
@@ -31,7 +31,8 @@
     "underscore": "^1.8.3",
     "vinyl-fs": "^2.4.3",
     "which": "^1.2.9",
-    "xml2js": "^0.4.16"
+    "xml2js": "^0.4.16",
+    "xmldom": "^0.1.22"
   },
   "devDependencies": {
     "babel-cli": "^6.7.7",
@@ -81,6 +82,6 @@
     "node": ">=4.0.0"
   },
   "bin": {
-    "svg-icon": "./index.js"
+    "svg-icon": "./bin/cli.js"
   }
 }
