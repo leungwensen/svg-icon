@@ -7,18 +7,14 @@ const commander = require('commander');
 
 const pkg = require(path.resolve(__dirname, '../package.json'));
 
-commander
-  .version(pkg.version)
-  .command('separate [sources...]')
-  .description('create a new zero project')
-  .option('-f, --format <format>', 'specify the format of the source svg icon')
-  .option('-o, --output <output>', 'specify the output path of the separated svg icons')
-  .action((sources, options) => {
-    options.format = options.format || 'font-awesome';
-    options.ouput = options.output || `./svg-icons/${options.format}`;
-    require('../lib/separate.js')(sources, options);
-  });
+function list(val) {
+  return _.map(val.split(','), (item) => _.trim(item));
+}
 
+// version
+commander.version(pkg.version);
+
+// help
 commander.on('--help', () => {
   console.log('  Examples:');
   console.log('');
@@ -31,8 +27,30 @@ commander.on('--help', () => {
   console.log('');
 });
 
-commander.parse(process.argv);
+// svg-icon separate
+commander.command('separate [sources...]')
+  .description('separate icons into individual SVG files')
+  .option('-s, --separator <separator>', 'specify a separator for the source svg icons')
+  .option('-o, --output <output>', 'specify the output path of the separated svg icons')
+  .action((sources, options) => {
+    options.separator = options.separator || 'font-awesome';
+    options.ouput = options.output || `./svg-icons/${options.separator}`;
+    require('../lib/separate.js')(sources, options);
+  });
 
+// svg-icon separate
+commander.command('iconize [sources...]')
+  .description('fill icon placeholders with real SVG icon construct')
+  .option('-e, --exts <exts>', 'specify the extension of file to be iconized', list)
+  .action((sources, options) => {
+    options.exts = options.exts || [
+        '.html'
+      ];
+    require('../lib/iconize.js')(sources, options);
+  });
+
+// parsing argv
+commander.parse(process.argv);
 if (process.argv.length === 2) {
   commander.outputHelp();
 }
