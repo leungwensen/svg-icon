@@ -1,4 +1,3 @@
-
 module.exports = {
   iconize: require('./lib/iconize'),
   separate: require('./lib/separate'),
