@@ -20,7 +20,9 @@ module.exports.svgminDirs = [
 ];
 
 // for svg-sprite
-module.exports.svgSpriteDirs = lang.map(iconsMeta, (meta) => meta.prefix.replace(/\-$/, ''));
+const iconTypes = lang.map(iconsMeta, (meta) => meta.prefix.replace(/\-$/, ''));
+iconTypes.push('zero');
+module.exports.svgSpriteDirs = iconTypes;
 
 // for jsdoc
 module.exports.jsdocDirs = [

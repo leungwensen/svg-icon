@@ -2,11 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>svg-icon demo</title>
-  <link rel="stylesheet" href="../node_modules/@alipay/zero-style/dist/common.css">
+  <title>icons demo</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<script src="../dist/index.js"></script>
+<div class="container">
+  <header>
+    <div class="logo"></div>
+    <h1>SVG Icon</h1>
+
+    <p>an ultimate svg icons collection done right</p>
+
+    <h2>syntax</h2>
+    <pre><code></code></pre>
+  </header>
+  <h2>Supported Icons</h2>
+  <article>
+    <ul class="nav nav-tabs" role="tablist" id="types">
+    </ul>
+    <div class="tab-content" id="icons"></div>
+  </article>
+</div>
+<div id="loading">
+  <div class="si-wrapper si-zero-loading-spinner">
+    <svg class="si">
+      <use xlink:href="#si-zero-loading-spinner"></use>
+    </svg>
+  </div>
+</div>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./index.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+.si-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.si-figure {
+  padding: 5px;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 20px;
+  width: 140px;
+  color: #acacac;
+  vertical-align: top;
+  text-align: center;
+  font-size: 14px;
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+#icons {
+  &.yellow {
+    fill: #f5b043
+  }
+  &.red {
+    fill: #f99
+  }
+  &.purple {
+    fill: #a563c1
+  }
+  &.emerald {
+    fill: #29bb9c
+  }
+  &.blue {
+    fill: #2980b9
+  }
+  &.green {
+    fill: #2ecc71
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+#loading {
+  background: rgba(255, 255, 255, .8);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  .si-wrapper {
+    -webkit-animation: spin 1s steps(12) infinite;
+    animation: spin 1s steps(12) infinite;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

@@ -67,6 +67,8 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('[name].css')
   ],
-  externals: {}
+  externals: {
+    jquery: 'jQuery',
+  },
 };
 
