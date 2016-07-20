@@ -28,8 +28,7 @@ function reduceIcons(file, cb) { // removing prefix in filename
   icons[type].icons = icons[type].icons || [];
   icons[type].icons.push({
     type,
-    name,
-    id: `si-${type}-${name}`
+    name
   });
   cb(null, file);
 }
