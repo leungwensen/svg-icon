@@ -9,7 +9,6 @@ const config = require('./config');
 const xmldom = require('xmldom');
 
 const domParser = new xmldom.DOMParser();
-const xmlSerializer = new xmldom.XMLSerializer();
 
 function reduceAttrs() {
   return through.obj(function render(file, enc, cb) {
@@ -50,7 +49,7 @@ lang.each(config.svgSpriteDirs, (dir) => {
           },
           shape: {
             id: {
-              generator(name){
+              generator(name) {
                 name = name
                   .replace(/\.svg$/, '')
                   .replace(/\s/g, '');
@@ -60,7 +59,7 @@ lang.each(config.svgSpriteDirs, (dir) => {
           }
         }))
         .pipe(reduceAttrs())
-        .pipe(gulp.dest(path.resolve(__dirname, `../dist/sprite/`)))
+        .pipe(gulp.dest(path.resolve(__dirname, '../dist/sprite/')))
         .on('error', (err) => {
           gutil.log(gutil.colors.red(err.message));
         })

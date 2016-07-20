@@ -25,15 +25,33 @@ lang.each(config.svgminDirs, (dir) => {
                 ]
               }
             },
-            {removeEditorsNSData: true},
-            {removeEmptyAttrs: true},
-            {removeEmptyContainers: true},
-            {removeEmptyText: true},
-            {removeHiddenElems: true},
-            {removeStyleElement: true},
-            {removeTitle: true},
-            {removeUselessDefs: true},
-            {sortAttrs: true},
+            {
+              removeEditorsNSData: true
+            },
+            {
+              removeEmptyAttrs: true
+            },
+            {
+              removeEmptyContainers: true
+            },
+            {
+              removeEmptyText: true
+            },
+            {
+              removeHiddenElems: true
+            },
+            {
+              removeStyleElement: true
+            },
+            {
+              removeTitle: true
+            },
+            {
+              removeUselessDefs: true
+            },
+            {
+              sortAttrs: true
+            },
           ]
         }))
         .pipe(gulp.dest(path.resolve(__dirname, `../dist/svg/${dir}/`)))
