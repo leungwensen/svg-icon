@@ -14,10 +14,8 @@ module.exports = {
     publicPath: '/',
     filename: '[name].js'
   },
-  alias: {
-  },
-  resolveLoader: {
-  },
+  alias: {},
+  resolveLoader: {},
   module: {
     loaders: [
       {
@@ -39,15 +37,15 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
       },
       /* TODO 用svg-icon替代
-      {
-        test: /\.woff(2)?(\?.+)?$/,
-        loader: 'url-loader?limit=10000&minetype=application/font-woff'
-      },
-      {
-        test: /\.(ttf|eot|svg|png)(\?.+)?$/,
-        loader: 'file-loader'
-      },
-      */
+       {
+       test: /\.woff(2)?(\?.+)?$/,
+       loader: 'url-loader?limit=10000&minetype=application/font-woff'
+       },
+       {
+       test: /\.(ttf|eot|svg|png)(\?.+)?$/,
+       loader: 'file-loader'
+       },
+       */
       {
         test: /\.tpl$/,
         loader: 'template2module-loader',
@@ -69,7 +67,6 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('[name].css')
   ],
-  externals: {},
-  devtool: 'source-map'
+  externals: {}
 };
 

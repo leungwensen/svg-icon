@@ -1,13 +1,14 @@
+'use strict';
 const path = require('path');
-const _ = require('underscore');
+const lang = require('zero-lang');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const jsdoc = require('gulp-jsdoc3');
 const plumber = require('gulp-plumber');
 const config = require('./config');
 
-_.each(config.jsdocDirs, (dir) => {
-  const c = _.extend({}, config.jsdocConfig, {
+lang.each(config.jsdocDirs, (dir) => {
+  const c = lang.extend({}, config.jsdocConfig, {
     opts: {
       destination: path.resolve(__dirname, `../doc/jsdoc/${dir}`)
     }
@@ -24,4 +25,4 @@ _.each(config.jsdocDirs, (dir) => {
   );
 });
 
-gulp.task('jsdoc', _.map(config.jsdocDirs, (dir) => `jsdoc-${dir}`));
+gulp.task('jsdoc', lang.map(config.jsdocDirs, (dir) => `jsdoc-${dir}`));

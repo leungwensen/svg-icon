@@ -1,14 +1,13 @@
 #!/usr/bin/env node
-
+'use strict';
 const path = require('path');
-
-const _ = require('underscore');
+const lang = require('zero-lang');
 const commander = require('commander');
 
 const pkg = require(path.resolve(__dirname, '../package.json'));
 
 function list(val) {
-  return _.map(val.split(','), (item) => _.trim(item));
+  return lang.map(val.split(','), (item) => lang.trim(item));
 }
 
 // version
@@ -54,4 +53,3 @@ commander.parse(process.argv);
 if (process.argv.length === 2) {
   commander.outputHelp();
 }
-

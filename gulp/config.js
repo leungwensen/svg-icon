@@ -1,4 +1,6 @@
 const path = require('path');
+const lang = require('zero-lang');
+const iconsMeta = require('../lib/const/icons-meta');
 
 // ports
 module.exports.ports = {
@@ -11,6 +13,14 @@ module.exports.lintingDirs = [
   'gulp',
   'src'
 ];
+
+// for svgmin
+module.exports.svgminDirs = [
+  'zero'
+];
+
+// for svg-sprite
+module.exports.svgSpriteDirs = lang.map(iconsMeta, (meta) => meta.prefix.replace(/\-$/, ''));
 
 // for jsdoc
 module.exports.jsdocDirs = [

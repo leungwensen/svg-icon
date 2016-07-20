@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-
-const _ = require('underscore');
+'use strict';
+const lang = require('zero-lang');
 const shelljs = require('shelljs');
 
 const iconsMetaByName = require('../lib/const/icons-meta-by-name');
 
 const workingDir = './temp';
-const dist = './svg-icons';
+const dist = './dist/svg';
 
 if (!shelljs.test('-d', workingDir)) {
   shelljs.mkdir(workingDir);
@@ -14,6 +14,7 @@ if (!shelljs.test('-d', workingDir)) {
 
 function syncIcons(meta) {
   const name = meta.name;
+  const prefix = meta.prefix.replace(/\-$/, '');
   const cwd = `${workingDir}/${name}`;
   console.log(`[syncing...] ${name}`);
   if (!shelljs.test('-d', cwd)) {
@@ -24,7 +25,7 @@ function syncIcons(meta) {
     shelljs.exec(`cd ${cwd} && git pull && cd ../../`)
   }
   console.log(`[separating...] ${name}`);
-  shelljs.exec(`./bin/cli.js separate -s ${name} -o ${dist}/${name} ${cwd}`);
+  shelljs.exec(`./bin/cli.js separate -s ${name} -o ${dist}/${prefix} ${cwd}`);
 }
 
 const argv = process.argv;
@@ -37,6 +38,6 @@ if (argv.length === 3) {
     console.error(`"${name}" icons is not supported!`);
   }
 } else {
-  _.each(iconsMetaByName, syncIcons);
+  lang.forIn(iconsMetaByName, syncIcons);
 }
 

@@ -1,7 +1,7 @@
-const _ = require('underscore');
+const lang = require('zero-lang');
 const webpackConf = require('./webpack.config');
 
-module.exports = _.extend({
+module.exports = lang.extend({
   devServer: {
     stats: {
       cached: false,
@@ -10,5 +10,6 @@ module.exports = _.extend({
       ],
       colors: true
     }
-  }
+  },
+  devtool: 'source-map'
 }, webpackConf);

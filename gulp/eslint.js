@@ -1,5 +1,6 @@
+'use strict';
 const path = require('path');
-const _ = require('underscore');
+const lang = require('zero-lang');
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
 const gulpIf = require('gulp-if');
@@ -11,7 +12,7 @@ function isFixed(file) {
   return file.eslint != null && file.eslint.fixed;
 }
 
-_.forEach(config.lintingDirs, (dir) => {
+lang.each(config.lintingDirs, (dir) => {
   gulp.task(
     `eslint-${dir}`, () => {
       const srcPath = path.resolve(__dirname, `../${dir}/**/*.js`);
@@ -27,5 +28,4 @@ _.forEach(config.lintingDirs, (dir) => {
   );
 });
 
-gulp.task('eslint', _.map(config.lintingDirs, (dir) => `eslint-${dir}`));
-
+gulp.task('eslint', lang.map(config.lintingDirs, (dir) => `eslint-${dir}`));
