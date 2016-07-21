@@ -4,10 +4,6 @@
   width: 50px;
   height: 50px;
   overflow: hidden;
-  svg {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 .si {
@@ -27,13 +23,22 @@
   border: 1px solid #fff;
   width: 140px;
   height: 110px;
-  color: #acacac;
+  color: #999;
   vertical-align: top;
   text-align: center;
   font-size: 14px;
   cursor: pointer;
+  svg {
+    width: 50px;
+    height: 50px;
+    fill: gray;
+  }
   &:hover {
-    background-color: #eee;
+    background-color: #dfd;
+    color: #337ab7;
+    svg {
+      fill: #337ab7;
+    }
   }
   &.selected {
     background-color: #337ab7;
