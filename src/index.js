@@ -15,7 +15,7 @@ function renderIconsByType(type) {
   const meta = icons[type];
   if (!meta.rendered) {
     $loading[0].setAttribute('style', 'display: block;');
-    $.get(`../dist/sprite/symbol/${type}.svg`, (res) => {
+    $.get(`./dist/sprite/symbol/${type}.svg`, (res) => {
       $body.prepend(new XMLSerializer().serializeToString(res));
       setTimeout(() => {
         const $type = $(`#${type}`);

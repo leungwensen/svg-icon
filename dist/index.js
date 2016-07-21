@@ -74,7 +74,7 @@ var svgIcon =
 	  var meta = icons[type];
 	  if (!meta.rendered) {
 	    $loading[0].setAttribute('style', 'display: block;');
-	    _jquery2.default.get('../dist/sprite/symbol/' + type + '.svg', function (res) {
+	    _jquery2.default.get('./dist/sprite/symbol/' + type + '.svg', function (res) {
 	      $body.prepend(new XMLSerializer().serializeToString(res));
 	      setTimeout(function () {
 	        var $type = (0, _jquery2.default)('#' + type);
