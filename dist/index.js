@@ -981,7 +981,23 @@ var svgIcon =
 			"icons": [
 				{
 					"type": "anticon",
+					"name": "aliwangwang-o"
+				},
+				{
+					"type": "anticon",
 					"name": "aliwangwang"
+				},
+				{
+					"type": "anticon",
+					"name": "android"
+				},
+				{
+					"type": "anticon",
+					"name": "apple"
+				},
+				{
+					"type": "anticon",
+					"name": "appstore-o"
 				},
 				{
 					"type": "anticon",
@@ -997,6 +1013,10 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "arrow-left"
+				},
+				{
+					"type": "anticon",
 					"name": "arrow-right"
 				},
 				{
@@ -1005,7 +1025,23 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "arrow-up"
+				},
+				{
+					"type": "anticon",
+					"name": "backward"
+				},
+				{
+					"type": "anticon",
+					"name": "bar-chart"
+				},
+				{
+					"type": "anticon",
 					"name": "bars"
+				},
+				{
+					"type": "anticon",
+					"name": "book"
 				},
 				{
 					"type": "anticon",
@@ -1017,11 +1053,19 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "camera-o"
+				},
+				{
+					"type": "anticon",
 					"name": "camera"
 				},
 				{
 					"type": "anticon",
 					"name": "caret-circle-down"
+				},
+				{
+					"type": "anticon",
+					"name": "caret-circle-left"
 				},
 				{
 					"type": "anticon",
@@ -1033,11 +1077,19 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "caret-circle-o-right"
+				},
+				{
+					"type": "anticon",
 					"name": "caret-circle-o-up"
 				},
 				{
 					"type": "anticon",
 					"name": "caret-circle-right"
+				},
+				{
+					"type": "anticon",
+					"name": "caret-circle-up"
 				},
 				{
 					"type": "anticon",
@@ -1049,7 +1101,23 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "caret-right"
+				},
+				{
+					"type": "anticon",
+					"name": "caret-up"
+				},
+				{
+					"type": "anticon",
+					"name": "check-circle-o"
+				},
+				{
+					"type": "anticon",
 					"name": "check-circle"
+				},
+				{
+					"type": "anticon",
+					"name": "check"
 				},
 				{
 					"type": "anticon",
@@ -1069,7 +1137,23 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "circle-o-left"
+				},
+				{
+					"type": "anticon",
 					"name": "circle-o-right"
+				},
+				{
+					"type": "anticon",
+					"name": "circle-o-up"
+				},
+				{
+					"type": "anticon",
+					"name": "circle-right"
+				},
+				{
+					"type": "anticon",
+					"name": "circle-up"
 				},
 				{
 					"type": "anticon",
@@ -1077,7 +1161,15 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "clock-circle"
+				},
+				{
+					"type": "anticon",
 					"name": "cloud-download-o"
+				},
+				{
+					"type": "anticon",
+					"name": "cloud-download"
 				},
 				{
 					"type": "anticon",
@@ -1085,7 +1177,19 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "cloud-upload-o"
+				},
+				{
+					"type": "anticon",
+					"name": "cloud-upload"
+				},
+				{
+					"type": "anticon",
 					"name": "cloud"
+				},
+				{
+					"type": "anticon",
+					"name": "code"
 				},
 				{
 					"type": "anticon",
@@ -1097,6 +1201,10 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "cross-circle-o"
+				},
+				{
+					"type": "anticon",
 					"name": "cross-circle"
 				},
 				{
@@ -1105,11 +1213,23 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "customerservice"
+				},
+				{
+					"type": "anticon",
+					"name": "delete"
+				},
+				{
+					"type": "anticon",
 					"name": "desktop"
 				},
 				{
 					"type": "anticon",
 					"name": "dislike"
+				},
+				{
+					"type": "anticon",
+					"name": "double-left"
 				},
 				{
 					"type": "anticon",
@@ -1125,7 +1245,19 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "edit"
+				},
+				{
+					"type": "anticon",
 					"name": "ellipsis"
+				},
+				{
+					"type": "anticon",
+					"name": "enter"
+				},
+				{
+					"type": "anticon",
+					"name": "environment-o"
 				},
 				{
 					"type": "anticon",
@@ -1141,6 +1273,22 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "exclamation-circle"
+				},
+				{
+					"type": "anticon",
+					"name": "exclamation"
+				},
+				{
+					"type": "anticon",
+					"name": "export"
+				},
+				{
+					"type": "anticon",
+					"name": "eye-o"
+				},
+				{
+					"type": "anticon",
 					"name": "eye"
 				},
 				{
@@ -1149,11 +1297,31 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "fast-forward"
+				},
+				{
+					"type": "anticon",
 					"name": "file-excel"
 				},
 				{
 					"type": "anticon",
 					"name": "file-jpg"
+				},
+				{
+					"type": "anticon",
+					"name": "file-pdf"
+				},
+				{
+					"type": "anticon",
+					"name": "file-ppt"
+				},
+				{
+					"type": "anticon",
+					"name": "file-text"
+				},
+				{
+					"type": "anticon",
+					"name": "file-unknown"
 				},
 				{
 					"type": "anticon",
@@ -1169,7 +1337,15 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "folder"
+				},
+				{
+					"type": "anticon",
 					"name": "forward"
+				},
+				{
+					"type": "anticon",
+					"name": "frown-circle"
 				},
 				{
 					"type": "anticon",
@@ -1181,7 +1357,19 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "hdd"
+				},
+				{
+					"type": "anticon",
+					"name": "heart-o"
+				},
+				{
+					"type": "anticon",
 					"name": "heart"
+				},
+				{
+					"type": "anticon",
+					"name": "home"
 				},
 				{
 					"type": "anticon",
@@ -1189,7 +1377,15 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "inbox"
+				},
+				{
+					"type": "anticon",
 					"name": "info-circle-o"
+				},
+				{
+					"type": "anticon",
+					"name": "info-circle"
 				},
 				{
 					"type": "anticon",
@@ -1205,7 +1401,19 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "like"
+				},
+				{
+					"type": "anticon",
 					"name": "line-chart"
+				},
+				{
+					"type": "anticon",
+					"name": "link"
+				},
+				{
+					"type": "anticon",
+					"name": "lock"
 				},
 				{
 					"type": "anticon",
@@ -1213,7 +1421,19 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "mail"
+				},
+				{
+					"type": "anticon",
+					"name": "meh-circle"
+				},
+				{
+					"type": "anticon",
 					"name": "meh"
+				},
+				{
+					"type": "anticon",
+					"name": "menu-fold"
 				},
 				{
 					"type": "anticon",
@@ -1221,11 +1441,31 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "message"
+				},
+				{
+					"type": "anticon",
 					"name": "minus-circle-o"
 				},
 				{
 					"type": "anticon",
+					"name": "minus-circle"
+				},
+				{
+					"type": "anticon",
+					"name": "minus-square"
+				},
+				{
+					"type": "anticon",
+					"name": "minus"
+				},
+				{
+					"type": "anticon",
 					"name": "mobile"
+				},
+				{
+					"type": "anticon",
+					"name": "notification"
 				},
 				{
 					"type": "anticon",
@@ -1241,11 +1481,31 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "pause"
+				},
+				{
+					"type": "anticon",
 					"name": "pay-circle-o"
 				},
 				{
 					"type": "anticon",
+					"name": "pay-circle"
+				},
+				{
+					"type": "anticon",
+					"name": "phone"
+				},
+				{
+					"type": "anticon",
 					"name": "picture"
+				},
+				{
+					"type": "anticon",
+					"name": "pie-chart"
+				},
+				{
+					"type": "anticon",
+					"name": "play-circle-o"
 				},
 				{
 					"type": "anticon",
@@ -1265,7 +1525,31 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "plus"
+				},
+				{
+					"type": "anticon",
+					"name": "poweroff"
+				},
+				{
+					"type": "anticon",
 					"name": "pushpin-o"
+				},
+				{
+					"type": "anticon",
+					"name": "pushpin"
+				},
+				{
+					"type": "anticon",
+					"name": "qrcode"
+				},
+				{
+					"type": "anticon",
+					"name": "question-circle-o"
+				},
+				{
+					"type": "anticon",
+					"name": "question-circle"
 				},
 				{
 					"type": "anticon",
@@ -1273,7 +1557,15 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "reload"
+				},
+				{
+					"type": "anticon",
 					"name": "retweet"
+				},
+				{
+					"type": "anticon",
+					"name": "right"
 				},
 				{
 					"type": "anticon",
@@ -1297,7 +1589,23 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "share-alt"
+				},
+				{
+					"type": "anticon",
+					"name": "shopping-cart"
+				},
+				{
+					"type": "anticon",
+					"name": "shrink"
+				},
+				{
+					"type": "anticon",
 					"name": "smile-circle"
+				},
+				{
+					"type": "anticon",
+					"name": "smile"
 				},
 				{
 					"type": "anticon",
@@ -1309,7 +1617,15 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "star"
+				},
+				{
+					"type": "anticon",
 					"name": "step-backward"
+				},
+				{
+					"type": "anticon",
+					"name": "step-forward"
 				},
 				{
 					"type": "anticon",
@@ -1317,7 +1633,27 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "swap-right"
+				},
+				{
+					"type": "anticon",
+					"name": "swap"
+				},
+				{
+					"type": "anticon",
+					"name": "tablet"
+				},
+				{
+					"type": "anticon",
+					"name": "tag-o"
+				},
+				{
+					"type": "anticon",
 					"name": "tag"
+				},
+				{
+					"type": "anticon",
+					"name": "tags-o"
 				},
 				{
 					"type": "anticon",
@@ -1329,7 +1665,27 @@ var svgIcon =
 				},
 				{
 					"type": "anticon",
+					"name": "to-top"
+				},
+				{
+					"type": "anticon",
 					"name": "unlock"
+				},
+				{
+					"type": "anticon",
+					"name": "up"
+				},
+				{
+					"type": "anticon",
+					"name": "upload"
+				},
+				{
+					"type": "anticon",
+					"name": "user"
+				},
+				{
+					"type": "anticon",
+					"name": "verticle-left"
 				},
 				{
 					"type": "anticon",
@@ -2674,7 +3030,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "adjust"
+				},
+				{
+					"type": "fa",
 					"name": "adn"
+				},
+				{
+					"type": "fa",
+					"name": "align-center"
 				},
 				{
 					"type": "fa",
@@ -2682,7 +3046,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "align-left"
+				},
+				{
+					"type": "fa",
 					"name": "align-right"
+				},
+				{
+					"type": "fa",
+					"name": "amazon"
 				},
 				{
 					"type": "fa",
@@ -2690,7 +3062,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "american-sign-language-interpreting"
+				},
+				{
+					"type": "fa",
 					"name": "anchor"
+				},
+				{
+					"type": "fa",
+					"name": "android"
 				},
 				{
 					"type": "fa",
@@ -2698,7 +3078,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "angle-double-down"
+				},
+				{
+					"type": "fa",
 					"name": "angle-double-left"
+				},
+				{
+					"type": "fa",
+					"name": "angle-double-right"
 				},
 				{
 					"type": "fa",
@@ -2706,7 +3094,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "angle-down"
+				},
+				{
+					"type": "fa",
 					"name": "angle-left"
+				},
+				{
+					"type": "fa",
+					"name": "angle-right"
 				},
 				{
 					"type": "fa",
@@ -2714,7 +3110,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "apple"
+				},
+				{
+					"type": "fa",
 					"name": "archive"
+				},
+				{
+					"type": "fa",
+					"name": "area-chart"
 				},
 				{
 					"type": "fa",
@@ -2722,7 +3126,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "arrow-circle-left"
+				},
+				{
+					"type": "fa",
 					"name": "arrow-circle-o-down"
+				},
+				{
+					"type": "fa",
+					"name": "arrow-circle-o-left"
 				},
 				{
 					"type": "fa",
@@ -2730,7 +3142,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "arrow-circle-o-up"
+				},
+				{
+					"type": "fa",
 					"name": "arrow-circle-right"
+				},
+				{
+					"type": "fa",
+					"name": "arrow-circle-up"
 				},
 				{
 					"type": "fa",
@@ -2738,11 +3158,27 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "arrow-left"
+				},
+				{
+					"type": "fa",
 					"name": "arrow-right"
 				},
 				{
 					"type": "fa",
+					"name": "arrow-up"
+				},
+				{
+					"type": "fa",
+					"name": "arrows-alt"
+				},
+				{
+					"type": "fa",
 					"name": "arrows-h"
+				},
+				{
+					"type": "fa",
+					"name": "arrows-v"
 				},
 				{
 					"type": "fa",
@@ -2754,7 +3190,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "assistive-listening-systems"
+				},
+				{
+					"type": "fa",
 					"name": "asterisk"
+				},
+				{
+					"type": "fa",
+					"name": "at"
 				},
 				{
 					"type": "fa",
@@ -2762,11 +3206,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "automobile"
+				},
+				{
+					"type": "fa",
 					"name": "backward"
 				},
 				{
 					"type": "fa",
+					"name": "balance-scale"
+				},
+				{
+					"type": "fa",
 					"name": "ban"
+				},
+				{
+					"type": "fa",
+					"name": "bank"
 				},
 				{
 					"type": "fa",
@@ -2778,11 +3234,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "bars"
+				},
+				{
+					"type": "fa",
 					"name": "battery-0"
 				},
 				{
 					"type": "fa",
+					"name": "battery-1"
+				},
+				{
+					"type": "fa",
 					"name": "battery-2"
+				},
+				{
+					"type": "fa",
+					"name": "battery-3"
 				},
 				{
 					"type": "fa",
@@ -2802,7 +3270,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "beer"
+				},
+				{
+					"type": "fa",
+					"name": "behance-square"
+				},
+				{
+					"type": "fa",
 					"name": "behance"
+				},
+				{
+					"type": "fa",
+					"name": "bell-o"
+				},
+				{
+					"type": "fa",
+					"name": "bell-slash-o"
 				},
 				{
 					"type": "fa",
@@ -2818,6 +3302,10 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "binoculars"
+				},
+				{
+					"type": "fa",
 					"name": "birthday-cake"
 				},
 				{
@@ -2826,7 +3314,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "bitbucket"
+				},
+				{
+					"type": "fa",
+					"name": "bitcoin"
+				},
+				{
+					"type": "fa",
 					"name": "black-tie"
+				},
+				{
+					"type": "fa",
+					"name": "blind"
+				},
+				{
+					"type": "fa",
+					"name": "bluetooth-b"
 				},
 				{
 					"type": "fa",
@@ -2838,7 +3342,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "bolt"
+				},
+				{
+					"type": "fa",
 					"name": "bomb"
+				},
+				{
+					"type": "fa",
+					"name": "book"
+				},
+				{
+					"type": "fa",
+					"name": "bookmark-o"
 				},
 				{
 					"type": "fa",
@@ -2850,7 +3366,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "briefcase"
+				},
+				{
+					"type": "fa",
 					"name": "btc"
+				},
+				{
+					"type": "fa",
+					"name": "bug"
+				},
+				{
+					"type": "fa",
+					"name": "building-o"
 				},
 				{
 					"type": "fa",
@@ -2862,7 +3390,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "bullseye"
+				},
+				{
+					"type": "fa",
 					"name": "bus"
+				},
+				{
+					"type": "fa",
+					"name": "buysellads"
 				},
 				{
 					"type": "fa",
@@ -2870,7 +3406,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "calculator"
+				},
+				{
+					"type": "fa",
+					"name": "calendar-check-o"
+				},
+				{
+					"type": "fa",
 					"name": "calendar-minus-o"
+				},
+				{
+					"type": "fa",
+					"name": "calendar-o"
 				},
 				{
 					"type": "fa",
@@ -2878,7 +3426,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "calendar-times-o"
+				},
+				{
+					"type": "fa",
 					"name": "calendar"
+				},
+				{
+					"type": "fa",
+					"name": "camera-retro"
 				},
 				{
 					"type": "fa",
@@ -2890,7 +3446,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "caret-down"
+				},
+				{
+					"type": "fa",
 					"name": "caret-left"
+				},
+				{
+					"type": "fa",
+					"name": "caret-right"
 				},
 				{
 					"type": "fa",
@@ -2898,11 +3462,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "caret-square-o-left"
+				},
+				{
+					"type": "fa",
 					"name": "caret-square-o-right"
 				},
 				{
 					"type": "fa",
+					"name": "caret-square-o-up"
+				},
+				{
+					"type": "fa",
 					"name": "caret-up"
+				},
+				{
+					"type": "fa",
+					"name": "cart-arrow-down"
 				},
 				{
 					"type": "fa",
@@ -2914,7 +3490,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "cc-diners-club"
+				},
+				{
+					"type": "fa",
 					"name": "cc-discover"
+				},
+				{
+					"type": "fa",
+					"name": "cc-jcb"
 				},
 				{
 					"type": "fa",
@@ -2922,7 +3506,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "cc-paypal"
+				},
+				{
+					"type": "fa",
 					"name": "cc-stripe"
+				},
+				{
+					"type": "fa",
+					"name": "cc-visa"
+				},
+				{
+					"type": "fa",
+					"name": "cc"
 				},
 				{
 					"type": "fa",
@@ -2934,7 +3530,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "chain"
+				},
+				{
+					"type": "fa",
+					"name": "check-circle-o"
+				},
+				{
+					"type": "fa",
 					"name": "check-circle"
+				},
+				{
+					"type": "fa",
+					"name": "check-square-o"
 				},
 				{
 					"type": "fa",
@@ -2942,7 +3550,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "check"
+				},
+				{
+					"type": "fa",
 					"name": "chevron-circle-down"
+				},
+				{
+					"type": "fa",
+					"name": "chevron-circle-left"
 				},
 				{
 					"type": "fa",
@@ -2950,7 +3566,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "chevron-circle-up"
+				},
+				{
+					"type": "fa",
 					"name": "chevron-down"
+				},
+				{
+					"type": "fa",
+					"name": "chevron-left"
 				},
 				{
 					"type": "fa",
@@ -2958,11 +3582,27 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "chevron-up"
+				},
+				{
+					"type": "fa",
 					"name": "child"
 				},
 				{
 					"type": "fa",
+					"name": "chrome"
+				},
+				{
+					"type": "fa",
 					"name": "circle-o-notch"
+				},
+				{
+					"type": "fa",
+					"name": "circle-o"
+				},
+				{
+					"type": "fa",
+					"name": "circle-thin"
 				},
 				{
 					"type": "fa",
@@ -2974,7 +3614,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "clock-o"
+				},
+				{
+					"type": "fa",
 					"name": "clone"
+				},
+				{
+					"type": "fa",
+					"name": "close"
+				},
+				{
+					"type": "fa",
+					"name": "cloud-download"
 				},
 				{
 					"type": "fa",
@@ -2986,6 +3638,14 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "cny"
+				},
+				{
+					"type": "fa",
+					"name": "code-fork"
+				},
+				{
+					"type": "fa",
 					"name": "code"
 				},
 				{
@@ -2994,7 +3654,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "codiepie"
+				},
+				{
+					"type": "fa",
 					"name": "coffee"
+				},
+				{
+					"type": "fa",
+					"name": "cog"
 				},
 				{
 					"type": "fa",
@@ -3002,11 +3670,27 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "columns"
+				},
+				{
+					"type": "fa",
+					"name": "comment-o"
+				},
+				{
+					"type": "fa",
 					"name": "comment"
 				},
 				{
 					"type": "fa",
+					"name": "commenting-o"
+				},
+				{
+					"type": "fa",
 					"name": "commenting"
+				},
+				{
+					"type": "fa",
+					"name": "comments-o"
 				},
 				{
 					"type": "fa",
@@ -3018,11 +3702,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "compress"
+				},
+				{
+					"type": "fa",
 					"name": "connectdevelop"
 				},
 				{
 					"type": "fa",
+					"name": "contao"
+				},
+				{
+					"type": "fa",
 					"name": "copy"
+				},
+				{
+					"type": "fa",
+					"name": "copyright"
 				},
 				{
 					"type": "fa",
@@ -3034,7 +3730,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "credit-card"
+				},
+				{
+					"type": "fa",
+					"name": "crop"
+				},
+				{
+					"type": "fa",
 					"name": "crosshairs"
+				},
+				{
+					"type": "fa",
+					"name": "css3"
 				},
 				{
 					"type": "fa",
@@ -3042,7 +3750,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "cubes"
+				},
+				{
+					"type": "fa",
 					"name": "cut"
+				},
+				{
+					"type": "fa",
+					"name": "cutlery"
 				},
 				{
 					"type": "fa",
@@ -3050,7 +3766,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "dashcube"
+				},
+				{
+					"type": "fa",
 					"name": "database"
+				},
+				{
+					"type": "fa",
+					"name": "deaf"
 				},
 				{
 					"type": "fa",
@@ -3058,7 +3782,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "dedent"
+				},
+				{
+					"type": "fa",
 					"name": "delicious"
+				},
+				{
+					"type": "fa",
+					"name": "desktop"
 				},
 				{
 					"type": "fa",
@@ -3066,7 +3798,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "diamond"
+				},
+				{
+					"type": "fa",
 					"name": "digg"
+				},
+				{
+					"type": "fa",
+					"name": "dollar"
 				},
 				{
 					"type": "fa",
@@ -3074,7 +3814,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "download"
+				},
+				{
+					"type": "fa",
 					"name": "dribbble"
+				},
+				{
+					"type": "fa",
+					"name": "dropbox"
 				},
 				{
 					"type": "fa",
@@ -3082,11 +3830,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "edge"
+				},
+				{
+					"type": "fa",
 					"name": "edit"
 				},
 				{
 					"type": "fa",
+					"name": "eject"
+				},
+				{
+					"type": "fa",
 					"name": "ellipsis-h"
+				},
+				{
+					"type": "fa",
+					"name": "ellipsis-v"
 				},
 				{
 					"type": "fa",
@@ -3098,7 +3858,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "envelope-square"
+				},
+				{
+					"type": "fa",
+					"name": "envelope"
+				},
+				{
+					"type": "fa",
 					"name": "envira"
+				},
+				{
+					"type": "fa",
+					"name": "eraser"
 				},
 				{
 					"type": "fa",
@@ -3114,11 +3886,31 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "exclamation-triangle"
+				},
+				{
+					"type": "fa",
+					"name": "exclamation"
+				},
+				{
+					"type": "fa",
 					"name": "expand"
 				},
 				{
 					"type": "fa",
+					"name": "expeditedssl"
+				},
+				{
+					"type": "fa",
+					"name": "external-link-square"
+				},
+				{
+					"type": "fa",
 					"name": "external-link"
+				},
+				{
+					"type": "fa",
+					"name": "eye-slash"
 				},
 				{
 					"type": "fa",
@@ -3130,7 +3922,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "fa"
+				},
+				{
+					"type": "fa",
 					"name": "facebook-official"
+				},
+				{
+					"type": "fa",
+					"name": "facebook-square"
 				},
 				{
 					"type": "fa",
@@ -3142,7 +3942,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "fast-forward"
+				},
+				{
+					"type": "fa",
 					"name": "fax"
+				},
+				{
+					"type": "fa",
+					"name": "feed"
 				},
 				{
 					"type": "fa",
@@ -3150,7 +3958,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "fighter-jet"
+				},
+				{
+					"type": "fa",
+					"name": "file-archive-o"
+				},
+				{
+					"type": "fa",
 					"name": "file-audio-o"
+				},
+				{
+					"type": "fa",
+					"name": "file-code-o"
 				},
 				{
 					"type": "fa",
@@ -3158,7 +3978,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "file-image-o"
+				},
+				{
+					"type": "fa",
 					"name": "file-movie-o"
+				},
+				{
+					"type": "fa",
+					"name": "file-o"
 				},
 				{
 					"type": "fa",
@@ -3170,11 +3998,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "file-powerpoint-o"
+				},
+				{
+					"type": "fa",
 					"name": "file-sound-o"
 				},
 				{
 					"type": "fa",
 					"name": "file-text-o"
+				},
+				{
+					"type": "fa",
+					"name": "file-text"
 				},
 				{
 					"type": "fa",
@@ -3190,11 +4026,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "film"
+				},
+				{
+					"type": "fa",
 					"name": "filter"
 				},
 				{
 					"type": "fa",
 					"name": "fire-extinguisher"
+				},
+				{
+					"type": "fa",
+					"name": "fire"
+				},
+				{
+					"type": "fa",
+					"name": "firefox"
 				},
 				{
 					"type": "fa",
@@ -3206,11 +4054,35 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "flag-o"
+				},
+				{
+					"type": "fa",
+					"name": "flag"
+				},
+				{
+					"type": "fa",
 					"name": "flash"
 				},
 				{
 					"type": "fa",
+					"name": "flask"
+				},
+				{
+					"type": "fa",
 					"name": "flickr"
+				},
+				{
+					"type": "fa",
+					"name": "floppy-o"
+				},
+				{
+					"type": "fa",
+					"name": "folder-o"
+				},
+				{
+					"type": "fa",
+					"name": "folder-open-o"
 				},
 				{
 					"type": "fa",
@@ -3230,7 +4102,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "fort-awesome"
+				},
+				{
+					"type": "fa",
 					"name": "forumbee"
+				},
+				{
+					"type": "fa",
+					"name": "forward"
 				},
 				{
 					"type": "fa",
@@ -3238,11 +4118,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "frown-o"
+				},
+				{
+					"type": "fa",
 					"name": "futbol-o"
 				},
 				{
 					"type": "fa",
+					"name": "gamepad"
+				},
+				{
+					"type": "fa",
 					"name": "gavel"
+				},
+				{
+					"type": "fa",
+					"name": "gbp"
 				},
 				{
 					"type": "fa",
@@ -3254,6 +4146,10 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "genderless"
+				},
+				{
+					"type": "fa",
 					"name": "get-pocket"
 				},
 				{
@@ -3262,7 +4158,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "gg"
+				},
+				{
+					"type": "fa",
+					"name": "gift"
+				},
+				{
+					"type": "fa",
+					"name": "git-square"
+				},
+				{
+					"type": "fa",
 					"name": "git"
+				},
+				{
+					"type": "fa",
+					"name": "github-alt"
 				},
 				{
 					"type": "fa",
@@ -3274,7 +4186,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "gitlab"
+				},
+				{
+					"type": "fa",
 					"name": "gittip"
+				},
+				{
+					"type": "fa",
+					"name": "glass"
+				},
+				{
+					"type": "fa",
+					"name": "glide-g"
 				},
 				{
 					"type": "fa",
@@ -3286,7 +4210,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "google-plus-circle"
+				},
+				{
+					"type": "fa",
 					"name": "google-plus-official"
+				},
+				{
+					"type": "fa",
+					"name": "google-plus-square"
 				},
 				{
 					"type": "fa",
@@ -3298,7 +4230,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "google"
+				},
+				{
+					"type": "fa",
+					"name": "graduation-cap"
+				},
+				{
+					"type": "fa",
 					"name": "gratipay"
+				},
+				{
+					"type": "fa",
+					"name": "group"
 				},
 				{
 					"type": "fa",
@@ -3306,7 +4250,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "hacker-news"
+				},
+				{
+					"type": "fa",
 					"name": "hand-grab-o"
+				},
+				{
+					"type": "fa",
+					"name": "hand-lizard-o"
 				},
 				{
 					"type": "fa",
@@ -3314,11 +4266,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "hand-o-left"
+				},
+				{
+					"type": "fa",
 					"name": "hand-o-right"
 				},
 				{
 					"type": "fa",
+					"name": "hand-o-up"
+				},
+				{
+					"type": "fa",
 					"name": "hand-paper-o"
+				},
+				{
+					"type": "fa",
+					"name": "hand-peace-o"
 				},
 				{
 					"type": "fa",
@@ -3330,6 +4294,10 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "hand-spock-o"
+				},
+				{
+					"type": "fa",
 					"name": "hand-stop-o"
 				},
 				{
@@ -3338,7 +4306,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "hdd-o"
+				},
+				{
+					"type": "fa",
 					"name": "header"
+				},
+				{
+					"type": "fa",
+					"name": "headphones"
+				},
+				{
+					"type": "fa",
+					"name": "heart-o"
 				},
 				{
 					"type": "fa",
@@ -3350,7 +4330,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "history"
+				},
+				{
+					"type": "fa",
 					"name": "home"
+				},
+				{
+					"type": "fa",
+					"name": "hospital-o"
 				},
 				{
 					"type": "fa",
@@ -3362,6 +4350,10 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "hourglass-2"
+				},
+				{
+					"type": "fa",
 					"name": "hourglass-3"
 				},
 				{
@@ -3370,7 +4362,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "hourglass-o"
+				},
+				{
+					"type": "fa",
 					"name": "hourglass-start"
+				},
+				{
+					"type": "fa",
+					"name": "hourglass"
+				},
+				{
+					"type": "fa",
+					"name": "houzz"
 				},
 				{
 					"type": "fa",
@@ -3378,11 +4382,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "i-cursor"
+				},
+				{
+					"type": "fa",
 					"name": "ils"
 				},
 				{
 					"type": "fa",
+					"name": "image"
+				},
+				{
+					"type": "fa",
 					"name": "inbox"
+				},
+				{
+					"type": "fa",
+					"name": "indent"
 				},
 				{
 					"type": "fa",
@@ -3394,6 +4410,14 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "info"
+				},
+				{
+					"type": "fa",
+					"name": "inr"
+				},
+				{
+					"type": "fa",
 					"name": "instagram"
 				},
 				{
@@ -3402,7 +4426,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "intersex"
+				},
+				{
+					"type": "fa",
 					"name": "ioxhost"
+				},
+				{
+					"type": "fa",
+					"name": "italic"
 				},
 				{
 					"type": "fa",
@@ -3414,11 +4446,27 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "key"
+				},
+				{
+					"type": "fa",
 					"name": "keyboard-o"
 				},
 				{
 					"type": "fa",
+					"name": "krw"
+				},
+				{
+					"type": "fa",
 					"name": "language"
+				},
+				{
+					"type": "fa",
+					"name": "laptop"
+				},
+				{
+					"type": "fa",
+					"name": "lastfm-square"
 				},
 				{
 					"type": "fa",
@@ -3430,11 +4478,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "leanpub"
+				},
+				{
+					"type": "fa",
 					"name": "legal"
 				},
 				{
 					"type": "fa",
+					"name": "lemon-o"
+				},
+				{
+					"type": "fa",
 					"name": "level-down"
+				},
+				{
+					"type": "fa",
+					"name": "level-up"
 				},
 				{
 					"type": "fa",
@@ -3450,6 +4510,10 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "line-chart"
+				},
+				{
+					"type": "fa",
 					"name": "link"
 				},
 				{
@@ -3458,7 +4522,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "linkedin"
+				},
+				{
+					"type": "fa",
+					"name": "linux"
+				},
+				{
+					"type": "fa",
+					"name": "list-alt"
+				},
+				{
+					"type": "fa",
 					"name": "list-ol"
+				},
+				{
+					"type": "fa",
+					"name": "list-ul"
 				},
 				{
 					"type": "fa",
@@ -3470,7 +4550,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "lock"
+				},
+				{
+					"type": "fa",
 					"name": "long-arrow-down"
+				},
+				{
+					"type": "fa",
+					"name": "long-arrow-left"
 				},
 				{
 					"type": "fa",
@@ -3478,11 +4566,27 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "long-arrow-up"
+				},
+				{
+					"type": "fa",
 					"name": "low-vision"
 				},
 				{
 					"type": "fa",
+					"name": "magic"
+				},
+				{
+					"type": "fa",
 					"name": "magnet"
+				},
+				{
+					"type": "fa",
+					"name": "mail-forward"
+				},
+				{
+					"type": "fa",
+					"name": "mail-reply-all"
 				},
 				{
 					"type": "fa",
@@ -3498,7 +4602,27 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "map-o"
+				},
+				{
+					"type": "fa",
 					"name": "map-pin"
+				},
+				{
+					"type": "fa",
+					"name": "map-signs"
+				},
+				{
+					"type": "fa",
+					"name": "map"
+				},
+				{
+					"type": "fa",
+					"name": "mars-double"
+				},
+				{
+					"type": "fa",
+					"name": "mars-stroke-h"
 				},
 				{
 					"type": "fa",
@@ -3514,11 +4638,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "maxcdn"
+				},
+				{
+					"type": "fa",
 					"name": "meanpath"
 				},
 				{
 					"type": "fa",
+					"name": "medium"
+				},
+				{
+					"type": "fa",
 					"name": "medkit"
+				},
+				{
+					"type": "fa",
+					"name": "meh-o"
 				},
 				{
 					"type": "fa",
@@ -3530,11 +4666,27 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "microphone"
+				},
+				{
+					"type": "fa",
 					"name": "minus-circle"
 				},
 				{
 					"type": "fa",
 					"name": "minus-square-o"
+				},
+				{
+					"type": "fa",
+					"name": "minus-square"
+				},
+				{
+					"type": "fa",
+					"name": "minus"
+				},
+				{
+					"type": "fa",
+					"name": "mixcloud"
 				},
 				{
 					"type": "fa",
@@ -3546,11 +4698,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "money"
+				},
+				{
+					"type": "fa",
 					"name": "moon-o"
 				},
 				{
 					"type": "fa",
 					"name": "motorcycle"
+				},
+				{
+					"type": "fa",
+					"name": "mouse-pointer"
 				},
 				{
 					"type": "fa",
@@ -3562,7 +4722,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "newspaper-o"
+				},
+				{
+					"type": "fa",
 					"name": "object-group"
+				},
+				{
+					"type": "fa",
+					"name": "object-ungroup"
+				},
+				{
+					"type": "fa",
+					"name": "odnoklassniki-square"
 				},
 				{
 					"type": "fa",
@@ -3574,11 +4746,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "openid"
+				},
+				{
+					"type": "fa",
 					"name": "opera"
 				},
 				{
 					"type": "fa",
+					"name": "optin-monster"
+				},
+				{
+					"type": "fa",
 					"name": "outdent"
+				},
+				{
+					"type": "fa",
+					"name": "pagelines"
 				},
 				{
 					"type": "fa",
@@ -3590,6 +4774,14 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "paper-plane"
+				},
+				{
+					"type": "fa",
+					"name": "paperclip"
+				},
+				{
+					"type": "fa",
 					"name": "paragraph"
 				},
 				{
@@ -3598,7 +4790,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "pause-circle"
+				},
+				{
+					"type": "fa",
 					"name": "pause"
+				},
+				{
+					"type": "fa",
+					"name": "paw"
 				},
 				{
 					"type": "fa",
@@ -3610,6 +4810,10 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "pencil"
+				},
+				{
+					"type": "fa",
 					"name": "percent"
 				},
 				{
@@ -3618,7 +4822,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "phone"
+				},
+				{
+					"type": "fa",
 					"name": "picture-o"
+				},
+				{
+					"type": "fa",
+					"name": "pie-chart"
+				},
+				{
+					"type": "fa",
+					"name": "pied-piper-alt"
 				},
 				{
 					"type": "fa",
@@ -3634,11 +4850,27 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "pinterest-square"
+				},
+				{
+					"type": "fa",
+					"name": "pinterest"
+				},
+				{
+					"type": "fa",
 					"name": "plane"
 				},
 				{
 					"type": "fa",
+					"name": "play-circle-o"
+				},
+				{
+					"type": "fa",
 					"name": "play-circle"
+				},
+				{
+					"type": "fa",
+					"name": "play"
 				},
 				{
 					"type": "fa",
@@ -3654,7 +4886,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "plus-square"
+				},
+				{
+					"type": "fa",
+					"name": "plus"
+				},
+				{
+					"type": "fa",
+					"name": "power-off"
+				},
+				{
+					"type": "fa",
 					"name": "print"
+				},
+				{
+					"type": "fa",
+					"name": "product-hunt"
 				},
 				{
 					"type": "fa",
@@ -3662,7 +4910,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "qq"
+				},
+				{
+					"type": "fa",
 					"name": "qrcode"
+				},
+				{
+					"type": "fa",
+					"name": "question-circle-o"
 				},
 				{
 					"type": "fa",
@@ -3670,7 +4926,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "question"
+				},
+				{
+					"type": "fa",
 					"name": "quote-left"
+				},
+				{
+					"type": "fa",
+					"name": "quote-right"
 				},
 				{
 					"type": "fa",
@@ -3678,7 +4942,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "random"
+				},
+				{
+					"type": "fa",
 					"name": "rebel"
+				},
+				{
+					"type": "fa",
+					"name": "recycle"
+				},
+				{
+					"type": "fa",
+					"name": "reddit-alien"
 				},
 				{
 					"type": "fa",
@@ -3687,6 +4963,10 @@ var svgIcon =
 				{
 					"type": "fa",
 					"name": "reddit"
+				},
+				{
+					"type": "fa",
+					"name": "refresh"
 				},
 				{
 					"type": "fa",
@@ -3714,6 +4994,10 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "rocket"
+				},
+				{
+					"type": "fa",
 					"name": "rotate-left"
 				},
 				{
@@ -3738,11 +5022,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "scribd"
+				},
+				{
+					"type": "fa",
+					"name": "search-minus"
+				},
+				{
+					"type": "fa",
 					"name": "search-plus"
 				},
 				{
 					"type": "fa",
 					"name": "search"
+				},
+				{
+					"type": "fa",
+					"name": "sellsy"
 				},
 				{
 					"type": "fa",
@@ -3754,7 +5050,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "share-alt-square"
+				},
+				{
+					"type": "fa",
 					"name": "share-alt"
+				},
+				{
+					"type": "fa",
+					"name": "share-square-o"
 				},
 				{
 					"type": "fa",
@@ -3770,7 +5074,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "ship"
+				},
+				{
+					"type": "fa",
 					"name": "shirtsinbulk"
+				},
+				{
+					"type": "fa",
+					"name": "shopping-bag"
 				},
 				{
 					"type": "fa",
@@ -3778,7 +5090,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "shopping-cart"
+				},
+				{
+					"type": "fa",
 					"name": "sign-in"
+				},
+				{
+					"type": "fa",
+					"name": "sign-language"
 				},
 				{
 					"type": "fa",
@@ -3786,7 +5106,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "signal"
+				},
+				{
+					"type": "fa",
 					"name": "signing"
+				},
+				{
+					"type": "fa",
+					"name": "simplybuilt"
 				},
 				{
 					"type": "fa",
@@ -3794,11 +5122,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "skyatlas"
+				},
+				{
+					"type": "fa",
 					"name": "skype"
 				},
 				{
 					"type": "fa",
+					"name": "slack"
+				},
+				{
+					"type": "fa",
 					"name": "sliders"
+				},
+				{
+					"type": "fa",
+					"name": "slideshare"
 				},
 				{
 					"type": "fa",
@@ -3810,6 +5150,14 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "snapchat-square"
+				},
+				{
+					"type": "fa",
+					"name": "snapchat"
+				},
+				{
+					"type": "fa",
 					"name": "soccer-ball-o"
 				},
 				{
@@ -3818,7 +5166,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "sort-alpha-desc"
+				},
+				{
+					"type": "fa",
 					"name": "sort-amount-asc"
+				},
+				{
+					"type": "fa",
+					"name": "sort-amount-desc"
 				},
 				{
 					"type": "fa",
@@ -3826,7 +5182,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "sort-desc"
+				},
+				{
+					"type": "fa",
 					"name": "sort-down"
+				},
+				{
+					"type": "fa",
+					"name": "sort-numeric-asc"
 				},
 				{
 					"type": "fa",
@@ -3834,11 +5198,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "sort"
+				},
+				{
+					"type": "fa",
 					"name": "soundcloud"
 				},
 				{
 					"type": "fa",
+					"name": "space-shuttle"
+				},
+				{
+					"type": "fa",
 					"name": "spinner"
+				},
+				{
+					"type": "fa",
+					"name": "spoon"
 				},
 				{
 					"type": "fa",
@@ -3850,7 +5226,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "square"
+				},
+				{
+					"type": "fa",
+					"name": "stack-exchange"
+				},
+				{
+					"type": "fa",
 					"name": "stack-overflow"
+				},
+				{
+					"type": "fa",
+					"name": "star-half-empty"
 				},
 				{
 					"type": "fa",
@@ -3866,11 +5254,31 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "star"
+				},
+				{
+					"type": "fa",
 					"name": "steam-square"
 				},
 				{
 					"type": "fa",
+					"name": "steam"
+				},
+				{
+					"type": "fa",
+					"name": "step-backward"
+				},
+				{
+					"type": "fa",
 					"name": "step-forward"
+				},
+				{
+					"type": "fa",
+					"name": "stethoscope"
+				},
+				{
+					"type": "fa",
+					"name": "sticky-note-o"
 				},
 				{
 					"type": "fa",
@@ -3882,7 +5290,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "stop-circle"
+				},
+				{
+					"type": "fa",
 					"name": "stop"
+				},
+				{
+					"type": "fa",
+					"name": "street-view"
 				},
 				{
 					"type": "fa",
@@ -3894,7 +5310,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "stumbleupon"
+				},
+				{
+					"type": "fa",
+					"name": "subscript"
+				},
+				{
+					"type": "fa",
 					"name": "subway"
+				},
+				{
+					"type": "fa",
+					"name": "suitcase"
 				},
 				{
 					"type": "fa",
@@ -3902,7 +5330,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "superscript"
+				},
+				{
+					"type": "fa",
 					"name": "support"
+				},
+				{
+					"type": "fa",
+					"name": "table"
 				},
 				{
 					"type": "fa",
@@ -3914,6 +5350,10 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "tags"
+				},
+				{
+					"type": "fa",
 					"name": "tasks"
 				},
 				{
@@ -3922,7 +5362,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "tencent-weibo"
+				},
+				{
+					"type": "fa",
 					"name": "terminal"
+				},
+				{
+					"type": "fa",
+					"name": "text-height"
 				},
 				{
 					"type": "fa",
@@ -3934,7 +5382,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "th-list"
+				},
+				{
+					"type": "fa",
+					"name": "th"
+				},
+				{
+					"type": "fa",
 					"name": "themeisle"
+				},
+				{
+					"type": "fa",
+					"name": "thumb-tack"
 				},
 				{
 					"type": "fa",
@@ -3942,11 +5402,23 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "thumbs-o-down"
+				},
+				{
+					"type": "fa",
 					"name": "thumbs-o-up"
 				},
 				{
 					"type": "fa",
+					"name": "thumbs-up"
+				},
+				{
+					"type": "fa",
 					"name": "ticket"
+				},
+				{
+					"type": "fa",
+					"name": "times-circle-o"
 				},
 				{
 					"type": "fa",
@@ -3962,11 +5434,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "toggle-off"
+				},
+				{
+					"type": "fa",
 					"name": "toggle-on"
 				},
 				{
 					"type": "fa",
 					"name": "toggle-up"
+				},
+				{
+					"type": "fa",
+					"name": "trademark"
 				},
 				{
 					"type": "fa",
@@ -3982,7 +5462,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "trash"
+				},
+				{
+					"type": "fa",
+					"name": "tree"
+				},
+				{
+					"type": "fa",
 					"name": "trello"
+				},
+				{
+					"type": "fa",
+					"name": "tripadvisor"
 				},
 				{
 					"type": "fa",
@@ -3990,7 +5482,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "truck"
+				},
+				{
+					"type": "fa",
 					"name": "try"
+				},
+				{
+					"type": "fa",
+					"name": "tty"
+				},
+				{
+					"type": "fa",
+					"name": "tumblr-square"
 				},
 				{
 					"type": "fa",
@@ -4010,6 +5514,14 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "twitter"
+				},
+				{
+					"type": "fa",
+					"name": "umbrella"
+				},
+				{
+					"type": "fa",
 					"name": "underline"
 				},
 				{
@@ -4026,7 +5538,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "unlock"
+				},
+				{
+					"type": "fa",
 					"name": "upload"
+				},
+				{
+					"type": "fa",
+					"name": "usb"
 				},
 				{
 					"type": "fa",
@@ -4038,7 +5558,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "user-plus"
+				},
+				{
+					"type": "fa",
 					"name": "user-secret"
+				},
+				{
+					"type": "fa",
+					"name": "user-times"
+				},
+				{
+					"type": "fa",
+					"name": "user"
 				},
 				{
 					"type": "fa",
@@ -4050,11 +5582,31 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "venus-mars"
+				},
+				{
+					"type": "fa",
+					"name": "venus"
+				},
+				{
+					"type": "fa",
 					"name": "viacoin"
 				},
 				{
 					"type": "fa",
 					"name": "viadeo-square"
+				},
+				{
+					"type": "fa",
+					"name": "viadeo"
+				},
+				{
+					"type": "fa",
+					"name": "video-camera"
+				},
+				{
+					"type": "fa",
+					"name": "vimeo-square"
 				},
 				{
 					"type": "fa",
@@ -4066,7 +5618,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "vk"
+				},
+				{
+					"type": "fa",
 					"name": "volume-control-phone"
+				},
+				{
+					"type": "fa",
+					"name": "volume-down"
 				},
 				{
 					"type": "fa",
@@ -4074,7 +5634,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "volume-up"
+				},
+				{
+					"type": "fa",
 					"name": "warning"
+				},
+				{
+					"type": "fa",
+					"name": "wechat"
 				},
 				{
 					"type": "fa",
@@ -4090,7 +5658,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "wheelchair"
+				},
+				{
+					"type": "fa",
+					"name": "wifi"
+				},
+				{
+					"type": "fa",
 					"name": "wikipedia-w"
+				},
+				{
+					"type": "fa",
+					"name": "windows"
 				},
 				{
 					"type": "fa",
@@ -4098,7 +5678,15 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "wordpress"
+				},
+				{
+					"type": "fa",
 					"name": "wpbeginner"
+				},
+				{
+					"type": "fa",
+					"name": "wpforms"
 				},
 				{
 					"type": "fa",
@@ -4110,7 +5698,19 @@ var svgIcon =
 				},
 				{
 					"type": "fa",
+					"name": "xing"
+				},
+				{
+					"type": "fa",
 					"name": "y-combinator-square"
+				},
+				{
+					"type": "fa",
+					"name": "y-combinator"
+				},
+				{
+					"type": "fa",
+					"name": "yahoo"
 				},
 				{
 					"type": "fa",
@@ -4127,6 +5727,14 @@ var svgIcon =
 				{
 					"type": "fa",
 					"name": "youtube-play"
+				},
+				{
+					"type": "fa",
+					"name": "youtube-square"
+				},
+				{
+					"type": "fa",
+					"name": "youtube"
 				}
 			]
 		},
