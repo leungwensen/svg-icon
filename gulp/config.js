@@ -19,6 +19,18 @@ module.exports.svgminDirs = [
   'zero'
 ];
 
+// for svgmin
+module.exports.svgminRemovingAttrsIgnores = [
+  'color',
+  'font-color',
+  'inner-join',
+  'left-join',
+  'map-bubble-hover',
+  'map-bubble',
+  'map-color-hover',
+  'map-color',
+];
+
 // for svg-sprite
 const iconTypes = lang.map(iconsMeta, (meta) => meta.prefix.replace(/\-$/, ''));
 iconTypes.push('zero');
