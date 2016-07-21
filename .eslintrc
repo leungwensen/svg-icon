@@ -13,6 +13,7 @@
     ],
     "no-param-reassign": 0,
     "comma-dangle": 1,
+    "import/no-unresolved": 1,
     "strict": 0,
     "id-length": [
       2,

@@ -14,7 +14,6 @@ lang.each(iconsMeta, meta => {
 });
 
 icons.zero = {
-
   name: 'zero',
   prefix: 'zero-'
 };
@@ -36,7 +35,7 @@ function reduceIcons(file, cb) { // removing prefix in filename
 vfs.src(path.resolve(process.cwd(), './dist/svg/**/*.svg'))
   .pipe(mapStream(reduceIcons))
   .on('end', () => {
-    const iconsFilePath = path.resolve(process.cwd(), './demo/data/icons.json');
+    const iconsFilePath = path.resolve(process.cwd(), './src/data/icons.json');
     console.log(`[writting...] ${iconsFilePath}`);
     fs.writeFile(iconsFilePath, JSON.stringify(icons), 'utf8', (err) => {
       if (err) throw err;
