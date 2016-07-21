@@ -2,7 +2,7 @@
 
 An ultimate svg icons collection done right.
 
-## [demo](http://leungwensen.github.io/svg-icon/demo/)
+## [homepage](http://leungwensen.github.io/svg-icon/)
 
 ## usage
 
