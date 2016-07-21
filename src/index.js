@@ -2,7 +2,9 @@ require('./index.less');
 
 import $ from 'jquery';
 import lang from 'zero-lang';
-import downloadAsFile from './common/download';
+import {
+  saveAs
+} from 'file-saver';
 
 const icons = require('json!./data/icons.json');
 
@@ -95,11 +97,13 @@ $('#download').on('click', () => {
       }
       return '';
     });
-    const svgSprite =
-      `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
-  ${symbols.join('')}
-</svg>`;
-    downloadAsFile('si-sprite.svg', svgSprite);
+    const svgSprite = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">${symbols.join('')}</svg>`;
+    const blob = new Blob([
+      svgSprite
+    ], {
+      type: 'text/plain;charset=utf-8'
+    });
+    saveAs(blob, 'si-sprite.svg');
   }
 });
 
