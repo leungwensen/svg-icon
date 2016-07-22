@@ -21,7 +21,7 @@ ant-design       | ant-         | http://ant.design/#/components/icon           
 bootstrap        | bootstrap-   | https://github.com/twbs/bootstrap                  | yes
 devicons         | dev-         | https://github.com/vorillaz/devicons               | yes
 elusive-iconfont | elusive-     | https://github.com/reduxframework/elusive-iconfont | yes
-entypo           | entypo-      | http://entypo.com                                  | yes
+entypo           | entypo-      | https://github.com/danielbruce/entypo              | yes
 evil-icons       | evil-        | https://github.com/outpunk/evil-icons              | yes
 flag-icon        | flag-        | https://github.com/lipis/flag-icon-css             | yes
 font-awesome     | awesome-     | https://github.com/FortAwesome/Font-Awesome        | yes
@@ -34,8 +34,8 @@ map-icons        | map-         | https://github.com/scottdejonge/map-icons     
 material-design  | material-    | https://github.com/google/material-design-icons    | yes
 mfglabs-iconset  | mfglabs-     | https://github.com/MfgLabs/mfglabs-iconset         | yes
 octicons         | oct-         | https://github.com/primer/octicons                 | yes
-open-iconic      | open-        | https://github.com/iconic/open-iconic              | no
-payment-font     | payment-     | https://github.com/vendocrat/PaymentFont           | no
+open-iconic      | open-        | https://github.com/iconic/open-iconic              | yes
+payment-font     | payment-     | https://github.com/vendocrat/PaymentFont           | yes
 payment-webfont  | payment-web- | https://github.com/orlandotm/payment-webfont       | no
 simple-icons     | simple-      | https://github.com/danleech/simple-icons           | no
 subway           | subway-      | https://github.com/mariuszostrowski/subway         | no
