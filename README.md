@@ -26,10 +26,10 @@ evil-icons       | evil-        | https://github.com/outpunk/evil-icons         
 flag-icon        | flag-        | https://github.com/lipis/flag-icon-css             | yes
 font-awesome     | awesome-     | https://github.com/FortAwesome/Font-Awesome        | yes
 foundation       | foundation-  | https://github.com/zurb/foundation-icon-fonts      | yes
-geomicons-open   | geom-        | https://github.com/jxnblk/geomicons-open           | no
-ico-moon-free    | icomoon-     | https://github.com/Keyamoon/IcoMoon-Free           | no
+geomicons-open   | geom-        | https://github.com/jxnblk/geomicons-open           | yes
+icomoon-free     | icomoon-     | https://github.com/Keyamoon/IcoMoon-Free           | yes
 ioncons          | ionic-       | https://github.com/driftyco/ionicons               | yes
-maki             | maki-        | https://github.com/mapbox/maki                     | no
+maki             | maki-        | https://github.com/mapbox/maki                     | yes
 map-icons        | map-         | https://github.com/scottdejonge/map-icons          | no
 marka            | marka-       | https://github.com/fians/marka                     | no
 material-design  | material-    | https://github.com/google/material-design-icons    | yes
