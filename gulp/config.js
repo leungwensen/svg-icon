@@ -31,6 +31,9 @@ module.exports.svgminRemovingAttrsIgnores = [
   'map-color',
 ];
 
+// for sync-icons
+module.exports.iconNames = lang.map(iconsMeta, (meta) => meta.name);
+
 // for svg-sprite
 const iconTypes = lang.map(iconsMeta, (meta) => meta.prefix.replace(/\-$/, ''));
 iconTypes.push('zero');

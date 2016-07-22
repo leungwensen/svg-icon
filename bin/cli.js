@@ -33,7 +33,7 @@ commander.command('separate [sources...]')
   .option('-o, --output <output>', 'specify the output path of the separated svg icons')
   .action((sources, options) => {
     options.separator = options.separator || 'font-awesome';
-    options.ouput = options.output || `./svg-icons/${options.separator}`;
+    options.ouput = options.output || `./dist/svg/${options.separator}`;
     require('../lib/separate.js')(sources, options);
   });
 
