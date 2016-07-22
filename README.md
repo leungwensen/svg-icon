@@ -25,7 +25,7 @@ entypo           | entypo-      | http://entypo.com                             
 evil-icons       | evil-        | https://github.com/outpunk/evil-icons              | yes
 flag-icon        | flag-        | https://github.com/lipis/flag-icon-css             | yes
 font-awesome     | awesome-     | https://github.com/FortAwesome/Font-Awesome        | yes
-foundation       | foundation-  | https://github.com/zurb/foundation-icon-fonts      | no
+foundation       | foundation-  | https://github.com/zurb/foundation-icon-fonts      | yes
 geomicons-open   | geom-        | https://github.com/jxnblk/geomicons-open           | no
 ico-moon-free    | icomoon-     | https://github.com/Keyamoon/IcoMoon-Free           | no
 ioncons          | ionic-       | https://github.com/driftyco/ionicons               | yes
