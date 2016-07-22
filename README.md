@@ -30,10 +30,9 @@ geomicons-open   | geom-        | https://github.com/jxnblk/geomicons-open      
 icomoon-free     | icomoon-     | https://github.com/Keyamoon/IcoMoon-Free           | yes
 ioncons          | ionic-       | https://github.com/driftyco/ionicons               | yes
 maki             | maki-        | https://github.com/mapbox/maki                     | yes
-map-icons        | map-         | https://github.com/scottdejonge/map-icons          | no
-marka            | marka-       | https://github.com/fians/marka                     | no
+map-icons        | map-         | https://github.com/scottdejonge/map-icons          | yes
 material-design  | material-    | https://github.com/google/material-design-icons    | yes
-mfglabs-iconset  | mfglabs-     | https://github.com/MfgLabs/mfglabs-iconset         | no
+mfglabs-iconset  | mfglabs-     | https://github.com/MfgLabs/mfglabs-iconset         | yes
 octicons         | oct-         | https://github.com/primer/octicons                 | yes
 open-iconic      | open-        | https://github.com/iconic/open-iconic              | no
 payment-font     | payment-     | https://github.com/vendocrat/PaymentFont           | no
