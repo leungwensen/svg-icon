@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+const fs = require('fs');
 const lang = require('zero-lang');
 const shelljs = require('shelljs');
 
@@ -17,7 +18,12 @@ function syncIcons(meta) {
   const prefix = meta.prefix.replace(/\-$/, '');
   const cwd = `${workingDir}/${name}`;
   console.log(`[syncing...] ${name}`);
-  if (!shelljs.test('-d', cwd)) {
+  if (meta.download) {
+    // console.log(`[downloading...] ${name}`);
+    // const urlParts = meta.download.split('/');
+    // const filename = urlParts[urlParts.length - 1];
+    // shelljs.exec(`curl -o ${workingDir}/${filename} ${meta.download} `);
+  } else if (!shelljs.test('-d', cwd)) {
     console.log(`[cloning...] ${name}`);
     shelljs.exec(`git clone ${meta.repo} ${cwd}`);
   } else {

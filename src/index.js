@@ -48,7 +48,7 @@ lang.forIn(icons, (meta, type) => {
     <p class="center"><input type="checkbox" class="select-all" data-type="${type}"/> Select All</p>
   </div>`);
 });
-renderIconsByType('anticon');
+renderIconsByType('ant');
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', (e) => {
   renderIconsByType($(e.target).data('type'));
