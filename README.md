@@ -17,13 +17,15 @@ npm install svg-icon --save
 
 type | prefix | source | supported
 ----|----|----|----
-ant-design      | anticon- | http://ant.design/#/components/icon                 | yes
-evil-icons      | ei-      | https://github.com/outpunk/evil-icons               | yes
-flag-icon       | fi-      | https://github.com/lipis/flag-icon-css              | yes
-font-awesome    | fa-      | https://github.com/FortAwesome/Font-Awesome         | yes
-material-design | md-      | https://github.com/google/material-design-icons.git | yes
-octicons        | oi-      | https://github.com/primer/octicons                  | yes
-zero            | zero-    | src/zero                                            | yes
+ant-design      | anticon-   | http://ant.design/#/components/icon                 | yes
+bootstrap       | glyphicon- | https://github.com/twbs/bootstrap                   | yes
+evil-icons      | ei-        | https://github.com/outpunk/evil-icons               | yes
+flag-icon       | fi-        | https://github.com/lipis/flag-icon-css              | yes
+font-awesome    | fa-        | https://github.com/FortAwesome/Font-Awesome         | yes
+ioncons         | ion-       | https://github.com/driftyco/ionicons                | yes
+material-design | md-        | https://github.com/google/material-design-icons     | yes
+octicons        | oi-        | https://github.com/primer/octicons                  | yes
+zero            | zero-      | src/zero                                            | yes
 
 Need more? Please leave an [issue][issues] or a [pull request][pull-requests].
 
