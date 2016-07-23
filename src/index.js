@@ -81,7 +81,6 @@ $('.select-all').on('change', function () {
 
 $(document).on('click', '.si-figure', function () {
   const selected = $(this).hasClass('selected');
-  console.log(selected);
   if (selected) {
     $(this).removeClass('selected');
   } else {

@@ -127,7 +127,6 @@ var svgIcon =
 
 	(0, _jquery2.default)(document).on('click', '.si-figure', function () {
 	  var selected = (0, _jquery2.default)(this).hasClass('selected');
-	  console.log(selected);
 	  if (selected) {
 	    (0, _jquery2.default)(this).removeClass('selected');
 	  } else {
