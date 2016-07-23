@@ -6,7 +6,6 @@ import {
 } from 'file-saver';
 
 const icons = require('json!./data/icons.json');
-const types = $.map(icons, (meta, type) => type);
 
 const $body = $('body');
 const $icons = $('#icons');
@@ -47,7 +46,7 @@ $.each(icons, (type, meta) => {
 $icons.tabslet({
   deeplinking: true
 });
-$icons.on('_after', function (e) {
+$icons.on('_after', (e) => {
   const $tab = $(e.target);
   const type = $tab.data('type');
   console.log(type);

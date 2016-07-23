@@ -47,56 +47,59 @@ var svgIcon =
 
 	'use strict';
 
-	var _jquery = __webpack_require__(1);
+	var _jquery = __webpack_require__(10);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _zeroLang = __webpack_require__(2);
-
-	var _zeroLang2 = _interopRequireDefault(_zeroLang);
-
-	var _fileSaver = __webpack_require__(9);
+	var _fileSaver = __webpack_require__(11);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(12);
+	__webpack_require__(14);
 
-	var icons = __webpack_require__(16);
+	__webpack_require__(20);
+
+
+	var icons = __webpack_require__(21);
 
 	var $body = (0, _jquery2.default)('body');
-	var $types = (0, _jquery2.default)('#types');
 	var $icons = (0, _jquery2.default)('#icons');
+	var $types = (0, _jquery2.default)('#icon-types');
 	var $loading = (0, _jquery2.default)('#loading');
 
 	function renderIconsByType(type) {
-	  var meta = icons[type];
-	  if (!meta.rendered) {
+	  var meta = icons[type] || icons.ant;
+	  if (meta && !meta.rendered) {
 	    $loading[0].setAttribute('style', 'display: block;');
 	    _jquery2.default.get('./dist/sprite/symbol/' + type + '.svg', function (res) {
 	      $body.prepend(new XMLSerializer().serializeToString(res));
-	      setTimeout(function () {
-	        var $type = (0, _jquery2.default)('#' + type);
-	        _zeroLang2.default.each(icons[type].icons, function (icon) {
-	          icon.id = 'si-' + icon.type + '-' + icon.name;
-	          $type.append('<figure class="si-figure" data-type="' + type + '" data-id="' + icon.id + '">\n          <div id="figure-' + icon.id + '"></div>\n          <figcaption>' + icon.type + '-' + icon.name + '</figcaption>\n        </figure>');
-	          (0, _jquery2.default)('#figure-' + icon.id).append('<div class="si-wrapper ' + icon.id + '">\n          <svg class="si"><use xlink:href="#' + icon.id + '"></use></svg>\n        </div>');
-	        });
-	        meta.rendered = true;
-	        $loading.hide();
-	      }, 10);
+	      var $type = (0, _jquery2.default)('#' + type);
+	      _jquery2.default.each(icons[type].icons, function (index, icon) {
+	        var id = 'si-' + type + '-' + icon;
+	        $type.append('<figure class="si-figure" data-type="' + type + '" data-id="' + id + '">\n          <div id="figure-' + id + '"></div>\n          <figcaption>' + type + '-' + icon + '</figcaption>\n        </figure>');
+	        (0, _jquery2.default)('#figure-' + id).append('<div class="si-wrapper ' + id + '">\n          <svg class="si"><use xlink:href="#' + id + '"></use></svg>\n        </div>');
+	      });
+	      meta.rendered = true;
+	      $loading.hide();
 	    });
 	  }
 	}
 
-	_zeroLang2.default.forIn(icons, function (meta, type) {
-	  $types.append('<li role="presentation">\n    <a href="#' + type + '" aria-controls="home" role="tab" data-toggle="tab" data-type="' + type + '">\n    ' + meta.name + ' <span class="badge selected-count" data-type="' + type + '"></span>\n    </a>\n  </li>');
-	  $icons.append('<div role="tabpanel" class="tab-pane" id="' + type + '">\n    <p class="center"><input type="checkbox" class="select-all" data-type="' + type + '"/> Select All</p>\n  </div>');
+	_jquery2.default.each(icons, function (type, meta) {
+	  $types.append('<li data-type="' + type + '">\n    <a href="#' + type + '">' + meta.name + '<span class="selected-count" data-type="' + type + '"></span></a>\n  </li>');
+	  $icons.append('<div class="tab-content" id="' + type + '">\n    <p class="center"><input type="checkbox" class="select-all" data-type="' + type + '"/> Select All</p>\n  </div>');
 	});
-	renderIconsByType('anticon');
+	$icons.tabslet({
+	  deeplinking: true
+	});
+	$icons.on('_after', function (e) {
+	  var $tab = (0, _jquery2.default)(e.target);
+	  var type = $tab.data('type');
+	  console.log(type);
+	  renderIconsByType(type);
+	});
 
-	(0, _jquery2.default)('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-	  renderIconsByType((0, _jquery2.default)(e.target).data('type'));
-	});
+	renderIconsByType(location.hash.replace(/^#/, ''));
 
 	function syncSelectedCount(type) {
 	  var count = (0, _jquery2.default)('#' + type).find('.si-figure.selected').length;
@@ -131,13 +134,13 @@ var svgIcon =
 	});
 
 	(0, _jquery2.default)('#download').on('click', function () {
-	  var ids = _zeroLang2.default.map((0, _jquery2.default)('.selected.si-figure'), function (item) {
+	  var ids = _jquery2.default.map((0, _jquery2.default)('.selected.si-figure'), function (item) {
 	    return (0, _jquery2.default)(item).data('id');
 	  });
 	  if (!ids.length) {
 	    alert('Please select at lease one icon');
 	  } else {
-	    var symbols = _zeroLang2.default.map(ids, function (id) {
+	    var symbols = _jquery2.default.map(ids, function (id) {
 	      if ((0, _jquery2.default)('#' + id)[0]) {
 	        return (0, _jquery2.default)('#' + id)[0].outerHTML;
 	      }
@@ -151,615 +154,23 @@ var svgIcon =
 	  }
 	});
 
-	$types.children().first().addClass('active');
-	$icons.children().first().addClass('active');
-
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
 /***/ function(module, exports) {
 
 	module.exports = jQuery;
 
 /***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var objectUtils = __webpack_require__(3);
-
-	module.exports = objectUtils.extend({
-	  global: __webpack_require__(7)
-	}, objectUtils, __webpack_require__(5), __webpack_require__(6), __webpack_require__(8), __webpack_require__(4));
-
-/***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var checkType = __webpack_require__(4);
-	var getType = checkType.getType;
-	var isFunction = checkType.isFunction;
-	var isObject = checkType.isObject;
-	var isPlainObject = checkType.isPlainObject;
-
-	var arrayUtils = __webpack_require__(5);
-	var contains = arrayUtils.contains;
-	var each = arrayUtils.each;
-	var isArrayLike = arrayUtils.isArrayLike;
-	var toArray = arrayUtils.toArray;
-
-	function toPlainObject(obj) {
-	  return isPlainObject(obj) ? obj : {};
-	}
-	function forIn(obj, callback, thisObj) {
-	  var plainObj = toPlainObject(obj);
-	  for (var key in plainObj) {
-	    if ({}.hasOwnProperty.call(plainObj, key)) {
-	      callback.call(thisObj, plainObj[key], key, obj);
-	    }
-	  }
-	}
-
-	var keys = Object.keys ? function (obj) {
-	  return Object.keys(obj);
-	} : function (obj) {
-	  var result = [];
-	  forIn(obj, function (value, key) {
-	    if (!(isFunction(obj) && key === 'prototype')) {
-	      result.push(key);
-	    }
-	  });
-	  return result;
-	};
-
-	function values(obj) {
-	  var result = [];
-	  forIn(obj, function (value) {
-	    result.push(value);
-	  });
-	  return result;
-	}
-
-	function extend(dest) {
-	  dest = dest || {};
-	  each(toArray(arguments).slice(1), function (source) {
-	    if (source) {
-	      forIn(source, function (value, key) {
-	        dest[key] = source[key];
-	      });
-	    }
-	  });
-	  return dest;
-	}
-
-	function merge(dest) {
-	  dest = dest || {};
-	  each(toArray(arguments).slice(1), function (source) {
-	    forIn(source, function (value, prop) {
-	      if (getType(source[prop]) !== getType(dest[prop])) {
-	        if (isPlainObject(source[prop])) {
-	          dest[prop] = {};
-	          merge(dest[prop], source[prop]);
-	        } else {
-	          dest[prop] = source[prop];
-	        }
-	      } else {
-	        if (isPlainObject(source[prop])) {
-	          merge(dest[prop], source[prop]);
-	        } else {
-	          dest[prop] = source[prop];
-	        }
-	      }
-	    });
-	  });
-	  return dest;
-	}
-
-	var objectUtils = {
-	  extend: extend,
-	  forIn: forIn,
-	  isObject: isObject,
-	  isPlainObject: isPlainObject,
-	  keys: keys,
-	  merge: merge,
-	  values: values,
-	  assign: extend,
-	  hasKey: function hasKey(obj, key) {
-	    return obj.hasOwnProperty(key);
-	  },
-	  hasValue: function hasValue(obj, value) {
-	    return contains(values(obj), value);
-	  },
-	  invert: function invert(obj) {
-	    var result = {};
-	    forIn(obj, function (value, key) {
-	      result[value] = key;
-	    });
-	    return result;
-	  },
-	  clone: function clone(obj) {
-	    if (isArrayLike(obj)) {
-	      return toArray(obj);
-	    }
-	    if (isPlainObject(obj)) {
-	      return merge({}, obj);
-	    }
-	    return obj;
-	  },
-	  destroy: function destroy(obj) {
-	    forIn(obj, function (value, key) {
-	      delete obj[key];
-	    });
-	    obj.prototype = null;
-	    obj = null;
-	  }
-	};
-
-	module.exports = objectUtils;
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-	var toString = {}.toString;
-	var isType = function isType(obj, type) {
-	  return toString.call(obj) === '[object ' + type + ']';
-	};
-
-	var checkType = {
-	  isType: isType,
-	  isArguments: function isArguments(obj) {
-	    return isType(obj, 'Arguments');
-	  },
-	  isArray: Array.isArray ? Array.isArray : function (obj) {
-	    return isType(obj, 'Array');
-	  },
-	  isArrayLike: function isArrayLike(obj) {
-	    return (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object' && isFinite(obj.length);
-	  },
-	  isBoolean: function isBoolean(obj) {
-	    return isType(obj, 'Boolean');
-	  },
-	  isDate: function isDate(obj) {
-	    return isType(obj, 'Date');
-	  },
-	  isError: function isError(obj) {
-	    return isType(obj, 'Error');
-	  },
-	  isFunction: function isFunction(obj) {
-	    return isType(obj, 'Function');
-	  },
-	  isNull: function isNull(obj) {
-	    return obj === null;
-	  },
-	  isNumber: function isNumber(obj) {
-	    return isType(obj, 'Number');
-	  },
-	  isPlainObject: function isPlainObject(obj) {
-	    return isType(obj, 'Object');
-	  },
-	  isRegExp: function isRegExp(obj) {
-	    return isType(obj, 'RegExp');
-	  },
-	  isString: function isString(obj) {
-	    return isType(obj, 'String');
-	  },
-	  isUndefined: function isUndefined(obj) {
-	    return obj === undefined;
-	  },
-	  getType: function getType(obj) {
-	    var typeStr = toString.call(obj);
-	    return typeStr.replace(/^\[object /, '').replace(/\]$/, '');
-	  },
-	  isObject: function isObject(obj) {
-	    var type = typeof obj === 'undefined' ? 'undefined' : _typeof(obj);
-	    return type === 'function' || type === 'object' && !!obj;
-	  }
-	};
-
-	checkType.isNil = function (obj) {
-	  return checkType.isNull(obj) || checkType.isUndefined(obj);
-	};
-
-	module.exports = checkType;
-
-/***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-	var checkType = __webpack_require__(4);
-	var numberUtils = __webpack_require__(6);
-
-	var isArray = checkType.isArray;
-	var AP = Array.prototype;
-	var slice = AP.slice;
-
-	function isArrayLike(arr) {
-	  return (typeof arr === 'undefined' ? 'undefined' : _typeof(arr)) === 'object' && numberUtils.isFinite(arr.length);
-	}
-	function toArray(arr) {
-	  return isArrayLike(arr) ? slice.call(arr) : [];
-	}
-
-	function arrayFromSecondElement(arr) {
-	  return slice.call(arr, 1);
-	}
-	function applyNativeFunction(nativeFunction, target, args) {
-	  return nativeFunction.apply(target, arrayFromSecondElement(args));
-	}
-
-	// index
-	var index = function index(up) {
-	  return function (arr, searchElement, fromIndex) {
-	    var i = void 0;
-	    var len = arr.length >>> 0;
-	    if (len === 0) {
-	      return -1;
-	    }
-	    if (!fromIndex) {
-	      fromIndex = up ? 0 : arr.length;
-	    } else if (fromIndex < 0) {
-	      fromIndex = Math.max(0, arr.length + fromIndex);
-	    }
-	    if (up) {
-	      for (i = fromIndex; i < arr.length; i++) {
-	        if (arr[i] === searchElement) {
-	          return i;
-	        }
-	      }
-	    } else {
-	      for (i = fromIndex; i >= 0; i--) {
-	        if (arr[i] === searchElement) {
-	          return i;
-	        }
-	      }
-	    }
-	    return -1;
-	  };
-	};
-	var indexOf = AP.indexOf ? function indexOf(arr) {
-	  return applyNativeFunction(AP.indexOf, arr, arguments);
-	} : index(true);
-	var lastIndexOf = AP.lastIndexOf ? function lastIndexOf(arr) {
-	  return applyNativeFunction(AP.lastIndexOf, arr, arguments);
-	} : index();
-
-	// each
-	var each = AP.forEach ? function each(arr /* , callback, thisObj */) {
-	  applyNativeFunction(AP.forEach, arr, arguments);
-	} : function each(arr, callback, thisObj) {
-	  var a = toArray(arr);
-	  for (var i = 0; i < a.length; i++) {
-	    callback.call(thisObj, a[i], i, arr);
-	  }
-	};
-
-	// every
-	var every = AP.every ? function every(arr) {
-	  return applyNativeFunction(AP.every, arr, arguments);
-	} : function (arr, callback, thisObj) {
-	  var a = toArray(arr);
-	  for (var i = 0; i < a.length; i++) {
-	    if (!callback.call(thisObj, a[i], i, arr)) {
-	      return false;
-	    }
-	  }
-	  return true;
-	};
-
-	// filter
-	var filter = AP.filter ? function filter(arr) {
-	  return applyNativeFunction(AP.filter, arr, arguments);
-	} : function (arr, callback, thisObj) {
-	  var res = [];
-	  each(arr, function (element, key) {
-	    if (callback.call(thisObj, element, key, arr)) {
-	      res.push(element);
-	    }
-	  });
-	  return res;
-	};
-
-	// map
-	var map = AP.map ? function map(arr) {
-	  return applyNativeFunction(AP.map, arr, arguments);
-	} : function (arr, callback, thisObj) {
-	  var res = [];
-	  each(arr, function (element, key) {
-	    res.push(callback.call(thisObj, element, key, arr));
-	  });
-	  return res;
-	};
-
-	// some
-	var some = AP.some ? function some(arr) {
-	  return applyNativeFunction(AP.some, arr, arguments);
-	} : function (arr, callback, thisObj) {
-	  var i = void 0;
-	  for (i = 0; i < arr.length; i++) {
-	    if (callback.call(thisObj, arr[i], i, arr)) {
-	      return true;
-	    }
-	  }
-	  return false;
-	};
-
-	// reduce
-	var reduce = AP.reduce ? function reduce(arr) {
-	  return applyNativeFunction(AP.reduce, arr, arguments);
-	} : function (arr, callback, thisObj) {
-	  var value = void 0;
-	  if (thisObj) {
-	    value = thisObj;
-	  }
-	  for (var i = 0; i < arr.length; i++) {
-	    if (value) {
-	      value = callback(value, arr[i], i, arr);
-	    } else {
-	      value = arr[i];
-	    }
-	  }
-	  return value;
-	};
-
-	// reduceRight
-	var reduceRight = AP.reduceRight ? function reduceRight(arr) {
-	  return applyNativeFunction(AP.reduceRight, arr, arguments);
-	} : function (arr, callback, thisObj) {
-	  var value = void 0;
-	  if (thisObj) {
-	    value = thisObj;
-	  }
-	  for (var i = arr.length - 1; i >= 0; i--) {
-	    if (value) {
-	      value = callback(value, arr[i], i, arr);
-	    } else {
-	      value = arr[i];
-	    }
-	  }
-	  return value;
-	};
-
-	// contains
-	function contains(arr, value) {
-	  return indexOf(toArray(arr), value) > -1;
-	}
-
-	// uniq
-	function uniq(arr) {
-	  var resultArr = [];
-	  each(arr, function (element) {
-	    if (!contains(resultArr, element)) {
-	      resultArr.push(element);
-	    }
-	  });
-	  return resultArr;
-	}
-
-	// flatten
-	function flatten(arr) {
-	  var a = toArray(arr);
-	  var r = [];
-	  for (var i = 0, l = a.length; i < l; ++i) {
-	    if (isArrayLike(a[i])) {
-	      r = r.concat(a[i]);
-	    } else {
-	      r[r.length] = a[i];
-	    }
-	  }
-	  return r;
-	}
-
-	var arrayUtils = {
-	  contains: contains,
-	  each: each,
-	  every: every,
-	  filter: filter,
-	  flatten: flatten,
-	  index: index,
-	  indexOf: indexOf,
-	  isArray: isArray,
-	  isArrayLike: isArrayLike,
-	  lastIndexOf: lastIndexOf,
-	  map: map,
-	  reduce: reduce,
-	  reduceRight: reduceRight,
-	  some: some,
-	  toArray: toArray,
-	  uniq: uniq,
-	  forEach: each,
-	  difference: function difference(arr) {
-	    var rest = flatten(arrayFromSecondElement(arguments));
-	    return filter(arr, function (value) {
-	      return !contains(rest, value);
-	    });
-	  },
-	  eachReverse: function eachReverse(arr, callback, thisObj) {
-	    var a = toArray(arr);
-	    var i = a.length - 1;
-	    for (; i > -1; i -= 1) {
-	      callback.call(thisObj, a[i], i, arr);
-	    }
-	  },
-	  intersect: function intersect(a, b) {
-	    var result = [];
-	    each(a, function (value) {
-	      if (contains(b, value)) {
-	        result.push(value);
-	      }
-	    });
-	    return result;
-	  },
-	  range: function range(start, stop, step) {
-	    if (stop == null) {
-	      stop = start || 0;
-	      start = 0;
-	    }
-	    if (!step) {
-	      step = stop < start ? -1 : 1;
-	    }
-	    var length = Math.max(Math.ceil((stop - start) / step), 0);
-	    var range = new Array(length);
-	    for (var i = 0; i < length; i++, start += step) {
-	      range[i] = start;
-	    }
-	    return range;
-	  },
-	  remove: function remove(arr, fromIndex, toIndex) {
-	    var len = arr.length;
-	    if (!numberUtils.isNumber(fromIndex)) {
-	      return arr;
-	    }
-	    var rest = arr.slice((toIndex || fromIndex) + 1 || len);
-	    arr.length = fromIndex < 0 ? len + fromIndex : fromIndex;
-	    return arr.push.apply(arr, rest);
-	  },
-	  union: function union() {
-	    var resultArr = [];
-	    var sourceArrs = toArray(arguments);
-	    each(sourceArrs, function (arr) {
-	      resultArr = resultArr.concat(arr);
-	    });
-	    return uniq(resultArr);
-	  }
-	};
-
-	module.exports = arrayUtils;
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var checkType = __webpack_require__(4);
-	var isNumber = checkType.isNumber;
-	var nativeMin = Math.min;
-	var nativeMax = Math.max;
-
-	var numberUtils = {
-	  isFinite: isFinite,
-	  isNaN: isNaN,
-	  isNumber: isNumber,
-	  isDecimal: function isDecimal(num) {
-	    return isNumber(num) && num % 1 !== 0;
-	  },
-	  isEven: function isEven(num) {
-	    return isNumber(num) && num % 2 === 0;
-	  },
-	  isInteger: Number.isInteger ? Number.isInteger : function (num) {
-	    return isNumber(num) && num % 1 === 0;
-	  },
-	  isNegative: function isNegative(num) {
-	    return isNumber(num) && num < 0;
-	  },
-	  isOdd: function isOdd(num) {
-	    return isNumber(num) && num % 2 !== 0;
-	  },
-	  isPositive: function isPositive(num) {
-	    return isNumber(num) && num > 0;
-	  },
-	  toFloat: function toFloat(str) {
-	    return parseFloat(str);
-	  },
-	  toInteger: function toInteger(str, radix) {
-	    return parseInt(str, radix || 10);
-	  },
-	  isInRange: function isInRange(value, start, end) {
-	    start = +start || 0;
-	    if (end === undefined) {
-	      end = start;
-	      start = 0;
-	    } else {
-	      end = +end || 0;
-	    }
-	    return value >= nativeMin(start, end) && value < nativeMax(start, end);
-	  }
-	};
-
-	numberUtils.isInFinite = function (num) {
-	  return !numberUtils.isFinite(num);
-	};
-
-	module.exports = numberUtils;
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-	var undefStr = 'undefined';
-
-	var result = {};
-
-	if ((typeof window === 'undefined' ? 'undefined' : _typeof(window)) !== undefStr) {
-	  result = window;
-	} else if ((typeof global === 'undefined' ? 'undefined' : _typeof(global)) !== undefStr) {
-	  result = global;
-	} else if ((typeof self === 'undefined' ? 'undefined' : _typeof(self)) !== undefStr) {
-	  result = self;
-	}
-
-	module.exports = result;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var checkType = __webpack_require__(4);
-
-	var isString = checkType.isString;
-	var stringPrototype = String.prototype;
-
-	function toString(a) {
-	  return a.toString();
-	}
-
-	var stringUtils = {
-	  isString: isString,
-	  trim: function trim(str) {
-	    str = toString(str);
-	    return stringPrototype.trim ? str.trim() : str.replace(/^\s+|\s+$/g, '');
-	  },
-	  trimLeft: function trimLeft(str) {
-	    str = toString(str);
-	    return stringPrototype.trimLeft ? str.trimLeft() : str.replace(/^\s+/g, '');
-	  },
-	  trimRight: function trimRight(str) {
-	    str = toString(str);
-	    return stringPrototype.trimRight ? str.trimRight() : str.replace(/^\s+/g, '');
-	  },
-	  lc: function lc(str) {
-	    return toString(str).toLowerCase();
-	  },
-	  uc: function uc(str) {
-	    return toString(str).toUpperCase();
-	  },
-	  hasSubString: function hasSubString(str, subStr) {
-	    return toString(str).indexOf(toString(subStr)) > -1;
-	  }
-	};
-
-	module.exports = stringUtils;
-
-/***/ },
-/* 9 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -939,21 +350,21 @@ var svgIcon =
 
 	if (typeof module !== "undefined" && module.exports) {
 		module.exports.saveAs = saveAs;
-	} else if ("function" !== "undefined" && __webpack_require__(10) !== null && __webpack_require__(11) !== null) {
+	} else if ("function" !== "undefined" && __webpack_require__(12) !== null && __webpack_require__(13) !== null) {
 		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
 			return saveAs;
 		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	}
 
 /***/ },
-/* 10 */
+/* 12 */
 /***/ function(module, exports) {
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };
 
 
 /***/ },
-/* 11 */
+/* 13 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
@@ -961,14695 +372,9003 @@ var svgIcon =
 	/* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ },
-/* 12 */
+/* 14 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 13 */,
-/* 14 */,
 /* 15 */,
-/* 16 */
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Tabslet | tabs jQuery plugin
+	 *
+	 * @copyright Copyright 2015, Dimitris Krestos
+	 * @license   Apache License, Version 2.0 (http://www.opensource.org/licenses/apache2.0.php)
+	 * @link      http://vdw.staytuned.gr
+	 * @version   v1.7.2
+	 */
+
+	/* Sample html structure
+	 <div class='tabs'>
+	  <ul class='horizontal'>
+	    <li><a href="#tab-1">Tab 1</a></li>
+	    <li><a href="#tab-2">Tab 2</a></li>
+	    <li><a href="#tab-3">Tab 3</a></li>
+	  </ul>
+	  <div id='tab-1'></div>
+	  <div id='tab-2'></div>
+	  <div id='tab-3'></div>
+	</div>
+	 OR
+	 <div class='tabs'>
+	  <ul class='horizontal'>
+	    <li><a href="#tab-1">Tab 1</a></li>
+	    <li><a href="#tab-2">Tab 2</a></li>
+	    <li><a href="#tab-3">Tab 3</a></li>
+	  </ul>
+	</div>
+	<div id='tabs_container'>
+	  <div id='tab-1'></div>
+	  <div id='tab-2'></div>
+	  <div id='tab-3'></div>
+	</div>
+	 */
+
+	;(function ($, window, undefined) {
+	  "use strict";
+
+	  $.fn.tabslet = function (options) {
+
+	    var defaults = {
+	      mouseevent: 'click',
+	      attribute: 'href',
+	      animation: false,
+	      autorotate: false,
+	      deeplinking: false,
+	      pauseonhover: true,
+	      delay: 2000,
+	      active: 1,
+	      container: false,
+	      controls: {
+	        prev: '.prev',
+	        next: '.next'
+	      }
+	    };
+
+	    var options = $.extend(defaults, options);
+
+	    return this.each(function () {
+
+	      var $this = $(this),
+	          _cache_li = [],
+	          _cache_div = [];
+	      var _container = options.container ? $(options.container) : $this;
+	      var _tabs = _container.find('> div');
+
+	      // Caching
+	      _tabs.each(function () {
+	        _cache_div.push($(this).css('display'));
+	      });
+
+	      // Autorotate
+	      var elements = $this.find('> ul > li'),
+	          i = options.active - 1; // ungly
+
+	      if (!$this.data('tabslet-init')) {
+	        var deep_link = function deep_link() {
+
+	          var ids = [];
+
+	          elements.find('a').each(function () {
+	            ids.push($(this).attr($this.opts.attribute));
+	          });
+
+	          var index = $.inArray(location.hash, ids);
+
+	          if (index > -1) {
+
+	            return index + 1;
+	          } else {
+
+	            return $this.data('active') || options.active;
+	          }
+	        };
+
+	        $this.data('tabslet-init', true);
+
+	        $this.opts = [];
+
+	        $.map(['mouseevent', 'attribute', 'animation', 'autorotate', 'deeplinking', 'pauseonhover', 'delay', 'container'], function (val, i) {
+	          $this.opts[val] = $this.data(val) || options[val];
+	        });
+
+	        $this.opts['active'] = $this.opts.deeplinking ? deep_link() : $this.data('active') || options.active;
+
+	        _tabs.hide();
+
+	        if ($this.opts.active) {
+	          _tabs.eq($this.opts.active - 1).show();
+	          elements.eq($this.opts.active - 1).addClass('active');
+	        }
+
+	        var fn = eval(function (e, tab) {
+	          var _this = tab ? elements.find('a[' + $this.opts.attribute + '=' + tab + ']').parent() : $(this);
+
+	          _this.trigger('_before');
+
+	          elements.removeClass('active');
+	          _this.addClass('active');
+	          _tabs.hide();
+
+	          i = elements.index(_this);
+
+	          var currentTab = tab || _this.find('a').attr($this.opts.attribute);
+
+	          if ($this.opts.deeplinking) location.hash = currentTab;
+
+	          if ($this.opts.animation) {
+
+	            _container.find(currentTab).animate({ opacity: 'show' }, 'slow', function () {
+	              _this.trigger('_after');
+	            });
+	          } else {
+
+	            _container.find(currentTab).show();
+	            _this.trigger('_after');
+	          }
+
+	          return false;
+	        });
+
+	        var init = eval("elements." + $this.opts.mouseevent + "(fn)");
+
+	        init;
+
+	        var t;
+
+	        var forward = function forward() {
+
+	          i = ++i % elements.length; // wrap around
+
+	          $this.opts.mouseevent == 'hover' ? elements.eq(i).trigger('mouseover') : elements.eq(i).click();
+
+	          if ($this.opts.autorotate) {
+
+	            clearTimeout(t);
+
+	            t = setTimeout(forward, $this.opts.delay);
+
+	            $this.mouseover(function () {
+
+	              if ($this.opts.pauseonhover) clearTimeout(t);
+	            });
+	          }
+	        };
+
+	        if ($this.opts.autorotate) {
+
+	          t = setTimeout(forward, $this.opts.delay);
+
+	          $this.hover(function () {
+
+	            if ($this.opts.pauseonhover) clearTimeout(t);
+	          }, function () {
+
+	            t = setTimeout(forward, $this.opts.delay);
+	          });
+
+	          if ($this.opts.pauseonhover) $this.on("mouseleave", function () {
+	            clearTimeout(t);t = setTimeout(forward, $this.opts.delay);
+	          });
+	        }
+
+	        var move = function move(direction) {
+
+	          if (direction == 'forward') i = ++i % elements.length; // wrap around
+
+	          if (direction == 'backward') i = --i % elements.length; // wrap around
+
+	          elements.eq(i).click();
+	        };
+
+	        $this.find(options.controls.next).click(function () {
+	          move('forward');
+	        });
+
+	        $this.find(options.controls.prev).click(function () {
+	          move('backward');
+	        });
+
+	        $this.on('show', function (e, tab) {
+	          fn(e, tab);
+	        });
+
+	        $this.on('next', function () {
+	          move('forward');
+	        });
+
+	        $this.on('prev', function () {
+	          move('backward');
+	        });
+
+	        $this.on('destroy', function () {
+	          $(this).removeData().find('> ul li').each(function (i) {
+	            $(this).removeClass('active');
+	          });
+	          _tabs.each(function (i) {
+	            $(this).removeAttr('style').css('display', _cache_div[i]);
+	          });
+	        });
+	      }
+	    });
+	  };
+
+	  $(document).ready(function () {
+	    $('[data-toggle="tabslet"]').tabslet();
+	  });
+	})(jQuery);
+
+/***/ },
+/* 21 */
 /***/ function(module, exports) {
 
 	module.exports = {
-		"anticon": {
+		"ant": {
 			"name": "ant-design",
-			"prefix": "anticon-",
+			"prefix": "ant-",
 			"repo": "https://github.com/ant-design/ant-design.git",
 			"icons": [
-				{
-					"type": "anticon",
-					"name": "aliwangwang-o"
-				},
-				{
-					"type": "anticon",
-					"name": "aliwangwang"
-				},
-				{
-					"type": "anticon",
-					"name": "android"
-				},
-				{
-					"type": "anticon",
-					"name": "apple"
-				},
-				{
-					"type": "anticon",
-					"name": "appstore-o"
-				},
-				{
-					"type": "anticon",
-					"name": "appstore"
-				},
-				{
-					"type": "anticon",
-					"name": "area-chart"
-				},
-				{
-					"type": "anticon",
-					"name": "arrow-down"
-				},
-				{
-					"type": "anticon",
-					"name": "arrow-left"
-				},
-				{
-					"type": "anticon",
-					"name": "arrow-right"
-				},
-				{
-					"type": "anticon",
-					"name": "arrow-salt"
-				},
-				{
-					"type": "anticon",
-					"name": "arrow-up"
-				},
-				{
-					"type": "anticon",
-					"name": "backward"
-				},
-				{
-					"type": "anticon",
-					"name": "bar-chart"
-				},
-				{
-					"type": "anticon",
-					"name": "bars"
-				},
-				{
-					"type": "anticon",
-					"name": "book"
-				},
-				{
-					"type": "anticon",
-					"name": "calculator"
-				},
-				{
-					"type": "anticon",
-					"name": "calendar"
-				},
-				{
-					"type": "anticon",
-					"name": "camera-o"
-				},
-				{
-					"type": "anticon",
-					"name": "camera"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-circle-down"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-circle-left"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-circle-o-down"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-circle-o-left"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-circle-o-right"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-circle-o-up"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-circle-right"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-circle-up"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-down"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-left"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-right"
-				},
-				{
-					"type": "anticon",
-					"name": "caret-up"
-				},
-				{
-					"type": "anticon",
-					"name": "check-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "check-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "check"
-				},
-				{
-					"type": "anticon",
-					"name": "chrome"
-				},
-				{
-					"type": "anticon",
-					"name": "circle-down"
-				},
-				{
-					"type": "anticon",
-					"name": "circle-left"
-				},
-				{
-					"type": "anticon",
-					"name": "circle-o-down"
-				},
-				{
-					"type": "anticon",
-					"name": "circle-o-left"
-				},
-				{
-					"type": "anticon",
-					"name": "circle-o-right"
-				},
-				{
-					"type": "anticon",
-					"name": "circle-o-up"
-				},
-				{
-					"type": "anticon",
-					"name": "circle-right"
-				},
-				{
-					"type": "anticon",
-					"name": "circle-up"
-				},
-				{
-					"type": "anticon",
-					"name": "clock-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "clock-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "cloud-download-o"
-				},
-				{
-					"type": "anticon",
-					"name": "cloud-download"
-				},
-				{
-					"type": "anticon",
-					"name": "cloud-o"
-				},
-				{
-					"type": "anticon",
-					"name": "cloud-upload-o"
-				},
-				{
-					"type": "anticon",
-					"name": "cloud-upload"
-				},
-				{
-					"type": "anticon",
-					"name": "cloud"
-				},
-				{
-					"type": "anticon",
-					"name": "code"
-				},
-				{
-					"type": "anticon",
-					"name": "copy"
-				},
-				{
-					"type": "anticon",
-					"name": "credit-card"
-				},
-				{
-					"type": "anticon",
-					"name": "cross-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "cross-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "cross"
-				},
-				{
-					"type": "anticon",
-					"name": "customerservice"
-				},
-				{
-					"type": "anticon",
-					"name": "delete"
-				},
-				{
-					"type": "anticon",
-					"name": "desktop"
-				},
-				{
-					"type": "anticon",
-					"name": "dislike"
-				},
-				{
-					"type": "anticon",
-					"name": "double-left"
-				},
-				{
-					"type": "anticon",
-					"name": "double-right"
-				},
-				{
-					"type": "anticon",
-					"name": "down"
-				},
-				{
-					"type": "anticon",
-					"name": "download"
-				},
-				{
-					"type": "anticon",
-					"name": "edit"
-				},
-				{
-					"type": "anticon",
-					"name": "ellipsis"
-				},
-				{
-					"type": "anticon",
-					"name": "enter"
-				},
-				{
-					"type": "anticon",
-					"name": "environment-o"
-				},
-				{
-					"type": "anticon",
-					"name": "environment"
-				},
-				{
-					"type": "anticon",
-					"name": "exception"
-				},
-				{
-					"type": "anticon",
-					"name": "exclamation-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "exclamation-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "exclamation"
-				},
-				{
-					"type": "anticon",
-					"name": "export"
-				},
-				{
-					"type": "anticon",
-					"name": "eye-o"
-				},
-				{
-					"type": "anticon",
-					"name": "eye"
-				},
-				{
-					"type": "anticon",
-					"name": "fast-backward"
-				},
-				{
-					"type": "anticon",
-					"name": "fast-forward"
-				},
-				{
-					"type": "anticon",
-					"name": "file-excel"
-				},
-				{
-					"type": "anticon",
-					"name": "file-jpg"
-				},
-				{
-					"type": "anticon",
-					"name": "file-pdf"
-				},
-				{
-					"type": "anticon",
-					"name": "file-ppt"
-				},
-				{
-					"type": "anticon",
-					"name": "file-text"
-				},
-				{
-					"type": "anticon",
-					"name": "file-unknown"
-				},
-				{
-					"type": "anticon",
-					"name": "file"
-				},
-				{
-					"type": "anticon",
-					"name": "filter"
-				},
-				{
-					"type": "anticon",
-					"name": "folder-open"
-				},
-				{
-					"type": "anticon",
-					"name": "folder"
-				},
-				{
-					"type": "anticon",
-					"name": "forward"
-				},
-				{
-					"type": "anticon",
-					"name": "frown-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "frown"
-				},
-				{
-					"type": "anticon",
-					"name": "github"
-				},
-				{
-					"type": "anticon",
-					"name": "hdd"
-				},
-				{
-					"type": "anticon",
-					"name": "heart-o"
-				},
-				{
-					"type": "anticon",
-					"name": "heart"
-				},
-				{
-					"type": "anticon",
-					"name": "home"
-				},
-				{
-					"type": "anticon",
-					"name": "ie"
-				},
-				{
-					"type": "anticon",
-					"name": "inbox"
-				},
-				{
-					"type": "anticon",
-					"name": "info-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "info-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "info"
-				},
-				{
-					"type": "anticon",
-					"name": "laptop"
-				},
-				{
-					"type": "anticon",
-					"name": "left"
-				},
-				{
-					"type": "anticon",
-					"name": "like"
-				},
-				{
-					"type": "anticon",
-					"name": "line-chart"
-				},
-				{
-					"type": "anticon",
-					"name": "link"
-				},
-				{
-					"type": "anticon",
-					"name": "lock"
-				},
-				{
-					"type": "anticon",
-					"name": "logout"
-				},
-				{
-					"type": "anticon",
-					"name": "mail"
-				},
-				{
-					"type": "anticon",
-					"name": "meh-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "meh"
-				},
-				{
-					"type": "anticon",
-					"name": "menu-fold"
-				},
-				{
-					"type": "anticon",
-					"name": "menu-unfold"
-				},
-				{
-					"type": "anticon",
-					"name": "message"
-				},
-				{
-					"type": "anticon",
-					"name": "minus-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "minus-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "minus-square"
-				},
-				{
-					"type": "anticon",
-					"name": "minus"
-				},
-				{
-					"type": "anticon",
-					"name": "mobile"
-				},
-				{
-					"type": "anticon",
-					"name": "notification"
-				},
-				{
-					"type": "anticon",
-					"name": "paper-clip"
-				},
-				{
-					"type": "anticon",
-					"name": "pause-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "pause-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "pause"
-				},
-				{
-					"type": "anticon",
-					"name": "pay-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "pay-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "phone"
-				},
-				{
-					"type": "anticon",
-					"name": "picture"
-				},
-				{
-					"type": "anticon",
-					"name": "pie-chart"
-				},
-				{
-					"type": "anticon",
-					"name": "play-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "play-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "plus-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "plus-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "plus-square"
-				},
-				{
-					"type": "anticon",
-					"name": "plus"
-				},
-				{
-					"type": "anticon",
-					"name": "poweroff"
-				},
-				{
-					"type": "anticon",
-					"name": "pushpin-o"
-				},
-				{
-					"type": "anticon",
-					"name": "pushpin"
-				},
-				{
-					"type": "anticon",
-					"name": "qrcode"
-				},
-				{
-					"type": "anticon",
-					"name": "question-circle-o"
-				},
-				{
-					"type": "anticon",
-					"name": "question-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "question"
-				},
-				{
-					"type": "anticon",
-					"name": "reload"
-				},
-				{
-					"type": "anticon",
-					"name": "retweet"
-				},
-				{
-					"type": "anticon",
-					"name": "right"
-				},
-				{
-					"type": "anticon",
-					"name": "rollback"
-				},
-				{
-					"type": "anticon",
-					"name": "save"
-				},
-				{
-					"type": "anticon",
-					"name": "scan"
-				},
-				{
-					"type": "anticon",
-					"name": "search"
-				},
-				{
-					"type": "anticon",
-					"name": "setting"
-				},
-				{
-					"type": "anticon",
-					"name": "share-alt"
-				},
-				{
-					"type": "anticon",
-					"name": "shopping-cart"
-				},
-				{
-					"type": "anticon",
-					"name": "shrink"
-				},
-				{
-					"type": "anticon",
-					"name": "smile-circle"
-				},
-				{
-					"type": "anticon",
-					"name": "smile"
-				},
-				{
-					"type": "anticon",
-					"name": "solution"
-				},
-				{
-					"type": "anticon",
-					"name": "star-o"
-				},
-				{
-					"type": "anticon",
-					"name": "star"
-				},
-				{
-					"type": "anticon",
-					"name": "step-backward"
-				},
-				{
-					"type": "anticon",
-					"name": "step-forward"
-				},
-				{
-					"type": "anticon",
-					"name": "swap-left"
-				},
-				{
-					"type": "anticon",
-					"name": "swap-right"
-				},
-				{
-					"type": "anticon",
-					"name": "swap"
-				},
-				{
-					"type": "anticon",
-					"name": "tablet"
-				},
-				{
-					"type": "anticon",
-					"name": "tag-o"
-				},
-				{
-					"type": "anticon",
-					"name": "tag"
-				},
-				{
-					"type": "anticon",
-					"name": "tags-o"
-				},
-				{
-					"type": "anticon",
-					"name": "tags"
-				},
-				{
-					"type": "anticon",
-					"name": "team"
-				},
-				{
-					"type": "anticon",
-					"name": "to-top"
-				},
-				{
-					"type": "anticon",
-					"name": "unlock"
-				},
-				{
-					"type": "anticon",
-					"name": "up"
-				},
-				{
-					"type": "anticon",
-					"name": "upload"
-				},
-				{
-					"type": "anticon",
-					"name": "user"
-				},
-				{
-					"type": "anticon",
-					"name": "verticle-left"
-				},
-				{
-					"type": "anticon",
-					"name": "verticle-right"
-				},
-				{
-					"type": "anticon",
-					"name": "video-camera"
-				},
-				{
-					"type": "anticon",
-					"name": "windows"
-				}
+				"aliwangwang-o",
+				"aliwangwang",
+				"android",
+				"apple",
+				"appstore-o",
+				"appstore",
+				"area-chart",
+				"arrow-down",
+				"arrow-left",
+				"arrow-right",
+				"arrow-salt",
+				"arrow-up",
+				"backward",
+				"bar-chart",
+				"bars",
+				"book",
+				"calculator",
+				"calendar",
+				"camera-o",
+				"camera",
+				"caret-circle-down",
+				"caret-circle-left",
+				"caret-circle-o-down",
+				"caret-circle-o-left",
+				"caret-circle-o-right",
+				"caret-circle-o-up",
+				"caret-circle-right",
+				"caret-circle-up",
+				"caret-down",
+				"caret-left",
+				"caret-right",
+				"caret-up",
+				"check-circle-o",
+				"check-circle",
+				"check",
+				"chrome",
+				"circle-down",
+				"circle-left",
+				"circle-o-down",
+				"circle-o-left",
+				"circle-o-right",
+				"circle-o-up",
+				"circle-right",
+				"circle-up",
+				"clock-circle-o",
+				"clock-circle",
+				"cloud-download-o",
+				"cloud-download",
+				"cloud-o",
+				"cloud-upload-o",
+				"cloud-upload",
+				"cloud",
+				"code",
+				"copy",
+				"credit-card",
+				"cross-circle-o",
+				"cross-circle",
+				"cross",
+				"customerservice",
+				"delete",
+				"desktop",
+				"dislike",
+				"double-left",
+				"double-right",
+				"down",
+				"download",
+				"edit",
+				"ellipsis",
+				"enter",
+				"environment-o",
+				"environment",
+				"exception",
+				"exclamation-circle-o",
+				"exclamation-circle",
+				"exclamation",
+				"export",
+				"eye-o",
+				"eye",
+				"fast-backward",
+				"fast-forward",
+				"file-excel",
+				"file-jpg",
+				"file-pdf",
+				"file-ppt",
+				"file-text",
+				"file-unknown",
+				"file",
+				"filter",
+				"folder-open",
+				"folder",
+				"forward",
+				"frown-circle",
+				"frown",
+				"github",
+				"hdd",
+				"heart-o",
+				"heart",
+				"home",
+				"ie",
+				"inbox",
+				"info-circle-o",
+				"info-circle",
+				"info",
+				"laptop",
+				"left",
+				"like",
+				"line-chart",
+				"link",
+				"lock",
+				"logout",
+				"mail",
+				"meh-circle",
+				"meh",
+				"menu-fold",
+				"menu-unfold",
+				"message",
+				"minus-circle-o",
+				"minus-circle",
+				"minus-square",
+				"minus",
+				"mobile",
+				"notification",
+				"paper-clip",
+				"pause-circle-o",
+				"pause-circle",
+				"pause",
+				"pay-circle-o",
+				"pay-circle",
+				"phone",
+				"picture",
+				"pie-chart",
+				"play-circle-o",
+				"play-circle",
+				"plus-circle-o",
+				"plus-circle",
+				"plus-square",
+				"plus",
+				"poweroff",
+				"pushpin-o",
+				"pushpin",
+				"qrcode",
+				"question-circle-o",
+				"question-circle",
+				"question",
+				"reload",
+				"retweet",
+				"right",
+				"rollback",
+				"save",
+				"scan",
+				"search",
+				"setting",
+				"share-alt",
+				"shopping-cart",
+				"shrink",
+				"smile-circle",
+				"smile",
+				"solution",
+				"star-o",
+				"star",
+				"step-backward",
+				"step-forward",
+				"swap-left",
+				"swap-right",
+				"swap",
+				"tablet",
+				"tag-o",
+				"tag",
+				"tags-o",
+				"tags",
+				"team",
+				"to-top",
+				"unlock",
+				"up",
+				"upload",
+				"user",
+				"verticle-left",
+				"verticle-right",
+				"video-camera",
+				"windows"
 			]
 		},
-		"glyphicon": {
+		"bootstrap": {
 			"name": "bootstrap",
-			"prefix": "glyphicon-",
+			"prefix": "bootstrap-",
 			"repo": "https://github.com/twbs/bootstrap.git",
 			"icons": [
-				{
-					"type": "glyphicon",
-					"name": "adjust"
-				},
-				{
-					"type": "glyphicon",
-					"name": "alert"
-				},
-				{
-					"type": "glyphicon",
-					"name": "align-center"
-				},
-				{
-					"type": "glyphicon",
-					"name": "align-justify"
-				},
-				{
-					"type": "glyphicon",
-					"name": "align-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "align-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "apple"
-				},
-				{
-					"type": "glyphicon",
-					"name": "arrow-down"
-				},
-				{
-					"type": "glyphicon",
-					"name": "arrow-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "arrow-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "arrow-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "asterisk"
-				},
-				{
-					"type": "glyphicon",
-					"name": "baby-formula"
-				},
-				{
-					"type": "glyphicon",
-					"name": "backward"
-				},
-				{
-					"type": "glyphicon",
-					"name": "ban-circle"
-				},
-				{
-					"type": "glyphicon",
-					"name": "barcode"
-				},
-				{
-					"type": "glyphicon",
-					"name": "bed"
-				},
-				{
-					"type": "glyphicon",
-					"name": "bell"
-				},
-				{
-					"type": "glyphicon",
-					"name": "bishop"
-				},
-				{
-					"type": "glyphicon",
-					"name": "bitcoin"
-				},
-				{
-					"type": "glyphicon",
-					"name": "blackboard"
-				},
-				{
-					"type": "glyphicon",
-					"name": "bold"
-				},
-				{
-					"type": "glyphicon",
-					"name": "book"
-				},
-				{
-					"type": "glyphicon",
-					"name": "bookmark"
-				},
-				{
-					"type": "glyphicon",
-					"name": "briefcase"
-				},
-				{
-					"type": "glyphicon",
-					"name": "bullhorn"
-				},
-				{
-					"type": "glyphicon",
-					"name": "calendar"
-				},
-				{
-					"type": "glyphicon",
-					"name": "camera"
-				},
-				{
-					"type": "glyphicon",
-					"name": "cd"
-				},
-				{
-					"type": "glyphicon",
-					"name": "certificate"
-				},
-				{
-					"type": "glyphicon",
-					"name": "check"
-				},
-				{
-					"type": "glyphicon",
-					"name": "chevron-down"
-				},
-				{
-					"type": "glyphicon",
-					"name": "chevron-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "chevron-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "chevron-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "circle-arrow-down"
-				},
-				{
-					"type": "glyphicon",
-					"name": "circle-arrow-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "circle-arrow-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "circle-arrow-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "cloud-download"
-				},
-				{
-					"type": "glyphicon",
-					"name": "cloud-upload"
-				},
-				{
-					"type": "glyphicon",
-					"name": "cloud"
-				},
-				{
-					"type": "glyphicon",
-					"name": "cog"
-				},
-				{
-					"type": "glyphicon",
-					"name": "collapse-down"
-				},
-				{
-					"type": "glyphicon",
-					"name": "collapse-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "comment"
-				},
-				{
-					"type": "glyphicon",
-					"name": "compressed"
-				},
-				{
-					"type": "glyphicon",
-					"name": "console"
-				},
-				{
-					"type": "glyphicon",
-					"name": "copy"
-				},
-				{
-					"type": "glyphicon",
-					"name": "copyright-mark"
-				},
-				{
-					"type": "glyphicon",
-					"name": "credit-card"
-				},
-				{
-					"type": "glyphicon",
-					"name": "cutlery"
-				},
-				{
-					"type": "glyphicon",
-					"name": "dashboard"
-				},
-				{
-					"type": "glyphicon",
-					"name": "door"
-				},
-				{
-					"type": "glyphicon",
-					"name": "download-alt"
-				},
-				{
-					"type": "glyphicon",
-					"name": "download"
-				},
-				{
-					"type": "glyphicon",
-					"name": "duplicate"
-				},
-				{
-					"type": "glyphicon",
-					"name": "earphone"
-				},
-				{
-					"type": "glyphicon",
-					"name": "edit"
-				},
-				{
-					"type": "glyphicon",
-					"name": "education"
-				},
-				{
-					"type": "glyphicon",
-					"name": "eject"
-				},
-				{
-					"type": "glyphicon",
-					"name": "envelope"
-				},
-				{
-					"type": "glyphicon",
-					"name": "equalizer"
-				},
-				{
-					"type": "glyphicon",
-					"name": "erase"
-				},
-				{
-					"type": "glyphicon",
-					"name": "eur"
-				},
-				{
-					"type": "glyphicon",
-					"name": "exclamation-sign"
-				},
-				{
-					"type": "glyphicon",
-					"name": "expand"
-				},
-				{
-					"type": "glyphicon",
-					"name": "export"
-				},
-				{
-					"type": "glyphicon",
-					"name": "eye-close"
-				},
-				{
-					"type": "glyphicon",
-					"name": "eye-open"
-				},
-				{
-					"type": "glyphicon",
-					"name": "facetime-video"
-				},
-				{
-					"type": "glyphicon",
-					"name": "fast-backward"
-				},
-				{
-					"type": "glyphicon",
-					"name": "fast-forward"
-				},
-				{
-					"type": "glyphicon",
-					"name": "file"
-				},
-				{
-					"type": "glyphicon",
-					"name": "film"
-				},
-				{
-					"type": "glyphicon",
-					"name": "filter"
-				},
-				{
-					"type": "glyphicon",
-					"name": "fire"
-				},
-				{
-					"type": "glyphicon",
-					"name": "flag"
-				},
-				{
-					"type": "glyphicon",
-					"name": "flash"
-				},
-				{
-					"type": "glyphicon",
-					"name": "floppy-disk"
-				},
-				{
-					"type": "glyphicon",
-					"name": "floppy-open"
-				},
-				{
-					"type": "glyphicon",
-					"name": "floppy-remove"
-				},
-				{
-					"type": "glyphicon",
-					"name": "floppy-save"
-				},
-				{
-					"type": "glyphicon",
-					"name": "floppy-saved"
-				},
-				{
-					"type": "glyphicon",
-					"name": "folder-close"
-				},
-				{
-					"type": "glyphicon",
-					"name": "folder-open"
-				},
-				{
-					"type": "glyphicon",
-					"name": "font"
-				},
-				{
-					"type": "glyphicon",
-					"name": "forward"
-				},
-				{
-					"type": "glyphicon",
-					"name": "fullscreen"
-				},
-				{
-					"type": "glyphicon",
-					"name": "gbp"
-				},
-				{
-					"type": "glyphicon",
-					"name": "gift"
-				},
-				{
-					"type": "glyphicon",
-					"name": "glass"
-				},
-				{
-					"type": "glyphicon",
-					"name": "globe"
-				},
-				{
-					"type": "glyphicon",
-					"name": "grain"
-				},
-				{
-					"type": "glyphicon",
-					"name": "hand-down"
-				},
-				{
-					"type": "glyphicon",
-					"name": "hand-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "hand-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "hand-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "hd-video"
-				},
-				{
-					"type": "glyphicon",
-					"name": "hdd"
-				},
-				{
-					"type": "glyphicon",
-					"name": "header"
-				},
-				{
-					"type": "glyphicon",
-					"name": "headphones"
-				},
-				{
-					"type": "glyphicon",
-					"name": "heart-empty"
-				},
-				{
-					"type": "glyphicon",
-					"name": "heart"
-				},
-				{
-					"type": "glyphicon",
-					"name": "home"
-				},
-				{
-					"type": "glyphicon",
-					"name": "hourglass"
-				},
-				{
-					"type": "glyphicon",
-					"name": "ice-lolly-tasted"
-				},
-				{
-					"type": "glyphicon",
-					"name": "ice-lolly"
-				},
-				{
-					"type": "glyphicon",
-					"name": "import"
-				},
-				{
-					"type": "glyphicon",
-					"name": "inbox"
-				},
-				{
-					"type": "glyphicon",
-					"name": "indent-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "indent-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "info-sign"
-				},
-				{
-					"type": "glyphicon",
-					"name": "italic"
-				},
-				{
-					"type": "glyphicon",
-					"name": "key"
-				},
-				{
-					"type": "glyphicon",
-					"name": "king"
-				},
-				{
-					"type": "glyphicon",
-					"name": "knight"
-				},
-				{
-					"type": "glyphicon",
-					"name": "lamp"
-				},
-				{
-					"type": "glyphicon",
-					"name": "leaf"
-				},
-				{
-					"type": "glyphicon",
-					"name": "level-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "link"
-				},
-				{
-					"type": "glyphicon",
-					"name": "list-alt"
-				},
-				{
-					"type": "glyphicon",
-					"name": "list"
-				},
-				{
-					"type": "glyphicon",
-					"name": "lock"
-				},
-				{
-					"type": "glyphicon",
-					"name": "log-in"
-				},
-				{
-					"type": "glyphicon",
-					"name": "log-out"
-				},
-				{
-					"type": "glyphicon",
-					"name": "magnet"
-				},
-				{
-					"type": "glyphicon",
-					"name": "map-marker"
-				},
-				{
-					"type": "glyphicon",
-					"name": "menu-down"
-				},
-				{
-					"type": "glyphicon",
-					"name": "menu-hamburger"
-				},
-				{
-					"type": "glyphicon",
-					"name": "menu-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "menu-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "menu-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "minus-sign"
-				},
-				{
-					"type": "glyphicon",
-					"name": "minus"
-				},
-				{
-					"type": "glyphicon",
-					"name": "modal-window"
-				},
-				{
-					"type": "glyphicon",
-					"name": "move"
-				},
-				{
-					"type": "glyphicon",
-					"name": "music"
-				},
-				{
-					"type": "glyphicon",
-					"name": "new-window"
-				},
-				{
-					"type": "glyphicon",
-					"name": "object-align-bottom"
-				},
-				{
-					"type": "glyphicon",
-					"name": "object-align-horizontal"
-				},
-				{
-					"type": "glyphicon",
-					"name": "object-align-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "object-align-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "object-align-top"
-				},
-				{
-					"type": "glyphicon",
-					"name": "object-align-vertical"
-				},
-				{
-					"type": "glyphicon",
-					"name": "off"
-				},
-				{
-					"type": "glyphicon",
-					"name": "oil"
-				},
-				{
-					"type": "glyphicon",
-					"name": "ok-circle"
-				},
-				{
-					"type": "glyphicon",
-					"name": "ok-sign"
-				},
-				{
-					"type": "glyphicon",
-					"name": "ok"
-				},
-				{
-					"type": "glyphicon",
-					"name": "open-file"
-				},
-				{
-					"type": "glyphicon",
-					"name": "open"
-				},
-				{
-					"type": "glyphicon",
-					"name": "option-horizontal"
-				},
-				{
-					"type": "glyphicon",
-					"name": "option-vertical"
-				},
-				{
-					"type": "glyphicon",
-					"name": "paperclip"
-				},
-				{
-					"type": "glyphicon",
-					"name": "paste"
-				},
-				{
-					"type": "glyphicon",
-					"name": "pause"
-				},
-				{
-					"type": "glyphicon",
-					"name": "pawn"
-				},
-				{
-					"type": "glyphicon",
-					"name": "pencil"
-				},
-				{
-					"type": "glyphicon",
-					"name": "phone-alt"
-				},
-				{
-					"type": "glyphicon",
-					"name": "phone"
-				},
-				{
-					"type": "glyphicon",
-					"name": "picture"
-				},
-				{
-					"type": "glyphicon",
-					"name": "piggy-bank"
-				},
-				{
-					"type": "glyphicon",
-					"name": "plane"
-				},
-				{
-					"type": "glyphicon",
-					"name": "play-circle"
-				},
-				{
-					"type": "glyphicon",
-					"name": "play"
-				},
-				{
-					"type": "glyphicon",
-					"name": "plus-sign"
-				},
-				{
-					"type": "glyphicon",
-					"name": "plus"
-				},
-				{
-					"type": "glyphicon",
-					"name": "print"
-				},
-				{
-					"type": "glyphicon",
-					"name": "pushpin"
-				},
-				{
-					"type": "glyphicon",
-					"name": "qrcode"
-				},
-				{
-					"type": "glyphicon",
-					"name": "queen"
-				},
-				{
-					"type": "glyphicon",
-					"name": "question-sign"
-				},
-				{
-					"type": "glyphicon",
-					"name": "random"
-				},
-				{
-					"type": "glyphicon",
-					"name": "record"
-				},
-				{
-					"type": "glyphicon",
-					"name": "refresh"
-				},
-				{
-					"type": "glyphicon",
-					"name": "registration-mark"
-				},
-				{
-					"type": "glyphicon",
-					"name": "remove-circle"
-				},
-				{
-					"type": "glyphicon",
-					"name": "remove-sign"
-				},
-				{
-					"type": "glyphicon",
-					"name": "remove"
-				},
-				{
-					"type": "glyphicon",
-					"name": "repeat"
-				},
-				{
-					"type": "glyphicon",
-					"name": "resize-full"
-				},
-				{
-					"type": "glyphicon",
-					"name": "resize-horizontal"
-				},
-				{
-					"type": "glyphicon",
-					"name": "resize-small"
-				},
-				{
-					"type": "glyphicon",
-					"name": "resize-vertical"
-				},
-				{
-					"type": "glyphicon",
-					"name": "retweet"
-				},
-				{
-					"type": "glyphicon",
-					"name": "road"
-				},
-				{
-					"type": "glyphicon",
-					"name": "ruble"
-				},
-				{
-					"type": "glyphicon",
-					"name": "save-file"
-				},
-				{
-					"type": "glyphicon",
-					"name": "save"
-				},
-				{
-					"type": "glyphicon",
-					"name": "saved"
-				},
-				{
-					"type": "glyphicon",
-					"name": "scale"
-				},
-				{
-					"type": "glyphicon",
-					"name": "scissors"
-				},
-				{
-					"type": "glyphicon",
-					"name": "screenshot"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sd-video"
-				},
-				{
-					"type": "glyphicon",
-					"name": "search"
-				},
-				{
-					"type": "glyphicon",
-					"name": "send"
-				},
-				{
-					"type": "glyphicon",
-					"name": "share-alt"
-				},
-				{
-					"type": "glyphicon",
-					"name": "share"
-				},
-				{
-					"type": "glyphicon",
-					"name": "shopping-cart"
-				},
-				{
-					"type": "glyphicon",
-					"name": "signal"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sort-by-alphabet-alt"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sort-by-alphabet"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sort-by-attributes-alt"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sort-by-attributes"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sort-by-order-alt"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sort-by-order"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sort"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sound-5-1"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sound-6-1"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sound-7-1"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sound-dolby"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sound-stereo"
-				},
-				{
-					"type": "glyphicon",
-					"name": "star-empty"
-				},
-				{
-					"type": "glyphicon",
-					"name": "star"
-				},
-				{
-					"type": "glyphicon",
-					"name": "stats"
-				},
-				{
-					"type": "glyphicon",
-					"name": "step-backward"
-				},
-				{
-					"type": "glyphicon",
-					"name": "step-forward"
-				},
-				{
-					"type": "glyphicon",
-					"name": "stop"
-				},
-				{
-					"type": "glyphicon",
-					"name": "subscript"
-				},
-				{
-					"type": "glyphicon",
-					"name": "subtitles"
-				},
-				{
-					"type": "glyphicon",
-					"name": "sunglasses"
-				},
-				{
-					"type": "glyphicon",
-					"name": "superscript"
-				},
-				{
-					"type": "glyphicon",
-					"name": "tag"
-				},
-				{
-					"type": "glyphicon",
-					"name": "tags"
-				},
-				{
-					"type": "glyphicon",
-					"name": "tasks"
-				},
-				{
-					"type": "glyphicon",
-					"name": "tent"
-				},
-				{
-					"type": "glyphicon",
-					"name": "text-background"
-				},
-				{
-					"type": "glyphicon",
-					"name": "text-color"
-				},
-				{
-					"type": "glyphicon",
-					"name": "text-height"
-				},
-				{
-					"type": "glyphicon",
-					"name": "text-size"
-				},
-				{
-					"type": "glyphicon",
-					"name": "text-width"
-				},
-				{
-					"type": "glyphicon",
-					"name": "th-large"
-				},
-				{
-					"type": "glyphicon",
-					"name": "th-list"
-				},
-				{
-					"type": "glyphicon",
-					"name": "th"
-				},
-				{
-					"type": "glyphicon",
-					"name": "thumbs-down"
-				},
-				{
-					"type": "glyphicon",
-					"name": "thumbs-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "time"
-				},
-				{
-					"type": "glyphicon",
-					"name": "tint"
-				},
-				{
-					"type": "glyphicon",
-					"name": "tower"
-				},
-				{
-					"type": "glyphicon",
-					"name": "transfer"
-				},
-				{
-					"type": "glyphicon",
-					"name": "trash"
-				},
-				{
-					"type": "glyphicon",
-					"name": "tree-conifer"
-				},
-				{
-					"type": "glyphicon",
-					"name": "tree-deciduous"
-				},
-				{
-					"type": "glyphicon",
-					"name": "triangle-bottom"
-				},
-				{
-					"type": "glyphicon",
-					"name": "triangle-left"
-				},
-				{
-					"type": "glyphicon",
-					"name": "triangle-right"
-				},
-				{
-					"type": "glyphicon",
-					"name": "triangle-top"
-				},
-				{
-					"type": "glyphicon",
-					"name": "unchecked"
-				},
-				{
-					"type": "glyphicon",
-					"name": "upload"
-				},
-				{
-					"type": "glyphicon",
-					"name": "usd"
-				},
-				{
-					"type": "glyphicon",
-					"name": "user"
-				},
-				{
-					"type": "glyphicon",
-					"name": "volume-down"
-				},
-				{
-					"type": "glyphicon",
-					"name": "volume-off"
-				},
-				{
-					"type": "glyphicon",
-					"name": "volume-up"
-				},
-				{
-					"type": "glyphicon",
-					"name": "warning-sign"
-				},
-				{
-					"type": "glyphicon",
-					"name": "wrench"
-				},
-				{
-					"type": "glyphicon",
-					"name": "yen"
-				},
-				{
-					"type": "glyphicon",
-					"name": "zoom-in"
-				},
-				{
-					"type": "glyphicon",
-					"name": "zoom-out"
-				}
+				"adjust",
+				"alert",
+				"align-center",
+				"align-justify",
+				"align-left",
+				"align-right",
+				"apple",
+				"arrow-down",
+				"arrow-left",
+				"arrow-right",
+				"arrow-up",
+				"asterisk",
+				"baby-formula",
+				"backward",
+				"ban-circle",
+				"barcode",
+				"bed",
+				"bell",
+				"bishop",
+				"bitcoin",
+				"blackboard",
+				"bold",
+				"book",
+				"bookmark",
+				"briefcase",
+				"bullhorn",
+				"calendar",
+				"camera",
+				"cd",
+				"certificate",
+				"check",
+				"chevron-down",
+				"chevron-left",
+				"chevron-right",
+				"chevron-up",
+				"circle-arrow-down",
+				"circle-arrow-left",
+				"circle-arrow-right",
+				"circle-arrow-up",
+				"cloud-download",
+				"cloud-upload",
+				"cloud",
+				"cog",
+				"collapse-down",
+				"collapse-up",
+				"comment",
+				"compressed",
+				"console",
+				"copy",
+				"copyright-mark",
+				"credit-card",
+				"cutlery",
+				"dashboard",
+				"door",
+				"download-alt",
+				"download",
+				"duplicate",
+				"earphone",
+				"edit",
+				"education",
+				"eject",
+				"envelope",
+				"equalizer",
+				"erase",
+				"eur",
+				"exclamation-sign",
+				"expand",
+				"export",
+				"eye-close",
+				"eye-open",
+				"facetime-video",
+				"fast-backward",
+				"fast-forward",
+				"file",
+				"film",
+				"filter",
+				"fire",
+				"flag",
+				"flash",
+				"floppy-disk",
+				"floppy-open",
+				"floppy-remove",
+				"floppy-save",
+				"floppy-saved",
+				"folder-close",
+				"folder-open",
+				"font",
+				"forward",
+				"fullscreen",
+				"gbp",
+				"gift",
+				"glass",
+				"globe",
+				"grain",
+				"hand-down",
+				"hand-left",
+				"hand-right",
+				"hand-up",
+				"hd-video",
+				"hdd",
+				"header",
+				"headphones",
+				"heart-empty",
+				"heart",
+				"home",
+				"hourglass",
+				"ice-lolly-tasted",
+				"ice-lolly",
+				"import",
+				"inbox",
+				"indent-left",
+				"indent-right",
+				"info-sign",
+				"italic",
+				"key",
+				"king",
+				"knight",
+				"lamp",
+				"leaf",
+				"level-up",
+				"link",
+				"list-alt",
+				"list",
+				"lock",
+				"log-in",
+				"log-out",
+				"magnet",
+				"map-marker",
+				"menu-down",
+				"menu-hamburger",
+				"menu-left",
+				"menu-right",
+				"menu-up",
+				"minus-sign",
+				"minus",
+				"modal-window",
+				"move",
+				"music",
+				"new-window",
+				"object-align-bottom",
+				"object-align-horizontal",
+				"object-align-left",
+				"object-align-right",
+				"object-align-top",
+				"object-align-vertical",
+				"off",
+				"oil",
+				"ok-circle",
+				"ok-sign",
+				"ok",
+				"open-file",
+				"open",
+				"option-horizontal",
+				"option-vertical",
+				"paperclip",
+				"paste",
+				"pause",
+				"pawn",
+				"pencil",
+				"phone-alt",
+				"phone",
+				"picture",
+				"piggy-bank",
+				"plane",
+				"play-circle",
+				"play",
+				"plus-sign",
+				"plus",
+				"print",
+				"pushpin",
+				"qrcode",
+				"queen",
+				"question-sign",
+				"random",
+				"record",
+				"refresh",
+				"registration-mark",
+				"remove-circle",
+				"remove-sign",
+				"remove",
+				"repeat",
+				"resize-full",
+				"resize-horizontal",
+				"resize-small",
+				"resize-vertical",
+				"retweet",
+				"road",
+				"ruble",
+				"save-file",
+				"save",
+				"saved",
+				"scale",
+				"scissors",
+				"screenshot",
+				"sd-video",
+				"search",
+				"send",
+				"share-alt",
+				"share",
+				"shopping-cart",
+				"signal",
+				"sort-by-alphabet-alt",
+				"sort-by-alphabet",
+				"sort-by-attributes-alt",
+				"sort-by-attributes",
+				"sort-by-order-alt",
+				"sort-by-order",
+				"sort",
+				"sound-5-1",
+				"sound-6-1",
+				"sound-7-1",
+				"sound-dolby",
+				"sound-stereo",
+				"star-empty",
+				"star",
+				"stats",
+				"step-backward",
+				"step-forward",
+				"stop",
+				"subscript",
+				"subtitles",
+				"sunglasses",
+				"superscript",
+				"tag",
+				"tags",
+				"tasks",
+				"tent",
+				"text-background",
+				"text-color",
+				"text-height",
+				"text-size",
+				"text-width",
+				"th-large",
+				"th-list",
+				"th",
+				"thumbs-down",
+				"thumbs-up",
+				"time",
+				"tint",
+				"tower",
+				"transfer",
+				"trash",
+				"tree-conifer",
+				"tree-deciduous",
+				"triangle-bottom",
+				"triangle-left",
+				"triangle-right",
+				"triangle-top",
+				"unchecked",
+				"upload",
+				"usd",
+				"user",
+				"volume-down",
+				"volume-off",
+				"volume-up",
+				"warning-sign",
+				"wrench",
+				"yen",
+				"zoom-in",
+				"zoom-out"
 			]
 		},
-		"ei": {
+		"dev": {
+			"name": "devicons",
+			"prefix": "dev-",
+			"repo": "https://github.com/vorillaz/devicons.git",
+			"icons": [
+				"android",
+				"angular_simple",
+				"appcelerator",
+				"apple",
+				"appstore",
+				"aptana",
+				"asterisk",
+				"atlassian",
+				"atom",
+				"aws",
+				"backbone",
+				"bing_small",
+				"bintray",
+				"bitbucket",
+				"blackberry",
+				"bootstrap",
+				"bower",
+				"brackets",
+				"bugsense",
+				"celluloid",
+				"chrome",
+				"cisco",
+				"clojure",
+				"clojure_alt",
+				"cloud9",
+				"coda",
+				"code",
+				"code_badge",
+				"codeigniter",
+				"codepen",
+				"codrops",
+				"coffeescript",
+				"compass",
+				"composer",
+				"creativecommons",
+				"creativecommons_badge",
+				"css3",
+				"css3_full",
+				"css_tricks",
+				"cssdeck",
+				"dart",
+				"database",
+				"debian",
+				"digital-ocean",
+				"django",
+				"dlang",
+				"docker",
+				"doctrine",
+				"dojo",
+				"dotnet",
+				"dreamweaver",
+				"dropbox",
+				"drupal",
+				"eclipse",
+				"ember",
+				"envato",
+				"erlang",
+				"extjs",
+				"firebase",
+				"firefox",
+				"fsharp",
+				"ghost",
+				"ghost_small",
+				"git",
+				"git_branch",
+				"git_commit",
+				"git_compare",
+				"git_merge",
+				"git_pull_request",
+				"github",
+				"github_alt",
+				"github_badge",
+				"github_full",
+				"gnu",
+				"go",
+				"google-cloud-platform",
+				"google_analytics",
+				"google_drive",
+				"grails",
+				"groovy",
+				"grunt",
+				"gulp",
+				"hackernews",
+				"haskell",
+				"heroku",
+				"html5",
+				"html5_3d_effects",
+				"html5_connectivity",
+				"html5_device_access",
+				"html5_multimedia",
+				"ie",
+				"illustrator",
+				"intellij",
+				"ionic",
+				"java",
+				"javascript",
+				"javascript_1",
+				"jekyll_small",
+				"jenkins",
+				"jira",
+				"joomla",
+				"jquery_logo",
+				"jquery_ui_logo",
+				"js_badge",
+				"komodo",
+				"krakenjs",
+				"krakenjs_badge",
+				"laravel",
+				"less",
+				"linux",
+				"magento",
+				"mailchimp",
+				"markdown",
+				"materializecss",
+				"meteor",
+				"meteorfull",
+				"mitlicence",
+				"modernizr",
+				"mongodb",
+				"mootools",
+				"mootools_badge",
+				"mozilla",
+				"msql_server",
+				"mysql",
+				"nancy",
+				"netbeans",
+				"netmagazine",
+				"nginx",
+				"nodejs",
+				"nodejs_small",
+				"npm",
+				"onedrive",
+				"openshift",
+				"opensource",
+				"opera",
+				"perl",
+				"phonegap",
+				"photoshop",
+				"php",
+				"postgresql",
+				"prolog",
+				"python",
+				"rackspace",
+				"raphael",
+				"rasberry_pi",
+				"react",
+				"redhat",
+				"redis",
+				"requirejs",
+				"responsive",
+				"ror",
+				"ruby",
+				"ruby_rough",
+				"rust",
+				"safari",
+				"sass",
+				"scala",
+				"scriptcs",
+				"scrum",
+				"senchatouch",
+				"sizzlejs",
+				"smashing_magazine",
+				"snap_svg",
+				"spark",
+				"sqllite",
+				"stackoverflow",
+				"streamline",
+				"stylus",
+				"sublime",
+				"swift",
+				"symfony",
+				"symfony_badge",
+				"techcrunch",
+				"terminal",
+				"terminal_badge",
+				"travis",
+				"trello",
+				"typo3",
+				"ubuntu",
+				"uikit",
+				"unity_small",
+				"vim",
+				"visualstudio",
+				"w3c",
+				"webplatform",
+				"windows",
+				"wordpress",
+				"yahoo",
+				"yahoo_small",
+				"yeoman",
+				"yii",
+				"zend"
+			]
+		},
+		"elusive": {
+			"name": "elusive-iconfont",
+			"prefix": "elusive-",
+			"repo": "https://github.com/reduxframework/elusive-iconfont.git",
+			"icons": [
+				"address-book-alt",
+				"address-book",
+				"adjust-alt",
+				"adjust",
+				"adult",
+				"align-center",
+				"align-justify",
+				"align-left",
+				"align-right",
+				"arrow-down",
+				"arrow-left",
+				"arrow-right",
+				"arrow-up",
+				"asl",
+				"asterisk",
+				"backward",
+				"ban-circle",
+				"barcode",
+				"behance",
+				"bell",
+				"blind",
+				"blogger",
+				"bold",
+				"book",
+				"bookmark-empty",
+				"bookmark",
+				"braille",
+				"briefcase",
+				"broom",
+				"brush",
+				"bulb",
+				"bullhorn",
+				"calendar-sign",
+				"calendar",
+				"camera",
+				"car",
+				"caret-down",
+				"caret-left",
+				"caret-right",
+				"caret-up",
+				"cc",
+				"certificate",
+				"check-empty",
+				"check",
+				"chevron-down",
+				"chevron-left",
+				"chevron-right",
+				"chevron-up",
+				"child",
+				"circle-arrow-down",
+				"circle-arrow-left",
+				"circle-arrow-right",
+				"circle-arrow-up",
+				"cloud-alt",
+				"cloud",
+				"cog-alt",
+				"cog",
+				"cogs",
+				"comment-alt",
+				"comment",
+				"compass-alt",
+				"compass",
+				"credit-card",
+				"css",
+				"dashboard",
+				"delicious",
+				"deviantart",
+				"digg",
+				"download-alt",
+				"download",
+				"dribbble",
+				"edit",
+				"eject",
+				"envelope-alt",
+				"envelope",
+				"error-alt",
+				"error",
+				"eur",
+				"exclamation-sign",
+				"eye-close",
+				"eye-open",
+				"facebook",
+				"facetime-video",
+				"fast-backward",
+				"fast-forward",
+				"female",
+				"file-alt",
+				"file-edit-alt",
+				"file-edit",
+				"file-new-alt",
+				"file-new",
+				"file",
+				"film",
+				"filter",
+				"fire",
+				"flag-alt",
+				"flag",
+				"flickr",
+				"folder-close",
+				"folder-open",
+				"folder-sign",
+				"folder",
+				"font",
+				"fontsize",
+				"fork",
+				"forward-alt",
+				"forward",
+				"foursquare",
+				"friendfeed-rect",
+				"friendfeed",
+				"fullscreen",
+				"gbp",
+				"gift",
+				"github-text",
+				"github",
+				"glass",
+				"glasses",
+				"globe-alt",
+				"globe",
+				"googleplus",
+				"graph-alt",
+				"graph",
+				"group-alt",
+				"group",
+				"guidedog",
+				"hand-down",
+				"hand-left",
+				"hand-right",
+				"hand-up",
+				"hdd",
+				"headphones",
+				"hearing-impaired",
+				"heart-alt",
+				"heart-empty",
+				"heart",
+				"home-alt",
+				"home",
+				"hourglass",
+				"idea-alt",
+				"idea",
+				"inbox-alt",
+				"inbox-box",
+				"inbox",
+				"indent-left",
+				"indent-right",
+				"info-sign",
+				"instagram",
+				"iphone-home",
+				"italic",
+				"key",
+				"laptop-alt",
+				"laptop",
+				"lastfm",
+				"leaf",
+				"lines",
+				"link",
+				"linkedin",
+				"list-alt",
+				"list",
+				"livejournal",
+				"lock-alt",
+				"lock",
+				"magic",
+				"magnet",
+				"male",
+				"map-marker-alt",
+				"map-marker",
+				"mic-alt",
+				"mic",
+				"minus-sign",
+				"minus",
+				"move",
+				"music",
+				"myspace",
+				"network",
+				"off",
+				"ok-circle",
+				"ok-sign",
+				"ok",
+				"opensource",
+				"paper-clip-alt",
+				"paper-clip",
+				"path",
+				"pause-alt",
+				"pause",
+				"pencil-alt",
+				"pencil",
+				"person",
+				"phone-alt",
+				"phone",
+				"photo-alt",
+				"photo",
+				"picasa",
+				"picture",
+				"pinterest",
+				"plane",
+				"play-alt",
+				"play-circle",
+				"play",
+				"plus-sign",
+				"plus",
+				"podcast",
+				"print",
+				"puzzle",
+				"qrcode",
+				"question-sign",
+				"question",
+				"quotes-alt",
+				"quotes",
+				"random",
+				"record",
+				"reddit",
+				"refresh",
+				"remove-circle",
+				"remove-sign",
+				"remove",
+				"repeat-alt",
+				"repeat",
+				"resize-full",
+				"resize-horizontal",
+				"resize-small",
+				"resize-vertical",
+				"return-key",
+				"retweet",
+				"reverse-alt",
+				"road",
+				"rss",
+				"scissors",
+				"screen-alt",
+				"screen",
+				"screenshot",
+				"search-alt",
+				"search",
+				"share-alt",
+				"share",
+				"shopping-cart-sign",
+				"shopping-cart",
+				"signal",
+				"skype",
+				"slideshare",
+				"smiley-alt",
+				"smiley",
+				"soundcloud",
+				"speaker",
+				"spotify",
+				"stackoverflow",
+				"star-alt",
+				"star-empty",
+				"star",
+				"step-backward",
+				"step-forward",
+				"stop-alt",
+				"stop",
+				"stumbleupon",
+				"tag",
+				"tags",
+				"tasks",
+				"text-height",
+				"text-width",
+				"th-large",
+				"th-list",
+				"th",
+				"thumbs-down",
+				"thumbs-up",
+				"time-alt",
+				"time",
+				"tint",
+				"torso",
+				"trash-alt",
+				"trash",
+				"tumblr",
+				"twitter",
+				"universal-access",
+				"unlock-alt",
+				"unlock",
+				"upload",
+				"usd",
+				"user",
+				"viadeo",
+				"video-alt",
+				"video-chat",
+				"video",
+				"view-mode",
+				"vimeo",
+				"vkontakte",
+				"volume-down",
+				"volume-off",
+				"volume-up",
+				"w3c",
+				"warning-sign",
+				"website-alt",
+				"website",
+				"wheelchair",
+				"wordpress",
+				"wrench-alt",
+				"wrench",
+				"youtube",
+				"zoom-in",
+				"zoom-out"
+			]
+		},
+		"entypo": {
+			"name": "entypo",
+			"prefix": "entypo-",
+			"repo": "https://github.com/danielbruce/entypo.git",
+			"icons": [
+				"address",
+				"adjust",
+				"air",
+				"alert",
+				"archive",
+				"arrow-combo",
+				"arrows-ccw",
+				"attach",
+				"attention",
+				"back-in-time",
+				"back",
+				"bag",
+				"basket",
+				"battery",
+				"behance",
+				"bell",
+				"block",
+				"book-open",
+				"book",
+				"bookmark",
+				"bookmarks",
+				"box",
+				"briefcase",
+				"brush",
+				"bucket",
+				"calendar",
+				"camera",
+				"cancel-circled",
+				"cancel-squared",
+				"cancel",
+				"cc-by",
+				"cc-nc-eu",
+				"cc-nc-jp",
+				"cc-nc",
+				"cc-nd",
+				"cc-pd",
+				"cc-remix",
+				"cc-sa",
+				"cc-share",
+				"cc-zero",
+				"cc",
+				"ccw",
+				"cd",
+				"chart-area",
+				"chart-bar",
+				"chart-line",
+				"chart-pie",
+				"chat",
+				"check",
+				"clipboard",
+				"clock",
+				"cloud-thunder",
+				"cloud",
+				"code",
+				"cog",
+				"comment",
+				"compass",
+				"credit-card",
+				"cup",
+				"cw",
+				"database",
+				"db-shape",
+				"direction",
+				"doc-landscape",
+				"doc-text-inv",
+				"doc-text",
+				"doc",
+				"docs",
+				"dot-2",
+				"dot-3",
+				"dot",
+				"down-bold",
+				"down-circled",
+				"down-dir",
+				"down-open-big",
+				"down-open-mini",
+				"down-open",
+				"down-thin",
+				"down",
+				"download",
+				"dribbble-circled",
+				"dribbble",
+				"drive",
+				"dropbox",
+				"droplet",
+				"erase",
+				"evernote",
+				"export",
+				"eye",
+				"facebook-circled",
+				"facebook-squared",
+				"facebook",
+				"fast-backward",
+				"fast-forward",
+				"feather",
+				"flag",
+				"flash",
+				"flashlight",
+				"flattr",
+				"flickr-circled",
+				"flickr",
+				"flight",
+				"floppy",
+				"flow-branch",
+				"flow-cascade",
+				"flow-line",
+				"flow-parallel",
+				"flow-tree",
+				"folder",
+				"forward",
+				"gauge",
+				"github-circled",
+				"github",
+				"globe",
+				"google-circles",
+				"gplus-circled",
+				"gplus",
+				"graduation-cap",
+				"heart-empty",
+				"heart",
+				"help-circled",
+				"help",
+				"home",
+				"hourglass",
+				"inbox",
+				"infinity",
+				"info-circled",
+				"info",
+				"instagrem",
+				"install",
+				"key",
+				"keyboard",
+				"lamp",
+				"language",
+				"lastfm-circled",
+				"lastfm",
+				"layout",
+				"leaf",
+				"left-bold",
+				"left-circled",
+				"left-dir",
+				"left-open-big",
+				"left-open-mini",
+				"left-open",
+				"left-thin",
+				"left",
+				"level-down",
+				"level-up",
+				"lifebuoy",
+				"light-down",
+				"light-up",
+				"link",
+				"linkedin-circled",
+				"linkedin",
+				"list-add",
+				"list",
+				"location",
+				"lock-open",
+				"lock",
+				"login",
+				"logo-db",
+				"logout",
+				"loop",
+				"magnet",
+				"mail",
+				"map",
+				"megaphone",
+				"menu",
+				"mic",
+				"minus-circled",
+				"minus-squared",
+				"minus",
+				"mixi",
+				"mobile",
+				"monitor",
+				"moon",
+				"mouse",
+				"music",
+				"mute",
+				"network",
+				"newspaper",
+				"note-beamed",
+				"note",
+				"palette",
+				"paper-plane",
+				"pause",
+				"paypal",
+				"pencil",
+				"phone",
+				"picasa",
+				"picture",
+				"pinterest-circled",
+				"pinterest",
+				"play",
+				"plus-circled",
+				"plus-squared",
+				"plus",
+				"popup",
+				"print",
+				"progress-0",
+				"progress-1",
+				"progress-2",
+				"progress-3",
+				"publish",
+				"qq",
+				"quote",
+				"rdio-circled",
+				"rdio",
+				"record",
+				"renren",
+				"reply-all",
+				"reply",
+				"resize-full",
+				"resize-small",
+				"retweet",
+				"right-bold",
+				"right-circled",
+				"right-dir",
+				"right-open-big",
+				"right-open-mini",
+				"right-open",
+				"right-thin",
+				"right",
+				"rocket",
+				"rss",
+				"search",
+				"share",
+				"shareable",
+				"shuffle",
+				"signal",
+				"sina-weibo",
+				"skype-circled",
+				"skype",
+				"smashing",
+				"sound",
+				"soundcloud",
+				"spotify-circled",
+				"spotify",
+				"star-empty",
+				"star",
+				"stop",
+				"stumbleupon-circled",
+				"stumbleupon",
+				"suitcase",
+				"sweden",
+				"switch",
+				"tag",
+				"tape",
+				"target",
+				"thermometer",
+				"thumbs-down",
+				"thumbs-up",
+				"ticket",
+				"to-end",
+				"to-start",
+				"tools",
+				"traffic-cone",
+				"trash",
+				"trophy",
+				"tumblr-circled",
+				"tumblr",
+				"twitter-circled",
+				"twitter",
+				"up-bold",
+				"up-circled",
+				"up-dir",
+				"up-open-big",
+				"up-open-mini",
+				"up-open",
+				"up-thin",
+				"up",
+				"upload-cloud",
+				"upload",
+				"user-add",
+				"user",
+				"users",
+				"vcard",
+				"video",
+				"vimeo-circled",
+				"vimeo",
+				"vkontakte",
+				"volume",
+				"water",
+				"window"
+			]
+		},
+		"evil": {
 			"name": "evil-icons",
-			"prefix": "ei-",
+			"prefix": "evil-",
 			"repo": "https://github.com/outpunk/evil-icons.git",
 			"icons": [
-				{
-					"type": "ei",
-					"name": "archive"
-				},
-				{
-					"type": "ei",
-					"name": "arrow-down"
-				},
-				{
-					"type": "ei",
-					"name": "arrow-left"
-				},
-				{
-					"type": "ei",
-					"name": "arrow-right"
-				},
-				{
-					"type": "ei",
-					"name": "arrow-up"
-				},
-				{
-					"type": "ei",
-					"name": "bell"
-				},
-				{
-					"type": "ei",
-					"name": "calendar"
-				},
-				{
-					"type": "ei",
-					"name": "camera"
-				},
-				{
-					"type": "ei",
-					"name": "cart"
-				},
-				{
-					"type": "ei",
-					"name": "chart"
-				},
-				{
-					"type": "ei",
-					"name": "check"
-				},
-				{
-					"type": "ei",
-					"name": "chevron-down"
-				},
-				{
-					"type": "ei",
-					"name": "chevron-left"
-				},
-				{
-					"type": "ei",
-					"name": "chevron-right"
-				},
-				{
-					"type": "ei",
-					"name": "chevron-up"
-				},
-				{
-					"type": "ei",
-					"name": "clock"
-				},
-				{
-					"type": "ei",
-					"name": "close-o"
-				},
-				{
-					"type": "ei",
-					"name": "close"
-				},
-				{
-					"type": "ei",
-					"name": "comment"
-				},
-				{
-					"type": "ei",
-					"name": "credit-card"
-				},
-				{
-					"type": "ei",
-					"name": "envelope"
-				},
-				{
-					"type": "ei",
-					"name": "exclamation"
-				},
-				{
-					"type": "ei",
-					"name": "external-link"
-				},
-				{
-					"type": "ei",
-					"name": "eye"
-				},
-				{
-					"type": "ei",
-					"name": "gear"
-				},
-				{
-					"type": "ei",
-					"name": "heart"
-				},
-				{
-					"type": "ei",
-					"name": "image"
-				},
-				{
-					"type": "ei",
-					"name": "like"
-				},
-				{
-					"type": "ei",
-					"name": "link"
-				},
-				{
-					"type": "ei",
-					"name": "location"
-				},
-				{
-					"type": "ei",
-					"name": "lock"
-				},
-				{
-					"type": "ei",
-					"name": "minus"
-				},
-				{
-					"type": "ei",
-					"name": "navicon"
-				},
-				{
-					"type": "ei",
-					"name": "paperclip"
-				},
-				{
-					"type": "ei",
-					"name": "pencil"
-				},
-				{
-					"type": "ei",
-					"name": "play"
-				},
-				{
-					"type": "ei",
-					"name": "plus"
-				},
-				{
-					"type": "ei",
-					"name": "pointer"
-				},
-				{
-					"type": "ei",
-					"name": "question"
-				},
-				{
-					"type": "ei",
-					"name": "redo"
-				},
-				{
-					"type": "ei",
-					"name": "refresh"
-				},
-				{
-					"type": "ei",
-					"name": "retweet"
-				},
-				{
-					"type": "ei",
-					"name": "sc-facebook"
-				},
-				{
-					"type": "ei",
-					"name": "sc-github"
-				},
-				{
-					"type": "ei",
-					"name": "sc-google-plus"
-				},
-				{
-					"type": "ei",
-					"name": "sc-instagram"
-				},
-				{
-					"type": "ei",
-					"name": "sc-linkedin"
-				},
-				{
-					"type": "ei",
-					"name": "sc-odnoklassniki"
-				},
-				{
-					"type": "ei",
-					"name": "sc-pinterest"
-				},
-				{
-					"type": "ei",
-					"name": "sc-skype"
-				},
-				{
-					"type": "ei",
-					"name": "sc-soundcloud"
-				},
-				{
-					"type": "ei",
-					"name": "sc-telegram"
-				},
-				{
-					"type": "ei",
-					"name": "sc-tumblr"
-				},
-				{
-					"type": "ei",
-					"name": "sc-twitter"
-				},
-				{
-					"type": "ei",
-					"name": "sc-vimeo"
-				},
-				{
-					"type": "ei",
-					"name": "sc-vk"
-				},
-				{
-					"type": "ei",
-					"name": "sc-youtube"
-				},
-				{
-					"type": "ei",
-					"name": "search"
-				},
-				{
-					"type": "ei",
-					"name": "share-apple"
-				},
-				{
-					"type": "ei",
-					"name": "share-google"
-				},
-				{
-					"type": "ei",
-					"name": "spinner-2"
-				},
-				{
-					"type": "ei",
-					"name": "spinner-3"
-				},
-				{
-					"type": "ei",
-					"name": "spinner"
-				},
-				{
-					"type": "ei",
-					"name": "star"
-				},
-				{
-					"type": "ei",
-					"name": "tag"
-				},
-				{
-					"type": "ei",
-					"name": "trash"
-				},
-				{
-					"type": "ei",
-					"name": "trophy"
-				},
-				{
-					"type": "ei",
-					"name": "undo"
-				},
-				{
-					"type": "ei",
-					"name": "unlock"
-				},
-				{
-					"type": "ei",
-					"name": "user"
-				}
+				"archive",
+				"arrow-down",
+				"arrow-left",
+				"arrow-right",
+				"arrow-up",
+				"bell",
+				"calendar",
+				"camera",
+				"cart",
+				"chart",
+				"check",
+				"chevron-down",
+				"chevron-left",
+				"chevron-right",
+				"chevron-up",
+				"clock",
+				"close-o",
+				"close",
+				"comment",
+				"credit-card",
+				"envelope",
+				"exclamation",
+				"external-link",
+				"eye",
+				"gear",
+				"heart",
+				"image",
+				"like",
+				"link",
+				"location",
+				"lock",
+				"minus",
+				"navicon",
+				"paperclip",
+				"pencil",
+				"play",
+				"plus",
+				"pointer",
+				"question",
+				"redo",
+				"refresh",
+				"retweet",
+				"sc-facebook",
+				"sc-github",
+				"sc-google-plus",
+				"sc-instagram",
+				"sc-linkedin",
+				"sc-odnoklassniki",
+				"sc-pinterest",
+				"sc-skype",
+				"sc-soundcloud",
+				"sc-telegram",
+				"sc-tumblr",
+				"sc-twitter",
+				"sc-vimeo",
+				"sc-vk",
+				"sc-youtube",
+				"search",
+				"share-apple",
+				"share-google",
+				"spinner-2",
+				"spinner-3",
+				"spinner",
+				"star",
+				"tag",
+				"trash",
+				"trophy",
+				"undo",
+				"unlock",
+				"user"
 			]
 		},
-		"fi": {
+		"flag": {
 			"name": "flag-icon",
-			"prefix": "fi-",
+			"prefix": "flag-",
 			"repo": "https://github.com/lipis/flag-icon-css.git",
 			"icons": [
-				{
-					"type": "fi",
-					"name": "ad"
-				},
-				{
-					"type": "fi",
-					"name": "ae"
-				},
-				{
-					"type": "fi",
-					"name": "af"
-				},
-				{
-					"type": "fi",
-					"name": "ag"
-				},
-				{
-					"type": "fi",
-					"name": "ai"
-				},
-				{
-					"type": "fi",
-					"name": "al"
-				},
-				{
-					"type": "fi",
-					"name": "am"
-				},
-				{
-					"type": "fi",
-					"name": "ao"
-				},
-				{
-					"type": "fi",
-					"name": "aq"
-				},
-				{
-					"type": "fi",
-					"name": "ar"
-				},
-				{
-					"type": "fi",
-					"name": "as"
-				},
-				{
-					"type": "fi",
-					"name": "at"
-				},
-				{
-					"type": "fi",
-					"name": "au"
-				},
-				{
-					"type": "fi",
-					"name": "aw"
-				},
-				{
-					"type": "fi",
-					"name": "ax"
-				},
-				{
-					"type": "fi",
-					"name": "az"
-				},
-				{
-					"type": "fi",
-					"name": "ba"
-				},
-				{
-					"type": "fi",
-					"name": "bb"
-				},
-				{
-					"type": "fi",
-					"name": "bd"
-				},
-				{
-					"type": "fi",
-					"name": "be"
-				},
-				{
-					"type": "fi",
-					"name": "bf"
-				},
-				{
-					"type": "fi",
-					"name": "bg"
-				},
-				{
-					"type": "fi",
-					"name": "bh"
-				},
-				{
-					"type": "fi",
-					"name": "bi"
-				},
-				{
-					"type": "fi",
-					"name": "bj"
-				},
-				{
-					"type": "fi",
-					"name": "bl"
-				},
-				{
-					"type": "fi",
-					"name": "bm"
-				},
-				{
-					"type": "fi",
-					"name": "bn"
-				},
-				{
-					"type": "fi",
-					"name": "bo"
-				},
-				{
-					"type": "fi",
-					"name": "bq"
-				},
-				{
-					"type": "fi",
-					"name": "br"
-				},
-				{
-					"type": "fi",
-					"name": "bs"
-				},
-				{
-					"type": "fi",
-					"name": "bt"
-				},
-				{
-					"type": "fi",
-					"name": "bv"
-				},
-				{
-					"type": "fi",
-					"name": "bw"
-				},
-				{
-					"type": "fi",
-					"name": "by"
-				},
-				{
-					"type": "fi",
-					"name": "bz"
-				},
-				{
-					"type": "fi",
-					"name": "ca"
-				},
-				{
-					"type": "fi",
-					"name": "cc"
-				},
-				{
-					"type": "fi",
-					"name": "cd"
-				},
-				{
-					"type": "fi",
-					"name": "cf"
-				},
-				{
-					"type": "fi",
-					"name": "cg"
-				},
-				{
-					"type": "fi",
-					"name": "ch"
-				},
-				{
-					"type": "fi",
-					"name": "ci"
-				},
-				{
-					"type": "fi",
-					"name": "ck"
-				},
-				{
-					"type": "fi",
-					"name": "cl"
-				},
-				{
-					"type": "fi",
-					"name": "cm"
-				},
-				{
-					"type": "fi",
-					"name": "cn"
-				},
-				{
-					"type": "fi",
-					"name": "co"
-				},
-				{
-					"type": "fi",
-					"name": "cr"
-				},
-				{
-					"type": "fi",
-					"name": "cu"
-				},
-				{
-					"type": "fi",
-					"name": "cv"
-				},
-				{
-					"type": "fi",
-					"name": "cw"
-				},
-				{
-					"type": "fi",
-					"name": "cx"
-				},
-				{
-					"type": "fi",
-					"name": "cy"
-				},
-				{
-					"type": "fi",
-					"name": "cz"
-				},
-				{
-					"type": "fi",
-					"name": "de"
-				},
-				{
-					"type": "fi",
-					"name": "dj"
-				},
-				{
-					"type": "fi",
-					"name": "dk"
-				},
-				{
-					"type": "fi",
-					"name": "dm"
-				},
-				{
-					"type": "fi",
-					"name": "do"
-				},
-				{
-					"type": "fi",
-					"name": "dz"
-				},
-				{
-					"type": "fi",
-					"name": "ec"
-				},
-				{
-					"type": "fi",
-					"name": "ee"
-				},
-				{
-					"type": "fi",
-					"name": "eg"
-				},
-				{
-					"type": "fi",
-					"name": "eh"
-				},
-				{
-					"type": "fi",
-					"name": "er"
-				},
-				{
-					"type": "fi",
-					"name": "es"
-				},
-				{
-					"type": "fi",
-					"name": "et"
-				},
-				{
-					"type": "fi",
-					"name": "eu"
-				},
-				{
-					"type": "fi",
-					"name": "fi"
-				},
-				{
-					"type": "fi",
-					"name": "fj"
-				},
-				{
-					"type": "fi",
-					"name": "fk"
-				},
-				{
-					"type": "fi",
-					"name": "fm"
-				},
-				{
-					"type": "fi",
-					"name": "fo"
-				},
-				{
-					"type": "fi",
-					"name": "fr"
-				},
-				{
-					"type": "fi",
-					"name": "ga"
-				},
-				{
-					"type": "fi",
-					"name": "gb-eng"
-				},
-				{
-					"type": "fi",
-					"name": "gb-nir"
-				},
-				{
-					"type": "fi",
-					"name": "gb-sct"
-				},
-				{
-					"type": "fi",
-					"name": "gb-wls"
-				},
-				{
-					"type": "fi",
-					"name": "gb"
-				},
-				{
-					"type": "fi",
-					"name": "gd"
-				},
-				{
-					"type": "fi",
-					"name": "ge"
-				},
-				{
-					"type": "fi",
-					"name": "gf"
-				},
-				{
-					"type": "fi",
-					"name": "gg"
-				},
-				{
-					"type": "fi",
-					"name": "gh"
-				},
-				{
-					"type": "fi",
-					"name": "gi"
-				},
-				{
-					"type": "fi",
-					"name": "gl"
-				},
-				{
-					"type": "fi",
-					"name": "gm"
-				},
-				{
-					"type": "fi",
-					"name": "gn"
-				},
-				{
-					"type": "fi",
-					"name": "gp"
-				},
-				{
-					"type": "fi",
-					"name": "gq"
-				},
-				{
-					"type": "fi",
-					"name": "gr"
-				},
-				{
-					"type": "fi",
-					"name": "gs"
-				},
-				{
-					"type": "fi",
-					"name": "gt"
-				},
-				{
-					"type": "fi",
-					"name": "gu"
-				},
-				{
-					"type": "fi",
-					"name": "gw"
-				},
-				{
-					"type": "fi",
-					"name": "gy"
-				},
-				{
-					"type": "fi",
-					"name": "hk"
-				},
-				{
-					"type": "fi",
-					"name": "hm"
-				},
-				{
-					"type": "fi",
-					"name": "hn"
-				},
-				{
-					"type": "fi",
-					"name": "hr"
-				},
-				{
-					"type": "fi",
-					"name": "ht"
-				},
-				{
-					"type": "fi",
-					"name": "hu"
-				},
-				{
-					"type": "fi",
-					"name": "id"
-				},
-				{
-					"type": "fi",
-					"name": "ie"
-				},
-				{
-					"type": "fi",
-					"name": "il"
-				},
-				{
-					"type": "fi",
-					"name": "im"
-				},
-				{
-					"type": "fi",
-					"name": "in"
-				},
-				{
-					"type": "fi",
-					"name": "io"
-				},
-				{
-					"type": "fi",
-					"name": "iq"
-				},
-				{
-					"type": "fi",
-					"name": "ir"
-				},
-				{
-					"type": "fi",
-					"name": "is"
-				},
-				{
-					"type": "fi",
-					"name": "it"
-				},
-				{
-					"type": "fi",
-					"name": "je"
-				},
-				{
-					"type": "fi",
-					"name": "jm"
-				},
-				{
-					"type": "fi",
-					"name": "jo"
-				},
-				{
-					"type": "fi",
-					"name": "jp"
-				},
-				{
-					"type": "fi",
-					"name": "ke"
-				},
-				{
-					"type": "fi",
-					"name": "kg"
-				},
-				{
-					"type": "fi",
-					"name": "kh"
-				},
-				{
-					"type": "fi",
-					"name": "ki"
-				},
-				{
-					"type": "fi",
-					"name": "km"
-				},
-				{
-					"type": "fi",
-					"name": "kn"
-				},
-				{
-					"type": "fi",
-					"name": "kp"
-				},
-				{
-					"type": "fi",
-					"name": "kr"
-				},
-				{
-					"type": "fi",
-					"name": "kw"
-				},
-				{
-					"type": "fi",
-					"name": "ky"
-				},
-				{
-					"type": "fi",
-					"name": "kz"
-				},
-				{
-					"type": "fi",
-					"name": "la"
-				},
-				{
-					"type": "fi",
-					"name": "lb"
-				},
-				{
-					"type": "fi",
-					"name": "lc"
-				},
-				{
-					"type": "fi",
-					"name": "li"
-				},
-				{
-					"type": "fi",
-					"name": "lk"
-				},
-				{
-					"type": "fi",
-					"name": "lr"
-				},
-				{
-					"type": "fi",
-					"name": "ls"
-				},
-				{
-					"type": "fi",
-					"name": "lt"
-				},
-				{
-					"type": "fi",
-					"name": "lu"
-				},
-				{
-					"type": "fi",
-					"name": "lv"
-				},
-				{
-					"type": "fi",
-					"name": "ly"
-				},
-				{
-					"type": "fi",
-					"name": "ma"
-				},
-				{
-					"type": "fi",
-					"name": "mc"
-				},
-				{
-					"type": "fi",
-					"name": "md"
-				},
-				{
-					"type": "fi",
-					"name": "me"
-				},
-				{
-					"type": "fi",
-					"name": "mf"
-				},
-				{
-					"type": "fi",
-					"name": "mg"
-				},
-				{
-					"type": "fi",
-					"name": "mh"
-				},
-				{
-					"type": "fi",
-					"name": "mk"
-				},
-				{
-					"type": "fi",
-					"name": "ml"
-				},
-				{
-					"type": "fi",
-					"name": "mm"
-				},
-				{
-					"type": "fi",
-					"name": "mn"
-				},
-				{
-					"type": "fi",
-					"name": "mo"
-				},
-				{
-					"type": "fi",
-					"name": "mp"
-				},
-				{
-					"type": "fi",
-					"name": "mq"
-				},
-				{
-					"type": "fi",
-					"name": "mr"
-				},
-				{
-					"type": "fi",
-					"name": "ms"
-				},
-				{
-					"type": "fi",
-					"name": "mt"
-				},
-				{
-					"type": "fi",
-					"name": "mu"
-				},
-				{
-					"type": "fi",
-					"name": "mv"
-				},
-				{
-					"type": "fi",
-					"name": "mw"
-				},
-				{
-					"type": "fi",
-					"name": "mx"
-				},
-				{
-					"type": "fi",
-					"name": "my"
-				},
-				{
-					"type": "fi",
-					"name": "mz"
-				},
-				{
-					"type": "fi",
-					"name": "na"
-				},
-				{
-					"type": "fi",
-					"name": "nc"
-				},
-				{
-					"type": "fi",
-					"name": "ne"
-				},
-				{
-					"type": "fi",
-					"name": "nf"
-				},
-				{
-					"type": "fi",
-					"name": "ng"
-				},
-				{
-					"type": "fi",
-					"name": "ni"
-				},
-				{
-					"type": "fi",
-					"name": "nl"
-				},
-				{
-					"type": "fi",
-					"name": "no"
-				},
-				{
-					"type": "fi",
-					"name": "np"
-				},
-				{
-					"type": "fi",
-					"name": "nr"
-				},
-				{
-					"type": "fi",
-					"name": "nu"
-				},
-				{
-					"type": "fi",
-					"name": "nz"
-				},
-				{
-					"type": "fi",
-					"name": "om"
-				},
-				{
-					"type": "fi",
-					"name": "pa"
-				},
-				{
-					"type": "fi",
-					"name": "pe"
-				},
-				{
-					"type": "fi",
-					"name": "pf"
-				},
-				{
-					"type": "fi",
-					"name": "pg"
-				},
-				{
-					"type": "fi",
-					"name": "ph"
-				},
-				{
-					"type": "fi",
-					"name": "pk"
-				},
-				{
-					"type": "fi",
-					"name": "pl"
-				},
-				{
-					"type": "fi",
-					"name": "pm"
-				},
-				{
-					"type": "fi",
-					"name": "pn"
-				},
-				{
-					"type": "fi",
-					"name": "pr"
-				},
-				{
-					"type": "fi",
-					"name": "ps"
-				},
-				{
-					"type": "fi",
-					"name": "pt"
-				},
-				{
-					"type": "fi",
-					"name": "pw"
-				},
-				{
-					"type": "fi",
-					"name": "py"
-				},
-				{
-					"type": "fi",
-					"name": "qa"
-				},
-				{
-					"type": "fi",
-					"name": "re"
-				},
-				{
-					"type": "fi",
-					"name": "ro"
-				},
-				{
-					"type": "fi",
-					"name": "rs"
-				},
-				{
-					"type": "fi",
-					"name": "ru"
-				},
-				{
-					"type": "fi",
-					"name": "rw"
-				},
-				{
-					"type": "fi",
-					"name": "sa"
-				},
-				{
-					"type": "fi",
-					"name": "sb"
-				},
-				{
-					"type": "fi",
-					"name": "sc"
-				},
-				{
-					"type": "fi",
-					"name": "sd"
-				},
-				{
-					"type": "fi",
-					"name": "se"
-				},
-				{
-					"type": "fi",
-					"name": "sg"
-				},
-				{
-					"type": "fi",
-					"name": "sh"
-				},
-				{
-					"type": "fi",
-					"name": "si"
-				},
-				{
-					"type": "fi",
-					"name": "sj"
-				},
-				{
-					"type": "fi",
-					"name": "sk"
-				},
-				{
-					"type": "fi",
-					"name": "sl"
-				},
-				{
-					"type": "fi",
-					"name": "sm"
-				},
-				{
-					"type": "fi",
-					"name": "sn"
-				},
-				{
-					"type": "fi",
-					"name": "so"
-				},
-				{
-					"type": "fi",
-					"name": "sr"
-				},
-				{
-					"type": "fi",
-					"name": "ss"
-				},
-				{
-					"type": "fi",
-					"name": "st"
-				},
-				{
-					"type": "fi",
-					"name": "sv"
-				},
-				{
-					"type": "fi",
-					"name": "sx"
-				},
-				{
-					"type": "fi",
-					"name": "sy"
-				},
-				{
-					"type": "fi",
-					"name": "sz"
-				},
-				{
-					"type": "fi",
-					"name": "tc"
-				},
-				{
-					"type": "fi",
-					"name": "td"
-				},
-				{
-					"type": "fi",
-					"name": "tf"
-				},
-				{
-					"type": "fi",
-					"name": "tg"
-				},
-				{
-					"type": "fi",
-					"name": "th"
-				},
-				{
-					"type": "fi",
-					"name": "tj"
-				},
-				{
-					"type": "fi",
-					"name": "tk"
-				},
-				{
-					"type": "fi",
-					"name": "tl"
-				},
-				{
-					"type": "fi",
-					"name": "tm"
-				},
-				{
-					"type": "fi",
-					"name": "tn"
-				},
-				{
-					"type": "fi",
-					"name": "to"
-				},
-				{
-					"type": "fi",
-					"name": "tr"
-				},
-				{
-					"type": "fi",
-					"name": "tt"
-				},
-				{
-					"type": "fi",
-					"name": "tv"
-				},
-				{
-					"type": "fi",
-					"name": "tw"
-				},
-				{
-					"type": "fi",
-					"name": "tz"
-				},
-				{
-					"type": "fi",
-					"name": "ua"
-				},
-				{
-					"type": "fi",
-					"name": "ug"
-				},
-				{
-					"type": "fi",
-					"name": "um"
-				},
-				{
-					"type": "fi",
-					"name": "un"
-				},
-				{
-					"type": "fi",
-					"name": "us"
-				},
-				{
-					"type": "fi",
-					"name": "uy"
-				},
-				{
-					"type": "fi",
-					"name": "uz"
-				},
-				{
-					"type": "fi",
-					"name": "va"
-				},
-				{
-					"type": "fi",
-					"name": "vc"
-				},
-				{
-					"type": "fi",
-					"name": "ve"
-				},
-				{
-					"type": "fi",
-					"name": "vg"
-				},
-				{
-					"type": "fi",
-					"name": "vi"
-				},
-				{
-					"type": "fi",
-					"name": "vn"
-				},
-				{
-					"type": "fi",
-					"name": "vu"
-				},
-				{
-					"type": "fi",
-					"name": "wf"
-				},
-				{
-					"type": "fi",
-					"name": "ws"
-				},
-				{
-					"type": "fi",
-					"name": "ye"
-				},
-				{
-					"type": "fi",
-					"name": "yt"
-				},
-				{
-					"type": "fi",
-					"name": "za"
-				},
-				{
-					"type": "fi",
-					"name": "zm"
-				},
-				{
-					"type": "fi",
-					"name": "zw"
-				},
-				{
-					"type": "fi",
-					"name": "zz"
-				}
+				"ad",
+				"ae",
+				"af",
+				"ag",
+				"ai",
+				"al",
+				"am",
+				"ao",
+				"aq",
+				"ar",
+				"as",
+				"at",
+				"au",
+				"aw",
+				"ax",
+				"az",
+				"ba",
+				"bb",
+				"bd",
+				"be",
+				"bf",
+				"bg",
+				"bh",
+				"bi",
+				"bj",
+				"bl",
+				"bm",
+				"bn",
+				"bo",
+				"bq",
+				"br",
+				"bs",
+				"bt",
+				"bv",
+				"bw",
+				"by",
+				"bz",
+				"ca",
+				"cc",
+				"cd",
+				"cf",
+				"cg",
+				"ch",
+				"ci",
+				"ck",
+				"cl",
+				"cm",
+				"cn",
+				"co",
+				"cr",
+				"cu",
+				"cv",
+				"cw",
+				"cx",
+				"cy",
+				"cz",
+				"de",
+				"dj",
+				"dk",
+				"dm",
+				"do",
+				"dz",
+				"ec",
+				"ee",
+				"eg",
+				"eh",
+				"er",
+				"es",
+				"et",
+				"eu",
+				"fi",
+				"fj",
+				"fk",
+				"fm",
+				"fo",
+				"fr",
+				"ga",
+				"gb-eng",
+				"gb-nir",
+				"gb-sct",
+				"gb-wls",
+				"gb",
+				"gd",
+				"ge",
+				"gf",
+				"gg",
+				"gh",
+				"gi",
+				"gl",
+				"gm",
+				"gn",
+				"gp",
+				"gq",
+				"gr",
+				"gs",
+				"gt",
+				"gu",
+				"gw",
+				"gy",
+				"hk",
+				"hm",
+				"hn",
+				"hr",
+				"ht",
+				"hu",
+				"id",
+				"ie",
+				"il",
+				"im",
+				"in",
+				"io",
+				"iq",
+				"ir",
+				"is",
+				"it",
+				"je",
+				"jm",
+				"jo",
+				"jp",
+				"ke",
+				"kg",
+				"kh",
+				"ki",
+				"km",
+				"kn",
+				"kp",
+				"kr",
+				"kw",
+				"ky",
+				"kz",
+				"la",
+				"lb",
+				"lc",
+				"li",
+				"lk",
+				"lr",
+				"ls",
+				"lt",
+				"lu",
+				"lv",
+				"ly",
+				"ma",
+				"mc",
+				"md",
+				"me",
+				"mf",
+				"mg",
+				"mh",
+				"mk",
+				"ml",
+				"mm",
+				"mn",
+				"mo",
+				"mp",
+				"mq",
+				"mr",
+				"ms",
+				"mt",
+				"mu",
+				"mv",
+				"mw",
+				"mx",
+				"my",
+				"mz",
+				"na",
+				"nc",
+				"ne",
+				"nf",
+				"ng",
+				"ni",
+				"nl",
+				"no",
+				"np",
+				"nr",
+				"nu",
+				"nz",
+				"om",
+				"pa",
+				"pe",
+				"pf",
+				"pg",
+				"ph",
+				"pk",
+				"pl",
+				"pm",
+				"pn",
+				"pr",
+				"ps",
+				"pt",
+				"pw",
+				"py",
+				"qa",
+				"re",
+				"ro",
+				"rs",
+				"ru",
+				"rw",
+				"sa",
+				"sb",
+				"sc",
+				"sd",
+				"se",
+				"sg",
+				"sh",
+				"si",
+				"sj",
+				"sk",
+				"sl",
+				"sm",
+				"sn",
+				"so",
+				"sr",
+				"ss",
+				"st",
+				"sv",
+				"sx",
+				"sy",
+				"sz",
+				"tc",
+				"td",
+				"tf",
+				"tg",
+				"th",
+				"tj",
+				"tk",
+				"tl",
+				"tm",
+				"tn",
+				"to",
+				"tr",
+				"tt",
+				"tv",
+				"tw",
+				"tz",
+				"ua",
+				"ug",
+				"um",
+				"un",
+				"us",
+				"uy",
+				"uz",
+				"va",
+				"vc",
+				"ve",
+				"vg",
+				"vi",
+				"vn",
+				"vu",
+				"wf",
+				"ws",
+				"ye",
+				"yt",
+				"za",
+				"zm",
+				"zw",
+				"zz"
 			]
 		},
-		"fa": {
+		"awesome": {
 			"name": "font-awesome",
-			"prefix": "fa-",
+			"prefix": "awesome-",
 			"repo": "https://github.com/FortAwesome/Font-Awesome.git",
 			"icons": [
-				{
-					"type": "fa",
-					"name": "500px"
-				},
-				{
-					"type": "fa",
-					"name": "adjust"
-				},
-				{
-					"type": "fa",
-					"name": "adn"
-				},
-				{
-					"type": "fa",
-					"name": "align-center"
-				},
-				{
-					"type": "fa",
-					"name": "align-justify"
-				},
-				{
-					"type": "fa",
-					"name": "align-left"
-				},
-				{
-					"type": "fa",
-					"name": "align-right"
-				},
-				{
-					"type": "fa",
-					"name": "amazon"
-				},
-				{
-					"type": "fa",
-					"name": "ambulance"
-				},
-				{
-					"type": "fa",
-					"name": "american-sign-language-interpreting"
-				},
-				{
-					"type": "fa",
-					"name": "anchor"
-				},
-				{
-					"type": "fa",
-					"name": "android"
-				},
-				{
-					"type": "fa",
-					"name": "angellist"
-				},
-				{
-					"type": "fa",
-					"name": "angle-double-down"
-				},
-				{
-					"type": "fa",
-					"name": "angle-double-left"
-				},
-				{
-					"type": "fa",
-					"name": "angle-double-right"
-				},
-				{
-					"type": "fa",
-					"name": "angle-double-up"
-				},
-				{
-					"type": "fa",
-					"name": "angle-down"
-				},
-				{
-					"type": "fa",
-					"name": "angle-left"
-				},
-				{
-					"type": "fa",
-					"name": "angle-right"
-				},
-				{
-					"type": "fa",
-					"name": "angle-up"
-				},
-				{
-					"type": "fa",
-					"name": "apple"
-				},
-				{
-					"type": "fa",
-					"name": "archive"
-				},
-				{
-					"type": "fa",
-					"name": "area-chart"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-circle-down"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-circle-left"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-circle-o-down"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-circle-o-left"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-circle-o-right"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-circle-o-up"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-circle-right"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-circle-up"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-down"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-left"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-right"
-				},
-				{
-					"type": "fa",
-					"name": "arrow-up"
-				},
-				{
-					"type": "fa",
-					"name": "arrows-alt"
-				},
-				{
-					"type": "fa",
-					"name": "arrows-h"
-				},
-				{
-					"type": "fa",
-					"name": "arrows-v"
-				},
-				{
-					"type": "fa",
-					"name": "arrows"
-				},
-				{
-					"type": "fa",
-					"name": "asl-interpreting"
-				},
-				{
-					"type": "fa",
-					"name": "assistive-listening-systems"
-				},
-				{
-					"type": "fa",
-					"name": "asterisk"
-				},
-				{
-					"type": "fa",
-					"name": "at"
-				},
-				{
-					"type": "fa",
-					"name": "audio-description"
-				},
-				{
-					"type": "fa",
-					"name": "automobile"
-				},
-				{
-					"type": "fa",
-					"name": "backward"
-				},
-				{
-					"type": "fa",
-					"name": "balance-scale"
-				},
-				{
-					"type": "fa",
-					"name": "ban"
-				},
-				{
-					"type": "fa",
-					"name": "bank"
-				},
-				{
-					"type": "fa",
-					"name": "bar-chart"
-				},
-				{
-					"type": "fa",
-					"name": "barcode"
-				},
-				{
-					"type": "fa",
-					"name": "bars"
-				},
-				{
-					"type": "fa",
-					"name": "battery-0"
-				},
-				{
-					"type": "fa",
-					"name": "battery-1"
-				},
-				{
-					"type": "fa",
-					"name": "battery-2"
-				},
-				{
-					"type": "fa",
-					"name": "battery-3"
-				},
-				{
-					"type": "fa",
-					"name": "battery-4"
-				},
-				{
-					"type": "fa",
-					"name": "battery-full"
-				},
-				{
-					"type": "fa",
-					"name": "battery-quarter"
-				},
-				{
-					"type": "fa",
-					"name": "bed"
-				},
-				{
-					"type": "fa",
-					"name": "beer"
-				},
-				{
-					"type": "fa",
-					"name": "behance-square"
-				},
-				{
-					"type": "fa",
-					"name": "behance"
-				},
-				{
-					"type": "fa",
-					"name": "bell-o"
-				},
-				{
-					"type": "fa",
-					"name": "bell-slash-o"
-				},
-				{
-					"type": "fa",
-					"name": "bell-slash"
-				},
-				{
-					"type": "fa",
-					"name": "bell"
-				},
-				{
-					"type": "fa",
-					"name": "bicycle"
-				},
-				{
-					"type": "fa",
-					"name": "binoculars"
-				},
-				{
-					"type": "fa",
-					"name": "birthday-cake"
-				},
-				{
-					"type": "fa",
-					"name": "bitbucket-square"
-				},
-				{
-					"type": "fa",
-					"name": "bitbucket"
-				},
-				{
-					"type": "fa",
-					"name": "bitcoin"
-				},
-				{
-					"type": "fa",
-					"name": "black-tie"
-				},
-				{
-					"type": "fa",
-					"name": "blind"
-				},
-				{
-					"type": "fa",
-					"name": "bluetooth-b"
-				},
-				{
-					"type": "fa",
-					"name": "bluetooth"
-				},
-				{
-					"type": "fa",
-					"name": "bold"
-				},
-				{
-					"type": "fa",
-					"name": "bolt"
-				},
-				{
-					"type": "fa",
-					"name": "bomb"
-				},
-				{
-					"type": "fa",
-					"name": "book"
-				},
-				{
-					"type": "fa",
-					"name": "bookmark-o"
-				},
-				{
-					"type": "fa",
-					"name": "bookmark"
-				},
-				{
-					"type": "fa",
-					"name": "braille"
-				},
-				{
-					"type": "fa",
-					"name": "briefcase"
-				},
-				{
-					"type": "fa",
-					"name": "btc"
-				},
-				{
-					"type": "fa",
-					"name": "bug"
-				},
-				{
-					"type": "fa",
-					"name": "building-o"
-				},
-				{
-					"type": "fa",
-					"name": "building"
-				},
-				{
-					"type": "fa",
-					"name": "bullhorn"
-				},
-				{
-					"type": "fa",
-					"name": "bullseye"
-				},
-				{
-					"type": "fa",
-					"name": "bus"
-				},
-				{
-					"type": "fa",
-					"name": "buysellads"
-				},
-				{
-					"type": "fa",
-					"name": "cab"
-				},
-				{
-					"type": "fa",
-					"name": "calculator"
-				},
-				{
-					"type": "fa",
-					"name": "calendar-check-o"
-				},
-				{
-					"type": "fa",
-					"name": "calendar-minus-o"
-				},
-				{
-					"type": "fa",
-					"name": "calendar-o"
-				},
-				{
-					"type": "fa",
-					"name": "calendar-plus-o"
-				},
-				{
-					"type": "fa",
-					"name": "calendar-times-o"
-				},
-				{
-					"type": "fa",
-					"name": "calendar"
-				},
-				{
-					"type": "fa",
-					"name": "camera-retro"
-				},
-				{
-					"type": "fa",
-					"name": "camera"
-				},
-				{
-					"type": "fa",
-					"name": "car"
-				},
-				{
-					"type": "fa",
-					"name": "caret-down"
-				},
-				{
-					"type": "fa",
-					"name": "caret-left"
-				},
-				{
-					"type": "fa",
-					"name": "caret-right"
-				},
-				{
-					"type": "fa",
-					"name": "caret-square-o-down"
-				},
-				{
-					"type": "fa",
-					"name": "caret-square-o-left"
-				},
-				{
-					"type": "fa",
-					"name": "caret-square-o-right"
-				},
-				{
-					"type": "fa",
-					"name": "caret-square-o-up"
-				},
-				{
-					"type": "fa",
-					"name": "caret-up"
-				},
-				{
-					"type": "fa",
-					"name": "cart-arrow-down"
-				},
-				{
-					"type": "fa",
-					"name": "cart-plus"
-				},
-				{
-					"type": "fa",
-					"name": "cc-amex"
-				},
-				{
-					"type": "fa",
-					"name": "cc-diners-club"
-				},
-				{
-					"type": "fa",
-					"name": "cc-discover"
-				},
-				{
-					"type": "fa",
-					"name": "cc-jcb"
-				},
-				{
-					"type": "fa",
-					"name": "cc-mastercard"
-				},
-				{
-					"type": "fa",
-					"name": "cc-paypal"
-				},
-				{
-					"type": "fa",
-					"name": "cc-stripe"
-				},
-				{
-					"type": "fa",
-					"name": "cc-visa"
-				},
-				{
-					"type": "fa",
-					"name": "cc"
-				},
-				{
-					"type": "fa",
-					"name": "certificate"
-				},
-				{
-					"type": "fa",
-					"name": "chain-broken"
-				},
-				{
-					"type": "fa",
-					"name": "chain"
-				},
-				{
-					"type": "fa",
-					"name": "check-circle-o"
-				},
-				{
-					"type": "fa",
-					"name": "check-circle"
-				},
-				{
-					"type": "fa",
-					"name": "check-square-o"
-				},
-				{
-					"type": "fa",
-					"name": "check-square"
-				},
-				{
-					"type": "fa",
-					"name": "check"
-				},
-				{
-					"type": "fa",
-					"name": "chevron-circle-down"
-				},
-				{
-					"type": "fa",
-					"name": "chevron-circle-left"
-				},
-				{
-					"type": "fa",
-					"name": "chevron-circle-right"
-				},
-				{
-					"type": "fa",
-					"name": "chevron-circle-up"
-				},
-				{
-					"type": "fa",
-					"name": "chevron-down"
-				},
-				{
-					"type": "fa",
-					"name": "chevron-left"
-				},
-				{
-					"type": "fa",
-					"name": "chevron-right"
-				},
-				{
-					"type": "fa",
-					"name": "chevron-up"
-				},
-				{
-					"type": "fa",
-					"name": "child"
-				},
-				{
-					"type": "fa",
-					"name": "chrome"
-				},
-				{
-					"type": "fa",
-					"name": "circle-o-notch"
-				},
-				{
-					"type": "fa",
-					"name": "circle-o"
-				},
-				{
-					"type": "fa",
-					"name": "circle-thin"
-				},
-				{
-					"type": "fa",
-					"name": "circle"
-				},
-				{
-					"type": "fa",
-					"name": "clipboard"
-				},
-				{
-					"type": "fa",
-					"name": "clock-o"
-				},
-				{
-					"type": "fa",
-					"name": "clone"
-				},
-				{
-					"type": "fa",
-					"name": "close"
-				},
-				{
-					"type": "fa",
-					"name": "cloud-download"
-				},
-				{
-					"type": "fa",
-					"name": "cloud-upload"
-				},
-				{
-					"type": "fa",
-					"name": "cloud"
-				},
-				{
-					"type": "fa",
-					"name": "cny"
-				},
-				{
-					"type": "fa",
-					"name": "code-fork"
-				},
-				{
-					"type": "fa",
-					"name": "code"
-				},
-				{
-					"type": "fa",
-					"name": "codepen"
-				},
-				{
-					"type": "fa",
-					"name": "codiepie"
-				},
-				{
-					"type": "fa",
-					"name": "coffee"
-				},
-				{
-					"type": "fa",
-					"name": "cog"
-				},
-				{
-					"type": "fa",
-					"name": "cogs"
-				},
-				{
-					"type": "fa",
-					"name": "columns"
-				},
-				{
-					"type": "fa",
-					"name": "comment-o"
-				},
-				{
-					"type": "fa",
-					"name": "comment"
-				},
-				{
-					"type": "fa",
-					"name": "commenting-o"
-				},
-				{
-					"type": "fa",
-					"name": "commenting"
-				},
-				{
-					"type": "fa",
-					"name": "comments-o"
-				},
-				{
-					"type": "fa",
-					"name": "comments"
-				},
-				{
-					"type": "fa",
-					"name": "compass"
-				},
-				{
-					"type": "fa",
-					"name": "compress"
-				},
-				{
-					"type": "fa",
-					"name": "connectdevelop"
-				},
-				{
-					"type": "fa",
-					"name": "contao"
-				},
-				{
-					"type": "fa",
-					"name": "copy"
-				},
-				{
-					"type": "fa",
-					"name": "copyright"
-				},
-				{
-					"type": "fa",
-					"name": "creative-commons"
-				},
-				{
-					"type": "fa",
-					"name": "credit-card-alt"
-				},
-				{
-					"type": "fa",
-					"name": "credit-card"
-				},
-				{
-					"type": "fa",
-					"name": "crop"
-				},
-				{
-					"type": "fa",
-					"name": "crosshairs"
-				},
-				{
-					"type": "fa",
-					"name": "css3"
-				},
-				{
-					"type": "fa",
-					"name": "cube"
-				},
-				{
-					"type": "fa",
-					"name": "cubes"
-				},
-				{
-					"type": "fa",
-					"name": "cut"
-				},
-				{
-					"type": "fa",
-					"name": "cutlery"
-				},
-				{
-					"type": "fa",
-					"name": "dashboard"
-				},
-				{
-					"type": "fa",
-					"name": "dashcube"
-				},
-				{
-					"type": "fa",
-					"name": "database"
-				},
-				{
-					"type": "fa",
-					"name": "deaf"
-				},
-				{
-					"type": "fa",
-					"name": "deafness"
-				},
-				{
-					"type": "fa",
-					"name": "dedent"
-				},
-				{
-					"type": "fa",
-					"name": "delicious"
-				},
-				{
-					"type": "fa",
-					"name": "desktop"
-				},
-				{
-					"type": "fa",
-					"name": "deviantart"
-				},
-				{
-					"type": "fa",
-					"name": "diamond"
-				},
-				{
-					"type": "fa",
-					"name": "digg"
-				},
-				{
-					"type": "fa",
-					"name": "dollar"
-				},
-				{
-					"type": "fa",
-					"name": "dot-circle-o"
-				},
-				{
-					"type": "fa",
-					"name": "download"
-				},
-				{
-					"type": "fa",
-					"name": "dribbble"
-				},
-				{
-					"type": "fa",
-					"name": "dropbox"
-				},
-				{
-					"type": "fa",
-					"name": "drupal"
-				},
-				{
-					"type": "fa",
-					"name": "edge"
-				},
-				{
-					"type": "fa",
-					"name": "edit"
-				},
-				{
-					"type": "fa",
-					"name": "eject"
-				},
-				{
-					"type": "fa",
-					"name": "ellipsis-h"
-				},
-				{
-					"type": "fa",
-					"name": "ellipsis-v"
-				},
-				{
-					"type": "fa",
-					"name": "empire"
-				},
-				{
-					"type": "fa",
-					"name": "envelope-o"
-				},
-				{
-					"type": "fa",
-					"name": "envelope-square"
-				},
-				{
-					"type": "fa",
-					"name": "envelope"
-				},
-				{
-					"type": "fa",
-					"name": "envira"
-				},
-				{
-					"type": "fa",
-					"name": "eraser"
-				},
-				{
-					"type": "fa",
-					"name": "eur"
-				},
-				{
-					"type": "fa",
-					"name": "exchange"
-				},
-				{
-					"type": "fa",
-					"name": "exclamation-circle"
-				},
-				{
-					"type": "fa",
-					"name": "exclamation-triangle"
-				},
-				{
-					"type": "fa",
-					"name": "exclamation"
-				},
-				{
-					"type": "fa",
-					"name": "expand"
-				},
-				{
-					"type": "fa",
-					"name": "expeditedssl"
-				},
-				{
-					"type": "fa",
-					"name": "external-link-square"
-				},
-				{
-					"type": "fa",
-					"name": "external-link"
-				},
-				{
-					"type": "fa",
-					"name": "eye-slash"
-				},
-				{
-					"type": "fa",
-					"name": "eye"
-				},
-				{
-					"type": "fa",
-					"name": "eyedropper"
-				},
-				{
-					"type": "fa",
-					"name": "fa"
-				},
-				{
-					"type": "fa",
-					"name": "facebook-official"
-				},
-				{
-					"type": "fa",
-					"name": "facebook-square"
-				},
-				{
-					"type": "fa",
-					"name": "facebook"
-				},
-				{
-					"type": "fa",
-					"name": "fast-backward"
-				},
-				{
-					"type": "fa",
-					"name": "fast-forward"
-				},
-				{
-					"type": "fa",
-					"name": "fax"
-				},
-				{
-					"type": "fa",
-					"name": "feed"
-				},
-				{
-					"type": "fa",
-					"name": "female"
-				},
-				{
-					"type": "fa",
-					"name": "fighter-jet"
-				},
-				{
-					"type": "fa",
-					"name": "file-archive-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-audio-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-code-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-excel-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-image-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-movie-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-pdf-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-picture-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-powerpoint-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-sound-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-text-o"
-				},
-				{
-					"type": "fa",
-					"name": "file-text"
-				},
-				{
-					"type": "fa",
-					"name": "file-word-o"
-				},
-				{
-					"type": "fa",
-					"name": "file"
-				},
-				{
-					"type": "fa",
-					"name": "files-o"
-				},
-				{
-					"type": "fa",
-					"name": "film"
-				},
-				{
-					"type": "fa",
-					"name": "filter"
-				},
-				{
-					"type": "fa",
-					"name": "fire-extinguisher"
-				},
-				{
-					"type": "fa",
-					"name": "fire"
-				},
-				{
-					"type": "fa",
-					"name": "firefox"
-				},
-				{
-					"type": "fa",
-					"name": "first-order"
-				},
-				{
-					"type": "fa",
-					"name": "flag-checkered"
-				},
-				{
-					"type": "fa",
-					"name": "flag-o"
-				},
-				{
-					"type": "fa",
-					"name": "flag"
-				},
-				{
-					"type": "fa",
-					"name": "flash"
-				},
-				{
-					"type": "fa",
-					"name": "flask"
-				},
-				{
-					"type": "fa",
-					"name": "flickr"
-				},
-				{
-					"type": "fa",
-					"name": "floppy-o"
-				},
-				{
-					"type": "fa",
-					"name": "folder-o"
-				},
-				{
-					"type": "fa",
-					"name": "folder-open-o"
-				},
-				{
-					"type": "fa",
-					"name": "folder-open"
-				},
-				{
-					"type": "fa",
-					"name": "folder"
-				},
-				{
-					"type": "fa",
-					"name": "font"
-				},
-				{
-					"type": "fa",
-					"name": "fonticons"
-				},
-				{
-					"type": "fa",
-					"name": "fort-awesome"
-				},
-				{
-					"type": "fa",
-					"name": "forumbee"
-				},
-				{
-					"type": "fa",
-					"name": "forward"
-				},
-				{
-					"type": "fa",
-					"name": "foursquare"
-				},
-				{
-					"type": "fa",
-					"name": "frown-o"
-				},
-				{
-					"type": "fa",
-					"name": "futbol-o"
-				},
-				{
-					"type": "fa",
-					"name": "gamepad"
-				},
-				{
-					"type": "fa",
-					"name": "gavel"
-				},
-				{
-					"type": "fa",
-					"name": "gbp"
-				},
-				{
-					"type": "fa",
-					"name": "ge"
-				},
-				{
-					"type": "fa",
-					"name": "gears"
-				},
-				{
-					"type": "fa",
-					"name": "genderless"
-				},
-				{
-					"type": "fa",
-					"name": "get-pocket"
-				},
-				{
-					"type": "fa",
-					"name": "gg-circle"
-				},
-				{
-					"type": "fa",
-					"name": "gg"
-				},
-				{
-					"type": "fa",
-					"name": "gift"
-				},
-				{
-					"type": "fa",
-					"name": "git-square"
-				},
-				{
-					"type": "fa",
-					"name": "git"
-				},
-				{
-					"type": "fa",
-					"name": "github-alt"
-				},
-				{
-					"type": "fa",
-					"name": "github-square"
-				},
-				{
-					"type": "fa",
-					"name": "github"
-				},
-				{
-					"type": "fa",
-					"name": "gitlab"
-				},
-				{
-					"type": "fa",
-					"name": "gittip"
-				},
-				{
-					"type": "fa",
-					"name": "glass"
-				},
-				{
-					"type": "fa",
-					"name": "glide-g"
-				},
-				{
-					"type": "fa",
-					"name": "glide"
-				},
-				{
-					"type": "fa",
-					"name": "globe"
-				},
-				{
-					"type": "fa",
-					"name": "google-plus-circle"
-				},
-				{
-					"type": "fa",
-					"name": "google-plus-official"
-				},
-				{
-					"type": "fa",
-					"name": "google-plus-square"
-				},
-				{
-					"type": "fa",
-					"name": "google-plus"
-				},
-				{
-					"type": "fa",
-					"name": "google-wallet"
-				},
-				{
-					"type": "fa",
-					"name": "google"
-				},
-				{
-					"type": "fa",
-					"name": "graduation-cap"
-				},
-				{
-					"type": "fa",
-					"name": "gratipay"
-				},
-				{
-					"type": "fa",
-					"name": "group"
-				},
-				{
-					"type": "fa",
-					"name": "h-square"
-				},
-				{
-					"type": "fa",
-					"name": "hacker-news"
-				},
-				{
-					"type": "fa",
-					"name": "hand-grab-o"
-				},
-				{
-					"type": "fa",
-					"name": "hand-lizard-o"
-				},
-				{
-					"type": "fa",
-					"name": "hand-o-down"
-				},
-				{
-					"type": "fa",
-					"name": "hand-o-left"
-				},
-				{
-					"type": "fa",
-					"name": "hand-o-right"
-				},
-				{
-					"type": "fa",
-					"name": "hand-o-up"
-				},
-				{
-					"type": "fa",
-					"name": "hand-paper-o"
-				},
-				{
-					"type": "fa",
-					"name": "hand-peace-o"
-				},
-				{
-					"type": "fa",
-					"name": "hand-pointer-o"
-				},
-				{
-					"type": "fa",
-					"name": "hand-scissors-o"
-				},
-				{
-					"type": "fa",
-					"name": "hand-spock-o"
-				},
-				{
-					"type": "fa",
-					"name": "hand-stop-o"
-				},
-				{
-					"type": "fa",
-					"name": "hashtag"
-				},
-				{
-					"type": "fa",
-					"name": "hdd-o"
-				},
-				{
-					"type": "fa",
-					"name": "header"
-				},
-				{
-					"type": "fa",
-					"name": "headphones"
-				},
-				{
-					"type": "fa",
-					"name": "heart-o"
-				},
-				{
-					"type": "fa",
-					"name": "heart"
-				},
-				{
-					"type": "fa",
-					"name": "heartbeat"
-				},
-				{
-					"type": "fa",
-					"name": "history"
-				},
-				{
-					"type": "fa",
-					"name": "home"
-				},
-				{
-					"type": "fa",
-					"name": "hospital-o"
-				},
-				{
-					"type": "fa",
-					"name": "hotel"
-				},
-				{
-					"type": "fa",
-					"name": "hourglass-1"
-				},
-				{
-					"type": "fa",
-					"name": "hourglass-2"
-				},
-				{
-					"type": "fa",
-					"name": "hourglass-3"
-				},
-				{
-					"type": "fa",
-					"name": "hourglass-half"
-				},
-				{
-					"type": "fa",
-					"name": "hourglass-o"
-				},
-				{
-					"type": "fa",
-					"name": "hourglass-start"
-				},
-				{
-					"type": "fa",
-					"name": "hourglass"
-				},
-				{
-					"type": "fa",
-					"name": "houzz"
-				},
-				{
-					"type": "fa",
-					"name": "html5"
-				},
-				{
-					"type": "fa",
-					"name": "i-cursor"
-				},
-				{
-					"type": "fa",
-					"name": "ils"
-				},
-				{
-					"type": "fa",
-					"name": "image"
-				},
-				{
-					"type": "fa",
-					"name": "inbox"
-				},
-				{
-					"type": "fa",
-					"name": "indent"
-				},
-				{
-					"type": "fa",
-					"name": "industry"
-				},
-				{
-					"type": "fa",
-					"name": "info-circle"
-				},
-				{
-					"type": "fa",
-					"name": "info"
-				},
-				{
-					"type": "fa",
-					"name": "inr"
-				},
-				{
-					"type": "fa",
-					"name": "instagram"
-				},
-				{
-					"type": "fa",
-					"name": "internet-explorer"
-				},
-				{
-					"type": "fa",
-					"name": "intersex"
-				},
-				{
-					"type": "fa",
-					"name": "ioxhost"
-				},
-				{
-					"type": "fa",
-					"name": "italic"
-				},
-				{
-					"type": "fa",
-					"name": "joomla"
-				},
-				{
-					"type": "fa",
-					"name": "jsfiddle"
-				},
-				{
-					"type": "fa",
-					"name": "key"
-				},
-				{
-					"type": "fa",
-					"name": "keyboard-o"
-				},
-				{
-					"type": "fa",
-					"name": "krw"
-				},
-				{
-					"type": "fa",
-					"name": "language"
-				},
-				{
-					"type": "fa",
-					"name": "laptop"
-				},
-				{
-					"type": "fa",
-					"name": "lastfm-square"
-				},
-				{
-					"type": "fa",
-					"name": "lastfm"
-				},
-				{
-					"type": "fa",
-					"name": "leaf"
-				},
-				{
-					"type": "fa",
-					"name": "leanpub"
-				},
-				{
-					"type": "fa",
-					"name": "legal"
-				},
-				{
-					"type": "fa",
-					"name": "lemon-o"
-				},
-				{
-					"type": "fa",
-					"name": "level-down"
-				},
-				{
-					"type": "fa",
-					"name": "level-up"
-				},
-				{
-					"type": "fa",
-					"name": "life-bouy"
-				},
-				{
-					"type": "fa",
-					"name": "life-ring"
-				},
-				{
-					"type": "fa",
-					"name": "lightbulb-o"
-				},
-				{
-					"type": "fa",
-					"name": "line-chart"
-				},
-				{
-					"type": "fa",
-					"name": "link"
-				},
-				{
-					"type": "fa",
-					"name": "linkedin-square"
-				},
-				{
-					"type": "fa",
-					"name": "linkedin"
-				},
-				{
-					"type": "fa",
-					"name": "linux"
-				},
-				{
-					"type": "fa",
-					"name": "list-alt"
-				},
-				{
-					"type": "fa",
-					"name": "list-ol"
-				},
-				{
-					"type": "fa",
-					"name": "list-ul"
-				},
-				{
-					"type": "fa",
-					"name": "list"
-				},
-				{
-					"type": "fa",
-					"name": "location-arrow"
-				},
-				{
-					"type": "fa",
-					"name": "lock"
-				},
-				{
-					"type": "fa",
-					"name": "long-arrow-down"
-				},
-				{
-					"type": "fa",
-					"name": "long-arrow-left"
-				},
-				{
-					"type": "fa",
-					"name": "long-arrow-right"
-				},
-				{
-					"type": "fa",
-					"name": "long-arrow-up"
-				},
-				{
-					"type": "fa",
-					"name": "low-vision"
-				},
-				{
-					"type": "fa",
-					"name": "magic"
-				},
-				{
-					"type": "fa",
-					"name": "magnet"
-				},
-				{
-					"type": "fa",
-					"name": "mail-forward"
-				},
-				{
-					"type": "fa",
-					"name": "mail-reply-all"
-				},
-				{
-					"type": "fa",
-					"name": "mail-reply"
-				},
-				{
-					"type": "fa",
-					"name": "male"
-				},
-				{
-					"type": "fa",
-					"name": "map-marker"
-				},
-				{
-					"type": "fa",
-					"name": "map-o"
-				},
-				{
-					"type": "fa",
-					"name": "map-pin"
-				},
-				{
-					"type": "fa",
-					"name": "map-signs"
-				},
-				{
-					"type": "fa",
-					"name": "map"
-				},
-				{
-					"type": "fa",
-					"name": "mars-double"
-				},
-				{
-					"type": "fa",
-					"name": "mars-stroke-h"
-				},
-				{
-					"type": "fa",
-					"name": "mars-stroke-v"
-				},
-				{
-					"type": "fa",
-					"name": "mars-stroke"
-				},
-				{
-					"type": "fa",
-					"name": "mars"
-				},
-				{
-					"type": "fa",
-					"name": "maxcdn"
-				},
-				{
-					"type": "fa",
-					"name": "meanpath"
-				},
-				{
-					"type": "fa",
-					"name": "medium"
-				},
-				{
-					"type": "fa",
-					"name": "medkit"
-				},
-				{
-					"type": "fa",
-					"name": "meh-o"
-				},
-				{
-					"type": "fa",
-					"name": "mercury"
-				},
-				{
-					"type": "fa",
-					"name": "microphone-slash"
-				},
-				{
-					"type": "fa",
-					"name": "microphone"
-				},
-				{
-					"type": "fa",
-					"name": "minus-circle"
-				},
-				{
-					"type": "fa",
-					"name": "minus-square-o"
-				},
-				{
-					"type": "fa",
-					"name": "minus-square"
-				},
-				{
-					"type": "fa",
-					"name": "minus"
-				},
-				{
-					"type": "fa",
-					"name": "mixcloud"
-				},
-				{
-					"type": "fa",
-					"name": "mobile"
-				},
-				{
-					"type": "fa",
-					"name": "modx"
-				},
-				{
-					"type": "fa",
-					"name": "money"
-				},
-				{
-					"type": "fa",
-					"name": "moon-o"
-				},
-				{
-					"type": "fa",
-					"name": "motorcycle"
-				},
-				{
-					"type": "fa",
-					"name": "mouse-pointer"
-				},
-				{
-					"type": "fa",
-					"name": "music"
-				},
-				{
-					"type": "fa",
-					"name": "neuter"
-				},
-				{
-					"type": "fa",
-					"name": "newspaper-o"
-				},
-				{
-					"type": "fa",
-					"name": "object-group"
-				},
-				{
-					"type": "fa",
-					"name": "object-ungroup"
-				},
-				{
-					"type": "fa",
-					"name": "odnoklassniki-square"
-				},
-				{
-					"type": "fa",
-					"name": "odnoklassniki"
-				},
-				{
-					"type": "fa",
-					"name": "opencart"
-				},
-				{
-					"type": "fa",
-					"name": "openid"
-				},
-				{
-					"type": "fa",
-					"name": "opera"
-				},
-				{
-					"type": "fa",
-					"name": "optin-monster"
-				},
-				{
-					"type": "fa",
-					"name": "outdent"
-				},
-				{
-					"type": "fa",
-					"name": "pagelines"
-				},
-				{
-					"type": "fa",
-					"name": "paint-brush"
-				},
-				{
-					"type": "fa",
-					"name": "paper-plane-o"
-				},
-				{
-					"type": "fa",
-					"name": "paper-plane"
-				},
-				{
-					"type": "fa",
-					"name": "paperclip"
-				},
-				{
-					"type": "fa",
-					"name": "paragraph"
-				},
-				{
-					"type": "fa",
-					"name": "pause-circle-o"
-				},
-				{
-					"type": "fa",
-					"name": "pause-circle"
-				},
-				{
-					"type": "fa",
-					"name": "pause"
-				},
-				{
-					"type": "fa",
-					"name": "paw"
-				},
-				{
-					"type": "fa",
-					"name": "paypal"
-				},
-				{
-					"type": "fa",
-					"name": "pencil-square"
-				},
-				{
-					"type": "fa",
-					"name": "pencil"
-				},
-				{
-					"type": "fa",
-					"name": "percent"
-				},
-				{
-					"type": "fa",
-					"name": "phone-square"
-				},
-				{
-					"type": "fa",
-					"name": "phone"
-				},
-				{
-					"type": "fa",
-					"name": "picture-o"
-				},
-				{
-					"type": "fa",
-					"name": "pie-chart"
-				},
-				{
-					"type": "fa",
-					"name": "pied-piper-alt"
-				},
-				{
-					"type": "fa",
-					"name": "pied-piper-pp"
-				},
-				{
-					"type": "fa",
-					"name": "pied-piper"
-				},
-				{
-					"type": "fa",
-					"name": "pinterest-p"
-				},
-				{
-					"type": "fa",
-					"name": "pinterest-square"
-				},
-				{
-					"type": "fa",
-					"name": "pinterest"
-				},
-				{
-					"type": "fa",
-					"name": "plane"
-				},
-				{
-					"type": "fa",
-					"name": "play-circle-o"
-				},
-				{
-					"type": "fa",
-					"name": "play-circle"
-				},
-				{
-					"type": "fa",
-					"name": "play"
-				},
-				{
-					"type": "fa",
-					"name": "plug"
-				},
-				{
-					"type": "fa",
-					"name": "plus-circle"
-				},
-				{
-					"type": "fa",
-					"name": "plus-square-o"
-				},
-				{
-					"type": "fa",
-					"name": "plus-square"
-				},
-				{
-					"type": "fa",
-					"name": "plus"
-				},
-				{
-					"type": "fa",
-					"name": "power-off"
-				},
-				{
-					"type": "fa",
-					"name": "print"
-				},
-				{
-					"type": "fa",
-					"name": "product-hunt"
-				},
-				{
-					"type": "fa",
-					"name": "puzzle-piece"
-				},
-				{
-					"type": "fa",
-					"name": "qq"
-				},
-				{
-					"type": "fa",
-					"name": "qrcode"
-				},
-				{
-					"type": "fa",
-					"name": "question-circle-o"
-				},
-				{
-					"type": "fa",
-					"name": "question-circle"
-				},
-				{
-					"type": "fa",
-					"name": "question"
-				},
-				{
-					"type": "fa",
-					"name": "quote-left"
-				},
-				{
-					"type": "fa",
-					"name": "quote-right"
-				},
-				{
-					"type": "fa",
-					"name": "ra"
-				},
-				{
-					"type": "fa",
-					"name": "random"
-				},
-				{
-					"type": "fa",
-					"name": "rebel"
-				},
-				{
-					"type": "fa",
-					"name": "recycle"
-				},
-				{
-					"type": "fa",
-					"name": "reddit-alien"
-				},
-				{
-					"type": "fa",
-					"name": "reddit-square"
-				},
-				{
-					"type": "fa",
-					"name": "reddit"
-				},
-				{
-					"type": "fa",
-					"name": "refresh"
-				},
-				{
-					"type": "fa",
-					"name": "registered"
-				},
-				{
-					"type": "fa",
-					"name": "renren"
-				},
-				{
-					"type": "fa",
-					"name": "repeat"
-				},
-				{
-					"type": "fa",
-					"name": "reply-all"
-				},
-				{
-					"type": "fa",
-					"name": "retweet"
-				},
-				{
-					"type": "fa",
-					"name": "road"
-				},
-				{
-					"type": "fa",
-					"name": "rocket"
-				},
-				{
-					"type": "fa",
-					"name": "rotate-left"
-				},
-				{
-					"type": "fa",
-					"name": "rouble"
-				},
-				{
-					"type": "fa",
-					"name": "rss-square"
-				},
-				{
-					"type": "fa",
-					"name": "ruble"
-				},
-				{
-					"type": "fa",
-					"name": "safari"
-				},
-				{
-					"type": "fa",
-					"name": "scissors"
-				},
-				{
-					"type": "fa",
-					"name": "scribd"
-				},
-				{
-					"type": "fa",
-					"name": "search-minus"
-				},
-				{
-					"type": "fa",
-					"name": "search-plus"
-				},
-				{
-					"type": "fa",
-					"name": "search"
-				},
-				{
-					"type": "fa",
-					"name": "sellsy"
-				},
-				{
-					"type": "fa",
-					"name": "send"
-				},
-				{
-					"type": "fa",
-					"name": "server"
-				},
-				{
-					"type": "fa",
-					"name": "share-alt-square"
-				},
-				{
-					"type": "fa",
-					"name": "share-alt"
-				},
-				{
-					"type": "fa",
-					"name": "share-square-o"
-				},
-				{
-					"type": "fa",
-					"name": "share-square"
-				},
-				{
-					"type": "fa",
-					"name": "shekel"
-				},
-				{
-					"type": "fa",
-					"name": "shield"
-				},
-				{
-					"type": "fa",
-					"name": "ship"
-				},
-				{
-					"type": "fa",
-					"name": "shirtsinbulk"
-				},
-				{
-					"type": "fa",
-					"name": "shopping-bag"
-				},
-				{
-					"type": "fa",
-					"name": "shopping-basket"
-				},
-				{
-					"type": "fa",
-					"name": "shopping-cart"
-				},
-				{
-					"type": "fa",
-					"name": "sign-in"
-				},
-				{
-					"type": "fa",
-					"name": "sign-language"
-				},
-				{
-					"type": "fa",
-					"name": "sign-out"
-				},
-				{
-					"type": "fa",
-					"name": "signal"
-				},
-				{
-					"type": "fa",
-					"name": "signing"
-				},
-				{
-					"type": "fa",
-					"name": "simplybuilt"
-				},
-				{
-					"type": "fa",
-					"name": "sitemap"
-				},
-				{
-					"type": "fa",
-					"name": "skyatlas"
-				},
-				{
-					"type": "fa",
-					"name": "skype"
-				},
-				{
-					"type": "fa",
-					"name": "slack"
-				},
-				{
-					"type": "fa",
-					"name": "sliders"
-				},
-				{
-					"type": "fa",
-					"name": "slideshare"
-				},
-				{
-					"type": "fa",
-					"name": "smile-o"
-				},
-				{
-					"type": "fa",
-					"name": "snapchat-ghost"
-				},
-				{
-					"type": "fa",
-					"name": "snapchat-square"
-				},
-				{
-					"type": "fa",
-					"name": "snapchat"
-				},
-				{
-					"type": "fa",
-					"name": "soccer-ball-o"
-				},
-				{
-					"type": "fa",
-					"name": "sort-alpha-asc"
-				},
-				{
-					"type": "fa",
-					"name": "sort-alpha-desc"
-				},
-				{
-					"type": "fa",
-					"name": "sort-amount-asc"
-				},
-				{
-					"type": "fa",
-					"name": "sort-amount-desc"
-				},
-				{
-					"type": "fa",
-					"name": "sort-asc"
-				},
-				{
-					"type": "fa",
-					"name": "sort-desc"
-				},
-				{
-					"type": "fa",
-					"name": "sort-down"
-				},
-				{
-					"type": "fa",
-					"name": "sort-numeric-asc"
-				},
-				{
-					"type": "fa",
-					"name": "sort-numeric-desc"
-				},
-				{
-					"type": "fa",
-					"name": "sort"
-				},
-				{
-					"type": "fa",
-					"name": "soundcloud"
-				},
-				{
-					"type": "fa",
-					"name": "space-shuttle"
-				},
-				{
-					"type": "fa",
-					"name": "spinner"
-				},
-				{
-					"type": "fa",
-					"name": "spoon"
-				},
-				{
-					"type": "fa",
-					"name": "spotify"
-				},
-				{
-					"type": "fa",
-					"name": "square-o"
-				},
-				{
-					"type": "fa",
-					"name": "square"
-				},
-				{
-					"type": "fa",
-					"name": "stack-exchange"
-				},
-				{
-					"type": "fa",
-					"name": "stack-overflow"
-				},
-				{
-					"type": "fa",
-					"name": "star-half-empty"
-				},
-				{
-					"type": "fa",
-					"name": "star-half-full"
-				},
-				{
-					"type": "fa",
-					"name": "star-half"
-				},
-				{
-					"type": "fa",
-					"name": "star-o"
-				},
-				{
-					"type": "fa",
-					"name": "star"
-				},
-				{
-					"type": "fa",
-					"name": "steam-square"
-				},
-				{
-					"type": "fa",
-					"name": "steam"
-				},
-				{
-					"type": "fa",
-					"name": "step-backward"
-				},
-				{
-					"type": "fa",
-					"name": "step-forward"
-				},
-				{
-					"type": "fa",
-					"name": "stethoscope"
-				},
-				{
-					"type": "fa",
-					"name": "sticky-note-o"
-				},
-				{
-					"type": "fa",
-					"name": "sticky-note"
-				},
-				{
-					"type": "fa",
-					"name": "stop-circle-o"
-				},
-				{
-					"type": "fa",
-					"name": "stop-circle"
-				},
-				{
-					"type": "fa",
-					"name": "stop"
-				},
-				{
-					"type": "fa",
-					"name": "street-view"
-				},
-				{
-					"type": "fa",
-					"name": "strikethrough"
-				},
-				{
-					"type": "fa",
-					"name": "stumbleupon-circle"
-				},
-				{
-					"type": "fa",
-					"name": "stumbleupon"
-				},
-				{
-					"type": "fa",
-					"name": "subscript"
-				},
-				{
-					"type": "fa",
-					"name": "subway"
-				},
-				{
-					"type": "fa",
-					"name": "suitcase"
-				},
-				{
-					"type": "fa",
-					"name": "sun-o"
-				},
-				{
-					"type": "fa",
-					"name": "superscript"
-				},
-				{
-					"type": "fa",
-					"name": "support"
-				},
-				{
-					"type": "fa",
-					"name": "table"
-				},
-				{
-					"type": "fa",
-					"name": "tablet"
-				},
-				{
-					"type": "fa",
-					"name": "tag"
-				},
-				{
-					"type": "fa",
-					"name": "tags"
-				},
-				{
-					"type": "fa",
-					"name": "tasks"
-				},
-				{
-					"type": "fa",
-					"name": "television"
-				},
-				{
-					"type": "fa",
-					"name": "tencent-weibo"
-				},
-				{
-					"type": "fa",
-					"name": "terminal"
-				},
-				{
-					"type": "fa",
-					"name": "text-height"
-				},
-				{
-					"type": "fa",
-					"name": "text-width"
-				},
-				{
-					"type": "fa",
-					"name": "th-large"
-				},
-				{
-					"type": "fa",
-					"name": "th-list"
-				},
-				{
-					"type": "fa",
-					"name": "th"
-				},
-				{
-					"type": "fa",
-					"name": "themeisle"
-				},
-				{
-					"type": "fa",
-					"name": "thumb-tack"
-				},
-				{
-					"type": "fa",
-					"name": "thumbs-down"
-				},
-				{
-					"type": "fa",
-					"name": "thumbs-o-down"
-				},
-				{
-					"type": "fa",
-					"name": "thumbs-o-up"
-				},
-				{
-					"type": "fa",
-					"name": "thumbs-up"
-				},
-				{
-					"type": "fa",
-					"name": "ticket"
-				},
-				{
-					"type": "fa",
-					"name": "times-circle-o"
-				},
-				{
-					"type": "fa",
-					"name": "times-circle"
-				},
-				{
-					"type": "fa",
-					"name": "tint"
-				},
-				{
-					"type": "fa",
-					"name": "toggle-left"
-				},
-				{
-					"type": "fa",
-					"name": "toggle-off"
-				},
-				{
-					"type": "fa",
-					"name": "toggle-on"
-				},
-				{
-					"type": "fa",
-					"name": "toggle-up"
-				},
-				{
-					"type": "fa",
-					"name": "trademark"
-				},
-				{
-					"type": "fa",
-					"name": "train"
-				},
-				{
-					"type": "fa",
-					"name": "transgender-alt"
-				},
-				{
-					"type": "fa",
-					"name": "trash-o"
-				},
-				{
-					"type": "fa",
-					"name": "trash"
-				},
-				{
-					"type": "fa",
-					"name": "tree"
-				},
-				{
-					"type": "fa",
-					"name": "trello"
-				},
-				{
-					"type": "fa",
-					"name": "tripadvisor"
-				},
-				{
-					"type": "fa",
-					"name": "trophy"
-				},
-				{
-					"type": "fa",
-					"name": "truck"
-				},
-				{
-					"type": "fa",
-					"name": "try"
-				},
-				{
-					"type": "fa",
-					"name": "tty"
-				},
-				{
-					"type": "fa",
-					"name": "tumblr-square"
-				},
-				{
-					"type": "fa",
-					"name": "tumblr"
-				},
-				{
-					"type": "fa",
-					"name": "turkish-lira"
-				},
-				{
-					"type": "fa",
-					"name": "twitch"
-				},
-				{
-					"type": "fa",
-					"name": "twitter-square"
-				},
-				{
-					"type": "fa",
-					"name": "twitter"
-				},
-				{
-					"type": "fa",
-					"name": "umbrella"
-				},
-				{
-					"type": "fa",
-					"name": "underline"
-				},
-				{
-					"type": "fa",
-					"name": "universal-access"
-				},
-				{
-					"type": "fa",
-					"name": "unlink"
-				},
-				{
-					"type": "fa",
-					"name": "unlock-alt"
-				},
-				{
-					"type": "fa",
-					"name": "unlock"
-				},
-				{
-					"type": "fa",
-					"name": "upload"
-				},
-				{
-					"type": "fa",
-					"name": "usb"
-				},
-				{
-					"type": "fa",
-					"name": "usd"
-				},
-				{
-					"type": "fa",
-					"name": "user-md"
-				},
-				{
-					"type": "fa",
-					"name": "user-plus"
-				},
-				{
-					"type": "fa",
-					"name": "user-secret"
-				},
-				{
-					"type": "fa",
-					"name": "user-times"
-				},
-				{
-					"type": "fa",
-					"name": "user"
-				},
-				{
-					"type": "fa",
-					"name": "users"
-				},
-				{
-					"type": "fa",
-					"name": "venus-double"
-				},
-				{
-					"type": "fa",
-					"name": "venus-mars"
-				},
-				{
-					"type": "fa",
-					"name": "venus"
-				},
-				{
-					"type": "fa",
-					"name": "viacoin"
-				},
-				{
-					"type": "fa",
-					"name": "viadeo-square"
-				},
-				{
-					"type": "fa",
-					"name": "viadeo"
-				},
-				{
-					"type": "fa",
-					"name": "video-camera"
-				},
-				{
-					"type": "fa",
-					"name": "vimeo-square"
-				},
-				{
-					"type": "fa",
-					"name": "vimeo"
-				},
-				{
-					"type": "fa",
-					"name": "vine"
-				},
-				{
-					"type": "fa",
-					"name": "vk"
-				},
-				{
-					"type": "fa",
-					"name": "volume-control-phone"
-				},
-				{
-					"type": "fa",
-					"name": "volume-down"
-				},
-				{
-					"type": "fa",
-					"name": "volume-off"
-				},
-				{
-					"type": "fa",
-					"name": "volume-up"
-				},
-				{
-					"type": "fa",
-					"name": "warning"
-				},
-				{
-					"type": "fa",
-					"name": "wechat"
-				},
-				{
-					"type": "fa",
-					"name": "weibo"
-				},
-				{
-					"type": "fa",
-					"name": "whatsapp"
-				},
-				{
-					"type": "fa",
-					"name": "wheelchair-alt"
-				},
-				{
-					"type": "fa",
-					"name": "wheelchair"
-				},
-				{
-					"type": "fa",
-					"name": "wifi"
-				},
-				{
-					"type": "fa",
-					"name": "wikipedia-w"
-				},
-				{
-					"type": "fa",
-					"name": "windows"
-				},
-				{
-					"type": "fa",
-					"name": "won"
-				},
-				{
-					"type": "fa",
-					"name": "wordpress"
-				},
-				{
-					"type": "fa",
-					"name": "wpbeginner"
-				},
-				{
-					"type": "fa",
-					"name": "wpforms"
-				},
-				{
-					"type": "fa",
-					"name": "wrench"
-				},
-				{
-					"type": "fa",
-					"name": "xing-square"
-				},
-				{
-					"type": "fa",
-					"name": "xing"
-				},
-				{
-					"type": "fa",
-					"name": "y-combinator-square"
-				},
-				{
-					"type": "fa",
-					"name": "y-combinator"
-				},
-				{
-					"type": "fa",
-					"name": "yahoo"
-				},
-				{
-					"type": "fa",
-					"name": "yc"
-				},
-				{
-					"type": "fa",
-					"name": "yelp"
-				},
-				{
-					"type": "fa",
-					"name": "yoast"
-				},
-				{
-					"type": "fa",
-					"name": "youtube-play"
-				},
-				{
-					"type": "fa",
-					"name": "youtube-square"
-				},
-				{
-					"type": "fa",
-					"name": "youtube"
-				}
+				"500px",
+				"adjust",
+				"adn",
+				"align-center",
+				"align-justify",
+				"align-left",
+				"align-right",
+				"amazon",
+				"ambulance",
+				"american-sign-language-interpreting",
+				"anchor",
+				"android",
+				"angellist",
+				"angle-double-down",
+				"angle-double-left",
+				"angle-double-right",
+				"angle-double-up",
+				"angle-down",
+				"angle-left",
+				"angle-right",
+				"angle-up",
+				"apple",
+				"archive",
+				"area-chart",
+				"arrow-circle-down",
+				"arrow-circle-left",
+				"arrow-circle-o-down",
+				"arrow-circle-o-left",
+				"arrow-circle-o-right",
+				"arrow-circle-o-up",
+				"arrow-circle-right",
+				"arrow-circle-up",
+				"arrow-down",
+				"arrow-left",
+				"arrow-right",
+				"arrow-up",
+				"arrows-alt",
+				"arrows-h",
+				"arrows-v",
+				"arrows",
+				"assistive-listening-systems",
+				"asterisk",
+				"at",
+				"audio-description",
+				"automobile",
+				"backward",
+				"balance-scale",
+				"ban",
+				"bank",
+				"bar-chart",
+				"barcode",
+				"bars",
+				"battery-0",
+				"battery-1",
+				"battery-2",
+				"battery-3",
+				"battery-4",
+				"bed",
+				"beer",
+				"behance-square",
+				"behance",
+				"bell-o",
+				"bell-slash-o",
+				"bell-slash",
+				"bell",
+				"bicycle",
+				"binoculars",
+				"birthday-cake",
+				"bitbucket-square",
+				"bitbucket",
+				"bitcoin",
+				"black-tie",
+				"blind",
+				"bluetooth-b",
+				"bluetooth",
+				"bold",
+				"bolt",
+				"bomb",
+				"book",
+				"bookmark-o",
+				"bookmark",
+				"braille",
+				"briefcase",
+				"bug",
+				"building-o",
+				"building",
+				"bullhorn",
+				"bullseye",
+				"bus",
+				"buysellads",
+				"cab",
+				"calculator",
+				"calendar-check-o",
+				"calendar-minus-o",
+				"calendar-o",
+				"calendar-plus-o",
+				"calendar-times-o",
+				"calendar",
+				"camera-retro",
+				"camera",
+				"caret-down",
+				"caret-left",
+				"caret-right",
+				"caret-square-o-down",
+				"caret-square-o-left",
+				"caret-square-o-right",
+				"caret-square-o-up",
+				"caret-up",
+				"cart-arrow-down",
+				"cart-plus",
+				"cc-amex",
+				"cc-diners-club",
+				"cc-discover",
+				"cc-jcb",
+				"cc-mastercard",
+				"cc-paypal",
+				"cc-stripe",
+				"cc-visa",
+				"cc",
+				"certificate",
+				"chain-broken",
+				"chain",
+				"check-circle-o",
+				"check-circle",
+				"check-square-o",
+				"check-square",
+				"check",
+				"chevron-circle-down",
+				"chevron-circle-left",
+				"chevron-circle-right",
+				"chevron-circle-up",
+				"chevron-down",
+				"chevron-left",
+				"chevron-right",
+				"chevron-up",
+				"child",
+				"chrome",
+				"circle-o-notch",
+				"circle-o",
+				"circle-thin",
+				"circle",
+				"clipboard",
+				"clock-o",
+				"clone",
+				"close",
+				"cloud-download",
+				"cloud-upload",
+				"cloud",
+				"cny",
+				"code-fork",
+				"code",
+				"codepen",
+				"codiepie",
+				"coffee",
+				"cog",
+				"cogs",
+				"columns",
+				"comment-o",
+				"comment",
+				"commenting-o",
+				"commenting",
+				"comments-o",
+				"comments",
+				"compass",
+				"compress",
+				"connectdevelop",
+				"contao",
+				"copy",
+				"copyright",
+				"creative-commons",
+				"credit-card-alt",
+				"credit-card",
+				"crop",
+				"crosshairs",
+				"css3",
+				"cube",
+				"cubes",
+				"cut",
+				"cutlery",
+				"dashboard",
+				"dashcube",
+				"database",
+				"deaf",
+				"dedent",
+				"delicious",
+				"desktop",
+				"deviantart",
+				"diamond",
+				"digg",
+				"dollar",
+				"dot-circle-o",
+				"download",
+				"dribbble",
+				"dropbox",
+				"drupal",
+				"edge",
+				"edit",
+				"eject",
+				"ellipsis-h",
+				"ellipsis-v",
+				"empire",
+				"envelope-o",
+				"envelope-square",
+				"envelope",
+				"envira",
+				"eraser",
+				"eur",
+				"exchange",
+				"exclamation-circle",
+				"exclamation-triangle",
+				"exclamation",
+				"expand",
+				"expeditedssl",
+				"external-link-square",
+				"external-link",
+				"eye-slash",
+				"eye",
+				"eyedropper",
+				"fa",
+				"facebook-official",
+				"facebook-square",
+				"facebook",
+				"fast-backward",
+				"fast-forward",
+				"fax",
+				"feed",
+				"female",
+				"fighter-jet",
+				"file-archive-o",
+				"file-audio-o",
+				"file-code-o",
+				"file-excel-o",
+				"file-image-o",
+				"file-movie-o",
+				"file-o",
+				"file-pdf-o",
+				"file-powerpoint-o",
+				"file-text-o",
+				"file-text",
+				"file-word-o",
+				"file",
+				"film",
+				"filter",
+				"fire-extinguisher",
+				"fire",
+				"firefox",
+				"first-order",
+				"flag-checkered",
+				"flag-o",
+				"flag",
+				"flask",
+				"flickr",
+				"floppy-o",
+				"folder-o",
+				"folder-open-o",
+				"folder-open",
+				"folder",
+				"font",
+				"fonticons",
+				"fort-awesome",
+				"forumbee",
+				"forward",
+				"foursquare",
+				"frown-o",
+				"futbol-o",
+				"gamepad",
+				"gavel",
+				"gbp",
+				"genderless",
+				"get-pocket",
+				"gg-circle",
+				"gg",
+				"gift",
+				"git-square",
+				"git",
+				"github-alt",
+				"github-square",
+				"github",
+				"gitlab",
+				"gittip",
+				"glass",
+				"glide-g",
+				"glide",
+				"globe",
+				"google-plus-circle",
+				"google-plus-square",
+				"google-plus",
+				"google-wallet",
+				"google",
+				"graduation-cap",
+				"group",
+				"h-square",
+				"hacker-news",
+				"hand-grab-o",
+				"hand-lizard-o",
+				"hand-o-down",
+				"hand-o-left",
+				"hand-o-right",
+				"hand-o-up",
+				"hand-paper-o",
+				"hand-peace-o",
+				"hand-pointer-o",
+				"hand-scissors-o",
+				"hand-spock-o",
+				"hashtag",
+				"hdd-o",
+				"header",
+				"headphones",
+				"heart-o",
+				"heart",
+				"heartbeat",
+				"history",
+				"home",
+				"hospital-o",
+				"hourglass-1",
+				"hourglass-2",
+				"hourglass-3",
+				"hourglass-o",
+				"hourglass",
+				"houzz",
+				"html5",
+				"i-cursor",
+				"ils",
+				"image",
+				"inbox",
+				"indent",
+				"industry",
+				"info-circle",
+				"info",
+				"inr",
+				"instagram",
+				"internet-explorer",
+				"intersex",
+				"ioxhost",
+				"italic",
+				"joomla",
+				"jsfiddle",
+				"key",
+				"keyboard-o",
+				"krw",
+				"language",
+				"laptop",
+				"lastfm-square",
+				"lastfm",
+				"leaf",
+				"leanpub",
+				"lemon-o",
+				"level-down",
+				"level-up",
+				"life-bouy",
+				"lightbulb-o",
+				"line-chart",
+				"linkedin-square",
+				"linkedin",
+				"linux",
+				"list-alt",
+				"list-ol",
+				"list-ul",
+				"list",
+				"location-arrow",
+				"lock",
+				"long-arrow-down",
+				"long-arrow-left",
+				"long-arrow-right",
+				"long-arrow-up",
+				"low-vision",
+				"magic",
+				"magnet",
+				"mail-forward",
+				"mail-reply-all",
+				"mail-reply",
+				"male",
+				"map-marker",
+				"map-o",
+				"map-pin",
+				"map-signs",
+				"map",
+				"mars-double",
+				"mars-stroke-h",
+				"mars-stroke-v",
+				"mars-stroke",
+				"mars",
+				"maxcdn",
+				"meanpath",
+				"medium",
+				"medkit",
+				"meh-o",
+				"mercury",
+				"microphone-slash",
+				"microphone",
+				"minus-circle",
+				"minus-square-o",
+				"minus-square",
+				"minus",
+				"mixcloud",
+				"mobile",
+				"modx",
+				"money",
+				"moon-o",
+				"motorcycle",
+				"mouse-pointer",
+				"music",
+				"neuter",
+				"newspaper-o",
+				"object-group",
+				"object-ungroup",
+				"odnoklassniki-square",
+				"odnoklassniki",
+				"opencart",
+				"openid",
+				"opera",
+				"optin-monster",
+				"pagelines",
+				"paint-brush",
+				"paper-plane-o",
+				"paper-plane",
+				"paperclip",
+				"paragraph",
+				"pause-circle-o",
+				"pause-circle",
+				"pause",
+				"paw",
+				"paypal",
+				"pencil-square",
+				"pencil",
+				"percent",
+				"phone-square",
+				"phone",
+				"pie-chart",
+				"pied-piper-alt",
+				"pied-piper-pp",
+				"pied-piper",
+				"pinterest-p",
+				"pinterest-square",
+				"pinterest",
+				"plane",
+				"play-circle-o",
+				"play-circle",
+				"play",
+				"plug",
+				"plus-circle",
+				"plus-square-o",
+				"plus-square",
+				"plus",
+				"power-off",
+				"print",
+				"product-hunt",
+				"puzzle-piece",
+				"qq",
+				"qrcode",
+				"question-circle-o",
+				"question-circle",
+				"question",
+				"quote-left",
+				"quote-right",
+				"ra",
+				"random",
+				"recycle",
+				"reddit-alien",
+				"reddit-square",
+				"reddit",
+				"refresh",
+				"registered",
+				"renren",
+				"repeat",
+				"retweet",
+				"road",
+				"rocket",
+				"rotate-left",
+				"rouble",
+				"rss-square",
+				"safari",
+				"scribd",
+				"search-minus",
+				"search-plus",
+				"search",
+				"sellsy",
+				"server",
+				"share-alt-square",
+				"share-alt",
+				"share-square-o",
+				"share-square",
+				"shield",
+				"ship",
+				"shirtsinbulk",
+				"shopping-bag",
+				"shopping-basket",
+				"shopping-cart",
+				"sign-in",
+				"sign-language",
+				"sign-out",
+				"signal",
+				"simplybuilt",
+				"sitemap",
+				"skyatlas",
+				"skype",
+				"slack",
+				"sliders",
+				"slideshare",
+				"smile-o",
+				"snapchat-ghost",
+				"snapchat-square",
+				"snapchat",
+				"sort-alpha-asc",
+				"sort-alpha-desc",
+				"sort-amount-asc",
+				"sort-amount-desc",
+				"sort-asc",
+				"sort-desc",
+				"sort-numeric-asc",
+				"sort-numeric-desc",
+				"sort",
+				"soundcloud",
+				"space-shuttle",
+				"spinner",
+				"spoon",
+				"spotify",
+				"square-o",
+				"square",
+				"stack-exchange",
+				"stack-overflow",
+				"star-half-empty",
+				"star-half",
+				"star-o",
+				"star",
+				"steam-square",
+				"steam",
+				"step-backward",
+				"step-forward",
+				"stethoscope",
+				"sticky-note-o",
+				"sticky-note",
+				"stop-circle-o",
+				"stop-circle",
+				"stop",
+				"street-view",
+				"strikethrough",
+				"stumbleupon-circle",
+				"stumbleupon",
+				"subscript",
+				"subway",
+				"suitcase",
+				"sun-o",
+				"superscript",
+				"table",
+				"tablet",
+				"tag",
+				"tags",
+				"tasks",
+				"television",
+				"tencent-weibo",
+				"terminal",
+				"text-height",
+				"text-width",
+				"th-large",
+				"th-list",
+				"th",
+				"themeisle",
+				"thumb-tack",
+				"thumbs-down",
+				"thumbs-o-down",
+				"thumbs-o-up",
+				"thumbs-up",
+				"ticket",
+				"times-circle-o",
+				"times-circle",
+				"tint",
+				"toggle-off",
+				"toggle-on",
+				"trademark",
+				"train",
+				"transgender-alt",
+				"trash-o",
+				"trash",
+				"tree",
+				"trello",
+				"tripadvisor",
+				"trophy",
+				"truck",
+				"try",
+				"tty",
+				"tumblr-square",
+				"tumblr",
+				"twitch",
+				"twitter-square",
+				"twitter",
+				"umbrella",
+				"underline",
+				"universal-access",
+				"unlock-alt",
+				"unlock",
+				"upload",
+				"usb",
+				"user-md",
+				"user-plus",
+				"user-secret",
+				"user-times",
+				"user",
+				"venus-double",
+				"venus-mars",
+				"venus",
+				"viacoin",
+				"viadeo-square",
+				"viadeo",
+				"video-camera",
+				"vimeo-square",
+				"vimeo",
+				"vine",
+				"vk",
+				"volume-control-phone",
+				"volume-down",
+				"volume-off",
+				"volume-up",
+				"wechat",
+				"weibo",
+				"whatsapp",
+				"wheelchair-alt",
+				"wheelchair",
+				"wifi",
+				"wikipedia-w",
+				"windows",
+				"wordpress",
+				"wpbeginner",
+				"wpforms",
+				"wrench",
+				"xing-square",
+				"xing",
+				"y-combinator",
+				"yahoo",
+				"yelp",
+				"yoast",
+				"youtube-play",
+				"youtube-square",
+				"youtube"
 			]
 		},
-		"ion": {
+		"foundation": {
+			"name": "foundation",
+			"prefix": "foundation-",
+			"repo": "https://github.com/zurb/foundation-icon-fonts.git",
+			"icons": [
+				"address-book",
+				"alert",
+				"align-center",
+				"align-justify",
+				"align-left",
+				"align-right",
+				"anchor",
+				"annotate",
+				"archive",
+				"arrow-down",
+				"arrow-left",
+				"arrow-right",
+				"arrow-up",
+				"arrows-compress",
+				"arrows-expand",
+				"arrows-in",
+				"arrows-out",
+				"asl",
+				"asterisk",
+				"at-sign",
+				"background-color",
+				"battery-empty",
+				"battery-full",
+				"battery-half",
+				"bitcoin-circle",
+				"bitcoin",
+				"blind",
+				"bluetooth",
+				"bold",
+				"book-bookmark",
+				"book",
+				"bookmark",
+				"braille",
+				"burst-new",
+				"burst-sale",
+				"burst",
+				"calendar",
+				"camera",
+				"check",
+				"checkbox",
+				"clipboard-notes",
+				"clipboard-pencil",
+				"clipboard",
+				"clock",
+				"closed-caption",
+				"cloud",
+				"comment-minus",
+				"comment-quotes",
+				"comment-video",
+				"comment",
+				"comments",
+				"compass",
+				"contrast",
+				"credit-card",
+				"crop",
+				"crown",
+				"css3",
+				"database",
+				"die-five",
+				"die-four",
+				"die-one",
+				"die-six",
+				"die-three",
+				"die-two",
+				"dislike",
+				"dollar-bill",
+				"dollar",
+				"download",
+				"eject",
+				"elevator",
+				"euro",
+				"eye",
+				"fast-forward",
+				"female-symbol",
+				"female",
+				"filter",
+				"first-aid",
+				"flag",
+				"folder-add",
+				"folder-lock",
+				"folder",
+				"foot",
+				"foundation",
+				"graph-bar",
+				"graph-horizontal",
+				"graph-pie",
+				"graph-trend",
+				"guide-dog",
+				"hearing-aid",
+				"heart",
+				"home",
+				"html5",
+				"indent-less",
+				"indent-more",
+				"info",
+				"italic",
+				"key",
+				"laptop",
+				"layout",
+				"lightbulb",
+				"like",
+				"link",
+				"list-bullet",
+				"list-number",
+				"list-thumbnails",
+				"list",
+				"lock",
+				"loop",
+				"magnifying-glass",
+				"mail",
+				"male-female",
+				"male-symbol",
+				"male",
+				"map",
+				"marker",
+				"megaphone",
+				"microphone",
+				"minus-circle",
+				"minus",
+				"mobile-signal",
+				"mobile",
+				"monitor",
+				"mountains",
+				"music",
+				"next",
+				"no-dogs",
+				"no-smoking",
+				"page-add",
+				"page-copy",
+				"page-csv",
+				"page-delete",
+				"page-doc",
+				"page-edit",
+				"page-export-csv",
+				"page-export-doc",
+				"page-export-pdf",
+				"page-export",
+				"page-filled",
+				"page-multiple",
+				"page-pdf",
+				"page-remove",
+				"page-search",
+				"page",
+				"paint-bucket",
+				"paperclip",
+				"pause",
+				"paw",
+				"paypal",
+				"pencil",
+				"photo",
+				"play-circle",
+				"play-video",
+				"play",
+				"plus",
+				"pound",
+				"power",
+				"previous",
+				"price-tag",
+				"pricetag-multiple",
+				"print",
+				"prohibited",
+				"projection-screen",
+				"puzzle",
+				"quote",
+				"record",
+				"refresh",
+				"results-demographics",
+				"results",
+				"rewind-ten",
+				"rewind",
+				"rss",
+				"safety-cone",
+				"save",
+				"share",
+				"sheriff-badge",
+				"shield",
+				"shopping-bag",
+				"shopping-cart",
+				"shuffle",
+				"skull",
+				"social-500px",
+				"social-adobe",
+				"social-amazon",
+				"social-android",
+				"social-apple",
+				"social-behance",
+				"social-bing",
+				"social-blogger",
+				"social-delicious",
+				"social-designer-news",
+				"social-deviant-art",
+				"social-digg",
+				"social-dribbble",
+				"social-drive",
+				"social-dropbox",
+				"social-evernote",
+				"social-facebook",
+				"social-flickr",
+				"social-forrst",
+				"social-foursquare",
+				"social-game-center",
+				"social-github",
+				"social-google-plus",
+				"social-hacker-news",
+				"social-hi5",
+				"social-instagram",
+				"social-joomla",
+				"social-lastfm",
+				"social-linkedin",
+				"social-medium",
+				"social-myspace",
+				"social-orkut",
+				"social-path",
+				"social-picasa",
+				"social-pinterest",
+				"social-rdio",
+				"social-reddit",
+				"social-skillshare",
+				"social-skype",
+				"social-smashing-mag",
+				"social-snapchat",
+				"social-spotify",
+				"social-squidoo",
+				"social-stack-overflow",
+				"social-steam",
+				"social-stumbleupon",
+				"social-treehouse",
+				"social-tumblr",
+				"social-twitter",
+				"social-vimeo",
+				"social-windows",
+				"social-xbox",
+				"social-yahoo",
+				"social-yelp",
+				"social-youtube",
+				"social-zerply",
+				"social-zurb",
+				"sound",
+				"star",
+				"stop",
+				"strikethrough",
+				"subscript",
+				"superscript",
+				"tablet-landscape",
+				"tablet-portrait",
+				"target-two",
+				"target",
+				"telephone-accessible",
+				"telephone",
+				"text-color",
+				"thumbnails",
+				"ticket",
+				"torso-business",
+				"torso-female",
+				"torso",
+				"torsos-all-female",
+				"torsos-all",
+				"torsos-female-male",
+				"torsos-male-female",
+				"torsos",
+				"trash",
+				"trees",
+				"trophy",
+				"underline",
+				"universal-access",
+				"unlink",
+				"unlock",
+				"upload-cloud",
+				"upload",
+				"usb",
+				"video",
+				"volume-none",
+				"volume-strike",
+				"volume",
+				"web",
+				"wheelchair",
+				"widget",
+				"wrench",
+				"x-circle",
+				"x",
+				"yen",
+				"zoom-in",
+				"zoom-out"
+			]
+		},
+		"geom": {
+			"name": "geomicons-open",
+			"prefix": "geom-",
+			"repo": "https://github.com/jxnblk/geomicons-open.git",
+			"icons": [
+				"bookmark",
+				"calendar",
+				"camera",
+				"chat",
+				"check",
+				"chevronDown",
+				"chevronLeft",
+				"chevronRight",
+				"chevronUp",
+				"clock",
+				"close",
+				"cloud",
+				"cog",
+				"compose",
+				"dribbble",
+				"expand",
+				"external",
+				"facebook",
+				"file",
+				"folder",
+				"geolocation",
+				"github",
+				"grid",
+				"heart",
+				"home",
+				"info",
+				"link",
+				"list",
+				"lock",
+				"mail",
+				"musicNote",
+				"next",
+				"no",
+				"pause",
+				"picture",
+				"pin",
+				"play",
+				"previous",
+				"refresh",
+				"repost",
+				"search",
+				"shoppingCart",
+				"skull",
+				"speaker",
+				"speakerVolume",
+				"star",
+				"tag",
+				"trash",
+				"triangleDown",
+				"triangleLeft",
+				"triangleRight",
+				"triangleUp",
+				"twitter",
+				"user",
+				"video",
+				"warning"
+			]
+		},
+		"icomoon": {
+			"name": "icomoon-free",
+			"prefix": "icomoon-",
+			"repo": "https://github.com/Keyamoon/IcoMoon-Free.git",
+			"icons": [
+				"500px",
+				"IE",
+				"IcoMoon",
+				"accessibility",
+				"address-book",
+				"aid-kit",
+				"airplane",
+				"alarm",
+				"amazon",
+				"android",
+				"angry",
+				"angry2",
+				"appleinc",
+				"arrow-down-left",
+				"arrow-down-left2",
+				"arrow-down-right",
+				"arrow-down-right2",
+				"arrow-down",
+				"arrow-down2",
+				"arrow-left",
+				"arrow-left2",
+				"arrow-right",
+				"arrow-right2",
+				"arrow-up-left",
+				"arrow-up-left2",
+				"arrow-up-right",
+				"arrow-up-right2",
+				"arrow-up",
+				"arrow-up2",
+				"attachment",
+				"backward",
+				"backward2",
+				"baffled",
+				"baffled2",
+				"barcode",
+				"basecamp",
+				"behance",
+				"behance2",
+				"bell",
+				"bin",
+				"bin2",
+				"binoculars",
+				"blocked",
+				"blog",
+				"blogger",
+				"blogger2",
+				"bold",
+				"book",
+				"bookmark",
+				"bookmarks",
+				"books",
+				"box-add",
+				"box-remove",
+				"briefcase",
+				"brightness-contrast",
+				"bubble",
+				"bubble2",
+				"bubbles",
+				"bubbles2",
+				"bubbles3",
+				"bubbles4",
+				"bug",
+				"bullhorn",
+				"calculator",
+				"calendar",
+				"camera",
+				"cancel-circle",
+				"cart",
+				"checkbox-checked",
+				"checkbox-unchecked",
+				"checkmark",
+				"checkmark2",
+				"chrome",
+				"circle-down",
+				"circle-left",
+				"circle-right",
+				"circle-up",
+				"clear-formatting",
+				"clipboard",
+				"clock",
+				"clock2",
+				"cloud-check",
+				"cloud-download",
+				"cloud-upload",
+				"cloud",
+				"clubs",
+				"codepen",
+				"cog",
+				"cogs",
+				"coin-dollar",
+				"coin-euro",
+				"coin-pound",
+				"coin-yen",
+				"command",
+				"compass",
+				"compass2",
+				"confused",
+				"confused2",
+				"connection",
+				"contrast",
+				"cool",
+				"cool2",
+				"copy",
+				"credit-card",
+				"crop",
+				"cross",
+				"crying",
+				"crying2",
+				"css3",
+				"ctrl",
+				"database",
+				"delicious",
+				"deviantart",
+				"diamonds",
+				"dice",
+				"display",
+				"download",
+				"download2",
+				"download3",
+				"drawer",
+				"drawer2",
+				"dribbble",
+				"drive",
+				"dropbox",
+				"droplet",
+				"earth",
+				"edge",
+				"eject",
+				"ello",
+				"embed",
+				"embed2",
+				"enlarge",
+				"enlarge2",
+				"enter",
+				"envelop",
+				"equalizer",
+				"equalizer2",
+				"evil",
+				"evil2",
+				"exit",
+				"eye-blocked",
+				"eye-minus",
+				"eye-plus",
+				"eye",
+				"eyedropper",
+				"facebook",
+				"facebook2",
+				"feed",
+				"file-empty",
+				"file-excel",
+				"file-music",
+				"file-openoffice",
+				"file-pdf",
+				"file-picture",
+				"file-play",
+				"file-text",
+				"file-text2",
+				"file-video",
+				"file-word",
+				"file-zip",
+				"files-empty",
+				"film",
+				"filter",
+				"finder",
+				"fire",
+				"firefox",
+				"first",
+				"flag",
+				"flattr",
+				"flickr",
+				"flickr2",
+				"flickr3",
+				"flickr4",
+				"floppy-disk",
+				"folder-download",
+				"folder-minus",
+				"folder-open",
+				"folder-plus",
+				"folder-upload",
+				"folder",
+				"font-size",
+				"font",
+				"forward",
+				"forward2",
+				"forward3",
+				"foursquare",
+				"frustrated",
+				"frustrated2",
+				"gift",
+				"git",
+				"github",
+				"glass",
+				"glass2",
+				"google-drive",
+				"google-plus",
+				"google-plus2",
+				"google-plus3",
+				"google",
+				"google2",
+				"google3",
+				"grin",
+				"grin2",
+				"hackernews",
+				"hammer",
+				"hammer2",
+				"hangouts",
+				"happy",
+				"happy2",
+				"headphones",
+				"heart-broken",
+				"heart",
+				"hipster",
+				"hipster2",
+				"history",
+				"home",
+				"home2",
+				"home3",
+				"hour-glass",
+				"html-five",
+				"html-five2",
+				"image",
+				"images",
+				"indent-decrease",
+				"indent-increase",
+				"infinite",
+				"info",
+				"insert-template",
+				"instagram",
+				"italic",
+				"joomla",
+				"key",
+				"key2",
+				"keyboard",
+				"lab",
+				"lanyrd",
+				"laptop",
+				"last",
+				"lastfm",
+				"lastfm2",
+				"leaf",
+				"library",
+				"libreoffice",
+				"lifebuoy",
+				"ligature",
+				"ligature2",
+				"link",
+				"linkedin",
+				"linkedin2",
+				"list-numbered",
+				"list",
+				"list2",
+				"location",
+				"location2",
+				"lock",
+				"loop",
+				"loop2",
+				"ltr",
+				"magic-wand",
+				"magnet",
+				"mail",
+				"mail2",
+				"mail3",
+				"mail4",
+				"make-group",
+				"man-woman",
+				"man",
+				"map",
+				"map2",
+				"menu",
+				"menu2",
+				"menu3",
+				"menu4",
+				"meter",
+				"meter2",
+				"mic",
+				"minus",
+				"mobile",
+				"mobile2",
+				"move-down",
+				"move-up",
+				"mug",
+				"music",
+				"neutral",
+				"neutral2",
+				"new-tab",
+				"newspaper",
+				"next",
+				"next2",
+				"notification",
+				"npm",
+				"office",
+				"omega",
+				"onedrive",
+				"opera",
+				"opt",
+				"pacman",
+				"page-break",
+				"pagebreak",
+				"paint-format",
+				"paragraph-center",
+				"paragraph-justify",
+				"paragraph-left",
+				"paragraph-right",
+				"paste",
+				"pause",
+				"pause2",
+				"paypal",
+				"pen",
+				"pencil",
+				"pencil2",
+				"phone-hang-up",
+				"phone",
+				"pie-chart",
+				"pilcrow",
+				"pinterest",
+				"pinterest2",
+				"play",
+				"play2",
+				"play3",
+				"plus",
+				"podcast",
+				"point-down",
+				"point-left",
+				"point-right",
+				"point-up",
+				"power-cord",
+				"power",
+				"previous",
+				"previous2",
+				"price-tag",
+				"price-tags",
+				"printer",
+				"profile",
+				"pushpin",
+				"qrcode",
+				"question",
+				"quill",
+				"quotes-left",
+				"quotes-right",
+				"radio-checked",
+				"radio-checked2",
+				"radio-unchecked",
+				"reddit",
+				"redo",
+				"redo2",
+				"renren",
+				"reply",
+				"road",
+				"rocket",
+				"rss",
+				"rss2",
+				"rtl",
+				"sad",
+				"sad2",
+				"safari",
+				"scissors",
+				"search",
+				"section",
+				"share",
+				"share2",
+				"shield",
+				"shift",
+				"shocked",
+				"shocked2",
+				"shrink",
+				"shrink2",
+				"shuffle",
+				"sigma",
+				"sina-weibo",
+				"skype",
+				"sleepy",
+				"sleepy2",
+				"smile",
+				"smile2",
+				"sort-alpha-asc",
+				"sort-alpha-desc",
+				"sort-amount-asc",
+				"sort-amount-desc",
+				"sort-numberic-desc",
+				"sort-numeric-asc",
+				"soundcloud",
+				"soundcloud2",
+				"spades",
+				"spell-check",
+				"sphere",
+				"spinner",
+				"spinner10",
+				"spinner11",
+				"spinner2",
+				"spinner3",
+				"spinner4",
+				"spinner5",
+				"spinner6",
+				"spinner7",
+				"spinner8",
+				"spinner9",
+				"spoon-knife",
+				"spotify",
+				"stack",
+				"stackoverflow",
+				"star-empty",
+				"star-full",
+				"star-half",
+				"stats-bars",
+				"stats-bars2",
+				"stats-dots",
+				"steam",
+				"steam2",
+				"stop",
+				"stop2",
+				"stopwatch",
+				"strikethrough",
+				"stumbleupon",
+				"stumbleupon2",
+				"subscript",
+				"subscript2",
+				"sun",
+				"superscript",
+				"superscript2",
+				"svg",
+				"switch",
+				"tab",
+				"table",
+				"table2",
+				"tablet",
+				"target",
+				"telegram",
+				"terminal",
+				"text-color",
+				"text-height",
+				"text-width",
+				"ticket",
+				"tongue",
+				"tongue2",
+				"tree",
+				"trello",
+				"trophy",
+				"truck",
+				"tumblr",
+				"tumblr2",
+				"tux",
+				"tv",
+				"twitch",
+				"twitter",
+				"underline",
+				"undo",
+				"undo2",
+				"ungroup",
+				"unlocked",
+				"upload",
+				"upload2",
+				"upload3",
+				"user-check",
+				"user-minus",
+				"user-plus",
+				"user-tie",
+				"user",
+				"users",
+				"video-camera",
+				"vimeo",
+				"vimeo2",
+				"vine",
+				"vk",
+				"volume-decrease",
+				"volume-high",
+				"volume-increase",
+				"volume-low",
+				"volume-medium",
+				"volume-mute",
+				"volume-mute2",
+				"warning",
+				"whatsapp",
+				"wikipedia",
+				"windows",
+				"windows8",
+				"wink",
+				"wink2",
+				"woman",
+				"wondering",
+				"wondering2",
+				"wordpress",
+				"wrench",
+				"xing",
+				"xing2",
+				"yahoo",
+				"yahoo2",
+				"yelp",
+				"youtube",
+				"youtube2",
+				"zoom-in",
+				"zoom-out"
+			]
+		},
+		"ionic": {
 			"name": "ionicons",
-			"prefix": "ion-",
+			"prefix": "ionic-",
 			"repo": "https://github.com/driftyco/ionicons.git",
 			"icons": [
-				{
-					"type": "ion",
-					"name": "alert-circled"
-				},
-				{
-					"type": "ion",
-					"name": "alert"
-				},
-				{
-					"type": "ion",
-					"name": "android-add-circle"
-				},
-				{
-					"type": "ion",
-					"name": "android-add"
-				},
-				{
-					"type": "ion",
-					"name": "android-alarm-clock"
-				},
-				{
-					"type": "ion",
-					"name": "android-alert"
-				},
-				{
-					"type": "ion",
-					"name": "android-apps"
-				},
-				{
-					"type": "ion",
-					"name": "android-archive"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-back"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-down"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-dropdown-circle"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-dropdown"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-dropleft-circle"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-dropleft"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-dropright-circle"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-dropright"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-dropup-circle"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-dropup"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-forward"
-				},
-				{
-					"type": "ion",
-					"name": "android-arrow-up"
-				},
-				{
-					"type": "ion",
-					"name": "android-attach"
-				},
-				{
-					"type": "ion",
-					"name": "android-bar"
-				},
-				{
-					"type": "ion",
-					"name": "android-bicycle"
-				},
-				{
-					"type": "ion",
-					"name": "android-boat"
-				},
-				{
-					"type": "ion",
-					"name": "android-bookmark"
-				},
-				{
-					"type": "ion",
-					"name": "android-bulb"
-				},
-				{
-					"type": "ion",
-					"name": "android-bus"
-				},
-				{
-					"type": "ion",
-					"name": "android-calendar"
-				},
-				{
-					"type": "ion",
-					"name": "android-call"
-				},
-				{
-					"type": "ion",
-					"name": "android-camera"
-				},
-				{
-					"type": "ion",
-					"name": "android-cancel"
-				},
-				{
-					"type": "ion",
-					"name": "android-car"
-				},
-				{
-					"type": "ion",
-					"name": "android-cart"
-				},
-				{
-					"type": "ion",
-					"name": "android-chat"
-				},
-				{
-					"type": "ion",
-					"name": "android-checkbox-blank"
-				},
-				{
-					"type": "ion",
-					"name": "android-checkbox-outline-blank"
-				},
-				{
-					"type": "ion",
-					"name": "android-checkbox-outline"
-				},
-				{
-					"type": "ion",
-					"name": "android-checkbox"
-				},
-				{
-					"type": "ion",
-					"name": "android-checkmark-circle"
-				},
-				{
-					"type": "ion",
-					"name": "android-clipboard"
-				},
-				{
-					"type": "ion",
-					"name": "android-close"
-				},
-				{
-					"type": "ion",
-					"name": "android-cloud-circle"
-				},
-				{
-					"type": "ion",
-					"name": "android-cloud-done"
-				},
-				{
-					"type": "ion",
-					"name": "android-cloud-outline"
-				},
-				{
-					"type": "ion",
-					"name": "android-cloud"
-				},
-				{
-					"type": "ion",
-					"name": "android-color-palette"
-				},
-				{
-					"type": "ion",
-					"name": "android-compass"
-				},
-				{
-					"type": "ion",
-					"name": "android-contact"
-				},
-				{
-					"type": "ion",
-					"name": "android-contacts"
-				},
-				{
-					"type": "ion",
-					"name": "android-contract"
-				},
-				{
-					"type": "ion",
-					"name": "android-create"
-				},
-				{
-					"type": "ion",
-					"name": "android-delete"
-				},
-				{
-					"type": "ion",
-					"name": "android-desktop"
-				},
-				{
-					"type": "ion",
-					"name": "android-document"
-				},
-				{
-					"type": "ion",
-					"name": "android-done-all"
-				},
-				{
-					"type": "ion",
-					"name": "android-done"
-				},
-				{
-					"type": "ion",
-					"name": "android-download"
-				},
-				{
-					"type": "ion",
-					"name": "android-drafts"
-				},
-				{
-					"type": "ion",
-					"name": "android-exit"
-				},
-				{
-					"type": "ion",
-					"name": "android-expand"
-				},
-				{
-					"type": "ion",
-					"name": "android-favorite-outline"
-				},
-				{
-					"type": "ion",
-					"name": "android-favorite"
-				},
-				{
-					"type": "ion",
-					"name": "android-film"
-				},
-				{
-					"type": "ion",
-					"name": "android-folder-open"
-				},
-				{
-					"type": "ion",
-					"name": "android-folder"
-				},
-				{
-					"type": "ion",
-					"name": "android-funnel"
-				},
-				{
-					"type": "ion",
-					"name": "android-globe"
-				},
-				{
-					"type": "ion",
-					"name": "android-hand"
-				},
-				{
-					"type": "ion",
-					"name": "android-hangout"
-				},
-				{
-					"type": "ion",
-					"name": "android-happy"
-				},
-				{
-					"type": "ion",
-					"name": "android-home"
-				},
-				{
-					"type": "ion",
-					"name": "android-image"
-				},
-				{
-					"type": "ion",
-					"name": "android-laptop"
-				},
-				{
-					"type": "ion",
-					"name": "android-list"
-				},
-				{
-					"type": "ion",
-					"name": "android-locate"
-				},
-				{
-					"type": "ion",
-					"name": "android-lock"
-				},
-				{
-					"type": "ion",
-					"name": "android-mail"
-				},
-				{
-					"type": "ion",
-					"name": "android-map"
-				},
-				{
-					"type": "ion",
-					"name": "android-menu"
-				},
-				{
-					"type": "ion",
-					"name": "android-microphone-off"
-				},
-				{
-					"type": "ion",
-					"name": "android-microphone"
-				},
-				{
-					"type": "ion",
-					"name": "android-more-horizontal"
-				},
-				{
-					"type": "ion",
-					"name": "android-more-vertical"
-				},
-				{
-					"type": "ion",
-					"name": "android-navigate"
-				},
-				{
-					"type": "ion",
-					"name": "android-notifications-none"
-				},
-				{
-					"type": "ion",
-					"name": "android-notifications-off"
-				},
-				{
-					"type": "ion",
-					"name": "android-notifications"
-				},
-				{
-					"type": "ion",
-					"name": "android-open"
-				},
-				{
-					"type": "ion",
-					"name": "android-options"
-				},
-				{
-					"type": "ion",
-					"name": "android-people"
-				},
-				{
-					"type": "ion",
-					"name": "android-person-add"
-				},
-				{
-					"type": "ion",
-					"name": "android-person"
-				},
-				{
-					"type": "ion",
-					"name": "android-phone-landscape"
-				},
-				{
-					"type": "ion",
-					"name": "android-phone-portrait"
-				},
-				{
-					"type": "ion",
-					"name": "android-pin"
-				},
-				{
-					"type": "ion",
-					"name": "android-plane"
-				},
-				{
-					"type": "ion",
-					"name": "android-playstore"
-				},
-				{
-					"type": "ion",
-					"name": "android-print"
-				},
-				{
-					"type": "ion",
-					"name": "android-radio-button-off"
-				},
-				{
-					"type": "ion",
-					"name": "android-radio-button-on"
-				},
-				{
-					"type": "ion",
-					"name": "android-refresh"
-				},
-				{
-					"type": "ion",
-					"name": "android-remove-circle"
-				},
-				{
-					"type": "ion",
-					"name": "android-remove"
-				},
-				{
-					"type": "ion",
-					"name": "android-restaurant"
-				},
-				{
-					"type": "ion",
-					"name": "android-sad"
-				},
-				{
-					"type": "ion",
-					"name": "android-search"
-				},
-				{
-					"type": "ion",
-					"name": "android-send"
-				},
-				{
-					"type": "ion",
-					"name": "android-settings"
-				},
-				{
-					"type": "ion",
-					"name": "android-share-alt"
-				},
-				{
-					"type": "ion",
-					"name": "android-share"
-				},
-				{
-					"type": "ion",
-					"name": "android-star-half"
-				},
-				{
-					"type": "ion",
-					"name": "android-star-outline"
-				},
-				{
-					"type": "ion",
-					"name": "android-star"
-				},
-				{
-					"type": "ion",
-					"name": "android-stopwatch"
-				},
-				{
-					"type": "ion",
-					"name": "android-subway"
-				},
-				{
-					"type": "ion",
-					"name": "android-sunny"
-				},
-				{
-					"type": "ion",
-					"name": "android-sync"
-				},
-				{
-					"type": "ion",
-					"name": "android-textsms"
-				},
-				{
-					"type": "ion",
-					"name": "android-time"
-				},
-				{
-					"type": "ion",
-					"name": "android-train"
-				},
-				{
-					"type": "ion",
-					"name": "android-unlock"
-				},
-				{
-					"type": "ion",
-					"name": "android-upload"
-				},
-				{
-					"type": "ion",
-					"name": "android-volume-down"
-				},
-				{
-					"type": "ion",
-					"name": "android-volume-mute"
-				},
-				{
-					"type": "ion",
-					"name": "android-volume-off"
-				},
-				{
-					"type": "ion",
-					"name": "android-volume-up"
-				},
-				{
-					"type": "ion",
-					"name": "android-walk"
-				},
-				{
-					"type": "ion",
-					"name": "android-warning"
-				},
-				{
-					"type": "ion",
-					"name": "android-watch"
-				},
-				{
-					"type": "ion",
-					"name": "android-wifi"
-				},
-				{
-					"type": "ion",
-					"name": "aperture"
-				},
-				{
-					"type": "ion",
-					"name": "archive"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-down-a"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-down-b"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-down-c"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-expand"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-graph-down-left"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-graph-down-right"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-graph-up-left"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-graph-up-right"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-left-a"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-left-b"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-left-c"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-move"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-resize"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-return-left"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-return-right"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-right-a"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-right-b"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-right-c"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-shrink"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-swap"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-up-a"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-up-b"
-				},
-				{
-					"type": "ion",
-					"name": "arrow-up-c"
-				},
-				{
-					"type": "ion",
-					"name": "asterisk"
-				},
-				{
-					"type": "ion",
-					"name": "at"
-				},
-				{
-					"type": "ion",
-					"name": "backspace-outline"
-				},
-				{
-					"type": "ion",
-					"name": "backspace"
-				},
-				{
-					"type": "ion",
-					"name": "bag"
-				},
-				{
-					"type": "ion",
-					"name": "battery-charging"
-				},
-				{
-					"type": "ion",
-					"name": "battery-empty"
-				},
-				{
-					"type": "ion",
-					"name": "battery-full"
-				},
-				{
-					"type": "ion",
-					"name": "battery-half"
-				},
-				{
-					"type": "ion",
-					"name": "battery-low"
-				},
-				{
-					"type": "ion",
-					"name": "beaker"
-				},
-				{
-					"type": "ion",
-					"name": "beer"
-				},
-				{
-					"type": "ion",
-					"name": "bluetooth"
-				},
-				{
-					"type": "ion",
-					"name": "bonfire"
-				},
-				{
-					"type": "ion",
-					"name": "bookmark"
-				},
-				{
-					"type": "ion",
-					"name": "bowtie"
-				},
-				{
-					"type": "ion",
-					"name": "briefcase"
-				},
-				{
-					"type": "ion",
-					"name": "bug"
-				},
-				{
-					"type": "ion",
-					"name": "calculator"
-				},
-				{
-					"type": "ion",
-					"name": "calendar"
-				},
-				{
-					"type": "ion",
-					"name": "camera"
-				},
-				{
-					"type": "ion",
-					"name": "card"
-				},
-				{
-					"type": "ion",
-					"name": "cash"
-				},
-				{
-					"type": "ion",
-					"name": "chatbox-working"
-				},
-				{
-					"type": "ion",
-					"name": "chatbox"
-				},
-				{
-					"type": "ion",
-					"name": "chatboxes"
-				},
-				{
-					"type": "ion",
-					"name": "chatbubble-working"
-				},
-				{
-					"type": "ion",
-					"name": "chatbubble"
-				},
-				{
-					"type": "ion",
-					"name": "chatbubbles"
-				},
-				{
-					"type": "ion",
-					"name": "checkmark-circled"
-				},
-				{
-					"type": "ion",
-					"name": "checkmark-round"
-				},
-				{
-					"type": "ion",
-					"name": "checkmark"
-				},
-				{
-					"type": "ion",
-					"name": "chevron-down"
-				},
-				{
-					"type": "ion",
-					"name": "chevron-left"
-				},
-				{
-					"type": "ion",
-					"name": "chevron-right"
-				},
-				{
-					"type": "ion",
-					"name": "chevron-up"
-				},
-				{
-					"type": "ion",
-					"name": "clipboard"
-				},
-				{
-					"type": "ion",
-					"name": "clock"
-				},
-				{
-					"type": "ion",
-					"name": "close-circled"
-				},
-				{
-					"type": "ion",
-					"name": "close-round"
-				},
-				{
-					"type": "ion",
-					"name": "close"
-				},
-				{
-					"type": "ion",
-					"name": "closed-captioning"
-				},
-				{
-					"type": "ion",
-					"name": "cloud"
-				},
-				{
-					"type": "ion",
-					"name": "code-download"
-				},
-				{
-					"type": "ion",
-					"name": "code-working"
-				},
-				{
-					"type": "ion",
-					"name": "code"
-				},
-				{
-					"type": "ion",
-					"name": "coffee"
-				},
-				{
-					"type": "ion",
-					"name": "compass"
-				},
-				{
-					"type": "ion",
-					"name": "compose"
-				},
-				{
-					"type": "ion",
-					"name": "connection-bars"
-				},
-				{
-					"type": "ion",
-					"name": "contrast"
-				},
-				{
-					"type": "ion",
-					"name": "crop"
-				},
-				{
-					"type": "ion",
-					"name": "cube"
-				},
-				{
-					"type": "ion",
-					"name": "disc"
-				},
-				{
-					"type": "ion",
-					"name": "document-text"
-				},
-				{
-					"type": "ion",
-					"name": "document"
-				},
-				{
-					"type": "ion",
-					"name": "drag"
-				},
-				{
-					"type": "ion",
-					"name": "earth"
-				},
-				{
-					"type": "ion",
-					"name": "easel"
-				},
-				{
-					"type": "ion",
-					"name": "edit"
-				},
-				{
-					"type": "ion",
-					"name": "egg"
-				},
-				{
-					"type": "ion",
-					"name": "eject"
-				},
-				{
-					"type": "ion",
-					"name": "email-unread"
-				},
-				{
-					"type": "ion",
-					"name": "email"
-				},
-				{
-					"type": "ion",
-					"name": "erlenmeyer-flask-bubbles"
-				},
-				{
-					"type": "ion",
-					"name": "erlenmeyer-flask"
-				},
-				{
-					"type": "ion",
-					"name": "eye-disabled"
-				},
-				{
-					"type": "ion",
-					"name": "eye"
-				},
-				{
-					"type": "ion",
-					"name": "female"
-				},
-				{
-					"type": "ion",
-					"name": "filing"
-				},
-				{
-					"type": "ion",
-					"name": "film-marker"
-				},
-				{
-					"type": "ion",
-					"name": "fireball"
-				},
-				{
-					"type": "ion",
-					"name": "flag"
-				},
-				{
-					"type": "ion",
-					"name": "flame"
-				},
-				{
-					"type": "ion",
-					"name": "flash-off"
-				},
-				{
-					"type": "ion",
-					"name": "flash"
-				},
-				{
-					"type": "ion",
-					"name": "folder"
-				},
-				{
-					"type": "ion",
-					"name": "fork-repo"
-				},
-				{
-					"type": "ion",
-					"name": "fork"
-				},
-				{
-					"type": "ion",
-					"name": "forward"
-				},
-				{
-					"type": "ion",
-					"name": "funnel"
-				},
-				{
-					"type": "ion",
-					"name": "gear-a"
-				},
-				{
-					"type": "ion",
-					"name": "gear-b"
-				},
-				{
-					"type": "ion",
-					"name": "grid"
-				},
-				{
-					"type": "ion",
-					"name": "hammer"
-				},
-				{
-					"type": "ion",
-					"name": "happy-outline"
-				},
-				{
-					"type": "ion",
-					"name": "happy"
-				},
-				{
-					"type": "ion",
-					"name": "headphone"
-				},
-				{
-					"type": "ion",
-					"name": "heart-broken"
-				},
-				{
-					"type": "ion",
-					"name": "heart"
-				},
-				{
-					"type": "ion",
-					"name": "help-buoy"
-				},
-				{
-					"type": "ion",
-					"name": "help-circled"
-				},
-				{
-					"type": "ion",
-					"name": "help"
-				},
-				{
-					"type": "ion",
-					"name": "home"
-				},
-				{
-					"type": "ion",
-					"name": "icecream"
-				},
-				{
-					"type": "ion",
-					"name": "image"
-				},
-				{
-					"type": "ion",
-					"name": "images"
-				},
-				{
-					"type": "ion",
-					"name": "information-circled"
-				},
-				{
-					"type": "ion",
-					"name": "information"
-				},
-				{
-					"type": "ion",
-					"name": "ionic"
-				},
-				{
-					"type": "ion",
-					"name": "ios-alarm-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-alarm"
-				},
-				{
-					"type": "ion",
-					"name": "ios-albums-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-albums"
-				},
-				{
-					"type": "ion",
-					"name": "ios-americanfootball-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-americanfootball"
-				},
-				{
-					"type": "ion",
-					"name": "ios-analytics-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-analytics"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-back"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-down"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-forward"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-left"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-right"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-thin-down"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-thin-left"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-thin-right"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-thin-up"
-				},
-				{
-					"type": "ion",
-					"name": "ios-arrow-up"
-				},
-				{
-					"type": "ion",
-					"name": "ios-at-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-at"
-				},
-				{
-					"type": "ion",
-					"name": "ios-barcode-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-barcode"
-				},
-				{
-					"type": "ion",
-					"name": "ios-baseball-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-baseball"
-				},
-				{
-					"type": "ion",
-					"name": "ios-basketball-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-basketball"
-				},
-				{
-					"type": "ion",
-					"name": "ios-bell-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-bell"
-				},
-				{
-					"type": "ion",
-					"name": "ios-body-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-body"
-				},
-				{
-					"type": "ion",
-					"name": "ios-bolt-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-bolt"
-				},
-				{
-					"type": "ion",
-					"name": "ios-book-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-book"
-				},
-				{
-					"type": "ion",
-					"name": "ios-bookmarks-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-bookmarks"
-				},
-				{
-					"type": "ion",
-					"name": "ios-box-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-box"
-				},
-				{
-					"type": "ion",
-					"name": "ios-briefcase-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-briefcase"
-				},
-				{
-					"type": "ion",
-					"name": "ios-browsers-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-browsers"
-				},
-				{
-					"type": "ion",
-					"name": "ios-calculator-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-calculator"
-				},
-				{
-					"type": "ion",
-					"name": "ios-calendar-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-calendar"
-				},
-				{
-					"type": "ion",
-					"name": "ios-camera-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-camera"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cart-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cart"
-				},
-				{
-					"type": "ion",
-					"name": "ios-chatboxes-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-chatboxes"
-				},
-				{
-					"type": "ion",
-					"name": "ios-chatbubble-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-chatbubble"
-				},
-				{
-					"type": "ion",
-					"name": "ios-checkmark-empty"
-				},
-				{
-					"type": "ion",
-					"name": "ios-checkmark-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-checkmark"
-				},
-				{
-					"type": "ion",
-					"name": "ios-circle-filled"
-				},
-				{
-					"type": "ion",
-					"name": "ios-circle-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-clock-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-clock"
-				},
-				{
-					"type": "ion",
-					"name": "ios-close-empty"
-				},
-				{
-					"type": "ion",
-					"name": "ios-close-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-close"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloud-download-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloud-download"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloud-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloud-upload-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloud-upload"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloud"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloudy-night-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloudy-night"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloudy-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cloudy"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cog-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-cog"
-				},
-				{
-					"type": "ion",
-					"name": "ios-color-filter-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-color-filter"
-				},
-				{
-					"type": "ion",
-					"name": "ios-color-wand-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-color-wand"
-				},
-				{
-					"type": "ion",
-					"name": "ios-compose-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-compose"
-				},
-				{
-					"type": "ion",
-					"name": "ios-contact-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-contact"
-				},
-				{
-					"type": "ion",
-					"name": "ios-copy-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-copy"
-				},
-				{
-					"type": "ion",
-					"name": "ios-crop-strong"
-				},
-				{
-					"type": "ion",
-					"name": "ios-crop"
-				},
-				{
-					"type": "ion",
-					"name": "ios-download-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-download"
-				},
-				{
-					"type": "ion",
-					"name": "ios-drag"
-				},
-				{
-					"type": "ion",
-					"name": "ios-email-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-email"
-				},
-				{
-					"type": "ion",
-					"name": "ios-eye-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-eye"
-				},
-				{
-					"type": "ion",
-					"name": "ios-fastforward-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-fastforward"
-				},
-				{
-					"type": "ion",
-					"name": "ios-filing-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-filing"
-				},
-				{
-					"type": "ion",
-					"name": "ios-film-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-film"
-				},
-				{
-					"type": "ion",
-					"name": "ios-flag-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-flag"
-				},
-				{
-					"type": "ion",
-					"name": "ios-flame-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-flame"
-				},
-				{
-					"type": "ion",
-					"name": "ios-flask-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-flask"
-				},
-				{
-					"type": "ion",
-					"name": "ios-flower-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-flower"
-				},
-				{
-					"type": "ion",
-					"name": "ios-folder-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-folder"
-				},
-				{
-					"type": "ion",
-					"name": "ios-football-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-football"
-				},
-				{
-					"type": "ion",
-					"name": "ios-game-controller-a-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-game-controller-a"
-				},
-				{
-					"type": "ion",
-					"name": "ios-game-controller-b-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-game-controller-b"
-				},
-				{
-					"type": "ion",
-					"name": "ios-gear-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-gear"
-				},
-				{
-					"type": "ion",
-					"name": "ios-glasses-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-glasses"
-				},
-				{
-					"type": "ion",
-					"name": "ios-grid-view-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-grid-view"
-				},
-				{
-					"type": "ion",
-					"name": "ios-heart-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-heart"
-				},
-				{
-					"type": "ion",
-					"name": "ios-help-empty"
-				},
-				{
-					"type": "ion",
-					"name": "ios-help-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-help"
-				},
-				{
-					"type": "ion",
-					"name": "ios-home-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-home"
-				},
-				{
-					"type": "ion",
-					"name": "ios-infinite-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-infinite"
-				},
-				{
-					"type": "ion",
-					"name": "ios-information-empty"
-				},
-				{
-					"type": "ion",
-					"name": "ios-information-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-information"
-				},
-				{
-					"type": "ion",
-					"name": "ios-ionic-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-keypad-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-keypad"
-				},
-				{
-					"type": "ion",
-					"name": "ios-lightbulb-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-lightbulb"
-				},
-				{
-					"type": "ion",
-					"name": "ios-list-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-list"
-				},
-				{
-					"type": "ion",
-					"name": "ios-location-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-location"
-				},
-				{
-					"type": "ion",
-					"name": "ios-locked-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-locked"
-				},
-				{
-					"type": "ion",
-					"name": "ios-loop-strong"
-				},
-				{
-					"type": "ion",
-					"name": "ios-loop"
-				},
-				{
-					"type": "ion",
-					"name": "ios-medical-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-medical"
-				},
-				{
-					"type": "ion",
-					"name": "ios-medkit-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-medkit"
-				},
-				{
-					"type": "ion",
-					"name": "ios-mic-off"
-				},
-				{
-					"type": "ion",
-					"name": "ios-mic-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-mic"
-				},
-				{
-					"type": "ion",
-					"name": "ios-minus-empty"
-				},
-				{
-					"type": "ion",
-					"name": "ios-minus-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-minus"
-				},
-				{
-					"type": "ion",
-					"name": "ios-monitor-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-monitor"
-				},
-				{
-					"type": "ion",
-					"name": "ios-moon-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-moon"
-				},
-				{
-					"type": "ion",
-					"name": "ios-more-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-more"
-				},
-				{
-					"type": "ion",
-					"name": "ios-musical-note"
-				},
-				{
-					"type": "ion",
-					"name": "ios-musical-notes"
-				},
-				{
-					"type": "ion",
-					"name": "ios-navigate-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-navigate"
-				},
-				{
-					"type": "ion",
-					"name": "ios-nutrition-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-nutrition"
-				},
-				{
-					"type": "ion",
-					"name": "ios-paper-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-paper"
-				},
-				{
-					"type": "ion",
-					"name": "ios-paperplane-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-paperplane"
-				},
-				{
-					"type": "ion",
-					"name": "ios-partlysunny-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-partlysunny"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pause-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pause"
-				},
-				{
-					"type": "ion",
-					"name": "ios-paw-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-paw"
-				},
-				{
-					"type": "ion",
-					"name": "ios-people-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-people"
-				},
-				{
-					"type": "ion",
-					"name": "ios-person-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-person"
-				},
-				{
-					"type": "ion",
-					"name": "ios-personadd-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-personadd"
-				},
-				{
-					"type": "ion",
-					"name": "ios-photos-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-photos"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pie-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pie"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pint-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pint"
-				},
-				{
-					"type": "ion",
-					"name": "ios-play-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-play"
-				},
-				{
-					"type": "ion",
-					"name": "ios-plus-empty"
-				},
-				{
-					"type": "ion",
-					"name": "ios-plus-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-plus"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pricetag-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pricetag"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pricetags-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pricetags"
-				},
-				{
-					"type": "ion",
-					"name": "ios-printer-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-printer"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pulse-strong"
-				},
-				{
-					"type": "ion",
-					"name": "ios-pulse"
-				},
-				{
-					"type": "ion",
-					"name": "ios-rainy-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-rainy"
-				},
-				{
-					"type": "ion",
-					"name": "ios-recording-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-recording"
-				},
-				{
-					"type": "ion",
-					"name": "ios-redo-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-redo"
-				},
-				{
-					"type": "ion",
-					"name": "ios-refresh-empty"
-				},
-				{
-					"type": "ion",
-					"name": "ios-refresh-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-refresh"
-				},
-				{
-					"type": "ion",
-					"name": "ios-reload"
-				},
-				{
-					"type": "ion",
-					"name": "ios-reverse-camera-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-reverse-camera"
-				},
-				{
-					"type": "ion",
-					"name": "ios-rewind-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-rewind"
-				},
-				{
-					"type": "ion",
-					"name": "ios-rose-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-rose"
-				},
-				{
-					"type": "ion",
-					"name": "ios-search-strong"
-				},
-				{
-					"type": "ion",
-					"name": "ios-search"
-				},
-				{
-					"type": "ion",
-					"name": "ios-settings-strong"
-				},
-				{
-					"type": "ion",
-					"name": "ios-settings"
-				},
-				{
-					"type": "ion",
-					"name": "ios-shuffle-strong"
-				},
-				{
-					"type": "ion",
-					"name": "ios-shuffle"
-				},
-				{
-					"type": "ion",
-					"name": "ios-skipbackward-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-skipbackward"
-				},
-				{
-					"type": "ion",
-					"name": "ios-skipforward-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-skipforward"
-				},
-				{
-					"type": "ion",
-					"name": "ios-snowy"
-				},
-				{
-					"type": "ion",
-					"name": "ios-speedometer-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-speedometer"
-				},
-				{
-					"type": "ion",
-					"name": "ios-star-half"
-				},
-				{
-					"type": "ion",
-					"name": "ios-star-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-star"
-				},
-				{
-					"type": "ion",
-					"name": "ios-stopwatch-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-stopwatch"
-				},
-				{
-					"type": "ion",
-					"name": "ios-sunny-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-sunny"
-				},
-				{
-					"type": "ion",
-					"name": "ios-telephone-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-telephone"
-				},
-				{
-					"type": "ion",
-					"name": "ios-tennisball-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-tennisball"
-				},
-				{
-					"type": "ion",
-					"name": "ios-thunderstorm-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-thunderstorm"
-				},
-				{
-					"type": "ion",
-					"name": "ios-time-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-time"
-				},
-				{
-					"type": "ion",
-					"name": "ios-timer-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-timer"
-				},
-				{
-					"type": "ion",
-					"name": "ios-toggle-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-toggle"
-				},
-				{
-					"type": "ion",
-					"name": "ios-trash-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-trash"
-				},
-				{
-					"type": "ion",
-					"name": "ios-undo-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-undo"
-				},
-				{
-					"type": "ion",
-					"name": "ios-unlocked-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-unlocked"
-				},
-				{
-					"type": "ion",
-					"name": "ios-upload-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-upload"
-				},
-				{
-					"type": "ion",
-					"name": "ios-videocam-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-videocam"
-				},
-				{
-					"type": "ion",
-					"name": "ios-volume-high"
-				},
-				{
-					"type": "ion",
-					"name": "ios-volume-low"
-				},
-				{
-					"type": "ion",
-					"name": "ios-wineglass-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-wineglass"
-				},
-				{
-					"type": "ion",
-					"name": "ios-world-outline"
-				},
-				{
-					"type": "ion",
-					"name": "ios-world"
-				},
-				{
-					"type": "ion",
-					"name": "ipad"
-				},
-				{
-					"type": "ion",
-					"name": "iphone"
-				},
-				{
-					"type": "ion",
-					"name": "ipod"
-				},
-				{
-					"type": "ion",
-					"name": "jet"
-				},
-				{
-					"type": "ion",
-					"name": "key"
-				},
-				{
-					"type": "ion",
-					"name": "knife"
-				},
-				{
-					"type": "ion",
-					"name": "laptop"
-				},
-				{
-					"type": "ion",
-					"name": "leaf"
-				},
-				{
-					"type": "ion",
-					"name": "levels"
-				},
-				{
-					"type": "ion",
-					"name": "lightbulb"
-				},
-				{
-					"type": "ion",
-					"name": "link"
-				},
-				{
-					"type": "ion",
-					"name": "load-a"
-				},
-				{
-					"type": "ion",
-					"name": "load-b"
-				},
-				{
-					"type": "ion",
-					"name": "load-c"
-				},
-				{
-					"type": "ion",
-					"name": "load-d"
-				},
-				{
-					"type": "ion",
-					"name": "location"
-				},
-				{
-					"type": "ion",
-					"name": "lock-combination"
-				},
-				{
-					"type": "ion",
-					"name": "locked"
-				},
-				{
-					"type": "ion",
-					"name": "log-in"
-				},
-				{
-					"type": "ion",
-					"name": "log-out"
-				},
-				{
-					"type": "ion",
-					"name": "loop"
-				},
-				{
-					"type": "ion",
-					"name": "magnet"
-				},
-				{
-					"type": "ion",
-					"name": "male"
-				},
-				{
-					"type": "ion",
-					"name": "man"
-				},
-				{
-					"type": "ion",
-					"name": "map"
-				},
-				{
-					"type": "ion",
-					"name": "medkit"
-				},
-				{
-					"type": "ion",
-					"name": "merge"
-				},
-				{
-					"type": "ion",
-					"name": "mic-a"
-				},
-				{
-					"type": "ion",
-					"name": "mic-b"
-				},
-				{
-					"type": "ion",
-					"name": "mic-c"
-				},
-				{
-					"type": "ion",
-					"name": "minus-circled"
-				},
-				{
-					"type": "ion",
-					"name": "minus-round"
-				},
-				{
-					"type": "ion",
-					"name": "minus"
-				},
-				{
-					"type": "ion",
-					"name": "model-s"
-				},
-				{
-					"type": "ion",
-					"name": "monitor"
-				},
-				{
-					"type": "ion",
-					"name": "more"
-				},
-				{
-					"type": "ion",
-					"name": "mouse"
-				},
-				{
-					"type": "ion",
-					"name": "music-note"
-				},
-				{
-					"type": "ion",
-					"name": "navicon-round"
-				},
-				{
-					"type": "ion",
-					"name": "navicon"
-				},
-				{
-					"type": "ion",
-					"name": "navigate"
-				},
-				{
-					"type": "ion",
-					"name": "network"
-				},
-				{
-					"type": "ion",
-					"name": "no-smoking"
-				},
-				{
-					"type": "ion",
-					"name": "nuclear"
-				},
-				{
-					"type": "ion",
-					"name": "outlet"
-				},
-				{
-					"type": "ion",
-					"name": "paintbrush"
-				},
-				{
-					"type": "ion",
-					"name": "paintbucket"
-				},
-				{
-					"type": "ion",
-					"name": "paper-airplane"
-				},
-				{
-					"type": "ion",
-					"name": "paperclip"
-				},
-				{
-					"type": "ion",
-					"name": "pause"
-				},
-				{
-					"type": "ion",
-					"name": "person-add"
-				},
-				{
-					"type": "ion",
-					"name": "person-stalker"
-				},
-				{
-					"type": "ion",
-					"name": "person"
-				},
-				{
-					"type": "ion",
-					"name": "pie-graph"
-				},
-				{
-					"type": "ion",
-					"name": "pin"
-				},
-				{
-					"type": "ion",
-					"name": "pinpoint"
-				},
-				{
-					"type": "ion",
-					"name": "pizza"
-				},
-				{
-					"type": "ion",
-					"name": "plane"
-				},
-				{
-					"type": "ion",
-					"name": "planet"
-				},
-				{
-					"type": "ion",
-					"name": "play"
-				},
-				{
-					"type": "ion",
-					"name": "playstation"
-				},
-				{
-					"type": "ion",
-					"name": "plus-circled"
-				},
-				{
-					"type": "ion",
-					"name": "plus-round"
-				},
-				{
-					"type": "ion",
-					"name": "plus"
-				},
-				{
-					"type": "ion",
-					"name": "podium"
-				},
-				{
-					"type": "ion",
-					"name": "pound"
-				},
-				{
-					"type": "ion",
-					"name": "power"
-				},
-				{
-					"type": "ion",
-					"name": "pricetag"
-				},
-				{
-					"type": "ion",
-					"name": "pricetags"
-				},
-				{
-					"type": "ion",
-					"name": "printer"
-				},
-				{
-					"type": "ion",
-					"name": "pull-request"
-				},
-				{
-					"type": "ion",
-					"name": "qr-scanner"
-				},
-				{
-					"type": "ion",
-					"name": "quote"
-				},
-				{
-					"type": "ion",
-					"name": "radio-waves"
-				},
-				{
-					"type": "ion",
-					"name": "record"
-				},
-				{
-					"type": "ion",
-					"name": "refresh"
-				},
-				{
-					"type": "ion",
-					"name": "reply-all"
-				},
-				{
-					"type": "ion",
-					"name": "reply"
-				},
-				{
-					"type": "ion",
-					"name": "ribbon-a"
-				},
-				{
-					"type": "ion",
-					"name": "ribbon-b"
-				},
-				{
-					"type": "ion",
-					"name": "sad-outline"
-				},
-				{
-					"type": "ion",
-					"name": "sad"
-				},
-				{
-					"type": "ion",
-					"name": "scissors"
-				},
-				{
-					"type": "ion",
-					"name": "search"
-				},
-				{
-					"type": "ion",
-					"name": "settings"
-				},
-				{
-					"type": "ion",
-					"name": "share"
-				},
-				{
-					"type": "ion",
-					"name": "shuffle"
-				},
-				{
-					"type": "ion",
-					"name": "skip-backward"
-				},
-				{
-					"type": "ion",
-					"name": "skip-forward"
-				},
-				{
-					"type": "ion",
-					"name": "social-android-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-android"
-				},
-				{
-					"type": "ion",
-					"name": "social-angular-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-angular"
-				},
-				{
-					"type": "ion",
-					"name": "social-apple-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-apple"
-				},
-				{
-					"type": "ion",
-					"name": "social-bitcoin-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-bitcoin"
-				},
-				{
-					"type": "ion",
-					"name": "social-buffer-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-buffer"
-				},
-				{
-					"type": "ion",
-					"name": "social-chrome-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-chrome"
-				},
-				{
-					"type": "ion",
-					"name": "social-codepen-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-codepen"
-				},
-				{
-					"type": "ion",
-					"name": "social-css3-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-css3"
-				},
-				{
-					"type": "ion",
-					"name": "social-designernews-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-designernews"
-				},
-				{
-					"type": "ion",
-					"name": "social-dribbble-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-dribbble"
-				},
-				{
-					"type": "ion",
-					"name": "social-dropbox-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-dropbox"
-				},
-				{
-					"type": "ion",
-					"name": "social-euro-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-euro"
-				},
-				{
-					"type": "ion",
-					"name": "social-facebook-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-facebook"
-				},
-				{
-					"type": "ion",
-					"name": "social-foursquare-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-foursquare"
-				},
-				{
-					"type": "ion",
-					"name": "social-freebsd-devil"
-				},
-				{
-					"type": "ion",
-					"name": "social-github-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-github"
-				},
-				{
-					"type": "ion",
-					"name": "social-google-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-google"
-				},
-				{
-					"type": "ion",
-					"name": "social-googleplus-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-googleplus"
-				},
-				{
-					"type": "ion",
-					"name": "social-hackernews-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-hackernews"
-				},
-				{
-					"type": "ion",
-					"name": "social-html5-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-html5"
-				},
-				{
-					"type": "ion",
-					"name": "social-instagram-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-instagram"
-				},
-				{
-					"type": "ion",
-					"name": "social-javascript-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-javascript"
-				},
-				{
-					"type": "ion",
-					"name": "social-linkedin-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-linkedin"
-				},
-				{
-					"type": "ion",
-					"name": "social-markdown"
-				},
-				{
-					"type": "ion",
-					"name": "social-nodejs"
-				},
-				{
-					"type": "ion",
-					"name": "social-octocat"
-				},
-				{
-					"type": "ion",
-					"name": "social-pinterest-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-pinterest"
-				},
-				{
-					"type": "ion",
-					"name": "social-python"
-				},
-				{
-					"type": "ion",
-					"name": "social-reddit-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-reddit"
-				},
-				{
-					"type": "ion",
-					"name": "social-rss-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-rss"
-				},
-				{
-					"type": "ion",
-					"name": "social-sass"
-				},
-				{
-					"type": "ion",
-					"name": "social-skype-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-skype"
-				},
-				{
-					"type": "ion",
-					"name": "social-snapchat-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-snapchat"
-				},
-				{
-					"type": "ion",
-					"name": "social-tumblr-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-tumblr"
-				},
-				{
-					"type": "ion",
-					"name": "social-tux"
-				},
-				{
-					"type": "ion",
-					"name": "social-twitch-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-twitch"
-				},
-				{
-					"type": "ion",
-					"name": "social-twitter-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-twitter"
-				},
-				{
-					"type": "ion",
-					"name": "social-usd-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-usd"
-				},
-				{
-					"type": "ion",
-					"name": "social-vimeo-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-vimeo"
-				},
-				{
-					"type": "ion",
-					"name": "social-whatsapp-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-whatsapp"
-				},
-				{
-					"type": "ion",
-					"name": "social-windows-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-windows"
-				},
-				{
-					"type": "ion",
-					"name": "social-wordpress-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-wordpress"
-				},
-				{
-					"type": "ion",
-					"name": "social-yahoo-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-yahoo"
-				},
-				{
-					"type": "ion",
-					"name": "social-yen-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-yen"
-				},
-				{
-					"type": "ion",
-					"name": "social-youtube-outline"
-				},
-				{
-					"type": "ion",
-					"name": "social-youtube"
-				},
-				{
-					"type": "ion",
-					"name": "soup-can-outline"
-				},
-				{
-					"type": "ion",
-					"name": "soup-can"
-				},
-				{
-					"type": "ion",
-					"name": "speakerphone"
-				},
-				{
-					"type": "ion",
-					"name": "speedometer"
-				},
-				{
-					"type": "ion",
-					"name": "spoon"
-				},
-				{
-					"type": "ion",
-					"name": "star"
-				},
-				{
-					"type": "ion",
-					"name": "stats-bars"
-				},
-				{
-					"type": "ion",
-					"name": "steam"
-				},
-				{
-					"type": "ion",
-					"name": "stop"
-				},
-				{
-					"type": "ion",
-					"name": "thermometer"
-				},
-				{
-					"type": "ion",
-					"name": "thumbsdown"
-				},
-				{
-					"type": "ion",
-					"name": "thumbsup"
-				},
-				{
-					"type": "ion",
-					"name": "toggle-filled"
-				},
-				{
-					"type": "ion",
-					"name": "toggle"
-				},
-				{
-					"type": "ion",
-					"name": "transgender"
-				},
-				{
-					"type": "ion",
-					"name": "trash-a"
-				},
-				{
-					"type": "ion",
-					"name": "trash-b"
-				},
-				{
-					"type": "ion",
-					"name": "trophy"
-				},
-				{
-					"type": "ion",
-					"name": "tshirt-outline"
-				},
-				{
-					"type": "ion",
-					"name": "tshirt"
-				},
-				{
-					"type": "ion",
-					"name": "umbrella"
-				},
-				{
-					"type": "ion",
-					"name": "university"
-				},
-				{
-					"type": "ion",
-					"name": "unlocked"
-				},
-				{
-					"type": "ion",
-					"name": "upload"
-				},
-				{
-					"type": "ion",
-					"name": "usb"
-				},
-				{
-					"type": "ion",
-					"name": "videocamera"
-				},
-				{
-					"type": "ion",
-					"name": "volume-high"
-				},
-				{
-					"type": "ion",
-					"name": "volume-low"
-				},
-				{
-					"type": "ion",
-					"name": "volume-medium"
-				},
-				{
-					"type": "ion",
-					"name": "volume-mute"
-				},
-				{
-					"type": "ion",
-					"name": "wand"
-				},
-				{
-					"type": "ion",
-					"name": "waterdrop"
-				},
-				{
-					"type": "ion",
-					"name": "wifi"
-				},
-				{
-					"type": "ion",
-					"name": "wineglass"
-				},
-				{
-					"type": "ion",
-					"name": "woman"
-				},
-				{
-					"type": "ion",
-					"name": "wrench"
-				},
-				{
-					"type": "ion",
-					"name": "xbox"
-				}
+				"alert-circled",
+				"alert",
+				"android-add-circle",
+				"android-add",
+				"android-alarm-clock",
+				"android-alert",
+				"android-apps",
+				"android-archive",
+				"android-arrow-back",
+				"android-arrow-down",
+				"android-arrow-dropdown-circle",
+				"android-arrow-dropdown",
+				"android-arrow-dropleft-circle",
+				"android-arrow-dropleft",
+				"android-arrow-dropright-circle",
+				"android-arrow-dropright",
+				"android-arrow-dropup-circle",
+				"android-arrow-dropup",
+				"android-arrow-forward",
+				"android-arrow-up",
+				"android-attach",
+				"android-bar",
+				"android-bicycle",
+				"android-boat",
+				"android-bookmark",
+				"android-bulb",
+				"android-bus",
+				"android-calendar",
+				"android-call",
+				"android-camera",
+				"android-cancel",
+				"android-car",
+				"android-cart",
+				"android-chat",
+				"android-checkbox-blank",
+				"android-checkbox-outline-blank",
+				"android-checkbox-outline",
+				"android-checkbox",
+				"android-checkmark-circle",
+				"android-clipboard",
+				"android-close",
+				"android-cloud-circle",
+				"android-cloud-done",
+				"android-cloud-outline",
+				"android-cloud",
+				"android-color-palette",
+				"android-compass",
+				"android-contact",
+				"android-contacts",
+				"android-contract",
+				"android-create",
+				"android-delete",
+				"android-desktop",
+				"android-document",
+				"android-done-all",
+				"android-done",
+				"android-download",
+				"android-drafts",
+				"android-exit",
+				"android-expand",
+				"android-favorite-outline",
+				"android-favorite",
+				"android-film",
+				"android-folder-open",
+				"android-folder",
+				"android-funnel",
+				"android-globe",
+				"android-hand",
+				"android-hangout",
+				"android-happy",
+				"android-home",
+				"android-image",
+				"android-laptop",
+				"android-list",
+				"android-locate",
+				"android-lock",
+				"android-mail",
+				"android-map",
+				"android-menu",
+				"android-microphone-off",
+				"android-microphone",
+				"android-more-horizontal",
+				"android-more-vertical",
+				"android-navigate",
+				"android-notifications-none",
+				"android-notifications-off",
+				"android-notifications",
+				"android-open",
+				"android-options",
+				"android-people",
+				"android-person-add",
+				"android-person",
+				"android-phone-landscape",
+				"android-phone-portrait",
+				"android-pin",
+				"android-plane",
+				"android-playstore",
+				"android-print",
+				"android-radio-button-off",
+				"android-radio-button-on",
+				"android-refresh",
+				"android-remove-circle",
+				"android-remove",
+				"android-restaurant",
+				"android-sad",
+				"android-search",
+				"android-send",
+				"android-settings",
+				"android-share-alt",
+				"android-share",
+				"android-star-half",
+				"android-star-outline",
+				"android-star",
+				"android-stopwatch",
+				"android-subway",
+				"android-sunny",
+				"android-sync",
+				"android-textsms",
+				"android-time",
+				"android-train",
+				"android-unlock",
+				"android-upload",
+				"android-volume-down",
+				"android-volume-mute",
+				"android-volume-off",
+				"android-volume-up",
+				"android-walk",
+				"android-warning",
+				"android-watch",
+				"android-wifi",
+				"aperture",
+				"archive",
+				"arrow-down-a",
+				"arrow-down-b",
+				"arrow-down-c",
+				"arrow-expand",
+				"arrow-graph-down-left",
+				"arrow-graph-down-right",
+				"arrow-graph-up-left",
+				"arrow-graph-up-right",
+				"arrow-left-a",
+				"arrow-left-b",
+				"arrow-left-c",
+				"arrow-move",
+				"arrow-resize",
+				"arrow-return-left",
+				"arrow-return-right",
+				"arrow-right-a",
+				"arrow-right-b",
+				"arrow-right-c",
+				"arrow-shrink",
+				"arrow-swap",
+				"arrow-up-a",
+				"arrow-up-b",
+				"arrow-up-c",
+				"asterisk",
+				"at",
+				"backspace-outline",
+				"backspace",
+				"bag",
+				"battery-charging",
+				"battery-empty",
+				"battery-full",
+				"battery-half",
+				"battery-low",
+				"beaker",
+				"beer",
+				"bluetooth",
+				"bonfire",
+				"bookmark",
+				"bowtie",
+				"briefcase",
+				"bug",
+				"calculator",
+				"calendar",
+				"camera",
+				"card",
+				"cash",
+				"chatbox-working",
+				"chatbox",
+				"chatboxes",
+				"chatbubble-working",
+				"chatbubble",
+				"chatbubbles",
+				"checkmark-circled",
+				"checkmark-round",
+				"checkmark",
+				"chevron-down",
+				"chevron-left",
+				"chevron-right",
+				"chevron-up",
+				"clipboard",
+				"clock",
+				"close-circled",
+				"close-round",
+				"close",
+				"closed-captioning",
+				"cloud",
+				"code-download",
+				"code-working",
+				"code",
+				"coffee",
+				"compass",
+				"compose",
+				"connection-bars",
+				"contrast",
+				"crop",
+				"cube",
+				"disc",
+				"document-text",
+				"document",
+				"drag",
+				"earth",
+				"easel",
+				"edit",
+				"egg",
+				"eject",
+				"email-unread",
+				"email",
+				"erlenmeyer-flask-bubbles",
+				"erlenmeyer-flask",
+				"eye-disabled",
+				"eye",
+				"female",
+				"filing",
+				"film-marker",
+				"fireball",
+				"flag",
+				"flame",
+				"flash-off",
+				"flash",
+				"folder",
+				"fork-repo",
+				"fork",
+				"forward",
+				"funnel",
+				"gear-a",
+				"gear-b",
+				"grid",
+				"hammer",
+				"happy-outline",
+				"happy",
+				"headphone",
+				"heart-broken",
+				"heart",
+				"help-buoy",
+				"help-circled",
+				"help",
+				"home",
+				"icecream",
+				"image",
+				"images",
+				"information-circled",
+				"information",
+				"ionic",
+				"ios-alarm-outline",
+				"ios-alarm",
+				"ios-albums-outline",
+				"ios-albums",
+				"ios-americanfootball-outline",
+				"ios-americanfootball",
+				"ios-analytics-outline",
+				"ios-analytics",
+				"ios-arrow-back",
+				"ios-arrow-down",
+				"ios-arrow-forward",
+				"ios-arrow-left",
+				"ios-arrow-right",
+				"ios-arrow-thin-down",
+				"ios-arrow-thin-left",
+				"ios-arrow-thin-right",
+				"ios-arrow-thin-up",
+				"ios-arrow-up",
+				"ios-at-outline",
+				"ios-at",
+				"ios-barcode-outline",
+				"ios-barcode",
+				"ios-baseball-outline",
+				"ios-baseball",
+				"ios-basketball-outline",
+				"ios-basketball",
+				"ios-bell-outline",
+				"ios-bell",
+				"ios-body-outline",
+				"ios-body",
+				"ios-bolt-outline",
+				"ios-bolt",
+				"ios-book-outline",
+				"ios-book",
+				"ios-bookmarks-outline",
+				"ios-bookmarks",
+				"ios-box-outline",
+				"ios-box",
+				"ios-briefcase-outline",
+				"ios-briefcase",
+				"ios-browsers-outline",
+				"ios-browsers",
+				"ios-calculator-outline",
+				"ios-calculator",
+				"ios-calendar-outline",
+				"ios-calendar",
+				"ios-camera-outline",
+				"ios-camera",
+				"ios-cart-outline",
+				"ios-cart",
+				"ios-chatboxes-outline",
+				"ios-chatboxes",
+				"ios-chatbubble-outline",
+				"ios-chatbubble",
+				"ios-checkmark-empty",
+				"ios-checkmark-outline",
+				"ios-checkmark",
+				"ios-circle-filled",
+				"ios-circle-outline",
+				"ios-clock-outline",
+				"ios-clock",
+				"ios-close-empty",
+				"ios-close-outline",
+				"ios-close",
+				"ios-cloud-download-outline",
+				"ios-cloud-download",
+				"ios-cloud-outline",
+				"ios-cloud-upload-outline",
+				"ios-cloud-upload",
+				"ios-cloud",
+				"ios-cloudy-night-outline",
+				"ios-cloudy-night",
+				"ios-cloudy-outline",
+				"ios-cloudy",
+				"ios-cog-outline",
+				"ios-cog",
+				"ios-color-filter-outline",
+				"ios-color-filter",
+				"ios-color-wand-outline",
+				"ios-color-wand",
+				"ios-compose-outline",
+				"ios-compose",
+				"ios-contact-outline",
+				"ios-contact",
+				"ios-copy-outline",
+				"ios-copy",
+				"ios-crop-strong",
+				"ios-crop",
+				"ios-download-outline",
+				"ios-download",
+				"ios-drag",
+				"ios-email-outline",
+				"ios-email",
+				"ios-eye-outline",
+				"ios-eye",
+				"ios-fastforward-outline",
+				"ios-fastforward",
+				"ios-filing-outline",
+				"ios-filing",
+				"ios-film-outline",
+				"ios-film",
+				"ios-flag-outline",
+				"ios-flag",
+				"ios-flame-outline",
+				"ios-flame",
+				"ios-flask-outline",
+				"ios-flask",
+				"ios-flower-outline",
+				"ios-flower",
+				"ios-folder-outline",
+				"ios-folder",
+				"ios-football-outline",
+				"ios-football",
+				"ios-game-controller-a-outline",
+				"ios-game-controller-a",
+				"ios-game-controller-b-outline",
+				"ios-game-controller-b",
+				"ios-gear-outline",
+				"ios-gear",
+				"ios-glasses-outline",
+				"ios-glasses",
+				"ios-grid-view-outline",
+				"ios-grid-view",
+				"ios-heart-outline",
+				"ios-heart",
+				"ios-help-empty",
+				"ios-help-outline",
+				"ios-help",
+				"ios-home-outline",
+				"ios-home",
+				"ios-infinite-outline",
+				"ios-infinite",
+				"ios-information-empty",
+				"ios-information-outline",
+				"ios-information",
+				"ios-ionic-outline",
+				"ios-keypad-outline",
+				"ios-keypad",
+				"ios-lightbulb-outline",
+				"ios-lightbulb",
+				"ios-list-outline",
+				"ios-list",
+				"ios-location-outline",
+				"ios-location",
+				"ios-locked-outline",
+				"ios-locked",
+				"ios-loop-strong",
+				"ios-loop",
+				"ios-medical-outline",
+				"ios-medical",
+				"ios-medkit-outline",
+				"ios-medkit",
+				"ios-mic-off",
+				"ios-mic-outline",
+				"ios-mic",
+				"ios-minus-empty",
+				"ios-minus-outline",
+				"ios-minus",
+				"ios-monitor-outline",
+				"ios-monitor",
+				"ios-moon-outline",
+				"ios-moon",
+				"ios-more-outline",
+				"ios-more",
+				"ios-musical-note",
+				"ios-musical-notes",
+				"ios-navigate-outline",
+				"ios-navigate",
+				"ios-nutrition-outline",
+				"ios-nutrition",
+				"ios-paper-outline",
+				"ios-paper",
+				"ios-paperplane-outline",
+				"ios-paperplane",
+				"ios-partlysunny-outline",
+				"ios-partlysunny",
+				"ios-pause-outline",
+				"ios-pause",
+				"ios-paw-outline",
+				"ios-paw",
+				"ios-people-outline",
+				"ios-people",
+				"ios-person-outline",
+				"ios-person",
+				"ios-personadd-outline",
+				"ios-personadd",
+				"ios-photos-outline",
+				"ios-photos",
+				"ios-pie-outline",
+				"ios-pie",
+				"ios-pint-outline",
+				"ios-pint",
+				"ios-play-outline",
+				"ios-play",
+				"ios-plus-empty",
+				"ios-plus-outline",
+				"ios-plus",
+				"ios-pricetag-outline",
+				"ios-pricetag",
+				"ios-pricetags-outline",
+				"ios-pricetags",
+				"ios-printer-outline",
+				"ios-printer",
+				"ios-pulse-strong",
+				"ios-pulse",
+				"ios-rainy-outline",
+				"ios-rainy",
+				"ios-recording-outline",
+				"ios-recording",
+				"ios-redo-outline",
+				"ios-redo",
+				"ios-refresh-empty",
+				"ios-refresh-outline",
+				"ios-refresh",
+				"ios-reload",
+				"ios-reverse-camera-outline",
+				"ios-reverse-camera",
+				"ios-rewind-outline",
+				"ios-rewind",
+				"ios-rose-outline",
+				"ios-rose",
+				"ios-search-strong",
+				"ios-search",
+				"ios-settings-strong",
+				"ios-settings",
+				"ios-shuffle-strong",
+				"ios-shuffle",
+				"ios-skipbackward-outline",
+				"ios-skipbackward",
+				"ios-skipforward-outline",
+				"ios-skipforward",
+				"ios-snowy",
+				"ios-speedometer-outline",
+				"ios-speedometer",
+				"ios-star-half",
+				"ios-star-outline",
+				"ios-star",
+				"ios-stopwatch-outline",
+				"ios-stopwatch",
+				"ios-sunny-outline",
+				"ios-sunny",
+				"ios-telephone-outline",
+				"ios-telephone",
+				"ios-tennisball-outline",
+				"ios-tennisball",
+				"ios-thunderstorm-outline",
+				"ios-thunderstorm",
+				"ios-time-outline",
+				"ios-time",
+				"ios-timer-outline",
+				"ios-timer",
+				"ios-toggle-outline",
+				"ios-toggle",
+				"ios-trash-outline",
+				"ios-trash",
+				"ios-undo-outline",
+				"ios-undo",
+				"ios-unlocked-outline",
+				"ios-unlocked",
+				"ios-upload-outline",
+				"ios-upload",
+				"ios-videocam-outline",
+				"ios-videocam",
+				"ios-volume-high",
+				"ios-volume-low",
+				"ios-wineglass-outline",
+				"ios-wineglass",
+				"ios-world-outline",
+				"ios-world",
+				"ipad",
+				"iphone",
+				"ipod",
+				"jet",
+				"key",
+				"knife",
+				"laptop",
+				"leaf",
+				"levels",
+				"lightbulb",
+				"link",
+				"load-a",
+				"load-b",
+				"load-c",
+				"load-d",
+				"location",
+				"lock-combination",
+				"locked",
+				"log-in",
+				"log-out",
+				"loop",
+				"magnet",
+				"male",
+				"man",
+				"map",
+				"medkit",
+				"merge",
+				"mic-a",
+				"mic-b",
+				"mic-c",
+				"minus-circled",
+				"minus-round",
+				"minus",
+				"model-s",
+				"monitor",
+				"more",
+				"mouse",
+				"music-note",
+				"navicon-round",
+				"navicon",
+				"navigate",
+				"network",
+				"no-smoking",
+				"nuclear",
+				"outlet",
+				"paintbrush",
+				"paintbucket",
+				"paper-airplane",
+				"paperclip",
+				"pause",
+				"person-add",
+				"person-stalker",
+				"person",
+				"pie-graph",
+				"pin",
+				"pinpoint",
+				"pizza",
+				"plane",
+				"planet",
+				"play",
+				"playstation",
+				"plus-circled",
+				"plus-round",
+				"plus",
+				"podium",
+				"pound",
+				"power",
+				"pricetag",
+				"pricetags",
+				"printer",
+				"pull-request",
+				"qr-scanner",
+				"quote",
+				"radio-waves",
+				"record",
+				"refresh",
+				"reply-all",
+				"reply",
+				"ribbon-a",
+				"ribbon-b",
+				"sad-outline",
+				"sad",
+				"scissors",
+				"search",
+				"settings",
+				"share",
+				"shuffle",
+				"skip-backward",
+				"skip-forward",
+				"social-android-outline",
+				"social-android",
+				"social-angular-outline",
+				"social-angular",
+				"social-apple-outline",
+				"social-apple",
+				"social-bitcoin-outline",
+				"social-bitcoin",
+				"social-buffer-outline",
+				"social-buffer",
+				"social-chrome-outline",
+				"social-chrome",
+				"social-codepen-outline",
+				"social-codepen",
+				"social-css3-outline",
+				"social-css3",
+				"social-designernews-outline",
+				"social-designernews",
+				"social-dribbble-outline",
+				"social-dribbble",
+				"social-dropbox-outline",
+				"social-dropbox",
+				"social-euro-outline",
+				"social-euro",
+				"social-facebook-outline",
+				"social-facebook",
+				"social-foursquare-outline",
+				"social-foursquare",
+				"social-freebsd-devil",
+				"social-github-outline",
+				"social-github",
+				"social-google-outline",
+				"social-google",
+				"social-googleplus-outline",
+				"social-googleplus",
+				"social-hackernews-outline",
+				"social-hackernews",
+				"social-html5-outline",
+				"social-html5",
+				"social-instagram-outline",
+				"social-instagram",
+				"social-javascript-outline",
+				"social-javascript",
+				"social-linkedin-outline",
+				"social-linkedin",
+				"social-markdown",
+				"social-nodejs",
+				"social-octocat",
+				"social-pinterest-outline",
+				"social-pinterest",
+				"social-python",
+				"social-reddit-outline",
+				"social-reddit",
+				"social-rss-outline",
+				"social-rss",
+				"social-sass",
+				"social-skype-outline",
+				"social-skype",
+				"social-snapchat-outline",
+				"social-snapchat",
+				"social-tumblr-outline",
+				"social-tumblr",
+				"social-tux",
+				"social-twitch-outline",
+				"social-twitch",
+				"social-twitter-outline",
+				"social-twitter",
+				"social-usd-outline",
+				"social-usd",
+				"social-vimeo-outline",
+				"social-vimeo",
+				"social-whatsapp-outline",
+				"social-whatsapp",
+				"social-windows-outline",
+				"social-windows",
+				"social-wordpress-outline",
+				"social-wordpress",
+				"social-yahoo-outline",
+				"social-yahoo",
+				"social-yen-outline",
+				"social-yen",
+				"social-youtube-outline",
+				"social-youtube",
+				"soup-can-outline",
+				"soup-can",
+				"speakerphone",
+				"speedometer",
+				"spoon",
+				"star",
+				"stats-bars",
+				"steam",
+				"stop",
+				"thermometer",
+				"thumbsdown",
+				"thumbsup",
+				"toggle-filled",
+				"toggle",
+				"transgender",
+				"trash-a",
+				"trash-b",
+				"trophy",
+				"tshirt-outline",
+				"tshirt",
+				"umbrella",
+				"university",
+				"unlocked",
+				"upload",
+				"usb",
+				"videocamera",
+				"volume-high",
+				"volume-low",
+				"volume-medium",
+				"volume-mute",
+				"wand",
+				"waterdrop",
+				"wifi",
+				"wineglass",
+				"woman",
+				"wrench",
+				"xbox"
 			]
 		},
-		"md": {
+		"maki": {
+			"name": "maki",
+			"prefix": "maki-",
+			"repo": "https://github.com/mapbox/maki.git",
+			"icons": [
+				"aerialway-11",
+				"aerialway-15",
+				"airfield-11",
+				"airfield-15",
+				"airport-11",
+				"airport-15",
+				"alcohol-shop-11",
+				"alcohol-shop-15",
+				"america-football-11",
+				"america-football-15",
+				"amusement-park-11",
+				"amusement-park-15",
+				"aquarium-11",
+				"aquarium-15",
+				"art-gallery-11",
+				"art-gallery-15",
+				"attraction-11",
+				"attraction-15",
+				"bakery-11",
+				"bakery-15",
+				"bank-11",
+				"bank-15",
+				"bar-11",
+				"bar-15",
+				"baseball-11",
+				"baseball-15",
+				"basketball-11",
+				"basketball-15",
+				"beer-11",
+				"beer-15",
+				"bicycle-11",
+				"bicycle-15",
+				"bicycle-share-11",
+				"bicycle-share-15",
+				"building-11",
+				"building-15",
+				"bus-11",
+				"bus-15",
+				"cafe-11",
+				"cafe-15",
+				"campsite-11",
+				"campsite-15",
+				"car-11",
+				"car-15",
+				"castle-11",
+				"castle-15",
+				"cemetery-11",
+				"cemetery-15",
+				"cinema-11",
+				"cinema-15",
+				"circle-11",
+				"circle-15",
+				"circle-stroked-11",
+				"circle-stroked-15",
+				"clothing-store-11",
+				"clothing-store-15",
+				"college-11",
+				"college-15",
+				"commercial-11",
+				"commercial-15",
+				"cricket-11",
+				"cricket-15",
+				"cross-11",
+				"cross-15",
+				"dam-11",
+				"dam-15",
+				"danger-11",
+				"danger-15",
+				"dentist-11",
+				"dentist-15",
+				"doctor-11",
+				"doctor-15",
+				"dog-park-11",
+				"dog-park-15",
+				"drinking-water-11",
+				"drinking-water-15",
+				"embassy-11",
+				"embassy-15",
+				"entrance-11",
+				"entrance-15",
+				"farm-11",
+				"farm-15",
+				"fast-food-11",
+				"fast-food-15",
+				"ferry-11",
+				"ferry-15",
+				"fire-station-11",
+				"fire-station-15",
+				"fuel-11",
+				"fuel-15",
+				"garden-11",
+				"garden-15",
+				"garden-center-11",
+				"garden-center-15",
+				"gift-11",
+				"gift-15",
+				"golf-11",
+				"golf-15",
+				"grocery-11",
+				"grocery-15",
+				"hairdresser-11",
+				"hairdresser-15",
+				"harbor-11",
+				"harbor-15",
+				"heart-11",
+				"heart-15",
+				"heliport-11",
+				"heliport-15",
+				"hospital-11",
+				"hospital-15",
+				"ice-cream-11",
+				"ice-cream-15",
+				"industry-11",
+				"industry-15",
+				"information-11",
+				"information-15",
+				"laundry-11",
+				"laundry-15",
+				"library-11",
+				"library-15",
+				"lighthouse-11",
+				"lighthouse-15",
+				"lodging-11",
+				"lodging-15",
+				"marker-11",
+				"marker-15",
+				"monument-11",
+				"monument-15",
+				"mountain-11",
+				"mountain-15",
+				"museum-11",
+				"museum-15",
+				"music-11",
+				"music-15",
+				"park-11",
+				"park-15",
+				"parking-11",
+				"parking-15",
+				"parking-garage-11",
+				"parking-garage-15",
+				"pharmacy-11",
+				"pharmacy-15",
+				"picnic-site-11",
+				"picnic-site-15",
+				"pitch-11",
+				"pitch-15",
+				"place-of-worship-11",
+				"place-of-worship-15",
+				"playground-11",
+				"playground-15",
+				"police-11",
+				"police-15",
+				"post-11",
+				"post-15",
+				"prison-11",
+				"prison-15",
+				"rail-11",
+				"rail-15",
+				"rail-light-11",
+				"rail-light-15",
+				"rail-metro-11",
+				"rail-metro-15",
+				"ranger-station-11",
+				"ranger-station-15",
+				"religious-christian-11",
+				"religious-christian-15",
+				"religious-jewish-11",
+				"religious-jewish-15",
+				"religious-muslim-11",
+				"religious-muslim-15",
+				"restaurant-11",
+				"restaurant-15",
+				"roadblock-11",
+				"roadblock-15",
+				"rocket-11",
+				"rocket-15",
+				"school-11",
+				"school-15",
+				"shelter-11",
+				"shelter-15",
+				"shop-11",
+				"shop-15",
+				"skiing-11",
+				"skiing-15",
+				"soccer-11",
+				"soccer-15",
+				"square-11",
+				"square-15",
+				"square-stroked-11",
+				"square-stroked-15",
+				"stadium-11",
+				"stadium-15",
+				"star-11",
+				"star-15",
+				"star-stroked-11",
+				"star-stroked-15",
+				"suitcase-11",
+				"suitcase-15",
+				"sushi-11",
+				"sushi-15",
+				"swimming-11",
+				"swimming-15",
+				"telephone-11",
+				"telephone-15",
+				"tennis-11",
+				"tennis-15",
+				"theatre-11",
+				"theatre-15",
+				"toilet-11",
+				"toilet-15",
+				"town-hall-11",
+				"town-hall-15",
+				"triangle-11",
+				"triangle-15",
+				"triangle-stroked-11",
+				"triangle-stroked-15",
+				"veterinary-11",
+				"veterinary-15",
+				"volcano-11",
+				"volcano-15",
+				"warehouse-11",
+				"warehouse-15",
+				"waste-basket-11",
+				"waste-basket-15",
+				"water-11",
+				"water-15",
+				"wetland-11",
+				"wetland-15",
+				"wheelchair-11",
+				"wheelchair-15",
+				"zoo-11",
+				"zoo-15"
+			]
+		},
+		"map": {
+			"name": "map-icons",
+			"prefix": "map-",
+			"repo": "https://github.com/scottdejonge/map-icons.git",
+			"icons": [
+				"abseiling",
+				"accounting",
+				"airport",
+				"amusement-park",
+				"aquarium",
+				"archery",
+				"art-gallery",
+				"assistive-listening-system",
+				"atm",
+				"audio-description",
+				"bakery",
+				"bank",
+				"bar",
+				"baseball",
+				"beauty-salon",
+				"bicycle-store",
+				"boat-ramp",
+				"boat-tour",
+				"boating",
+				"book-store",
+				"bowling-alley",
+				"braille",
+				"bus-station",
+				"cafe",
+				"campground",
+				"canoe",
+				"car-dealer",
+				"car-rental",
+				"car-repair",
+				"car-wash",
+				"casino",
+				"cemetery",
+				"chairlift",
+				"church",
+				"circle",
+				"city-hall",
+				"climbing",
+				"closed-captioning",
+				"clothing-store",
+				"compass",
+				"convenience-store",
+				"courthouse",
+				"cross-country-skiing",
+				"crosshairs",
+				"dentist",
+				"department-store",
+				"diving",
+				"doctor",
+				"electrician",
+				"electronics-store",
+				"embassy",
+				"expand",
+				"female",
+				"finance",
+				"fire-station",
+				"fish-cleaning",
+				"fishing-pier",
+				"florist",
+				"food",
+				"fullscreen",
+				"funeral-home",
+				"furniture-store",
+				"gas-station",
+				"general-contractor",
+				"grocery-or-supermarket",
+				"gym",
+				"hair-care",
+				"hang-gliding",
+				"hardware-store",
+				"health",
+				"hindu-temple",
+				"hospital",
+				"ice-fishing",
+				"ice-skating",
+				"inline-skating",
+				"insurance-agency",
+				"jet-skiing",
+				"jewelry-store",
+				"kayaking",
+				"laundry",
+				"lawyer",
+				"library",
+				"liquor-store",
+				"local-government",
+				"location-arrow",
+				"locksmith",
+				"lodging",
+				"low-vision-access",
+				"male",
+				"map-pin",
+				"marina",
+				"mosque",
+				"movie-rental",
+				"movie-theater",
+				"moving-company",
+				"museum",
+				"natural-feature",
+				"night-club",
+				"open-captioning",
+				"painter",
+				"park",
+				"parking",
+				"pet-store",
+				"pharmacy",
+				"physiotherapist",
+				"place-of-worship",
+				"playground",
+				"plumber",
+				"point-of-interest",
+				"police",
+				"political",
+				"post-box",
+				"post-office",
+				"postal-code-prefix",
+				"postal-code",
+				"rafting",
+				"real-estate-agency",
+				"restaurant",
+				"roofing-contractor",
+				"route-pin",
+				"route",
+				"rv-park",
+				"sailing",
+				"school",
+				"scuba-diving",
+				"search",
+				"sheild",
+				"shield",
+				"shopping-mall",
+				"sign-language",
+				"skateboarding",
+				"ski-jumping",
+				"skiing",
+				"sledding",
+				"snow-shoeing",
+				"snow",
+				"snowboarding",
+				"snowmobile",
+				"spa",
+				"square-pin",
+				"square-rounded",
+				"square",
+				"stadium",
+				"storage",
+				"store",
+				"subway-station",
+				"surfing",
+				"swimming",
+				"synagogue",
+				"taxi-stand",
+				"tennis",
+				"toilet",
+				"train-station",
+				"transit-station",
+				"travel-agency",
+				"unisex",
+				"university",
+				"veterinary-care",
+				"volume-control-telephone",
+				"waterskiing",
+				"whale-watching",
+				"wheelchair",
+				"wind-surfing",
+				"zoo",
+				"zoom-in-alt",
+				"zoom-in",
+				"zoom-out-alt",
+				"zoom-out"
+			]
+		},
+		"material": {
 			"name": "material-design",
-			"prefix": "md-",
+			"prefix": "material-",
 			"repo": "https://github.com/google/material-design-icons.git",
 			"icons": [
-				{
-					"type": "md",
-					"name": "3d-rotation"
-				},
-				{
-					"type": "md",
-					"name": "ac-unit"
-				},
-				{
-					"type": "md",
-					"name": "access-alarm"
-				},
-				{
-					"type": "md",
-					"name": "access-alarms"
-				},
-				{
-					"type": "md",
-					"name": "access-time"
-				},
-				{
-					"type": "md",
-					"name": "accessibility"
-				},
-				{
-					"type": "md",
-					"name": "accessible"
-				},
-				{
-					"type": "md",
-					"name": "account-balance-wallet"
-				},
-				{
-					"type": "md",
-					"name": "account-balance"
-				},
-				{
-					"type": "md",
-					"name": "account-box"
-				},
-				{
-					"type": "md",
-					"name": "account-circle"
-				},
-				{
-					"type": "md",
-					"name": "adb"
-				},
-				{
-					"type": "md",
-					"name": "add-a-photo"
-				},
-				{
-					"type": "md",
-					"name": "add-alarm"
-				},
-				{
-					"type": "md",
-					"name": "add-alert"
-				},
-				{
-					"type": "md",
-					"name": "add-box"
-				},
-				{
-					"type": "md",
-					"name": "add-circle-outline"
-				},
-				{
-					"type": "md",
-					"name": "add-circle"
-				},
-				{
-					"type": "md",
-					"name": "add-location"
-				},
-				{
-					"type": "md",
-					"name": "add-shopping-cart"
-				},
-				{
-					"type": "md",
-					"name": "add-to-photos"
-				},
-				{
-					"type": "md",
-					"name": "add-to-queue"
-				},
-				{
-					"type": "md",
-					"name": "add"
-				},
-				{
-					"type": "md",
-					"name": "adjust"
-				},
-				{
-					"type": "md",
-					"name": "airline-seat-flat-angled"
-				},
-				{
-					"type": "md",
-					"name": "airline-seat-flat"
-				},
-				{
-					"type": "md",
-					"name": "airline-seat-individual-suite"
-				},
-				{
-					"type": "md",
-					"name": "airline-seat-legroom-extra"
-				},
-				{
-					"type": "md",
-					"name": "airline-seat-legroom-normal"
-				},
-				{
-					"type": "md",
-					"name": "airline-seat-legroom-reduced"
-				},
-				{
-					"type": "md",
-					"name": "airline-seat-recline-extra"
-				},
-				{
-					"type": "md",
-					"name": "airline-seat-recline-normal"
-				},
-				{
-					"type": "md",
-					"name": "airplanemode-active"
-				},
-				{
-					"type": "md",
-					"name": "airplanemode-inactive"
-				},
-				{
-					"type": "md",
-					"name": "airplay"
-				},
-				{
-					"type": "md",
-					"name": "airport-shuttle"
-				},
-				{
-					"type": "md",
-					"name": "alarm-add"
-				},
-				{
-					"type": "md",
-					"name": "alarm-off"
-				},
-				{
-					"type": "md",
-					"name": "alarm-on"
-				},
-				{
-					"type": "md",
-					"name": "alarm"
-				},
-				{
-					"type": "md",
-					"name": "album"
-				},
-				{
-					"type": "md",
-					"name": "all-inclusive"
-				},
-				{
-					"type": "md",
-					"name": "all-out"
-				},
-				{
-					"type": "md",
-					"name": "android"
-				},
-				{
-					"type": "md",
-					"name": "announcement"
-				},
-				{
-					"type": "md",
-					"name": "apps"
-				},
-				{
-					"type": "md",
-					"name": "archive"
-				},
-				{
-					"type": "md",
-					"name": "arrow-back"
-				},
-				{
-					"type": "md",
-					"name": "arrow-downward"
-				},
-				{
-					"type": "md",
-					"name": "arrow-drop-down-circle"
-				},
-				{
-					"type": "md",
-					"name": "arrow-drop-down"
-				},
-				{
-					"type": "md",
-					"name": "arrow-drop-up"
-				},
-				{
-					"type": "md",
-					"name": "arrow-forward"
-				},
-				{
-					"type": "md",
-					"name": "arrow-upward"
-				},
-				{
-					"type": "md",
-					"name": "art-track"
-				},
-				{
-					"type": "md",
-					"name": "aspect-ratio"
-				},
-				{
-					"type": "md",
-					"name": "assessment"
-				},
-				{
-					"type": "md",
-					"name": "assignment-ind"
-				},
-				{
-					"type": "md",
-					"name": "assignment-late"
-				},
-				{
-					"type": "md",
-					"name": "assignment-return"
-				},
-				{
-					"type": "md",
-					"name": "assignment-returned"
-				},
-				{
-					"type": "md",
-					"name": "assignment-turned-in"
-				},
-				{
-					"type": "md",
-					"name": "assignment"
-				},
-				{
-					"type": "md",
-					"name": "assistant-photo"
-				},
-				{
-					"type": "md",
-					"name": "assistant"
-				},
-				{
-					"type": "md",
-					"name": "attach-file"
-				},
-				{
-					"type": "md",
-					"name": "attach-money"
-				},
-				{
-					"type": "md",
-					"name": "attachment"
-				},
-				{
-					"type": "md",
-					"name": "audiotrack"
-				},
-				{
-					"type": "md",
-					"name": "autorenew"
-				},
-				{
-					"type": "md",
-					"name": "av-timer"
-				},
-				{
-					"type": "md",
-					"name": "backspace"
-				},
-				{
-					"type": "md",
-					"name": "backup"
-				},
-				{
-					"type": "md",
-					"name": "battery-20"
-				},
-				{
-					"type": "md",
-					"name": "battery-30"
-				},
-				{
-					"type": "md",
-					"name": "battery-50"
-				},
-				{
-					"type": "md",
-					"name": "battery-60"
-				},
-				{
-					"type": "md",
-					"name": "battery-80"
-				},
-				{
-					"type": "md",
-					"name": "battery-90"
-				},
-				{
-					"type": "md",
-					"name": "battery-alert"
-				},
-				{
-					"type": "md",
-					"name": "battery-charging-20"
-				},
-				{
-					"type": "md",
-					"name": "battery-charging-30"
-				},
-				{
-					"type": "md",
-					"name": "battery-charging-50"
-				},
-				{
-					"type": "md",
-					"name": "battery-charging-60"
-				},
-				{
-					"type": "md",
-					"name": "battery-charging-80"
-				},
-				{
-					"type": "md",
-					"name": "battery-charging-90"
-				},
-				{
-					"type": "md",
-					"name": "battery-charging-full"
-				},
-				{
-					"type": "md",
-					"name": "battery-full"
-				},
-				{
-					"type": "md",
-					"name": "battery-std"
-				},
-				{
-					"type": "md",
-					"name": "battery-unknown"
-				},
-				{
-					"type": "md",
-					"name": "beach-access"
-				},
-				{
-					"type": "md",
-					"name": "beenhere"
-				},
-				{
-					"type": "md",
-					"name": "block"
-				},
-				{
-					"type": "md",
-					"name": "bluetooth-audio"
-				},
-				{
-					"type": "md",
-					"name": "bluetooth-connected"
-				},
-				{
-					"type": "md",
-					"name": "bluetooth-disabled"
-				},
-				{
-					"type": "md",
-					"name": "bluetooth-searching"
-				},
-				{
-					"type": "md",
-					"name": "bluetooth"
-				},
-				{
-					"type": "md",
-					"name": "blur-circular"
-				},
-				{
-					"type": "md",
-					"name": "blur-linear"
-				},
-				{
-					"type": "md",
-					"name": "blur-off"
-				},
-				{
-					"type": "md",
-					"name": "blur-on"
-				},
-				{
-					"type": "md",
-					"name": "book"
-				},
-				{
-					"type": "md",
-					"name": "bookmark-border"
-				},
-				{
-					"type": "md",
-					"name": "bookmark"
-				},
-				{
-					"type": "md",
-					"name": "border-all"
-				},
-				{
-					"type": "md",
-					"name": "border-bottom"
-				},
-				{
-					"type": "md",
-					"name": "border-clear"
-				},
-				{
-					"type": "md",
-					"name": "border-color"
-				},
-				{
-					"type": "md",
-					"name": "border-horizontal"
-				},
-				{
-					"type": "md",
-					"name": "border-inner"
-				},
-				{
-					"type": "md",
-					"name": "border-left"
-				},
-				{
-					"type": "md",
-					"name": "border-outer"
-				},
-				{
-					"type": "md",
-					"name": "border-right"
-				},
-				{
-					"type": "md",
-					"name": "border-style"
-				},
-				{
-					"type": "md",
-					"name": "border-top"
-				},
-				{
-					"type": "md",
-					"name": "border-vertical"
-				},
-				{
-					"type": "md",
-					"name": "branding-watermark"
-				},
-				{
-					"type": "md",
-					"name": "brightness-1"
-				},
-				{
-					"type": "md",
-					"name": "brightness-2"
-				},
-				{
-					"type": "md",
-					"name": "brightness-3"
-				},
-				{
-					"type": "md",
-					"name": "brightness-4"
-				},
-				{
-					"type": "md",
-					"name": "brightness-5"
-				},
-				{
-					"type": "md",
-					"name": "brightness-6"
-				},
-				{
-					"type": "md",
-					"name": "brightness-7"
-				},
-				{
-					"type": "md",
-					"name": "brightness-auto"
-				},
-				{
-					"type": "md",
-					"name": "brightness-high"
-				},
-				{
-					"type": "md",
-					"name": "brightness-low"
-				},
-				{
-					"type": "md",
-					"name": "brightness-medium"
-				},
-				{
-					"type": "md",
-					"name": "broken-image"
-				},
-				{
-					"type": "md",
-					"name": "brush"
-				},
-				{
-					"type": "md",
-					"name": "bubble-chart"
-				},
-				{
-					"type": "md",
-					"name": "bug-report"
-				},
-				{
-					"type": "md",
-					"name": "build"
-				},
-				{
-					"type": "md",
-					"name": "burst-mode"
-				},
-				{
-					"type": "md",
-					"name": "business-center"
-				},
-				{
-					"type": "md",
-					"name": "business"
-				},
-				{
-					"type": "md",
-					"name": "cached"
-				},
-				{
-					"type": "md",
-					"name": "cake"
-				},
-				{
-					"type": "md",
-					"name": "call-end"
-				},
-				{
-					"type": "md",
-					"name": "call-made"
-				},
-				{
-					"type": "md",
-					"name": "call-merge"
-				},
-				{
-					"type": "md",
-					"name": "call-missed-outgoing"
-				},
-				{
-					"type": "md",
-					"name": "call-missed"
-				},
-				{
-					"type": "md",
-					"name": "call-received"
-				},
-				{
-					"type": "md",
-					"name": "call-split"
-				},
-				{
-					"type": "md",
-					"name": "call-to-action"
-				},
-				{
-					"type": "md",
-					"name": "call"
-				},
-				{
-					"type": "md",
-					"name": "camera-alt"
-				},
-				{
-					"type": "md",
-					"name": "camera-front"
-				},
-				{
-					"type": "md",
-					"name": "camera-rear"
-				},
-				{
-					"type": "md",
-					"name": "camera-roll"
-				},
-				{
-					"type": "md",
-					"name": "camera"
-				},
-				{
-					"type": "md",
-					"name": "cancel"
-				},
-				{
-					"type": "md",
-					"name": "card-giftcard"
-				},
-				{
-					"type": "md",
-					"name": "card-membership"
-				},
-				{
-					"type": "md",
-					"name": "card-travel"
-				},
-				{
-					"type": "md",
-					"name": "casino"
-				},
-				{
-					"type": "md",
-					"name": "cast-connected"
-				},
-				{
-					"type": "md",
-					"name": "cast"
-				},
-				{
-					"type": "md",
-					"name": "center-focus-strong"
-				},
-				{
-					"type": "md",
-					"name": "center-focus-weak"
-				},
-				{
-					"type": "md",
-					"name": "change-history"
-				},
-				{
-					"type": "md",
-					"name": "chat-bubble-outline"
-				},
-				{
-					"type": "md",
-					"name": "chat-bubble"
-				},
-				{
-					"type": "md",
-					"name": "chat"
-				},
-				{
-					"type": "md",
-					"name": "check-box-outline-blank"
-				},
-				{
-					"type": "md",
-					"name": "check-box"
-				},
-				{
-					"type": "md",
-					"name": "check-circle"
-				},
-				{
-					"type": "md",
-					"name": "check"
-				},
-				{
-					"type": "md",
-					"name": "chevron-left"
-				},
-				{
-					"type": "md",
-					"name": "chevron-right"
-				},
-				{
-					"type": "md",
-					"name": "child-care"
-				},
-				{
-					"type": "md",
-					"name": "child-friendly"
-				},
-				{
-					"type": "md",
-					"name": "chrome-reader-mode"
-				},
-				{
-					"type": "md",
-					"name": "class"
-				},
-				{
-					"type": "md",
-					"name": "clear-all"
-				},
-				{
-					"type": "md",
-					"name": "clear"
-				},
-				{
-					"type": "md",
-					"name": "close"
-				},
-				{
-					"type": "md",
-					"name": "closed-caption"
-				},
-				{
-					"type": "md",
-					"name": "cloud-circle"
-				},
-				{
-					"type": "md",
-					"name": "cloud-done"
-				},
-				{
-					"type": "md",
-					"name": "cloud-download"
-				},
-				{
-					"type": "md",
-					"name": "cloud-off"
-				},
-				{
-					"type": "md",
-					"name": "cloud-queue"
-				},
-				{
-					"type": "md",
-					"name": "cloud-upload"
-				},
-				{
-					"type": "md",
-					"name": "cloud"
-				},
-				{
-					"type": "md",
-					"name": "code"
-				},
-				{
-					"type": "md",
-					"name": "collections"
-				},
-				{
-					"type": "md",
-					"name": "color-lens"
-				},
-				{
-					"type": "md",
-					"name": "colorize"
-				},
-				{
-					"type": "md",
-					"name": "comment"
-				},
-				{
-					"type": "md",
-					"name": "compare-arrows"
-				},
-				{
-					"type": "md",
-					"name": "compare"
-				},
-				{
-					"type": "md",
-					"name": "computer"
-				},
-				{
-					"type": "md",
-					"name": "confirmation-number"
-				},
-				{
-					"type": "md",
-					"name": "contact-mail"
-				},
-				{
-					"type": "md",
-					"name": "contact-phone"
-				},
-				{
-					"type": "md",
-					"name": "contacts"
-				},
-				{
-					"type": "md",
-					"name": "content-copy"
-				},
-				{
-					"type": "md",
-					"name": "content-cut"
-				},
-				{
-					"type": "md",
-					"name": "content-paste"
-				},
-				{
-					"type": "md",
-					"name": "control-point-duplicate"
-				},
-				{
-					"type": "md",
-					"name": "control-point"
-				},
-				{
-					"type": "md",
-					"name": "copyright"
-				},
-				{
-					"type": "md",
-					"name": "create-new-folder"
-				},
-				{
-					"type": "md",
-					"name": "create"
-				},
-				{
-					"type": "md",
-					"name": "credit-card"
-				},
-				{
-					"type": "md",
-					"name": "crop-16-9"
-				},
-				{
-					"type": "md",
-					"name": "crop-3-2"
-				},
-				{
-					"type": "md",
-					"name": "crop-5-4"
-				},
-				{
-					"type": "md",
-					"name": "crop-7-5"
-				},
-				{
-					"type": "md",
-					"name": "crop-din"
-				},
-				{
-					"type": "md",
-					"name": "crop-free"
-				},
-				{
-					"type": "md",
-					"name": "crop-landscape"
-				},
-				{
-					"type": "md",
-					"name": "crop-original"
-				},
-				{
-					"type": "md",
-					"name": "crop-portrait"
-				},
-				{
-					"type": "md",
-					"name": "crop-rotate"
-				},
-				{
-					"type": "md",
-					"name": "crop-square"
-				},
-				{
-					"type": "md",
-					"name": "crop"
-				},
-				{
-					"type": "md",
-					"name": "dashboard"
-				},
-				{
-					"type": "md",
-					"name": "data-usage"
-				},
-				{
-					"type": "md",
-					"name": "date-range"
-				},
-				{
-					"type": "md",
-					"name": "dehaze"
-				},
-				{
-					"type": "md",
-					"name": "delete-forever"
-				},
-				{
-					"type": "md",
-					"name": "delete-sweep"
-				},
-				{
-					"type": "md",
-					"name": "delete"
-				},
-				{
-					"type": "md",
-					"name": "description"
-				},
-				{
-					"type": "md",
-					"name": "desktop-mac"
-				},
-				{
-					"type": "md",
-					"name": "desktop-windows"
-				},
-				{
-					"type": "md",
-					"name": "details"
-				},
-				{
-					"type": "md",
-					"name": "developer-board"
-				},
-				{
-					"type": "md",
-					"name": "developer-mode"
-				},
-				{
-					"type": "md",
-					"name": "devices-other"
-				},
-				{
-					"type": "md",
-					"name": "devices"
-				},
-				{
-					"type": "md",
-					"name": "dialer-sip"
-				},
-				{
-					"type": "md",
-					"name": "dialpad"
-				},
-				{
-					"type": "md",
-					"name": "directions-bike"
-				},
-				{
-					"type": "md",
-					"name": "directions-boat"
-				},
-				{
-					"type": "md",
-					"name": "directions-bus"
-				},
-				{
-					"type": "md",
-					"name": "directions-car"
-				},
-				{
-					"type": "md",
-					"name": "directions-railway"
-				},
-				{
-					"type": "md",
-					"name": "directions-run"
-				},
-				{
-					"type": "md",
-					"name": "directions-subway"
-				},
-				{
-					"type": "md",
-					"name": "directions-transit"
-				},
-				{
-					"type": "md",
-					"name": "directions-walk"
-				},
-				{
-					"type": "md",
-					"name": "directions"
-				},
-				{
-					"type": "md",
-					"name": "disc-full"
-				},
-				{
-					"type": "md",
-					"name": "dns"
-				},
-				{
-					"type": "md",
-					"name": "do-not-disturb-alt"
-				},
-				{
-					"type": "md",
-					"name": "do-not-disturb-off"
-				},
-				{
-					"type": "md",
-					"name": "do-not-disturb-on"
-				},
-				{
-					"type": "md",
-					"name": "do-not-disturb"
-				},
-				{
-					"type": "md",
-					"name": "dock"
-				},
-				{
-					"type": "md",
-					"name": "domain"
-				},
-				{
-					"type": "md",
-					"name": "done-all"
-				},
-				{
-					"type": "md",
-					"name": "done"
-				},
-				{
-					"type": "md",
-					"name": "donut-large"
-				},
-				{
-					"type": "md",
-					"name": "donut-small"
-				},
-				{
-					"type": "md",
-					"name": "drafts"
-				},
-				{
-					"type": "md",
-					"name": "drag-handle"
-				},
-				{
-					"type": "md",
-					"name": "drive-eta"
-				},
-				{
-					"type": "md",
-					"name": "dvr"
-				},
-				{
-					"type": "md",
-					"name": "edit-location"
-				},
-				{
-					"type": "md",
-					"name": "edit"
-				},
-				{
-					"type": "md",
-					"name": "email"
-				},
-				{
-					"type": "md",
-					"name": "enhanced-encryption"
-				},
-				{
-					"type": "md",
-					"name": "equalizer"
-				},
-				{
-					"type": "md",
-					"name": "error-outline"
-				},
-				{
-					"type": "md",
-					"name": "error"
-				},
-				{
-					"type": "md",
-					"name": "euro-symbol"
-				},
-				{
-					"type": "md",
-					"name": "ev-station"
-				},
-				{
-					"type": "md",
-					"name": "event-available"
-				},
-				{
-					"type": "md",
-					"name": "event-busy"
-				},
-				{
-					"type": "md",
-					"name": "event-note"
-				},
-				{
-					"type": "md",
-					"name": "event-seat"
-				},
-				{
-					"type": "md",
-					"name": "event"
-				},
-				{
-					"type": "md",
-					"name": "exit-to-app"
-				},
-				{
-					"type": "md",
-					"name": "expand-less"
-				},
-				{
-					"type": "md",
-					"name": "expand-more"
-				},
-				{
-					"type": "md",
-					"name": "explicit"
-				},
-				{
-					"type": "md",
-					"name": "explore"
-				},
-				{
-					"type": "md",
-					"name": "exposure-neg-1"
-				},
-				{
-					"type": "md",
-					"name": "exposure-neg-2"
-				},
-				{
-					"type": "md",
-					"name": "exposure-plus-1"
-				},
-				{
-					"type": "md",
-					"name": "exposure-plus-2"
-				},
-				{
-					"type": "md",
-					"name": "exposure-zero"
-				},
-				{
-					"type": "md",
-					"name": "exposure"
-				},
-				{
-					"type": "md",
-					"name": "extension"
-				},
-				{
-					"type": "md",
-					"name": "face"
-				},
-				{
-					"type": "md",
-					"name": "fast-forward"
-				},
-				{
-					"type": "md",
-					"name": "fast-rewind"
-				},
-				{
-					"type": "md",
-					"name": "favorite-border"
-				},
-				{
-					"type": "md",
-					"name": "favorite"
-				},
-				{
-					"type": "md",
-					"name": "featured-play-list"
-				},
-				{
-					"type": "md",
-					"name": "featured-video"
-				},
-				{
-					"type": "md",
-					"name": "feedback"
-				},
-				{
-					"type": "md",
-					"name": "fiber-dvr"
-				},
-				{
-					"type": "md",
-					"name": "fiber-manual-record"
-				},
-				{
-					"type": "md",
-					"name": "fiber-new"
-				},
-				{
-					"type": "md",
-					"name": "fiber-pin"
-				},
-				{
-					"type": "md",
-					"name": "fiber-smart-record"
-				},
-				{
-					"type": "md",
-					"name": "file-download"
-				},
-				{
-					"type": "md",
-					"name": "file-upload"
-				},
-				{
-					"type": "md",
-					"name": "filter-1"
-				},
-				{
-					"type": "md",
-					"name": "filter-2"
-				},
-				{
-					"type": "md",
-					"name": "filter-3"
-				},
-				{
-					"type": "md",
-					"name": "filter-4"
-				},
-				{
-					"type": "md",
-					"name": "filter-5"
-				},
-				{
-					"type": "md",
-					"name": "filter-6"
-				},
-				{
-					"type": "md",
-					"name": "filter-7"
-				},
-				{
-					"type": "md",
-					"name": "filter-8"
-				},
-				{
-					"type": "md",
-					"name": "filter-9-plus"
-				},
-				{
-					"type": "md",
-					"name": "filter-9"
-				},
-				{
-					"type": "md",
-					"name": "filter-b-and-w"
-				},
-				{
-					"type": "md",
-					"name": "filter-center-focus"
-				},
-				{
-					"type": "md",
-					"name": "filter-drama"
-				},
-				{
-					"type": "md",
-					"name": "filter-frames"
-				},
-				{
-					"type": "md",
-					"name": "filter-hdr"
-				},
-				{
-					"type": "md",
-					"name": "filter-list"
-				},
-				{
-					"type": "md",
-					"name": "filter-none"
-				},
-				{
-					"type": "md",
-					"name": "filter-tilt-shift"
-				},
-				{
-					"type": "md",
-					"name": "filter-vintage"
-				},
-				{
-					"type": "md",
-					"name": "filter"
-				},
-				{
-					"type": "md",
-					"name": "find-in-page"
-				},
-				{
-					"type": "md",
-					"name": "find-replace"
-				},
-				{
-					"type": "md",
-					"name": "fingerprint"
-				},
-				{
-					"type": "md",
-					"name": "first-page"
-				},
-				{
-					"type": "md",
-					"name": "fitness-center"
-				},
-				{
-					"type": "md",
-					"name": "flag"
-				},
-				{
-					"type": "md",
-					"name": "flare"
-				},
-				{
-					"type": "md",
-					"name": "flash-auto"
-				},
-				{
-					"type": "md",
-					"name": "flash-off"
-				},
-				{
-					"type": "md",
-					"name": "flash-on"
-				},
-				{
-					"type": "md",
-					"name": "flight-land"
-				},
-				{
-					"type": "md",
-					"name": "flight-takeoff"
-				},
-				{
-					"type": "md",
-					"name": "flight"
-				},
-				{
-					"type": "md",
-					"name": "flip-to-back"
-				},
-				{
-					"type": "md",
-					"name": "flip-to-front"
-				},
-				{
-					"type": "md",
-					"name": "flip"
-				},
-				{
-					"type": "md",
-					"name": "folder-open"
-				},
-				{
-					"type": "md",
-					"name": "folder-shared"
-				},
-				{
-					"type": "md",
-					"name": "folder-special"
-				},
-				{
-					"type": "md",
-					"name": "folder"
-				},
-				{
-					"type": "md",
-					"name": "format-align-center"
-				},
-				{
-					"type": "md",
-					"name": "format-align-justify"
-				},
-				{
-					"type": "md",
-					"name": "format-align-left"
-				},
-				{
-					"type": "md",
-					"name": "format-align-right"
-				},
-				{
-					"type": "md",
-					"name": "format-bold"
-				},
-				{
-					"type": "md",
-					"name": "format-clear"
-				},
-				{
-					"type": "md",
-					"name": "format-color-fill"
-				},
-				{
-					"type": "md",
-					"name": "format-color-reset"
-				},
-				{
-					"type": "md",
-					"name": "format-color-text"
-				},
-				{
-					"type": "md",
-					"name": "format-indent-decrease"
-				},
-				{
-					"type": "md",
-					"name": "format-indent-increase"
-				},
-				{
-					"type": "md",
-					"name": "format-italic"
-				},
-				{
-					"type": "md",
-					"name": "format-line-spacing"
-				},
-				{
-					"type": "md",
-					"name": "format-list-bulleted"
-				},
-				{
-					"type": "md",
-					"name": "format-list-numbered"
-				},
-				{
-					"type": "md",
-					"name": "format-paint"
-				},
-				{
-					"type": "md",
-					"name": "format-quote"
-				},
-				{
-					"type": "md",
-					"name": "format-shapes"
-				},
-				{
-					"type": "md",
-					"name": "format-size"
-				},
-				{
-					"type": "md",
-					"name": "format-strikethrough"
-				},
-				{
-					"type": "md",
-					"name": "format-textdirection-l-to-r"
-				},
-				{
-					"type": "md",
-					"name": "format-textdirection-r-to-l"
-				},
-				{
-					"type": "md",
-					"name": "format-underlined"
-				},
-				{
-					"type": "md",
-					"name": "forum"
-				},
-				{
-					"type": "md",
-					"name": "forward-10"
-				},
-				{
-					"type": "md",
-					"name": "forward-30"
-				},
-				{
-					"type": "md",
-					"name": "forward-5"
-				},
-				{
-					"type": "md",
-					"name": "forward"
-				},
-				{
-					"type": "md",
-					"name": "free-breakfast"
-				},
-				{
-					"type": "md",
-					"name": "fullscreen-exit"
-				},
-				{
-					"type": "md",
-					"name": "fullscreen"
-				},
-				{
-					"type": "md",
-					"name": "functions"
-				},
-				{
-					"type": "md",
-					"name": "g-translate"
-				},
-				{
-					"type": "md",
-					"name": "gamepad"
-				},
-				{
-					"type": "md",
-					"name": "games"
-				},
-				{
-					"type": "md",
-					"name": "gavel"
-				},
-				{
-					"type": "md",
-					"name": "gesture"
-				},
-				{
-					"type": "md",
-					"name": "get-app"
-				},
-				{
-					"type": "md",
-					"name": "golf-course"
-				},
-				{
-					"type": "md",
-					"name": "gps-fixed"
-				},
-				{
-					"type": "md",
-					"name": "gps-not-fixed"
-				},
-				{
-					"type": "md",
-					"name": "gps-off"
-				},
-				{
-					"type": "md",
-					"name": "grade"
-				},
-				{
-					"type": "md",
-					"name": "gradient"
-				},
-				{
-					"type": "md",
-					"name": "grain"
-				},
-				{
-					"type": "md",
-					"name": "graphic-eq"
-				},
-				{
-					"type": "md",
-					"name": "grid-off"
-				},
-				{
-					"type": "md",
-					"name": "grid-on"
-				},
-				{
-					"type": "md",
-					"name": "group-add"
-				},
-				{
-					"type": "md",
-					"name": "group-work"
-				},
-				{
-					"type": "md",
-					"name": "group"
-				},
-				{
-					"type": "md",
-					"name": "hdr-off"
-				},
-				{
-					"type": "md",
-					"name": "hdr-on"
-				},
-				{
-					"type": "md",
-					"name": "hdr-strong"
-				},
-				{
-					"type": "md",
-					"name": "hdr-weak"
-				},
-				{
-					"type": "md",
-					"name": "headset-mic"
-				},
-				{
-					"type": "md",
-					"name": "headset"
-				},
-				{
-					"type": "md",
-					"name": "healing"
-				},
-				{
-					"type": "md",
-					"name": "hearing"
-				},
-				{
-					"type": "md",
-					"name": "help"
-				},
-				{
-					"type": "md",
-					"name": "high-quality"
-				},
-				{
-					"type": "md",
-					"name": "highlight-off"
-				},
-				{
-					"type": "md",
-					"name": "highlight"
-				},
-				{
-					"type": "md",
-					"name": "history"
-				},
-				{
-					"type": "md",
-					"name": "home"
-				},
-				{
-					"type": "md",
-					"name": "hot-tub"
-				},
-				{
-					"type": "md",
-					"name": "hotel"
-				},
-				{
-					"type": "md",
-					"name": "hourglass-empty"
-				},
-				{
-					"type": "md",
-					"name": "hourglass-full"
-				},
-				{
-					"type": "md",
-					"name": "http"
-				},
-				{
-					"type": "md",
-					"name": "https"
-				},
-				{
-					"type": "md",
-					"name": "image-aspect-ratio"
-				},
-				{
-					"type": "md",
-					"name": "image"
-				},
-				{
-					"type": "md",
-					"name": "import-contacts"
-				},
-				{
-					"type": "md",
-					"name": "import-export"
-				},
-				{
-					"type": "md",
-					"name": "important-devices"
-				},
-				{
-					"type": "md",
-					"name": "inbox"
-				},
-				{
-					"type": "md",
-					"name": "info-outline"
-				},
-				{
-					"type": "md",
-					"name": "info"
-				},
-				{
-					"type": "md",
-					"name": "input"
-				},
-				{
-					"type": "md",
-					"name": "insert-chart"
-				},
-				{
-					"type": "md",
-					"name": "insert-comment"
-				},
-				{
-					"type": "md",
-					"name": "insert-drive-file"
-				},
-				{
-					"type": "md",
-					"name": "insert-emoticon"
-				},
-				{
-					"type": "md",
-					"name": "insert-invitation"
-				},
-				{
-					"type": "md",
-					"name": "insert-link"
-				},
-				{
-					"type": "md",
-					"name": "insert-photo"
-				},
-				{
-					"type": "md",
-					"name": "invert-colors-off"
-				},
-				{
-					"type": "md",
-					"name": "invert-colors"
-				},
-				{
-					"type": "md",
-					"name": "iso"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-arrow-down"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-arrow-left"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-arrow-right"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-arrow-up"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-backspace"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-capslock"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-hide"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-return"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-tab"
-				},
-				{
-					"type": "md",
-					"name": "keyboard-voice"
-				},
-				{
-					"type": "md",
-					"name": "keyboard"
-				},
-				{
-					"type": "md",
-					"name": "kitchen"
-				},
-				{
-					"type": "md",
-					"name": "label-outline"
-				},
-				{
-					"type": "md",
-					"name": "label"
-				},
-				{
-					"type": "md",
-					"name": "landscape"
-				},
-				{
-					"type": "md",
-					"name": "language"
-				},
-				{
-					"type": "md",
-					"name": "laptop-chromebook"
-				},
-				{
-					"type": "md",
-					"name": "laptop-mac"
-				},
-				{
-					"type": "md",
-					"name": "laptop-windows"
-				},
-				{
-					"type": "md",
-					"name": "laptop"
-				},
-				{
-					"type": "md",
-					"name": "last-page"
-				},
-				{
-					"type": "md",
-					"name": "launch"
-				},
-				{
-					"type": "md",
-					"name": "layers-clear"
-				},
-				{
-					"type": "md",
-					"name": "layers"
-				},
-				{
-					"type": "md",
-					"name": "leak-add"
-				},
-				{
-					"type": "md",
-					"name": "leak-remove"
-				},
-				{
-					"type": "md",
-					"name": "lens"
-				},
-				{
-					"type": "md",
-					"name": "library-add"
-				},
-				{
-					"type": "md",
-					"name": "library-books"
-				},
-				{
-					"type": "md",
-					"name": "library-music"
-				},
-				{
-					"type": "md",
-					"name": "lightbulb-outline"
-				},
-				{
-					"type": "md",
-					"name": "line-style"
-				},
-				{
-					"type": "md",
-					"name": "line-weight"
-				},
-				{
-					"type": "md",
-					"name": "linear-scale"
-				},
-				{
-					"type": "md",
-					"name": "link"
-				},
-				{
-					"type": "md",
-					"name": "linked-camera"
-				},
-				{
-					"type": "md",
-					"name": "list"
-				},
-				{
-					"type": "md",
-					"name": "live-help"
-				},
-				{
-					"type": "md",
-					"name": "live-tv"
-				},
-				{
-					"type": "md",
-					"name": "local-activity"
-				},
-				{
-					"type": "md",
-					"name": "local-airport"
-				},
-				{
-					"type": "md",
-					"name": "local-atm"
-				},
-				{
-					"type": "md",
-					"name": "local-bar"
-				},
-				{
-					"type": "md",
-					"name": "local-cafe"
-				},
-				{
-					"type": "md",
-					"name": "local-car-wash"
-				},
-				{
-					"type": "md",
-					"name": "local-convenience-store"
-				},
-				{
-					"type": "md",
-					"name": "local-dining"
-				},
-				{
-					"type": "md",
-					"name": "local-drink"
-				},
-				{
-					"type": "md",
-					"name": "local-florist"
-				},
-				{
-					"type": "md",
-					"name": "local-gas-station"
-				},
-				{
-					"type": "md",
-					"name": "local-grocery-store"
-				},
-				{
-					"type": "md",
-					"name": "local-hospital"
-				},
-				{
-					"type": "md",
-					"name": "local-hotel"
-				},
-				{
-					"type": "md",
-					"name": "local-laundry-service"
-				},
-				{
-					"type": "md",
-					"name": "local-library"
-				},
-				{
-					"type": "md",
-					"name": "local-mall"
-				},
-				{
-					"type": "md",
-					"name": "local-movies"
-				},
-				{
-					"type": "md",
-					"name": "local-offer"
-				},
-				{
-					"type": "md",
-					"name": "local-parking"
-				},
-				{
-					"type": "md",
-					"name": "local-pharmacy"
-				},
-				{
-					"type": "md",
-					"name": "local-phone"
-				},
-				{
-					"type": "md",
-					"name": "local-pizza"
-				},
-				{
-					"type": "md",
-					"name": "local-play"
-				},
-				{
-					"type": "md",
-					"name": "local-post-office"
-				},
-				{
-					"type": "md",
-					"name": "local-printshop"
-				},
-				{
-					"type": "md",
-					"name": "local-see"
-				},
-				{
-					"type": "md",
-					"name": "local-shipping"
-				},
-				{
-					"type": "md",
-					"name": "local-taxi"
-				},
-				{
-					"type": "md",
-					"name": "location-city"
-				},
-				{
-					"type": "md",
-					"name": "location-disabled"
-				},
-				{
-					"type": "md",
-					"name": "location-off"
-				},
-				{
-					"type": "md",
-					"name": "location-on"
-				},
-				{
-					"type": "md",
-					"name": "location-searching"
-				},
-				{
-					"type": "md",
-					"name": "lock-open"
-				},
-				{
-					"type": "md",
-					"name": "lock-outline"
-				},
-				{
-					"type": "md",
-					"name": "lock"
-				},
-				{
-					"type": "md",
-					"name": "looks-3"
-				},
-				{
-					"type": "md",
-					"name": "looks-4"
-				},
-				{
-					"type": "md",
-					"name": "looks-5"
-				},
-				{
-					"type": "md",
-					"name": "looks-6"
-				},
-				{
-					"type": "md",
-					"name": "looks-one"
-				},
-				{
-					"type": "md",
-					"name": "looks-two"
-				},
-				{
-					"type": "md",
-					"name": "looks"
-				},
-				{
-					"type": "md",
-					"name": "loop"
-				},
-				{
-					"type": "md",
-					"name": "loupe"
-				},
-				{
-					"type": "md",
-					"name": "low-priority"
-				},
-				{
-					"type": "md",
-					"name": "loyalty"
-				},
-				{
-					"type": "md",
-					"name": "mail-outline"
-				},
-				{
-					"type": "md",
-					"name": "mail"
-				},
-				{
-					"type": "md",
-					"name": "map"
-				},
-				{
-					"type": "md",
-					"name": "markunread-mailbox"
-				},
-				{
-					"type": "md",
-					"name": "markunread"
-				},
-				{
-					"type": "md",
-					"name": "memory"
-				},
-				{
-					"type": "md",
-					"name": "menu"
-				},
-				{
-					"type": "md",
-					"name": "merge-type"
-				},
-				{
-					"type": "md",
-					"name": "message"
-				},
-				{
-					"type": "md",
-					"name": "mic-none"
-				},
-				{
-					"type": "md",
-					"name": "mic-off"
-				},
-				{
-					"type": "md",
-					"name": "mic"
-				},
-				{
-					"type": "md",
-					"name": "mms"
-				},
-				{
-					"type": "md",
-					"name": "mode-comment"
-				},
-				{
-					"type": "md",
-					"name": "mode-edit"
-				},
-				{
-					"type": "md",
-					"name": "monetization-on"
-				},
-				{
-					"type": "md",
-					"name": "monochrome-photos"
-				},
-				{
-					"type": "md",
-					"name": "mood-bad"
-				},
-				{
-					"type": "md",
-					"name": "mood"
-				},
-				{
-					"type": "md",
-					"name": "more-horiz"
-				},
-				{
-					"type": "md",
-					"name": "more-vert"
-				},
-				{
-					"type": "md",
-					"name": "more"
-				},
-				{
-					"type": "md",
-					"name": "motorcycle"
-				},
-				{
-					"type": "md",
-					"name": "mouse"
-				},
-				{
-					"type": "md",
-					"name": "move-to-inbox"
-				},
-				{
-					"type": "md",
-					"name": "movie-creation"
-				},
-				{
-					"type": "md",
-					"name": "movie-filter"
-				},
-				{
-					"type": "md",
-					"name": "movie"
-				},
-				{
-					"type": "md",
-					"name": "multiline-chart"
-				},
-				{
-					"type": "md",
-					"name": "music-note"
-				},
-				{
-					"type": "md",
-					"name": "music-video"
-				},
-				{
-					"type": "md",
-					"name": "my-location"
-				},
-				{
-					"type": "md",
-					"name": "nature-people"
-				},
-				{
-					"type": "md",
-					"name": "nature"
-				},
-				{
-					"type": "md",
-					"name": "navigate-before"
-				},
-				{
-					"type": "md",
-					"name": "navigate-next"
-				},
-				{
-					"type": "md",
-					"name": "navigation"
-				},
-				{
-					"type": "md",
-					"name": "near-me"
-				},
-				{
-					"type": "md",
-					"name": "network-cell"
-				},
-				{
-					"type": "md",
-					"name": "network-check"
-				},
-				{
-					"type": "md",
-					"name": "network-locked"
-				},
-				{
-					"type": "md",
-					"name": "network-wifi"
-				},
-				{
-					"type": "md",
-					"name": "new-releases"
-				},
-				{
-					"type": "md",
-					"name": "next-week"
-				},
-				{
-					"type": "md",
-					"name": "nfc"
-				},
-				{
-					"type": "md",
-					"name": "no-encryption"
-				},
-				{
-					"type": "md",
-					"name": "no-sim"
-				},
-				{
-					"type": "md",
-					"name": "not-interested"
-				},
-				{
-					"type": "md",
-					"name": "note-add"
-				},
-				{
-					"type": "md",
-					"name": "note"
-				},
-				{
-					"type": "md",
-					"name": "notifications-active"
-				},
-				{
-					"type": "md",
-					"name": "notifications-none"
-				},
-				{
-					"type": "md",
-					"name": "notifications-off"
-				},
-				{
-					"type": "md",
-					"name": "notifications-paused"
-				},
-				{
-					"type": "md",
-					"name": "notifications"
-				},
-				{
-					"type": "md",
-					"name": "ondemand-video"
-				},
-				{
-					"type": "md",
-					"name": "opacity"
-				},
-				{
-					"type": "md",
-					"name": "open-in-browser"
-				},
-				{
-					"type": "md",
-					"name": "open-in-new"
-				},
-				{
-					"type": "md",
-					"name": "open-with"
-				},
-				{
-					"type": "md",
-					"name": "pages"
-				},
-				{
-					"type": "md",
-					"name": "pageview"
-				},
-				{
-					"type": "md",
-					"name": "palette"
-				},
-				{
-					"type": "md",
-					"name": "pan-tool"
-				},
-				{
-					"type": "md",
-					"name": "panorama-fish-eye"
-				},
-				{
-					"type": "md",
-					"name": "panorama-horizontal"
-				},
-				{
-					"type": "md",
-					"name": "panorama-vertical"
-				},
-				{
-					"type": "md",
-					"name": "panorama-wide-angle"
-				},
-				{
-					"type": "md",
-					"name": "panorama"
-				},
-				{
-					"type": "md",
-					"name": "party-mode"
-				},
-				{
-					"type": "md",
-					"name": "pause-circle-filled"
-				},
-				{
-					"type": "md",
-					"name": "pause-circle-outline"
-				},
-				{
-					"type": "md",
-					"name": "pause"
-				},
-				{
-					"type": "md",
-					"name": "payment"
-				},
-				{
-					"type": "md",
-					"name": "people-outline"
-				},
-				{
-					"type": "md",
-					"name": "people"
-				},
-				{
-					"type": "md",
-					"name": "perm-camera-mic"
-				},
-				{
-					"type": "md",
-					"name": "perm-contact-calendar"
-				},
-				{
-					"type": "md",
-					"name": "perm-data-setting"
-				},
-				{
-					"type": "md",
-					"name": "perm-device-information"
-				},
-				{
-					"type": "md",
-					"name": "perm-identity"
-				},
-				{
-					"type": "md",
-					"name": "perm-media"
-				},
-				{
-					"type": "md",
-					"name": "perm-phone-msg"
-				},
-				{
-					"type": "md",
-					"name": "perm-scan-wifi"
-				},
-				{
-					"type": "md",
-					"name": "person-add"
-				},
-				{
-					"type": "md",
-					"name": "person-outline"
-				},
-				{
-					"type": "md",
-					"name": "person-pin-circle"
-				},
-				{
-					"type": "md",
-					"name": "person-pin"
-				},
-				{
-					"type": "md",
-					"name": "person"
-				},
-				{
-					"type": "md",
-					"name": "personal-video"
-				},
-				{
-					"type": "md",
-					"name": "pets"
-				},
-				{
-					"type": "md",
-					"name": "phone-android"
-				},
-				{
-					"type": "md",
-					"name": "phone-bluetooth-speaker"
-				},
-				{
-					"type": "md",
-					"name": "phone-forwarded"
-				},
-				{
-					"type": "md",
-					"name": "phone-in-talk"
-				},
-				{
-					"type": "md",
-					"name": "phone-iphone"
-				},
-				{
-					"type": "md",
-					"name": "phone-locked"
-				},
-				{
-					"type": "md",
-					"name": "phone-missed"
-				},
-				{
-					"type": "md",
-					"name": "phone-paused"
-				},
-				{
-					"type": "md",
-					"name": "phone"
-				},
-				{
-					"type": "md",
-					"name": "phonelink-off"
-				},
-				{
-					"type": "md",
-					"name": "phonelink"
-				},
-				{
-					"type": "md",
-					"name": "photo-album"
-				},
-				{
-					"type": "md",
-					"name": "photo-camera"
-				},
-				{
-					"type": "md",
-					"name": "photo-filter"
-				},
-				{
-					"type": "md",
-					"name": "photo-library"
-				},
-				{
-					"type": "md",
-					"name": "photo"
-				},
-				{
-					"type": "md",
-					"name": "picture-as-pdf"
-				},
-				{
-					"type": "md",
-					"name": "picture-in-picture-alt"
-				},
-				{
-					"type": "md",
-					"name": "picture-in-picture"
-				},
-				{
-					"type": "md",
-					"name": "pie-chart-outlined"
-				},
-				{
-					"type": "md",
-					"name": "pie-chart"
-				},
-				{
-					"type": "md",
-					"name": "pin-drop"
-				},
-				{
-					"type": "md",
-					"name": "place"
-				},
-				{
-					"type": "md",
-					"name": "play-arrow"
-				},
-				{
-					"type": "md",
-					"name": "play-circle-filled-white"
-				},
-				{
-					"type": "md",
-					"name": "play-circle-filled"
-				},
-				{
-					"type": "md",
-					"name": "play-circle-outline"
-				},
-				{
-					"type": "md",
-					"name": "play-for-work"
-				},
-				{
-					"type": "md",
-					"name": "playlist-add-check"
-				},
-				{
-					"type": "md",
-					"name": "playlist-add"
-				},
-				{
-					"type": "md",
-					"name": "playlist-play"
-				},
-				{
-					"type": "md",
-					"name": "plus-one"
-				},
-				{
-					"type": "md",
-					"name": "poll"
-				},
-				{
-					"type": "md",
-					"name": "polymer"
-				},
-				{
-					"type": "md",
-					"name": "pool"
-				},
-				{
-					"type": "md",
-					"name": "portable-wifi-off"
-				},
-				{
-					"type": "md",
-					"name": "portrait"
-				},
-				{
-					"type": "md",
-					"name": "power-input"
-				},
-				{
-					"type": "md",
-					"name": "power-settings-new"
-				},
-				{
-					"type": "md",
-					"name": "power"
-				},
-				{
-					"type": "md",
-					"name": "pregnant-woman"
-				},
-				{
-					"type": "md",
-					"name": "present-to-all"
-				},
-				{
-					"type": "md",
-					"name": "print"
-				},
-				{
-					"type": "md",
-					"name": "priority-high"
-				},
-				{
-					"type": "md",
-					"name": "public"
-				},
-				{
-					"type": "md",
-					"name": "publish"
-				},
-				{
-					"type": "md",
-					"name": "query-builder"
-				},
-				{
-					"type": "md",
-					"name": "question-answer"
-				},
-				{
-					"type": "md",
-					"name": "queue-music"
-				},
-				{
-					"type": "md",
-					"name": "queue-play-next"
-				},
-				{
-					"type": "md",
-					"name": "queue"
-				},
-				{
-					"type": "md",
-					"name": "radio-button-checked"
-				},
-				{
-					"type": "md",
-					"name": "radio-button-unchecked"
-				},
-				{
-					"type": "md",
-					"name": "radio"
-				},
-				{
-					"type": "md",
-					"name": "rate-review"
-				},
-				{
-					"type": "md",
-					"name": "receipt"
-				},
-				{
-					"type": "md",
-					"name": "recent-actors"
-				},
-				{
-					"type": "md",
-					"name": "record-voice-over"
-				},
-				{
-					"type": "md",
-					"name": "redeem"
-				},
-				{
-					"type": "md",
-					"name": "redo"
-				},
-				{
-					"type": "md",
-					"name": "refresh"
-				},
-				{
-					"type": "md",
-					"name": "remove-circle-outline"
-				},
-				{
-					"type": "md",
-					"name": "remove-circle"
-				},
-				{
-					"type": "md",
-					"name": "remove-from-queue"
-				},
-				{
-					"type": "md",
-					"name": "remove-red-eye"
-				},
-				{
-					"type": "md",
-					"name": "remove-shopping-cart"
-				},
-				{
-					"type": "md",
-					"name": "remove"
-				},
-				{
-					"type": "md",
-					"name": "repeat-one"
-				},
-				{
-					"type": "md",
-					"name": "repeat"
-				},
-				{
-					"type": "md",
-					"name": "replay-10"
-				},
-				{
-					"type": "md",
-					"name": "replay-30"
-				},
-				{
-					"type": "md",
-					"name": "replay-5"
-				},
-				{
-					"type": "md",
-					"name": "replay"
-				},
-				{
-					"type": "md",
-					"name": "reply-all"
-				},
-				{
-					"type": "md",
-					"name": "reply"
-				},
-				{
-					"type": "md",
-					"name": "report-problem"
-				},
-				{
-					"type": "md",
-					"name": "report"
-				},
-				{
-					"type": "md",
-					"name": "restaurant-menu"
-				},
-				{
-					"type": "md",
-					"name": "restaurant"
-				},
-				{
-					"type": "md",
-					"name": "restore-page"
-				},
-				{
-					"type": "md",
-					"name": "restore"
-				},
-				{
-					"type": "md",
-					"name": "ring-volume"
-				},
-				{
-					"type": "md",
-					"name": "room-service"
-				},
-				{
-					"type": "md",
-					"name": "room"
-				},
-				{
-					"type": "md",
-					"name": "rotate-90-degrees-ccw"
-				},
-				{
-					"type": "md",
-					"name": "rotate-left"
-				},
-				{
-					"type": "md",
-					"name": "rotate-right"
-				},
-				{
-					"type": "md",
-					"name": "rounded-corner"
-				},
-				{
-					"type": "md",
-					"name": "router"
-				},
-				{
-					"type": "md",
-					"name": "rowing"
-				},
-				{
-					"type": "md",
-					"name": "rss-feed"
-				},
-				{
-					"type": "md",
-					"name": "rv-hookup"
-				},
-				{
-					"type": "md",
-					"name": "satellite"
-				},
-				{
-					"type": "md",
-					"name": "save"
-				},
-				{
-					"type": "md",
-					"name": "scanner"
-				},
-				{
-					"type": "md",
-					"name": "schedule"
-				},
-				{
-					"type": "md",
-					"name": "school"
-				},
-				{
-					"type": "md",
-					"name": "screen-lock-landscape"
-				},
-				{
-					"type": "md",
-					"name": "screen-lock-portrait"
-				},
-				{
-					"type": "md",
-					"name": "screen-lock-rotation"
-				},
-				{
-					"type": "md",
-					"name": "screen-rotation"
-				},
-				{
-					"type": "md",
-					"name": "screen-share"
-				},
-				{
-					"type": "md",
-					"name": "sd-card"
-				},
-				{
-					"type": "md",
-					"name": "sd-storage"
-				},
-				{
-					"type": "md",
-					"name": "search"
-				},
-				{
-					"type": "md",
-					"name": "security"
-				},
-				{
-					"type": "md",
-					"name": "select-all"
-				},
-				{
-					"type": "md",
-					"name": "send"
-				},
-				{
-					"type": "md",
-					"name": "sentiment-dissatisfied"
-				},
-				{
-					"type": "md",
-					"name": "sentiment-neutral"
-				},
-				{
-					"type": "md",
-					"name": "sentiment-satisfied"
-				},
-				{
-					"type": "md",
-					"name": "sentiment-very-dissatisfied"
-				},
-				{
-					"type": "md",
-					"name": "sentiment-very-satisfied"
-				},
-				{
-					"type": "md",
-					"name": "settings-applications"
-				},
-				{
-					"type": "md",
-					"name": "settings-backup-restore"
-				},
-				{
-					"type": "md",
-					"name": "settings-bluetooth"
-				},
-				{
-					"type": "md",
-					"name": "settings-brightness"
-				},
-				{
-					"type": "md",
-					"name": "settings-cell"
-				},
-				{
-					"type": "md",
-					"name": "settings-ethernet"
-				},
-				{
-					"type": "md",
-					"name": "settings-input-antenna"
-				},
-				{
-					"type": "md",
-					"name": "settings-input-component"
-				},
-				{
-					"type": "md",
-					"name": "settings-input-composite"
-				},
-				{
-					"type": "md",
-					"name": "settings-input-hdmi"
-				},
-				{
-					"type": "md",
-					"name": "settings-input-svideo"
-				},
-				{
-					"type": "md",
-					"name": "settings-overscan"
-				},
-				{
-					"type": "md",
-					"name": "settings-phone"
-				},
-				{
-					"type": "md",
-					"name": "settings-power"
-				},
-				{
-					"type": "md",
-					"name": "settings-remote"
-				},
-				{
-					"type": "md",
-					"name": "settings-system-daydream"
-				},
-				{
-					"type": "md",
-					"name": "settings-voice"
-				},
-				{
-					"type": "md",
-					"name": "settings"
-				},
-				{
-					"type": "md",
-					"name": "share"
-				},
-				{
-					"type": "md",
-					"name": "shop-two"
-				},
-				{
-					"type": "md",
-					"name": "shop"
-				},
-				{
-					"type": "md",
-					"name": "shopping-basket"
-				},
-				{
-					"type": "md",
-					"name": "shopping-cart"
-				},
-				{
-					"type": "md",
-					"name": "short-text"
-				},
-				{
-					"type": "md",
-					"name": "show-chart"
-				},
-				{
-					"type": "md",
-					"name": "shuffle"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-0-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-1-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-2-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-3-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-4-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-connected-no-internet-0-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-connected-no-internet-1-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-connected-no-internet-2-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-connected-no-internet-3-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-connected-no-internet-4-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-no-sim"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-null"
-				},
-				{
-					"type": "md",
-					"name": "signal-cellular-off"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-0-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-1-bar-lock"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-1-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-2-bar-lock"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-2-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-3-bar-lock"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-3-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-4-bar-lock"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-4-bar"
-				},
-				{
-					"type": "md",
-					"name": "signal-wifi-off"
-				},
-				{
-					"type": "md",
-					"name": "sim-card-alert"
-				},
-				{
-					"type": "md",
-					"name": "sim-card"
-				},
-				{
-					"type": "md",
-					"name": "skip-next"
-				},
-				{
-					"type": "md",
-					"name": "skip-previous"
-				},
-				{
-					"type": "md",
-					"name": "slideshow"
-				},
-				{
-					"type": "md",
-					"name": "slow-motion-video"
-				},
-				{
-					"type": "md",
-					"name": "smartphone"
-				},
-				{
-					"type": "md",
-					"name": "smoke-free"
-				},
-				{
-					"type": "md",
-					"name": "smoking-rooms"
-				},
-				{
-					"type": "md",
-					"name": "sms-failed"
-				},
-				{
-					"type": "md",
-					"name": "sms"
-				},
-				{
-					"type": "md",
-					"name": "snooze"
-				},
-				{
-					"type": "md",
-					"name": "sort"
-				},
-				{
-					"type": "md",
-					"name": "spa"
-				},
-				{
-					"type": "md",
-					"name": "space-bar"
-				},
-				{
-					"type": "md",
-					"name": "speaker-group"
-				},
-				{
-					"type": "md",
-					"name": "speaker-notes-off"
-				},
-				{
-					"type": "md",
-					"name": "speaker-notes"
-				},
-				{
-					"type": "md",
-					"name": "speaker-phone"
-				},
-				{
-					"type": "md",
-					"name": "speaker"
-				},
-				{
-					"type": "md",
-					"name": "spellcheck"
-				},
-				{
-					"type": "md",
-					"name": "star-half"
-				},
-				{
-					"type": "md",
-					"name": "stars"
-				},
-				{
-					"type": "md",
-					"name": "stay-current-landscape"
-				},
-				{
-					"type": "md",
-					"name": "stay-current-portrait"
-				},
-				{
-					"type": "md",
-					"name": "stay-primary-landscape"
-				},
-				{
-					"type": "md",
-					"name": "stay-primary-portrait"
-				},
-				{
-					"type": "md",
-					"name": "stop-screen-share"
-				},
-				{
-					"type": "md",
-					"name": "stop"
-				},
-				{
-					"type": "md",
-					"name": "storage"
-				},
-				{
-					"type": "md",
-					"name": "store-mall-directory"
-				},
-				{
-					"type": "md",
-					"name": "store"
-				},
-				{
-					"type": "md",
-					"name": "straighten"
-				},
-				{
-					"type": "md",
-					"name": "streetview"
-				},
-				{
-					"type": "md",
-					"name": "strikethrough-s"
-				},
-				{
-					"type": "md",
-					"name": "style"
-				},
-				{
-					"type": "md",
-					"name": "subdirectory-arrow-left"
-				},
-				{
-					"type": "md",
-					"name": "subdirectory-arrow-right"
-				},
-				{
-					"type": "md",
-					"name": "subject"
-				},
-				{
-					"type": "md",
-					"name": "subscriptions"
-				},
-				{
-					"type": "md",
-					"name": "subtitles"
-				},
-				{
-					"type": "md",
-					"name": "subway"
-				},
-				{
-					"type": "md",
-					"name": "supervisor-account"
-				},
-				{
-					"type": "md",
-					"name": "surround-sound"
-				},
-				{
-					"type": "md",
-					"name": "swap-calls"
-				},
-				{
-					"type": "md",
-					"name": "swap-horiz"
-				},
-				{
-					"type": "md",
-					"name": "swap-vert"
-				},
-				{
-					"type": "md",
-					"name": "swap-vertical-circle"
-				},
-				{
-					"type": "md",
-					"name": "switch-camera"
-				},
-				{
-					"type": "md",
-					"name": "switch-video"
-				},
-				{
-					"type": "md",
-					"name": "sync-disabled"
-				},
-				{
-					"type": "md",
-					"name": "sync-problem"
-				},
-				{
-					"type": "md",
-					"name": "sync"
-				},
-				{
-					"type": "md",
-					"name": "system-update-alt"
-				},
-				{
-					"type": "md",
-					"name": "system-update"
-				},
-				{
-					"type": "md",
-					"name": "tab-unselected"
-				},
-				{
-					"type": "md",
-					"name": "tab"
-				},
-				{
-					"type": "md",
-					"name": "tablet-android"
-				},
-				{
-					"type": "md",
-					"name": "tablet-mac"
-				},
-				{
-					"type": "md",
-					"name": "tablet"
-				},
-				{
-					"type": "md",
-					"name": "tag-faces"
-				},
-				{
-					"type": "md",
-					"name": "tap-and-play"
-				},
-				{
-					"type": "md",
-					"name": "terrain"
-				},
-				{
-					"type": "md",
-					"name": "text-fields"
-				},
-				{
-					"type": "md",
-					"name": "text-format"
-				},
-				{
-					"type": "md",
-					"name": "textsms"
-				},
-				{
-					"type": "md",
-					"name": "texture"
-				},
-				{
-					"type": "md",
-					"name": "theaters"
-				},
-				{
-					"type": "md",
-					"name": "thumb-down"
-				},
-				{
-					"type": "md",
-					"name": "thumb-up"
-				},
-				{
-					"type": "md",
-					"name": "thumbs-up-down"
-				},
-				{
-					"type": "md",
-					"name": "time-to-leave"
-				},
-				{
-					"type": "md",
-					"name": "timelapse"
-				},
-				{
-					"type": "md",
-					"name": "timeline"
-				},
-				{
-					"type": "md",
-					"name": "timer-10"
-				},
-				{
-					"type": "md",
-					"name": "timer-3"
-				},
-				{
-					"type": "md",
-					"name": "timer-off"
-				},
-				{
-					"type": "md",
-					"name": "timer"
-				},
-				{
-					"type": "md",
-					"name": "title"
-				},
-				{
-					"type": "md",
-					"name": "toc"
-				},
-				{
-					"type": "md",
-					"name": "today"
-				},
-				{
-					"type": "md",
-					"name": "toll"
-				},
-				{
-					"type": "md",
-					"name": "tonality"
-				},
-				{
-					"type": "md",
-					"name": "touch-app"
-				},
-				{
-					"type": "md",
-					"name": "toys"
-				},
-				{
-					"type": "md",
-					"name": "track-changes"
-				},
-				{
-					"type": "md",
-					"name": "traffic"
-				},
-				{
-					"type": "md",
-					"name": "train"
-				},
-				{
-					"type": "md",
-					"name": "tram"
-				},
-				{
-					"type": "md",
-					"name": "transfer-within-a-station"
-				},
-				{
-					"type": "md",
-					"name": "transform"
-				},
-				{
-					"type": "md",
-					"name": "translate"
-				},
-				{
-					"type": "md",
-					"name": "trending-down"
-				},
-				{
-					"type": "md",
-					"name": "trending-flat"
-				},
-				{
-					"type": "md",
-					"name": "trending-up"
-				},
-				{
-					"type": "md",
-					"name": "tune"
-				},
-				{
-					"type": "md",
-					"name": "turned-in-not"
-				},
-				{
-					"type": "md",
-					"name": "turned-in"
-				},
-				{
-					"type": "md",
-					"name": "tv"
-				},
-				{
-					"type": "md",
-					"name": "unarchive"
-				},
-				{
-					"type": "md",
-					"name": "undo"
-				},
-				{
-					"type": "md",
-					"name": "unfold-less"
-				},
-				{
-					"type": "md",
-					"name": "unfold-more"
-				},
-				{
-					"type": "md",
-					"name": "update"
-				},
-				{
-					"type": "md",
-					"name": "usb"
-				},
-				{
-					"type": "md",
-					"name": "verified-user"
-				},
-				{
-					"type": "md",
-					"name": "vertical-align-bottom"
-				},
-				{
-					"type": "md",
-					"name": "vertical-align-center"
-				},
-				{
-					"type": "md",
-					"name": "vertical-align-top"
-				},
-				{
-					"type": "md",
-					"name": "vibration"
-				},
-				{
-					"type": "md",
-					"name": "video-call"
-				},
-				{
-					"type": "md",
-					"name": "video-label"
-				},
-				{
-					"type": "md",
-					"name": "video-library"
-				},
-				{
-					"type": "md",
-					"name": "videocam-off"
-				},
-				{
-					"type": "md",
-					"name": "videocam"
-				},
-				{
-					"type": "md",
-					"name": "videogame-asset"
-				},
-				{
-					"type": "md",
-					"name": "view-agenda"
-				},
-				{
-					"type": "md",
-					"name": "view-array"
-				},
-				{
-					"type": "md",
-					"name": "view-carousel"
-				},
-				{
-					"type": "md",
-					"name": "view-column"
-				},
-				{
-					"type": "md",
-					"name": "view-comfy"
-				},
-				{
-					"type": "md",
-					"name": "view-compact"
-				},
-				{
-					"type": "md",
-					"name": "view-day"
-				},
-				{
-					"type": "md",
-					"name": "view-headline"
-				},
-				{
-					"type": "md",
-					"name": "view-list"
-				},
-				{
-					"type": "md",
-					"name": "view-module"
-				},
-				{
-					"type": "md",
-					"name": "view-quilt"
-				},
-				{
-					"type": "md",
-					"name": "view-stream"
-				},
-				{
-					"type": "md",
-					"name": "view-week"
-				},
-				{
-					"type": "md",
-					"name": "visibility-off"
-				},
-				{
-					"type": "md",
-					"name": "visibility"
-				},
-				{
-					"type": "md",
-					"name": "voice-chat"
-				},
-				{
-					"type": "md",
-					"name": "voicemail"
-				},
-				{
-					"type": "md",
-					"name": "volume-down"
-				},
-				{
-					"type": "md",
-					"name": "volume-mute"
-				},
-				{
-					"type": "md",
-					"name": "volume-off"
-				},
-				{
-					"type": "md",
-					"name": "volume-up"
-				},
-				{
-					"type": "md",
-					"name": "vpn-key"
-				},
-				{
-					"type": "md",
-					"name": "vpn-lock"
-				},
-				{
-					"type": "md",
-					"name": "wallpaper"
-				},
-				{
-					"type": "md",
-					"name": "warning"
-				},
-				{
-					"type": "md",
-					"name": "watch-later"
-				},
-				{
-					"type": "md",
-					"name": "watch"
-				},
-				{
-					"type": "md",
-					"name": "wb-auto"
-				},
-				{
-					"type": "md",
-					"name": "wb-cloudy"
-				},
-				{
-					"type": "md",
-					"name": "wb-incandescent"
-				},
-				{
-					"type": "md",
-					"name": "wb-iridescent"
-				},
-				{
-					"type": "md",
-					"name": "wb-sunny"
-				},
-				{
-					"type": "md",
-					"name": "wc"
-				},
-				{
-					"type": "md",
-					"name": "web-asset"
-				},
-				{
-					"type": "md",
-					"name": "web"
-				},
-				{
-					"type": "md",
-					"name": "weekend"
-				},
-				{
-					"type": "md",
-					"name": "whatshot"
-				},
-				{
-					"type": "md",
-					"name": "widgets"
-				},
-				{
-					"type": "md",
-					"name": "wifi-lock"
-				},
-				{
-					"type": "md",
-					"name": "wifi-tethering"
-				},
-				{
-					"type": "md",
-					"name": "wifi"
-				},
-				{
-					"type": "md",
-					"name": "work"
-				},
-				{
-					"type": "md",
-					"name": "wrap-text"
-				},
-				{
-					"type": "md",
-					"name": "youtube-searched-for"
-				},
-				{
-					"type": "md",
-					"name": "zoom-out-map"
-				}
+				"3d-rotation",
+				"ac-unit",
+				"access-alarm",
+				"access-alarms",
+				"access-time",
+				"accessibility",
+				"accessible",
+				"account-balance-wallet",
+				"account-balance",
+				"account-box",
+				"account-circle",
+				"adb",
+				"add-a-photo",
+				"add-alarm",
+				"add-alert",
+				"add-box",
+				"add-circle-outline",
+				"add-circle",
+				"add-location",
+				"add-shopping-cart",
+				"add-to-photos",
+				"add-to-queue",
+				"add",
+				"adjust",
+				"airline-seat-flat-angled",
+				"airline-seat-flat",
+				"airline-seat-individual-suite",
+				"airline-seat-legroom-extra",
+				"airline-seat-legroom-normal",
+				"airline-seat-legroom-reduced",
+				"airline-seat-recline-extra",
+				"airline-seat-recline-normal",
+				"airplanemode-active",
+				"airplanemode-inactive",
+				"airplay",
+				"airport-shuttle",
+				"alarm-add",
+				"alarm-off",
+				"alarm-on",
+				"alarm",
+				"album",
+				"all-inclusive",
+				"all-out",
+				"android",
+				"announcement",
+				"apps",
+				"archive",
+				"arrow-back",
+				"arrow-downward",
+				"arrow-drop-down-circle",
+				"arrow-drop-down",
+				"arrow-drop-up",
+				"arrow-forward",
+				"arrow-upward",
+				"art-track",
+				"aspect-ratio",
+				"assessment",
+				"assignment-ind",
+				"assignment-late",
+				"assignment-return",
+				"assignment-returned",
+				"assignment-turned-in",
+				"assignment",
+				"assistant-photo",
+				"assistant",
+				"attach-file",
+				"attach-money",
+				"attachment",
+				"audiotrack",
+				"autorenew",
+				"av-timer",
+				"backspace",
+				"backup",
+				"battery-20",
+				"battery-30",
+				"battery-50",
+				"battery-60",
+				"battery-80",
+				"battery-90",
+				"battery-alert",
+				"battery-charging-20",
+				"battery-charging-30",
+				"battery-charging-50",
+				"battery-charging-60",
+				"battery-charging-80",
+				"battery-charging-90",
+				"battery-charging-full",
+				"battery-full",
+				"battery-std",
+				"battery-unknown",
+				"beach-access",
+				"beenhere",
+				"block",
+				"bluetooth-audio",
+				"bluetooth-connected",
+				"bluetooth-disabled",
+				"bluetooth-searching",
+				"bluetooth",
+				"blur-circular",
+				"blur-linear",
+				"blur-off",
+				"blur-on",
+				"book",
+				"bookmark-border",
+				"bookmark",
+				"border-all",
+				"border-bottom",
+				"border-clear",
+				"border-color",
+				"border-horizontal",
+				"border-inner",
+				"border-left",
+				"border-outer",
+				"border-right",
+				"border-style",
+				"border-top",
+				"border-vertical",
+				"branding-watermark",
+				"brightness-1",
+				"brightness-2",
+				"brightness-3",
+				"brightness-4",
+				"brightness-5",
+				"brightness-6",
+				"brightness-7",
+				"brightness-auto",
+				"brightness-high",
+				"brightness-low",
+				"brightness-medium",
+				"broken-image",
+				"brush",
+				"bubble-chart",
+				"bug-report",
+				"build",
+				"burst-mode",
+				"business-center",
+				"business",
+				"cached",
+				"cake",
+				"call-end",
+				"call-made",
+				"call-merge",
+				"call-missed-outgoing",
+				"call-missed",
+				"call-received",
+				"call-split",
+				"call-to-action",
+				"call",
+				"camera-alt",
+				"camera-front",
+				"camera-rear",
+				"camera-roll",
+				"camera",
+				"cancel",
+				"card-giftcard",
+				"card-membership",
+				"card-travel",
+				"casino",
+				"cast-connected",
+				"cast",
+				"center-focus-strong",
+				"center-focus-weak",
+				"change-history",
+				"chat-bubble-outline",
+				"chat-bubble",
+				"chat",
+				"check-box-outline-blank",
+				"check-box",
+				"check-circle",
+				"check",
+				"chevron-left",
+				"chevron-right",
+				"child-care",
+				"child-friendly",
+				"chrome-reader-mode",
+				"class",
+				"clear-all",
+				"clear",
+				"close",
+				"closed-caption",
+				"cloud-circle",
+				"cloud-done",
+				"cloud-download",
+				"cloud-off",
+				"cloud-queue",
+				"cloud-upload",
+				"cloud",
+				"code",
+				"collections",
+				"color-lens",
+				"colorize",
+				"comment",
+				"compare-arrows",
+				"compare",
+				"computer",
+				"confirmation-number",
+				"contact-mail",
+				"contact-phone",
+				"contacts",
+				"content-copy",
+				"content-cut",
+				"content-paste",
+				"control-point-duplicate",
+				"control-point",
+				"copyright",
+				"create-new-folder",
+				"create",
+				"credit-card",
+				"crop-16-9",
+				"crop-3-2",
+				"crop-5-4",
+				"crop-7-5",
+				"crop-din",
+				"crop-free",
+				"crop-landscape",
+				"crop-original",
+				"crop-portrait",
+				"crop-rotate",
+				"crop-square",
+				"crop",
+				"dashboard",
+				"data-usage",
+				"date-range",
+				"dehaze",
+				"delete-forever",
+				"delete-sweep",
+				"delete",
+				"description",
+				"desktop-mac",
+				"desktop-windows",
+				"details",
+				"developer-board",
+				"developer-mode",
+				"devices-other",
+				"devices",
+				"dialer-sip",
+				"dialpad",
+				"directions-bike",
+				"directions-boat",
+				"directions-bus",
+				"directions-car",
+				"directions-railway",
+				"directions-run",
+				"directions-subway",
+				"directions-transit",
+				"directions-walk",
+				"directions",
+				"disc-full",
+				"dns",
+				"do-not-disturb-alt",
+				"do-not-disturb-off",
+				"do-not-disturb-on",
+				"do-not-disturb",
+				"dock",
+				"domain",
+				"done-all",
+				"done",
+				"donut-large",
+				"donut-small",
+				"drafts",
+				"drag-handle",
+				"drive-eta",
+				"dvr",
+				"edit-location",
+				"edit",
+				"email",
+				"enhanced-encryption",
+				"equalizer",
+				"error-outline",
+				"error",
+				"euro-symbol",
+				"ev-station",
+				"event-available",
+				"event-busy",
+				"event-note",
+				"event-seat",
+				"event",
+				"exit-to-app",
+				"expand-less",
+				"expand-more",
+				"explicit",
+				"explore",
+				"exposure-neg-1",
+				"exposure-neg-2",
+				"exposure-plus-1",
+				"exposure-plus-2",
+				"exposure-zero",
+				"exposure",
+				"extension",
+				"face",
+				"fast-forward",
+				"fast-rewind",
+				"favorite-border",
+				"favorite",
+				"featured-play-list",
+				"featured-video",
+				"feedback",
+				"fiber-dvr",
+				"fiber-manual-record",
+				"fiber-new",
+				"fiber-pin",
+				"fiber-smart-record",
+				"file-download",
+				"file-upload",
+				"filter-1",
+				"filter-2",
+				"filter-3",
+				"filter-4",
+				"filter-5",
+				"filter-6",
+				"filter-7",
+				"filter-8",
+				"filter-9-plus",
+				"filter-9",
+				"filter-b-and-w",
+				"filter-center-focus",
+				"filter-drama",
+				"filter-frames",
+				"filter-hdr",
+				"filter-list",
+				"filter-none",
+				"filter-tilt-shift",
+				"filter-vintage",
+				"filter",
+				"find-in-page",
+				"find-replace",
+				"fingerprint",
+				"first-page",
+				"fitness-center",
+				"flag",
+				"flare",
+				"flash-auto",
+				"flash-off",
+				"flash-on",
+				"flight-land",
+				"flight-takeoff",
+				"flight",
+				"flip-to-back",
+				"flip-to-front",
+				"flip",
+				"folder-open",
+				"folder-shared",
+				"folder-special",
+				"folder",
+				"format-align-center",
+				"format-align-justify",
+				"format-align-left",
+				"format-align-right",
+				"format-bold",
+				"format-clear",
+				"format-color-fill",
+				"format-color-reset",
+				"format-color-text",
+				"format-indent-decrease",
+				"format-indent-increase",
+				"format-italic",
+				"format-line-spacing",
+				"format-list-bulleted",
+				"format-list-numbered",
+				"format-paint",
+				"format-quote",
+				"format-shapes",
+				"format-size",
+				"format-strikethrough",
+				"format-textdirection-l-to-r",
+				"format-textdirection-r-to-l",
+				"format-underlined",
+				"forum",
+				"forward-10",
+				"forward-30",
+				"forward-5",
+				"forward",
+				"free-breakfast",
+				"fullscreen-exit",
+				"fullscreen",
+				"functions",
+				"g-translate",
+				"gamepad",
+				"games",
+				"gavel",
+				"gesture",
+				"get-app",
+				"golf-course",
+				"gps-fixed",
+				"gps-not-fixed",
+				"gps-off",
+				"grade",
+				"gradient",
+				"grain",
+				"graphic-eq",
+				"grid-off",
+				"grid-on",
+				"group-add",
+				"group-work",
+				"group",
+				"hdr-off",
+				"hdr-on",
+				"hdr-strong",
+				"hdr-weak",
+				"headset-mic",
+				"headset",
+				"healing",
+				"hearing",
+				"help",
+				"high-quality",
+				"highlight-off",
+				"highlight",
+				"history",
+				"home",
+				"hot-tub",
+				"hotel",
+				"hourglass-empty",
+				"hourglass-full",
+				"http",
+				"https",
+				"image-aspect-ratio",
+				"image",
+				"import-contacts",
+				"import-export",
+				"important-devices",
+				"inbox",
+				"info-outline",
+				"info",
+				"input",
+				"insert-chart",
+				"insert-comment",
+				"insert-drive-file",
+				"insert-emoticon",
+				"insert-invitation",
+				"insert-link",
+				"insert-photo",
+				"invert-colors-off",
+				"invert-colors",
+				"iso",
+				"keyboard-arrow-down",
+				"keyboard-arrow-left",
+				"keyboard-arrow-right",
+				"keyboard-arrow-up",
+				"keyboard-backspace",
+				"keyboard-capslock",
+				"keyboard-hide",
+				"keyboard-return",
+				"keyboard-tab",
+				"keyboard-voice",
+				"keyboard",
+				"kitchen",
+				"label-outline",
+				"label",
+				"landscape",
+				"language",
+				"laptop-chromebook",
+				"laptop-mac",
+				"laptop-windows",
+				"laptop",
+				"last-page",
+				"launch",
+				"layers-clear",
+				"layers",
+				"leak-add",
+				"leak-remove",
+				"lens",
+				"library-add",
+				"library-books",
+				"library-music",
+				"lightbulb-outline",
+				"line-style",
+				"line-weight",
+				"linear-scale",
+				"link",
+				"linked-camera",
+				"list",
+				"live-help",
+				"live-tv",
+				"local-activity",
+				"local-airport",
+				"local-atm",
+				"local-bar",
+				"local-cafe",
+				"local-car-wash",
+				"local-convenience-store",
+				"local-dining",
+				"local-drink",
+				"local-florist",
+				"local-gas-station",
+				"local-grocery-store",
+				"local-hospital",
+				"local-hotel",
+				"local-laundry-service",
+				"local-library",
+				"local-mall",
+				"local-movies",
+				"local-offer",
+				"local-parking",
+				"local-pharmacy",
+				"local-phone",
+				"local-pizza",
+				"local-play",
+				"local-post-office",
+				"local-printshop",
+				"local-see",
+				"local-shipping",
+				"local-taxi",
+				"location-city",
+				"location-disabled",
+				"location-off",
+				"location-on",
+				"location-searching",
+				"lock-open",
+				"lock-outline",
+				"lock",
+				"looks-3",
+				"looks-4",
+				"looks-5",
+				"looks-6",
+				"looks-one",
+				"looks-two",
+				"looks",
+				"loop",
+				"loupe",
+				"low-priority",
+				"loyalty",
+				"mail-outline",
+				"mail",
+				"map",
+				"markunread-mailbox",
+				"markunread",
+				"memory",
+				"menu",
+				"merge-type",
+				"message",
+				"mic-none",
+				"mic-off",
+				"mic",
+				"mms",
+				"mode-comment",
+				"mode-edit",
+				"monetization-on",
+				"monochrome-photos",
+				"mood-bad",
+				"mood",
+				"more-horiz",
+				"more-vert",
+				"more",
+				"motorcycle",
+				"mouse",
+				"move-to-inbox",
+				"movie-creation",
+				"movie-filter",
+				"movie",
+				"multiline-chart",
+				"music-note",
+				"music-video",
+				"my-location",
+				"nature-people",
+				"nature",
+				"navigate-before",
+				"navigate-next",
+				"navigation",
+				"near-me",
+				"network-cell",
+				"network-check",
+				"network-locked",
+				"network-wifi",
+				"new-releases",
+				"next-week",
+				"nfc",
+				"no-encryption",
+				"no-sim",
+				"not-interested",
+				"note-add",
+				"note",
+				"notifications-active",
+				"notifications-none",
+				"notifications-off",
+				"notifications-paused",
+				"notifications",
+				"ondemand-video",
+				"opacity",
+				"open-in-browser",
+				"open-in-new",
+				"open-with",
+				"pages",
+				"pageview",
+				"palette",
+				"pan-tool",
+				"panorama-fish-eye",
+				"panorama-horizontal",
+				"panorama-vertical",
+				"panorama-wide-angle",
+				"panorama",
+				"party-mode",
+				"pause-circle-filled",
+				"pause-circle-outline",
+				"pause",
+				"payment",
+				"people-outline",
+				"people",
+				"perm-camera-mic",
+				"perm-contact-calendar",
+				"perm-data-setting",
+				"perm-device-information",
+				"perm-identity",
+				"perm-media",
+				"perm-phone-msg",
+				"perm-scan-wifi",
+				"person-add",
+				"person-outline",
+				"person-pin-circle",
+				"person-pin",
+				"person",
+				"personal-video",
+				"pets",
+				"phone-android",
+				"phone-bluetooth-speaker",
+				"phone-forwarded",
+				"phone-in-talk",
+				"phone-iphone",
+				"phone-locked",
+				"phone-missed",
+				"phone-paused",
+				"phone",
+				"phonelink-off",
+				"phonelink",
+				"photo-album",
+				"photo-camera",
+				"photo-filter",
+				"photo-library",
+				"photo",
+				"picture-as-pdf",
+				"picture-in-picture-alt",
+				"picture-in-picture",
+				"pie-chart-outlined",
+				"pie-chart",
+				"pin-drop",
+				"place",
+				"play-arrow",
+				"play-circle-filled-white",
+				"play-circle-filled",
+				"play-circle-outline",
+				"play-for-work",
+				"playlist-add-check",
+				"playlist-add",
+				"playlist-play",
+				"plus-one",
+				"poll",
+				"polymer",
+				"pool",
+				"portable-wifi-off",
+				"portrait",
+				"power-input",
+				"power-settings-new",
+				"power",
+				"pregnant-woman",
+				"present-to-all",
+				"print",
+				"priority-high",
+				"public",
+				"publish",
+				"query-builder",
+				"question-answer",
+				"queue-music",
+				"queue-play-next",
+				"queue",
+				"radio-button-checked",
+				"radio-button-unchecked",
+				"radio",
+				"rate-review",
+				"receipt",
+				"recent-actors",
+				"record-voice-over",
+				"redeem",
+				"redo",
+				"refresh",
+				"remove-circle-outline",
+				"remove-circle",
+				"remove-from-queue",
+				"remove-red-eye",
+				"remove-shopping-cart",
+				"remove",
+				"repeat-one",
+				"repeat",
+				"replay-10",
+				"replay-30",
+				"replay-5",
+				"replay",
+				"reply-all",
+				"reply",
+				"report-problem",
+				"report",
+				"restaurant-menu",
+				"restaurant",
+				"restore-page",
+				"restore",
+				"ring-volume",
+				"room-service",
+				"room",
+				"rotate-90-degrees-ccw",
+				"rotate-left",
+				"rotate-right",
+				"rounded-corner",
+				"router",
+				"rowing",
+				"rss-feed",
+				"rv-hookup",
+				"satellite",
+				"save",
+				"scanner",
+				"schedule",
+				"school",
+				"screen-lock-landscape",
+				"screen-lock-portrait",
+				"screen-lock-rotation",
+				"screen-rotation",
+				"screen-share",
+				"sd-card",
+				"sd-storage",
+				"search",
+				"security",
+				"select-all",
+				"send",
+				"sentiment-dissatisfied",
+				"sentiment-neutral",
+				"sentiment-satisfied",
+				"sentiment-very-dissatisfied",
+				"sentiment-very-satisfied",
+				"settings-applications",
+				"settings-backup-restore",
+				"settings-bluetooth",
+				"settings-brightness",
+				"settings-cell",
+				"settings-ethernet",
+				"settings-input-antenna",
+				"settings-input-component",
+				"settings-input-composite",
+				"settings-input-hdmi",
+				"settings-input-svideo",
+				"settings-overscan",
+				"settings-phone",
+				"settings-power",
+				"settings-remote",
+				"settings-system-daydream",
+				"settings-voice",
+				"settings",
+				"share",
+				"shop-two",
+				"shop",
+				"shopping-basket",
+				"shopping-cart",
+				"short-text",
+				"show-chart",
+				"shuffle",
+				"signal-cellular-0-bar",
+				"signal-cellular-1-bar",
+				"signal-cellular-2-bar",
+				"signal-cellular-3-bar",
+				"signal-cellular-4-bar",
+				"signal-cellular-connected-no-internet-0-bar",
+				"signal-cellular-connected-no-internet-1-bar",
+				"signal-cellular-connected-no-internet-2-bar",
+				"signal-cellular-connected-no-internet-3-bar",
+				"signal-cellular-connected-no-internet-4-bar",
+				"signal-cellular-no-sim",
+				"signal-cellular-null",
+				"signal-cellular-off",
+				"signal-wifi-0-bar",
+				"signal-wifi-1-bar-lock",
+				"signal-wifi-1-bar",
+				"signal-wifi-2-bar-lock",
+				"signal-wifi-2-bar",
+				"signal-wifi-3-bar-lock",
+				"signal-wifi-3-bar",
+				"signal-wifi-4-bar-lock",
+				"signal-wifi-4-bar",
+				"signal-wifi-off",
+				"sim-card-alert",
+				"sim-card",
+				"skip-next",
+				"skip-previous",
+				"slideshow",
+				"slow-motion-video",
+				"smartphone",
+				"smoke-free",
+				"smoking-rooms",
+				"sms-failed",
+				"sms",
+				"snooze",
+				"sort",
+				"spa",
+				"space-bar",
+				"speaker-group",
+				"speaker-notes-off",
+				"speaker-notes",
+				"speaker-phone",
+				"speaker",
+				"spellcheck",
+				"star-half",
+				"stars",
+				"stay-current-landscape",
+				"stay-current-portrait",
+				"stay-primary-landscape",
+				"stay-primary-portrait",
+				"stop-screen-share",
+				"stop",
+				"storage",
+				"store-mall-directory",
+				"store",
+				"straighten",
+				"streetview",
+				"strikethrough-s",
+				"style",
+				"subdirectory-arrow-left",
+				"subdirectory-arrow-right",
+				"subject",
+				"subscriptions",
+				"subtitles",
+				"subway",
+				"supervisor-account",
+				"surround-sound",
+				"swap-calls",
+				"swap-horiz",
+				"swap-vert",
+				"swap-vertical-circle",
+				"switch-camera",
+				"switch-video",
+				"sync-disabled",
+				"sync-problem",
+				"sync",
+				"system-update-alt",
+				"system-update",
+				"tab-unselected",
+				"tab",
+				"tablet-android",
+				"tablet-mac",
+				"tablet",
+				"tag-faces",
+				"tap-and-play",
+				"terrain",
+				"text-fields",
+				"text-format",
+				"textsms",
+				"texture",
+				"theaters",
+				"thumb-down",
+				"thumb-up",
+				"thumbs-up-down",
+				"time-to-leave",
+				"timelapse",
+				"timeline",
+				"timer-10",
+				"timer-3",
+				"timer-off",
+				"timer",
+				"title",
+				"toc",
+				"today",
+				"toll",
+				"tonality",
+				"touch-app",
+				"toys",
+				"track-changes",
+				"traffic",
+				"train",
+				"tram",
+				"transfer-within-a-station",
+				"transform",
+				"translate",
+				"trending-down",
+				"trending-flat",
+				"trending-up",
+				"tune",
+				"turned-in-not",
+				"turned-in",
+				"tv",
+				"unarchive",
+				"undo",
+				"unfold-less",
+				"unfold-more",
+				"update",
+				"usb",
+				"verified-user",
+				"vertical-align-bottom",
+				"vertical-align-center",
+				"vertical-align-top",
+				"vibration",
+				"video-call",
+				"video-label",
+				"video-library",
+				"videocam-off",
+				"videocam",
+				"videogame-asset",
+				"view-agenda",
+				"view-array",
+				"view-carousel",
+				"view-column",
+				"view-comfy",
+				"view-compact",
+				"view-day",
+				"view-headline",
+				"view-list",
+				"view-module",
+				"view-quilt",
+				"view-stream",
+				"view-week",
+				"visibility-off",
+				"visibility",
+				"voice-chat",
+				"voicemail",
+				"volume-down",
+				"volume-mute",
+				"volume-off",
+				"volume-up",
+				"vpn-key",
+				"vpn-lock",
+				"wallpaper",
+				"warning",
+				"watch-later",
+				"watch",
+				"wb-auto",
+				"wb-cloudy",
+				"wb-incandescent",
+				"wb-iridescent",
+				"wb-sunny",
+				"wc",
+				"web-asset",
+				"web",
+				"weekend",
+				"whatshot",
+				"widgets",
+				"wifi-lock",
+				"wifi-tethering",
+				"wifi",
+				"work",
+				"wrap-text",
+				"youtube-searched-for",
+				"zoom-out-map"
 			]
 		},
-		"oi": {
+		"mfglabs": {
+			"name": "mfglabs-iconset",
+			"prefix": "mfglabs-",
+			"repo": "https://github.com/MfgLabs/mfglabs-iconset.git",
+			"icons": [
+				"anchor",
+				"arrow_down",
+				"arrow_left",
+				"arrow_right",
+				"arrow_up",
+				"at",
+				"attachment",
+				"black_question",
+				"check",
+				"check_circle",
+				"chevron_down",
+				"chevron_left",
+				"chevron_right",
+				"chevron_up",
+				"cloud",
+				"cloud_download",
+				"cloud_upload",
+				"color_balance",
+				"connected_object",
+				"coverflow",
+				"coverflow_line",
+				"data_science",
+				"data_science_black",
+				"discussion",
+				"display_screen",
+				"download",
+				"dribbble",
+				"dribbble_circle",
+				"eye",
+				"facebook",
+				"facebook_circle",
+				"fast_backward",
+				"fast_forward",
+				"female_sign",
+				"file_alt",
+				"file_close",
+				"file_close_alt",
+				"git",
+				"git_circle",
+				"git_circle_alt",
+				"globe",
+				"globe_black",
+				"google_plus",
+				"google_plus_circle",
+				"hard_drive",
+				"hashtag",
+				"heart",
+				"heart_broken",
+				"home",
+				"inbox",
+				"information_black",
+				"information_white",
+				"instagram",
+				"instagram_circle",
+				"isight",
+				"letter",
+				"linked_in",
+				"linked_in_circle",
+				"list",
+				"mail",
+				"male_sign",
+				"math",
+				"math_black",
+				"math_ico",
+				"measure",
+				"mfg_icon",
+				"mfg_icon_circle",
+				"minus",
+				"movie",
+				"mute_off",
+				"mute_on",
+				"octopus",
+				"paperplane",
+				"paperplane_black",
+				"paperplane_ico",
+				"pause",
+				"placepin",
+				"play",
+				"printer",
+				"random",
+				"reload",
+				"reorder",
+				"reorder_square",
+				"reorder_square_line",
+				"reply",
+				"retweet",
+				"ringbell",
+				"settings",
+				"share",
+				"sheet",
+				"signin",
+				"signout",
+				"smartphone",
+				"soundcloud",
+				"star",
+				"star_empty",
+				"star_half",
+				"star_half_empty",
+				"step_backward",
+				"step_forward",
+				"stop",
+				"tablet",
+				"trash_can",
+				"trophy",
+				"twitter",
+				"twitter_circle",
+				"upload",
+				"user",
+				"user_female",
+				"user_male",
+				"users",
+				"vector",
+				"vector_pen",
+				"video_camera",
+				"warning",
+				"warning_alt",
+				"white_question"
+			]
+		},
+		"oct": {
 			"name": "octicons",
-			"prefix": "oi-",
+			"prefix": "oct-",
 			"repo": "https://github.com/primer/octicons.git",
 			"icons": [
-				{
-					"type": "oi",
-					"name": "alert"
-				},
-				{
-					"type": "oi",
-					"name": "arrow-down"
-				},
-				{
-					"type": "oi",
-					"name": "arrow-left"
-				},
-				{
-					"type": "oi",
-					"name": "arrow-right"
-				},
-				{
-					"type": "oi",
-					"name": "arrow-small-down"
-				},
-				{
-					"type": "oi",
-					"name": "arrow-small-left"
-				},
-				{
-					"type": "oi",
-					"name": "arrow-small-right"
-				},
-				{
-					"type": "oi",
-					"name": "arrow-small-up"
-				},
-				{
-					"type": "oi",
-					"name": "arrow-up"
-				},
-				{
-					"type": "oi",
-					"name": "beaker"
-				},
-				{
-					"type": "oi",
-					"name": "bell"
-				},
-				{
-					"type": "oi",
-					"name": "bold"
-				},
-				{
-					"type": "oi",
-					"name": "book"
-				},
-				{
-					"type": "oi",
-					"name": "bookmark"
-				},
-				{
-					"type": "oi",
-					"name": "briefcase"
-				},
-				{
-					"type": "oi",
-					"name": "broadcast"
-				},
-				{
-					"type": "oi",
-					"name": "browser"
-				},
-				{
-					"type": "oi",
-					"name": "bug"
-				},
-				{
-					"type": "oi",
-					"name": "calendar"
-				},
-				{
-					"type": "oi",
-					"name": "check"
-				},
-				{
-					"type": "oi",
-					"name": "checklist"
-				},
-				{
-					"type": "oi",
-					"name": "chevron-down"
-				},
-				{
-					"type": "oi",
-					"name": "chevron-left"
-				},
-				{
-					"type": "oi",
-					"name": "chevron-right"
-				},
-				{
-					"type": "oi",
-					"name": "chevron-up"
-				},
-				{
-					"type": "oi",
-					"name": "circle-slash"
-				},
-				{
-					"type": "oi",
-					"name": "circuit-board"
-				},
-				{
-					"type": "oi",
-					"name": "clippy"
-				},
-				{
-					"type": "oi",
-					"name": "clock"
-				},
-				{
-					"type": "oi",
-					"name": "cloud-download"
-				},
-				{
-					"type": "oi",
-					"name": "cloud-upload"
-				},
-				{
-					"type": "oi",
-					"name": "code"
-				},
-				{
-					"type": "oi",
-					"name": "comment-discussion"
-				},
-				{
-					"type": "oi",
-					"name": "comment"
-				},
-				{
-					"type": "oi",
-					"name": "credit-card"
-				},
-				{
-					"type": "oi",
-					"name": "dash"
-				},
-				{
-					"type": "oi",
-					"name": "dashboard"
-				},
-				{
-					"type": "oi",
-					"name": "database"
-				},
-				{
-					"type": "oi",
-					"name": "desktop-download"
-				},
-				{
-					"type": "oi",
-					"name": "device-camera-video"
-				},
-				{
-					"type": "oi",
-					"name": "device-camera"
-				},
-				{
-					"type": "oi",
-					"name": "device-desktop"
-				},
-				{
-					"type": "oi",
-					"name": "device-mobile"
-				},
-				{
-					"type": "oi",
-					"name": "diff-added"
-				},
-				{
-					"type": "oi",
-					"name": "diff-ignored"
-				},
-				{
-					"type": "oi",
-					"name": "diff-modified"
-				},
-				{
-					"type": "oi",
-					"name": "diff-removed"
-				},
-				{
-					"type": "oi",
-					"name": "diff-renamed"
-				},
-				{
-					"type": "oi",
-					"name": "diff"
-				},
-				{
-					"type": "oi",
-					"name": "ellipses"
-				},
-				{
-					"type": "oi",
-					"name": "ellipsis"
-				},
-				{
-					"type": "oi",
-					"name": "eye"
-				},
-				{
-					"type": "oi",
-					"name": "file-binary"
-				},
-				{
-					"type": "oi",
-					"name": "file-code"
-				},
-				{
-					"type": "oi",
-					"name": "file-directory"
-				},
-				{
-					"type": "oi",
-					"name": "file-media"
-				},
-				{
-					"type": "oi",
-					"name": "file-pdf"
-				},
-				{
-					"type": "oi",
-					"name": "file-submodule"
-				},
-				{
-					"type": "oi",
-					"name": "file-symlink-directory"
-				},
-				{
-					"type": "oi",
-					"name": "file-symlink-file"
-				},
-				{
-					"type": "oi",
-					"name": "file-text"
-				},
-				{
-					"type": "oi",
-					"name": "file-zip"
-				},
-				{
-					"type": "oi",
-					"name": "file"
-				},
-				{
-					"type": "oi",
-					"name": "flame"
-				},
-				{
-					"type": "oi",
-					"name": "fold"
-				},
-				{
-					"type": "oi",
-					"name": "gear"
-				},
-				{
-					"type": "oi",
-					"name": "gift"
-				},
-				{
-					"type": "oi",
-					"name": "gist-secret"
-				},
-				{
-					"type": "oi",
-					"name": "gist"
-				},
-				{
-					"type": "oi",
-					"name": "git-branch"
-				},
-				{
-					"type": "oi",
-					"name": "git-commit"
-				},
-				{
-					"type": "oi",
-					"name": "git-compare"
-				},
-				{
-					"type": "oi",
-					"name": "git-merge"
-				},
-				{
-					"type": "oi",
-					"name": "git-pull-request"
-				},
-				{
-					"type": "oi",
-					"name": "globe"
-				},
-				{
-					"type": "oi",
-					"name": "grabber"
-				},
-				{
-					"type": "oi",
-					"name": "graph"
-				},
-				{
-					"type": "oi",
-					"name": "heart"
-				},
-				{
-					"type": "oi",
-					"name": "history"
-				},
-				{
-					"type": "oi",
-					"name": "home"
-				},
-				{
-					"type": "oi",
-					"name": "horizontal-rule"
-				},
-				{
-					"type": "oi",
-					"name": "hubot"
-				},
-				{
-					"type": "oi",
-					"name": "inbox"
-				},
-				{
-					"type": "oi",
-					"name": "info"
-				},
-				{
-					"type": "oi",
-					"name": "issue-closed"
-				},
-				{
-					"type": "oi",
-					"name": "issue-opened"
-				},
-				{
-					"type": "oi",
-					"name": "issue-reopened"
-				},
-				{
-					"type": "oi",
-					"name": "italic"
-				},
-				{
-					"type": "oi",
-					"name": "jersey"
-				},
-				{
-					"type": "oi",
-					"name": "key"
-				},
-				{
-					"type": "oi",
-					"name": "keyboard"
-				},
-				{
-					"type": "oi",
-					"name": "law"
-				},
-				{
-					"type": "oi",
-					"name": "light-bulb"
-				},
-				{
-					"type": "oi",
-					"name": "link-external"
-				},
-				{
-					"type": "oi",
-					"name": "link"
-				},
-				{
-					"type": "oi",
-					"name": "list-ordered"
-				},
-				{
-					"type": "oi",
-					"name": "list-unordered"
-				},
-				{
-					"type": "oi",
-					"name": "location"
-				},
-				{
-					"type": "oi",
-					"name": "lock"
-				},
-				{
-					"type": "oi",
-					"name": "logo-gist"
-				},
-				{
-					"type": "oi",
-					"name": "logo-github"
-				},
-				{
-					"type": "oi",
-					"name": "mail-read"
-				},
-				{
-					"type": "oi",
-					"name": "mail-reply"
-				},
-				{
-					"type": "oi",
-					"name": "mail"
-				},
-				{
-					"type": "oi",
-					"name": "mark-github"
-				},
-				{
-					"type": "oi",
-					"name": "markdown"
-				},
-				{
-					"type": "oi",
-					"name": "megaphone"
-				},
-				{
-					"type": "oi",
-					"name": "mention"
-				},
-				{
-					"type": "oi",
-					"name": "milestone"
-				},
-				{
-					"type": "oi",
-					"name": "mirror"
-				},
-				{
-					"type": "oi",
-					"name": "mortar-board"
-				},
-				{
-					"type": "oi",
-					"name": "mute"
-				},
-				{
-					"type": "oi",
-					"name": "no-newline"
-				},
-				{
-					"type": "oi",
-					"name": "octoface"
-				},
-				{
-					"type": "oi",
-					"name": "organization"
-				},
-				{
-					"type": "oi",
-					"name": "package"
-				},
-				{
-					"type": "oi",
-					"name": "paintcan"
-				},
-				{
-					"type": "oi",
-					"name": "pencil"
-				},
-				{
-					"type": "oi",
-					"name": "person"
-				},
-				{
-					"type": "oi",
-					"name": "pin"
-				},
-				{
-					"type": "oi",
-					"name": "plug"
-				},
-				{
-					"type": "oi",
-					"name": "plus-small"
-				},
-				{
-					"type": "oi",
-					"name": "plus"
-				},
-				{
-					"type": "oi",
-					"name": "primitive-dot"
-				},
-				{
-					"type": "oi",
-					"name": "primitive-square"
-				},
-				{
-					"type": "oi",
-					"name": "pulse"
-				},
-				{
-					"type": "oi",
-					"name": "question"
-				},
-				{
-					"type": "oi",
-					"name": "quote"
-				},
-				{
-					"type": "oi",
-					"name": "radio-tower"
-				},
-				{
-					"type": "oi",
-					"name": "reply"
-				},
-				{
-					"type": "oi",
-					"name": "repo-clone"
-				},
-				{
-					"type": "oi",
-					"name": "repo-force-push"
-				},
-				{
-					"type": "oi",
-					"name": "repo-forked"
-				},
-				{
-					"type": "oi",
-					"name": "repo-pull"
-				},
-				{
-					"type": "oi",
-					"name": "repo-push"
-				},
-				{
-					"type": "oi",
-					"name": "repo"
-				},
-				{
-					"type": "oi",
-					"name": "rocket"
-				},
-				{
-					"type": "oi",
-					"name": "rss"
-				},
-				{
-					"type": "oi",
-					"name": "ruby"
-				},
-				{
-					"type": "oi",
-					"name": "search"
-				},
-				{
-					"type": "oi",
-					"name": "server"
-				},
-				{
-					"type": "oi",
-					"name": "settings"
-				},
-				{
-					"type": "oi",
-					"name": "shield"
-				},
-				{
-					"type": "oi",
-					"name": "sign-in"
-				},
-				{
-					"type": "oi",
-					"name": "sign-out"
-				},
-				{
-					"type": "oi",
-					"name": "smiley"
-				},
-				{
-					"type": "oi",
-					"name": "squirrel"
-				},
-				{
-					"type": "oi",
-					"name": "star"
-				},
-				{
-					"type": "oi",
-					"name": "stop"
-				},
-				{
-					"type": "oi",
-					"name": "sync"
-				},
-				{
-					"type": "oi",
-					"name": "tag"
-				},
-				{
-					"type": "oi",
-					"name": "tasklist"
-				},
-				{
-					"type": "oi",
-					"name": "telescope"
-				},
-				{
-					"type": "oi",
-					"name": "terminal"
-				},
-				{
-					"type": "oi",
-					"name": "text-size"
-				},
-				{
-					"type": "oi",
-					"name": "three-bars"
-				},
-				{
-					"type": "oi",
-					"name": "thumbsdown"
-				},
-				{
-					"type": "oi",
-					"name": "thumbsup"
-				},
-				{
-					"type": "oi",
-					"name": "tools"
-				},
-				{
-					"type": "oi",
-					"name": "trashcan"
-				},
-				{
-					"type": "oi",
-					"name": "triangle-down"
-				},
-				{
-					"type": "oi",
-					"name": "triangle-left"
-				},
-				{
-					"type": "oi",
-					"name": "triangle-right"
-				},
-				{
-					"type": "oi",
-					"name": "triangle-up"
-				},
-				{
-					"type": "oi",
-					"name": "unfold"
-				},
-				{
-					"type": "oi",
-					"name": "unmute"
-				},
-				{
-					"type": "oi",
-					"name": "unverified"
-				},
-				{
-					"type": "oi",
-					"name": "verified"
-				},
-				{
-					"type": "oi",
-					"name": "versions"
-				},
-				{
-					"type": "oi",
-					"name": "watch"
-				},
-				{
-					"type": "oi",
-					"name": "x"
-				},
-				{
-					"type": "oi",
-					"name": "zap"
-				}
+				"alert",
+				"arrow-down",
+				"arrow-left",
+				"arrow-right",
+				"arrow-small-down",
+				"arrow-small-left",
+				"arrow-small-right",
+				"arrow-small-up",
+				"arrow-up",
+				"beaker",
+				"bell",
+				"bold",
+				"book",
+				"bookmark",
+				"briefcase",
+				"broadcast",
+				"browser",
+				"bug",
+				"calendar",
+				"check",
+				"checklist",
+				"chevron-down",
+				"chevron-left",
+				"chevron-right",
+				"chevron-up",
+				"circle-slash",
+				"circuit-board",
+				"clippy",
+				"clock",
+				"cloud-download",
+				"cloud-upload",
+				"code",
+				"comment-discussion",
+				"comment",
+				"credit-card",
+				"dash",
+				"dashboard",
+				"database",
+				"desktop-download",
+				"device-camera-video",
+				"device-camera",
+				"device-desktop",
+				"device-mobile",
+				"diff-added",
+				"diff-ignored",
+				"diff-modified",
+				"diff-removed",
+				"diff-renamed",
+				"diff",
+				"ellipses",
+				"ellipsis",
+				"eye",
+				"file-binary",
+				"file-code",
+				"file-directory",
+				"file-media",
+				"file-pdf",
+				"file-submodule",
+				"file-symlink-directory",
+				"file-symlink-file",
+				"file-text",
+				"file-zip",
+				"file",
+				"flame",
+				"fold",
+				"gear",
+				"gift",
+				"gist-secret",
+				"gist",
+				"git-branch",
+				"git-commit",
+				"git-compare",
+				"git-merge",
+				"git-pull-request",
+				"globe",
+				"grabber",
+				"graph",
+				"heart",
+				"history",
+				"home",
+				"horizontal-rule",
+				"hubot",
+				"inbox",
+				"info",
+				"issue-closed",
+				"issue-opened",
+				"issue-reopened",
+				"italic",
+				"jersey",
+				"key",
+				"keyboard",
+				"law",
+				"light-bulb",
+				"link-external",
+				"link",
+				"list-ordered",
+				"list-unordered",
+				"location",
+				"lock",
+				"logo-gist",
+				"logo-github",
+				"mail-read",
+				"mail-reply",
+				"mail",
+				"mark-github",
+				"markdown",
+				"megaphone",
+				"mention",
+				"milestone",
+				"mirror",
+				"mortar-board",
+				"mute",
+				"no-newline",
+				"octoface",
+				"organization",
+				"package",
+				"paintcan",
+				"pencil",
+				"person",
+				"pin",
+				"plug",
+				"plus-small",
+				"plus",
+				"primitive-dot",
+				"primitive-square",
+				"pulse",
+				"question",
+				"quote",
+				"radio-tower",
+				"reply",
+				"repo-clone",
+				"repo-force-push",
+				"repo-forked",
+				"repo-pull",
+				"repo-push",
+				"repo",
+				"rocket",
+				"rss",
+				"ruby",
+				"search",
+				"server",
+				"settings",
+				"shield",
+				"sign-in",
+				"sign-out",
+				"smiley",
+				"squirrel",
+				"star",
+				"stop",
+				"sync",
+				"tag",
+				"tasklist",
+				"telescope",
+				"terminal",
+				"text-size",
+				"three-bars",
+				"thumbsdown",
+				"thumbsup",
+				"tools",
+				"trashcan",
+				"triangle-down",
+				"triangle-left",
+				"triangle-right",
+				"triangle-up",
+				"unfold",
+				"unmute",
+				"unverified",
+				"verified",
+				"versions",
+				"watch",
+				"x",
+				"zap"
+			]
+		},
+		"open": {
+			"name": "open-iconic",
+			"prefix": "open-",
+			"repo": "https://github.com/iconic/open-iconic.git",
+			"icons": [
+				"account-login",
+				"account-logout",
+				"action-redo",
+				"action-undo",
+				"align-center",
+				"align-left",
+				"align-right",
+				"aperture",
+				"arrow-bottom",
+				"arrow-circle-bottom",
+				"arrow-circle-left",
+				"arrow-circle-right",
+				"arrow-circle-top",
+				"arrow-left",
+				"arrow-right",
+				"arrow-thick-bottom",
+				"arrow-thick-left",
+				"arrow-thick-right",
+				"arrow-thick-top",
+				"arrow-top",
+				"audio-spectrum",
+				"audio",
+				"badge",
+				"ban",
+				"bar-chart",
+				"basket",
+				"battery-empty",
+				"battery-full",
+				"beaker",
+				"bell",
+				"bluetooth",
+				"bold",
+				"bolt",
+				"book",
+				"bookmark",
+				"box",
+				"briefcase",
+				"british-pound",
+				"browser",
+				"brush",
+				"bug",
+				"bullhorn",
+				"calculator",
+				"calendar",
+				"camera-slr",
+				"caret-bottom",
+				"caret-left",
+				"caret-right",
+				"caret-top",
+				"cart",
+				"chat",
+				"check",
+				"chevron-bottom",
+				"chevron-left",
+				"chevron-right",
+				"chevron-top",
+				"circle-check",
+				"circle-x",
+				"clipboard",
+				"clock",
+				"cloud-download",
+				"cloud-upload",
+				"cloud",
+				"cloudy",
+				"code",
+				"cog",
+				"collapse-down",
+				"collapse-left",
+				"collapse-right",
+				"collapse-up",
+				"command",
+				"comment-square",
+				"compass",
+				"contrast",
+				"copywriting",
+				"credit-card",
+				"crop",
+				"dashboard",
+				"data-transfer-download",
+				"data-transfer-upload",
+				"delete",
+				"dial",
+				"document",
+				"dollar",
+				"double-quote-sans-left",
+				"double-quote-sans-right",
+				"double-quote-serif-left",
+				"double-quote-serif-right",
+				"droplet",
+				"eject",
+				"elevator",
+				"ellipses",
+				"envelope-closed",
+				"envelope-open",
+				"euro",
+				"excerpt",
+				"expand-down",
+				"expand-left",
+				"expand-right",
+				"expand-up",
+				"external-link",
+				"eye",
+				"eyedropper",
+				"file",
+				"fire",
+				"flag",
+				"flash",
+				"folder",
+				"fork",
+				"fullscreen-enter",
+				"fullscreen-exit",
+				"globe",
+				"graph",
+				"grid-four-up",
+				"grid-three-up",
+				"grid-two-up",
+				"hard-drive",
+				"header",
+				"headphones",
+				"heart",
+				"home",
+				"image",
+				"inbox",
+				"infinity",
+				"info",
+				"italic",
+				"justify-center",
+				"justify-left",
+				"justify-right",
+				"key",
+				"laptop",
+				"layers",
+				"lightbulb",
+				"link-broken",
+				"link-intact",
+				"list-rich",
+				"list",
+				"location",
+				"lock-locked",
+				"lock-unlocked",
+				"loop-circular",
+				"loop-square",
+				"loop",
+				"magnifying-glass",
+				"map-marker",
+				"map",
+				"media-pause",
+				"media-play",
+				"media-record",
+				"media-skip-backward",
+				"media-skip-forward",
+				"media-step-backward",
+				"media-step-forward",
+				"media-stop",
+				"medical-cross",
+				"menu",
+				"microphone",
+				"minus",
+				"monitor",
+				"moon",
+				"move",
+				"musical-note",
+				"paperclip",
+				"pencil",
+				"people",
+				"person",
+				"phone",
+				"pie-chart",
+				"pin",
+				"play-circle",
+				"plus",
+				"power-standby",
+				"print",
+				"project",
+				"pulse",
+				"puzzle-piece",
+				"question-mark",
+				"rain",
+				"random",
+				"reload",
+				"resize-both",
+				"resize-height",
+				"resize-width",
+				"rss-alt",
+				"rss",
+				"script",
+				"share-boxed",
+				"share",
+				"shield",
+				"signal",
+				"signpost",
+				"sort-ascending",
+				"sort-descending",
+				"spreadsheet",
+				"star",
+				"sun",
+				"tablet",
+				"tag",
+				"tags",
+				"target",
+				"task",
+				"terminal",
+				"text",
+				"thumb-down",
+				"thumb-up",
+				"timer",
+				"transfer",
+				"trash",
+				"underline",
+				"vertical-align-bottom",
+				"vertical-align-center",
+				"vertical-align-top",
+				"video",
+				"volume-high",
+				"volume-low",
+				"volume-off",
+				"warning",
+				"wifi",
+				"wrench",
+				"x",
+				"yen",
+				"zoom-in",
+				"zoom-out"
+			]
+		},
+		"payment": {
+			"name": "payment-font",
+			"prefix": "payment-",
+			"repo": "https://github.com/vendocrat/PaymentFont.git",
+			"icons": [
+				"amazon",
+				"american-express-alt",
+				"american-express",
+				"apple-pay",
+				"atm",
+				"bancontact-mister-cash",
+				"bank-transfer",
+				"bankomat",
+				"bitcoin-sign",
+				"bitcoin",
+				"braintree",
+				"btc",
+				"card",
+				"carta-si",
+				"cash-on-delivery",
+				"cash-on-pickup",
+				"cash",
+				"cashcloud",
+				"cb",
+				"cirrus-alt",
+				"cirrus",
+				"clickandbuy",
+				"credit-card",
+				"dankort",
+				"diners",
+				"discover",
+				"ec",
+				"elo-alt",
+				"elo",
+				"eps",
+				"eur",
+				"facture",
+				"fattura",
+				"flattr",
+				"gbp",
+				"giropay",
+				"gittip",
+				"google-wallet-alt",
+				"google-wallet",
+				"gratipay-sign",
+				"ideal",
+				"ils",
+				"inr",
+				"interac",
+				"invoice-sign-alt-o",
+				"invoice-sign-alt",
+				"invoice-sign-o",
+				"invoice-sign",
+				"invoice",
+				"jcb",
+				"jpy",
+				"krw",
+				"maestro-alt",
+				"maestro",
+				"mastercard-alt",
+				"mastercard-securecode",
+				"mastercard",
+				"mercado-pago-sign",
+				"mercado-pago",
+				"moip",
+				"multibanco",
+				"ogone",
+				"pagseguro",
+				"paybox",
+				"paylife",
+				"paymill",
+				"paypal-alt",
+				"paypal",
+				"paysafecard",
+				"payshop",
+				"payu",
+				"postepay",
+				"quick",
+				"rechnung",
+				"ripple",
+				"rub",
+				"sage",
+				"sepa-alt",
+				"sepa",
+				"six",
+				"skrill",
+				"sofort",
+				"square",
+				"stripe",
+				"truste",
+				"try",
+				"unionpay",
+				"usd",
+				"verified-by-visa",
+				"verisign",
+				"visa-electron",
+				"visa",
+				"western-union-alt",
+				"western-union",
+				"wirecard"
+			]
+		},
+		"payment-web": {
+			"name": "payment-webfont",
+			"prefix": "payment-web-",
+			"repo": "https://github.com/orlandotm/payment-webfont.git",
+			"icons": [
+				"amazon",
+				"american-express",
+				"bitcoin-sign",
+				"bitcoin",
+				"braintree",
+				"cartasi",
+				"cb",
+				"clickandbuy",
+				"diners",
+				"discover",
+				"ec",
+				"flattr",
+				"gittip",
+				"google-wallet",
+				"ideal",
+				"jcb",
+				"maestro",
+				"mastercard",
+				"ogone",
+				"paypal--classic",
+				"paypal",
+				"paysafecard",
+				"postepay",
+				"ripple",
+				"skrill",
+				"sofort",
+				"square",
+				"stripe",
+				"trust-e",
+				"unionpay",
+				"verisign",
+				"visa-electron",
+				"visa",
+				"westernunion"
+			]
+		},
+		"simple": {
+			"name": "simple-icons",
+			"prefix": "simple-",
+			"repo": "https://github.com/danleech/simple-icons.git",
+			"icons": [
+				"500px",
+				"Diaspora",
+				"aboutme",
+				"air",
+				"airbnb",
+				"amazon",
+				"americanexpress",
+				"android",
+				"apple",
+				"appnet",
+				"asana",
+				"automatic",
+				"baidu",
+				"bandcamp",
+				"basecamp",
+				"bathasu",
+				"bebo",
+				"behance",
+				"bigcartel",
+				"bing",
+				"bitbucket",
+				"bitcoin",
+				"bitly",
+				"bootstrap",
+				"buzzfeed",
+				"campaignmonitor",
+				"circleci",
+				"codecademy",
+				"codepen",
+				"coderwall",
+				"codeschool",
+				"codio",
+				"compropago",
+				"conekta",
+				"coop",
+				"coursera",
+				"csswizardry",
+				"dailymotion",
+				"deezer",
+				"delicious",
+				"designernews",
+				"deviantart",
+				"digg",
+				"digitalocean",
+				"discord",
+				"disqus",
+				"draugiemlv",
+				"dribbble",
+				"dropbox",
+				"drupal",
+				"ebay",
+				"ello",
+				"email",
+				"empirekred",
+				"ethereum",
+				"etsy",
+				"eventbrite",
+				"eventstore",
+				"evernote",
+				"everplaces",
+				"facebook",
+				"feedly",
+				"fitbit",
+				"flickr",
+				"flipboard",
+				"foursquare",
+				"freecodecamp",
+				"gauges",
+				"geeklist",
+				"geocaching",
+				"ghost",
+				"git",
+				"github",
+				"gitlab",
+				"gitter",
+				"glassdoor",
+				"goldenline",
+				"goodreads",
+				"google",
+				"googleanalytics",
+				"googledrive",
+				"googleplay",
+				"googleplus",
+				"govuk",
+				"gratipay",
+				"grav",
+				"gravatar",
+				"gulp",
+				"gumtree",
+				"hatenabookmark",
+				"heroku",
+				"hipchat",
+				"hootsuite",
+				"houzz",
+				"html5",
+				"hulu",
+				"imdb",
+				"instacart",
+				"instagram",
+				"intercom",
+				"invision",
+				"javascript",
+				"jekyll",
+				"jenkins",
+				"joomla",
+				"jsfiddle",
+				"json",
+				"justgiving",
+				"kaggle",
+				"khanacademy",
+				"kickstarter",
+				"kik",
+				"kirby",
+				"klout",
+				"koding",
+				"lanyrd",
+				"laravel",
+				"lastfm",
+				"launchpad",
+				"line",
+				"linkedin",
+				"linuxfoundation",
+				"livejournal",
+				"livestream",
+				"macys",
+				"magento",
+				"mailchimp",
+				"makerbot",
+				"mastercard",
+				"matternet",
+				"mediatemple",
+				"medium",
+				"meetup",
+				"messenger",
+				"microgenetics",
+				"microsoft",
+				"microsoftaccess",
+				"microsoftexcel",
+				"microsoftonenote",
+				"microsoftoutlook",
+				"microsoftpowerpoint",
+				"microsoftword",
+				"minecraft",
+				"minutemailer",
+				"mixcloud",
+				"monkeytie",
+				"monogram",
+				"moo",
+				"myspace",
+				"netflix",
+				"nintendo",
+				"oculus",
+				"odnoklassniki",
+				"onedrive",
+				"opera",
+				"overcast",
+				"patreon",
+				"paypal",
+				"periscope",
+				"pingup",
+				"pinterest",
+				"playerme",
+				"playstation",
+				"pocket",
+				"podcasts",
+				"protoio",
+				"quantopian",
+				"quora",
+				"raspberrypi",
+				"rdio",
+				"react",
+				"readability",
+				"readthedocs",
+				"reddit",
+				"reverbnation",
+				"rss",
+				"ruby",
+				"runkeeper",
+				"sass",
+				"saucelabs",
+				"scribd",
+				"sega",
+				"sellfy",
+				"sentiayoga",
+				"shopify",
+				"simpleicons",
+				"sinaweibo",
+				"sitepoint",
+				"skype",
+				"slack",
+				"slides",
+				"smashingmagazine",
+				"snapchat",
+				"songkick",
+				"soundcloud",
+				"speakerdeck",
+				"spotify",
+				"spreaker",
+				"squarespace",
+				"stackoverflow",
+				"statamic",
+				"steam",
+				"stitcher",
+				"storify",
+				"stripe",
+				"stubhub",
+				"stumbleupon",
+				"styleshare",
+				"subversion",
+				"swarm",
+				"ted",
+				"telegram",
+				"tesla",
+				"tinder",
+				"topcoder",
+				"trakt",
+				"travisci",
+				"treehouse",
+				"trello",
+				"tripadvisor",
+				"trulia",
+				"tumblr",
+				"twilio",
+				"twitch",
+				"twitter",
+				"twoo",
+				"ubuntu",
+				"udacity",
+				"viadeo",
+				"viber",
+				"vimeo",
+				"vine",
+				"virb",
+				"visa",
+				"vk",
+				"vuejs",
+				"wechat",
+				"whatsapp",
+				"wikipedia",
+				"windows",
+				"wix",
+				"wordpress",
+				"xbox",
+				"xero",
+				"xing",
+				"yahoo",
+				"yammer",
+				"yelp",
+				"youtube",
+				"zapier",
+				"zillow"
+			]
+		},
+		"subway": {
+			"name": "subway",
+			"prefix": "subway-",
+			"repo": "https://github.com/mariuszostrowski/subway.git",
+			"icons": [
+				"add-1",
+				"add-playlist",
+				"add",
+				"admin-1",
+				"admin-2",
+				"admin",
+				"airplane-mode",
+				"alam",
+				"at",
+				"backward-",
+				"backward-1",
+				"bag",
+				"basket",
+				"bell",
+				"black-white",
+				"bluetooth",
+				"blur",
+				"book-1",
+				"book",
+				"box-1",
+				"box",
+				"brightest",
+				"brush",
+				"c",
+				"cain",
+				"calendar-1",
+				"calendar-2",
+				"calendar-3",
+				"calendar-4",
+				"calendar-5",
+				"calendar-6",
+				"calendar",
+				"call-1",
+				"call-2",
+				"call-3",
+				"call-4",
+				"call",
+				"camera",
+				"cercle-1",
+				"cercle-2",
+				"cercle-3",
+				"cercle-4",
+				"cercle-5",
+				"cercle-6",
+				"cercle-7",
+				"cercle-8",
+				"circle",
+				"close-2",
+				"close-corner-arrow-1",
+				"close-corner-arrow-2",
+				"cloth-1",
+				"cloth",
+				"cloud-download",
+				"cloud-reload",
+				"cloud-upload",
+				"cloud",
+				"coin-1",
+				"coin",
+				"compass-1",
+				"compass-2",
+				"compass",
+				"compose",
+				"cover",
+				"crop",
+				"crpss",
+				"dail-pad",
+				"delete",
+				"divide-1",
+				"divide",
+				"document-1",
+				"document-2",
+				"document-3",
+				"document",
+				"down-arrow-1",
+				"down-arrow",
+				"down",
+				"down_2",
+				"download-1",
+				"download-2",
+				"download-3",
+				"download-4",
+				"duble-corner-arrow-1",
+				"duble-corner-arrow-3",
+				"duble-corner-arrow-4",
+				"duble-corner-arrow-5",
+				"duble-corner-arrow-6",
+				"duble-corner-arrow-blod-2",
+				"equal-1",
+				"equal",
+				"equalizer-1",
+				"equalizer-2",
+				"equalizer",
+				"error",
+				"euro",
+				"exit",
+				"eye",
+				"f",
+				"feed",
+				"file-1",
+				"file-10",
+				"file-11",
+				"file-12",
+				"file-13",
+				"file-2",
+				"file-3",
+				"file-4",
+				"file-5",
+				"file-6",
+				"file-7",
+				"file-8",
+				"file-9",
+				"file",
+				"folder-1",
+				"folder-2",
+				"folder-3",
+				"folder",
+				"fot-screen",
+				"four-box",
+				"froward-1",
+				"froward",
+				"fullscreen",
+				"glass",
+				"home-1",
+				"home-2",
+				"home-3",
+				"home",
+				"hulf-of-circle-2",
+				"hurt-1",
+				"hurt-3",
+				"hurt",
+				"id-card-1",
+				"id-card",
+				"image",
+				"join-corner-arrow-1",
+				"join-corner-arrow-2",
+				"join-corner-arrow-3",
+				"join-corner-arrow-4",
+				"join-corner-arrow-5",
+				"join-corner-arrow-6",
+				"key",
+				"left-arrow-1",
+				"left-arrow",
+				"left-down-corner-arrow-1",
+				"left-down-corner-arrow",
+				"left-up-corner-arrow-1",
+				"left-up-corner-arrow",
+				"like",
+				"location-1",
+				"location-2",
+				"location-3",
+				"location",
+				"lock-1",
+				"lock-2",
+				"lock",
+				"magic",
+				"mail-icon-1",
+				"mail-icon-2",
+				"mail-icon",
+				"mark-1",
+				"mark-2",
+				"mark-3",
+				"mark-4",
+				"mark",
+				"massage-1",
+				"massage",
+				"media",
+				"memori-card",
+				"menu",
+				"mic",
+				"missing",
+				"move-1",
+				"move-2",
+				"move",
+				"movie",
+				"multiply-1",
+				"multiply",
+				"music",
+				"musk",
+				"mute",
+				"netwark",
+				"next-1",
+				"next",
+				"paragraph-2",
+				"paragraph-3",
+				"paragraph-4",
+				"paragraph-5",
+				"paragraph-6",
+				"paragraph-7",
+				"paragraph-8",
+				"paragraph-9",
+				"paragraph",
+				"part-of-circle-1",
+				"part-of-circle-2",
+				"part-of-circle-3",
+				"part-of-circle-4",
+				"part-of-circle-5",
+				"part-of-circle",
+				"passing",
+				"pause-1",
+				"pause",
+				"pencil",
+				"pin-1",
+				"pin",
+				"play-1",
+				"play",
+				"pound",
+				"power-batton",
+				"power",
+				"previous-1",
+				"previous",
+				"print",
+				"random",
+				"rectangle-1",
+				"rectangle-2",
+				"rectangle-3",
+				"rectangle-4",
+				"rectangle",
+				"rectangular",
+				"redo-1",
+				"redo-icon",
+				"redo",
+				"refresh-time",
+				"remove-playlist",
+				"reply",
+				"right-arrow-1",
+				"right-arrow",
+				"right-down-corner-arrow-1",
+				"right-down-corner-arrow",
+				"right-up-corner-arrow-1",
+				"right-up-corner-arrow",
+				"round-arrow-1",
+				"round-arrow-2",
+				"round-arrow-3",
+				"round-arrow-4",
+				"round-arrow-5",
+				"round-arrow-6",
+				"save",
+				"search",
+				"settong",
+				"share-1",
+				"share",
+				"sharing-1",
+				"sharing",
+				"shuffile",
+				"sms-1",
+				"sms-2",
+				"sms-3",
+				"sms-4",
+				"sms-5",
+				"sms-6",
+				"sms-7",
+				"sms-8",
+				"sms-9",
+				"sms",
+				"sound-1",
+				"sound-2",
+				"sound",
+				"star-1",
+				"star",
+				"step-1",
+				"step-2",
+				"step",
+				"stop-1",
+				"stop",
+				"subtraction-1",
+				"subtraction",
+				"switch",
+				"symbol-1",
+				"symbol-2",
+				"symbol",
+				"tep",
+				"tick",
+				"time-1",
+				"time-2",
+				"time-3",
+				"time-4",
+				"time-5",
+				"time",
+				"title",
+				"tool-box-1",
+				"tool-box",
+				"undo-1",
+				"undo-icon",
+				"undo",
+				"unlike",
+				"unlock-1",
+				"unlock",
+				"up-arrow-1",
+				"up-arrow",
+				"up",
+				"up_2",
+				"upload-1",
+				"upload-2",
+				"upload-3",
+				"upload-4",
+				"usd",
+				"video-1",
+				"video",
+				"webcam",
+				"world-1",
+				"world",
+				"write-1",
+				"write",
+				"zip",
+				"zoom-in",
+				"zoom-out"
+			]
+		},
+		"typcn": {
+			"name": "typicons",
+			"prefix": "typcn-",
+			"repo": "https://github.com/stephenhutchings/typicons.font.git",
+			"icons": [
+				"adjust-brightness",
+				"adjust-contrast",
+				"anchor-outline",
+				"anchor",
+				"archive",
+				"arrow-back-outline",
+				"arrow-back",
+				"arrow-down-outline",
+				"arrow-down-thick",
+				"arrow-down",
+				"arrow-forward-outline",
+				"arrow-forward",
+				"arrow-left-outline",
+				"arrow-left-thick",
+				"arrow-left",
+				"arrow-loop-outline",
+				"arrow-loop",
+				"arrow-maximise-outline",
+				"arrow-maximise",
+				"arrow-minimise-outline",
+				"arrow-minimise",
+				"arrow-move-outline",
+				"arrow-move",
+				"arrow-repeat-outline",
+				"arrow-repeat",
+				"arrow-right-outline",
+				"arrow-right-thick",
+				"arrow-right",
+				"arrow-shuffle",
+				"arrow-sorted-down",
+				"arrow-sorted-up",
+				"arrow-sync-outline",
+				"arrow-sync",
+				"arrow-unsorted",
+				"arrow-up-outline",
+				"arrow-up-thick",
+				"arrow-up",
+				"at",
+				"attachment-outline",
+				"attachment",
+				"backspace-outline",
+				"backspace",
+				"battery-charge",
+				"battery-full",
+				"battery-high",
+				"battery-low",
+				"battery-mid",
+				"beaker",
+				"beer",
+				"bell",
+				"book",
+				"bookmark",
+				"briefcase",
+				"brush",
+				"business-card",
+				"calculator",
+				"calendar-outline",
+				"calendar",
+				"camera-outline",
+				"camera",
+				"cancel-outline",
+				"cancel",
+				"chart-area-outline",
+				"chart-area",
+				"chart-bar-outline",
+				"chart-bar",
+				"chart-line-outline",
+				"chart-line",
+				"chart-pie-outline",
+				"chart-pie",
+				"chevron-left-outline",
+				"chevron-left",
+				"chevron-right-outline",
+				"chevron-right",
+				"clipboard",
+				"cloud-storage-outline",
+				"cloud-storage",
+				"code-outline",
+				"code",
+				"coffee",
+				"cog-outline",
+				"cog",
+				"compass",
+				"contacts",
+				"credit-card",
+				"css3",
+				"database",
+				"delete-outline",
+				"delete",
+				"device-desktop",
+				"device-laptop",
+				"device-phone",
+				"device-tablet",
+				"directions",
+				"divide-outline",
+				"divide",
+				"document-add",
+				"document-delete",
+				"document-text",
+				"document",
+				"download-outline",
+				"download",
+				"dropbox",
+				"edit",
+				"eject-outline",
+				"eject",
+				"equals-outline",
+				"equals",
+				"export-outline",
+				"export",
+				"eye-outline",
+				"eye",
+				"feather",
+				"film",
+				"filter",
+				"flag-outline",
+				"flag",
+				"flash-outline",
+				"flash",
+				"flow-children",
+				"flow-merge",
+				"flow-parallel",
+				"flow-switch",
+				"folder-add",
+				"folder-delete",
+				"folder-open",
+				"folder",
+				"gift",
+				"globe-outline",
+				"globe",
+				"group-outline",
+				"group",
+				"headphones",
+				"heart-full-outline",
+				"heart-half-outline",
+				"heart-outline",
+				"heart",
+				"home-outline",
+				"home",
+				"html5",
+				"image-outline",
+				"image",
+				"infinity-outline",
+				"infinity",
+				"info-large-outline",
+				"info-large",
+				"info-outline",
+				"info",
+				"input-checked-outline",
+				"input-checked",
+				"key-outline",
+				"key",
+				"keyboard",
+				"leaf",
+				"lightbulb",
+				"link-outline",
+				"link",
+				"location-arrow-outline",
+				"location-arrow",
+				"location-outline",
+				"location",
+				"lock-closed-outline",
+				"lock-closed",
+				"lock-open-outline",
+				"lock-open",
+				"mail",
+				"map",
+				"media-eject-outline",
+				"media-eject",
+				"media-fast-forward-outline",
+				"media-fast-forward",
+				"media-pause-outline",
+				"media-pause",
+				"media-play-outline",
+				"media-play-reverse-outline",
+				"media-play-reverse",
+				"media-play",
+				"media-record-outline",
+				"media-record",
+				"media-rewind-outline",
+				"media-rewind",
+				"media-stop-outline",
+				"media-stop",
+				"message-typing",
+				"message",
+				"messages",
+				"microphone-outline",
+				"microphone",
+				"minus-outline",
+				"minus",
+				"mortar-board",
+				"news",
+				"notes-outline",
+				"notes",
+				"pen",
+				"pencil",
+				"phone-outline",
+				"phone",
+				"pi-outline",
+				"pi",
+				"pin-outline",
+				"pin",
+				"pipette",
+				"plane-outline",
+				"plane",
+				"plug",
+				"plus-outline",
+				"plus",
+				"point-of-interest-outline",
+				"point-of-interest",
+				"power-outline",
+				"power",
+				"printer",
+				"puzzle-outline",
+				"puzzle",
+				"radar-outline",
+				"radar",
+				"refresh-outline",
+				"refresh",
+				"rss-outline",
+				"rss",
+				"scissors-outline",
+				"scissors",
+				"shopping-bag",
+				"shopping-cart",
+				"social-at-circular",
+				"social-dribbble-circular",
+				"social-dribbble",
+				"social-facebook-circular",
+				"social-facebook",
+				"social-flickr-circular",
+				"social-flickr",
+				"social-github-circular",
+				"social-github",
+				"social-google-plus-circular",
+				"social-google-plus",
+				"social-instagram-circular",
+				"social-instagram",
+				"social-last-fm-circular",
+				"social-last-fm",
+				"social-linkedin-circular",
+				"social-linkedin",
+				"social-pinterest-circular",
+				"social-pinterest",
+				"social-skype-outline",
+				"social-skype",
+				"social-tumbler-circular",
+				"social-tumbler",
+				"social-twitter-circular",
+				"social-twitter",
+				"social-vimeo-circular",
+				"social-vimeo",
+				"social-youtube-circular",
+				"social-youtube",
+				"sort-alphabetically-outline",
+				"sort-alphabetically",
+				"sort-numerically-outline",
+				"sort-numerically",
+				"spanner-outline",
+				"spanner",
+				"spiral",
+				"star-full-outline",
+				"star-half-outline",
+				"star-half",
+				"star-outline",
+				"star",
+				"starburst-outline",
+				"starburst",
+				"stopwatch",
+				"support",
+				"tabs-outline",
+				"tag",
+				"tags",
+				"th-large-outline",
+				"th-large",
+				"th-list-outline",
+				"th-list",
+				"th-menu-outline",
+				"th-menu",
+				"th-small-outline",
+				"th-small",
+				"thermometer",
+				"thumbs-down",
+				"thumbs-ok",
+				"thumbs-up",
+				"tick-outline",
+				"tick",
+				"ticket",
+				"time",
+				"times-outline",
+				"times",
+				"trash",
+				"tree",
+				"upload-outline",
+				"upload",
+				"user-add-outline",
+				"user-add",
+				"user-delete-outline",
+				"user-delete",
+				"user-outline",
+				"user",
+				"vendor-android",
+				"vendor-apple",
+				"vendor-microsoft",
+				"video-outline",
+				"video",
+				"volume-down",
+				"volume-mute",
+				"volume-up",
+				"volume",
+				"warning-outline",
+				"warning",
+				"watch",
+				"waves-outline",
+				"waves",
+				"weather-cloudy",
+				"weather-downpour",
+				"weather-night",
+				"weather-partly-sunny",
+				"weather-shower",
+				"weather-snow",
+				"weather-stormy",
+				"weather-sunny",
+				"weather-windy-cloudy",
+				"weather-windy",
+				"wi-fi-outline",
+				"wi-fi",
+				"wine",
+				"world-outline",
+				"world",
+				"zoom-in-outline",
+				"zoom-in",
+				"zoom-out-outline",
+				"zoom-out",
+				"zoom-outline",
+				"zoom"
+			]
+		},
+		"weather": {
+			"name": "weather-icons",
+			"prefix": "weather-",
+			"repo": "https://github.com/erikflowers/weather-icons.git",
+			"icons": [
+				"alien",
+				"barometer",
+				"celsius",
+				"cloud-down",
+				"cloud-refresh",
+				"cloud-up",
+				"cloud",
+				"cloudy-gusts",
+				"cloudy-windy",
+				"cloudy",
+				"day-cloudy-gusts",
+				"day-cloudy-high",
+				"day-cloudy-windy",
+				"day-cloudy",
+				"day-fog",
+				"day-hail",
+				"day-haze",
+				"day-light-wind",
+				"day-lightning",
+				"day-rain-mix",
+				"day-rain-wind",
+				"day-rain",
+				"day-showers",
+				"day-sleet-storm",
+				"day-sleet",
+				"day-snow-thunderstorm",
+				"day-snow-wind",
+				"day-snow",
+				"day-sprinkle",
+				"day-storm-showers",
+				"day-sunny-overcast",
+				"day-sunny",
+				"day-thunderstorm",
+				"day-windy",
+				"degrees",
+				"direction-down-left",
+				"direction-down-right",
+				"direction-down",
+				"direction-left",
+				"direction-right",
+				"direction-up-left",
+				"direction-up-right",
+				"direction-up",
+				"dust",
+				"earthquake",
+				"fahrenheit",
+				"fire",
+				"flood",
+				"fog",
+				"gale-warning",
+				"hail",
+				"horizon-alt",
+				"horizon",
+				"hot",
+				"humidity",
+				"hurricane-warning",
+				"hurricane",
+				"lightning",
+				"lunar-eclipse",
+				"meteor",
+				"moon-alt-first-quarter",
+				"moon-alt-full",
+				"moon-alt-new",
+				"moon-alt-third-quarter",
+				"moon-alt-waning-crescent-1",
+				"moon-alt-waning-crescent-2",
+				"moon-alt-waning-crescent-3",
+				"moon-alt-waning-crescent-4",
+				"moon-alt-waning-crescent-5",
+				"moon-alt-waning-crescent-6",
+				"moon-alt-waning-gibbous-1",
+				"moon-alt-waning-gibbous-2",
+				"moon-alt-waning-gibbous-3",
+				"moon-alt-waning-gibbous-4",
+				"moon-alt-waning-gibbous-5",
+				"moon-alt-waning-gibbous-6",
+				"moon-alt-waxing-crescent-1",
+				"moon-alt-waxing-crescent-2",
+				"moon-alt-waxing-crescent-3",
+				"moon-alt-waxing-crescent-4",
+				"moon-alt-waxing-crescent-5",
+				"moon-alt-waxing-crescent-6",
+				"moon-alt-waxing-gibbous-1",
+				"moon-alt-waxing-gibbous-2",
+				"moon-alt-waxing-gibbous-3",
+				"moon-alt-waxing-gibbous-4",
+				"moon-alt-waxing-gibbous-5",
+				"moon-alt-waxing-gibbous-6",
+				"moon-first-quarter",
+				"moon-full",
+				"moon-new",
+				"moon-third-quarter",
+				"moon-waning-crescent-1",
+				"moon-waning-crescent-2",
+				"moon-waning-crescent-3",
+				"moon-waning-crescent-4",
+				"moon-waning-crescent-5",
+				"moon-waning-crescent-6",
+				"moon-waning-gibbous-1",
+				"moon-waning-gibbous-2",
+				"moon-waning-gibbous-3",
+				"moon-waning-gibbous-4",
+				"moon-waning-gibbous-5",
+				"moon-waning-gibbous-6",
+				"moon-waxing-crescent-1",
+				"moon-waxing-crescent-2",
+				"moon-waxing-crescent-3",
+				"moon-waxing-crescent-4",
+				"moon-waxing-crescent-5",
+				"moon-waxing-crescent-6",
+				"moon-waxing-gibbous-1",
+				"moon-waxing-gibbous-2",
+				"moon-waxing-gibbous-3",
+				"moon-waxing-gibbous-4",
+				"moon-waxing-gibbous-5",
+				"moon-waxing-gibbous-6",
+				"moonrise",
+				"moonset",
+				"na",
+				"night-alt-cloudy-gusts",
+				"night-alt-cloudy-high",
+				"night-alt-cloudy-windy",
+				"night-alt-cloudy",
+				"night-alt-hail",
+				"night-alt-lightning",
+				"night-alt-partly-cloudy",
+				"night-alt-rain-mix",
+				"night-alt-rain-wind",
+				"night-alt-rain",
+				"night-alt-showers",
+				"night-alt-sleet-storm",
+				"night-alt-sleet",
+				"night-alt-snow-thunderstorm",
+				"night-alt-snow-wind",
+				"night-alt-snow",
+				"night-alt-sprinkle",
+				"night-alt-storm-showers",
+				"night-alt-thunderstorm",
+				"night-clear",
+				"night-cloudy-gusts",
+				"night-cloudy-high",
+				"night-cloudy-windy",
+				"night-cloudy",
+				"night-fog",
+				"night-hail",
+				"night-lightning",
+				"night-partly-cloudy",
+				"night-rain-mix",
+				"night-rain-wind",
+				"night-rain",
+				"night-showers",
+				"night-sleet-storm",
+				"night-sleet",
+				"night-snow-thunderstorm",
+				"night-snow-wind",
+				"night-snow",
+				"night-sprinkle",
+				"night-storm-showers",
+				"night-thunderstorm",
+				"rain-mix",
+				"rain-wind",
+				"rain",
+				"raindrop",
+				"raindrops",
+				"refresh-alt",
+				"refresh",
+				"sandstorm",
+				"showers",
+				"sleet",
+				"small-craft-advisory",
+				"smog",
+				"smoke",
+				"snow-wind",
+				"snow",
+				"snowflake-cold",
+				"solar-eclipse",
+				"sprinkle",
+				"stars",
+				"storm-showers",
+				"storm-warning",
+				"strong-wind",
+				"sunrise",
+				"sunset",
+				"thermometer-exterior",
+				"thermometer-internal",
+				"thermometer",
+				"thunderstorm",
+				"time-1",
+				"time-10",
+				"time-11",
+				"time-12",
+				"time-2",
+				"time-3",
+				"time-4",
+				"time-5",
+				"time-6",
+				"time-7",
+				"time-8",
+				"time-9",
+				"tornado",
+				"train",
+				"tsunami",
+				"umbrella",
+				"volcano",
+				"wind-beaufort-0",
+				"wind-beaufort-1",
+				"wind-beaufort-10",
+				"wind-beaufort-11",
+				"wind-beaufort-12",
+				"wind-beaufort-2",
+				"wind-beaufort-3",
+				"wind-beaufort-4",
+				"wind-beaufort-5",
+				"wind-beaufort-6",
+				"wind-beaufort-7",
+				"wind-beaufort-8",
+				"wind-beaufort-9",
+				"wind-direction",
+				"windy"
+			]
+		},
+		"windows": {
+			"name": "windows-icons",
+			"prefix": "windows-",
+			"repo": "https://github.com/Templarian/WindowsIcons.git",
+			"icons": [
+				"3d-3ds",
+				"3d-collada",
+				"3d-obj",
+				"3d-x",
+				"acorn",
+				"add-multiple",
+				"add",
+				"adobe-acrobat",
+				"adobe-aftereffects",
+				"adobe-audition",
+				"adobe-bridge",
+				"adobe-dreamweaver",
+				"adobe-encore",
+				"adobe-fireworks",
+				"adobe-flash",
+				"adobe-flashbuilder",
+				"adobe-illustrator",
+				"adobe-indesign",
+				"adobe-lightroom",
+				"adobe-photoshop",
+				"adobe-prelude",
+				"adobe-premierpro",
+				"adobe-speedgrade",
+				"alert",
+				"alien",
+				"align-center",
+				"align-justify",
+				"align-left",
+				"align-right",
+				"anchor",
+				"app-favorite",
+				"app-minus",
+				"app-plus",
+				"app-remove",
+				"app",
+				"arcade-button",
+				"archive",
+				"arrow-collapsed",
+				"arrow-corner-up-right",
+				"arrow-down-up",
+				"arrow-down",
+				"arrow-expand",
+				"arrow-left-right",
+				"arrow-left",
+				"arrow-right-left",
+				"arrow-right",
+				"arrow-up-down",
+				"arrow-up",
+				"at",
+				"axis-three",
+				"axis-x-letter",
+				"axis-x",
+				"axis-xy-parentheses",
+				"axis-xy",
+				"axis-y-letter",
+				"axis-y",
+				"axis-yx",
+				"axis-z-letter",
+				"axis-z",
+				"baby",
+				"barcode",
+				"base-select",
+				"base",
+				"bath",
+				"battery-0",
+				"battery-1",
+				"battery-2",
+				"battery-3",
+				"battery-charging",
+				"bed",
+				"bike-parking",
+				"bike",
+				"billboard",
+				"billing",
+				"bing",
+				"book-contact",
+				"book-hardcover-open-writing",
+				"book-hardcover-open",
+				"book-list",
+				"book-open-information",
+				"book-open-text-image",
+				"book-open-text",
+				"book-open",
+				"book-perspective-help",
+				"book-perspective",
+				"book-side",
+				"book",
+				"border-all",
+				"border-bottom",
+				"border-horizontal",
+				"border-inner",
+				"border-left",
+				"border-none",
+				"border-outside",
+				"border-right",
+				"border-top",
+				"border-vertical",
+				"box-layered",
+				"box-unfolded",
+				"box",
+				"brick",
+				"browser-chrome",
+				"browser-ie",
+				"browser-wire",
+				"browser",
+				"bug-remove",
+				"bug",
+				"cabinet-files-variant",
+				"cabinet-files",
+				"cabinet-in",
+				"cabinet-out",
+				"cabinet-variant",
+				"cabinet",
+				"calculator",
+				"calendar-14",
+				"calendar-31",
+				"calendar-day",
+				"calendar-dollar",
+				"calendar-future",
+				"calendar-month",
+				"calendar-plus",
+				"calendar-range",
+				"calendar-tomorrow",
+				"calendar-week",
+				"calendar-year",
+				"calendar",
+				"camera-auto",
+				"camera-flash-auto-selected",
+				"camera-flash-auto",
+				"camera-flash-off-selected",
+				"camera-flash-off",
+				"camera-flash-selected",
+				"camera-flash",
+				"camera-send",
+				"camera-switch-invert",
+				"camera-switch",
+				"camera",
+				"cancel",
+				"candle",
+				"card-1",
+				"card-2",
+				"card-3",
+				"card-4",
+				"card-5",
+				"card-6",
+				"card-7",
+				"card-8",
+				"card-9",
+				"card",
+				"cards-club",
+				"cards-diamond",
+				"cards-heart",
+				"cards-spade",
+				"cart",
+				"cd-eject",
+				"cd",
+				"cell-align",
+				"cell-column-delete",
+				"cell-down",
+				"cell-function",
+				"cell-insert-above",
+				"cell-insert-below",
+				"cell-merge",
+				"cell-row-delete",
+				"cell-up",
+				"centerline",
+				"chat",
+				"check",
+				"checkmark-cross",
+				"checkmark-pencil-top",
+				"checkmark-pencil",
+				"checkmark-thick-unchecked",
+				"checkmark-thick",
+				"checkmark-uncrossed",
+				"checkmark",
+				"chess-bishop",
+				"chess-horse",
+				"chess-king",
+				"chess-pawn",
+				"chess-queen",
+				"chess-rook",
+				"chevron-down",
+				"chevron-left",
+				"chevron-right",
+				"chevron-up",
+				"chromakey",
+				"church",
+				"circle-decline",
+				"circle-growth",
+				"city-chicago",
+				"city-sanfrancisco",
+				"city-seattle",
+				"city",
+				"clean",
+				"clear-inverse-reflect-horizontal",
+				"clear-inverse",
+				"clear-reflect-horizontal",
+				"clear",
+				"clipboard-paper-check",
+				"clipboard-paper",
+				"clipboard-paste",
+				"clipboard-variant-edit",
+				"clipboard-variant-text",
+				"clipboard-variant",
+				"clipboard",
+				"clock",
+				"close",
+				"closedcaption-off",
+				"closedcaption",
+				"clothes-shirt",
+				"clothes-tie",
+				"cloud-add",
+				"cloud-delete",
+				"cloud-download",
+				"cloud-pause",
+				"cloud-play",
+				"cloud-upload",
+				"cloud",
+				"cloudirc",
+				"code-xml",
+				"cog",
+				"cogs",
+				"column-one",
+				"column-three",
+				"column-two",
+				"companioncube",
+				"cone-diagonal",
+				"cone",
+				"confirm-yes-no",
+				"connect",
+				"connection-1x",
+				"connection-3g",
+				"connection-4g",
+				"connection-bluetooth",
+				"connection-ev",
+				"connection-nfc",
+				"connection-quality-extremelylow",
+				"connection-quality-high",
+				"connection-quality-low",
+				"connection-quality-medium",
+				"connection-quality-veryhigh",
+				"connection-quality-verylow",
+				"connection-wifi-variant",
+				"connection-wifi",
+				"console",
+				"contrast",
+				"control-eject",
+				"control-fastforward-variant",
+				"control-fastforward",
+				"control-guide",
+				"control-pause",
+				"control-play-live",
+				"control-play",
+				"control-resume",
+				"control-rewind-variant",
+				"control-rewind",
+				"control-stop",
+				"controller-snes",
+				"controller-xbox",
+				"copyright",
+				"corner",
+				"coupon",
+				"creativecommons",
+				"creditcard",
+				"crop",
+				"crosshair",
+				"crown",
+				"cup-empty",
+				"cup-full",
+				"cup-half",
+				"cup-paper",
+				"cup",
+				"currency-cent",
+				"currency-dollar-free",
+				"currency-dollar",
+				"currency-euro",
+				"currency-grivna",
+				"currency-pound",
+				"currency-rubles",
+				"currency-rupee",
+				"currency-yen",
+				"cursor-default-outline",
+				"cursor-default-transform-horizontal",
+				"cursor-default",
+				"cursor-hand",
+				"cursor-information",
+				"cursor-move",
+				"cusor-pointer",
+				"customerservice",
+				"database-mysql",
+				"database-sql",
+				"database",
+				"debug-restart",
+				"debug-step-into",
+				"debug-step-out",
+				"debug-step-over",
+				"debug-stop",
+				"deeplink-round",
+				"deeplink",
+				"delete",
+				"devcenter",
+				"diagram",
+				"dial",
+				"dimension-arrow-box-height",
+				"dimension-arrow-box-width",
+				"dimension-arrow-line-height-short",
+				"dimension-arrow-line-height-thick",
+				"dimension-arrow-line-height",
+				"dimension-arrow-line-width-short",
+				"dimension-arrow-line-width-thick",
+				"dimension-arrow-line-width",
+				"dimension-box-height",
+				"dimension-box-width",
+				"dimension-line-height-short",
+				"dimension-line-height",
+				"dimension-line-width-short",
+				"dimension-line-width",
+				"directions",
+				"disconnect",
+				"disk-download",
+				"disk-upload",
+				"disk",
+				"dnd",
+				"door-enter",
+				"door-leave",
+				"door-lock-closed",
+				"door-lock-open",
+				"download",
+				"drafting-centerline",
+				"draw-brush-reflection",
+				"draw-brush",
+				"draw-button",
+				"draw-marker-reflection",
+				"draw-marker",
+				"draw-paintbrush",
+				"draw-pen-add",
+				"draw-pen-minus",
+				"draw-pen-reflection",
+				"draw-pen",
+				"draw-pencil-reflection",
+				"draw-pencil",
+				"draw-pixel-fill-grid",
+				"draw-pixel-grid",
+				"drinks-beer-guinness",
+				"drinks-beer",
+				"drinks-martini",
+				"dropper",
+				"edit-add",
+				"edit-box",
+				"edit-minus",
+				"edit",
+				"elevator-down",
+				"elevator-up",
+				"email-gmail",
+				"email-hardedge",
+				"email-minimal",
+				"email-outlook",
+				"email-yahoo",
+				"email",
+				"eye-hide",
+				"eye",
+				"facebook-connect",
+				"facebook-disconnect",
+				"fan-box",
+				"ferry",
+				"film-gallery",
+				"film-list",
+				"film-live",
+				"film-select",
+				"film",
+				"filter-alphabetical",
+				"filter",
+				"finder",
+				"fingerprint",
+				"flag-bear",
+				"flag-texas",
+				"flag-wavy",
+				"flag",
+				"folder-ellipsis",
+				"folder-lock",
+				"folder-open",
+				"folder-people",
+				"folder-puzzle",
+				"folder-star",
+				"folder",
+				"food-apple",
+				"food-candy-cane",
+				"food-cupcake",
+				"food-icecream-bar",
+				"food-silverware-cross",
+				"food-silverware",
+				"food",
+				"foot",
+				"forklift-load",
+				"forklift",
+				"form-basic",
+				"form-editable",
+				"forrst",
+				"forsale",
+				"framework-net",
+				"fullscreen-box",
+				"fullscreen",
+				"futurama-bender",
+				"futurama-fry",
+				"gas",
+				"gauge-0",
+				"gauge-100",
+				"gauge-25",
+				"gauge-50",
+				"gauge-75",
+				"gender-both",
+				"gender-female",
+				"gender-male",
+				"gift",
+				"globe-wire",
+				"globe",
+				"google",
+				"googleplus",
+				"grade-a-minus",
+				"grade-a-plus",
+				"grade-a",
+				"grade-b-minus",
+				"grade-b-plus",
+				"grade-b",
+				"grade-c-minus",
+				"grade-c-plus",
+				"grade-c",
+				"grade-d-minus",
+				"grade-d-plus",
+				"grade-d",
+				"grade-e",
+				"grade-f",
+				"graph-bar",
+				"graph-boxplot",
+				"graph-histogram-description",
+				"graph-histogram",
+				"graph-line-down",
+				"graph-line-up",
+				"graph-line",
+				"greek-sigma-lowercase",
+				"greek-sigma-uppercase",
+				"grid",
+				"group-add",
+				"group-delete",
+				"group-minus",
+				"group",
+				"handicap-in",
+				"handicap-out",
+				"handicap",
+				"hardware-cpu",
+				"hardware-headphones-bluetooth",
+				"hardware-headphones",
+				"hardware-headset",
+				"hardware-mouse",
+				"hat-santa",
+				"heart-break",
+				"heart-cross",
+				"heart-outline",
+				"heart",
+				"home-empty",
+				"home-garage-arrow-close",
+				"home-garage-arrow-open",
+				"home-garage-open",
+				"home-garage",
+				"home-gps",
+				"home-location-pin",
+				"home-location-round",
+				"home-people-none",
+				"home-people",
+				"home-question",
+				"home-variant-enter",
+				"home-variant-leave",
+				"home-variant",
+				"home",
+				"hourglass",
+				"ie",
+				"image-ants",
+				"image-backlight",
+				"image-beach",
+				"image-broken",
+				"image-export",
+				"image-focus",
+				"image-gallery",
+				"image-hdr",
+				"image-landscape",
+				"image-macro",
+				"image-multiple",
+				"image-night-landscape",
+				"image-night-person",
+				"image-night-portrait",
+				"image-night",
+				"image-portrait",
+				"image-redeye",
+				"image-select",
+				"image-snow",
+				"image-sports",
+				"image-sunset",
+				"image",
+				"inbox-in",
+				"inbox-out",
+				"inbox",
+				"infinite",
+				"information-circle",
+				"information",
+				"input-down",
+				"input-keyboard-down",
+				"input-keyboard",
+				"input-pen-down",
+				"input-pen",
+				"input-question",
+				"input",
+				"interface-button",
+				"interface-dropdown",
+				"interface-list",
+				"interface-password",
+				"interface-textbox",
+				"iphone",
+				"journal",
+				"key-old",
+				"key",
+				"lamp-desk-variant",
+				"lamp-desk",
+				"lamp-variant",
+				"lamp",
+				"language-csharp",
+				"language-java-text",
+				"language-java",
+				"language-python-text",
+				"language-python",
+				"laptop",
+				"laser",
+				"lavalamp",
+				"layer-add",
+				"layer-arrange-bringforward",
+				"layer-arrange-bringtofront",
+				"layer-arrange-sendbackward",
+				"layer-arrange-sendtoback",
+				"layer-arrange-solid-bringforward",
+				"layer-arrange-solid-bringtofront",
+				"layer-arrange-solid-sendbackward",
+				"layer-arrange-solid-sendtoback",
+				"layer-delete",
+				"layer-down",
+				"layer-minus",
+				"layer-perspective-up",
+				"layer-thick",
+				"layer-up",
+				"layer",
+				"layout-body",
+				"layout-collapse-left-variant",
+				"layout-collapse-left",
+				"layout-collapse-right-variant",
+				"layout-collapse-right",
+				"layout-expand-left-variant",
+				"layout-expand-left",
+				"layout-expand-right-variant",
+				"layout-expand-right",
+				"layout-header",
+				"layout-sidebar",
+				"layout",
+				"leaderboard",
+				"lifesaver",
+				"lightbulb-coil",
+				"lightbulb-hue-on",
+				"lightbulb-hue",
+				"lightbulb",
+				"lightning",
+				"lines-horizontal-4",
+				"link",
+				"linkedin",
+				"list-add-above",
+				"list-add-below",
+				"list-add",
+				"list-check",
+				"list-create",
+				"list-delete-inline",
+				"list-delete",
+				"list-gear",
+				"list-hidden",
+				"list-merge",
+				"list-one",
+				"list-reorder-down",
+				"list-reorder-up",
+				"list-reorder",
+				"list-select",
+				"list-star",
+				"list-two",
+				"list",
+				"location-add",
+				"location-checkin",
+				"location-circle",
+				"location-delete",
+				"location-foursquare",
+				"location-minus",
+				"location-round",
+				"location",
+				"lock",
+				"logic-and-add",
+				"logic-and",
+				"logic-or-add",
+				"logic-or",
+				"loop",
+				"magnify-add",
+				"magnify-arrow-down",
+				"magnify-arrow-up",
+				"magnify-back",
+				"magnify-browse",
+				"magnify-forward",
+				"magnify-minus",
+				"magnify",
+				"man-sensor",
+				"man-suitcase-fast",
+				"man-suitcase-run",
+				"man-suitcase",
+				"man-walk",
+				"map-aerial-highway",
+				"map-aerial",
+				"map-folds",
+				"map-gps",
+				"map-location-add",
+				"map-location",
+				"map-satellite",
+				"map-treasure",
+				"map",
+				"marketplace-old",
+				"marketplace",
+				"markup",
+				"marvel-avengers",
+				"marvel-captainamerica",
+				"marvel-ironman-mask",
+				"marvel-ironman",
+				"marvel-shield-variant",
+				"marvel-shield",
+				"math-plus-minus",
+				"measure-celcius",
+				"measure-centimeter",
+				"measure-farenheit",
+				"measure-foot",
+				"measure-inch",
+				"measure-kilometer",
+				"measure-meter",
+				"measure-mile",
+				"medical-pill-broken",
+				"medical-pill",
+				"medical-pulse",
+				"message-profanity",
+				"message-send",
+				"message-smiley",
+				"message",
+				"microphone-google",
+				"microphone",
+				"microsoft-tag",
+				"minecraft-civcraft",
+				"minus",
+				"money",
+				"monitor-add",
+				"monitor-delete",
+				"monitor-film",
+				"monitor-identify",
+				"monitor-minus",
+				"monitor-play",
+				"monitor-to",
+				"monitor",
+				"mono",
+				"moon-first-quarter",
+				"moon-full",
+				"moon-new",
+				"moon-sleep",
+				"moon-third-quarter",
+				"moon-waning-crescent",
+				"moon-waning-gibbous",
+				"moon-waxing-crescent",
+				"moon-waxing-gibbous",
+				"moon",
+				"movie-clapper-select",
+				"movie-clapper-solid-select",
+				"movie-clapper-solid",
+				"movie-clapper",
+				"music-live",
+				"music-select",
+				"music-wifi",
+				"music",
+				"na",
+				"navigate-next",
+				"navigate-previous",
+				"network-disconnect",
+				"network-home-disconnect",
+				"network-home",
+				"network-port-disconnect",
+				"network-port",
+				"network-server-connecting",
+				"network-server-disconnect",
+				"network-server",
+				"network",
+				"new-window",
+				"new",
+				"newspaper-create",
+				"newspaper",
+				"noentry",
+				"notification-above-multiple",
+				"notification-above",
+				"notification-multiple",
+				"notification-star",
+				"notification",
+				"nyan",
+				"office-365",
+				"office-access",
+				"office-excel",
+				"office-infopath",
+				"office-lync",
+				"office-onenote",
+				"office-outlook",
+				"office-powerpoint",
+				"office-project",
+				"office-publisher",
+				"office-sharepoint",
+				"office-visio",
+				"office-word",
+				"office",
+				"opacity",
+				"ornament-variant",
+				"ornament",
+				"os-android",
+				"os-arm",
+				"os-blackberry",
+				"os-chromium",
+				"os-gnome",
+				"os-ios",
+				"os-ubuntu",
+				"os-windows-8",
+				"os-windows-rt",
+				"os-windows",
+				"os-windowsphone-round",
+				"os-windowsphone",
+				"os-x64",
+				"os-x86",
+				"outlet",
+				"page-0",
+				"page-1",
+				"page-2",
+				"page-3",
+				"page-4",
+				"page-5",
+				"page-6",
+				"page-7",
+				"page-8",
+				"page-9",
+				"page-add",
+				"page-arrow",
+				"page-bold",
+				"page-break",
+				"page-check",
+				"page-code",
+				"page-copy",
+				"page-corner-bookmark",
+				"page-corner-break",
+				"page-corner-cells",
+				"page-corner-folded-grid",
+				"page-corner-folded-text",
+				"page-corner-folded",
+				"page-corner-grid",
+				"page-corner-text-break",
+				"page-corner-text",
+				"page-corner",
+				"page-cross",
+				"page-delete",
+				"page-download",
+				"page-duplicate",
+				"page-edit",
+				"page-excel",
+				"page-file-gif-tag",
+				"page-file-gif",
+				"page-file-pdf-tag",
+				"page-file-pdf",
+				"page-heart",
+				"page-heartbreak",
+				"page-hidden",
+				"page-image",
+				"page-jpg",
+				"page-location-add",
+				"page-location",
+				"page-minus",
+				"page-multiple",
+				"page-music",
+				"page-new",
+				"page-onenote",
+				"page-pdf",
+				"page-png",
+				"page-powerpoint",
+				"page-question",
+				"page-search",
+				"page-select",
+				"page-small",
+				"page-solid-add",
+				"page-solid-cross",
+				"page-solid-move",
+				"page-solid",
+				"page-text",
+				"page-upload",
+				"page-word",
+				"page-xml",
+				"page",
+				"palmtree-variant",
+				"palmtree",
+				"paper",
+				"paperclip-rotated",
+				"paperclip",
+				"paw",
+				"paypal",
+				"people-arrow-left",
+				"people-arrow-right",
+				"people-checkbox",
+				"people-down",
+				"people-left",
+				"people-magnify",
+				"people-multiple-magnify",
+				"people-multiple",
+				"people-profile",
+				"people-right",
+				"people-sensor-variant",
+				"people-sensor",
+				"people-status",
+				"people-up",
+				"people",
+				"percent-off",
+				"phone-hangup",
+				"phone-voicemail",
+				"phone",
+				"pie-quarter",
+				"pie",
+				"pin-remove",
+				"pin",
+				"places",
+				"plane-rotated-135",
+				"plane-rotated-45",
+				"plane",
+				"plant",
+				"plus",
+				"pokeball",
+				"potion",
+				"power",
+				"present",
+				"printer-blank",
+				"printer-text",
+				"printer",
+				"progress",
+				"projector-screen",
+				"projector",
+				"protractor",
+				"puzzle-round",
+				"puzzle",
+				"qr",
+				"question",
+				"quill",
+				"quote-left",
+				"quote-right",
+				"radar-screen",
+				"radar",
+				"radioactive",
+				"redo-curve",
+				"redo-point",
+				"redo",
+				"refresh-clockwise-down",
+				"refresh-clockwise-up",
+				"refresh-counterclockwise-down",
+				"refresh-counterclockwise-up",
+				"refresh",
+				"religion-christianity",
+				"religion-islamic",
+				"religion-judaism",
+				"repeat",
+				"reply-calendar",
+				"reply-email",
+				"reply-people",
+				"reset",
+				"resource-group",
+				"resource",
+				"return",
+				"ribbon-wave",
+				"ribbon",
+				"ring",
+				"rocket-rotated-45",
+				"rocket",
+				"rss",
+				"ruler",
+				"sailboat",
+				"save",
+				"scale-unbalanced",
+				"scale",
+				"scissor",
+				"scrabble-a",
+				"scrabble-b",
+				"scrabble-c",
+				"scrabble-d",
+				"scrabble-e",
+				"scrabble-f",
+				"scrabble-g",
+				"scrabble-h",
+				"scrabble-i",
+				"scrabble-j",
+				"scrabble-k",
+				"scrabble-l",
+				"scrabble-m",
+				"scrabble-n",
+				"scrabble-o",
+				"scrabble-p",
+				"scrabble-q",
+				"scrabble-r",
+				"scrabble-s",
+				"scrabble-t",
+				"scrabble-u",
+				"scrabble-v",
+				"scrabble-w",
+				"scrabble-x",
+				"scrabble-y",
+				"scrabble-z",
+				"sd-micro",
+				"sd",
+				"section-collapse-all",
+				"section-collapse",
+				"section-expand-all",
+				"section-expand",
+				"server",
+				"settings",
+				"share-open",
+				"share",
+				"shield-alert",
+				"shield",
+				"shopping",
+				"shotglass",
+				"shuffle",
+				"sidebar-left-collapse",
+				"sidebar-left-expand",
+				"sidebar-right-collapse",
+				"sidebar-right-expand",
+				"sign-caution",
+				"sign-interstate-75",
+				"sign-interstate-94",
+				"sign-interstate-95",
+				"sign-interstate",
+				"sign-parking",
+				"sign-stop",
+				"simcard-micro",
+				"simcard",
+				"skydrive-download",
+				"skydrive-upload",
+				"skydrive",
+				"sleep",
+				"slice",
+				"smiley-angry",
+				"smiley-cry",
+				"smiley-frown",
+				"smiley-glasses",
+				"smiley-grin",
+				"smiley-grumpy",
+				"smiley-happy",
+				"smiley-kiki",
+				"smiley-squint",
+				"smiley-tounge",
+				"smiley-what",
+				"snowflake",
+				"snowman",
+				"social-aim-variant",
+				"social-aim",
+				"social-amazon-appstore",
+				"social-amazon",
+				"social-apple-appstore",
+				"social-apple-mobileme",
+				"social-apple",
+				"social-appnet",
+				"social-artcom",
+				"social-arto",
+				"social-aws",
+				"social-baidu",
+				"social-basecamp",
+				"social-bebo",
+				"social-behance",
+				"social-blogger",
+				"social-cloudapp",
+				"social-coding4fun",
+				"social-delicious",
+				"social-deviantart",
+				"social-digg-variant",
+				"social-digg",
+				"social-disqus",
+				"social-dribbble",
+				"social-dropbox-download",
+				"social-dropbox-upload",
+				"social-dropbox",
+				"social-drupal",
+				"social-engadget",
+				"social-etsy",
+				"social-evernote",
+				"social-facebook-heart-break",
+				"social-facebook-heart",
+				"social-facebook-variant",
+				"social-facebook",
+				"social-foursquare",
+				"social-gdgt",
+				"social-github-octocat-solid",
+				"social-github-octocat",
+				"social-github",
+				"social-grooveshark",
+				"social-indiegogo",
+				"social-instapaper",
+				"social-jira",
+				"social-kickstarter",
+				"social-lastfm",
+				"social-line",
+				"social-linkedin-variant",
+				"social-linkedin",
+				"social-microsoft",
+				"social-nuget",
+				"social-openid",
+				"social-picasa",
+				"social-pinterest",
+				"social-playstation",
+				"social-pocket",
+				"social-rdio",
+				"social-readability",
+				"social-reddit",
+				"social-sharethis",
+				"social-skype",
+				"social-slashdot",
+				"social-soundcloud",
+				"social-spotify",
+				"social-stackoverflow",
+				"social-theverge",
+				"social-trello",
+				"social-tumblr",
+				"social-twitter-hashtag",
+				"social-twitter-retweet",
+				"social-twitter",
+				"social-unity",
+				"social-untapped",
+				"social-uservoice",
+				"social-vimeo",
+				"social-whatsapp",
+				"social-wikipedia",
+				"social-wordpress-variant",
+				"social-wordpress",
+				"social-xing",
+				"social-yahoo",
+				"social-ycombinator",
+				"social-yelp",
+				"social-zappos",
+				"sort-alphabetical-ascending",
+				"sort-alphabetical-descending",
+				"sort-alphabetical",
+				"sort-numeric-ascending",
+				"sort-numeric-descending",
+				"sort-numeric",
+				"sort",
+				"sound-0",
+				"sound-1",
+				"sound-2",
+				"sound-3",
+				"sound-left-right",
+				"sound-mute",
+				"sound-stereo-stack",
+				"sound-stereo",
+				"source-fork",
+				"source-pull",
+				"speakerphone",
+				"sport-football",
+				"stairs-down-reflect-horizontal",
+				"stairs-down",
+				"stairs-up-reflect-horizontal",
+				"stairs-up",
+				"stamp-at",
+				"stamp-empty",
+				"stamp",
+				"star-add",
+				"star-delete",
+				"star-invincible",
+				"star-minus",
+				"star-remove",
+				"star",
+				"starwars-jedi",
+				"starwars-rebel",
+				"starwars-sith",
+				"steam",
+				"stock-down",
+				"stock-up",
+				"stock",
+				"stocking",
+				"stop",
+				"store",
+				"stream",
+				"suitcase",
+				"swap",
+				"switch-off",
+				"symbol-braces",
+				"symbol-bracket",
+				"table-add",
+				"table-delete",
+				"table-select",
+				"table-unselect",
+				"table",
+				"tablet-windows",
+				"tag-label",
+				"tag",
+				"tardis",
+				"team",
+				"text-align-center",
+				"text-align-justify",
+				"text-align-left",
+				"text-align-right",
+				"text-bold",
+				"text-italic",
+				"text-overline",
+				"text-sans",
+				"text-script",
+				"text-serif",
+				"text-size-down",
+				"text-size-minus",
+				"text-size-plus",
+				"text-size-up",
+				"text-size",
+				"text-strikethrough",
+				"text-underline",
+				"thermometer-celcius",
+				"thermometer-digital",
+				"thermometer-fahrenheit",
+				"thermometer-honeywell",
+				"thermometer-kelvin",
+				"thermometer-signs",
+				"thermometer",
+				"thumb-up-add",
+				"thumb-up-delete",
+				"thumb-up-minus",
+				"thumbs-down",
+				"thumbs-up",
+				"ticket",
+				"tiles-four",
+				"tiles-minus",
+				"tiles-nine",
+				"tiles-plus",
+				"tiles-sixteen",
+				"timer-1",
+				"timer-2",
+				"timer-3",
+				"timer-4",
+				"timer-5",
+				"timer-alert",
+				"timer-check",
+				"timer-forward",
+				"timer-pause",
+				"timer-play",
+				"timer-record",
+				"timer-resume",
+				"timer-rewind",
+				"timer-stop",
+				"timer",
+				"tools",
+				"tournament-bracket-down",
+				"tournament-bracket-left",
+				"tournament-bracket-right",
+				"tournament-bracket-up",
+				"tournament-bracket",
+				"tower",
+				"train-track",
+				"train-tunnel",
+				"train",
+				"transform-flip-horizontal",
+				"transform-flip-vertical",
+				"transform-rotate-clockwise",
+				"transform-rotate-counterclockwise",
+				"transform-rotate-left",
+				"transform-rotate-right",
+				"transit-arrive",
+				"transit-bus",
+				"transit-car-accident",
+				"transit-car",
+				"transit-congestion",
+				"transit-connection-departure",
+				"transit-connection",
+				"transit-construction",
+				"transit-depart",
+				"transit-distance-from",
+				"transit-distance-to",
+				"transit-hazard",
+				"tree-leaf-three",
+				"tree-leaf",
+				"tree-pine",
+				"tree",
+				"trophy",
+				"truck",
+				"tux",
+				"tv-news",
+				"tv-remote",
+				"tv-syfy",
+				"tv",
+				"type-bit",
+				"type-boolean",
+				"type-null",
+				"undo-curve",
+				"undo-point",
+				"undo",
+				"unlock-keyhole",
+				"unlock",
+				"upload",
+				"usb-drive",
+				"usb",
+				"user-add",
+				"user-delete",
+				"user-minus",
+				"user-tie",
+				"user",
+				"vector-circle",
+				"vector-group-removed",
+				"vector-group",
+				"vector-line-curve",
+				"vector-line-spline",
+				"vector-line",
+				"vector-pen-add",
+				"vector-pen-convert",
+				"vector-pen-minus",
+				"vector-pen",
+				"vector-polygon",
+				"vector-rectangle",
+				"vector-star",
+				"video-basic",
+				"video-gallery",
+				"video-highdefinition",
+				"video-send",
+				"video-standarddefinition",
+				"video",
+				"vip-lowercase",
+				"vip",
+				"visualstudio-news",
+				"visualstudio",
+				"warning-circle",
+				"warning",
+				"water-droplet-alert",
+				"water-droplet-reflection",
+				"water-droplet",
+				"weather-chance",
+				"weather-overcast",
+				"weather-rain",
+				"weather-snow",
+				"weather-station",
+				"weather-sun-rise",
+				"weather-sun-set",
+				"weather-sun",
+				"weather-symbol",
+				"weather-thunder",
+				"webcam",
+				"window-casement-closed",
+				"window-casement",
+				"window-closed",
+				"window-maximize",
+				"window-minimize",
+				"window-restore",
+				"window-simple",
+				"window",
+				"windowsphone",
+				"xbox",
+				"youtube-play",
+				"youtube",
+				"zune"
+			]
+		},
+		"zocial": {
+			"name": "zocial",
+			"prefix": "zocial-",
+			"repo": "https://github.com/smcllns/css-social-buttons.git",
+			"icons": [
+				"acrobat",
+				"amazon",
+				"android",
+				"angellist",
+				"aol",
+				"appnet",
+				"appstore",
+				"bitbucket",
+				"bitcoin",
+				"blogger",
+				"buffer",
+				"cal",
+				"call",
+				"cart",
+				"chrome",
+				"cloudapp",
+				"creativecommons",
+				"delicious",
+				"digg",
+				"disqus",
+				"dribbble",
+				"dropbox",
+				"drupal",
+				"dwolla",
+				"email",
+				"eventasaurus",
+				"eventbrite",
+				"eventful",
+				"evernote",
+				"facebook",
+				"fivehundredpx",
+				"flattr",
+				"flickr",
+				"forrst",
+				"foursquare",
+				"github",
+				"gmail",
+				"google",
+				"googleplay",
+				"googleplus",
+				"gowalla",
+				"grooveshark",
+				"guest",
+				"houzz",
+				"html5",
+				"ie",
+				"instagram",
+				"instapaper",
+				"intensedebate",
+				"itunes",
+				"joinme",
+				"klout",
+				"lanyrd",
+				"lastfm",
+				"lego",
+				"linkedin",
+				"lkdto",
+				"logmein",
+				"macstore",
+				"meetup",
+				"myspace",
+				"ninetyninedesigns",
+				"openid",
+				"opentable",
+				"paypal",
+				"persona",
+				"pinboard",
+				"pinterest",
+				"plancast",
+				"plurk",
+				"pocket",
+				"podcast",
+				"posterous",
+				"print",
+				"quora",
+				"reddit",
+				"rss",
+				"scribd",
+				"skype",
+				"slack",
+				"smashing",
+				"songkick",
+				"soundcloud",
+				"spotify",
+				"stackoverflow",
+				"statusnet",
+				"steam",
+				"stripe",
+				"stumbleupon",
+				"tumblr",
+				"twitch",
+				"twitter",
+				"viadeo",
+				"vimeo",
+				"vk",
+				"weibo",
+				"wikipedia",
+				"windows",
+				"wordpress",
+				"xing",
+				"yahoo",
+				"ycombinator",
+				"yelp",
+				"youtube"
 			]
 		},
 		"zero": {
 			"name": "zero",
 			"prefix": "zero-",
 			"icons": [
-				{
-					"type": "zero",
-					"name": "3-list"
-				},
-				{
-					"type": "zero",
-					"name": "add-folder"
-				},
-				{
-					"type": "zero",
-					"name": "agent"
-				},
-				{
-					"type": "zero",
-					"name": "align-2-bottom"
-				},
-				{
-					"type": "zero",
-					"name": "align-2-center"
-				},
-				{
-					"type": "zero",
-					"name": "align-2-left"
-				},
-				{
-					"type": "zero",
-					"name": "align-2-middle"
-				},
-				{
-					"type": "zero",
-					"name": "align-2-right"
-				},
-				{
-					"type": "zero",
-					"name": "align-2-top"
-				},
-				{
-					"type": "zero",
-					"name": "align-center"
-				},
-				{
-					"type": "zero",
-					"name": "align-left"
-				},
-				{
-					"type": "zero",
-					"name": "align-right"
-				},
-				{
-					"type": "zero",
-					"name": "analysis"
-				},
-				{
-					"type": "zero",
-					"name": "anchor"
-				},
-				{
-					"type": "zero",
-					"name": "app-dashboard"
-				},
-				{
-					"type": "zero",
-					"name": "app-pai"
-				},
-				{
-					"type": "zero",
-					"name": "app-worksheet"
-				},
-				{
-					"type": "zero",
-					"name": "area-chart"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-bottom-dot"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-bottom-l"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-down-l"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-down"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-left-d-l"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-left-l"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-left"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-minus"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-reduce"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-right-d-l"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-right-l"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-right-o"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-right"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-rise"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-top-dot"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-top-l"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-top"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-up-l"
-				},
-				{
-					"type": "zero",
-					"name": "arrow-up"
-				},
-				{
-					"type": "zero",
-					"name": "asterisk"
-				},
-				{
-					"type": "zero",
-					"name": "attachment"
-				},
-				{
-					"type": "zero",
-					"name": "auto-align-24"
-				},
-				{
-					"type": "zero",
-					"name": "auto-merge-cell"
-				},
-				{
-					"type": "zero",
-					"name": "backward-cycly-o"
-				},
-				{
-					"type": "zero",
-					"name": "bring-to-bottom"
-				},
-				{
-					"type": "zero",
-					"name": "bring-to-downer"
-				},
-				{
-					"type": "zero",
-					"name": "bring-to-top"
-				},
-				{
-					"type": "zero",
-					"name": "bring-to-upper"
-				},
-				{
-					"type": "zero",
-					"name": "bucket-a"
-				},
-				{
-					"type": "zero",
-					"name": "bucket"
-				},
-				{
-					"type": "zero",
-					"name": "c"
-				},
-				{
-					"type": "zero",
-					"name": "calendar"
-				},
-				{
-					"type": "zero",
-					"name": "center-justified"
-				},
-				{
-					"type": "zero",
-					"name": "chart-bar"
-				},
-				{
-					"type": "zero",
-					"name": "chart-from-to"
-				},
-				{
-					"type": "zero",
-					"name": "chart-funnel-plot"
-				},
-				{
-					"type": "zero",
-					"name": "chart-funnel"
-				},
-				{
-					"type": "zero",
-					"name": "chart-index"
-				},
-				{
-					"type": "zero",
-					"name": "chart-new"
-				},
-				{
-					"type": "zero",
-					"name": "chart-scatter"
-				},
-				{
-					"type": "zero",
-					"name": "chart-word-cloud"
-				},
-				{
-					"type": "zero",
-					"name": "chart"
-				},
-				{
-					"type": "zero",
-					"name": "check-triangle"
-				},
-				{
-					"type": "zero",
-					"name": "clear"
-				},
-				{
-					"type": "zero",
-					"name": "click"
-				},
-				{
-					"type": "zero",
-					"name": "close-c"
-				},
-				{
-					"type": "zero",
-					"name": "close-l"
-				},
-				{
-					"type": "zero",
-					"name": "close-o"
-				},
-				{
-					"type": "zero",
-					"name": "closedhand-24"
-				},
-				{
-					"type": "zero",
-					"name": "collapse"
-				},
-				{
-					"type": "zero",
-					"name": "color"
-				},
-				{
-					"type": "zero",
-					"name": "comment-full-l"
-				},
-				{
-					"type": "zero",
-					"name": "comment-l"
-				},
-				{
-					"type": "zero",
-					"name": "component-24"
-				},
-				{
-					"type": "zero",
-					"name": "component"
-				},
-				{
-					"type": "zero",
-					"name": "concentric-pie-chart"
-				},
-				{
-					"type": "zero",
-					"name": "console-24"
-				},
-				{
-					"type": "zero",
-					"name": "copy-l"
-				},
-				{
-					"type": "zero",
-					"name": "copy-node"
-				},
-				{
-					"type": "zero",
-					"name": "cry"
-				},
-				{
-					"type": "zero",
-					"name": "custom-text"
-				},
-				{
-					"type": "zero",
-					"name": "cut"
-				},
-				{
-					"type": "zero",
-					"name": "cycle-24"
-				},
-				{
-					"type": "zero",
-					"name": "dashboard-24"
-				},
-				{
-					"type": "zero",
-					"name": "data-agent-legend-dimension"
-				},
-				{
-					"type": "zero",
-					"name": "data-agent-legend-measure"
-				},
-				{
-					"type": "zero",
-					"name": "data-source-24"
-				},
-				{
-					"type": "zero",
-					"name": "data"
-				},
-				{
-					"type": "zero",
-					"name": "default-24"
-				},
-				{
-					"type": "zero",
-					"name": "default-justified"
-				},
-				{
-					"type": "zero",
-					"name": "delete-column"
-				},
-				{
-					"type": "zero",
-					"name": "delete-row"
-				},
-				{
-					"type": "zero",
-					"name": "delete"
-				},
-				{
-					"type": "zero",
-					"name": "desktop-24"
-				},
-				{
-					"type": "zero",
-					"name": "desktop"
-				},
-				{
-					"type": "zero",
-					"name": "dials"
-				},
-				{
-					"type": "zero",
-					"name": "diamond-24"
-				},
-				{
-					"type": "zero",
-					"name": "diamond-ok-l"
-				},
-				{
-					"type": "zero",
-					"name": "diamond"
-				},
-				{
-					"type": "zero",
-					"name": "dimensions"
-				},
-				{
-					"type": "zero",
-					"name": "direction-horizontal"
-				},
-				{
-					"type": "zero",
-					"name": "direction-vertical"
-				},
-				{
-					"type": "zero",
-					"name": "dislike-24"
-				},
-				{
-					"type": "zero",
-					"name": "dislike-fill"
-				},
-				{
-					"type": "zero",
-					"name": "dislike-l-24"
-				},
-				{
-					"type": "zero",
-					"name": "dislike"
-				},
-				{
-					"type": "zero",
-					"name": "doc-csv"
-				},
-				{
-					"type": "zero",
-					"name": "doc-pdf"
-				},
-				{
-					"type": "zero",
-					"name": "doc-txt"
-				},
-				{
-					"type": "zero",
-					"name": "doc-xls"
-				},
-				{
-					"type": "zero",
-					"name": "document-full"
-				},
-				{
-					"type": "zero",
-					"name": "document"
-				},
-				{
-					"type": "zero",
-					"name": "dot"
-				},
-				{
-					"type": "zero",
-					"name": "download"
-				},
-				{
-					"type": "zero",
-					"name": "drag"
-				},
-				{
-					"type": "zero",
-					"name": "edit"
-				},
-				{
-					"type": "zero",
-					"name": "empty-box"
-				},
-				{
-					"type": "zero",
-					"name": "enterprise"
-				},
-				{
-					"type": "zero",
-					"name": "exchange-xy"
-				},
-				{
-					"type": "zero",
-					"name": "exit-fullscreen"
-				},
-				{
-					"type": "zero",
-					"name": "expand"
-				},
-				{
-					"type": "zero",
-					"name": "export-excel"
-				},
-				{
-					"type": "zero",
-					"name": "export"
-				},
-				{
-					"type": "zero",
-					"name": "file"
-				},
-				{
-					"type": "zero",
-					"name": "filter"
-				},
-				{
-					"type": "zero",
-					"name": "fire"
-				},
-				{
-					"type": "zero",
-					"name": "fitscreen-24"
-				},
-				{
-					"type": "zero",
-					"name": "fliter"
-				},
-				{
-					"type": "zero",
-					"name": "folder-open"
-				},
-				{
-					"type": "zero",
-					"name": "folder"
-				},
-				{
-					"type": "zero",
-					"name": "font-Italics"
-				},
-				{
-					"type": "zero",
-					"name": "font-bold"
-				},
-				{
-					"type": "zero",
-					"name": "font-color-merge-a"
-				},
-				{
-					"type": "zero",
-					"name": "font-color-merge"
-				},
-				{
-					"type": "zero",
-					"name": "font-color"
-				},
-				{
-					"type": "zero",
-					"name": "font-size"
-				},
-				{
-					"type": "zero",
-					"name": "font-strikethrough"
-				},
-				{
-					"type": "zero",
-					"name": "font-underline"
-				},
-				{
-					"type": "zero",
-					"name": "forward-o"
-				},
-				{
-					"type": "zero",
-					"name": "freeze-cell"
-				},
-				{
-					"type": "zero",
-					"name": "freeze-column"
-				},
-				{
-					"type": "zero",
-					"name": "freeze-row"
-				},
-				{
-					"type": "zero",
-					"name": "freeze"
-				},
-				{
-					"type": "zero",
-					"name": "fullscreen"
-				},
-				{
-					"type": "zero",
-					"name": "function"
-				},
-				{
-					"type": "zero",
-					"name": "globe-o-24"
-				},
-				{
-					"type": "zero",
-					"name": "group-24"
-				},
-				{
-					"type": "zero",
-					"name": "guide-add"
-				},
-				{
-					"type": "zero",
-					"name": "guide-delete"
-				},
-				{
-					"type": "zero",
-					"name": "help-o-24"
-				},
-				{
-					"type": "zero",
-					"name": "help-o"
-				},
-				{
-					"type": "zero",
-					"name": "help-s"
-				},
-				{
-					"type": "zero",
-					"name": "hexagon"
-				},
-				{
-					"type": "zero",
-					"name": "hidden-cloumn"
-				},
-				{
-					"type": "zero",
-					"name": "hidden-row"
-				},
-				{
-					"type": "zero",
-					"name": "hierarchy"
-				},
-				{
-					"type": "zero",
-					"name": "host"
-				},
-				{
-					"type": "zero",
-					"name": "if"
-				},
-				{
-					"type": "zero",
-					"name": "iframe"
-				},
-				{
-					"type": "zero",
-					"name": "import"
-				},
-				{
-					"type": "zero",
-					"name": "indent"
-				},
-				{
-					"type": "zero",
-					"name": "info-o"
-				},
-				{
-					"type": "zero",
-					"name": "info"
-				},
-				{
-					"type": "zero",
-					"name": "initial"
-				},
-				{
-					"type": "zero",
-					"name": "inner-join"
-				},
-				{
-					"type": "zero",
-					"name": "insert-column"
-				},
-				{
-					"type": "zero",
-					"name": "insert-row"
-				},
-				{
-					"type": "zero",
-					"name": "invisible"
-				},
-				{
-					"type": "zero",
-					"name": "ipad-24"
-				},
-				{
-					"type": "zero",
-					"name": "ipad"
-				},
-				{
-					"type": "zero",
-					"name": "lab-shut-down"
-				},
-				{
-					"type": "zero",
-					"name": "label-04-01"
-				},
-				{
-					"type": "zero",
-					"name": "label1"
-				},
-				{
-					"type": "zero",
-					"name": "label2"
-				},
-				{
-					"type": "zero",
-					"name": "label3"
-				},
-				{
-					"type": "zero",
-					"name": "label4"
-				},
-				{
-					"type": "zero",
-					"name": "lbs-location"
-				},
-				{
-					"type": "zero",
-					"name": "left-join"
-				},
-				{
-					"type": "zero",
-					"name": "left-justified"
-				},
-				{
-					"type": "zero",
-					"name": "legend-1"
-				},
-				{
-					"type": "zero",
-					"name": "lib-24"
-				},
-				{
-					"type": "zero",
-					"name": "lib"
-				},
-				{
-					"type": "zero",
-					"name": "lighting"
-				},
-				{
-					"type": "zero",
-					"name": "like-24"
-				},
-				{
-					"type": "zero",
-					"name": "like-fill"
-				},
-				{
-					"type": "zero",
-					"name": "like-l-24"
-				},
-				{
-					"type": "zero",
-					"name": "like"
-				},
-				{
-					"type": "zero",
-					"name": "line-chart"
-				},
-				{
-					"type": "zero",
-					"name": "link"
-				},
-				{
-					"type": "zero",
-					"name": "list-alt"
-				},
-				{
-					"type": "zero",
-					"name": "list-ol"
-				},
-				{
-					"type": "zero",
-					"name": "list"
-				},
-				{
-					"type": "zero",
-					"name": "loading-spinner"
-				},
-				{
-					"type": "zero",
-					"name": "loading"
-				},
-				{
-					"type": "zero",
-					"name": "locate-o"
-				},
-				{
-					"type": "zero",
-					"name": "location-"
-				},
-				{
-					"type": "zero",
-					"name": "location-delete"
-				},
-				{
-					"type": "zero",
-					"name": "location"
-				},
-				{
-					"type": "zero",
-					"name": "lock-row"
-				},
-				{
-					"type": "zero",
-					"name": "lock"
-				},
-				{
-					"type": "zero",
-					"name": "logo-bg"
-				},
-				{
-					"type": "zero",
-					"name": "mail"
-				},
-				{
-					"type": "zero",
-					"name": "map-bubble-hover"
-				},
-				{
-					"type": "zero",
-					"name": "map-bubble"
-				},
-				{
-					"type": "zero",
-					"name": "map-color-hover"
-				},
-				{
-					"type": "zero",
-					"name": "map-color"
-				},
-				{
-					"type": "zero",
-					"name": "map-sankey"
-				},
-				{
-					"type": "zero",
-					"name": "merge-cell"
-				},
-				{
-					"type": "zero",
-					"name": "minus-cycle-o"
-				},
-				{
-					"type": "zero",
-					"name": "more"
-				},
-				{
-					"type": "zero",
-					"name": "movable"
-				},
-				{
-					"type": "zero",
-					"name": "moveto"
-				},
-				{
-					"type": "zero",
-					"name": "multi-line-text"
-				},
-				{
-					"type": "zero",
-					"name": "multidimensional-24"
-				},
-				{
-					"type": "zero",
-					"name": "new-document-24"
-				},
-				{
-					"type": "zero",
-					"name": "new-document-dashboard"
-				},
-				{
-					"type": "zero",
-					"name": "new-document-worksheet"
-				},
-				{
-					"type": "zero",
-					"name": "new-document"
-				},
-				{
-					"type": "zero",
-					"name": "node-collapse"
-				},
-				{
-					"type": "zero",
-					"name": "node-expand"
-				},
-				{
-					"type": "zero",
-					"name": "num"
-				},
-				{
-					"type": "zero",
-					"name": "o-c"
-				},
-				{
-					"type": "zero",
-					"name": "oil-table-chart"
-				},
-				{
-					"type": "zero",
-					"name": "ok-c"
-				},
-				{
-					"type": "zero",
-					"name": "ok-l"
-				},
-				{
-					"type": "zero",
-					"name": "ok-o"
-				},
-				{
-					"type": "zero",
-					"name": "ok-s"
-				},
-				{
-					"type": "zero",
-					"name": "ok"
-				},
-				{
-					"type": "zero",
-					"name": "open-l"
-				},
-				{
-					"type": "zero",
-					"name": "open"
-				},
-				{
-					"type": "zero",
-					"name": "operation"
-				},
-				{
-					"type": "zero",
-					"name": "optimization"
-				},
-				{
-					"type": "zero",
-					"name": "page-1"
-				},
-				{
-					"type": "zero",
-					"name": "paragraph"
-				},
-				{
-					"type": "zero",
-					"name": "paste-l"
-				},
-				{
-					"type": "zero",
-					"name": "pause-o"
-				},
-				{
-					"type": "zero",
-					"name": "pause"
-				},
-				{
-					"type": "zero",
-					"name": "pencil-l"
-				},
-				{
-					"type": "zero",
-					"name": "percent"
-				},
-				{
-					"type": "zero",
-					"name": "permission"
-				},
-				{
-					"type": "zero",
-					"name": "phone-24"
-				},
-				{
-					"type": "zero",
-					"name": "phone"
-				},
-				{
-					"type": "zero",
-					"name": "picture"
-				},
-				{
-					"type": "zero",
-					"name": "pie-3d-chart"
-				},
-				{
-					"type": "zero",
-					"name": "pie-chart"
-				},
-				{
-					"type": "zero",
-					"name": "pin"
-				},
-				{
-					"type": "zero",
-					"name": "plus-24"
-				},
-				{
-					"type": "zero",
-					"name": "plus-dot-o"
-				},
-				{
-					"type": "zero",
-					"name": "plus-l-thin"
-				},
-				{
-					"type": "zero",
-					"name": "plus-l"
-				},
-				{
-					"type": "zero",
-					"name": "plus-o-24"
-				},
-				{
-					"type": "zero",
-					"name": "plus-o"
-				},
-				{
-					"type": "zero",
-					"name": "plus"
-				},
-				{
-					"type": "zero",
-					"name": "pointer"
-				},
-				{
-					"type": "zero",
-					"name": "polar-chart"
-				},
-				{
-					"type": "zero",
-					"name": "position-bottom"
-				},
-				{
-					"type": "zero",
-					"name": "position-left"
-				},
-				{
-					"type": "zero",
-					"name": "position-right"
-				},
-				{
-					"type": "zero",
-					"name": "position-top"
-				},
-				{
-					"type": "zero",
-					"name": "preview-24"
-				},
-				{
-					"type": "zero",
-					"name": "project-24"
-				},
-				{
-					"type": "zero",
-					"name": "publish-fail-24"
-				},
-				{
-					"type": "zero",
-					"name": "publish-l-24"
-				},
-				{
-					"type": "zero",
-					"name": "publish-run-24"
-				},
-				{
-					"type": "zero",
-					"name": "publish-stop-24"
-				},
-				{
-					"type": "zero",
-					"name": "publish-success-24"
-				},
-				{
-					"type": "zero",
-					"name": "publish-wait-24"
-				},
-				{
-					"type": "zero",
-					"name": "publish"
-				},
-				{
-					"type": "zero",
-					"name": "query"
-				},
-				{
-					"type": "zero",
-					"name": "radar-chart"
-				},
-				{
-					"type": "zero",
-					"name": "radius"
-				},
-				{
-					"type": "zero",
-					"name": "real-size-24"
-				},
-				{
-					"type": "zero",
-					"name": "redo-1"
-				},
-				{
-					"type": "zero",
-					"name": "redo"
-				},
-				{
-					"type": "zero",
-					"name": "refresh"
-				},
-				{
-					"type": "zero",
-					"name": "rename"
-				},
-				{
-					"type": "zero",
-					"name": "report-24"
-				},
-				{
-					"type": "zero",
-					"name": "report"
-				},
-				{
-					"type": "zero",
-					"name": "rerun-24"
-				},
-				{
-					"type": "zero",
-					"name": "rerun"
-				},
-				{
-					"type": "zero",
-					"name": "right-justified"
-				},
-				{
-					"type": "zero",
-					"name": "rmb"
-				},
-				{
-					"type": "zero",
-					"name": "rocket"
-				},
-				{
-					"type": "zero",
-					"name": "run-from"
-				},
-				{
-					"type": "zero",
-					"name": "run-node"
-				},
-				{
-					"type": "zero",
-					"name": "run-o-24"
-				},
-				{
-					"type": "zero",
-					"name": "run-stop"
-				},
-				{
-					"type": "zero",
-					"name": "run"
-				},
-				{
-					"type": "zero",
-					"name": "s"
-				},
-				{
-					"type": "zero",
-					"name": "save-24"
-				},
-				{
-					"type": "zero",
-					"name": "save-as-24"
-				},
-				{
-					"type": "zero",
-					"name": "save-as"
-				},
-				{
-					"type": "zero",
-					"name": "save"
-				},
-				{
-					"type": "zero",
-					"name": "schema"
-				},
-				{
-					"type": "zero",
-					"name": "script"
-				},
-				{
-					"type": "zero",
-					"name": "search-24"
-				},
-				{
-					"type": "zero",
-					"name": "search"
-				},
-				{
-					"type": "zero",
-					"name": "selected"
-				},
-				{
-					"type": "zero",
-					"name": "separate-cell"
-				},
-				{
-					"type": "zero",
-					"name": "separators"
-				},
-				{
-					"type": "zero",
-					"name": "sequence-h-a-z"
-				},
-				{
-					"type": "zero",
-					"name": "sequence-h-z-a"
-				},
-				{
-					"type": "zero",
-					"name": "sequence-h"
-				},
-				{
-					"type": "zero",
-					"name": "sequence-v-a-z"
-				},
-				{
-					"type": "zero",
-					"name": "sequence-v-z-a"
-				},
-				{
-					"type": "zero",
-					"name": "sequence-v"
-				},
-				{
-					"type": "zero",
-					"name": "setting-24"
-				},
-				{
-					"type": "zero",
-					"name": "setting"
-				},
-				{
-					"type": "zero",
-					"name": "shape"
-				},
-				{
-					"type": "zero",
-					"name": "share-from"
-				},
-				{
-					"type": "zero",
-					"name": "share"
-				},
-				{
-					"type": "zero",
-					"name": "sheet-1"
-				},
-				{
-					"type": "zero",
-					"name": "sheet-4"
-				},
-				{
-					"type": "zero",
-					"name": "slash"
-				},
-				{
-					"type": "zero",
-					"name": "slider-play"
-				},
-				{
-					"type": "zero",
-					"name": "slider"
-				},
-				{
-					"type": "zero",
-					"name": "sort-a-z"
-				},
-				{
-					"type": "zero",
-					"name": "sort"
-				},
-				{
-					"type": "zero",
-					"name": "sql"
-				},
-				{
-					"type": "zero",
-					"name": "stack"
-				},
-				{
-					"type": "zero",
-					"name": "star-l"
-				},
-				{
-					"type": "zero",
-					"name": "star-remove-l"
-				},
-				{
-					"type": "zero",
-					"name": "star"
-				},
-				{
-					"type": "zero",
-					"name": "stop-o-24"
-				},
-				{
-					"type": "zero",
-					"name": "stop-o"
-				},
-				{
-					"type": "zero",
-					"name": "string"
-				},
-				{
-					"type": "zero",
-					"name": "stroke-bottom"
-				},
-				{
-					"type": "zero",
-					"name": "stroke-left"
-				},
-				{
-					"type": "zero",
-					"name": "stroke-right"
-				},
-				{
-					"type": "zero",
-					"name": "stroke-top"
-				},
-				{
-					"type": "zero",
-					"name": "stroke"
-				},
-				{
-					"type": "zero",
-					"name": "subscribe-24"
-				},
-				{
-					"type": "zero",
-					"name": "subtotals"
-				},
-				{
-					"type": "zero",
-					"name": "sum"
-				},
-				{
-					"type": "zero",
-					"name": "suspend-cycle-o"
-				},
-				{
-					"type": "zero",
-					"name": "suspend"
-				},
-				{
-					"type": "zero",
-					"name": "sync-o"
-				},
-				{
-					"type": "zero",
-					"name": "sync"
-				},
-				{
-					"type": "zero",
-					"name": "tab"
-				},
-				{
-					"type": "zero",
-					"name": "table"
-				},
-				{
-					"type": "zero",
-					"name": "target"
-				},
-				{
-					"type": "zero",
-					"name": "text"
-				},
-				{
-					"type": "zero",
-					"name": "thumnail"
-				},
-				{
-					"type": "zero",
-					"name": "time-o"
-				},
-				{
-					"type": "zero",
-					"name": "transfer"
-				},
-				{
-					"type": "zero",
-					"name": "transform-1"
-				},
-				{
-					"type": "zero",
-					"name": "transform-2"
-				},
-				{
-					"type": "zero",
-					"name": "triangle-24"
-				},
-				{
-					"type": "zero",
-					"name": "undo-1"
-				},
-				{
-					"type": "zero",
-					"name": "undo"
-				},
-				{
-					"type": "zero",
-					"name": "ungroup-24"
-				},
-				{
-					"type": "zero",
-					"name": "unindent"
-				},
-				{
-					"type": "zero",
-					"name": "unlink"
-				},
-				{
-					"type": "zero",
-					"name": "unstack"
-				},
-				{
-					"type": "zero",
-					"name": "unstroke"
-				},
-				{
-					"type": "zero",
-					"name": "upload-l-24"
-				},
-				{
-					"type": "zero",
-					"name": "upload-l"
-				},
-				{
-					"type": "zero",
-					"name": "upload"
-				},
-				{
-					"type": "zero",
-					"name": "user-o-24"
-				},
-				{
-					"type": "zero",
-					"name": "user-o"
-				},
-				{
-					"type": "zero",
-					"name": "user"
-				},
-				{
-					"type": "zero",
-					"name": "visible-l"
-				},
-				{
-					"type": "zero",
-					"name": "visible"
-				},
-				{
-					"type": "zero",
-					"name": "warning-o"
-				},
-				{
-					"type": "zero",
-					"name": "warning"
-				},
-				{
-					"type": "zero",
-					"name": "y-axis"
-				},
-				{
-					"type": "zero",
-					"name": "yy-axis"
-				},
-				{
-					"type": "zero",
-					"name": "zoom-in-24"
-				},
-				{
-					"type": "zero",
-					"name": "zoom-in"
-				},
-				{
-					"type": "zero",
-					"name": "zoom-out-24"
-				},
-				{
-					"type": "zero",
-					"name": "zoom-out"
-				},
-				{
-					"type": "zero",
-					"name": "zoom-part"
-				}
+				"3-list",
+				"add-folder",
+				"agent",
+				"align-2-bottom",
+				"align-2-center",
+				"align-2-left",
+				"align-2-middle",
+				"align-2-right",
+				"align-2-top",
+				"align-center",
+				"align-left",
+				"align-right",
+				"analysis",
+				"anchor",
+				"app-dashboard",
+				"app-pai",
+				"app-worksheet",
+				"area-chart",
+				"arrow-bottom-dot",
+				"arrow-bottom-l",
+				"arrow-down-l",
+				"arrow-down",
+				"arrow-left-d-l",
+				"arrow-left-l",
+				"arrow-left",
+				"arrow-minus",
+				"arrow-reduce",
+				"arrow-right-d-l",
+				"arrow-right-l",
+				"arrow-right-o",
+				"arrow-right",
+				"arrow-rise",
+				"arrow-top-dot",
+				"arrow-top-l",
+				"arrow-top",
+				"arrow-up-l",
+				"arrow-up",
+				"asterisk",
+				"attachment",
+				"auto-align-24",
+				"auto-merge-cell",
+				"backward-cycly-o",
+				"bring-to-bottom",
+				"bring-to-downer",
+				"bring-to-top",
+				"bring-to-upper",
+				"bucket-a",
+				"bucket",
+				"c",
+				"calendar",
+				"center-justified",
+				"chart-bar",
+				"chart-from-to",
+				"chart-funnel-plot",
+				"chart-funnel",
+				"chart-index",
+				"chart-new",
+				"chart-scatter",
+				"chart-word-cloud",
+				"chart",
+				"check-triangle",
+				"clear",
+				"click",
+				"close-c",
+				"close-l",
+				"close-o",
+				"closedhand-24",
+				"collapse",
+				"color",
+				"comment-full-l",
+				"comment-l",
+				"component-24",
+				"component",
+				"concentric-pie-chart",
+				"console-24",
+				"copy-l",
+				"copy-node",
+				"cry",
+				"custom-text",
+				"cut",
+				"cycle-24",
+				"dashboard-24",
+				"data-agent-legend-dimension",
+				"data-agent-legend-measure",
+				"data-source-24",
+				"data",
+				"default-24",
+				"default-justified",
+				"delete-column",
+				"delete-row",
+				"delete",
+				"desktop-24",
+				"desktop",
+				"dials",
+				"diamond-24",
+				"diamond-ok-l",
+				"diamond",
+				"dimensions",
+				"direction-horizontal",
+				"direction-vertical",
+				"dislike-24",
+				"dislike-fill",
+				"dislike-l-24",
+				"dislike",
+				"doc-csv",
+				"doc-pdf",
+				"doc-txt",
+				"doc-xls",
+				"document-full",
+				"document",
+				"dot",
+				"download",
+				"drag",
+				"edit",
+				"empty-box",
+				"enterprise",
+				"exchange-xy",
+				"exit-fullscreen",
+				"expand",
+				"export-excel",
+				"export",
+				"file",
+				"filter",
+				"fire",
+				"fitscreen-24",
+				"fliter",
+				"folder-open",
+				"folder",
+				"font-Italics",
+				"font-bold",
+				"font-color-merge-a",
+				"font-color-merge",
+				"font-color",
+				"font-size",
+				"font-strikethrough",
+				"font-underline",
+				"forward-o",
+				"freeze-cell",
+				"freeze-column",
+				"freeze-row",
+				"freeze",
+				"fullscreen",
+				"function",
+				"globe-o-24",
+				"group-24",
+				"guide-add",
+				"guide-delete",
+				"help-o-24",
+				"help-o",
+				"help-s",
+				"hexagon",
+				"hidden-cloumn",
+				"hidden-row",
+				"hierarchy",
+				"host",
+				"if",
+				"iframe",
+				"import",
+				"indent",
+				"info-o",
+				"info",
+				"initial",
+				"inner-join",
+				"insert-column",
+				"insert-row",
+				"invisible",
+				"ipad-24",
+				"ipad",
+				"lab-shut-down",
+				"label-04-01",
+				"label1",
+				"label2",
+				"label3",
+				"label4",
+				"lbs-location",
+				"left-join",
+				"left-justified",
+				"legend-1",
+				"lib-24",
+				"lib",
+				"lighting",
+				"like-24",
+				"like-fill",
+				"like-l-24",
+				"like",
+				"line-chart",
+				"link",
+				"list-alt",
+				"list-ol",
+				"list",
+				"loading-spinner",
+				"loading",
+				"locate-o",
+				"location-",
+				"location-delete",
+				"location",
+				"lock-row",
+				"lock",
+				"logo-bg",
+				"mail",
+				"map-bubble-hover",
+				"map-bubble",
+				"map-color-hover",
+				"map-color",
+				"map-sankey",
+				"merge-cell",
+				"minus-cycle-o",
+				"more",
+				"movable",
+				"moveto",
+				"multi-line-text",
+				"multidimensional-24",
+				"new-document-24",
+				"new-document-dashboard",
+				"new-document-worksheet",
+				"new-document",
+				"node-collapse",
+				"node-expand",
+				"num",
+				"o-c",
+				"oil-table-chart",
+				"ok-c",
+				"ok-l",
+				"ok-o",
+				"ok-s",
+				"ok",
+				"open-l",
+				"open",
+				"operation",
+				"optimization",
+				"page-1",
+				"paragraph",
+				"paste-l",
+				"pause-o",
+				"pause",
+				"pencil-l",
+				"percent",
+				"permission",
+				"phone-24",
+				"phone",
+				"picture",
+				"pie-3d-chart",
+				"pie-chart",
+				"pin",
+				"plus-24",
+				"plus-dot-o",
+				"plus-l-thin",
+				"plus-l",
+				"plus-o-24",
+				"plus-o",
+				"plus",
+				"pointer",
+				"polar-chart",
+				"position-bottom",
+				"position-left",
+				"position-right",
+				"position-top",
+				"preview-24",
+				"project-24",
+				"publish-fail-24",
+				"publish-l-24",
+				"publish-run-24",
+				"publish-stop-24",
+				"publish-success-24",
+				"publish-wait-24",
+				"publish",
+				"query",
+				"radar-chart",
+				"radius",
+				"real-size-24",
+				"redo-1",
+				"redo",
+				"refresh",
+				"rename",
+				"report-24",
+				"report",
+				"rerun-24",
+				"rerun",
+				"right-justified",
+				"rmb",
+				"rocket",
+				"run-from",
+				"run-node",
+				"run-o-24",
+				"run-stop",
+				"run",
+				"s",
+				"save-24",
+				"save-as-24",
+				"save-as",
+				"save",
+				"schema",
+				"script",
+				"search-24",
+				"search",
+				"selected",
+				"separate-cell",
+				"separators",
+				"sequence-h-a-z",
+				"sequence-h-z-a",
+				"sequence-h",
+				"sequence-v-a-z",
+				"sequence-v-z-a",
+				"sequence-v",
+				"setting-24",
+				"setting",
+				"shape",
+				"share-from",
+				"share",
+				"sheet-1",
+				"sheet-4",
+				"slash",
+				"slider-play",
+				"slider",
+				"sort-a-z",
+				"sort",
+				"sql",
+				"stack",
+				"star-l",
+				"star-remove-l",
+				"star",
+				"stop-o-24",
+				"stop-o",
+				"string",
+				"stroke-bottom",
+				"stroke-left",
+				"stroke-right",
+				"stroke-top",
+				"stroke",
+				"subscribe-24",
+				"subtotals",
+				"sum",
+				"suspend-cycle-o",
+				"suspend",
+				"sync-o",
+				"sync",
+				"tab",
+				"table",
+				"target",
+				"text",
+				"thumnail",
+				"time-o",
+				"transfer",
+				"transform-1",
+				"transform-2",
+				"triangle-24",
+				"undo-1",
+				"undo",
+				"ungroup-24",
+				"unindent",
+				"unlink",
+				"unstack",
+				"unstroke",
+				"upload-l-24",
+				"upload-l",
+				"upload",
+				"user-o-24",
+				"user-o",
+				"user",
+				"visible-l",
+				"visible",
+				"warning-o",
+				"warning",
+				"y-axis",
+				"yy-axis",
+				"zoom-in-24",
+				"zoom-in",
+				"zoom-out-24",
+				"zoom-out",
+				"zoom-part"
 			]
 		}
 	};
