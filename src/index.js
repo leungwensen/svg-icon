@@ -13,7 +13,11 @@ const $types = $('#icon-types');
 const $loading = $('#loading');
 
 function renderIconsByType(type) {
-  const meta = icons[type] || icons.ant;
+  let meta = icons[type];
+  if (!meta) {
+    type = 'ant';
+    meta = icons.ant;
+  }
   if (meta && !meta.rendered) {
     $loading[0].setAttribute('style', 'display: block;');
     $.get(`./dist/sprite/symbol/${type}.svg`, (res) => {
@@ -49,7 +53,6 @@ $icons.tabslet({
 $icons.on('_after', (e) => {
   const $tab = $(e.target);
   const type = $tab.data('type');
-  console.log(type);
   renderIconsByType(type);
 });
 

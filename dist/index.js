@@ -68,7 +68,11 @@ var svgIcon =
 	var $loading = (0, _jquery2.default)('#loading');
 
 	function renderIconsByType(type) {
-	  var meta = icons[type] || icons.ant;
+	  var meta = icons[type];
+	  if (!meta) {
+	    type = 'ant';
+	    meta = icons.ant;
+	  }
 	  if (meta && !meta.rendered) {
 	    $loading[0].setAttribute('style', 'display: block;');
 	    _jquery2.default.get('./dist/sprite/symbol/' + type + '.svg', function (res) {
@@ -95,7 +99,6 @@ var svgIcon =
 	$icons.on('_after', function (e) {
 	  var $tab = (0, _jquery2.default)(e.target);
 	  var type = $tab.data('type');
-	  console.log(type);
 	  renderIconsByType(type);
 	});
 
