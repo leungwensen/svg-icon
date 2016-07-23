@@ -1,4 +1,4 @@
-require('./index.less');
+require('./style/index.less');
 
 import $ from 'jquery';
 import lang from 'zero-lang';
@@ -22,13 +22,13 @@ function renderIconsByType(type) {
       setTimeout(() => {
         const $type = $(`#${type}`);
         lang.each(icons[type].icons, (icon) => {
-          icon.id = `si-${icon.type}-${icon.name}`;
-          $type.append(`<figure class="si-figure" data-type="${type}" data-id="${icon.id}">
-          <div id="figure-${icon.id}"></div>
-          <figcaption>${icon.type}-${icon.name}</figcaption>
+          const id = `si-${type}-${icon}`;
+          $type.append(`<figure class="si-figure" data-type="${type}" data-id="${id}">
+          <div id="figure-${id}"></div>
+          <figcaption>${type}-${icon}</figcaption>
         </figure>`);
-          $(`#figure-${icon.id}`).append(`<div class="si-wrapper ${icon.id}">
-          <svg class="si"><use xlink:href="#${icon.id}"></use></svg>
+          $(`#figure-${id}`).append(`<div class="si-wrapper ${id}">
+          <svg class="si"><use xlink:href="#${id}"></use></svg>
         </div>`);
         });
         meta.rendered = true;

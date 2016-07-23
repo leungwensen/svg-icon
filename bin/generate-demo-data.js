@@ -25,10 +25,7 @@ function reduceIcons(file, cb) { // removing prefix in filename
   const name = arr[len - 1].replace(/\.svg$/, '');
   icons[type] = icons[type] || {};
   icons[type].icons = icons[type].icons || [];
-  icons[type].icons.push({
-    type,
-    name
-  });
+  icons[type].icons.push(name);
   cb(null, file);
 }
 

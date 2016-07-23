@@ -1,0 +1,27 @@
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+#loading {
+  background: rgba(255, 255, 255, .8);
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  .si-wrapper {
+    -webkit-animation: spin 1s steps(12) infinite;
+    animation: spin 1s steps(12) infinite;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
