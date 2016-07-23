@@ -43,7 +43,7 @@ typicons         | typcn-       | https://github.com/stephenhutchings/typicons.f
 weather-icons    | weather-     | https://github.com/erikflowers/weather-icons       | yes
 windows-icons    | windows-     | https://github.com/Templarian/WindowsIcons         | yes
 zero             | zero-        | src/zero                                           | yes
-zocial           | zocial-      | https://github.com/smcllns/css-social-buttons      | no
+zocial           | zocial-      | https://github.com/smcllns/css-social-buttons      | yes
 
 Need more? Please leave an [issue][issues] or a [pull request][pull-requests].
 
