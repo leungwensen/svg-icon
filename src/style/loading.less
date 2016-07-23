@@ -1,12 +1,7 @@
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+@import "../../node_modules/spinkit/css/spinners/2-double-bounce.css";
 
 #loading {
-  background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, 0.8);
   box-sizing: border-box;
   height: 100%;
   left: 0;
@@ -14,9 +9,7 @@
   top: 0;
   width: 100%;
   z-index: 99999;
-  .si-wrapper {
-    -webkit-animation: spin 1s steps(12) infinite;
-    animation: spin 1s steps(12) infinite;
+  .sk-double-bounce {
     bottom: 0;
     left: 0;
     margin: auto;

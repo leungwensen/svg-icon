@@ -1,58 +1,60 @@
 require('./style/index.less');
-
 import $ from 'jquery';
-import lang from 'zero-lang';
+require('tabslet');
 import {
   saveAs
 } from 'file-saver';
 
 const icons = require('json!./data/icons.json');
+const types = $.map(icons, (meta, type) => type);
 
 const $body = $('body');
-const $types = $('#types');
 const $icons = $('#icons');
+const $types = $('#icon-types');
 const $loading = $('#loading');
 
 function renderIconsByType(type) {
-  const meta = icons[type];
-  if (!meta.rendered) {
+  const meta = icons[type] || icons.ant;
+  if (meta && !meta.rendered) {
     $loading[0].setAttribute('style', 'display: block;');
     $.get(`./dist/sprite/symbol/${type}.svg`, (res) => {
       $body.prepend(new XMLSerializer().serializeToString(res));
-      setTimeout(() => {
-        const $type = $(`#${type}`);
-        lang.each(icons[type].icons, (icon) => {
-          const id = `si-${type}-${icon}`;
-          $type.append(`<figure class="si-figure" data-type="${type}" data-id="${id}">
+      const $type = $(`#${type}`);
+      $.each(icons[type].icons, (index, icon) => {
+        const id = `si-${type}-${icon}`;
+        $type.append(`<figure class="si-figure" data-type="${type}" data-id="${id}">
           <div id="figure-${id}"></div>
           <figcaption>${type}-${icon}</figcaption>
         </figure>`);
-          $(`#figure-${id}`).append(`<div class="si-wrapper ${id}">
+        $(`#figure-${id}`).append(`<div class="si-wrapper ${id}">
           <svg class="si"><use xlink:href="#${id}"></use></svg>
         </div>`);
-        });
-        meta.rendered = true;
-        $loading.hide();
-      }, 10);
+      });
+      meta.rendered = true;
+      $loading.hide();
     });
   }
 }
 
-lang.forIn(icons, (meta, type) => {
-  $types.append(`<li role="presentation">
-    <a href="#${type}" aria-controls="home" role="tab" data-toggle="tab" data-type="${type}">
-    ${meta.name} <span class="badge selected-count" data-type="${type}"></span>
-    </a>
+$.each(icons, (type, meta) => {
+  $types.append(`<li data-type="${type}">
+    <a href="#${type}">${meta.name}<span class="selected-count" data-type="${type}"></span></a>
   </li>`);
-  $icons.append(`<div role="tabpanel" class="tab-pane" id="${type}">
+  $icons.append(`<div class="tab-content" id="${type}">
     <p class="center"><input type="checkbox" class="select-all" data-type="${type}"/> Select All</p>
   </div>`);
 });
-renderIconsByType('ant');
-
-$('a[data-toggle="tab"]').on('shown.bs.tab', (e) => {
-  renderIconsByType($(e.target).data('type'));
+$icons.tabslet({
+  deeplinking: true
 });
+$icons.on('_after', function (e) {
+  const $tab = $(e.target);
+  const type = $tab.data('type');
+  console.log(type);
+  renderIconsByType(type);
+});
+
+renderIconsByType(location.hash.replace(/^#/, ''));
 
 function syncSelectedCount(type) {
   const count = $(`#${type}`).find('.si-figure.selected').length;
@@ -87,11 +89,11 @@ $(document).on('click', '.si-figure', function () {
 });
 
 $('#download').on('click', () => {
-  const ids = lang.map($('.selected.si-figure'), (item) => $(item).data('id'));
+  const ids = $.map($('.selected.si-figure'), (item) => $(item).data('id'));
   if (!ids.length) {
     alert('Please select at lease one icon');
   } else {
-    const symbols = lang.map(ids, (id) => {
+    const symbols = $.map(ids, (id) => {
       if ($(`#${id}`)[0]) {
         return $(`#${id}`)[0].outerHTML;
       }
@@ -106,6 +108,3 @@ $('#download').on('click', () => {
     saveAs(blob, 'si-sprite.svg');
   }
 });
-
-$types.children().first().addClass('active');
-$icons.children().first().addClass('active');
