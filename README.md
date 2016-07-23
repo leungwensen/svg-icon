@@ -36,12 +36,12 @@ mfglabs-iconset  | mfglabs-     | https://github.com/MfgLabs/mfglabs-iconset    
 octicons         | oct-         | https://github.com/primer/octicons                 | yes
 open-iconic      | open-        | https://github.com/iconic/open-iconic              | yes
 payment-font     | payment-     | https://github.com/vendocrat/PaymentFont           | yes
-payment-webfont  | payment-web- | https://github.com/orlandotm/payment-webfont       | no
-simple-icons     | simple-      | https://github.com/danleech/simple-icons           | no
-subway           | subway-      | https://github.com/mariuszostrowski/subway         | no
-typicons         | typcn-       | https://github.com/stephenhutchings/typicons.font  | no
-weather-icons    | weather-     | https://github.com/erikflowers/weather-icons       | no
-windows-icons    | windows-     | https://github.com/Templarian/WindowsIcons         | no
+payment-webfont  | payment-web- | https://github.com/orlandotm/payment-webfont       | yes
+simple-icons     | simple-      | https://github.com/danleech/simple-icons           | yes
+subway           | subway-      | https://github.com/mariuszostrowski/subway         | yes
+typicons         | typcn-       | https://github.com/stephenhutchings/typicons.font  | yes
+weather-icons    | weather-     | https://github.com/erikflowers/weather-icons       | yes
+windows-icons    | windows-     | https://github.com/Templarian/WindowsIcons         | yes
 zero             | zero-        | src/zero                                           | yes
 zocial           | zocial-      | https://github.com/smcllns/css-social-buttons      | no
 
