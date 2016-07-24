@@ -44,6 +44,9 @@ weather-icons    | weather-     | https://github.com/erikflowers/weather-icons  
 windows-icons    | windows-     | https://github.com/Templarian/WindowsIcons         | yes
 zero             | zero-        | src/zero                                           | yes
 zocial           | zocial-      | https://github.com/smcllns/css-social-buttons      | yes
+flat-ui          | flat-        | https://github.com/designmodo/Flat-UI              | no
+metro-ui-css     | metro-       | https://github.com/olton/Metro-UI-CSS              | no
+semantic-ui      | semantic-    | https://github.com/Semantic-Org/Semantic-UI/       | no
 
 Need more? Please leave an [issue][issues] or a [pull request][pull-requests].
 
