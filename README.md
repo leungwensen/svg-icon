@@ -24,6 +24,7 @@ elusive-iconfont | elusive-     | https://github.com/reduxframework/elusive-icon
 entypo           | entypo-      | https://github.com/danielbruce/entypo              | yes
 evil-icons       | evil-        | https://github.com/outpunk/evil-icons              | yes
 flag-icon        | flag-        | https://github.com/lipis/flag-icon-css             | yes
+flat-ui          | flat-        | https://github.com/designmodo/Flat-UI              | yes
 font-awesome     | awesome-     | https://github.com/FortAwesome/Font-Awesome        | yes
 foundation       | foundation-  | https://github.com/zurb/foundation-icon-fonts      | yes
 geomicons-open   | geom-        | https://github.com/jxnblk/geomicons-open           | yes
@@ -44,9 +45,8 @@ weather-icons    | weather-     | https://github.com/erikflowers/weather-icons  
 windows-icons    | windows-     | https://github.com/Templarian/WindowsIcons         | yes
 zero             | zero-        | src/zero                                           | yes
 zocial           | zocial-      | https://github.com/smcllns/css-social-buttons      | yes
-flat-ui          | flat-        | https://github.com/designmodo/Flat-UI              | no
-metro-ui-css     | metro-       | https://github.com/olton/Metro-UI-CSS              | no
-semantic-ui      | semantic-    | https://github.com/Semantic-Org/Semantic-UI/       | no
+metro-ui-css     | metro-       | https://github.com/olton/Metro-UI-CSS              | yes
+semantic-ui      | semantic-    | https://github.com/Semantic-Org/Semantic-UI/       | yes(it uses octicons or font-awesome as its icon vendor)
 
 Need more? Please leave an [issue][issues] or a [pull request][pull-requests].
 
