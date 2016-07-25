@@ -33,11 +33,13 @@ ioncons          | ionic-       | https://github.com/driftyco/ionicons          
 maki             | maki-        | https://github.com/mapbox/maki                     | yes
 map-icons        | map-         | https://github.com/scottdejonge/map-icons          | yes
 material-design  | material-    | https://github.com/google/material-design-icons    | yes
+metro-ui-css     | metro-       | https://github.com/olton/Metro-UI-CSS              | yes
 mfglabs-iconset  | mfglabs-     | https://github.com/MfgLabs/mfglabs-iconset         | yes
 octicons         | oct-         | https://github.com/primer/octicons                 | yes
 open-iconic      | open-        | https://github.com/iconic/open-iconic              | yes
 payment-font     | payment-     | https://github.com/vendocrat/PaymentFont           | yes
 payment-webfont  | payment-web- | https://github.com/orlandotm/payment-webfont       | yes
+semantic-ui      | semantic-    | https://github.com/Semantic-Org/Semantic-UI/       | yes(octicons/font-awesome as its icons vendor)
 simple-icons     | simple-      | https://github.com/danleech/simple-icons           | yes
 subway           | subway-      | https://github.com/mariuszostrowski/subway         | yes
 typicons         | typcn-       | https://github.com/stephenhutchings/typicons.font  | yes
@@ -45,8 +47,6 @@ weather-icons    | weather-     | https://github.com/erikflowers/weather-icons  
 windows-icons    | windows-     | https://github.com/Templarian/WindowsIcons         | yes
 zero             | zero-        | src/zero                                           | yes
 zocial           | zocial-      | https://github.com/smcllns/css-social-buttons      | yes
-metro-ui-css     | metro-       | https://github.com/olton/Metro-UI-CSS              | yes
-semantic-ui      | semantic-    | https://github.com/Semantic-Org/Semantic-UI/       | yes(it uses octicons or font-awesome as its icon vendor)
 
 Need more? Please leave an [issue][issues] or a [pull request][pull-requests].
 
