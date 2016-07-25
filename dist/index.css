@@ -570,8 +570,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 0;
   background-color: #f9f9f9;
   outline: 1px solid white;
-  width: 140px;
-  height: 110px;
+  height: 100px;
   color: #999;
   vertical-align: top;
   text-align: center;
@@ -597,6 +596,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .si-figure.selected svg {
   fill: white;
+}
+@media only screen and (min-width: 768px) {
+  .si-figure {
+    width: 12.5%;
+  }
 }
 @media only screen and (max-width: 768px) {
   .si-figure {
