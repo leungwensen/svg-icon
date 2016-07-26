@@ -1,5 +1,6 @@
-const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -64,10 +65,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
   ],
   externals: {
     jquery: 'jQuery',
   },
 };
-
