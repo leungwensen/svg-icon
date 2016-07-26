@@ -1,4 +1,3 @@
-
 .si-figure {
   padding: 5px 0;
   position: relative;
@@ -6,8 +5,7 @@
   margin: 0;
   background-color: #f9f9f9;
   outline: 1px solid white;
-  width: 140px;
-  height: 110px;
+  height: 100px;
   color: #999;
   vertical-align: top;
   text-align: center;
@@ -20,18 +18,24 @@
   }
   &:hover {
     background-color: #dfd;
-    color: #337ab7;
+    color: @main-color;
     svg {
-      fill: #337ab7;
+      fill: @main-color;
     }
   }
   &.selected {
-    background-color: #337ab7;
+    background-color: @main-color;
     color: white;
     opacity: .9;
     svg {
       fill: white;
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .si-figure {
+    width: 12.5%;
   }
 }
 
