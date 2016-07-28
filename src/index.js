@@ -25,13 +25,17 @@ function renderIconsByType(type) {
       const $type = $(`#${type}`);
       $.each(icons[type].icons, (index, icon) => {
         const id = `si-${type}-${icon}`;
-        $type.append(`<figure class="si-figure" data-type="${type}" data-id="${id}">
-          <div id="figure-${id}"></div>
-          <figcaption>${type}-${icon}</figcaption>
-        </figure>`);
-        $(`#figure-${id}`).append(`<div class="si-wrapper ${id}">
-          <svg class="si"><use xlink:href="#${id}"></use></svg>
-        </div>`);
+        try {
+          $type.append(`<figure class="si-figure" data-type="${type}" data-id="${id}">
+  <div id="figure-${id}"></div>
+  <figcaption>${type}-${icon}</figcaption>
+</figure>`);
+          $(`#figure-${id}`).append(`<div class="si-wrapper ${id}">
+  <svg class="si"><use xlink:href="#${id}"></use></svg>
+</div>`);
+        } catch (e) {
+          console.log(e, id);
+        }
       });
       meta.rendered = true;
       $loading.hide();

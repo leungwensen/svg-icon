@@ -47,6 +47,7 @@ weather-icons    | weather-     | https://github.com/erikflowers/weather-icons  
 windows-icons    | windows-     | https://github.com/Templarian/WindowsIcons         | yes
 zero             | zero-        | src/zero                                           | yes
 zocial           | zocial-      | https://github.com/smcllns/css-social-buttons      | yes
+logos(svg porn)  | logos-       | http://svgporn.com                                 | yes
 
 Need more? Please leave an [issue][issues] or a [pull request][pull-requests].
 
