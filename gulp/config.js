@@ -4,7 +4,7 @@ const iconsMeta = require('../lib/const/icons-meta');
 
 // ports
 module.exports.ports = {
-  dev: 1024,
+  dev: 2046,
   test: 2048
 };
 
@@ -29,6 +29,12 @@ module.exports.svgminRemovingAttrsIgnores = [
   'map-bubble',
   'map-color-hover',
   'map-color',
+];
+
+// for template2module
+module.exports.templateDirs = [
+  'lib',
+  'src',
 ];
 
 // for sync-icons

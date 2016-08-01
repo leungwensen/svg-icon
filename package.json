@@ -85,6 +85,7 @@
     "require-dir": "^0.3.0",
     "style-loader": "^0.13.1",
     "template-importing-loader": "^0.0.1",
+    "template2module": "~0.1.0",
     "template2module-loader": "^0.0.20160513",
     "through2": "^2.0.1",
     "underscore": "^1.8.3",

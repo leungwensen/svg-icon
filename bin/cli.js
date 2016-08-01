@@ -48,6 +48,18 @@ commander.command('iconize [sources...]')
     require('../lib/iconize.js')(sources, options);
   });
 
+// svg-icon build
+commander.command('build')
+  .description('build a svg icons collection from a json file and output into a target path')
+  .option('-s, --source <source>', 'specify the source file to be built')
+  .option('-t, --target <target>', 'specify the target path for built icons')
+  .option('-n, --name <name>', 'specify the collection name')
+  .action((options) => {
+    options.target = options.target || process.cwd();
+    options.name = options.name || 'si-collection';
+    require('../lib/build.js')(options);
+  });
+
 // parsing argv
 commander.parse(process.argv);
 if (process.argv.length === 2) {
