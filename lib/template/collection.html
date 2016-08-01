@@ -95,8 +95,7 @@
 </head>
 <body>
 <%= svgSprite %>
-<article>
-  <% ids.forEach(function (id) { %>
+<article><% ids.forEach(function (id) { %>
   <figure class="si-figure">
     <div id="figure-<%= id %>">
       <div class="si-wrapper <%= id %>">
@@ -106,8 +105,7 @@
       </div>
     </div>
     <figcaption><%= id %></figcaption>
-  </figure>
-  <% }); %>
+  </figure><% }); %>
 </article>
 </body>
 </html>
