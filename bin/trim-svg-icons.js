@@ -44,6 +44,10 @@ if (argv.length === 3) {
   const prefix = `${argv[2]}-`;
   if (iconsMetaByPrefix[prefix]) {
     trimSvgIcons(iconsMetaByPrefix[prefix]);
+  } else if (prefix === 'zero-') {
+    trimSvgIcons({
+      prefix: 'zero-'
+    });
   } else {
     console.error(`"${prefix}" icons is not supported!`);
   }
