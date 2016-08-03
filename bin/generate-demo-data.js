@@ -29,7 +29,7 @@ function reduceIcons(file, cb) { // removing prefix in filename
   cb(null, file);
 }
 
-vfs.src(path.resolve(process.cwd(), './dist/svg/**/*.svg'))
+vfs.src(path.resolve(process.cwd(), './dist/trimmed-svg/**/*.svg'))
   .pipe(mapStream(reduceIcons))
   .on('end', () => {
     const iconsFilePath = path.resolve(process.cwd(), './src/data/icons.json');

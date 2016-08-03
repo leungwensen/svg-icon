@@ -38,7 +38,7 @@ function reduceAttrs() {
 
 lang.each(config.svgSpriteDirs, (dir) => {
   gulp.task(`svg-sprite-${dir}`, () =>
-      gulp.src(path.resolve(__dirname, `../dist/svg/${dir}/*.svg`))
+      gulp.src(path.resolve(__dirname, `../dist/trimmed-svg/${dir}/*.svg`))
         .pipe(plumber())
         .pipe(svgSprite({
           mode: {

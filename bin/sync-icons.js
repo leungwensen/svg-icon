@@ -3,7 +3,6 @@
 const fs = require('fs');
 const lang = require('zero-lang');
 const shelljs = require('shelljs');
-
 const iconsMetaByName = require('../lib/const/icons-meta-by-name');
 
 const workingDir = './temp';
