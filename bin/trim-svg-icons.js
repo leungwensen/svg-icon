@@ -11,8 +11,8 @@ const argv = process.argv;
 function trimming(pathnames, prefixName, index, finalCall) {
   if (pathnames[index]) {
     console.log(pathnames[index]);
-    index++;
     trimSvg(pathnames[index], prefixName, true, () => {
+      index++;
       trimming(pathnames, prefixName, index)
     });
   } else {
@@ -25,6 +25,7 @@ function trimSvgIcons(meta, callback) {
   const svgRoot = path.resolve(__dirname, `../dist/svg/${prefixName}/`);
   console.log(`trimming ${prefixName}`);
   fs.readdir(svgRoot, (err, files) => {
+    //trimSvg(path.join(svgRoot, files[0]), prefixName, true, () => {});
     files = lang.map(files, (file) => path.join(svgRoot, file));
     console.log(prefixName);
     trimming(files, prefixName, 0, callback);
@@ -54,4 +55,5 @@ if (argv.length === 3) {
 } else {
   const metas = lang.values(iconsMetaByPrefix);
   trimFlow(metas, 0);
+  //lang.each(metas, trimSvgIcons);
 }

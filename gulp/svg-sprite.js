@@ -44,7 +44,7 @@ lang.each(config.svgSpriteDirs, (dir) => {
           mode: {
             symbol: {
               dest: 'symbol',
-              sprite: `${dir}.svg`
+              sprite: `${dir}.svg`,
             }
           },
           shape: {
