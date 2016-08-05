@@ -25,7 +25,7 @@ function reduceAttrs() {
       gutil.log(file.path);
       const doc = domParser.parseFromString(file.contents.toString('utf8'));
       const svgElement = doc.getElementsByTagName('svg')[0];
-      svgElement.setAttribute('style', 'display:none;');
+      svgElement.setAttribute('style', 'width:0;height:0;position:absolute;opacity:0;');
       file.contents = new Buffer(doc.toString());
     } catch (err) {
       this.emit('error', new gutil.PluginError('svg-sprite', err.toString()));

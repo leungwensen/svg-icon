@@ -104,7 +104,7 @@ $('#download').on('click', () => {
       }
       return '';
     });
-    const svgSprite = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">${symbols.join('')}</svg>`;
+    const svgSprite = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:0;height:0;position:absolute;opacity:0;">${symbols.join('')}</svg>`;
     const blob = new Blob([
       svgSprite
     ], {
