@@ -1,0 +1,234 @@
+si-mfglabs-anchor:
+  title: icon anchor
+si-mfglabs-arrow_down:
+  title: icon arrow_down
+si-mfglabs-arrow_left:
+  title: icon arrow_left
+si-mfglabs-arrow_right:
+  title: icon arrow_right
+si-mfglabs-arrow_up:
+  title: icon arrow_up
+si-mfglabs-at:
+  title: icon at
+si-mfglabs-attachment:
+  title: icon attachment
+si-mfglabs-black_question:
+  title: icon black_question
+si-mfglabs-check:
+  title: icon check
+si-mfglabs-check_circle:
+  title: icon check_circle
+si-mfglabs-chevron_down:
+  title: icon chevron_down
+si-mfglabs-chevron_left:
+  title: icon chevron_left
+si-mfglabs-chevron_right:
+  title: icon chevron_right
+si-mfglabs-chevron_up:
+  title: icon chevron_up
+si-mfglabs-cloud:
+  title: icon cloud
+si-mfglabs-cloud_download:
+  title: icon cloud_download
+si-mfglabs-cloud_upload:
+  title: icon cloud_upload
+si-mfglabs-color_balance:
+  title: icon color_balance
+si-mfglabs-connected_object:
+  title: icon connected_object
+si-mfglabs-coverflow:
+  title: icon coverflow
+si-mfglabs-coverflow_line:
+  title: icon coverflow_line
+si-mfglabs-data_science:
+  title: icon data_science
+si-mfglabs-data_science_black:
+  title: icon data_science_black
+si-mfglabs-discussion:
+  title: icon discussion
+si-mfglabs-display_screen:
+  title: icon display_screen
+si-mfglabs-download:
+  title: icon download
+si-mfglabs-dribbble:
+  title: icon dribbble
+si-mfglabs-dribbble_circle:
+  title: icon dribbble_circle
+si-mfglabs-eye:
+  title: icon eye
+si-mfglabs-facebook:
+  title: icon facebook
+si-mfglabs-facebook_circle:
+  title: icon facebook_circle
+si-mfglabs-fast_backward:
+  title: icon fast_backward
+si-mfglabs-fast_forward:
+  title: icon fast_forward
+si-mfglabs-female_sign:
+  title: icon female_sign
+si-mfglabs-file_alt:
+  title: icon file_alt
+si-mfglabs-file_close:
+  title: icon file_close
+si-mfglabs-file_close_alt:
+  title: icon file_close_alt
+si-mfglabs-git:
+  title: icon git
+si-mfglabs-git_circle:
+  title: icon git_circle
+si-mfglabs-git_circle_alt:
+  title: icon git_circle_alt
+si-mfglabs-globe:
+  title: icon globe
+si-mfglabs-globe_black:
+  title: icon globe_black
+si-mfglabs-google_plus:
+  title: icon google_plus
+si-mfglabs-google_plus_circle:
+  title: icon google_plus_circle
+si-mfglabs-hard_drive:
+  title: icon hard_drive
+si-mfglabs-hashtag:
+  title: icon hashtag
+si-mfglabs-heart:
+  title: icon heart
+si-mfglabs-heart_broken:
+  title: icon heart_broken
+si-mfglabs-home:
+  title: icon home
+si-mfglabs-inbox:
+  title: icon inbox
+si-mfglabs-information_black:
+  title: icon information_black
+si-mfglabs-information_white:
+  title: icon information_white
+si-mfglabs-instagram:
+  title: icon instagram
+si-mfglabs-instagram_circle:
+  title: icon instagram_circle
+si-mfglabs-isight:
+  title: icon isight
+si-mfglabs-letter:
+  title: icon letter
+si-mfglabs-linked_in:
+  title: icon linked_in
+si-mfglabs-linked_in_circle:
+  title: icon linked_in_circle
+si-mfglabs-list:
+  title: icon list
+si-mfglabs-mail:
+  title: icon mail
+si-mfglabs-male_sign:
+  title: icon male_sign
+si-mfglabs-math:
+  title: icon math
+si-mfglabs-math_black:
+  title: icon math_black
+si-mfglabs-math_ico:
+  title: icon math_ico
+si-mfglabs-measure:
+  title: icon measure
+si-mfglabs-mfg_icon:
+  title: icon mfg_icon
+si-mfglabs-mfg_icon_circle:
+  title: icon mfg_icon_circle
+si-mfglabs-minus:
+  title: icon minus
+si-mfglabs-movie:
+  title: icon movie
+si-mfglabs-mute_off:
+  title: icon mute_off
+si-mfglabs-mute_on:
+  title: icon mute_on
+si-mfglabs-octopus:
+  title: icon octopus
+si-mfglabs-paperplane:
+  title: icon paperplane
+si-mfglabs-paperplane_black:
+  title: icon paperplane_black
+si-mfglabs-paperplane_ico:
+  title: icon paperplane_ico
+si-mfglabs-pause:
+  title: icon pause
+si-mfglabs-placepin:
+  title: icon placepin
+si-mfglabs-play:
+  title: icon play
+si-mfglabs-printer:
+  title: icon printer
+si-mfglabs-random:
+  title: icon random
+si-mfglabs-reload:
+  title: icon reload
+si-mfglabs-reorder:
+  title: icon reorder
+si-mfglabs-reorder_square:
+  title: icon reorder_square
+si-mfglabs-reorder_square_line:
+  title: icon reorder_square_line
+si-mfglabs-reply:
+  title: icon reply
+si-mfglabs-retweet:
+  title: icon retweet
+si-mfglabs-ringbell:
+  title: icon ringbell
+si-mfglabs-settings:
+  title: icon settings
+si-mfglabs-share:
+  title: icon share
+si-mfglabs-sheet:
+  title: icon sheet
+si-mfglabs-signin:
+  title: icon signin
+si-mfglabs-signout:
+  title: icon signout
+si-mfglabs-smartphone:
+  title: icon smartphone
+si-mfglabs-soundcloud:
+  title: icon soundcloud
+si-mfglabs-star:
+  title: icon star
+si-mfglabs-star_empty:
+  title: icon star_empty
+si-mfglabs-star_half:
+  title: icon star_half
+si-mfglabs-star_half_empty:
+  title: icon star_half_empty
+si-mfglabs-step_backward:
+  title: icon step_backward
+si-mfglabs-step_forward:
+  title: icon step_forward
+si-mfglabs-stop:
+  title: icon stop
+si-mfglabs-tablet:
+  title: icon tablet
+si-mfglabs-trash_can:
+  title: icon trash_can
+si-mfglabs-trophy:
+  title: icon trophy
+si-mfglabs-twitter:
+  title: icon twitter
+si-mfglabs-twitter_circle:
+  title: icon twitter_circle
+si-mfglabs-upload:
+  title: icon upload
+si-mfglabs-user:
+  title: icon user
+si-mfglabs-user_female:
+  title: icon user_female
+si-mfglabs-user_male:
+  title: icon user_male
+si-mfglabs-users:
+  title: icon users
+si-mfglabs-vector:
+  title: icon vector
+si-mfglabs-vector_pen:
+  title: icon vector_pen
+si-mfglabs-video_camera:
+  title: icon video_camera
+si-mfglabs-warning:
+  title: icon warning
+si-mfglabs-warning_alt:
+  title: icon warning_alt
+si-mfglabs-white_question:
+  title: icon white_question

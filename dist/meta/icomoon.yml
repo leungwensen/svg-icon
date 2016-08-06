@@ -1,0 +1,982 @@
+si-icomoon-500px:
+  title: icon 500px
+si-icomoon-IE:
+  title: icon IE
+si-icomoon-IcoMoon:
+  title: icon IcoMoon
+si-icomoon-accessibility:
+  title: icon accessibility
+si-icomoon-address-book:
+  title: icon address-book
+si-icomoon-aid-kit:
+  title: icon aid-kit
+si-icomoon-airplane:
+  title: icon airplane
+si-icomoon-alarm:
+  title: icon alarm
+si-icomoon-amazon:
+  title: icon amazon
+si-icomoon-android:
+  title: icon android
+si-icomoon-angry:
+  title: icon angry
+si-icomoon-angry2:
+  title: icon angry2
+si-icomoon-appleinc:
+  title: icon appleinc
+si-icomoon-arrow-down-left:
+  title: icon arrow-down-left
+si-icomoon-arrow-down-left2:
+  title: icon arrow-down-left2
+si-icomoon-arrow-down-right:
+  title: icon arrow-down-right
+si-icomoon-arrow-down-right2:
+  title: icon arrow-down-right2
+si-icomoon-arrow-down:
+  title: icon arrow-down
+si-icomoon-arrow-down2:
+  title: icon arrow-down2
+si-icomoon-arrow-left:
+  title: icon arrow-left
+si-icomoon-arrow-left2:
+  title: icon arrow-left2
+si-icomoon-arrow-right:
+  title: icon arrow-right
+si-icomoon-arrow-right2:
+  title: icon arrow-right2
+si-icomoon-arrow-up-left:
+  title: icon arrow-up-left
+si-icomoon-arrow-up-left2:
+  title: icon arrow-up-left2
+si-icomoon-arrow-up-right:
+  title: icon arrow-up-right
+si-icomoon-arrow-up-right2:
+  title: icon arrow-up-right2
+si-icomoon-arrow-up:
+  title: icon arrow-up
+si-icomoon-arrow-up2:
+  title: icon arrow-up2
+si-icomoon-attachment:
+  title: icon attachment
+si-icomoon-backward:
+  title: icon backward
+si-icomoon-backward2:
+  title: icon backward2
+si-icomoon-baffled:
+  title: icon baffled
+si-icomoon-baffled2:
+  title: icon baffled2
+si-icomoon-barcode:
+  title: icon barcode
+si-icomoon-basecamp:
+  title: icon basecamp
+si-icomoon-behance:
+  title: icon behance
+si-icomoon-behance2:
+  title: icon behance2
+si-icomoon-bell:
+  title: icon bell
+si-icomoon-bin:
+  title: icon bin
+si-icomoon-bin2:
+  title: icon bin2
+si-icomoon-binoculars:
+  title: icon binoculars
+si-icomoon-blocked:
+  title: icon blocked
+si-icomoon-blog:
+  title: icon blog
+si-icomoon-blogger:
+  title: icon blogger
+si-icomoon-blogger2:
+  title: icon blogger2
+si-icomoon-bold:
+  title: icon bold
+si-icomoon-book:
+  title: icon book
+si-icomoon-bookmark:
+  title: icon bookmark
+si-icomoon-bookmarks:
+  title: icon bookmarks
+si-icomoon-books:
+  title: icon books
+si-icomoon-box-add:
+  title: icon box-add
+si-icomoon-box-remove:
+  title: icon box-remove
+si-icomoon-briefcase:
+  title: icon briefcase
+si-icomoon-brightness-contrast:
+  title: icon brightness-contrast
+si-icomoon-bubble:
+  title: icon bubble
+si-icomoon-bubble2:
+  title: icon bubble2
+si-icomoon-bubbles:
+  title: icon bubbles
+si-icomoon-bubbles2:
+  title: icon bubbles2
+si-icomoon-bubbles3:
+  title: icon bubbles3
+si-icomoon-bubbles4:
+  title: icon bubbles4
+si-icomoon-bug:
+  title: icon bug
+si-icomoon-bullhorn:
+  title: icon bullhorn
+si-icomoon-calculator:
+  title: icon calculator
+si-icomoon-calendar:
+  title: icon calendar
+si-icomoon-camera:
+  title: icon camera
+si-icomoon-cancel-circle:
+  title: icon cancel-circle
+si-icomoon-cart:
+  title: icon cart
+si-icomoon-checkbox-checked:
+  title: icon checkbox-checked
+si-icomoon-checkbox-unchecked:
+  title: icon checkbox-unchecked
+si-icomoon-checkmark:
+  title: icon checkmark
+si-icomoon-checkmark2:
+  title: icon checkmark2
+si-icomoon-chrome:
+  title: icon chrome
+si-icomoon-circle-down:
+  title: icon circle-down
+si-icomoon-circle-left:
+  title: icon circle-left
+si-icomoon-circle-right:
+  title: icon circle-right
+si-icomoon-circle-up:
+  title: icon circle-up
+si-icomoon-clear-formatting:
+  title: icon clear-formatting
+si-icomoon-clipboard:
+  title: icon clipboard
+si-icomoon-clock:
+  title: icon clock
+si-icomoon-clock2:
+  title: icon clock2
+si-icomoon-cloud-check:
+  title: icon cloud-check
+si-icomoon-cloud-download:
+  title: icon cloud-download
+si-icomoon-cloud-upload:
+  title: icon cloud-upload
+si-icomoon-cloud:
+  title: icon cloud
+si-icomoon-clubs:
+  title: icon clubs
+si-icomoon-codepen:
+  title: icon codepen
+si-icomoon-cog:
+  title: icon cog
+si-icomoon-cogs:
+  title: icon cogs
+si-icomoon-coin-dollar:
+  title: icon coin-dollar
+si-icomoon-coin-euro:
+  title: icon coin-euro
+si-icomoon-coin-pound:
+  title: icon coin-pound
+si-icomoon-coin-yen:
+  title: icon coin-yen
+si-icomoon-command:
+  title: icon command
+si-icomoon-compass:
+  title: icon compass
+si-icomoon-compass2:
+  title: icon compass2
+si-icomoon-confused:
+  title: icon confused
+si-icomoon-confused2:
+  title: icon confused2
+si-icomoon-connection:
+  title: icon connection
+si-icomoon-contrast:
+  title: icon contrast
+si-icomoon-cool:
+  title: icon cool
+si-icomoon-cool2:
+  title: icon cool2
+si-icomoon-copy:
+  title: icon copy
+si-icomoon-credit-card:
+  title: icon credit-card
+si-icomoon-crop:
+  title: icon crop
+si-icomoon-cross:
+  title: icon cross
+si-icomoon-crying:
+  title: icon crying
+si-icomoon-crying2:
+  title: icon crying2
+si-icomoon-css3:
+  title: icon css3
+si-icomoon-ctrl:
+  title: icon ctrl
+si-icomoon-database:
+  title: icon database
+si-icomoon-delicious:
+  title: icon delicious
+si-icomoon-deviantart:
+  title: icon deviantart
+si-icomoon-diamonds:
+  title: icon diamonds
+si-icomoon-dice:
+  title: icon dice
+si-icomoon-display:
+  title: icon display
+si-icomoon-download:
+  title: icon download
+si-icomoon-download2:
+  title: icon download2
+si-icomoon-download3:
+  title: icon download3
+si-icomoon-drawer:
+  title: icon drawer
+si-icomoon-drawer2:
+  title: icon drawer2
+si-icomoon-dribbble:
+  title: icon dribbble
+si-icomoon-drive:
+  title: icon drive
+si-icomoon-dropbox:
+  title: icon dropbox
+si-icomoon-droplet:
+  title: icon droplet
+si-icomoon-earth:
+  title: icon earth
+si-icomoon-edge:
+  title: icon edge
+si-icomoon-eject:
+  title: icon eject
+si-icomoon-ello:
+  title: icon ello
+si-icomoon-embed:
+  title: icon embed
+si-icomoon-embed2:
+  title: icon embed2
+si-icomoon-enlarge:
+  title: icon enlarge
+si-icomoon-enlarge2:
+  title: icon enlarge2
+si-icomoon-enter:
+  title: icon enter
+si-icomoon-envelop:
+  title: icon envelop
+si-icomoon-equalizer:
+  title: icon equalizer
+si-icomoon-equalizer2:
+  title: icon equalizer2
+si-icomoon-evil:
+  title: icon evil
+si-icomoon-evil2:
+  title: icon evil2
+si-icomoon-exit:
+  title: icon exit
+si-icomoon-eye-blocked:
+  title: icon eye-blocked
+si-icomoon-eye-minus:
+  title: icon eye-minus
+si-icomoon-eye-plus:
+  title: icon eye-plus
+si-icomoon-eye:
+  title: icon eye
+si-icomoon-eyedropper:
+  title: icon eyedropper
+si-icomoon-facebook:
+  title: icon facebook
+si-icomoon-facebook2:
+  title: icon facebook2
+si-icomoon-feed:
+  title: icon feed
+si-icomoon-file-empty:
+  title: icon file-empty
+si-icomoon-file-excel:
+  title: icon file-excel
+si-icomoon-file-music:
+  title: icon file-music
+si-icomoon-file-openoffice:
+  title: icon file-openoffice
+si-icomoon-file-pdf:
+  title: icon file-pdf
+si-icomoon-file-picture:
+  title: icon file-picture
+si-icomoon-file-play:
+  title: icon file-play
+si-icomoon-file-text:
+  title: icon file-text
+si-icomoon-file-text2:
+  title: icon file-text2
+si-icomoon-file-video:
+  title: icon file-video
+si-icomoon-file-word:
+  title: icon file-word
+si-icomoon-file-zip:
+  title: icon file-zip
+si-icomoon-files-empty:
+  title: icon files-empty
+si-icomoon-film:
+  title: icon film
+si-icomoon-filter:
+  title: icon filter
+si-icomoon-finder:
+  title: icon finder
+si-icomoon-fire:
+  title: icon fire
+si-icomoon-firefox:
+  title: icon firefox
+si-icomoon-first:
+  title: icon first
+si-icomoon-flag:
+  title: icon flag
+si-icomoon-flattr:
+  title: icon flattr
+si-icomoon-flickr:
+  title: icon flickr
+si-icomoon-flickr2:
+  title: icon flickr2
+si-icomoon-flickr3:
+  title: icon flickr3
+si-icomoon-flickr4:
+  title: icon flickr4
+si-icomoon-floppy-disk:
+  title: icon floppy-disk
+si-icomoon-folder-download:
+  title: icon folder-download
+si-icomoon-folder-minus:
+  title: icon folder-minus
+si-icomoon-folder-open:
+  title: icon folder-open
+si-icomoon-folder-plus:
+  title: icon folder-plus
+si-icomoon-folder-upload:
+  title: icon folder-upload
+si-icomoon-folder:
+  title: icon folder
+si-icomoon-font-size:
+  title: icon font-size
+si-icomoon-font:
+  title: icon font
+si-icomoon-forward:
+  title: icon forward
+si-icomoon-forward2:
+  title: icon forward2
+si-icomoon-forward3:
+  title: icon forward3
+si-icomoon-foursquare:
+  title: icon foursquare
+si-icomoon-frustrated:
+  title: icon frustrated
+si-icomoon-frustrated2:
+  title: icon frustrated2
+si-icomoon-gift:
+  title: icon gift
+si-icomoon-git:
+  title: icon git
+si-icomoon-github:
+  title: icon github
+si-icomoon-glass:
+  title: icon glass
+si-icomoon-glass2:
+  title: icon glass2
+si-icomoon-google-drive:
+  title: icon google-drive
+si-icomoon-google-plus:
+  title: icon google-plus
+si-icomoon-google-plus2:
+  title: icon google-plus2
+si-icomoon-google-plus3:
+  title: icon google-plus3
+si-icomoon-google:
+  title: icon google
+si-icomoon-google2:
+  title: icon google2
+si-icomoon-google3:
+  title: icon google3
+si-icomoon-grin:
+  title: icon grin
+si-icomoon-grin2:
+  title: icon grin2
+si-icomoon-hackernews:
+  title: icon hackernews
+si-icomoon-hammer:
+  title: icon hammer
+si-icomoon-hammer2:
+  title: icon hammer2
+si-icomoon-hangouts:
+  title: icon hangouts
+si-icomoon-happy:
+  title: icon happy
+si-icomoon-happy2:
+  title: icon happy2
+si-icomoon-headphones:
+  title: icon headphones
+si-icomoon-heart-broken:
+  title: icon heart-broken
+si-icomoon-heart:
+  title: icon heart
+si-icomoon-hipster:
+  title: icon hipster
+si-icomoon-hipster2:
+  title: icon hipster2
+si-icomoon-history:
+  title: icon history
+si-icomoon-home:
+  title: icon home
+si-icomoon-home2:
+  title: icon home2
+si-icomoon-home3:
+  title: icon home3
+si-icomoon-hour-glass:
+  title: icon hour-glass
+si-icomoon-html-five:
+  title: icon html-five
+si-icomoon-html-five2:
+  title: icon html-five2
+si-icomoon-image:
+  title: icon image
+si-icomoon-images:
+  title: icon images
+si-icomoon-indent-decrease:
+  title: icon indent-decrease
+si-icomoon-indent-increase:
+  title: icon indent-increase
+si-icomoon-infinite:
+  title: icon infinite
+si-icomoon-info:
+  title: icon info
+si-icomoon-insert-template:
+  title: icon insert-template
+si-icomoon-instagram:
+  title: icon instagram
+si-icomoon-italic:
+  title: icon italic
+si-icomoon-joomla:
+  title: icon joomla
+si-icomoon-key:
+  title: icon key
+si-icomoon-key2:
+  title: icon key2
+si-icomoon-keyboard:
+  title: icon keyboard
+si-icomoon-lab:
+  title: icon lab
+si-icomoon-lanyrd:
+  title: icon lanyrd
+si-icomoon-laptop:
+  title: icon laptop
+si-icomoon-last:
+  title: icon last
+si-icomoon-lastfm:
+  title: icon lastfm
+si-icomoon-lastfm2:
+  title: icon lastfm2
+si-icomoon-leaf:
+  title: icon leaf
+si-icomoon-library:
+  title: icon library
+si-icomoon-libreoffice:
+  title: icon libreoffice
+si-icomoon-lifebuoy:
+  title: icon lifebuoy
+si-icomoon-ligature:
+  title: icon ligature
+si-icomoon-ligature2:
+  title: icon ligature2
+si-icomoon-link:
+  title: icon link
+si-icomoon-linkedin:
+  title: icon linkedin
+si-icomoon-linkedin2:
+  title: icon linkedin2
+si-icomoon-list-numbered:
+  title: icon list-numbered
+si-icomoon-list:
+  title: icon list
+si-icomoon-list2:
+  title: icon list2
+si-icomoon-location:
+  title: icon location
+si-icomoon-location2:
+  title: icon location2
+si-icomoon-lock:
+  title: icon lock
+si-icomoon-loop:
+  title: icon loop
+si-icomoon-loop2:
+  title: icon loop2
+si-icomoon-ltr:
+  title: icon ltr
+si-icomoon-magic-wand:
+  title: icon magic-wand
+si-icomoon-magnet:
+  title: icon magnet
+si-icomoon-mail:
+  title: icon mail
+si-icomoon-mail2:
+  title: icon mail2
+si-icomoon-mail3:
+  title: icon mail3
+si-icomoon-mail4:
+  title: icon mail4
+si-icomoon-make-group:
+  title: icon make-group
+si-icomoon-man-woman:
+  title: icon man-woman
+si-icomoon-man:
+  title: icon man
+si-icomoon-map:
+  title: icon map
+si-icomoon-map2:
+  title: icon map2
+si-icomoon-menu:
+  title: icon menu
+si-icomoon-menu2:
+  title: icon menu2
+si-icomoon-menu3:
+  title: icon menu3
+si-icomoon-menu4:
+  title: icon menu4
+si-icomoon-meter:
+  title: icon meter
+si-icomoon-meter2:
+  title: icon meter2
+si-icomoon-mic:
+  title: icon mic
+si-icomoon-minus:
+  title: icon minus
+si-icomoon-mobile:
+  title: icon mobile
+si-icomoon-mobile2:
+  title: icon mobile2
+si-icomoon-move-down:
+  title: icon move-down
+si-icomoon-move-up:
+  title: icon move-up
+si-icomoon-mug:
+  title: icon mug
+si-icomoon-music:
+  title: icon music
+si-icomoon-neutral:
+  title: icon neutral
+si-icomoon-neutral2:
+  title: icon neutral2
+si-icomoon-new-tab:
+  title: icon new-tab
+si-icomoon-newspaper:
+  title: icon newspaper
+si-icomoon-next:
+  title: icon next
+si-icomoon-next2:
+  title: icon next2
+si-icomoon-notification:
+  title: icon notification
+si-icomoon-npm:
+  title: icon npm
+si-icomoon-office:
+  title: icon office
+si-icomoon-omega:
+  title: icon omega
+si-icomoon-onedrive:
+  title: icon onedrive
+si-icomoon-opera:
+  title: icon opera
+si-icomoon-opt:
+  title: icon opt
+si-icomoon-pacman:
+  title: icon pacman
+si-icomoon-page-break:
+  title: icon page-break
+si-icomoon-pagebreak:
+  title: icon pagebreak
+si-icomoon-paint-format:
+  title: icon paint-format
+si-icomoon-paragraph-center:
+  title: icon paragraph-center
+si-icomoon-paragraph-justify:
+  title: icon paragraph-justify
+si-icomoon-paragraph-left:
+  title: icon paragraph-left
+si-icomoon-paragraph-right:
+  title: icon paragraph-right
+si-icomoon-paste:
+  title: icon paste
+si-icomoon-pause:
+  title: icon pause
+si-icomoon-pause2:
+  title: icon pause2
+si-icomoon-paypal:
+  title: icon paypal
+si-icomoon-pen:
+  title: icon pen
+si-icomoon-pencil:
+  title: icon pencil
+si-icomoon-pencil2:
+  title: icon pencil2
+si-icomoon-phone-hang-up:
+  title: icon phone-hang-up
+si-icomoon-phone:
+  title: icon phone
+si-icomoon-pie-chart:
+  title: icon pie-chart
+si-icomoon-pilcrow:
+  title: icon pilcrow
+si-icomoon-pinterest:
+  title: icon pinterest
+si-icomoon-pinterest2:
+  title: icon pinterest2
+si-icomoon-play:
+  title: icon play
+si-icomoon-play2:
+  title: icon play2
+si-icomoon-play3:
+  title: icon play3
+si-icomoon-plus:
+  title: icon plus
+si-icomoon-podcast:
+  title: icon podcast
+si-icomoon-point-down:
+  title: icon point-down
+si-icomoon-point-left:
+  title: icon point-left
+si-icomoon-point-right:
+  title: icon point-right
+si-icomoon-point-up:
+  title: icon point-up
+si-icomoon-power-cord:
+  title: icon power-cord
+si-icomoon-power:
+  title: icon power
+si-icomoon-previous:
+  title: icon previous
+si-icomoon-previous2:
+  title: icon previous2
+si-icomoon-price-tag:
+  title: icon price-tag
+si-icomoon-price-tags:
+  title: icon price-tags
+si-icomoon-printer:
+  title: icon printer
+si-icomoon-profile:
+  title: icon profile
+si-icomoon-pushpin:
+  title: icon pushpin
+si-icomoon-qrcode:
+  title: icon qrcode
+si-icomoon-question:
+  title: icon question
+si-icomoon-quill:
+  title: icon quill
+si-icomoon-quotes-left:
+  title: icon quotes-left
+si-icomoon-quotes-right:
+  title: icon quotes-right
+si-icomoon-radio-checked:
+  title: icon radio-checked
+si-icomoon-radio-checked2:
+  title: icon radio-checked2
+si-icomoon-radio-unchecked:
+  title: icon radio-unchecked
+si-icomoon-reddit:
+  title: icon reddit
+si-icomoon-redo:
+  title: icon redo
+si-icomoon-redo2:
+  title: icon redo2
+si-icomoon-renren:
+  title: icon renren
+si-icomoon-reply:
+  title: icon reply
+si-icomoon-road:
+  title: icon road
+si-icomoon-rocket:
+  title: icon rocket
+si-icomoon-rss:
+  title: icon rss
+si-icomoon-rss2:
+  title: icon rss2
+si-icomoon-rtl:
+  title: icon rtl
+si-icomoon-sad:
+  title: icon sad
+si-icomoon-sad2:
+  title: icon sad2
+si-icomoon-safari:
+  title: icon safari
+si-icomoon-scissors:
+  title: icon scissors
+si-icomoon-search:
+  title: icon search
+si-icomoon-section:
+  title: icon section
+si-icomoon-share:
+  title: icon share
+si-icomoon-share2:
+  title: icon share2
+si-icomoon-shield:
+  title: icon shield
+si-icomoon-shift:
+  title: icon shift
+si-icomoon-shocked:
+  title: icon shocked
+si-icomoon-shocked2:
+  title: icon shocked2
+si-icomoon-shrink:
+  title: icon shrink
+si-icomoon-shrink2:
+  title: icon shrink2
+si-icomoon-shuffle:
+  title: icon shuffle
+si-icomoon-sigma:
+  title: icon sigma
+si-icomoon-sina-weibo:
+  title: icon sina-weibo
+si-icomoon-skype:
+  title: icon skype
+si-icomoon-sleepy:
+  title: icon sleepy
+si-icomoon-sleepy2:
+  title: icon sleepy2
+si-icomoon-smile:
+  title: icon smile
+si-icomoon-smile2:
+  title: icon smile2
+si-icomoon-sort-alpha-asc:
+  title: icon sort-alpha-asc
+si-icomoon-sort-alpha-desc:
+  title: icon sort-alpha-desc
+si-icomoon-sort-amount-asc:
+  title: icon sort-amount-asc
+si-icomoon-sort-amount-desc:
+  title: icon sort-amount-desc
+si-icomoon-sort-numberic-desc:
+  title: icon sort-numberic-desc
+si-icomoon-sort-numeric-asc:
+  title: icon sort-numeric-asc
+si-icomoon-soundcloud:
+  title: icon soundcloud
+si-icomoon-soundcloud2:
+  title: icon soundcloud2
+si-icomoon-spades:
+  title: icon spades
+si-icomoon-spell-check:
+  title: icon spell-check
+si-icomoon-sphere:
+  title: icon sphere
+si-icomoon-spinner:
+  title: icon spinner
+si-icomoon-spinner10:
+  title: icon spinner10
+si-icomoon-spinner11:
+  title: icon spinner11
+si-icomoon-spinner2:
+  title: icon spinner2
+si-icomoon-spinner3:
+  title: icon spinner3
+si-icomoon-spinner4:
+  title: icon spinner4
+si-icomoon-spinner5:
+  title: icon spinner5
+si-icomoon-spinner6:
+  title: icon spinner6
+si-icomoon-spinner7:
+  title: icon spinner7
+si-icomoon-spinner8:
+  title: icon spinner8
+si-icomoon-spinner9:
+  title: icon spinner9
+si-icomoon-spoon-knife:
+  title: icon spoon-knife
+si-icomoon-spotify:
+  title: icon spotify
+si-icomoon-stack:
+  title: icon stack
+si-icomoon-stackoverflow:
+  title: icon stackoverflow
+si-icomoon-star-empty:
+  title: icon star-empty
+si-icomoon-star-full:
+  title: icon star-full
+si-icomoon-star-half:
+  title: icon star-half
+si-icomoon-stats-bars:
+  title: icon stats-bars
+si-icomoon-stats-bars2:
+  title: icon stats-bars2
+si-icomoon-stats-dots:
+  title: icon stats-dots
+si-icomoon-steam:
+  title: icon steam
+si-icomoon-steam2:
+  title: icon steam2
+si-icomoon-stop:
+  title: icon stop
+si-icomoon-stop2:
+  title: icon stop2
+si-icomoon-stopwatch:
+  title: icon stopwatch
+si-icomoon-strikethrough:
+  title: icon strikethrough
+si-icomoon-stumbleupon:
+  title: icon stumbleupon
+si-icomoon-stumbleupon2:
+  title: icon stumbleupon2
+si-icomoon-subscript:
+  title: icon subscript
+si-icomoon-subscript2:
+  title: icon subscript2
+si-icomoon-sun:
+  title: icon sun
+si-icomoon-superscript:
+  title: icon superscript
+si-icomoon-superscript2:
+  title: icon superscript2
+si-icomoon-svg:
+  title: icon svg
+si-icomoon-switch:
+  title: icon switch
+si-icomoon-tab:
+  title: icon tab
+si-icomoon-table:
+  title: icon table
+si-icomoon-table2:
+  title: icon table2
+si-icomoon-tablet:
+  title: icon tablet
+si-icomoon-target:
+  title: icon target
+si-icomoon-telegram:
+  title: icon telegram
+si-icomoon-terminal:
+  title: icon terminal
+si-icomoon-text-color:
+  title: icon text-color
+si-icomoon-text-height:
+  title: icon text-height
+si-icomoon-text-width:
+  title: icon text-width
+si-icomoon-ticket:
+  title: icon ticket
+si-icomoon-tongue:
+  title: icon tongue
+si-icomoon-tongue2:
+  title: icon tongue2
+si-icomoon-tree:
+  title: icon tree
+si-icomoon-trello:
+  title: icon trello
+si-icomoon-trophy:
+  title: icon trophy
+si-icomoon-truck:
+  title: icon truck
+si-icomoon-tumblr:
+  title: icon tumblr
+si-icomoon-tumblr2:
+  title: icon tumblr2
+si-icomoon-tux:
+  title: icon tux
+si-icomoon-tv:
+  title: icon tv
+si-icomoon-twitch:
+  title: icon twitch
+si-icomoon-twitter:
+  title: icon twitter
+si-icomoon-underline:
+  title: icon underline
+si-icomoon-undo:
+  title: icon undo
+si-icomoon-undo2:
+  title: icon undo2
+si-icomoon-ungroup:
+  title: icon ungroup
+si-icomoon-unlocked:
+  title: icon unlocked
+si-icomoon-upload:
+  title: icon upload
+si-icomoon-upload2:
+  title: icon upload2
+si-icomoon-upload3:
+  title: icon upload3
+si-icomoon-user-check:
+  title: icon user-check
+si-icomoon-user-minus:
+  title: icon user-minus
+si-icomoon-user-plus:
+  title: icon user-plus
+si-icomoon-user-tie:
+  title: icon user-tie
+si-icomoon-user:
+  title: icon user
+si-icomoon-users:
+  title: icon users
+si-icomoon-video-camera:
+  title: icon video-camera
+si-icomoon-vimeo:
+  title: icon vimeo
+si-icomoon-vimeo2:
+  title: icon vimeo2
+si-icomoon-vine:
+  title: icon vine
+si-icomoon-vk:
+  title: icon vk
+si-icomoon-volume-decrease:
+  title: icon volume-decrease
+si-icomoon-volume-high:
+  title: icon volume-high
+si-icomoon-volume-increase:
+  title: icon volume-increase
+si-icomoon-volume-low:
+  title: icon volume-low
+si-icomoon-volume-medium:
+  title: icon volume-medium
+si-icomoon-volume-mute:
+  title: icon volume-mute
+si-icomoon-volume-mute2:
+  title: icon volume-mute2
+si-icomoon-warning:
+  title: icon warning
+si-icomoon-whatsapp:
+  title: icon whatsapp
+si-icomoon-wikipedia:
+  title: icon wikipedia
+si-icomoon-windows:
+  title: icon windows
+si-icomoon-windows8:
+  title: icon windows8
+si-icomoon-wink:
+  title: icon wink
+si-icomoon-wink2:
+  title: icon wink2
+si-icomoon-woman:
+  title: icon woman
+si-icomoon-wondering:
+  title: icon wondering
+si-icomoon-wondering2:
+  title: icon wondering2
+si-icomoon-wordpress:
+  title: icon wordpress
+si-icomoon-wrench:
+  title: icon wrench
+si-icomoon-xing:
+  title: icon xing
+si-icomoon-xing2:
+  title: icon xing2
+si-icomoon-yahoo:
+  title: icon yahoo
+si-icomoon-yahoo2:
+  title: icon yahoo2
+si-icomoon-yelp:
+  title: icon yelp
+si-icomoon-youtube:
+  title: icon youtube
+si-icomoon-youtube2:
+  title: icon youtube2
+si-icomoon-zoom-in:
+  title: icon zoom-in
+si-icomoon-zoom-out:
+  title: icon zoom-out

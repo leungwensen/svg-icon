@@ -1,0 +1,336 @@
+si-map-abseiling:
+  title: icon abseiling
+si-map-accounting:
+  title: icon accounting
+si-map-airport:
+  title: icon airport
+si-map-amusement-park:
+  title: icon amusement-park
+si-map-aquarium:
+  title: icon aquarium
+si-map-archery:
+  title: icon archery
+si-map-art-gallery:
+  title: icon art-gallery
+si-map-assistive-listening-system:
+  title: icon assistive-listening-system
+si-map-atm:
+  title: icon atm
+si-map-audio-description:
+  title: icon audio-description
+si-map-bakery:
+  title: icon bakery
+si-map-bank:
+  title: icon bank
+si-map-bar:
+  title: icon bar
+si-map-baseball:
+  title: icon baseball
+si-map-beauty-salon:
+  title: icon beauty-salon
+si-map-bicycle-store:
+  title: icon bicycle-store
+si-map-boat-ramp:
+  title: icon boat-ramp
+si-map-boat-tour:
+  title: icon boat-tour
+si-map-boating:
+  title: icon boating
+si-map-book-store:
+  title: icon book-store
+si-map-bowling-alley:
+  title: icon bowling-alley
+si-map-braille:
+  title: icon braille
+si-map-bus-station:
+  title: icon bus-station
+si-map-cafe:
+  title: icon cafe
+si-map-campground:
+  title: icon campground
+si-map-canoe:
+  title: icon canoe
+si-map-car-dealer:
+  title: icon car-dealer
+si-map-car-rental:
+  title: icon car-rental
+si-map-car-repair:
+  title: icon car-repair
+si-map-car-wash:
+  title: icon car-wash
+si-map-casino:
+  title: icon casino
+si-map-cemetery:
+  title: icon cemetery
+si-map-chairlift:
+  title: icon chairlift
+si-map-church:
+  title: icon church
+si-map-circle:
+  title: icon circle
+si-map-city-hall:
+  title: icon city-hall
+si-map-climbing:
+  title: icon climbing
+si-map-closed-captioning:
+  title: icon closed-captioning
+si-map-clothing-store:
+  title: icon clothing-store
+si-map-compass:
+  title: icon compass
+si-map-convenience-store:
+  title: icon convenience-store
+si-map-courthouse:
+  title: icon courthouse
+si-map-cross-country-skiing:
+  title: icon cross-country-skiing
+si-map-crosshairs:
+  title: icon crosshairs
+si-map-dentist:
+  title: icon dentist
+si-map-department-store:
+  title: icon department-store
+si-map-diving:
+  title: icon diving
+si-map-doctor:
+  title: icon doctor
+si-map-electrician:
+  title: icon electrician
+si-map-electronics-store:
+  title: icon electronics-store
+si-map-embassy:
+  title: icon embassy
+si-map-expand:
+  title: icon expand
+si-map-female:
+  title: icon female
+si-map-finance:
+  title: icon finance
+si-map-fire-station:
+  title: icon fire-station
+si-map-fish-cleaning:
+  title: icon fish-cleaning
+si-map-fishing-pier:
+  title: icon fishing-pier
+si-map-florist:
+  title: icon florist
+si-map-food:
+  title: icon food
+si-map-fullscreen:
+  title: icon fullscreen
+si-map-funeral-home:
+  title: icon funeral-home
+si-map-furniture-store:
+  title: icon furniture-store
+si-map-gas-station:
+  title: icon gas-station
+si-map-general-contractor:
+  title: icon general-contractor
+si-map-grocery-or-supermarket:
+  title: icon grocery-or-supermarket
+si-map-gym:
+  title: icon gym
+si-map-hair-care:
+  title: icon hair-care
+si-map-hang-gliding:
+  title: icon hang-gliding
+si-map-hardware-store:
+  title: icon hardware-store
+si-map-health:
+  title: icon health
+si-map-hindu-temple:
+  title: icon hindu-temple
+si-map-hospital:
+  title: icon hospital
+si-map-ice-fishing:
+  title: icon ice-fishing
+si-map-ice-skating:
+  title: icon ice-skating
+si-map-inline-skating:
+  title: icon inline-skating
+si-map-insurance-agency:
+  title: icon insurance-agency
+si-map-jet-skiing:
+  title: icon jet-skiing
+si-map-jewelry-store:
+  title: icon jewelry-store
+si-map-kayaking:
+  title: icon kayaking
+si-map-laundry:
+  title: icon laundry
+si-map-lawyer:
+  title: icon lawyer
+si-map-library:
+  title: icon library
+si-map-liquor-store:
+  title: icon liquor-store
+si-map-local-government:
+  title: icon local-government
+si-map-location-arrow:
+  title: icon location-arrow
+si-map-locksmith:
+  title: icon locksmith
+si-map-lodging:
+  title: icon lodging
+si-map-low-vision-access:
+  title: icon low-vision-access
+si-map-male:
+  title: icon male
+si-map-map-pin:
+  title: icon map-pin
+si-map-marina:
+  title: icon marina
+si-map-mosque:
+  title: icon mosque
+si-map-movie-rental:
+  title: icon movie-rental
+si-map-movie-theater:
+  title: icon movie-theater
+si-map-moving-company:
+  title: icon moving-company
+si-map-museum:
+  title: icon museum
+si-map-natural-feature:
+  title: icon natural-feature
+si-map-night-club:
+  title: icon night-club
+si-map-open-captioning:
+  title: icon open-captioning
+si-map-painter:
+  title: icon painter
+si-map-park:
+  title: icon park
+si-map-parking:
+  title: icon parking
+si-map-pet-store:
+  title: icon pet-store
+si-map-pharmacy:
+  title: icon pharmacy
+si-map-physiotherapist:
+  title: icon physiotherapist
+si-map-place-of-worship:
+  title: icon place-of-worship
+si-map-playground:
+  title: icon playground
+si-map-plumber:
+  title: icon plumber
+si-map-point-of-interest:
+  title: icon point-of-interest
+si-map-police:
+  title: icon police
+si-map-political:
+  title: icon political
+si-map-post-box:
+  title: icon post-box
+si-map-post-office:
+  title: icon post-office
+si-map-postal-code-prefix:
+  title: icon postal-code-prefix
+si-map-postal-code:
+  title: icon postal-code
+si-map-rafting:
+  title: icon rafting
+si-map-real-estate-agency:
+  title: icon real-estate-agency
+si-map-restaurant:
+  title: icon restaurant
+si-map-roofing-contractor:
+  title: icon roofing-contractor
+si-map-route-pin:
+  title: icon route-pin
+si-map-route:
+  title: icon route
+si-map-rv-park:
+  title: icon rv-park
+si-map-sailing:
+  title: icon sailing
+si-map-school:
+  title: icon school
+si-map-scuba-diving:
+  title: icon scuba-diving
+si-map-search:
+  title: icon search
+si-map-sheild:
+  title: icon sheild
+si-map-shield:
+  title: icon shield
+si-map-shopping-mall:
+  title: icon shopping-mall
+si-map-sign-language:
+  title: icon sign-language
+si-map-skateboarding:
+  title: icon skateboarding
+si-map-ski-jumping:
+  title: icon ski-jumping
+si-map-skiing:
+  title: icon skiing
+si-map-sledding:
+  title: icon sledding
+si-map-snow-shoeing:
+  title: icon snow-shoeing
+si-map-snow:
+  title: icon snow
+si-map-snowboarding:
+  title: icon snowboarding
+si-map-snowmobile:
+  title: icon snowmobile
+si-map-spa:
+  title: icon spa
+si-map-square-pin:
+  title: icon square-pin
+si-map-square-rounded:
+  title: icon square-rounded
+si-map-square:
+  title: icon square
+si-map-stadium:
+  title: icon stadium
+si-map-storage:
+  title: icon storage
+si-map-store:
+  title: icon store
+si-map-subway-station:
+  title: icon subway-station
+si-map-surfing:
+  title: icon surfing
+si-map-swimming:
+  title: icon swimming
+si-map-synagogue:
+  title: icon synagogue
+si-map-taxi-stand:
+  title: icon taxi-stand
+si-map-tennis:
+  title: icon tennis
+si-map-toilet:
+  title: icon toilet
+si-map-train-station:
+  title: icon train-station
+si-map-transit-station:
+  title: icon transit-station
+si-map-travel-agency:
+  title: icon travel-agency
+si-map-unisex:
+  title: icon unisex
+si-map-university:
+  title: icon university
+si-map-veterinary-care:
+  title: icon veterinary-care
+si-map-volume-control-telephone:
+  title: icon volume-control-telephone
+si-map-waterskiing:
+  title: icon waterskiing
+si-map-whale-watching:
+  title: icon whale-watching
+si-map-wheelchair:
+  title: icon wheelchair
+si-map-wind-surfing:
+  title: icon wind-surfing
+si-map-zoo:
+  title: icon zoo
+si-map-zoom-in-alt:
+  title: icon zoom-in-alt
+si-map-zoom-in:
+  title: icon zoom-in
+si-map-zoom-out-alt:
+  title: icon zoom-out-alt
+si-map-zoom-out:
+  title: icon zoom-out

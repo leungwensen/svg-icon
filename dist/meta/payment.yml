@@ -1,0 +1,190 @@
+si-payment-amazon:
+  title: logo of amazon
+si-payment-american-express-alt:
+  title: logo of american-express-alt
+si-payment-american-express:
+  title: logo of american-express
+si-payment-apple-pay:
+  title: logo of apple-pay
+si-payment-atm:
+  title: logo of atm
+si-payment-bancontact-mister-cash:
+  title: logo of bancontact-mister-cash
+si-payment-bank-transfer:
+  title: logo of bank-transfer
+si-payment-bankomat:
+  title: logo of bankomat
+si-payment-bitcoin-sign:
+  title: logo of bitcoin-sign
+si-payment-bitcoin:
+  title: logo of bitcoin
+si-payment-braintree:
+  title: logo of braintree
+si-payment-btc:
+  title: logo of btc
+si-payment-card:
+  title: logo of card
+si-payment-carta-si:
+  title: logo of carta-si
+si-payment-cash-on-delivery:
+  title: logo of cash-on-delivery
+si-payment-cash-on-pickup:
+  title: logo of cash-on-pickup
+si-payment-cash:
+  title: logo of cash
+si-payment-cashcloud:
+  title: logo of cashcloud
+si-payment-cb:
+  title: logo of cb
+si-payment-cirrus-alt:
+  title: logo of cirrus-alt
+si-payment-cirrus:
+  title: logo of cirrus
+si-payment-clickandbuy:
+  title: logo of clickandbuy
+si-payment-credit-card:
+  title: logo of credit-card
+si-payment-dankort:
+  title: logo of dankort
+si-payment-diners:
+  title: logo of diners
+si-payment-discover:
+  title: logo of discover
+si-payment-ec:
+  title: logo of ec
+si-payment-elo-alt:
+  title: logo of elo-alt
+si-payment-elo:
+  title: logo of elo
+si-payment-eps:
+  title: logo of eps
+si-payment-eur:
+  title: logo of eur
+si-payment-facture:
+  title: logo of facture
+si-payment-fattura:
+  title: logo of fattura
+si-payment-flattr:
+  title: logo of flattr
+si-payment-gbp:
+  title: logo of gbp
+si-payment-giropay:
+  title: logo of giropay
+si-payment-gittip:
+  title: logo of gittip
+si-payment-google-wallet-alt:
+  title: logo of google-wallet-alt
+si-payment-google-wallet:
+  title: logo of google-wallet
+si-payment-gratipay-sign:
+  title: logo of gratipay-sign
+si-payment-ideal:
+  title: logo of ideal
+si-payment-ils:
+  title: logo of ils
+si-payment-inr:
+  title: logo of inr
+si-payment-interac:
+  title: logo of interac
+si-payment-invoice-sign-alt-o:
+  title: logo of invoice-sign-alt-o
+si-payment-invoice-sign-alt:
+  title: logo of invoice-sign-alt
+si-payment-invoice-sign-o:
+  title: logo of invoice-sign-o
+si-payment-invoice-sign:
+  title: logo of invoice-sign
+si-payment-invoice:
+  title: logo of invoice
+si-payment-jcb:
+  title: logo of jcb
+si-payment-jpy:
+  title: logo of jpy
+si-payment-krw:
+  title: logo of krw
+si-payment-maestro-alt:
+  title: logo of maestro-alt
+si-payment-maestro:
+  title: logo of maestro
+si-payment-mastercard-alt:
+  title: logo of mastercard-alt
+si-payment-mastercard-securecode:
+  title: logo of mastercard-securecode
+si-payment-mastercard:
+  title: logo of mastercard
+si-payment-mercado-pago-sign:
+  title: logo of mercado-pago-sign
+si-payment-mercado-pago:
+  title: logo of mercado-pago
+si-payment-moip:
+  title: logo of moip
+si-payment-multibanco:
+  title: logo of multibanco
+si-payment-ogone:
+  title: logo of ogone
+si-payment-pagseguro:
+  title: logo of pagseguro
+si-payment-paybox:
+  title: logo of paybox
+si-payment-paylife:
+  title: logo of paylife
+si-payment-paymill:
+  title: logo of paymill
+si-payment-paypal-alt:
+  title: logo of paypal-alt
+si-payment-paypal:
+  title: logo of paypal
+si-payment-paysafecard:
+  title: logo of paysafecard
+si-payment-payshop:
+  title: logo of payshop
+si-payment-payu:
+  title: logo of payu
+si-payment-postepay:
+  title: logo of postepay
+si-payment-quick:
+  title: logo of quick
+si-payment-rechnung:
+  title: logo of rechnung
+si-payment-ripple:
+  title: logo of ripple
+si-payment-rub:
+  title: logo of rub
+si-payment-sage:
+  title: logo of sage
+si-payment-sepa-alt:
+  title: logo of sepa-alt
+si-payment-sepa:
+  title: logo of sepa
+si-payment-six:
+  title: logo of six
+si-payment-skrill:
+  title: logo of skrill
+si-payment-sofort:
+  title: logo of sofort
+si-payment-square:
+  title: logo of square
+si-payment-stripe:
+  title: logo of stripe
+si-payment-truste:
+  title: logo of truste
+si-payment-try:
+  title: logo of try
+si-payment-unionpay:
+  title: logo of unionpay
+si-payment-usd:
+  title: logo of usd
+si-payment-verified-by-visa:
+  title: logo of verified-by-visa
+si-payment-verisign:
+  title: logo of verisign
+si-payment-visa-electron:
+  title: logo of visa-electron
+si-payment-visa:
+  title: logo of visa
+si-payment-western-union-alt:
+  title: logo of western-union-alt
+si-payment-western-union:
+  title: logo of western-union
+si-payment-wirecard:
+  title: logo of wirecard

@@ -1,0 +1,612 @@
+si-subway-add-1:
+  title: icon add-1
+si-subway-add-playlist:
+  title: icon add-playlist
+si-subway-add:
+  title: icon add
+si-subway-admin-1:
+  title: icon admin-1
+si-subway-admin-2:
+  title: icon admin-2
+si-subway-admin:
+  title: icon admin
+si-subway-airplane-mode:
+  title: icon airplane-mode
+si-subway-alam:
+  title: icon alam
+si-subway-at:
+  title: icon at
+si-subway-backward-:
+  title: icon backward-
+si-subway-backward-1:
+  title: icon backward-1
+si-subway-bag:
+  title: icon bag
+si-subway-basket:
+  title: icon basket
+si-subway-bell:
+  title: icon bell
+si-subway-black-white:
+  title: icon black-white
+si-subway-bluetooth:
+  title: icon bluetooth
+si-subway-blur:
+  title: icon blur
+si-subway-book-1:
+  title: icon book-1
+si-subway-book:
+  title: icon book
+si-subway-box-1:
+  title: icon box-1
+si-subway-box:
+  title: icon box
+si-subway-brightest:
+  title: icon brightest
+si-subway-brush:
+  title: icon brush
+si-subway-c:
+  title: icon c
+si-subway-cain:
+  title: icon cain
+si-subway-calendar-1:
+  title: icon calendar-1
+si-subway-calendar-2:
+  title: icon calendar-2
+si-subway-calendar-3:
+  title: icon calendar-3
+si-subway-calendar-4:
+  title: icon calendar-4
+si-subway-calendar-5:
+  title: icon calendar-5
+si-subway-calendar-6:
+  title: icon calendar-6
+si-subway-calendar:
+  title: icon calendar
+si-subway-call-1:
+  title: icon call-1
+si-subway-call-2:
+  title: icon call-2
+si-subway-call-3:
+  title: icon call-3
+si-subway-call-4:
+  title: icon call-4
+si-subway-call:
+  title: icon call
+si-subway-camera:
+  title: icon camera
+si-subway-cercle-1:
+  title: icon cercle-1
+si-subway-cercle-2:
+  title: icon cercle-2
+si-subway-cercle-3:
+  title: icon cercle-3
+si-subway-cercle-4:
+  title: icon cercle-4
+si-subway-cercle-5:
+  title: icon cercle-5
+si-subway-cercle-6:
+  title: icon cercle-6
+si-subway-cercle-7:
+  title: icon cercle-7
+si-subway-cercle-8:
+  title: icon cercle-8
+si-subway-circle:
+  title: icon circle
+si-subway-close-2:
+  title: icon close-2
+si-subway-close-corner-arrow-1:
+  title: icon close-corner-arrow-1
+si-subway-close-corner-arrow-2:
+  title: icon close-corner-arrow-2
+si-subway-cloth-1:
+  title: icon cloth-1
+si-subway-cloth:
+  title: icon cloth
+si-subway-cloud-download:
+  title: icon cloud-download
+si-subway-cloud-reload:
+  title: icon cloud-reload
+si-subway-cloud-upload:
+  title: icon cloud-upload
+si-subway-cloud:
+  title: icon cloud
+si-subway-coin-1:
+  title: icon coin-1
+si-subway-coin:
+  title: icon coin
+si-subway-compass-1:
+  title: icon compass-1
+si-subway-compass-2:
+  title: icon compass-2
+si-subway-compass:
+  title: icon compass
+si-subway-compose:
+  title: icon compose
+si-subway-cover:
+  title: icon cover
+si-subway-crop:
+  title: icon crop
+si-subway-crpss:
+  title: icon crpss
+si-subway-dail-pad:
+  title: icon dail-pad
+si-subway-delete:
+  title: icon delete
+si-subway-divide-1:
+  title: icon divide-1
+si-subway-divide:
+  title: icon divide
+si-subway-document-1:
+  title: icon document-1
+si-subway-document-2:
+  title: icon document-2
+si-subway-document-3:
+  title: icon document-3
+si-subway-document:
+  title: icon document
+si-subway-down-arrow-1:
+  title: icon down-arrow-1
+si-subway-down-arrow:
+  title: icon down-arrow
+si-subway-down:
+  title: icon down
+si-subway-down_2:
+  title: icon down_2
+si-subway-download-1:
+  title: icon download-1
+si-subway-download-2:
+  title: icon download-2
+si-subway-download-3:
+  title: icon download-3
+si-subway-download-4:
+  title: icon download-4
+si-subway-duble-corner-arrow-1:
+  title: icon duble-corner-arrow-1
+si-subway-duble-corner-arrow-3:
+  title: icon duble-corner-arrow-3
+si-subway-duble-corner-arrow-4:
+  title: icon duble-corner-arrow-4
+si-subway-duble-corner-arrow-5:
+  title: icon duble-corner-arrow-5
+si-subway-duble-corner-arrow-6:
+  title: icon duble-corner-arrow-6
+si-subway-duble-corner-arrow-blod-2:
+  title: icon duble-corner-arrow-blod-2
+si-subway-equal-1:
+  title: icon equal-1
+si-subway-equal:
+  title: icon equal
+si-subway-equalizer-1:
+  title: icon equalizer-1
+si-subway-equalizer-2:
+  title: icon equalizer-2
+si-subway-equalizer:
+  title: icon equalizer
+si-subway-error:
+  title: icon error
+si-subway-euro:
+  title: icon euro
+si-subway-exit:
+  title: icon exit
+si-subway-eye:
+  title: icon eye
+si-subway-f:
+  title: icon f
+si-subway-feed:
+  title: icon feed
+si-subway-file-1:
+  title: icon file-1
+si-subway-file-10:
+  title: icon file-10
+si-subway-file-11:
+  title: icon file-11
+si-subway-file-12:
+  title: icon file-12
+si-subway-file-13:
+  title: icon file-13
+si-subway-file-2:
+  title: icon file-2
+si-subway-file-3:
+  title: icon file-3
+si-subway-file-4:
+  title: icon file-4
+si-subway-file-5:
+  title: icon file-5
+si-subway-file-6:
+  title: icon file-6
+si-subway-file-7:
+  title: icon file-7
+si-subway-file-8:
+  title: icon file-8
+si-subway-file-9:
+  title: icon file-9
+si-subway-file:
+  title: icon file
+si-subway-folder-1:
+  title: icon folder-1
+si-subway-folder-2:
+  title: icon folder-2
+si-subway-folder-3:
+  title: icon folder-3
+si-subway-folder:
+  title: icon folder
+si-subway-fot-screen:
+  title: icon fot-screen
+si-subway-four-box:
+  title: icon four-box
+si-subway-froward-1:
+  title: icon froward-1
+si-subway-froward:
+  title: icon froward
+si-subway-fullscreen:
+  title: icon fullscreen
+si-subway-glass:
+  title: icon glass
+si-subway-home-1:
+  title: icon home-1
+si-subway-home-2:
+  title: icon home-2
+si-subway-home-3:
+  title: icon home-3
+si-subway-home:
+  title: icon home
+si-subway-hulf-of-circle-2:
+  title: icon hulf-of-circle-2
+si-subway-hurt-1:
+  title: icon hurt-1
+si-subway-hurt-3:
+  title: icon hurt-3
+si-subway-hurt:
+  title: icon hurt
+si-subway-id-card-1:
+  title: icon id-card-1
+si-subway-id-card:
+  title: icon id-card
+si-subway-image:
+  title: icon image
+si-subway-join-corner-arrow-1:
+  title: icon join-corner-arrow-1
+si-subway-join-corner-arrow-2:
+  title: icon join-corner-arrow-2
+si-subway-join-corner-arrow-3:
+  title: icon join-corner-arrow-3
+si-subway-join-corner-arrow-4:
+  title: icon join-corner-arrow-4
+si-subway-join-corner-arrow-5:
+  title: icon join-corner-arrow-5
+si-subway-join-corner-arrow-6:
+  title: icon join-corner-arrow-6
+si-subway-key:
+  title: icon key
+si-subway-left-arrow-1:
+  title: icon left-arrow-1
+si-subway-left-arrow:
+  title: icon left-arrow
+si-subway-left-down-corner-arrow-1:
+  title: icon left-down-corner-arrow-1
+si-subway-left-down-corner-arrow:
+  title: icon left-down-corner-arrow
+si-subway-left-up-corner-arrow-1:
+  title: icon left-up-corner-arrow-1
+si-subway-left-up-corner-arrow:
+  title: icon left-up-corner-arrow
+si-subway-like:
+  title: icon like
+si-subway-location-1:
+  title: icon location-1
+si-subway-location-2:
+  title: icon location-2
+si-subway-location-3:
+  title: icon location-3
+si-subway-location:
+  title: icon location
+si-subway-lock-1:
+  title: icon lock-1
+si-subway-lock-2:
+  title: icon lock-2
+si-subway-lock:
+  title: icon lock
+si-subway-magic:
+  title: icon magic
+si-subway-mail-icon-1:
+  title: icon mail-icon-1
+si-subway-mail-icon-2:
+  title: icon mail-icon-2
+si-subway-mail-icon:
+  title: icon mail-icon
+si-subway-mark-1:
+  title: icon mark-1
+si-subway-mark-2:
+  title: icon mark-2
+si-subway-mark-3:
+  title: icon mark-3
+si-subway-mark-4:
+  title: icon mark-4
+si-subway-mark:
+  title: icon mark
+si-subway-massage-1:
+  title: icon massage-1
+si-subway-massage:
+  title: icon massage
+si-subway-media:
+  title: icon media
+si-subway-memori-card:
+  title: icon memori-card
+si-subway-menu:
+  title: icon menu
+si-subway-mic:
+  title: icon mic
+si-subway-missing:
+  title: icon missing
+si-subway-move-1:
+  title: icon move-1
+si-subway-move-2:
+  title: icon move-2
+si-subway-move:
+  title: icon move
+si-subway-movie:
+  title: icon movie
+si-subway-multiply-1:
+  title: icon multiply-1
+si-subway-multiply:
+  title: icon multiply
+si-subway-music:
+  title: icon music
+si-subway-musk:
+  title: icon musk
+si-subway-mute:
+  title: icon mute
+si-subway-netwark:
+  title: icon netwark
+si-subway-next-1:
+  title: icon next-1
+si-subway-next:
+  title: icon next
+si-subway-paragraph-2:
+  title: icon paragraph-2
+si-subway-paragraph-3:
+  title: icon paragraph-3
+si-subway-paragraph-4:
+  title: icon paragraph-4
+si-subway-paragraph-5:
+  title: icon paragraph-5
+si-subway-paragraph-6:
+  title: icon paragraph-6
+si-subway-paragraph-7:
+  title: icon paragraph-7
+si-subway-paragraph-8:
+  title: icon paragraph-8
+si-subway-paragraph-9:
+  title: icon paragraph-9
+si-subway-paragraph:
+  title: icon paragraph
+si-subway-part-of-circle-1:
+  title: icon part-of-circle-1
+si-subway-part-of-circle-2:
+  title: icon part-of-circle-2
+si-subway-part-of-circle-3:
+  title: icon part-of-circle-3
+si-subway-part-of-circle-4:
+  title: icon part-of-circle-4
+si-subway-part-of-circle-5:
+  title: icon part-of-circle-5
+si-subway-part-of-circle:
+  title: icon part-of-circle
+si-subway-passing:
+  title: icon passing
+si-subway-pause-1:
+  title: icon pause-1
+si-subway-pause:
+  title: icon pause
+si-subway-pencil:
+  title: icon pencil
+si-subway-pin-1:
+  title: icon pin-1
+si-subway-pin:
+  title: icon pin
+si-subway-play-1:
+  title: icon play-1
+si-subway-play:
+  title: icon play
+si-subway-pound:
+  title: icon pound
+si-subway-power-batton:
+  title: icon power-batton
+si-subway-power:
+  title: icon power
+si-subway-previous-1:
+  title: icon previous-1
+si-subway-previous:
+  title: icon previous
+si-subway-print:
+  title: icon print
+si-subway-random:
+  title: icon random
+si-subway-rectangle-1:
+  title: icon rectangle-1
+si-subway-rectangle-2:
+  title: icon rectangle-2
+si-subway-rectangle-3:
+  title: icon rectangle-3
+si-subway-rectangle-4:
+  title: icon rectangle-4
+si-subway-rectangle:
+  title: icon rectangle
+si-subway-rectangular:
+  title: icon rectangular
+si-subway-redo-1:
+  title: icon redo-1
+si-subway-redo-icon:
+  title: icon redo-icon
+si-subway-redo:
+  title: icon redo
+si-subway-refresh-time:
+  title: icon refresh-time
+si-subway-remove-playlist:
+  title: icon remove-playlist
+si-subway-reply:
+  title: icon reply
+si-subway-right-arrow-1:
+  title: icon right-arrow-1
+si-subway-right-arrow:
+  title: icon right-arrow
+si-subway-right-down-corner-arrow-1:
+  title: icon right-down-corner-arrow-1
+si-subway-right-down-corner-arrow:
+  title: icon right-down-corner-arrow
+si-subway-right-up-corner-arrow-1:
+  title: icon right-up-corner-arrow-1
+si-subway-right-up-corner-arrow:
+  title: icon right-up-corner-arrow
+si-subway-round-arrow-1:
+  title: icon round-arrow-1
+si-subway-round-arrow-2:
+  title: icon round-arrow-2
+si-subway-round-arrow-3:
+  title: icon round-arrow-3
+si-subway-round-arrow-4:
+  title: icon round-arrow-4
+si-subway-round-arrow-5:
+  title: icon round-arrow-5
+si-subway-round-arrow-6:
+  title: icon round-arrow-6
+si-subway-save:
+  title: icon save
+si-subway-search:
+  title: icon search
+si-subway-settong:
+  title: icon settong
+si-subway-share-1:
+  title: icon share-1
+si-subway-share:
+  title: icon share
+si-subway-sharing-1:
+  title: icon sharing-1
+si-subway-sharing:
+  title: icon sharing
+si-subway-shuffile:
+  title: icon shuffile
+si-subway-sms-1:
+  title: icon sms-1
+si-subway-sms-2:
+  title: icon sms-2
+si-subway-sms-3:
+  title: icon sms-3
+si-subway-sms-4:
+  title: icon sms-4
+si-subway-sms-5:
+  title: icon sms-5
+si-subway-sms-6:
+  title: icon sms-6
+si-subway-sms-7:
+  title: icon sms-7
+si-subway-sms-8:
+  title: icon sms-8
+si-subway-sms-9:
+  title: icon sms-9
+si-subway-sms:
+  title: icon sms
+si-subway-sound-1:
+  title: icon sound-1
+si-subway-sound-2:
+  title: icon sound-2
+si-subway-sound:
+  title: icon sound
+si-subway-star-1:
+  title: icon star-1
+si-subway-star:
+  title: icon star
+si-subway-step-1:
+  title: icon step-1
+si-subway-step-2:
+  title: icon step-2
+si-subway-step:
+  title: icon step
+si-subway-stop-1:
+  title: icon stop-1
+si-subway-stop:
+  title: icon stop
+si-subway-subtraction-1:
+  title: icon subtraction-1
+si-subway-subtraction:
+  title: icon subtraction
+si-subway-switch:
+  title: icon switch
+si-subway-symbol-1:
+  title: icon symbol-1
+si-subway-symbol-2:
+  title: icon symbol-2
+si-subway-symbol:
+  title: icon symbol
+si-subway-tep:
+  title: icon tep
+si-subway-tick:
+  title: icon tick
+si-subway-time-1:
+  title: icon time-1
+si-subway-time-2:
+  title: icon time-2
+si-subway-time-3:
+  title: icon time-3
+si-subway-time-4:
+  title: icon time-4
+si-subway-time-5:
+  title: icon time-5
+si-subway-time:
+  title: icon time
+si-subway-title:
+  title: icon title
+si-subway-tool-box-1:
+  title: icon tool-box-1
+si-subway-tool-box:
+  title: icon tool-box
+si-subway-undo-1:
+  title: icon undo-1
+si-subway-undo-icon:
+  title: icon undo-icon
+si-subway-undo:
+  title: icon undo
+si-subway-unlike:
+  title: icon unlike
+si-subway-unlock-1:
+  title: icon unlock-1
+si-subway-unlock:
+  title: icon unlock
+si-subway-up-arrow-1:
+  title: icon up-arrow-1
+si-subway-up-arrow:
+  title: icon up-arrow
+si-subway-up:
+  title: icon up
+si-subway-up_2:
+  title: icon up_2
+si-subway-upload-1:
+  title: icon upload-1
+si-subway-upload-2:
+  title: icon upload-2
+si-subway-upload-3:
+  title: icon upload-3
+si-subway-upload-4:
+  title: icon upload-4
+si-subway-usd:
+  title: icon usd
+si-subway-video-1:
+  title: icon video-1
+si-subway-video:
+  title: icon video
+si-subway-webcam:
+  title: icon webcam
+si-subway-world-1:
+  title: icon world-1
+si-subway-world:
+  title: icon world
+si-subway-write-1:
+  title: icon write-1
+si-subway-write:
+  title: icon write
+si-subway-zip:
+  title: icon zip
+si-subway-zoom-in:
+  title: icon zoom-in
+si-subway-zoom-out:
+  title: icon zoom-out

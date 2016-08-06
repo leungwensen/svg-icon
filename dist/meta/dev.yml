@@ -1,0 +1,384 @@
+si-dev-android:
+  title: icon android
+si-dev-angular_simple:
+  title: icon angular_simple
+si-dev-appcelerator:
+  title: icon appcelerator
+si-dev-apple:
+  title: icon apple
+si-dev-appstore:
+  title: icon appstore
+si-dev-aptana:
+  title: icon aptana
+si-dev-asterisk:
+  title: icon asterisk
+si-dev-atlassian:
+  title: icon atlassian
+si-dev-atom:
+  title: icon atom
+si-dev-aws:
+  title: icon aws
+si-dev-backbone:
+  title: icon backbone
+si-dev-bing_small:
+  title: icon bing_small
+si-dev-bintray:
+  title: icon bintray
+si-dev-bitbucket:
+  title: icon bitbucket
+si-dev-blackberry:
+  title: icon blackberry
+si-dev-bootstrap:
+  title: icon bootstrap
+si-dev-bower:
+  title: icon bower
+si-dev-brackets:
+  title: icon brackets
+si-dev-bugsense:
+  title: icon bugsense
+si-dev-celluloid:
+  title: icon celluloid
+si-dev-chrome:
+  title: icon chrome
+si-dev-cisco:
+  title: icon cisco
+si-dev-clojure:
+  title: icon clojure
+si-dev-clojure_alt:
+  title: icon clojure_alt
+si-dev-cloud9:
+  title: icon cloud9
+si-dev-coda:
+  title: icon coda
+si-dev-code:
+  title: icon code
+si-dev-code_badge:
+  title: icon code_badge
+si-dev-codeigniter:
+  title: icon codeigniter
+si-dev-codepen:
+  title: icon codepen
+si-dev-codrops:
+  title: icon codrops
+si-dev-coffeescript:
+  title: icon coffeescript
+si-dev-compass:
+  title: icon compass
+si-dev-composer:
+  title: icon composer
+si-dev-creativecommons:
+  title: icon creativecommons
+si-dev-creativecommons_badge:
+  title: icon creativecommons_badge
+si-dev-css3:
+  title: icon css3
+si-dev-css3_full:
+  title: icon css3_full
+si-dev-css_tricks:
+  title: icon css_tricks
+si-dev-cssdeck:
+  title: icon cssdeck
+si-dev-dart:
+  title: icon dart
+si-dev-database:
+  title: icon database
+si-dev-debian:
+  title: icon debian
+si-dev-digital-ocean:
+  title: icon digital-ocean
+si-dev-django:
+  title: icon django
+si-dev-dlang:
+  title: icon dlang
+si-dev-docker:
+  title: icon docker
+si-dev-doctrine:
+  title: icon doctrine
+si-dev-dojo:
+  title: icon dojo
+si-dev-dotnet:
+  title: icon dotnet
+si-dev-dreamweaver:
+  title: icon dreamweaver
+si-dev-dropbox:
+  title: icon dropbox
+si-dev-drupal:
+  title: icon drupal
+si-dev-eclipse:
+  title: icon eclipse
+si-dev-ember:
+  title: icon ember
+si-dev-envato:
+  title: icon envato
+si-dev-erlang:
+  title: icon erlang
+si-dev-extjs:
+  title: icon extjs
+si-dev-firebase:
+  title: icon firebase
+si-dev-firefox:
+  title: icon firefox
+si-dev-fsharp:
+  title: icon fsharp
+si-dev-ghost:
+  title: icon ghost
+si-dev-ghost_small:
+  title: icon ghost_small
+si-dev-git:
+  title: icon git
+si-dev-git_branch:
+  title: icon git_branch
+si-dev-git_commit:
+  title: icon git_commit
+si-dev-git_compare:
+  title: icon git_compare
+si-dev-git_merge:
+  title: icon git_merge
+si-dev-git_pull_request:
+  title: icon git_pull_request
+si-dev-github:
+  title: icon github
+si-dev-github_alt:
+  title: icon github_alt
+si-dev-github_badge:
+  title: icon github_badge
+si-dev-github_full:
+  title: icon github_full
+si-dev-gnu:
+  title: icon gnu
+si-dev-go:
+  title: icon go
+si-dev-google-cloud-platform:
+  title: icon google-cloud-platform
+si-dev-google_analytics:
+  title: icon google_analytics
+si-dev-google_drive:
+  title: icon google_drive
+si-dev-grails:
+  title: icon grails
+si-dev-groovy:
+  title: icon groovy
+si-dev-grunt:
+  title: icon grunt
+si-dev-gulp:
+  title: icon gulp
+si-dev-hackernews:
+  title: icon hackernews
+si-dev-haskell:
+  title: icon haskell
+si-dev-heroku:
+  title: icon heroku
+si-dev-html5:
+  title: icon html5
+si-dev-html5_3d_effects:
+  title: icon html5_3d_effects
+si-dev-html5_connectivity:
+  title: icon html5_connectivity
+si-dev-html5_device_access:
+  title: icon html5_device_access
+si-dev-html5_multimedia:
+  title: icon html5_multimedia
+si-dev-ie:
+  title: icon ie
+si-dev-illustrator:
+  title: icon illustrator
+si-dev-intellij:
+  title: icon intellij
+si-dev-ionic:
+  title: icon ionic
+si-dev-java:
+  title: icon java
+si-dev-javascript:
+  title: icon javascript
+si-dev-javascript_1:
+  title: icon javascript_1
+si-dev-jekyll_small:
+  title: icon jekyll_small
+si-dev-jenkins:
+  title: icon jenkins
+si-dev-jira:
+  title: icon jira
+si-dev-joomla:
+  title: icon joomla
+si-dev-jquery_logo:
+  title: icon jquery_logo
+si-dev-jquery_ui_logo:
+  title: icon jquery_ui_logo
+si-dev-js_badge:
+  title: icon js_badge
+si-dev-komodo:
+  title: icon komodo
+si-dev-krakenjs:
+  title: icon krakenjs
+si-dev-krakenjs_badge:
+  title: icon krakenjs_badge
+si-dev-laravel:
+  title: icon laravel
+si-dev-less:
+  title: icon less
+si-dev-linux:
+  title: icon linux
+si-dev-magento:
+  title: icon magento
+si-dev-mailchimp:
+  title: icon mailchimp
+si-dev-markdown:
+  title: icon markdown
+si-dev-materializecss:
+  title: icon materializecss
+si-dev-meteor:
+  title: icon meteor
+si-dev-meteorfull:
+  title: icon meteorfull
+si-dev-mitlicence:
+  title: icon mitlicence
+si-dev-modernizr:
+  title: icon modernizr
+si-dev-mongodb:
+  title: icon mongodb
+si-dev-mootools:
+  title: icon mootools
+si-dev-mootools_badge:
+  title: icon mootools_badge
+si-dev-mozilla:
+  title: icon mozilla
+si-dev-msql_server:
+  title: icon msql_server
+si-dev-mysql:
+  title: icon mysql
+si-dev-nancy:
+  title: icon nancy
+si-dev-netbeans:
+  title: icon netbeans
+si-dev-netmagazine:
+  title: icon netmagazine
+si-dev-nginx:
+  title: icon nginx
+si-dev-nodejs:
+  title: icon nodejs
+si-dev-nodejs_small:
+  title: icon nodejs_small
+si-dev-npm:
+  title: icon npm
+si-dev-onedrive:
+  title: icon onedrive
+si-dev-openshift:
+  title: icon openshift
+si-dev-opensource:
+  title: icon opensource
+si-dev-opera:
+  title: icon opera
+si-dev-perl:
+  title: icon perl
+si-dev-phonegap:
+  title: icon phonegap
+si-dev-photoshop:
+  title: icon photoshop
+si-dev-php:
+  title: icon php
+si-dev-postgresql:
+  title: icon postgresql
+si-dev-prolog:
+  title: icon prolog
+si-dev-python:
+  title: icon python
+si-dev-rackspace:
+  title: icon rackspace
+si-dev-raphael:
+  title: icon raphael
+si-dev-rasberry_pi:
+  title: icon rasberry_pi
+si-dev-react:
+  title: icon react
+si-dev-redhat:
+  title: icon redhat
+si-dev-redis:
+  title: icon redis
+si-dev-requirejs:
+  title: icon requirejs
+si-dev-responsive:
+  title: icon responsive
+si-dev-ror:
+  title: icon ror
+si-dev-ruby:
+  title: icon ruby
+si-dev-ruby_rough:
+  title: icon ruby_rough
+si-dev-rust:
+  title: icon rust
+si-dev-safari:
+  title: icon safari
+si-dev-sass:
+  title: icon sass
+si-dev-scala:
+  title: icon scala
+si-dev-scriptcs:
+  title: icon scriptcs
+si-dev-scrum:
+  title: icon scrum
+si-dev-senchatouch:
+  title: icon senchatouch
+si-dev-sizzlejs:
+  title: icon sizzlejs
+si-dev-smashing_magazine:
+  title: icon smashing_magazine
+si-dev-snap_svg:
+  title: icon snap_svg
+si-dev-spark:
+  title: icon spark
+si-dev-sqllite:
+  title: icon sqllite
+si-dev-stackoverflow:
+  title: icon stackoverflow
+si-dev-streamline:
+  title: icon streamline
+si-dev-stylus:
+  title: icon stylus
+si-dev-sublime:
+  title: icon sublime
+si-dev-swift:
+  title: icon swift
+si-dev-symfony:
+  title: icon symfony
+si-dev-symfony_badge:
+  title: icon symfony_badge
+si-dev-techcrunch:
+  title: icon techcrunch
+si-dev-terminal:
+  title: icon terminal
+si-dev-terminal_badge:
+  title: icon terminal_badge
+si-dev-travis:
+  title: icon travis
+si-dev-trello:
+  title: icon trello
+si-dev-typo3:
+  title: icon typo3
+si-dev-ubuntu:
+  title: icon ubuntu
+si-dev-uikit:
+  title: icon uikit
+si-dev-unity_small:
+  title: icon unity_small
+si-dev-vim:
+  title: icon vim
+si-dev-visualstudio:
+  title: icon visualstudio
+si-dev-w3c:
+  title: icon w3c
+si-dev-webplatform:
+  title: icon webplatform
+si-dev-windows:
+  title: icon windows
+si-dev-wordpress:
+  title: icon wordpress
+si-dev-yahoo:
+  title: icon yahoo
+si-dev-yahoo_small:
+  title: icon yahoo_small
+si-dev-yeoman:
+  title: icon yeoman
+si-dev-yii:
+  title: icon yii
+si-dev-zend:
+  title: icon zend

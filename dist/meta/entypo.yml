@@ -1,0 +1,568 @@
+si-entypo-address:
+  title: icon address
+si-entypo-adjust:
+  title: icon adjust
+si-entypo-air:
+  title: icon air
+si-entypo-alert:
+  title: icon alert
+si-entypo-archive:
+  title: icon archive
+si-entypo-arrow-combo:
+  title: icon arrow-combo
+si-entypo-arrows-ccw:
+  title: icon arrows-ccw
+si-entypo-attach:
+  title: icon attach
+si-entypo-attention:
+  title: icon attention
+si-entypo-back-in-time:
+  title: icon back-in-time
+si-entypo-back:
+  title: icon back
+si-entypo-bag:
+  title: icon bag
+si-entypo-basket:
+  title: icon basket
+si-entypo-battery:
+  title: icon battery
+si-entypo-behance:
+  title: icon behance
+si-entypo-bell:
+  title: icon bell
+si-entypo-block:
+  title: icon block
+si-entypo-book-open:
+  title: icon book-open
+si-entypo-book:
+  title: icon book
+si-entypo-bookmark:
+  title: icon bookmark
+si-entypo-bookmarks:
+  title: icon bookmarks
+si-entypo-box:
+  title: icon box
+si-entypo-briefcase:
+  title: icon briefcase
+si-entypo-brush:
+  title: icon brush
+si-entypo-bucket:
+  title: icon bucket
+si-entypo-calendar:
+  title: icon calendar
+si-entypo-camera:
+  title: icon camera
+si-entypo-cancel-circled:
+  title: icon cancel-circled
+si-entypo-cancel-squared:
+  title: icon cancel-squared
+si-entypo-cancel:
+  title: icon cancel
+si-entypo-cc-by:
+  title: icon cc-by
+si-entypo-cc-nc-eu:
+  title: icon cc-nc-eu
+si-entypo-cc-nc-jp:
+  title: icon cc-nc-jp
+si-entypo-cc-nc:
+  title: icon cc-nc
+si-entypo-cc-nd:
+  title: icon cc-nd
+si-entypo-cc-pd:
+  title: icon cc-pd
+si-entypo-cc-remix:
+  title: icon cc-remix
+si-entypo-cc-sa:
+  title: icon cc-sa
+si-entypo-cc-share:
+  title: icon cc-share
+si-entypo-cc-zero:
+  title: icon cc-zero
+si-entypo-cc:
+  title: icon cc
+si-entypo-ccw:
+  title: icon ccw
+si-entypo-cd:
+  title: icon cd
+si-entypo-chart-area:
+  title: icon chart-area
+si-entypo-chart-bar:
+  title: icon chart-bar
+si-entypo-chart-line:
+  title: icon chart-line
+si-entypo-chart-pie:
+  title: icon chart-pie
+si-entypo-chat:
+  title: icon chat
+si-entypo-check:
+  title: icon check
+si-entypo-clipboard:
+  title: icon clipboard
+si-entypo-clock:
+  title: icon clock
+si-entypo-cloud-thunder:
+  title: icon cloud-thunder
+si-entypo-cloud:
+  title: icon cloud
+si-entypo-code:
+  title: icon code
+si-entypo-cog:
+  title: icon cog
+si-entypo-comment:
+  title: icon comment
+si-entypo-compass:
+  title: icon compass
+si-entypo-credit-card:
+  title: icon credit-card
+si-entypo-cup:
+  title: icon cup
+si-entypo-cw:
+  title: icon cw
+si-entypo-database:
+  title: icon database
+si-entypo-db-shape:
+  title: icon db-shape
+si-entypo-direction:
+  title: icon direction
+si-entypo-doc-landscape:
+  title: icon doc-landscape
+si-entypo-doc-text-inv:
+  title: icon doc-text-inv
+si-entypo-doc-text:
+  title: icon doc-text
+si-entypo-doc:
+  title: icon doc
+si-entypo-docs:
+  title: icon docs
+si-entypo-dot-2:
+  title: icon dot-2
+si-entypo-dot-3:
+  title: icon dot-3
+si-entypo-dot:
+  title: icon dot
+si-entypo-down-bold:
+  title: icon down-bold
+si-entypo-down-circled:
+  title: icon down-circled
+si-entypo-down-dir:
+  title: icon down-dir
+si-entypo-down-open-big:
+  title: icon down-open-big
+si-entypo-down-open-mini:
+  title: icon down-open-mini
+si-entypo-down-open:
+  title: icon down-open
+si-entypo-down-thin:
+  title: icon down-thin
+si-entypo-down:
+  title: icon down
+si-entypo-download:
+  title: icon download
+si-entypo-dribbble-circled:
+  title: icon dribbble-circled
+si-entypo-dribbble:
+  title: icon dribbble
+si-entypo-drive:
+  title: icon drive
+si-entypo-dropbox:
+  title: icon dropbox
+si-entypo-droplet:
+  title: icon droplet
+si-entypo-erase:
+  title: icon erase
+si-entypo-evernote:
+  title: icon evernote
+si-entypo-export:
+  title: icon export
+si-entypo-eye:
+  title: icon eye
+si-entypo-facebook-circled:
+  title: icon facebook-circled
+si-entypo-facebook-squared:
+  title: icon facebook-squared
+si-entypo-facebook:
+  title: icon facebook
+si-entypo-fast-backward:
+  title: icon fast-backward
+si-entypo-fast-forward:
+  title: icon fast-forward
+si-entypo-feather:
+  title: icon feather
+si-entypo-flag:
+  title: icon flag
+si-entypo-flash:
+  title: icon flash
+si-entypo-flashlight:
+  title: icon flashlight
+si-entypo-flattr:
+  title: icon flattr
+si-entypo-flickr-circled:
+  title: icon flickr-circled
+si-entypo-flickr:
+  title: icon flickr
+si-entypo-flight:
+  title: icon flight
+si-entypo-floppy:
+  title: icon floppy
+si-entypo-flow-branch:
+  title: icon flow-branch
+si-entypo-flow-cascade:
+  title: icon flow-cascade
+si-entypo-flow-line:
+  title: icon flow-line
+si-entypo-flow-parallel:
+  title: icon flow-parallel
+si-entypo-flow-tree:
+  title: icon flow-tree
+si-entypo-folder:
+  title: icon folder
+si-entypo-forward:
+  title: icon forward
+si-entypo-gauge:
+  title: icon gauge
+si-entypo-github-circled:
+  title: icon github-circled
+si-entypo-github:
+  title: icon github
+si-entypo-globe:
+  title: icon globe
+si-entypo-google-circles:
+  title: icon google-circles
+si-entypo-gplus-circled:
+  title: icon gplus-circled
+si-entypo-gplus:
+  title: icon gplus
+si-entypo-graduation-cap:
+  title: icon graduation-cap
+si-entypo-heart-empty:
+  title: icon heart-empty
+si-entypo-heart:
+  title: icon heart
+si-entypo-help-circled:
+  title: icon help-circled
+si-entypo-help:
+  title: icon help
+si-entypo-home:
+  title: icon home
+si-entypo-hourglass:
+  title: icon hourglass
+si-entypo-inbox:
+  title: icon inbox
+si-entypo-infinity:
+  title: icon infinity
+si-entypo-info-circled:
+  title: icon info-circled
+si-entypo-info:
+  title: icon info
+si-entypo-instagrem:
+  title: icon instagrem
+si-entypo-install:
+  title: icon install
+si-entypo-key:
+  title: icon key
+si-entypo-keyboard:
+  title: icon keyboard
+si-entypo-lamp:
+  title: icon lamp
+si-entypo-language:
+  title: icon language
+si-entypo-lastfm-circled:
+  title: icon lastfm-circled
+si-entypo-lastfm:
+  title: icon lastfm
+si-entypo-layout:
+  title: icon layout
+si-entypo-leaf:
+  title: icon leaf
+si-entypo-left-bold:
+  title: icon left-bold
+si-entypo-left-circled:
+  title: icon left-circled
+si-entypo-left-dir:
+  title: icon left-dir
+si-entypo-left-open-big:
+  title: icon left-open-big
+si-entypo-left-open-mini:
+  title: icon left-open-mini
+si-entypo-left-open:
+  title: icon left-open
+si-entypo-left-thin:
+  title: icon left-thin
+si-entypo-left:
+  title: icon left
+si-entypo-level-down:
+  title: icon level-down
+si-entypo-level-up:
+  title: icon level-up
+si-entypo-lifebuoy:
+  title: icon lifebuoy
+si-entypo-light-down:
+  title: icon light-down
+si-entypo-light-up:
+  title: icon light-up
+si-entypo-link:
+  title: icon link
+si-entypo-linkedin-circled:
+  title: icon linkedin-circled
+si-entypo-linkedin:
+  title: icon linkedin
+si-entypo-list-add:
+  title: icon list-add
+si-entypo-list:
+  title: icon list
+si-entypo-location:
+  title: icon location
+si-entypo-lock-open:
+  title: icon lock-open
+si-entypo-lock:
+  title: icon lock
+si-entypo-login:
+  title: icon login
+si-entypo-logo-db:
+  title: icon logo-db
+si-entypo-logout:
+  title: icon logout
+si-entypo-loop:
+  title: icon loop
+si-entypo-magnet:
+  title: icon magnet
+si-entypo-mail:
+  title: icon mail
+si-entypo-map:
+  title: icon map
+si-entypo-megaphone:
+  title: icon megaphone
+si-entypo-menu:
+  title: icon menu
+si-entypo-mic:
+  title: icon mic
+si-entypo-minus-circled:
+  title: icon minus-circled
+si-entypo-minus-squared:
+  title: icon minus-squared
+si-entypo-minus:
+  title: icon minus
+si-entypo-mixi:
+  title: icon mixi
+si-entypo-mobile:
+  title: icon mobile
+si-entypo-monitor:
+  title: icon monitor
+si-entypo-moon:
+  title: icon moon
+si-entypo-mouse:
+  title: icon mouse
+si-entypo-music:
+  title: icon music
+si-entypo-mute:
+  title: icon mute
+si-entypo-network:
+  title: icon network
+si-entypo-newspaper:
+  title: icon newspaper
+si-entypo-note-beamed:
+  title: icon note-beamed
+si-entypo-note:
+  title: icon note
+si-entypo-palette:
+  title: icon palette
+si-entypo-paper-plane:
+  title: icon paper-plane
+si-entypo-pause:
+  title: icon pause
+si-entypo-paypal:
+  title: icon paypal
+si-entypo-pencil:
+  title: icon pencil
+si-entypo-phone:
+  title: icon phone
+si-entypo-picasa:
+  title: icon picasa
+si-entypo-picture:
+  title: icon picture
+si-entypo-pinterest-circled:
+  title: icon pinterest-circled
+si-entypo-pinterest:
+  title: icon pinterest
+si-entypo-play:
+  title: icon play
+si-entypo-plus-circled:
+  title: icon plus-circled
+si-entypo-plus-squared:
+  title: icon plus-squared
+si-entypo-plus:
+  title: icon plus
+si-entypo-popup:
+  title: icon popup
+si-entypo-print:
+  title: icon print
+si-entypo-progress-0:
+  title: icon progress-0
+si-entypo-progress-1:
+  title: icon progress-1
+si-entypo-progress-2:
+  title: icon progress-2
+si-entypo-progress-3:
+  title: icon progress-3
+si-entypo-publish:
+  title: icon publish
+si-entypo-qq:
+  title: icon qq
+si-entypo-quote:
+  title: icon quote
+si-entypo-rdio-circled:
+  title: icon rdio-circled
+si-entypo-rdio:
+  title: icon rdio
+si-entypo-record:
+  title: icon record
+si-entypo-renren:
+  title: icon renren
+si-entypo-reply-all:
+  title: icon reply-all
+si-entypo-reply:
+  title: icon reply
+si-entypo-resize-full:
+  title: icon resize-full
+si-entypo-resize-small:
+  title: icon resize-small
+si-entypo-retweet:
+  title: icon retweet
+si-entypo-right-bold:
+  title: icon right-bold
+si-entypo-right-circled:
+  title: icon right-circled
+si-entypo-right-dir:
+  title: icon right-dir
+si-entypo-right-open-big:
+  title: icon right-open-big
+si-entypo-right-open-mini:
+  title: icon right-open-mini
+si-entypo-right-open:
+  title: icon right-open
+si-entypo-right-thin:
+  title: icon right-thin
+si-entypo-right:
+  title: icon right
+si-entypo-rocket:
+  title: icon rocket
+si-entypo-rss:
+  title: icon rss
+si-entypo-search:
+  title: icon search
+si-entypo-share:
+  title: icon share
+si-entypo-shareable:
+  title: icon shareable
+si-entypo-shuffle:
+  title: icon shuffle
+si-entypo-signal:
+  title: icon signal
+si-entypo-sina-weibo:
+  title: icon sina-weibo
+si-entypo-skype-circled:
+  title: icon skype-circled
+si-entypo-skype:
+  title: icon skype
+si-entypo-smashing:
+  title: icon smashing
+si-entypo-sound:
+  title: icon sound
+si-entypo-soundcloud:
+  title: icon soundcloud
+si-entypo-spotify-circled:
+  title: icon spotify-circled
+si-entypo-spotify:
+  title: icon spotify
+si-entypo-star-empty:
+  title: icon star-empty
+si-entypo-star:
+  title: icon star
+si-entypo-stop:
+  title: icon stop
+si-entypo-stumbleupon-circled:
+  title: icon stumbleupon-circled
+si-entypo-stumbleupon:
+  title: icon stumbleupon
+si-entypo-suitcase:
+  title: icon suitcase
+si-entypo-sweden:
+  title: icon sweden
+si-entypo-switch:
+  title: icon switch
+si-entypo-tag:
+  title: icon tag
+si-entypo-tape:
+  title: icon tape
+si-entypo-target:
+  title: icon target
+si-entypo-thermometer:
+  title: icon thermometer
+si-entypo-thumbs-down:
+  title: icon thumbs-down
+si-entypo-thumbs-up:
+  title: icon thumbs-up
+si-entypo-ticket:
+  title: icon ticket
+si-entypo-to-end:
+  title: icon to-end
+si-entypo-to-start:
+  title: icon to-start
+si-entypo-tools:
+  title: icon tools
+si-entypo-traffic-cone:
+  title: icon traffic-cone
+si-entypo-trash:
+  title: icon trash
+si-entypo-trophy:
+  title: icon trophy
+si-entypo-tumblr-circled:
+  title: icon tumblr-circled
+si-entypo-tumblr:
+  title: icon tumblr
+si-entypo-twitter-circled:
+  title: icon twitter-circled
+si-entypo-twitter:
+  title: icon twitter
+si-entypo-up-bold:
+  title: icon up-bold
+si-entypo-up-circled:
+  title: icon up-circled
+si-entypo-up-dir:
+  title: icon up-dir
+si-entypo-up-open-big:
+  title: icon up-open-big
+si-entypo-up-open-mini:
+  title: icon up-open-mini
+si-entypo-up-open:
+  title: icon up-open
+si-entypo-up-thin:
+  title: icon up-thin
+si-entypo-up:
+  title: icon up
+si-entypo-upload-cloud:
+  title: icon upload-cloud
+si-entypo-upload:
+  title: icon upload
+si-entypo-user-add:
+  title: icon user-add
+si-entypo-user:
+  title: icon user
+si-entypo-users:
+  title: icon users
+si-entypo-vcard:
+  title: icon vcard
+si-entypo-video:
+  title: icon video
+si-entypo-vimeo-circled:
+  title: icon vimeo-circled
+si-entypo-vimeo:
+  title: icon vimeo
+si-entypo-vkontakte:
+  title: icon vkontakte
+si-entypo-volume:
+  title: icon volume
+si-entypo-water:
+  title: icon water
+si-entypo-window:
+  title: icon window

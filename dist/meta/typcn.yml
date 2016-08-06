@@ -1,0 +1,672 @@
+si-typcn-adjust-brightness:
+  title: icon adjust-brightness
+si-typcn-adjust-contrast:
+  title: icon adjust-contrast
+si-typcn-anchor-outline:
+  title: icon anchor-outline
+si-typcn-anchor:
+  title: icon anchor
+si-typcn-archive:
+  title: icon archive
+si-typcn-arrow-back-outline:
+  title: icon arrow-back-outline
+si-typcn-arrow-back:
+  title: icon arrow-back
+si-typcn-arrow-down-outline:
+  title: icon arrow-down-outline
+si-typcn-arrow-down-thick:
+  title: icon arrow-down-thick
+si-typcn-arrow-down:
+  title: icon arrow-down
+si-typcn-arrow-forward-outline:
+  title: icon arrow-forward-outline
+si-typcn-arrow-forward:
+  title: icon arrow-forward
+si-typcn-arrow-left-outline:
+  title: icon arrow-left-outline
+si-typcn-arrow-left-thick:
+  title: icon arrow-left-thick
+si-typcn-arrow-left:
+  title: icon arrow-left
+si-typcn-arrow-loop-outline:
+  title: icon arrow-loop-outline
+si-typcn-arrow-loop:
+  title: icon arrow-loop
+si-typcn-arrow-maximise-outline:
+  title: icon arrow-maximise-outline
+si-typcn-arrow-maximise:
+  title: icon arrow-maximise
+si-typcn-arrow-minimise-outline:
+  title: icon arrow-minimise-outline
+si-typcn-arrow-minimise:
+  title: icon arrow-minimise
+si-typcn-arrow-move-outline:
+  title: icon arrow-move-outline
+si-typcn-arrow-move:
+  title: icon arrow-move
+si-typcn-arrow-repeat-outline:
+  title: icon arrow-repeat-outline
+si-typcn-arrow-repeat:
+  title: icon arrow-repeat
+si-typcn-arrow-right-outline:
+  title: icon arrow-right-outline
+si-typcn-arrow-right-thick:
+  title: icon arrow-right-thick
+si-typcn-arrow-right:
+  title: icon arrow-right
+si-typcn-arrow-shuffle:
+  title: icon arrow-shuffle
+si-typcn-arrow-sorted-down:
+  title: icon arrow-sorted-down
+si-typcn-arrow-sorted-up:
+  title: icon arrow-sorted-up
+si-typcn-arrow-sync-outline:
+  title: icon arrow-sync-outline
+si-typcn-arrow-sync:
+  title: icon arrow-sync
+si-typcn-arrow-unsorted:
+  title: icon arrow-unsorted
+si-typcn-arrow-up-outline:
+  title: icon arrow-up-outline
+si-typcn-arrow-up-thick:
+  title: icon arrow-up-thick
+si-typcn-arrow-up:
+  title: icon arrow-up
+si-typcn-at:
+  title: icon at
+si-typcn-attachment-outline:
+  title: icon attachment-outline
+si-typcn-attachment:
+  title: icon attachment
+si-typcn-backspace-outline:
+  title: icon backspace-outline
+si-typcn-backspace:
+  title: icon backspace
+si-typcn-battery-charge:
+  title: icon battery-charge
+si-typcn-battery-full:
+  title: icon battery-full
+si-typcn-battery-high:
+  title: icon battery-high
+si-typcn-battery-low:
+  title: icon battery-low
+si-typcn-battery-mid:
+  title: icon battery-mid
+si-typcn-beaker:
+  title: icon beaker
+si-typcn-beer:
+  title: icon beer
+si-typcn-bell:
+  title: icon bell
+si-typcn-book:
+  title: icon book
+si-typcn-bookmark:
+  title: icon bookmark
+si-typcn-briefcase:
+  title: icon briefcase
+si-typcn-brush:
+  title: icon brush
+si-typcn-business-card:
+  title: icon business-card
+si-typcn-calculator:
+  title: icon calculator
+si-typcn-calendar-outline:
+  title: icon calendar-outline
+si-typcn-calendar:
+  title: icon calendar
+si-typcn-camera-outline:
+  title: icon camera-outline
+si-typcn-camera:
+  title: icon camera
+si-typcn-cancel-outline:
+  title: icon cancel-outline
+si-typcn-cancel:
+  title: icon cancel
+si-typcn-chart-area-outline:
+  title: icon chart-area-outline
+si-typcn-chart-area:
+  title: icon chart-area
+si-typcn-chart-bar-outline:
+  title: icon chart-bar-outline
+si-typcn-chart-bar:
+  title: icon chart-bar
+si-typcn-chart-line-outline:
+  title: icon chart-line-outline
+si-typcn-chart-line:
+  title: icon chart-line
+si-typcn-chart-pie-outline:
+  title: icon chart-pie-outline
+si-typcn-chart-pie:
+  title: icon chart-pie
+si-typcn-chevron-left-outline:
+  title: icon chevron-left-outline
+si-typcn-chevron-left:
+  title: icon chevron-left
+si-typcn-chevron-right-outline:
+  title: icon chevron-right-outline
+si-typcn-chevron-right:
+  title: icon chevron-right
+si-typcn-clipboard:
+  title: icon clipboard
+si-typcn-cloud-storage-outline:
+  title: icon cloud-storage-outline
+si-typcn-cloud-storage:
+  title: icon cloud-storage
+si-typcn-code-outline:
+  title: icon code-outline
+si-typcn-code:
+  title: icon code
+si-typcn-coffee:
+  title: icon coffee
+si-typcn-cog-outline:
+  title: icon cog-outline
+si-typcn-cog:
+  title: icon cog
+si-typcn-compass:
+  title: icon compass
+si-typcn-contacts:
+  title: icon contacts
+si-typcn-credit-card:
+  title: icon credit-card
+si-typcn-css3:
+  title: icon css3
+si-typcn-database:
+  title: icon database
+si-typcn-delete-outline:
+  title: icon delete-outline
+si-typcn-delete:
+  title: icon delete
+si-typcn-device-desktop:
+  title: icon device-desktop
+si-typcn-device-laptop:
+  title: icon device-laptop
+si-typcn-device-phone:
+  title: icon device-phone
+si-typcn-device-tablet:
+  title: icon device-tablet
+si-typcn-directions:
+  title: icon directions
+si-typcn-divide-outline:
+  title: icon divide-outline
+si-typcn-divide:
+  title: icon divide
+si-typcn-document-add:
+  title: icon document-add
+si-typcn-document-delete:
+  title: icon document-delete
+si-typcn-document-text:
+  title: icon document-text
+si-typcn-document:
+  title: icon document
+si-typcn-download-outline:
+  title: icon download-outline
+si-typcn-download:
+  title: icon download
+si-typcn-dropbox:
+  title: icon dropbox
+si-typcn-edit:
+  title: icon edit
+si-typcn-eject-outline:
+  title: icon eject-outline
+si-typcn-eject:
+  title: icon eject
+si-typcn-equals-outline:
+  title: icon equals-outline
+si-typcn-equals:
+  title: icon equals
+si-typcn-export-outline:
+  title: icon export-outline
+si-typcn-export:
+  title: icon export
+si-typcn-eye-outline:
+  title: icon eye-outline
+si-typcn-eye:
+  title: icon eye
+si-typcn-feather:
+  title: icon feather
+si-typcn-film:
+  title: icon film
+si-typcn-filter:
+  title: icon filter
+si-typcn-flag-outline:
+  title: icon flag-outline
+si-typcn-flag:
+  title: icon flag
+si-typcn-flash-outline:
+  title: icon flash-outline
+si-typcn-flash:
+  title: icon flash
+si-typcn-flow-children:
+  title: icon flow-children
+si-typcn-flow-merge:
+  title: icon flow-merge
+si-typcn-flow-parallel:
+  title: icon flow-parallel
+si-typcn-flow-switch:
+  title: icon flow-switch
+si-typcn-folder-add:
+  title: icon folder-add
+si-typcn-folder-delete:
+  title: icon folder-delete
+si-typcn-folder-open:
+  title: icon folder-open
+si-typcn-folder:
+  title: icon folder
+si-typcn-gift:
+  title: icon gift
+si-typcn-globe-outline:
+  title: icon globe-outline
+si-typcn-globe:
+  title: icon globe
+si-typcn-group-outline:
+  title: icon group-outline
+si-typcn-group:
+  title: icon group
+si-typcn-headphones:
+  title: icon headphones
+si-typcn-heart-full-outline:
+  title: icon heart-full-outline
+si-typcn-heart-half-outline:
+  title: icon heart-half-outline
+si-typcn-heart-outline:
+  title: icon heart-outline
+si-typcn-heart:
+  title: icon heart
+si-typcn-home-outline:
+  title: icon home-outline
+si-typcn-home:
+  title: icon home
+si-typcn-html5:
+  title: icon html5
+si-typcn-image-outline:
+  title: icon image-outline
+si-typcn-image:
+  title: icon image
+si-typcn-infinity-outline:
+  title: icon infinity-outline
+si-typcn-infinity:
+  title: icon infinity
+si-typcn-info-large-outline:
+  title: icon info-large-outline
+si-typcn-info-large:
+  title: icon info-large
+si-typcn-info-outline:
+  title: icon info-outline
+si-typcn-info:
+  title: icon info
+si-typcn-input-checked-outline:
+  title: icon input-checked-outline
+si-typcn-input-checked:
+  title: icon input-checked
+si-typcn-key-outline:
+  title: icon key-outline
+si-typcn-key:
+  title: icon key
+si-typcn-keyboard:
+  title: icon keyboard
+si-typcn-leaf:
+  title: icon leaf
+si-typcn-lightbulb:
+  title: icon lightbulb
+si-typcn-link-outline:
+  title: icon link-outline
+si-typcn-link:
+  title: icon link
+si-typcn-location-arrow-outline:
+  title: icon location-arrow-outline
+si-typcn-location-arrow:
+  title: icon location-arrow
+si-typcn-location-outline:
+  title: icon location-outline
+si-typcn-location:
+  title: icon location
+si-typcn-lock-closed-outline:
+  title: icon lock-closed-outline
+si-typcn-lock-closed:
+  title: icon lock-closed
+si-typcn-lock-open-outline:
+  title: icon lock-open-outline
+si-typcn-lock-open:
+  title: icon lock-open
+si-typcn-mail:
+  title: icon mail
+si-typcn-map:
+  title: icon map
+si-typcn-media-eject-outline:
+  title: icon media-eject-outline
+si-typcn-media-eject:
+  title: icon media-eject
+si-typcn-media-fast-forward-outline:
+  title: icon media-fast-forward-outline
+si-typcn-media-fast-forward:
+  title: icon media-fast-forward
+si-typcn-media-pause-outline:
+  title: icon media-pause-outline
+si-typcn-media-pause:
+  title: icon media-pause
+si-typcn-media-play-outline:
+  title: icon media-play-outline
+si-typcn-media-play-reverse-outline:
+  title: icon media-play-reverse-outline
+si-typcn-media-play-reverse:
+  title: icon media-play-reverse
+si-typcn-media-play:
+  title: icon media-play
+si-typcn-media-record-outline:
+  title: icon media-record-outline
+si-typcn-media-record:
+  title: icon media-record
+si-typcn-media-rewind-outline:
+  title: icon media-rewind-outline
+si-typcn-media-rewind:
+  title: icon media-rewind
+si-typcn-media-stop-outline:
+  title: icon media-stop-outline
+si-typcn-media-stop:
+  title: icon media-stop
+si-typcn-message-typing:
+  title: icon message-typing
+si-typcn-message:
+  title: icon message
+si-typcn-messages:
+  title: icon messages
+si-typcn-microphone-outline:
+  title: icon microphone-outline
+si-typcn-microphone:
+  title: icon microphone
+si-typcn-minus-outline:
+  title: icon minus-outline
+si-typcn-minus:
+  title: icon minus
+si-typcn-mortar-board:
+  title: icon mortar-board
+si-typcn-news:
+  title: icon news
+si-typcn-notes-outline:
+  title: icon notes-outline
+si-typcn-notes:
+  title: icon notes
+si-typcn-pen:
+  title: icon pen
+si-typcn-pencil:
+  title: icon pencil
+si-typcn-phone-outline:
+  title: icon phone-outline
+si-typcn-phone:
+  title: icon phone
+si-typcn-pi-outline:
+  title: icon pi-outline
+si-typcn-pi:
+  title: icon pi
+si-typcn-pin-outline:
+  title: icon pin-outline
+si-typcn-pin:
+  title: icon pin
+si-typcn-pipette:
+  title: icon pipette
+si-typcn-plane-outline:
+  title: icon plane-outline
+si-typcn-plane:
+  title: icon plane
+si-typcn-plug:
+  title: icon plug
+si-typcn-plus-outline:
+  title: icon plus-outline
+si-typcn-plus:
+  title: icon plus
+si-typcn-point-of-interest-outline:
+  title: icon point-of-interest-outline
+si-typcn-point-of-interest:
+  title: icon point-of-interest
+si-typcn-power-outline:
+  title: icon power-outline
+si-typcn-power:
+  title: icon power
+si-typcn-printer:
+  title: icon printer
+si-typcn-puzzle-outline:
+  title: icon puzzle-outline
+si-typcn-puzzle:
+  title: icon puzzle
+si-typcn-radar-outline:
+  title: icon radar-outline
+si-typcn-radar:
+  title: icon radar
+si-typcn-refresh-outline:
+  title: icon refresh-outline
+si-typcn-refresh:
+  title: icon refresh
+si-typcn-rss-outline:
+  title: icon rss-outline
+si-typcn-rss:
+  title: icon rss
+si-typcn-scissors-outline:
+  title: icon scissors-outline
+si-typcn-scissors:
+  title: icon scissors
+si-typcn-shopping-bag:
+  title: icon shopping-bag
+si-typcn-shopping-cart:
+  title: icon shopping-cart
+si-typcn-social-at-circular:
+  title: icon social-at-circular
+si-typcn-social-dribbble-circular:
+  title: icon social-dribbble-circular
+si-typcn-social-dribbble:
+  title: icon social-dribbble
+si-typcn-social-facebook-circular:
+  title: icon social-facebook-circular
+si-typcn-social-facebook:
+  title: icon social-facebook
+si-typcn-social-flickr-circular:
+  title: icon social-flickr-circular
+si-typcn-social-flickr:
+  title: icon social-flickr
+si-typcn-social-github-circular:
+  title: icon social-github-circular
+si-typcn-social-github:
+  title: icon social-github
+si-typcn-social-google-plus-circular:
+  title: icon social-google-plus-circular
+si-typcn-social-google-plus:
+  title: icon social-google-plus
+si-typcn-social-instagram-circular:
+  title: icon social-instagram-circular
+si-typcn-social-instagram:
+  title: icon social-instagram
+si-typcn-social-last-fm-circular:
+  title: icon social-last-fm-circular
+si-typcn-social-last-fm:
+  title: icon social-last-fm
+si-typcn-social-linkedin-circular:
+  title: icon social-linkedin-circular
+si-typcn-social-linkedin:
+  title: icon social-linkedin
+si-typcn-social-pinterest-circular:
+  title: icon social-pinterest-circular
+si-typcn-social-pinterest:
+  title: icon social-pinterest
+si-typcn-social-skype-outline:
+  title: icon social-skype-outline
+si-typcn-social-skype:
+  title: icon social-skype
+si-typcn-social-tumbler-circular:
+  title: icon social-tumbler-circular
+si-typcn-social-tumbler:
+  title: icon social-tumbler
+si-typcn-social-twitter-circular:
+  title: icon social-twitter-circular
+si-typcn-social-twitter:
+  title: icon social-twitter
+si-typcn-social-vimeo-circular:
+  title: icon social-vimeo-circular
+si-typcn-social-vimeo:
+  title: icon social-vimeo
+si-typcn-social-youtube-circular:
+  title: icon social-youtube-circular
+si-typcn-social-youtube:
+  title: icon social-youtube
+si-typcn-sort-alphabetically-outline:
+  title: icon sort-alphabetically-outline
+si-typcn-sort-alphabetically:
+  title: icon sort-alphabetically
+si-typcn-sort-numerically-outline:
+  title: icon sort-numerically-outline
+si-typcn-sort-numerically:
+  title: icon sort-numerically
+si-typcn-spanner-outline:
+  title: icon spanner-outline
+si-typcn-spanner:
+  title: icon spanner
+si-typcn-spiral:
+  title: icon spiral
+si-typcn-star-full-outline:
+  title: icon star-full-outline
+si-typcn-star-half-outline:
+  title: icon star-half-outline
+si-typcn-star-half:
+  title: icon star-half
+si-typcn-star-outline:
+  title: icon star-outline
+si-typcn-star:
+  title: icon star
+si-typcn-starburst-outline:
+  title: icon starburst-outline
+si-typcn-starburst:
+  title: icon starburst
+si-typcn-stopwatch:
+  title: icon stopwatch
+si-typcn-support:
+  title: icon support
+si-typcn-tabs-outline:
+  title: icon tabs-outline
+si-typcn-tag:
+  title: icon tag
+si-typcn-tags:
+  title: icon tags
+si-typcn-th-large-outline:
+  title: icon th-large-outline
+si-typcn-th-large:
+  title: icon th-large
+si-typcn-th-list-outline:
+  title: icon th-list-outline
+si-typcn-th-list:
+  title: icon th-list
+si-typcn-th-menu-outline:
+  title: icon th-menu-outline
+si-typcn-th-menu:
+  title: icon th-menu
+si-typcn-th-small-outline:
+  title: icon th-small-outline
+si-typcn-th-small:
+  title: icon th-small
+si-typcn-thermometer:
+  title: icon thermometer
+si-typcn-thumbs-down:
+  title: icon thumbs-down
+si-typcn-thumbs-ok:
+  title: icon thumbs-ok
+si-typcn-thumbs-up:
+  title: icon thumbs-up
+si-typcn-tick-outline:
+  title: icon tick-outline
+si-typcn-tick:
+  title: icon tick
+si-typcn-ticket:
+  title: icon ticket
+si-typcn-time:
+  title: icon time
+si-typcn-times-outline:
+  title: icon times-outline
+si-typcn-times:
+  title: icon times
+si-typcn-trash:
+  title: icon trash
+si-typcn-tree:
+  title: icon tree
+si-typcn-upload-outline:
+  title: icon upload-outline
+si-typcn-upload:
+  title: icon upload
+si-typcn-user-add-outline:
+  title: icon user-add-outline
+si-typcn-user-add:
+  title: icon user-add
+si-typcn-user-delete-outline:
+  title: icon user-delete-outline
+si-typcn-user-delete:
+  title: icon user-delete
+si-typcn-user-outline:
+  title: icon user-outline
+si-typcn-user:
+  title: icon user
+si-typcn-vendor-android:
+  title: icon vendor-android
+si-typcn-vendor-apple:
+  title: icon vendor-apple
+si-typcn-vendor-microsoft:
+  title: icon vendor-microsoft
+si-typcn-video-outline:
+  title: icon video-outline
+si-typcn-video:
+  title: icon video
+si-typcn-volume-down:
+  title: icon volume-down
+si-typcn-volume-mute:
+  title: icon volume-mute
+si-typcn-volume-up:
+  title: icon volume-up
+si-typcn-volume:
+  title: icon volume
+si-typcn-warning-outline:
+  title: icon warning-outline
+si-typcn-warning:
+  title: icon warning
+si-typcn-watch:
+  title: icon watch
+si-typcn-waves-outline:
+  title: icon waves-outline
+si-typcn-waves:
+  title: icon waves
+si-typcn-weather-cloudy:
+  title: icon weather-cloudy
+si-typcn-weather-downpour:
+  title: icon weather-downpour
+si-typcn-weather-night:
+  title: icon weather-night
+si-typcn-weather-partly-sunny:
+  title: icon weather-partly-sunny
+si-typcn-weather-shower:
+  title: icon weather-shower
+si-typcn-weather-snow:
+  title: icon weather-snow
+si-typcn-weather-stormy:
+  title: icon weather-stormy
+si-typcn-weather-sunny:
+  title: icon weather-sunny
+si-typcn-weather-windy-cloudy:
+  title: icon weather-windy-cloudy
+si-typcn-weather-windy:
+  title: icon weather-windy
+si-typcn-wi-fi-outline:
+  title: icon wi-fi-outline
+si-typcn-wi-fi:
+  title: icon wi-fi
+si-typcn-wine:
+  title: icon wine
+si-typcn-world-outline:
+  title: icon world-outline
+si-typcn-world:
+  title: icon world
+si-typcn-zoom-in-outline:
+  title: icon zoom-in-outline
+si-typcn-zoom-in:
+  title: icon zoom-in
+si-typcn-zoom-out-outline:
+  title: icon zoom-out-outline
+si-typcn-zoom-out:
+  title: icon zoom-out
+si-typcn-zoom-outline:
+  title: icon zoom-outline
+si-typcn-zoom:
+  title: icon zoom

@@ -1,0 +1,738 @@
+si-zero-add-folder:
+  title: icon add-folder
+si-zero-agent:
+  title: icon agent
+si-zero-align-2-bottom:
+  title: icon align-2-bottom
+si-zero-align-2-center:
+  title: icon align-2-center
+si-zero-align-2-left:
+  title: icon align-2-left
+si-zero-align-2-middle:
+  title: icon align-2-middle
+si-zero-align-2-right:
+  title: icon align-2-right
+si-zero-align-2-top:
+  title: icon align-2-top
+si-zero-align-center:
+  title: icon align-center
+si-zero-align-left:
+  title: icon align-left
+si-zero-align-right:
+  title: icon align-right
+si-zero-analysis:
+  title: icon analysis
+si-zero-anchor:
+  title: icon anchor
+si-zero-app-dashboard:
+  title: icon app-dashboard
+si-zero-app-pai:
+  title: icon app-pai
+si-zero-app-worksheet:
+  title: icon app-worksheet
+si-zero-area-chart:
+  title: icon area-chart
+si-zero-arrow-bottom-dot:
+  title: icon arrow-bottom-dot
+si-zero-arrow-bottom-l:
+  title: icon arrow-bottom-l
+si-zero-arrow-down-l:
+  title: icon arrow-down-l
+si-zero-arrow-down:
+  title: icon arrow-down
+si-zero-arrow-left-d-l:
+  title: icon arrow-left-d-l
+si-zero-arrow-left-l:
+  title: icon arrow-left-l
+si-zero-arrow-left:
+  title: icon arrow-left
+si-zero-arrow-minus:
+  title: icon arrow-minus
+si-zero-arrow-reduce:
+  title: icon arrow-reduce
+si-zero-arrow-right-d-l:
+  title: icon arrow-right-d-l
+si-zero-arrow-right-l:
+  title: icon arrow-right-l
+si-zero-arrow-right-o:
+  title: icon arrow-right-o
+si-zero-arrow-right:
+  title: icon arrow-right
+si-zero-arrow-rise:
+  title: icon arrow-rise
+si-zero-arrow-top-dot:
+  title: icon arrow-top-dot
+si-zero-arrow-top-l:
+  title: icon arrow-top-l
+si-zero-arrow-top:
+  title: icon arrow-top
+si-zero-arrow-up-l:
+  title: icon arrow-up-l
+si-zero-arrow-up:
+  title: icon arrow-up
+si-zero-asterisk:
+  title: icon asterisk
+si-zero-attachment:
+  title: icon attachment
+si-zero-auto-align-24:
+  title: icon auto-align-24
+si-zero-auto-merge-cell:
+  title: icon auto-merge-cell
+si-zero-backward-cycly-o:
+  title: icon backward-cycly-o
+si-zero-bring-to-bottom:
+  title: icon bring-to-bottom
+si-zero-bring-to-downer:
+  title: icon bring-to-downer
+si-zero-bring-to-top:
+  title: icon bring-to-top
+si-zero-bring-to-upper:
+  title: icon bring-to-upper
+si-zero-bucket-a:
+  title: icon bucket-a
+si-zero-bucket:
+  title: icon bucket
+si-zero-c:
+  title: icon c
+si-zero-calendar:
+  title: icon calendar
+si-zero-center-justified:
+  title: icon center-justified
+si-zero-chart-bar:
+  title: icon chart-bar
+si-zero-chart-from-to:
+  title: icon chart-from-to
+si-zero-chart-funnel-plot:
+  title: icon chart-funnel-plot
+si-zero-chart-funnel:
+  title: icon chart-funnel
+si-zero-chart-index:
+  title: icon chart-index
+si-zero-chart-new:
+  title: icon chart-new
+si-zero-chart-scatter:
+  title: icon chart-scatter
+si-zero-chart-word-cloud:
+  title: icon chart-word-cloud
+si-zero-chart:
+  title: icon chart
+si-zero-check-triangle:
+  title: icon check-triangle
+si-zero-clear:
+  title: icon clear
+si-zero-click:
+  title: icon click
+si-zero-close-c:
+  title: icon close-c
+si-zero-close-l:
+  title: icon close-l
+si-zero-close-o:
+  title: icon close-o
+si-zero-closedhand-24:
+  title: icon closedhand-24
+si-zero-collapse:
+  title: icon collapse
+si-zero-color:
+  title: icon color
+si-zero-comment-full-l:
+  title: icon comment-full-l
+si-zero-comment-l:
+  title: icon comment-l
+si-zero-component-24:
+  title: icon component-24
+si-zero-component:
+  title: icon component
+si-zero-concentric-pie-chart:
+  title: icon concentric-pie-chart
+si-zero-console-24:
+  title: icon console-24
+si-zero-copy-l:
+  title: icon copy-l
+si-zero-copy-node:
+  title: icon copy-node
+si-zero-cry:
+  title: icon cry
+si-zero-custom-text:
+  title: icon custom-text
+si-zero-cut:
+  title: icon cut
+si-zero-cycle-24:
+  title: icon cycle-24
+si-zero-dashboard-24:
+  title: icon dashboard-24
+si-zero-data-agent-legend-dimension:
+  title: icon data-agent-legend-dimension
+si-zero-data-agent-legend-measure:
+  title: icon data-agent-legend-measure
+si-zero-data-source-24:
+  title: icon data-source-24
+si-zero-data:
+  title: icon data
+si-zero-default-24:
+  title: icon default-24
+si-zero-default-justified:
+  title: icon default-justified
+si-zero-delete-column:
+  title: icon delete-column
+si-zero-delete-row:
+  title: icon delete-row
+si-zero-delete:
+  title: icon delete
+si-zero-desktop-24:
+  title: icon desktop-24
+si-zero-desktop:
+  title: icon desktop
+si-zero-dials:
+  title: icon dials
+si-zero-diamond-24:
+  title: icon diamond-24
+si-zero-diamond-ok-l:
+  title: icon diamond-ok-l
+si-zero-diamond:
+  title: icon diamond
+si-zero-dimensions:
+  title: icon dimensions
+si-zero-direction-horizontal:
+  title: icon direction-horizontal
+si-zero-direction-vertical:
+  title: icon direction-vertical
+si-zero-dislike-24:
+  title: icon dislike-24
+si-zero-dislike-fill:
+  title: icon dislike-fill
+si-zero-dislike-l-24:
+  title: icon dislike-l-24
+si-zero-dislike:
+  title: icon dislike
+si-zero-doc-csv:
+  title: icon doc-csv
+si-zero-doc-pdf:
+  title: icon doc-pdf
+si-zero-doc-txt:
+  title: icon doc-txt
+si-zero-doc-xls:
+  title: icon doc-xls
+si-zero-document-full:
+  title: icon document-full
+si-zero-document:
+  title: icon document
+si-zero-dot:
+  title: icon dot
+si-zero-download:
+  title: icon download
+si-zero-drag:
+  title: icon drag
+si-zero-edit:
+  title: icon edit
+si-zero-empty-box:
+  title: icon empty-box
+si-zero-enterprise:
+  title: icon enterprise
+si-zero-exchange-xy:
+  title: icon exchange-xy
+si-zero-exit-fullscreen:
+  title: icon exit-fullscreen
+si-zero-expand:
+  title: icon expand
+si-zero-export-excel:
+  title: icon export-excel
+si-zero-export:
+  title: icon export
+si-zero-file:
+  title: icon file
+si-zero-filter:
+  title: icon filter
+si-zero-fire:
+  title: icon fire
+si-zero-fitscreen-24:
+  title: icon fitscreen-24
+si-zero-fliter:
+  title: icon fliter
+si-zero-folder-open:
+  title: icon folder-open
+si-zero-folder:
+  title: icon folder
+si-zero-font-Italics:
+  title: icon font-Italics
+si-zero-font-bold:
+  title: icon font-bold
+si-zero-font-color-merge-a:
+  title: icon font-color-merge-a
+si-zero-font-color-merge:
+  title: icon font-color-merge
+si-zero-font-color:
+  title: icon font-color
+si-zero-font-size:
+  title: icon font-size
+si-zero-font-strikethrough:
+  title: icon font-strikethrough
+si-zero-font-underline:
+  title: icon font-underline
+si-zero-forward-o:
+  title: icon forward-o
+si-zero-freeze-cell:
+  title: icon freeze-cell
+si-zero-freeze-column:
+  title: icon freeze-column
+si-zero-freeze-row:
+  title: icon freeze-row
+si-zero-freeze:
+  title: icon freeze
+si-zero-fullscreen:
+  title: icon fullscreen
+si-zero-function:
+  title: icon function
+si-zero-globe-o-24:
+  title: icon globe-o-24
+si-zero-group-24:
+  title: icon group-24
+si-zero-guide-add:
+  title: icon guide-add
+si-zero-guide-delete:
+  title: icon guide-delete
+si-zero-help-o-24:
+  title: icon help-o-24
+si-zero-help-o:
+  title: icon help-o
+si-zero-help-s:
+  title: icon help-s
+si-zero-hexagon:
+  title: icon hexagon
+si-zero-hidden-cloumn:
+  title: icon hidden-cloumn
+si-zero-hidden-row:
+  title: icon hidden-row
+si-zero-hierarchy:
+  title: icon hierarchy
+si-zero-host:
+  title: icon host
+si-zero-if:
+  title: icon if
+si-zero-iframe:
+  title: icon iframe
+si-zero-import:
+  title: icon import
+si-zero-indent:
+  title: icon indent
+si-zero-info-o:
+  title: icon info-o
+si-zero-info:
+  title: icon info
+si-zero-initial:
+  title: icon initial
+si-zero-inner-join:
+  title: icon inner-join
+si-zero-insert-column:
+  title: icon insert-column
+si-zero-insert-row:
+  title: icon insert-row
+si-zero-invisible:
+  title: icon invisible
+si-zero-ipad-24:
+  title: icon ipad-24
+si-zero-ipad:
+  title: icon ipad
+si-zero-lab-shut-down:
+  title: icon lab-shut-down
+si-zero-label-04-01:
+  title: icon label-04-01
+si-zero-label1:
+  title: icon label1
+si-zero-label2:
+  title: icon label2
+si-zero-label3:
+  title: icon label3
+si-zero-label4:
+  title: icon label4
+si-zero-lbs-location:
+  title: icon lbs-location
+si-zero-left-join:
+  title: icon left-join
+si-zero-left-justified:
+  title: icon left-justified
+si-zero-legend-1:
+  title: icon legend-1
+si-zero-lib-24:
+  title: icon lib-24
+si-zero-lib:
+  title: icon lib
+si-zero-lighting:
+  title: icon lighting
+si-zero-like-24:
+  title: icon like-24
+si-zero-like-fill:
+  title: icon like-fill
+si-zero-like-l-24:
+  title: icon like-l-24
+si-zero-like:
+  title: icon like
+si-zero-line-chart:
+  title: icon line-chart
+si-zero-link:
+  title: icon link
+si-zero-list-alt:
+  title: icon list-alt
+si-zero-list-ol:
+  title: icon list-ol
+si-zero-list:
+  title: icon list
+si-zero-loading-spinner:
+  title: icon loading-spinner
+si-zero-loading:
+  title: icon loading
+si-zero-locate-o:
+  title: icon locate-o
+si-zero-location-:
+  title: icon location-
+si-zero-location-delete:
+  title: icon location-delete
+si-zero-location:
+  title: icon location
+si-zero-lock-row:
+  title: icon lock-row
+si-zero-lock:
+  title: icon lock
+si-zero-logo-bg:
+  title: icon logo-bg
+si-zero-mail:
+  title: icon mail
+si-zero-map-bubble-hover:
+  title: icon map-bubble-hover
+si-zero-map-bubble:
+  title: icon map-bubble
+si-zero-map-color-hover:
+  title: icon map-color-hover
+si-zero-map-color:
+  title: icon map-color
+si-zero-map-sankey:
+  title: icon map-sankey
+si-zero-merge-cell:
+  title: icon merge-cell
+si-zero-minus-cycle-o:
+  title: icon minus-cycle-o
+si-zero-more:
+  title: icon more
+si-zero-movable:
+  title: icon movable
+si-zero-moveto:
+  title: icon moveto
+si-zero-multi-line-text:
+  title: icon multi-line-text
+si-zero-multidimensional-24:
+  title: icon multidimensional-24
+si-zero-new-document-24:
+  title: icon new-document-24
+si-zero-new-document-dashboard:
+  title: icon new-document-dashboard
+si-zero-new-document-worksheet:
+  title: icon new-document-worksheet
+si-zero-new-document:
+  title: icon new-document
+si-zero-node-collapse:
+  title: icon node-collapse
+si-zero-node-expand:
+  title: icon node-expand
+si-zero-num:
+  title: icon num
+si-zero-o-c:
+  title: icon o-c
+si-zero-oil-table-chart:
+  title: icon oil-table-chart
+si-zero-ok-c:
+  title: icon ok-c
+si-zero-ok-l:
+  title: icon ok-l
+si-zero-ok-o:
+  title: icon ok-o
+si-zero-ok-s:
+  title: icon ok-s
+si-zero-ok:
+  title: icon ok
+si-zero-open-l:
+  title: icon open-l
+si-zero-open:
+  title: icon open
+si-zero-operation:
+  title: icon operation
+si-zero-optimization:
+  title: icon optimization
+si-zero-page-1:
+  title: icon page-1
+si-zero-paragraph:
+  title: icon paragraph
+si-zero-paste-l:
+  title: icon paste-l
+si-zero-pause-o:
+  title: icon pause-o
+si-zero-pause:
+  title: icon pause
+si-zero-pencil-l:
+  title: icon pencil-l
+si-zero-percent:
+  title: icon percent
+si-zero-permission:
+  title: icon permission
+si-zero-phone-24:
+  title: icon phone-24
+si-zero-phone:
+  title: icon phone
+si-zero-picture:
+  title: icon picture
+si-zero-pie-3d-chart:
+  title: icon pie-3d-chart
+si-zero-pie-chart:
+  title: icon pie-chart
+si-zero-pin:
+  title: icon pin
+si-zero-plus-24:
+  title: icon plus-24
+si-zero-plus-dot-o:
+  title: icon plus-dot-o
+si-zero-plus-l-thin:
+  title: icon plus-l-thin
+si-zero-plus-l:
+  title: icon plus-l
+si-zero-plus-o-24:
+  title: icon plus-o-24
+si-zero-plus-o:
+  title: icon plus-o
+si-zero-plus:
+  title: icon plus
+si-zero-pointer:
+  title: icon pointer
+si-zero-polar-chart:
+  title: icon polar-chart
+si-zero-position-bottom:
+  title: icon position-bottom
+si-zero-position-left:
+  title: icon position-left
+si-zero-position-right:
+  title: icon position-right
+si-zero-position-top:
+  title: icon position-top
+si-zero-preview-24:
+  title: icon preview-24
+si-zero-project-24:
+  title: icon project-24
+si-zero-publish-fail-24:
+  title: icon publish-fail-24
+si-zero-publish-l-24:
+  title: icon publish-l-24
+si-zero-publish-run-24:
+  title: icon publish-run-24
+si-zero-publish-stop-24:
+  title: icon publish-stop-24
+si-zero-publish-success-24:
+  title: icon publish-success-24
+si-zero-publish-wait-24:
+  title: icon publish-wait-24
+si-zero-publish:
+  title: icon publish
+si-zero-query:
+  title: icon query
+si-zero-radar-chart:
+  title: icon radar-chart
+si-zero-radius:
+  title: icon radius
+si-zero-real-size-24:
+  title: icon real-size-24
+si-zero-redo-1:
+  title: icon redo-1
+si-zero-redo:
+  title: icon redo
+si-zero-refresh:
+  title: icon refresh
+si-zero-rename:
+  title: icon rename
+si-zero-report-24:
+  title: icon report-24
+si-zero-report:
+  title: icon report
+si-zero-rerun-24:
+  title: icon rerun-24
+si-zero-rerun:
+  title: icon rerun
+si-zero-right-justified:
+  title: icon right-justified
+si-zero-rmb:
+  title: icon rmb
+si-zero-rocket:
+  title: icon rocket
+si-zero-run-from:
+  title: icon run-from
+si-zero-run-node:
+  title: icon run-node
+si-zero-run-o-24:
+  title: icon run-o-24
+si-zero-run-stop:
+  title: icon run-stop
+si-zero-run:
+  title: icon run
+si-zero-s:
+  title: icon s
+si-zero-save-24:
+  title: icon save-24
+si-zero-save-as-24:
+  title: icon save-as-24
+si-zero-save-as:
+  title: icon save-as
+si-zero-save:
+  title: icon save
+si-zero-schema:
+  title: icon schema
+si-zero-script:
+  title: icon script
+si-zero-search-24:
+  title: icon search-24
+si-zero-search:
+  title: icon search
+si-zero-selected:
+  title: icon selected
+si-zero-separate-cell:
+  title: icon separate-cell
+si-zero-separators:
+  title: icon separators
+si-zero-sequence-h-a-z:
+  title: icon sequence-h-a-z
+si-zero-sequence-h-z-a:
+  title: icon sequence-h-z-a
+si-zero-sequence-h:
+  title: icon sequence-h
+si-zero-sequence-v-a-z:
+  title: icon sequence-v-a-z
+si-zero-sequence-v-z-a:
+  title: icon sequence-v-z-a
+si-zero-sequence-v:
+  title: icon sequence-v
+si-zero-setting-24:
+  title: icon setting-24
+si-zero-setting:
+  title: icon setting
+si-zero-shape:
+  title: icon shape
+si-zero-share-from:
+  title: icon share-from
+si-zero-share:
+  title: icon share
+si-zero-sheet-1:
+  title: icon sheet-1
+si-zero-sheet-4:
+  title: icon sheet-4
+si-zero-slash:
+  title: icon slash
+si-zero-slider-play:
+  title: icon slider-play
+si-zero-slider:
+  title: icon slider
+si-zero-sort-a-z:
+  title: icon sort-a-z
+si-zero-sort:
+  title: icon sort
+si-zero-sql:
+  title: icon sql
+si-zero-stack:
+  title: icon stack
+si-zero-star-l:
+  title: icon star-l
+si-zero-star-remove-l:
+  title: icon star-remove-l
+si-zero-star:
+  title: icon star
+si-zero-stop-o-24:
+  title: icon stop-o-24
+si-zero-stop-o:
+  title: icon stop-o
+si-zero-string:
+  title: icon string
+si-zero-stroke-bottom:
+  title: icon stroke-bottom
+si-zero-stroke-left:
+  title: icon stroke-left
+si-zero-stroke-right:
+  title: icon stroke-right
+si-zero-stroke-top:
+  title: icon stroke-top
+si-zero-stroke:
+  title: icon stroke
+si-zero-subscribe-24:
+  title: icon subscribe-24
+si-zero-subtotals:
+  title: icon subtotals
+si-zero-sum:
+  title: icon sum
+si-zero-suspend-cycle-o:
+  title: icon suspend-cycle-o
+si-zero-suspend:
+  title: icon suspend
+si-zero-sync-o:
+  title: icon sync-o
+si-zero-sync:
+  title: icon sync
+si-zero-tab:
+  title: icon tab
+si-zero-table:
+  title: icon table
+si-zero-target:
+  title: icon target
+si-zero-text:
+  title: icon text
+si-zero-thumnail:
+  title: icon thumnail
+si-zero-time-o:
+  title: icon time-o
+si-zero-transfer:
+  title: icon transfer
+si-zero-transform-1:
+  title: icon transform-1
+si-zero-transform-2:
+  title: icon transform-2
+si-zero-triangle-24:
+  title: icon triangle-24
+si-zero-undo-1:
+  title: icon undo-1
+si-zero-undo:
+  title: icon undo
+si-zero-ungroup-24:
+  title: icon ungroup-24
+si-zero-unindent:
+  title: icon unindent
+si-zero-unlink:
+  title: icon unlink
+si-zero-unstack:
+  title: icon unstack
+si-zero-unstroke:
+  title: icon unstroke
+si-zero-upload-l-24:
+  title: icon upload-l-24
+si-zero-upload-l:
+  title: icon upload-l
+si-zero-upload:
+  title: icon upload
+si-zero-user-o-24:
+  title: icon user-o-24
+si-zero-user-o:
+  title: icon user-o
+si-zero-user:
+  title: icon user
+si-zero-visible-l:
+  title: icon visible-l
+si-zero-visible:
+  title: icon visible
+si-zero-warning-o:
+  title: icon warning-o
+si-zero-warning:
+  title: icon warning
+si-zero-y-axis:
+  title: icon y-axis
+si-zero-yy-axis:
+  title: icon yy-axis
+si-zero-zoom-in-24:
+  title: icon zoom-in-24
+si-zero-zoom-in:
+  title: icon zoom-in
+si-zero-zoom-out-24:
+  title: icon zoom-out-24
+si-zero-zoom-out:
+  title: icon zoom-out
+si-zero-zoom-part:
+  title: icon zoom-part

@@ -1,0 +1,68 @@
+si-payment-web-amazon:
+  title: logo of amazon
+si-payment-web-american-express:
+  title: logo of american-express
+si-payment-web-bitcoin-sign:
+  title: logo of bitcoin-sign
+si-payment-web-bitcoin:
+  title: logo of bitcoin
+si-payment-web-braintree:
+  title: logo of braintree
+si-payment-web-cartasi:
+  title: logo of cartasi
+si-payment-web-cb:
+  title: logo of cb
+si-payment-web-clickandbuy:
+  title: logo of clickandbuy
+si-payment-web-diners:
+  title: logo of diners
+si-payment-web-discover:
+  title: logo of discover
+si-payment-web-ec:
+  title: logo of ec
+si-payment-web-flattr:
+  title: logo of flattr
+si-payment-web-gittip:
+  title: logo of gittip
+si-payment-web-google-wallet:
+  title: logo of google-wallet
+si-payment-web-ideal:
+  title: logo of ideal
+si-payment-web-jcb:
+  title: logo of jcb
+si-payment-web-maestro:
+  title: logo of maestro
+si-payment-web-mastercard:
+  title: logo of mastercard
+si-payment-web-ogone:
+  title: logo of ogone
+si-payment-web-paypal--classic:
+  title: logo of paypal--classic
+si-payment-web-paypal:
+  title: logo of paypal
+si-payment-web-paysafecard:
+  title: logo of paysafecard
+si-payment-web-postepay:
+  title: logo of postepay
+si-payment-web-ripple:
+  title: logo of ripple
+si-payment-web-skrill:
+  title: logo of skrill
+si-payment-web-sofort:
+  title: logo of sofort
+si-payment-web-square:
+  title: logo of square
+si-payment-web-stripe:
+  title: logo of stripe
+si-payment-web-trust-e:
+  title: logo of trust-e
+si-payment-web-unionpay:
+  title: logo of unionpay
+si-payment-web-verisign:
+  title: logo of verisign
+si-payment-web-visa-electron:
+  title: logo of visa-electron
+si-payment-web-visa:
+  title: logo of visa
+si-payment-web-westernunion:
+  title: logo of westernunion

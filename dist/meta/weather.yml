@@ -1,0 +1,438 @@
+si-weather-alien:
+  title: icon alien
+si-weather-barometer:
+  title: icon barometer
+si-weather-celsius:
+  title: icon celsius
+si-weather-cloud-down:
+  title: icon cloud-down
+si-weather-cloud-refresh:
+  title: icon cloud-refresh
+si-weather-cloud-up:
+  title: icon cloud-up
+si-weather-cloud:
+  title: icon cloud
+si-weather-cloudy-gusts:
+  title: icon cloudy-gusts
+si-weather-cloudy-windy:
+  title: icon cloudy-windy
+si-weather-cloudy:
+  title: icon cloudy
+si-weather-day-cloudy-gusts:
+  title: icon day-cloudy-gusts
+si-weather-day-cloudy-high:
+  title: icon day-cloudy-high
+si-weather-day-cloudy-windy:
+  title: icon day-cloudy-windy
+si-weather-day-cloudy:
+  title: icon day-cloudy
+si-weather-day-fog:
+  title: icon day-fog
+si-weather-day-hail:
+  title: icon day-hail
+si-weather-day-haze:
+  title: icon day-haze
+si-weather-day-light-wind:
+  title: icon day-light-wind
+si-weather-day-lightning:
+  title: icon day-lightning
+si-weather-day-rain-mix:
+  title: icon day-rain-mix
+si-weather-day-rain-wind:
+  title: icon day-rain-wind
+si-weather-day-rain:
+  title: icon day-rain
+si-weather-day-showers:
+  title: icon day-showers
+si-weather-day-sleet-storm:
+  title: icon day-sleet-storm
+si-weather-day-sleet:
+  title: icon day-sleet
+si-weather-day-snow-thunderstorm:
+  title: icon day-snow-thunderstorm
+si-weather-day-snow-wind:
+  title: icon day-snow-wind
+si-weather-day-snow:
+  title: icon day-snow
+si-weather-day-sprinkle:
+  title: icon day-sprinkle
+si-weather-day-storm-showers:
+  title: icon day-storm-showers
+si-weather-day-sunny-overcast:
+  title: icon day-sunny-overcast
+si-weather-day-sunny:
+  title: icon day-sunny
+si-weather-day-thunderstorm:
+  title: icon day-thunderstorm
+si-weather-day-windy:
+  title: icon day-windy
+si-weather-degrees:
+  title: icon degrees
+si-weather-direction-down-left:
+  title: icon direction-down-left
+si-weather-direction-down-right:
+  title: icon direction-down-right
+si-weather-direction-down:
+  title: icon direction-down
+si-weather-direction-left:
+  title: icon direction-left
+si-weather-direction-right:
+  title: icon direction-right
+si-weather-direction-up-left:
+  title: icon direction-up-left
+si-weather-direction-up-right:
+  title: icon direction-up-right
+si-weather-direction-up:
+  title: icon direction-up
+si-weather-dust:
+  title: icon dust
+si-weather-earthquake:
+  title: icon earthquake
+si-weather-fahrenheit:
+  title: icon fahrenheit
+si-weather-fire:
+  title: icon fire
+si-weather-flood:
+  title: icon flood
+si-weather-fog:
+  title: icon fog
+si-weather-gale-warning:
+  title: icon gale-warning
+si-weather-hail:
+  title: icon hail
+si-weather-horizon-alt:
+  title: icon horizon-alt
+si-weather-horizon:
+  title: icon horizon
+si-weather-hot:
+  title: icon hot
+si-weather-humidity:
+  title: icon humidity
+si-weather-hurricane-warning:
+  title: icon hurricane-warning
+si-weather-hurricane:
+  title: icon hurricane
+si-weather-lightning:
+  title: icon lightning
+si-weather-lunar-eclipse:
+  title: icon lunar-eclipse
+si-weather-meteor:
+  title: icon meteor
+si-weather-moon-alt-first-quarter:
+  title: icon moon-alt-first-quarter
+si-weather-moon-alt-full:
+  title: icon moon-alt-full
+si-weather-moon-alt-new:
+  title: icon moon-alt-new
+si-weather-moon-alt-third-quarter:
+  title: icon moon-alt-third-quarter
+si-weather-moon-alt-waning-crescent-1:
+  title: icon moon-alt-waning-crescent-1
+si-weather-moon-alt-waning-crescent-2:
+  title: icon moon-alt-waning-crescent-2
+si-weather-moon-alt-waning-crescent-3:
+  title: icon moon-alt-waning-crescent-3
+si-weather-moon-alt-waning-crescent-4:
+  title: icon moon-alt-waning-crescent-4
+si-weather-moon-alt-waning-crescent-5:
+  title: icon moon-alt-waning-crescent-5
+si-weather-moon-alt-waning-crescent-6:
+  title: icon moon-alt-waning-crescent-6
+si-weather-moon-alt-waning-gibbous-1:
+  title: icon moon-alt-waning-gibbous-1
+si-weather-moon-alt-waning-gibbous-2:
+  title: icon moon-alt-waning-gibbous-2
+si-weather-moon-alt-waning-gibbous-3:
+  title: icon moon-alt-waning-gibbous-3
+si-weather-moon-alt-waning-gibbous-4:
+  title: icon moon-alt-waning-gibbous-4
+si-weather-moon-alt-waning-gibbous-5:
+  title: icon moon-alt-waning-gibbous-5
+si-weather-moon-alt-waning-gibbous-6:
+  title: icon moon-alt-waning-gibbous-6
+si-weather-moon-alt-waxing-crescent-1:
+  title: icon moon-alt-waxing-crescent-1
+si-weather-moon-alt-waxing-crescent-2:
+  title: icon moon-alt-waxing-crescent-2
+si-weather-moon-alt-waxing-crescent-3:
+  title: icon moon-alt-waxing-crescent-3
+si-weather-moon-alt-waxing-crescent-4:
+  title: icon moon-alt-waxing-crescent-4
+si-weather-moon-alt-waxing-crescent-5:
+  title: icon moon-alt-waxing-crescent-5
+si-weather-moon-alt-waxing-crescent-6:
+  title: icon moon-alt-waxing-crescent-6
+si-weather-moon-alt-waxing-gibbous-1:
+  title: icon moon-alt-waxing-gibbous-1
+si-weather-moon-alt-waxing-gibbous-2:
+  title: icon moon-alt-waxing-gibbous-2
+si-weather-moon-alt-waxing-gibbous-3:
+  title: icon moon-alt-waxing-gibbous-3
+si-weather-moon-alt-waxing-gibbous-4:
+  title: icon moon-alt-waxing-gibbous-4
+si-weather-moon-alt-waxing-gibbous-5:
+  title: icon moon-alt-waxing-gibbous-5
+si-weather-moon-alt-waxing-gibbous-6:
+  title: icon moon-alt-waxing-gibbous-6
+si-weather-moon-first-quarter:
+  title: icon moon-first-quarter
+si-weather-moon-full:
+  title: icon moon-full
+si-weather-moon-new:
+  title: icon moon-new
+si-weather-moon-third-quarter:
+  title: icon moon-third-quarter
+si-weather-moon-waning-crescent-1:
+  title: icon moon-waning-crescent-1
+si-weather-moon-waning-crescent-2:
+  title: icon moon-waning-crescent-2
+si-weather-moon-waning-crescent-3:
+  title: icon moon-waning-crescent-3
+si-weather-moon-waning-crescent-4:
+  title: icon moon-waning-crescent-4
+si-weather-moon-waning-crescent-5:
+  title: icon moon-waning-crescent-5
+si-weather-moon-waning-crescent-6:
+  title: icon moon-waning-crescent-6
+si-weather-moon-waning-gibbous-1:
+  title: icon moon-waning-gibbous-1
+si-weather-moon-waning-gibbous-2:
+  title: icon moon-waning-gibbous-2
+si-weather-moon-waning-gibbous-3:
+  title: icon moon-waning-gibbous-3
+si-weather-moon-waning-gibbous-4:
+  title: icon moon-waning-gibbous-4
+si-weather-moon-waning-gibbous-5:
+  title: icon moon-waning-gibbous-5
+si-weather-moon-waning-gibbous-6:
+  title: icon moon-waning-gibbous-6
+si-weather-moon-waxing-crescent-1:
+  title: icon moon-waxing-crescent-1
+si-weather-moon-waxing-crescent-2:
+  title: icon moon-waxing-crescent-2
+si-weather-moon-waxing-crescent-3:
+  title: icon moon-waxing-crescent-3
+si-weather-moon-waxing-crescent-4:
+  title: icon moon-waxing-crescent-4
+si-weather-moon-waxing-crescent-5:
+  title: icon moon-waxing-crescent-5
+si-weather-moon-waxing-crescent-6:
+  title: icon moon-waxing-crescent-6
+si-weather-moon-waxing-gibbous-1:
+  title: icon moon-waxing-gibbous-1
+si-weather-moon-waxing-gibbous-2:
+  title: icon moon-waxing-gibbous-2
+si-weather-moon-waxing-gibbous-3:
+  title: icon moon-waxing-gibbous-3
+si-weather-moon-waxing-gibbous-4:
+  title: icon moon-waxing-gibbous-4
+si-weather-moon-waxing-gibbous-5:
+  title: icon moon-waxing-gibbous-5
+si-weather-moon-waxing-gibbous-6:
+  title: icon moon-waxing-gibbous-6
+si-weather-moonrise:
+  title: icon moonrise
+si-weather-moonset:
+  title: icon moonset
+si-weather-na:
+  title: icon na
+si-weather-night-alt-cloudy-gusts:
+  title: icon night-alt-cloudy-gusts
+si-weather-night-alt-cloudy-high:
+  title: icon night-alt-cloudy-high
+si-weather-night-alt-cloudy-windy:
+  title: icon night-alt-cloudy-windy
+si-weather-night-alt-cloudy:
+  title: icon night-alt-cloudy
+si-weather-night-alt-hail:
+  title: icon night-alt-hail
+si-weather-night-alt-lightning:
+  title: icon night-alt-lightning
+si-weather-night-alt-partly-cloudy:
+  title: icon night-alt-partly-cloudy
+si-weather-night-alt-rain-mix:
+  title: icon night-alt-rain-mix
+si-weather-night-alt-rain-wind:
+  title: icon night-alt-rain-wind
+si-weather-night-alt-rain:
+  title: icon night-alt-rain
+si-weather-night-alt-showers:
+  title: icon night-alt-showers
+si-weather-night-alt-sleet-storm:
+  title: icon night-alt-sleet-storm
+si-weather-night-alt-sleet:
+  title: icon night-alt-sleet
+si-weather-night-alt-snow-thunderstorm:
+  title: icon night-alt-snow-thunderstorm
+si-weather-night-alt-snow-wind:
+  title: icon night-alt-snow-wind
+si-weather-night-alt-snow:
+  title: icon night-alt-snow
+si-weather-night-alt-sprinkle:
+  title: icon night-alt-sprinkle
+si-weather-night-alt-storm-showers:
+  title: icon night-alt-storm-showers
+si-weather-night-alt-thunderstorm:
+  title: icon night-alt-thunderstorm
+si-weather-night-clear:
+  title: icon night-clear
+si-weather-night-cloudy-gusts:
+  title: icon night-cloudy-gusts
+si-weather-night-cloudy-high:
+  title: icon night-cloudy-high
+si-weather-night-cloudy-windy:
+  title: icon night-cloudy-windy
+si-weather-night-cloudy:
+  title: icon night-cloudy
+si-weather-night-fog:
+  title: icon night-fog
+si-weather-night-hail:
+  title: icon night-hail
+si-weather-night-lightning:
+  title: icon night-lightning
+si-weather-night-partly-cloudy:
+  title: icon night-partly-cloudy
+si-weather-night-rain-mix:
+  title: icon night-rain-mix
+si-weather-night-rain-wind:
+  title: icon night-rain-wind
+si-weather-night-rain:
+  title: icon night-rain
+si-weather-night-showers:
+  title: icon night-showers
+si-weather-night-sleet-storm:
+  title: icon night-sleet-storm
+si-weather-night-sleet:
+  title: icon night-sleet
+si-weather-night-snow-thunderstorm:
+  title: icon night-snow-thunderstorm
+si-weather-night-snow-wind:
+  title: icon night-snow-wind
+si-weather-night-snow:
+  title: icon night-snow
+si-weather-night-sprinkle:
+  title: icon night-sprinkle
+si-weather-night-storm-showers:
+  title: icon night-storm-showers
+si-weather-night-thunderstorm:
+  title: icon night-thunderstorm
+si-weather-rain-mix:
+  title: icon rain-mix
+si-weather-rain-wind:
+  title: icon rain-wind
+si-weather-rain:
+  title: icon rain
+si-weather-raindrop:
+  title: icon raindrop
+si-weather-raindrops:
+  title: icon raindrops
+si-weather-refresh-alt:
+  title: icon refresh-alt
+si-weather-refresh:
+  title: icon refresh
+si-weather-sandstorm:
+  title: icon sandstorm
+si-weather-showers:
+  title: icon showers
+si-weather-sleet:
+  title: icon sleet
+si-weather-small-craft-advisory:
+  title: icon small-craft-advisory
+si-weather-smog:
+  title: icon smog
+si-weather-smoke:
+  title: icon smoke
+si-weather-snow-wind:
+  title: icon snow-wind
+si-weather-snow:
+  title: icon snow
+si-weather-snowflake-cold:
+  title: icon snowflake-cold
+si-weather-solar-eclipse:
+  title: icon solar-eclipse
+si-weather-sprinkle:
+  title: icon sprinkle
+si-weather-stars:
+  title: icon stars
+si-weather-storm-showers:
+  title: icon storm-showers
+si-weather-storm-warning:
+  title: icon storm-warning
+si-weather-strong-wind:
+  title: icon strong-wind
+si-weather-sunrise:
+  title: icon sunrise
+si-weather-sunset:
+  title: icon sunset
+si-weather-thermometer-exterior:
+  title: icon thermometer-exterior
+si-weather-thermometer-internal:
+  title: icon thermometer-internal
+si-weather-thermometer:
+  title: icon thermometer
+si-weather-thunderstorm:
+  title: icon thunderstorm
+si-weather-time-1:
+  title: icon time-1
+si-weather-time-10:
+  title: icon time-10
+si-weather-time-11:
+  title: icon time-11
+si-weather-time-12:
+  title: icon time-12
+si-weather-time-2:
+  title: icon time-2
+si-weather-time-3:
+  title: icon time-3
+si-weather-time-4:
+  title: icon time-4
+si-weather-time-5:
+  title: icon time-5
+si-weather-time-6:
+  title: icon time-6
+si-weather-time-7:
+  title: icon time-7
+si-weather-time-8:
+  title: icon time-8
+si-weather-time-9:
+  title: icon time-9
+si-weather-tornado:
+  title: icon tornado
+si-weather-train:
+  title: icon train
+si-weather-tsunami:
+  title: icon tsunami
+si-weather-umbrella:
+  title: icon umbrella
+si-weather-volcano:
+  title: icon volcano
+si-weather-wind-beaufort-0:
+  title: icon wind-beaufort-0
+si-weather-wind-beaufort-1:
+  title: icon wind-beaufort-1
+si-weather-wind-beaufort-10:
+  title: icon wind-beaufort-10
+si-weather-wind-beaufort-11:
+  title: icon wind-beaufort-11
+si-weather-wind-beaufort-12:
+  title: icon wind-beaufort-12
+si-weather-wind-beaufort-2:
+  title: icon wind-beaufort-2
+si-weather-wind-beaufort-3:
+  title: icon wind-beaufort-3
+si-weather-wind-beaufort-4:
+  title: icon wind-beaufort-4
+si-weather-wind-beaufort-5:
+  title: icon wind-beaufort-5
+si-weather-wind-beaufort-6:
+  title: icon wind-beaufort-6
+si-weather-wind-beaufort-7:
+  title: icon wind-beaufort-7
+si-weather-wind-beaufort-8:
+  title: icon wind-beaufort-8
+si-weather-wind-beaufort-9:
+  title: icon wind-beaufort-9
+si-weather-wind-direction:
+  title: icon wind-direction
+si-weather-windy:
+  title: icon windy

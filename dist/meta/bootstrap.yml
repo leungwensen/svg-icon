@@ -1,0 +1,516 @@
+si-bootstrap-adjust:
+  title: icon adjust
+si-bootstrap-alert:
+  title: icon alert
+si-bootstrap-align-center:
+  title: icon align-center
+si-bootstrap-align-justify:
+  title: icon align-justify
+si-bootstrap-align-left:
+  title: icon align-left
+si-bootstrap-align-right:
+  title: icon align-right
+si-bootstrap-apple:
+  title: icon apple
+si-bootstrap-arrow-down:
+  title: icon arrow-down
+si-bootstrap-arrow-left:
+  title: icon arrow-left
+si-bootstrap-arrow-right:
+  title: icon arrow-right
+si-bootstrap-arrow-up:
+  title: icon arrow-up
+si-bootstrap-asterisk:
+  title: icon asterisk
+si-bootstrap-baby-formula:
+  title: icon baby-formula
+si-bootstrap-backward:
+  title: icon backward
+si-bootstrap-ban-circle:
+  title: icon ban-circle
+si-bootstrap-barcode:
+  title: icon barcode
+si-bootstrap-bed:
+  title: icon bed
+si-bootstrap-bell:
+  title: icon bell
+si-bootstrap-bishop:
+  title: icon bishop
+si-bootstrap-bitcoin:
+  title: icon bitcoin
+si-bootstrap-blackboard:
+  title: icon blackboard
+si-bootstrap-bold:
+  title: icon bold
+si-bootstrap-book:
+  title: icon book
+si-bootstrap-bookmark:
+  title: icon bookmark
+si-bootstrap-briefcase:
+  title: icon briefcase
+si-bootstrap-bullhorn:
+  title: icon bullhorn
+si-bootstrap-calendar:
+  title: icon calendar
+si-bootstrap-camera:
+  title: icon camera
+si-bootstrap-cd:
+  title: icon cd
+si-bootstrap-certificate:
+  title: icon certificate
+si-bootstrap-check:
+  title: icon check
+si-bootstrap-chevron-down:
+  title: icon chevron-down
+si-bootstrap-chevron-left:
+  title: icon chevron-left
+si-bootstrap-chevron-right:
+  title: icon chevron-right
+si-bootstrap-chevron-up:
+  title: icon chevron-up
+si-bootstrap-circle-arrow-down:
+  title: icon circle-arrow-down
+si-bootstrap-circle-arrow-left:
+  title: icon circle-arrow-left
+si-bootstrap-circle-arrow-right:
+  title: icon circle-arrow-right
+si-bootstrap-circle-arrow-up:
+  title: icon circle-arrow-up
+si-bootstrap-cloud-download:
+  title: icon cloud-download
+si-bootstrap-cloud-upload:
+  title: icon cloud-upload
+si-bootstrap-cloud:
+  title: icon cloud
+si-bootstrap-cog:
+  title: icon cog
+si-bootstrap-collapse-down:
+  title: icon collapse-down
+si-bootstrap-collapse-up:
+  title: icon collapse-up
+si-bootstrap-comment:
+  title: icon comment
+si-bootstrap-compressed:
+  title: icon compressed
+si-bootstrap-console:
+  title: icon console
+si-bootstrap-copy:
+  title: icon copy
+si-bootstrap-copyright-mark:
+  title: icon copyright-mark
+si-bootstrap-credit-card:
+  title: icon credit-card
+si-bootstrap-cutlery:
+  title: icon cutlery
+si-bootstrap-dashboard:
+  title: icon dashboard
+si-bootstrap-download-alt:
+  title: icon download-alt
+si-bootstrap-download:
+  title: icon download
+si-bootstrap-duplicate:
+  title: icon duplicate
+si-bootstrap-earphone:
+  title: icon earphone
+si-bootstrap-edit:
+  title: icon edit
+si-bootstrap-education:
+  title: icon education
+si-bootstrap-eject:
+  title: icon eject
+si-bootstrap-envelope:
+  title: icon envelope
+si-bootstrap-equalizer:
+  title: icon equalizer
+si-bootstrap-erase:
+  title: icon erase
+si-bootstrap-eur:
+  title: icon eur
+si-bootstrap-exclamation-sign:
+  title: icon exclamation-sign
+si-bootstrap-expand:
+  title: icon expand
+si-bootstrap-export:
+  title: icon export
+si-bootstrap-eye-close:
+  title: icon eye-close
+si-bootstrap-eye-open:
+  title: icon eye-open
+si-bootstrap-facetime-video:
+  title: icon facetime-video
+si-bootstrap-fast-backward:
+  title: icon fast-backward
+si-bootstrap-fast-forward:
+  title: icon fast-forward
+si-bootstrap-file:
+  title: icon file
+si-bootstrap-film:
+  title: icon film
+si-bootstrap-filter:
+  title: icon filter
+si-bootstrap-fire:
+  title: icon fire
+si-bootstrap-flag:
+  title: icon flag
+si-bootstrap-flash:
+  title: icon flash
+si-bootstrap-floppy-disk:
+  title: icon floppy-disk
+si-bootstrap-floppy-open:
+  title: icon floppy-open
+si-bootstrap-floppy-remove:
+  title: icon floppy-remove
+si-bootstrap-floppy-save:
+  title: icon floppy-save
+si-bootstrap-floppy-saved:
+  title: icon floppy-saved
+si-bootstrap-folder-close:
+  title: icon folder-close
+si-bootstrap-folder-open:
+  title: icon folder-open
+si-bootstrap-font:
+  title: icon font
+si-bootstrap-forward:
+  title: icon forward
+si-bootstrap-fullscreen:
+  title: icon fullscreen
+si-bootstrap-gbp:
+  title: icon gbp
+si-bootstrap-gift:
+  title: icon gift
+si-bootstrap-glass:
+  title: icon glass
+si-bootstrap-globe:
+  title: icon globe
+si-bootstrap-grain:
+  title: icon grain
+si-bootstrap-hand-down:
+  title: icon hand-down
+si-bootstrap-hand-left:
+  title: icon hand-left
+si-bootstrap-hand-right:
+  title: icon hand-right
+si-bootstrap-hand-up:
+  title: icon hand-up
+si-bootstrap-hd-video:
+  title: icon hd-video
+si-bootstrap-hdd:
+  title: icon hdd
+si-bootstrap-header:
+  title: icon header
+si-bootstrap-headphones:
+  title: icon headphones
+si-bootstrap-heart-empty:
+  title: icon heart-empty
+si-bootstrap-heart:
+  title: icon heart
+si-bootstrap-home:
+  title: icon home
+si-bootstrap-hourglass:
+  title: icon hourglass
+si-bootstrap-ice-lolly-tasted:
+  title: icon ice-lolly-tasted
+si-bootstrap-ice-lolly:
+  title: icon ice-lolly
+si-bootstrap-import:
+  title: icon import
+si-bootstrap-inbox:
+  title: icon inbox
+si-bootstrap-indent-left:
+  title: icon indent-left
+si-bootstrap-indent-right:
+  title: icon indent-right
+si-bootstrap-info-sign:
+  title: icon info-sign
+si-bootstrap-italic:
+  title: icon italic
+si-bootstrap-king:
+  title: icon king
+si-bootstrap-knight:
+  title: icon knight
+si-bootstrap-lamp:
+  title: icon lamp
+si-bootstrap-leaf:
+  title: icon leaf
+si-bootstrap-level-up:
+  title: icon level-up
+si-bootstrap-link:
+  title: icon link
+si-bootstrap-list-alt:
+  title: icon list-alt
+si-bootstrap-list:
+  title: icon list
+si-bootstrap-lock:
+  title: icon lock
+si-bootstrap-log-in:
+  title: icon log-in
+si-bootstrap-log-out:
+  title: icon log-out
+si-bootstrap-magnet:
+  title: icon magnet
+si-bootstrap-map-marker:
+  title: icon map-marker
+si-bootstrap-menu-down:
+  title: icon menu-down
+si-bootstrap-menu-hamburger:
+  title: icon menu-hamburger
+si-bootstrap-menu-left:
+  title: icon menu-left
+si-bootstrap-menu-right:
+  title: icon menu-right
+si-bootstrap-menu-up:
+  title: icon menu-up
+si-bootstrap-minus-sign:
+  title: icon minus-sign
+si-bootstrap-minus:
+  title: icon minus
+si-bootstrap-modal-window:
+  title: icon modal-window
+si-bootstrap-move:
+  title: icon move
+si-bootstrap-music:
+  title: icon music
+si-bootstrap-new-window:
+  title: icon new-window
+si-bootstrap-object-align-bottom:
+  title: icon object-align-bottom
+si-bootstrap-object-align-horizontal:
+  title: icon object-align-horizontal
+si-bootstrap-object-align-left:
+  title: icon object-align-left
+si-bootstrap-object-align-right:
+  title: icon object-align-right
+si-bootstrap-object-align-top:
+  title: icon object-align-top
+si-bootstrap-object-align-vertical:
+  title: icon object-align-vertical
+si-bootstrap-off:
+  title: icon off
+si-bootstrap-oil:
+  title: icon oil
+si-bootstrap-ok-circle:
+  title: icon ok-circle
+si-bootstrap-ok-sign:
+  title: icon ok-sign
+si-bootstrap-ok:
+  title: icon ok
+si-bootstrap-open-file:
+  title: icon open-file
+si-bootstrap-open:
+  title: icon open
+si-bootstrap-option-horizontal:
+  title: icon option-horizontal
+si-bootstrap-option-vertical:
+  title: icon option-vertical
+si-bootstrap-paperclip:
+  title: icon paperclip
+si-bootstrap-paste:
+  title: icon paste
+si-bootstrap-pause:
+  title: icon pause
+si-bootstrap-pawn:
+  title: icon pawn
+si-bootstrap-pencil:
+  title: icon pencil
+si-bootstrap-phone-alt:
+  title: icon phone-alt
+si-bootstrap-phone:
+  title: icon phone
+si-bootstrap-picture:
+  title: icon picture
+si-bootstrap-piggy-bank:
+  title: icon piggy-bank
+si-bootstrap-plane:
+  title: icon plane
+si-bootstrap-play-circle:
+  title: icon play-circle
+si-bootstrap-play:
+  title: icon play
+si-bootstrap-plus-sign:
+  title: icon plus-sign
+si-bootstrap-plus:
+  title: icon plus
+si-bootstrap-print:
+  title: icon print
+si-bootstrap-pushpin:
+  title: icon pushpin
+si-bootstrap-qrcode:
+  title: icon qrcode
+si-bootstrap-queen:
+  title: icon queen
+si-bootstrap-question-sign:
+  title: icon question-sign
+si-bootstrap-random:
+  title: icon random
+si-bootstrap-record:
+  title: icon record
+si-bootstrap-refresh:
+  title: icon refresh
+si-bootstrap-registration-mark:
+  title: icon registration-mark
+si-bootstrap-remove-circle:
+  title: icon remove-circle
+si-bootstrap-remove-sign:
+  title: icon remove-sign
+si-bootstrap-remove:
+  title: icon remove
+si-bootstrap-repeat:
+  title: icon repeat
+si-bootstrap-resize-full:
+  title: icon resize-full
+si-bootstrap-resize-horizontal:
+  title: icon resize-horizontal
+si-bootstrap-resize-small:
+  title: icon resize-small
+si-bootstrap-resize-vertical:
+  title: icon resize-vertical
+si-bootstrap-retweet:
+  title: icon retweet
+si-bootstrap-road:
+  title: icon road
+si-bootstrap-ruble:
+  title: icon ruble
+si-bootstrap-save-file:
+  title: icon save-file
+si-bootstrap-save:
+  title: icon save
+si-bootstrap-saved:
+  title: icon saved
+si-bootstrap-scale:
+  title: icon scale
+si-bootstrap-scissors:
+  title: icon scissors
+si-bootstrap-screenshot:
+  title: icon screenshot
+si-bootstrap-sd-video:
+  title: icon sd-video
+si-bootstrap-search:
+  title: icon search
+si-bootstrap-send:
+  title: icon send
+si-bootstrap-share-alt:
+  title: icon share-alt
+si-bootstrap-share:
+  title: icon share
+si-bootstrap-shopping-cart:
+  title: icon shopping-cart
+si-bootstrap-signal:
+  title: icon signal
+si-bootstrap-sort-by-alphabet-alt:
+  title: icon sort-by-alphabet-alt
+si-bootstrap-sort-by-alphabet:
+  title: icon sort-by-alphabet
+si-bootstrap-sort-by-attributes-alt:
+  title: icon sort-by-attributes-alt
+si-bootstrap-sort-by-attributes:
+  title: icon sort-by-attributes
+si-bootstrap-sort-by-order-alt:
+  title: icon sort-by-order-alt
+si-bootstrap-sort-by-order:
+  title: icon sort-by-order
+si-bootstrap-sort:
+  title: icon sort
+si-bootstrap-sound-5-1:
+  title: icon sound-5-1
+si-bootstrap-sound-6-1:
+  title: icon sound-6-1
+si-bootstrap-sound-7-1:
+  title: icon sound-7-1
+si-bootstrap-sound-dolby:
+  title: icon sound-dolby
+si-bootstrap-sound-stereo:
+  title: icon sound-stereo
+si-bootstrap-star-empty:
+  title: icon star-empty
+si-bootstrap-star:
+  title: icon star
+si-bootstrap-stats:
+  title: icon stats
+si-bootstrap-step-backward:
+  title: icon step-backward
+si-bootstrap-step-forward:
+  title: icon step-forward
+si-bootstrap-stop:
+  title: icon stop
+si-bootstrap-subscript:
+  title: icon subscript
+si-bootstrap-subtitles:
+  title: icon subtitles
+si-bootstrap-sunglasses:
+  title: icon sunglasses
+si-bootstrap-superscript:
+  title: icon superscript
+si-bootstrap-tag:
+  title: icon tag
+si-bootstrap-tags:
+  title: icon tags
+si-bootstrap-tasks:
+  title: icon tasks
+si-bootstrap-tent:
+  title: icon tent
+si-bootstrap-text-background:
+  title: icon text-background
+si-bootstrap-text-color:
+  title: icon text-color
+si-bootstrap-text-height:
+  title: icon text-height
+si-bootstrap-text-size:
+  title: icon text-size
+si-bootstrap-text-width:
+  title: icon text-width
+si-bootstrap-th-large:
+  title: icon th-large
+si-bootstrap-th-list:
+  title: icon th-list
+si-bootstrap-th:
+  title: icon th
+si-bootstrap-thumbs-down:
+  title: icon thumbs-down
+si-bootstrap-thumbs-up:
+  title: icon thumbs-up
+si-bootstrap-time:
+  title: icon time
+si-bootstrap-tint:
+  title: icon tint
+si-bootstrap-tower:
+  title: icon tower
+si-bootstrap-transfer:
+  title: icon transfer
+si-bootstrap-trash:
+  title: icon trash
+si-bootstrap-tree-conifer:
+  title: icon tree-conifer
+si-bootstrap-tree-deciduous:
+  title: icon tree-deciduous
+si-bootstrap-triangle-bottom:
+  title: icon triangle-bottom
+si-bootstrap-triangle-left:
+  title: icon triangle-left
+si-bootstrap-triangle-right:
+  title: icon triangle-right
+si-bootstrap-triangle-top:
+  title: icon triangle-top
+si-bootstrap-unchecked:
+  title: icon unchecked
+si-bootstrap-upload:
+  title: icon upload
+si-bootstrap-usd:
+  title: icon usd
+si-bootstrap-user:
+  title: icon user
+si-bootstrap-volume-down:
+  title: icon volume-down
+si-bootstrap-volume-off:
+  title: icon volume-off
+si-bootstrap-volume-up:
+  title: icon volume-up
+si-bootstrap-warning-sign:
+  title: icon warning-sign
+si-bootstrap-wrench:
+  title: icon wrench
+si-bootstrap-yen:
+  title: icon yen
+si-bootstrap-zoom-in:
+  title: icon zoom-in
+si-bootstrap-zoom-out:
+  title: icon zoom-out

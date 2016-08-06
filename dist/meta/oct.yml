@@ -1,0 +1,344 @@
+si-oct-alert:
+  title: icon alert
+si-oct-arrow-down:
+  title: icon arrow-down
+si-oct-arrow-left:
+  title: icon arrow-left
+si-oct-arrow-right:
+  title: icon arrow-right
+si-oct-arrow-small-down:
+  title: icon arrow-small-down
+si-oct-arrow-small-left:
+  title: icon arrow-small-left
+si-oct-arrow-small-right:
+  title: icon arrow-small-right
+si-oct-arrow-small-up:
+  title: icon arrow-small-up
+si-oct-arrow-up:
+  title: icon arrow-up
+si-oct-beaker:
+  title: icon beaker
+si-oct-bell:
+  title: icon bell
+si-oct-bold:
+  title: icon bold
+si-oct-book:
+  title: icon book
+si-oct-bookmark:
+  title: icon bookmark
+si-oct-briefcase:
+  title: icon briefcase
+si-oct-broadcast:
+  title: icon broadcast
+si-oct-browser:
+  title: icon browser
+si-oct-bug:
+  title: icon bug
+si-oct-calendar:
+  title: icon calendar
+si-oct-check:
+  title: icon check
+si-oct-checklist:
+  title: icon checklist
+si-oct-chevron-down:
+  title: icon chevron-down
+si-oct-chevron-left:
+  title: icon chevron-left
+si-oct-chevron-right:
+  title: icon chevron-right
+si-oct-chevron-up:
+  title: icon chevron-up
+si-oct-circle-slash:
+  title: icon circle-slash
+si-oct-circuit-board:
+  title: icon circuit-board
+si-oct-clippy:
+  title: icon clippy
+si-oct-clock:
+  title: icon clock
+si-oct-cloud-download:
+  title: icon cloud-download
+si-oct-cloud-upload:
+  title: icon cloud-upload
+si-oct-code:
+  title: icon code
+si-oct-comment-discussion:
+  title: icon comment-discussion
+si-oct-comment:
+  title: icon comment
+si-oct-credit-card:
+  title: icon credit-card
+si-oct-dash:
+  title: icon dash
+si-oct-dashboard:
+  title: icon dashboard
+si-oct-database:
+  title: icon database
+si-oct-desktop-download:
+  title: icon desktop-download
+si-oct-device-camera-video:
+  title: icon device-camera-video
+si-oct-device-camera:
+  title: icon device-camera
+si-oct-device-desktop:
+  title: icon device-desktop
+si-oct-device-mobile:
+  title: icon device-mobile
+si-oct-diff-added:
+  title: icon diff-added
+si-oct-diff-ignored:
+  title: icon diff-ignored
+si-oct-diff-modified:
+  title: icon diff-modified
+si-oct-diff-removed:
+  title: icon diff-removed
+si-oct-diff-renamed:
+  title: icon diff-renamed
+si-oct-diff:
+  title: icon diff
+si-oct-ellipses:
+  title: icon ellipses
+si-oct-ellipsis:
+  title: icon ellipsis
+si-oct-eye:
+  title: icon eye
+si-oct-file-binary:
+  title: icon file-binary
+si-oct-file-code:
+  title: icon file-code
+si-oct-file-directory:
+  title: icon file-directory
+si-oct-file-media:
+  title: icon file-media
+si-oct-file-pdf:
+  title: icon file-pdf
+si-oct-file-submodule:
+  title: icon file-submodule
+si-oct-file-symlink-directory:
+  title: icon file-symlink-directory
+si-oct-file-symlink-file:
+  title: icon file-symlink-file
+si-oct-file-text:
+  title: icon file-text
+si-oct-file-zip:
+  title: icon file-zip
+si-oct-file:
+  title: icon file
+si-oct-flame:
+  title: icon flame
+si-oct-fold:
+  title: icon fold
+si-oct-gear:
+  title: icon gear
+si-oct-gift:
+  title: icon gift
+si-oct-gist-secret:
+  title: icon gist-secret
+si-oct-gist:
+  title: icon gist
+si-oct-git-branch:
+  title: icon git-branch
+si-oct-git-commit:
+  title: icon git-commit
+si-oct-git-compare:
+  title: icon git-compare
+si-oct-git-merge:
+  title: icon git-merge
+si-oct-git-pull-request:
+  title: icon git-pull-request
+si-oct-globe:
+  title: icon globe
+si-oct-grabber:
+  title: icon grabber
+si-oct-graph:
+  title: icon graph
+si-oct-heart:
+  title: icon heart
+si-oct-history:
+  title: icon history
+si-oct-home:
+  title: icon home
+si-oct-horizontal-rule:
+  title: icon horizontal-rule
+si-oct-hubot:
+  title: icon hubot
+si-oct-inbox:
+  title: icon inbox
+si-oct-info:
+  title: icon info
+si-oct-issue-closed:
+  title: icon issue-closed
+si-oct-issue-opened:
+  title: icon issue-opened
+si-oct-issue-reopened:
+  title: icon issue-reopened
+si-oct-italic:
+  title: icon italic
+si-oct-jersey:
+  title: icon jersey
+si-oct-key:
+  title: icon key
+si-oct-keyboard:
+  title: icon keyboard
+si-oct-law:
+  title: icon law
+si-oct-light-bulb:
+  title: icon light-bulb
+si-oct-link-external:
+  title: icon link-external
+si-oct-link:
+  title: icon link
+si-oct-list-ordered:
+  title: icon list-ordered
+si-oct-list-unordered:
+  title: icon list-unordered
+si-oct-location:
+  title: icon location
+si-oct-lock:
+  title: icon lock
+si-oct-logo-gist:
+  title: icon logo-gist
+si-oct-logo-github:
+  title: icon logo-github
+si-oct-mail-read:
+  title: icon mail-read
+si-oct-mail-reply:
+  title: icon mail-reply
+si-oct-mail:
+  title: icon mail
+si-oct-mark-github:
+  title: icon mark-github
+si-oct-markdown:
+  title: icon markdown
+si-oct-megaphone:
+  title: icon megaphone
+si-oct-mention:
+  title: icon mention
+si-oct-milestone:
+  title: icon milestone
+si-oct-mirror:
+  title: icon mirror
+si-oct-mortar-board:
+  title: icon mortar-board
+si-oct-mute:
+  title: icon mute
+si-oct-no-newline:
+  title: icon no-newline
+si-oct-octoface:
+  title: icon octoface
+si-oct-organization:
+  title: icon organization
+si-oct-package:
+  title: icon package
+si-oct-paintcan:
+  title: icon paintcan
+si-oct-pencil:
+  title: icon pencil
+si-oct-person:
+  title: icon person
+si-oct-pin:
+  title: icon pin
+si-oct-plug:
+  title: icon plug
+si-oct-plus-small:
+  title: icon plus-small
+si-oct-plus:
+  title: icon plus
+si-oct-primitive-dot:
+  title: icon primitive-dot
+si-oct-primitive-square:
+  title: icon primitive-square
+si-oct-pulse:
+  title: icon pulse
+si-oct-question:
+  title: icon question
+si-oct-quote:
+  title: icon quote
+si-oct-radio-tower:
+  title: icon radio-tower
+si-oct-reply:
+  title: icon reply
+si-oct-repo-clone:
+  title: icon repo-clone
+si-oct-repo-force-push:
+  title: icon repo-force-push
+si-oct-repo-forked:
+  title: icon repo-forked
+si-oct-repo-pull:
+  title: icon repo-pull
+si-oct-repo-push:
+  title: icon repo-push
+si-oct-repo:
+  title: icon repo
+si-oct-rocket:
+  title: icon rocket
+si-oct-rss:
+  title: icon rss
+si-oct-ruby:
+  title: icon ruby
+si-oct-search:
+  title: icon search
+si-oct-server:
+  title: icon server
+si-oct-settings:
+  title: icon settings
+si-oct-shield:
+  title: icon shield
+si-oct-sign-in:
+  title: icon sign-in
+si-oct-sign-out:
+  title: icon sign-out
+si-oct-smiley:
+  title: icon smiley
+si-oct-squirrel:
+  title: icon squirrel
+si-oct-star:
+  title: icon star
+si-oct-stop:
+  title: icon stop
+si-oct-sync:
+  title: icon sync
+si-oct-tag:
+  title: icon tag
+si-oct-tasklist:
+  title: icon tasklist
+si-oct-telescope:
+  title: icon telescope
+si-oct-terminal:
+  title: icon terminal
+si-oct-text-size:
+  title: icon text-size
+si-oct-three-bars:
+  title: icon three-bars
+si-oct-thumbsdown:
+  title: icon thumbsdown
+si-oct-thumbsup:
+  title: icon thumbsup
+si-oct-tools:
+  title: icon tools
+si-oct-trashcan:
+  title: icon trashcan
+si-oct-triangle-down:
+  title: icon triangle-down
+si-oct-triangle-left:
+  title: icon triangle-left
+si-oct-triangle-right:
+  title: icon triangle-right
+si-oct-triangle-up:
+  title: icon triangle-up
+si-oct-unfold:
+  title: icon unfold
+si-oct-unmute:
+  title: icon unmute
+si-oct-unverified:
+  title: icon unverified
+si-oct-verified:
+  title: icon verified
+si-oct-versions:
+  title: icon versions
+si-oct-watch:
+  title: icon watch
+si-oct-x:
+  title: icon x
+si-oct-zap:
+  title: icon zap

@@ -1,0 +1,598 @@
+si-elusive-address-book-alt:
+  title: icon address-book-alt
+si-elusive-address-book:
+  title: icon address-book
+si-elusive-adjust-alt:
+  title: icon adjust-alt
+si-elusive-adjust:
+  title: icon adjust
+si-elusive-adult:
+  title: icon adult
+si-elusive-align-center:
+  title: icon align-center
+si-elusive-align-justify:
+  title: icon align-justify
+si-elusive-align-left:
+  title: icon align-left
+si-elusive-align-right:
+  title: icon align-right
+si-elusive-arrow-down:
+  title: icon arrow-down
+si-elusive-arrow-left:
+  title: icon arrow-left
+si-elusive-arrow-right:
+  title: icon arrow-right
+si-elusive-arrow-up:
+  title: icon arrow-up
+si-elusive-asl:
+  title: icon asl
+si-elusive-asterisk:
+  title: icon asterisk
+si-elusive-backward:
+  title: icon backward
+si-elusive-ban-circle:
+  title: icon ban-circle
+si-elusive-barcode:
+  title: icon barcode
+si-elusive-behance:
+  title: icon behance
+si-elusive-bell:
+  title: icon bell
+si-elusive-blind:
+  title: icon blind
+si-elusive-blogger:
+  title: icon blogger
+si-elusive-bold:
+  title: icon bold
+si-elusive-book:
+  title: icon book
+si-elusive-bookmark-empty:
+  title: icon bookmark-empty
+si-elusive-bookmark:
+  title: icon bookmark
+si-elusive-braille:
+  title: icon braille
+si-elusive-briefcase:
+  title: icon briefcase
+si-elusive-broom:
+  title: icon broom
+si-elusive-brush:
+  title: icon brush
+si-elusive-bulb:
+  title: icon bulb
+si-elusive-bullhorn:
+  title: icon bullhorn
+si-elusive-calendar-sign:
+  title: icon calendar-sign
+si-elusive-calendar:
+  title: icon calendar
+si-elusive-camera:
+  title: icon camera
+si-elusive-car:
+  title: icon car
+si-elusive-caret-down:
+  title: icon caret-down
+si-elusive-caret-left:
+  title: icon caret-left
+si-elusive-caret-right:
+  title: icon caret-right
+si-elusive-caret-up:
+  title: icon caret-up
+si-elusive-cc:
+  title: icon cc
+si-elusive-certificate:
+  title: icon certificate
+si-elusive-check-empty:
+  title: icon check-empty
+si-elusive-check:
+  title: icon check
+si-elusive-chevron-down:
+  title: icon chevron-down
+si-elusive-chevron-left:
+  title: icon chevron-left
+si-elusive-chevron-right:
+  title: icon chevron-right
+si-elusive-chevron-up:
+  title: icon chevron-up
+si-elusive-child:
+  title: icon child
+si-elusive-circle-arrow-down:
+  title: icon circle-arrow-down
+si-elusive-circle-arrow-left:
+  title: icon circle-arrow-left
+si-elusive-circle-arrow-right:
+  title: icon circle-arrow-right
+si-elusive-circle-arrow-up:
+  title: icon circle-arrow-up
+si-elusive-cloud-alt:
+  title: icon cloud-alt
+si-elusive-cloud:
+  title: icon cloud
+si-elusive-cog-alt:
+  title: icon cog-alt
+si-elusive-cog:
+  title: icon cog
+si-elusive-cogs:
+  title: icon cogs
+si-elusive-comment-alt:
+  title: icon comment-alt
+si-elusive-comment:
+  title: icon comment
+si-elusive-compass-alt:
+  title: icon compass-alt
+si-elusive-compass:
+  title: icon compass
+si-elusive-credit-card:
+  title: icon credit-card
+si-elusive-css:
+  title: icon css
+si-elusive-dashboard:
+  title: icon dashboard
+si-elusive-delicious:
+  title: icon delicious
+si-elusive-deviantart:
+  title: icon deviantart
+si-elusive-digg:
+  title: icon digg
+si-elusive-download-alt:
+  title: icon download-alt
+si-elusive-download:
+  title: icon download
+si-elusive-dribbble:
+  title: icon dribbble
+si-elusive-edit:
+  title: icon edit
+si-elusive-eject:
+  title: icon eject
+si-elusive-envelope-alt:
+  title: icon envelope-alt
+si-elusive-envelope:
+  title: icon envelope
+si-elusive-error-alt:
+  title: icon error-alt
+si-elusive-error:
+  title: icon error
+si-elusive-eur:
+  title: icon eur
+si-elusive-exclamation-sign:
+  title: icon exclamation-sign
+si-elusive-eye-close:
+  title: icon eye-close
+si-elusive-eye-open:
+  title: icon eye-open
+si-elusive-facebook:
+  title: icon facebook
+si-elusive-facetime-video:
+  title: icon facetime-video
+si-elusive-fast-backward:
+  title: icon fast-backward
+si-elusive-fast-forward:
+  title: icon fast-forward
+si-elusive-female:
+  title: icon female
+si-elusive-file-alt:
+  title: icon file-alt
+si-elusive-file-edit-alt:
+  title: icon file-edit-alt
+si-elusive-file-edit:
+  title: icon file-edit
+si-elusive-file-new-alt:
+  title: icon file-new-alt
+si-elusive-file-new:
+  title: icon file-new
+si-elusive-file:
+  title: icon file
+si-elusive-film:
+  title: icon film
+si-elusive-filter:
+  title: icon filter
+si-elusive-fire:
+  title: icon fire
+si-elusive-flag-alt:
+  title: icon flag-alt
+si-elusive-flag:
+  title: icon flag
+si-elusive-flickr:
+  title: icon flickr
+si-elusive-folder-close:
+  title: icon folder-close
+si-elusive-folder-open:
+  title: icon folder-open
+si-elusive-folder-sign:
+  title: icon folder-sign
+si-elusive-folder:
+  title: icon folder
+si-elusive-font:
+  title: icon font
+si-elusive-fontsize:
+  title: icon fontsize
+si-elusive-fork:
+  title: icon fork
+si-elusive-forward-alt:
+  title: icon forward-alt
+si-elusive-forward:
+  title: icon forward
+si-elusive-foursquare:
+  title: icon foursquare
+si-elusive-friendfeed-rect:
+  title: icon friendfeed-rect
+si-elusive-friendfeed:
+  title: icon friendfeed
+si-elusive-fullscreen:
+  title: icon fullscreen
+si-elusive-gbp:
+  title: icon gbp
+si-elusive-gift:
+  title: icon gift
+si-elusive-github-text:
+  title: icon github-text
+si-elusive-github:
+  title: icon github
+si-elusive-glass:
+  title: icon glass
+si-elusive-glasses:
+  title: icon glasses
+si-elusive-globe-alt:
+  title: icon globe-alt
+si-elusive-globe:
+  title: icon globe
+si-elusive-googleplus:
+  title: icon googleplus
+si-elusive-graph-alt:
+  title: icon graph-alt
+si-elusive-graph:
+  title: icon graph
+si-elusive-group-alt:
+  title: icon group-alt
+si-elusive-group:
+  title: icon group
+si-elusive-guidedog:
+  title: icon guidedog
+si-elusive-hand-down:
+  title: icon hand-down
+si-elusive-hand-left:
+  title: icon hand-left
+si-elusive-hand-right:
+  title: icon hand-right
+si-elusive-hand-up:
+  title: icon hand-up
+si-elusive-hdd:
+  title: icon hdd
+si-elusive-headphones:
+  title: icon headphones
+si-elusive-hearing-impaired:
+  title: icon hearing-impaired
+si-elusive-heart-alt:
+  title: icon heart-alt
+si-elusive-heart-empty:
+  title: icon heart-empty
+si-elusive-heart:
+  title: icon heart
+si-elusive-home-alt:
+  title: icon home-alt
+si-elusive-home:
+  title: icon home
+si-elusive-hourglass:
+  title: icon hourglass
+si-elusive-idea-alt:
+  title: icon idea-alt
+si-elusive-idea:
+  title: icon idea
+si-elusive-inbox-alt:
+  title: icon inbox-alt
+si-elusive-inbox-box:
+  title: icon inbox-box
+si-elusive-inbox:
+  title: icon inbox
+si-elusive-indent-left:
+  title: icon indent-left
+si-elusive-indent-right:
+  title: icon indent-right
+si-elusive-info-sign:
+  title: icon info-sign
+si-elusive-instagram:
+  title: icon instagram
+si-elusive-iphone-home:
+  title: icon iphone-home
+si-elusive-italic:
+  title: icon italic
+si-elusive-key:
+  title: icon key
+si-elusive-laptop-alt:
+  title: icon laptop-alt
+si-elusive-laptop:
+  title: icon laptop
+si-elusive-lastfm:
+  title: icon lastfm
+si-elusive-leaf:
+  title: icon leaf
+si-elusive-lines:
+  title: icon lines
+si-elusive-link:
+  title: icon link
+si-elusive-linkedin:
+  title: icon linkedin
+si-elusive-list-alt:
+  title: icon list-alt
+si-elusive-list:
+  title: icon list
+si-elusive-livejournal:
+  title: icon livejournal
+si-elusive-lock-alt:
+  title: icon lock-alt
+si-elusive-lock:
+  title: icon lock
+si-elusive-magic:
+  title: icon magic
+si-elusive-magnet:
+  title: icon magnet
+si-elusive-male:
+  title: icon male
+si-elusive-map-marker-alt:
+  title: icon map-marker-alt
+si-elusive-map-marker:
+  title: icon map-marker
+si-elusive-mic-alt:
+  title: icon mic-alt
+si-elusive-mic:
+  title: icon mic
+si-elusive-minus-sign:
+  title: icon minus-sign
+si-elusive-minus:
+  title: icon minus
+si-elusive-move:
+  title: icon move
+si-elusive-music:
+  title: icon music
+si-elusive-myspace:
+  title: icon myspace
+si-elusive-network:
+  title: icon network
+si-elusive-off:
+  title: icon off
+si-elusive-ok-circle:
+  title: icon ok-circle
+si-elusive-ok-sign:
+  title: icon ok-sign
+si-elusive-ok:
+  title: icon ok
+si-elusive-opensource:
+  title: icon opensource
+si-elusive-paper-clip-alt:
+  title: icon paper-clip-alt
+si-elusive-paper-clip:
+  title: icon paper-clip
+si-elusive-path:
+  title: icon path
+si-elusive-pause-alt:
+  title: icon pause-alt
+si-elusive-pause:
+  title: icon pause
+si-elusive-pencil-alt:
+  title: icon pencil-alt
+si-elusive-pencil:
+  title: icon pencil
+si-elusive-person:
+  title: icon person
+si-elusive-phone-alt:
+  title: icon phone-alt
+si-elusive-phone:
+  title: icon phone
+si-elusive-photo-alt:
+  title: icon photo-alt
+si-elusive-photo:
+  title: icon photo
+si-elusive-picasa:
+  title: icon picasa
+si-elusive-picture:
+  title: icon picture
+si-elusive-pinterest:
+  title: icon pinterest
+si-elusive-plane:
+  title: icon plane
+si-elusive-play-alt:
+  title: icon play-alt
+si-elusive-play-circle:
+  title: icon play-circle
+si-elusive-play:
+  title: icon play
+si-elusive-plus-sign:
+  title: icon plus-sign
+si-elusive-plus:
+  title: icon plus
+si-elusive-podcast:
+  title: icon podcast
+si-elusive-print:
+  title: icon print
+si-elusive-puzzle:
+  title: icon puzzle
+si-elusive-qrcode:
+  title: icon qrcode
+si-elusive-question-sign:
+  title: icon question-sign
+si-elusive-question:
+  title: icon question
+si-elusive-quotes-alt:
+  title: icon quotes-alt
+si-elusive-quotes:
+  title: icon quotes
+si-elusive-random:
+  title: icon random
+si-elusive-record:
+  title: icon record
+si-elusive-reddit:
+  title: icon reddit
+si-elusive-refresh:
+  title: icon refresh
+si-elusive-remove-circle:
+  title: icon remove-circle
+si-elusive-remove-sign:
+  title: icon remove-sign
+si-elusive-remove:
+  title: icon remove
+si-elusive-repeat-alt:
+  title: icon repeat-alt
+si-elusive-repeat:
+  title: icon repeat
+si-elusive-resize-full:
+  title: icon resize-full
+si-elusive-resize-horizontal:
+  title: icon resize-horizontal
+si-elusive-resize-small:
+  title: icon resize-small
+si-elusive-resize-vertical:
+  title: icon resize-vertical
+si-elusive-return-key:
+  title: icon return-key
+si-elusive-retweet:
+  title: icon retweet
+si-elusive-reverse-alt:
+  title: icon reverse-alt
+si-elusive-road:
+  title: icon road
+si-elusive-rss:
+  title: icon rss
+si-elusive-scissors:
+  title: icon scissors
+si-elusive-screen-alt:
+  title: icon screen-alt
+si-elusive-screen:
+  title: icon screen
+si-elusive-screenshot:
+  title: icon screenshot
+si-elusive-search-alt:
+  title: icon search-alt
+si-elusive-search:
+  title: icon search
+si-elusive-share-alt:
+  title: icon share-alt
+si-elusive-share:
+  title: icon share
+si-elusive-shopping-cart-sign:
+  title: icon shopping-cart-sign
+si-elusive-shopping-cart:
+  title: icon shopping-cart
+si-elusive-signal:
+  title: icon signal
+si-elusive-skype:
+  title: icon skype
+si-elusive-slideshare:
+  title: icon slideshare
+si-elusive-smiley-alt:
+  title: icon smiley-alt
+si-elusive-smiley:
+  title: icon smiley
+si-elusive-soundcloud:
+  title: icon soundcloud
+si-elusive-speaker:
+  title: icon speaker
+si-elusive-spotify:
+  title: icon spotify
+si-elusive-stackoverflow:
+  title: icon stackoverflow
+si-elusive-star-alt:
+  title: icon star-alt
+si-elusive-star-empty:
+  title: icon star-empty
+si-elusive-star:
+  title: icon star
+si-elusive-step-backward:
+  title: icon step-backward
+si-elusive-step-forward:
+  title: icon step-forward
+si-elusive-stop-alt:
+  title: icon stop-alt
+si-elusive-stop:
+  title: icon stop
+si-elusive-stumbleupon:
+  title: icon stumbleupon
+si-elusive-tag:
+  title: icon tag
+si-elusive-tags:
+  title: icon tags
+si-elusive-tasks:
+  title: icon tasks
+si-elusive-text-height:
+  title: icon text-height
+si-elusive-text-width:
+  title: icon text-width
+si-elusive-th-large:
+  title: icon th-large
+si-elusive-th-list:
+  title: icon th-list
+si-elusive-th:
+  title: icon th
+si-elusive-thumbs-down:
+  title: icon thumbs-down
+si-elusive-thumbs-up:
+  title: icon thumbs-up
+si-elusive-time-alt:
+  title: icon time-alt
+si-elusive-time:
+  title: icon time
+si-elusive-tint:
+  title: icon tint
+si-elusive-torso:
+  title: icon torso
+si-elusive-trash-alt:
+  title: icon trash-alt
+si-elusive-trash:
+  title: icon trash
+si-elusive-tumblr:
+  title: icon tumblr
+si-elusive-twitter:
+  title: icon twitter
+si-elusive-universal-access:
+  title: icon universal-access
+si-elusive-unlock-alt:
+  title: icon unlock-alt
+si-elusive-unlock:
+  title: icon unlock
+si-elusive-upload:
+  title: icon upload
+si-elusive-usd:
+  title: icon usd
+si-elusive-user:
+  title: icon user
+si-elusive-viadeo:
+  title: icon viadeo
+si-elusive-video-alt:
+  title: icon video-alt
+si-elusive-video-chat:
+  title: icon video-chat
+si-elusive-video:
+  title: icon video
+si-elusive-view-mode:
+  title: icon view-mode
+si-elusive-vimeo:
+  title: icon vimeo
+si-elusive-vkontakte:
+  title: icon vkontakte
+si-elusive-volume-down:
+  title: icon volume-down
+si-elusive-volume-off:
+  title: icon volume-off
+si-elusive-volume-up:
+  title: icon volume-up
+si-elusive-w3c:
+  title: icon w3c
+si-elusive-warning-sign:
+  title: icon warning-sign
+si-elusive-website-alt:
+  title: icon website-alt
+si-elusive-website:
+  title: icon website
+si-elusive-wheelchair:
+  title: icon wheelchair
+si-elusive-wordpress:
+  title: icon wordpress
+si-elusive-wrench-alt:
+  title: icon wrench-alt
+si-elusive-wrench:
+  title: icon wrench
+si-elusive-youtube:
+  title: icon youtube
+si-elusive-zoom-in:
+  title: icon zoom-in
+si-elusive-zoom-out:
+  title: icon zoom-out

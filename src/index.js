@@ -1,11 +1,11 @@
-require('./style/index.less');
+import './style/index.less';
 import $ from 'jquery';
-require('tabslet');
+import 'tabslet';
 import {
   saveAs
 } from 'file-saver';
-
-const icons = require('json!./data/icons.json');
+import svgSpriteTemplate from '../lib/template/svg-sprite';
+import icons from 'json!./data/icons.json';
 
 const $body = $('body');
 const $icons = $('#icons');
@@ -104,7 +104,9 @@ $('#download').on('click', () => {
       }
       return '';
     });
-    const svgSprite = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:0;height:0;position:absolute;opacity:0;">${symbols.join('')}</svg>`;
+    const svgSprite = svgSpriteTemplate({
+      symbols,
+    });
     const blob = new Blob([
       svgSprite
     ], {

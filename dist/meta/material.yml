@@ -1,0 +1,1870 @@
+si-material-3d-rotation:
+  title: icon 3d-rotation
+si-material-ac-unit:
+  title: icon ac-unit
+si-material-access-alarm:
+  title: icon access-alarm
+si-material-access-alarms:
+  title: icon access-alarms
+si-material-access-time:
+  title: icon access-time
+si-material-accessibility:
+  title: icon accessibility
+si-material-accessible:
+  title: icon accessible
+si-material-account-balance-wallet:
+  title: icon account-balance-wallet
+si-material-account-balance:
+  title: icon account-balance
+si-material-account-box:
+  title: icon account-box
+si-material-account-circle:
+  title: icon account-circle
+si-material-adb:
+  title: icon adb
+si-material-add-a-photo:
+  title: icon add-a-photo
+si-material-add-alarm:
+  title: icon add-alarm
+si-material-add-alert:
+  title: icon add-alert
+si-material-add-box:
+  title: icon add-box
+si-material-add-circle-outline:
+  title: icon add-circle-outline
+si-material-add-circle:
+  title: icon add-circle
+si-material-add-location:
+  title: icon add-location
+si-material-add-shopping-cart:
+  title: icon add-shopping-cart
+si-material-add-to-photos:
+  title: icon add-to-photos
+si-material-add-to-queue:
+  title: icon add-to-queue
+si-material-add:
+  title: icon add
+si-material-adjust:
+  title: icon adjust
+si-material-airline-seat-flat-angled:
+  title: icon airline-seat-flat-angled
+si-material-airline-seat-flat:
+  title: icon airline-seat-flat
+si-material-airline-seat-individual-suite:
+  title: icon airline-seat-individual-suite
+si-material-airline-seat-legroom-extra:
+  title: icon airline-seat-legroom-extra
+si-material-airline-seat-legroom-normal:
+  title: icon airline-seat-legroom-normal
+si-material-airline-seat-legroom-reduced:
+  title: icon airline-seat-legroom-reduced
+si-material-airline-seat-recline-extra:
+  title: icon airline-seat-recline-extra
+si-material-airline-seat-recline-normal:
+  title: icon airline-seat-recline-normal
+si-material-airplanemode-active:
+  title: icon airplanemode-active
+si-material-airplanemode-inactive:
+  title: icon airplanemode-inactive
+si-material-airplay:
+  title: icon airplay
+si-material-airport-shuttle:
+  title: icon airport-shuttle
+si-material-alarm-add:
+  title: icon alarm-add
+si-material-alarm-off:
+  title: icon alarm-off
+si-material-alarm-on:
+  title: icon alarm-on
+si-material-alarm:
+  title: icon alarm
+si-material-album:
+  title: icon album
+si-material-all-inclusive:
+  title: icon all-inclusive
+si-material-all-out:
+  title: icon all-out
+si-material-android:
+  title: icon android
+si-material-announcement:
+  title: icon announcement
+si-material-apps:
+  title: icon apps
+si-material-archive:
+  title: icon archive
+si-material-arrow-back:
+  title: icon arrow-back
+si-material-arrow-downward:
+  title: icon arrow-downward
+si-material-arrow-drop-down-circle:
+  title: icon arrow-drop-down-circle
+si-material-arrow-drop-down:
+  title: icon arrow-drop-down
+si-material-arrow-drop-up:
+  title: icon arrow-drop-up
+si-material-arrow-forward:
+  title: icon arrow-forward
+si-material-arrow-upward:
+  title: icon arrow-upward
+si-material-art-track:
+  title: icon art-track
+si-material-aspect-ratio:
+  title: icon aspect-ratio
+si-material-assessment:
+  title: icon assessment
+si-material-assignment-ind:
+  title: icon assignment-ind
+si-material-assignment-late:
+  title: icon assignment-late
+si-material-assignment-return:
+  title: icon assignment-return
+si-material-assignment-returned:
+  title: icon assignment-returned
+si-material-assignment-turned-in:
+  title: icon assignment-turned-in
+si-material-assignment:
+  title: icon assignment
+si-material-assistant-photo:
+  title: icon assistant-photo
+si-material-assistant:
+  title: icon assistant
+si-material-attach-file:
+  title: icon attach-file
+si-material-attach-money:
+  title: icon attach-money
+si-material-attachment:
+  title: icon attachment
+si-material-audiotrack:
+  title: icon audiotrack
+si-material-autorenew:
+  title: icon autorenew
+si-material-av-timer:
+  title: icon av-timer
+si-material-backspace:
+  title: icon backspace
+si-material-backup:
+  title: icon backup
+si-material-battery-20:
+  title: icon battery-20
+si-material-battery-30:
+  title: icon battery-30
+si-material-battery-50:
+  title: icon battery-50
+si-material-battery-60:
+  title: icon battery-60
+si-material-battery-80:
+  title: icon battery-80
+si-material-battery-90:
+  title: icon battery-90
+si-material-battery-alert:
+  title: icon battery-alert
+si-material-battery-charging-20:
+  title: icon battery-charging-20
+si-material-battery-charging-30:
+  title: icon battery-charging-30
+si-material-battery-charging-50:
+  title: icon battery-charging-50
+si-material-battery-charging-60:
+  title: icon battery-charging-60
+si-material-battery-charging-80:
+  title: icon battery-charging-80
+si-material-battery-charging-90:
+  title: icon battery-charging-90
+si-material-battery-charging-full:
+  title: icon battery-charging-full
+si-material-battery-full:
+  title: icon battery-full
+si-material-battery-std:
+  title: icon battery-std
+si-material-battery-unknown:
+  title: icon battery-unknown
+si-material-beach-access:
+  title: icon beach-access
+si-material-beenhere:
+  title: icon beenhere
+si-material-block:
+  title: icon block
+si-material-bluetooth-audio:
+  title: icon bluetooth-audio
+si-material-bluetooth-connected:
+  title: icon bluetooth-connected
+si-material-bluetooth-disabled:
+  title: icon bluetooth-disabled
+si-material-bluetooth-searching:
+  title: icon bluetooth-searching
+si-material-bluetooth:
+  title: icon bluetooth
+si-material-blur-circular:
+  title: icon blur-circular
+si-material-blur-linear:
+  title: icon blur-linear
+si-material-blur-off:
+  title: icon blur-off
+si-material-blur-on:
+  title: icon blur-on
+si-material-book:
+  title: icon book
+si-material-bookmark-border:
+  title: icon bookmark-border
+si-material-bookmark:
+  title: icon bookmark
+si-material-border-all:
+  title: icon border-all
+si-material-border-bottom:
+  title: icon border-bottom
+si-material-border-clear:
+  title: icon border-clear
+si-material-border-color:
+  title: icon border-color
+si-material-border-horizontal:
+  title: icon border-horizontal
+si-material-border-inner:
+  title: icon border-inner
+si-material-border-left:
+  title: icon border-left
+si-material-border-outer:
+  title: icon border-outer
+si-material-border-right:
+  title: icon border-right
+si-material-border-style:
+  title: icon border-style
+si-material-border-top:
+  title: icon border-top
+si-material-border-vertical:
+  title: icon border-vertical
+si-material-branding-watermark:
+  title: icon branding-watermark
+si-material-brightness-1:
+  title: icon brightness-1
+si-material-brightness-2:
+  title: icon brightness-2
+si-material-brightness-3:
+  title: icon brightness-3
+si-material-brightness-4:
+  title: icon brightness-4
+si-material-brightness-5:
+  title: icon brightness-5
+si-material-brightness-6:
+  title: icon brightness-6
+si-material-brightness-7:
+  title: icon brightness-7
+si-material-brightness-auto:
+  title: icon brightness-auto
+si-material-brightness-high:
+  title: icon brightness-high
+si-material-brightness-low:
+  title: icon brightness-low
+si-material-brightness-medium:
+  title: icon brightness-medium
+si-material-broken-image:
+  title: icon broken-image
+si-material-brush:
+  title: icon brush
+si-material-bubble-chart:
+  title: icon bubble-chart
+si-material-bug-report:
+  title: icon bug-report
+si-material-build:
+  title: icon build
+si-material-burst-mode:
+  title: icon burst-mode
+si-material-business-center:
+  title: icon business-center
+si-material-business:
+  title: icon business
+si-material-cached:
+  title: icon cached
+si-material-cake:
+  title: icon cake
+si-material-call-end:
+  title: icon call-end
+si-material-call-made:
+  title: icon call-made
+si-material-call-merge:
+  title: icon call-merge
+si-material-call-missed-outgoing:
+  title: icon call-missed-outgoing
+si-material-call-missed:
+  title: icon call-missed
+si-material-call-received:
+  title: icon call-received
+si-material-call-split:
+  title: icon call-split
+si-material-call-to-action:
+  title: icon call-to-action
+si-material-call:
+  title: icon call
+si-material-camera-alt:
+  title: icon camera-alt
+si-material-camera-front:
+  title: icon camera-front
+si-material-camera-rear:
+  title: icon camera-rear
+si-material-camera-roll:
+  title: icon camera-roll
+si-material-camera:
+  title: icon camera
+si-material-cancel:
+  title: icon cancel
+si-material-card-giftcard:
+  title: icon card-giftcard
+si-material-card-membership:
+  title: icon card-membership
+si-material-card-travel:
+  title: icon card-travel
+si-material-casino:
+  title: icon casino
+si-material-cast-connected:
+  title: icon cast-connected
+si-material-cast:
+  title: icon cast
+si-material-center-focus-strong:
+  title: icon center-focus-strong
+si-material-center-focus-weak:
+  title: icon center-focus-weak
+si-material-change-history:
+  title: icon change-history
+si-material-chat-bubble-outline:
+  title: icon chat-bubble-outline
+si-material-chat-bubble:
+  title: icon chat-bubble
+si-material-chat:
+  title: icon chat
+si-material-check-box-outline-blank:
+  title: icon check-box-outline-blank
+si-material-check-box:
+  title: icon check-box
+si-material-check-circle:
+  title: icon check-circle
+si-material-check:
+  title: icon check
+si-material-chevron-left:
+  title: icon chevron-left
+si-material-chevron-right:
+  title: icon chevron-right
+si-material-child-care:
+  title: icon child-care
+si-material-child-friendly:
+  title: icon child-friendly
+si-material-chrome-reader-mode:
+  title: icon chrome-reader-mode
+si-material-class:
+  title: icon class
+si-material-clear-all:
+  title: icon clear-all
+si-material-clear:
+  title: icon clear
+si-material-close:
+  title: icon close
+si-material-closed-caption:
+  title: icon closed-caption
+si-material-cloud-circle:
+  title: icon cloud-circle
+si-material-cloud-done:
+  title: icon cloud-done
+si-material-cloud-download:
+  title: icon cloud-download
+si-material-cloud-off:
+  title: icon cloud-off
+si-material-cloud-queue:
+  title: icon cloud-queue
+si-material-cloud-upload:
+  title: icon cloud-upload
+si-material-cloud:
+  title: icon cloud
+si-material-code:
+  title: icon code
+si-material-collections:
+  title: icon collections
+si-material-color-lens:
+  title: icon color-lens
+si-material-colorize:
+  title: icon colorize
+si-material-comment:
+  title: icon comment
+si-material-compare-arrows:
+  title: icon compare-arrows
+si-material-compare:
+  title: icon compare
+si-material-computer:
+  title: icon computer
+si-material-confirmation-number:
+  title: icon confirmation-number
+si-material-contact-mail:
+  title: icon contact-mail
+si-material-contact-phone:
+  title: icon contact-phone
+si-material-contacts:
+  title: icon contacts
+si-material-content-copy:
+  title: icon content-copy
+si-material-content-cut:
+  title: icon content-cut
+si-material-content-paste:
+  title: icon content-paste
+si-material-control-point-duplicate:
+  title: icon control-point-duplicate
+si-material-control-point:
+  title: icon control-point
+si-material-copyright:
+  title: icon copyright
+si-material-create-new-folder:
+  title: icon create-new-folder
+si-material-create:
+  title: icon create
+si-material-credit-card:
+  title: icon credit-card
+si-material-crop-16-9:
+  title: icon crop-16-9
+si-material-crop-3-2:
+  title: icon crop-3-2
+si-material-crop-5-4:
+  title: icon crop-5-4
+si-material-crop-7-5:
+  title: icon crop-7-5
+si-material-crop-din:
+  title: icon crop-din
+si-material-crop-free:
+  title: icon crop-free
+si-material-crop-landscape:
+  title: icon crop-landscape
+si-material-crop-original:
+  title: icon crop-original
+si-material-crop-portrait:
+  title: icon crop-portrait
+si-material-crop-rotate:
+  title: icon crop-rotate
+si-material-crop-square:
+  title: icon crop-square
+si-material-crop:
+  title: icon crop
+si-material-dashboard:
+  title: icon dashboard
+si-material-data-usage:
+  title: icon data-usage
+si-material-date-range:
+  title: icon date-range
+si-material-dehaze:
+  title: icon dehaze
+si-material-delete-forever:
+  title: icon delete-forever
+si-material-delete-sweep:
+  title: icon delete-sweep
+si-material-delete:
+  title: icon delete
+si-material-description:
+  title: icon description
+si-material-desktop-mac:
+  title: icon desktop-mac
+si-material-desktop-windows:
+  title: icon desktop-windows
+si-material-details:
+  title: icon details
+si-material-developer-board:
+  title: icon developer-board
+si-material-developer-mode:
+  title: icon developer-mode
+si-material-devices-other:
+  title: icon devices-other
+si-material-devices:
+  title: icon devices
+si-material-dialer-sip:
+  title: icon dialer-sip
+si-material-dialpad:
+  title: icon dialpad
+si-material-directions-bike:
+  title: icon directions-bike
+si-material-directions-boat:
+  title: icon directions-boat
+si-material-directions-bus:
+  title: icon directions-bus
+si-material-directions-car:
+  title: icon directions-car
+si-material-directions-railway:
+  title: icon directions-railway
+si-material-directions-run:
+  title: icon directions-run
+si-material-directions-subway:
+  title: icon directions-subway
+si-material-directions-transit:
+  title: icon directions-transit
+si-material-directions-walk:
+  title: icon directions-walk
+si-material-directions:
+  title: icon directions
+si-material-disc-full:
+  title: icon disc-full
+si-material-dns:
+  title: icon dns
+si-material-do-not-disturb-alt:
+  title: icon do-not-disturb-alt
+si-material-do-not-disturb-off:
+  title: icon do-not-disturb-off
+si-material-do-not-disturb-on:
+  title: icon do-not-disturb-on
+si-material-do-not-disturb:
+  title: icon do-not-disturb
+si-material-dock:
+  title: icon dock
+si-material-domain:
+  title: icon domain
+si-material-done-all:
+  title: icon done-all
+si-material-done:
+  title: icon done
+si-material-donut-large:
+  title: icon donut-large
+si-material-donut-small:
+  title: icon donut-small
+si-material-drafts:
+  title: icon drafts
+si-material-drag-handle:
+  title: icon drag-handle
+si-material-drive-eta:
+  title: icon drive-eta
+si-material-dvr:
+  title: icon dvr
+si-material-edit-location:
+  title: icon edit-location
+si-material-edit:
+  title: icon edit
+si-material-email:
+  title: icon email
+si-material-enhanced-encryption:
+  title: icon enhanced-encryption
+si-material-equalizer:
+  title: icon equalizer
+si-material-error-outline:
+  title: icon error-outline
+si-material-error:
+  title: icon error
+si-material-euro-symbol:
+  title: icon euro-symbol
+si-material-ev-station:
+  title: icon ev-station
+si-material-event-available:
+  title: icon event-available
+si-material-event-busy:
+  title: icon event-busy
+si-material-event-note:
+  title: icon event-note
+si-material-event-seat:
+  title: icon event-seat
+si-material-event:
+  title: icon event
+si-material-exit-to-app:
+  title: icon exit-to-app
+si-material-expand-less:
+  title: icon expand-less
+si-material-expand-more:
+  title: icon expand-more
+si-material-explicit:
+  title: icon explicit
+si-material-explore:
+  title: icon explore
+si-material-exposure-neg-1:
+  title: icon exposure-neg-1
+si-material-exposure-neg-2:
+  title: icon exposure-neg-2
+si-material-exposure-plus-1:
+  title: icon exposure-plus-1
+si-material-exposure-plus-2:
+  title: icon exposure-plus-2
+si-material-exposure-zero:
+  title: icon exposure-zero
+si-material-exposure:
+  title: icon exposure
+si-material-extension:
+  title: icon extension
+si-material-face:
+  title: icon face
+si-material-fast-forward:
+  title: icon fast-forward
+si-material-fast-rewind:
+  title: icon fast-rewind
+si-material-favorite-border:
+  title: icon favorite-border
+si-material-favorite:
+  title: icon favorite
+si-material-featured-play-list:
+  title: icon featured-play-list
+si-material-featured-video:
+  title: icon featured-video
+si-material-feedback:
+  title: icon feedback
+si-material-fiber-dvr:
+  title: icon fiber-dvr
+si-material-fiber-manual-record:
+  title: icon fiber-manual-record
+si-material-fiber-new:
+  title: icon fiber-new
+si-material-fiber-pin:
+  title: icon fiber-pin
+si-material-fiber-smart-record:
+  title: icon fiber-smart-record
+si-material-file-download:
+  title: icon file-download
+si-material-file-upload:
+  title: icon file-upload
+si-material-filter-1:
+  title: icon filter-1
+si-material-filter-2:
+  title: icon filter-2
+si-material-filter-3:
+  title: icon filter-3
+si-material-filter-4:
+  title: icon filter-4
+si-material-filter-5:
+  title: icon filter-5
+si-material-filter-6:
+  title: icon filter-6
+si-material-filter-7:
+  title: icon filter-7
+si-material-filter-8:
+  title: icon filter-8
+si-material-filter-9-plus:
+  title: icon filter-9-plus
+si-material-filter-9:
+  title: icon filter-9
+si-material-filter-b-and-w:
+  title: icon filter-b-and-w
+si-material-filter-center-focus:
+  title: icon filter-center-focus
+si-material-filter-drama:
+  title: icon filter-drama
+si-material-filter-frames:
+  title: icon filter-frames
+si-material-filter-hdr:
+  title: icon filter-hdr
+si-material-filter-list:
+  title: icon filter-list
+si-material-filter-none:
+  title: icon filter-none
+si-material-filter-tilt-shift:
+  title: icon filter-tilt-shift
+si-material-filter-vintage:
+  title: icon filter-vintage
+si-material-filter:
+  title: icon filter
+si-material-find-in-page:
+  title: icon find-in-page
+si-material-find-replace:
+  title: icon find-replace
+si-material-fingerprint:
+  title: icon fingerprint
+si-material-first-page:
+  title: icon first-page
+si-material-fitness-center:
+  title: icon fitness-center
+si-material-flag:
+  title: icon flag
+si-material-flare:
+  title: icon flare
+si-material-flash-auto:
+  title: icon flash-auto
+si-material-flash-off:
+  title: icon flash-off
+si-material-flash-on:
+  title: icon flash-on
+si-material-flight-land:
+  title: icon flight-land
+si-material-flight-takeoff:
+  title: icon flight-takeoff
+si-material-flight:
+  title: icon flight
+si-material-flip-to-back:
+  title: icon flip-to-back
+si-material-flip-to-front:
+  title: icon flip-to-front
+si-material-flip:
+  title: icon flip
+si-material-folder-open:
+  title: icon folder-open
+si-material-folder-shared:
+  title: icon folder-shared
+si-material-folder-special:
+  title: icon folder-special
+si-material-folder:
+  title: icon folder
+si-material-format-align-center:
+  title: icon format-align-center
+si-material-format-align-justify:
+  title: icon format-align-justify
+si-material-format-align-left:
+  title: icon format-align-left
+si-material-format-align-right:
+  title: icon format-align-right
+si-material-format-bold:
+  title: icon format-bold
+si-material-format-clear:
+  title: icon format-clear
+si-material-format-color-fill:
+  title: icon format-color-fill
+si-material-format-color-reset:
+  title: icon format-color-reset
+si-material-format-color-text:
+  title: icon format-color-text
+si-material-format-indent-decrease:
+  title: icon format-indent-decrease
+si-material-format-indent-increase:
+  title: icon format-indent-increase
+si-material-format-italic:
+  title: icon format-italic
+si-material-format-line-spacing:
+  title: icon format-line-spacing
+si-material-format-list-bulleted:
+  title: icon format-list-bulleted
+si-material-format-list-numbered:
+  title: icon format-list-numbered
+si-material-format-paint:
+  title: icon format-paint
+si-material-format-quote:
+  title: icon format-quote
+si-material-format-shapes:
+  title: icon format-shapes
+si-material-format-size:
+  title: icon format-size
+si-material-format-strikethrough:
+  title: icon format-strikethrough
+si-material-format-textdirection-l-to-r:
+  title: icon format-textdirection-l-to-r
+si-material-format-textdirection-r-to-l:
+  title: icon format-textdirection-r-to-l
+si-material-format-underlined:
+  title: icon format-underlined
+si-material-forum:
+  title: icon forum
+si-material-forward-10:
+  title: icon forward-10
+si-material-forward-30:
+  title: icon forward-30
+si-material-forward-5:
+  title: icon forward-5
+si-material-forward:
+  title: icon forward
+si-material-free-breakfast:
+  title: icon free-breakfast
+si-material-fullscreen-exit:
+  title: icon fullscreen-exit
+si-material-fullscreen:
+  title: icon fullscreen
+si-material-functions:
+  title: icon functions
+si-material-g-translate:
+  title: icon g-translate
+si-material-gamepad:
+  title: icon gamepad
+si-material-games:
+  title: icon games
+si-material-gavel:
+  title: icon gavel
+si-material-gesture:
+  title: icon gesture
+si-material-get-app:
+  title: icon get-app
+si-material-golf-course:
+  title: icon golf-course
+si-material-gps-fixed:
+  title: icon gps-fixed
+si-material-gps-not-fixed:
+  title: icon gps-not-fixed
+si-material-gps-off:
+  title: icon gps-off
+si-material-grade:
+  title: icon grade
+si-material-gradient:
+  title: icon gradient
+si-material-grain:
+  title: icon grain
+si-material-graphic-eq:
+  title: icon graphic-eq
+si-material-grid-off:
+  title: icon grid-off
+si-material-grid-on:
+  title: icon grid-on
+si-material-group-add:
+  title: icon group-add
+si-material-group-work:
+  title: icon group-work
+si-material-group:
+  title: icon group
+si-material-hdr-off:
+  title: icon hdr-off
+si-material-hdr-on:
+  title: icon hdr-on
+si-material-hdr-strong:
+  title: icon hdr-strong
+si-material-hdr-weak:
+  title: icon hdr-weak
+si-material-headset-mic:
+  title: icon headset-mic
+si-material-headset:
+  title: icon headset
+si-material-healing:
+  title: icon healing
+si-material-hearing:
+  title: icon hearing
+si-material-help:
+  title: icon help
+si-material-high-quality:
+  title: icon high-quality
+si-material-highlight-off:
+  title: icon highlight-off
+si-material-highlight:
+  title: icon highlight
+si-material-history:
+  title: icon history
+si-material-home:
+  title: icon home
+si-material-hot-tub:
+  title: icon hot-tub
+si-material-hotel:
+  title: icon hotel
+si-material-hourglass-empty:
+  title: icon hourglass-empty
+si-material-hourglass-full:
+  title: icon hourglass-full
+si-material-http:
+  title: icon http
+si-material-https:
+  title: icon https
+si-material-image-aspect-ratio:
+  title: icon image-aspect-ratio
+si-material-image:
+  title: icon image
+si-material-import-contacts:
+  title: icon import-contacts
+si-material-import-export:
+  title: icon import-export
+si-material-important-devices:
+  title: icon important-devices
+si-material-inbox:
+  title: icon inbox
+si-material-info-outline:
+  title: icon info-outline
+si-material-info:
+  title: icon info
+si-material-input:
+  title: icon input
+si-material-insert-chart:
+  title: icon insert-chart
+si-material-insert-comment:
+  title: icon insert-comment
+si-material-insert-drive-file:
+  title: icon insert-drive-file
+si-material-insert-emoticon:
+  title: icon insert-emoticon
+si-material-insert-invitation:
+  title: icon insert-invitation
+si-material-insert-link:
+  title: icon insert-link
+si-material-insert-photo:
+  title: icon insert-photo
+si-material-invert-colors-off:
+  title: icon invert-colors-off
+si-material-invert-colors:
+  title: icon invert-colors
+si-material-iso:
+  title: icon iso
+si-material-keyboard-arrow-down:
+  title: icon keyboard-arrow-down
+si-material-keyboard-arrow-left:
+  title: icon keyboard-arrow-left
+si-material-keyboard-arrow-right:
+  title: icon keyboard-arrow-right
+si-material-keyboard-arrow-up:
+  title: icon keyboard-arrow-up
+si-material-keyboard-backspace:
+  title: icon keyboard-backspace
+si-material-keyboard-capslock:
+  title: icon keyboard-capslock
+si-material-keyboard-hide:
+  title: icon keyboard-hide
+si-material-keyboard-return:
+  title: icon keyboard-return
+si-material-keyboard-tab:
+  title: icon keyboard-tab
+si-material-keyboard-voice:
+  title: icon keyboard-voice
+si-material-keyboard:
+  title: icon keyboard
+si-material-kitchen:
+  title: icon kitchen
+si-material-label-outline:
+  title: icon label-outline
+si-material-label:
+  title: icon label
+si-material-landscape:
+  title: icon landscape
+si-material-language:
+  title: icon language
+si-material-laptop-chromebook:
+  title: icon laptop-chromebook
+si-material-laptop-mac:
+  title: icon laptop-mac
+si-material-laptop-windows:
+  title: icon laptop-windows
+si-material-laptop:
+  title: icon laptop
+si-material-last-page:
+  title: icon last-page
+si-material-launch:
+  title: icon launch
+si-material-layers-clear:
+  title: icon layers-clear
+si-material-layers:
+  title: icon layers
+si-material-leak-add:
+  title: icon leak-add
+si-material-leak-remove:
+  title: icon leak-remove
+si-material-lens:
+  title: icon lens
+si-material-library-add:
+  title: icon library-add
+si-material-library-books:
+  title: icon library-books
+si-material-library-music:
+  title: icon library-music
+si-material-lightbulb-outline:
+  title: icon lightbulb-outline
+si-material-line-style:
+  title: icon line-style
+si-material-line-weight:
+  title: icon line-weight
+si-material-linear-scale:
+  title: icon linear-scale
+si-material-link:
+  title: icon link
+si-material-linked-camera:
+  title: icon linked-camera
+si-material-list:
+  title: icon list
+si-material-live-help:
+  title: icon live-help
+si-material-live-tv:
+  title: icon live-tv
+si-material-local-activity:
+  title: icon local-activity
+si-material-local-airport:
+  title: icon local-airport
+si-material-local-atm:
+  title: icon local-atm
+si-material-local-bar:
+  title: icon local-bar
+si-material-local-cafe:
+  title: icon local-cafe
+si-material-local-car-wash:
+  title: icon local-car-wash
+si-material-local-convenience-store:
+  title: icon local-convenience-store
+si-material-local-dining:
+  title: icon local-dining
+si-material-local-drink:
+  title: icon local-drink
+si-material-local-florist:
+  title: icon local-florist
+si-material-local-gas-station:
+  title: icon local-gas-station
+si-material-local-grocery-store:
+  title: icon local-grocery-store
+si-material-local-hospital:
+  title: icon local-hospital
+si-material-local-hotel:
+  title: icon local-hotel
+si-material-local-laundry-service:
+  title: icon local-laundry-service
+si-material-local-library:
+  title: icon local-library
+si-material-local-mall:
+  title: icon local-mall
+si-material-local-movies:
+  title: icon local-movies
+si-material-local-offer:
+  title: icon local-offer
+si-material-local-parking:
+  title: icon local-parking
+si-material-local-pharmacy:
+  title: icon local-pharmacy
+si-material-local-phone:
+  title: icon local-phone
+si-material-local-pizza:
+  title: icon local-pizza
+si-material-local-play:
+  title: icon local-play
+si-material-local-post-office:
+  title: icon local-post-office
+si-material-local-printshop:
+  title: icon local-printshop
+si-material-local-see:
+  title: icon local-see
+si-material-local-shipping:
+  title: icon local-shipping
+si-material-local-taxi:
+  title: icon local-taxi
+si-material-location-city:
+  title: icon location-city
+si-material-location-disabled:
+  title: icon location-disabled
+si-material-location-off:
+  title: icon location-off
+si-material-location-on:
+  title: icon location-on
+si-material-location-searching:
+  title: icon location-searching
+si-material-lock-open:
+  title: icon lock-open
+si-material-lock-outline:
+  title: icon lock-outline
+si-material-lock:
+  title: icon lock
+si-material-looks-3:
+  title: icon looks-3
+si-material-looks-4:
+  title: icon looks-4
+si-material-looks-5:
+  title: icon looks-5
+si-material-looks-6:
+  title: icon looks-6
+si-material-looks-one:
+  title: icon looks-one
+si-material-looks-two:
+  title: icon looks-two
+si-material-looks:
+  title: icon looks
+si-material-loop:
+  title: icon loop
+si-material-loupe:
+  title: icon loupe
+si-material-low-priority:
+  title: icon low-priority
+si-material-loyalty:
+  title: icon loyalty
+si-material-mail-outline:
+  title: icon mail-outline
+si-material-mail:
+  title: icon mail
+si-material-map:
+  title: icon map
+si-material-markunread-mailbox:
+  title: icon markunread-mailbox
+si-material-markunread:
+  title: icon markunread
+si-material-memory:
+  title: icon memory
+si-material-menu:
+  title: icon menu
+si-material-merge-type:
+  title: icon merge-type
+si-material-message:
+  title: icon message
+si-material-mic-none:
+  title: icon mic-none
+si-material-mic-off:
+  title: icon mic-off
+si-material-mic:
+  title: icon mic
+si-material-mms:
+  title: icon mms
+si-material-mode-comment:
+  title: icon mode-comment
+si-material-mode-edit:
+  title: icon mode-edit
+si-material-monetization-on:
+  title: icon monetization-on
+si-material-monochrome-photos:
+  title: icon monochrome-photos
+si-material-mood-bad:
+  title: icon mood-bad
+si-material-mood:
+  title: icon mood
+si-material-more-horiz:
+  title: icon more-horiz
+si-material-more-vert:
+  title: icon more-vert
+si-material-more:
+  title: icon more
+si-material-motorcycle:
+  title: icon motorcycle
+si-material-mouse:
+  title: icon mouse
+si-material-move-to-inbox:
+  title: icon move-to-inbox
+si-material-movie-creation:
+  title: icon movie-creation
+si-material-movie-filter:
+  title: icon movie-filter
+si-material-movie:
+  title: icon movie
+si-material-multiline-chart:
+  title: icon multiline-chart
+si-material-music-note:
+  title: icon music-note
+si-material-music-video:
+  title: icon music-video
+si-material-my-location:
+  title: icon my-location
+si-material-nature-people:
+  title: icon nature-people
+si-material-nature:
+  title: icon nature
+si-material-navigate-before:
+  title: icon navigate-before
+si-material-navigate-next:
+  title: icon navigate-next
+si-material-navigation:
+  title: icon navigation
+si-material-near-me:
+  title: icon near-me
+si-material-network-cell:
+  title: icon network-cell
+si-material-network-check:
+  title: icon network-check
+si-material-network-locked:
+  title: icon network-locked
+si-material-network-wifi:
+  title: icon network-wifi
+si-material-new-releases:
+  title: icon new-releases
+si-material-next-week:
+  title: icon next-week
+si-material-nfc:
+  title: icon nfc
+si-material-no-encryption:
+  title: icon no-encryption
+si-material-no-sim:
+  title: icon no-sim
+si-material-not-interested:
+  title: icon not-interested
+si-material-note-add:
+  title: icon note-add
+si-material-note:
+  title: icon note
+si-material-notifications-active:
+  title: icon notifications-active
+si-material-notifications-none:
+  title: icon notifications-none
+si-material-notifications-off:
+  title: icon notifications-off
+si-material-notifications-paused:
+  title: icon notifications-paused
+si-material-notifications:
+  title: icon notifications
+si-material-ondemand-video:
+  title: icon ondemand-video
+si-material-opacity:
+  title: icon opacity
+si-material-open-in-browser:
+  title: icon open-in-browser
+si-material-open-in-new:
+  title: icon open-in-new
+si-material-open-with:
+  title: icon open-with
+si-material-pages:
+  title: icon pages
+si-material-pageview:
+  title: icon pageview
+si-material-palette:
+  title: icon palette
+si-material-pan-tool:
+  title: icon pan-tool
+si-material-panorama-fish-eye:
+  title: icon panorama-fish-eye
+si-material-panorama-horizontal:
+  title: icon panorama-horizontal
+si-material-panorama-vertical:
+  title: icon panorama-vertical
+si-material-panorama-wide-angle:
+  title: icon panorama-wide-angle
+si-material-panorama:
+  title: icon panorama
+si-material-party-mode:
+  title: icon party-mode
+si-material-pause-circle-filled:
+  title: icon pause-circle-filled
+si-material-pause-circle-outline:
+  title: icon pause-circle-outline
+si-material-pause:
+  title: icon pause
+si-material-payment:
+  title: icon payment
+si-material-people-outline:
+  title: icon people-outline
+si-material-people:
+  title: icon people
+si-material-perm-camera-mic:
+  title: icon perm-camera-mic
+si-material-perm-contact-calendar:
+  title: icon perm-contact-calendar
+si-material-perm-data-setting:
+  title: icon perm-data-setting
+si-material-perm-device-information:
+  title: icon perm-device-information
+si-material-perm-identity:
+  title: icon perm-identity
+si-material-perm-media:
+  title: icon perm-media
+si-material-perm-phone-msg:
+  title: icon perm-phone-msg
+si-material-perm-scan-wifi:
+  title: icon perm-scan-wifi
+si-material-person-add:
+  title: icon person-add
+si-material-person-outline:
+  title: icon person-outline
+si-material-person-pin-circle:
+  title: icon person-pin-circle
+si-material-person-pin:
+  title: icon person-pin
+si-material-person:
+  title: icon person
+si-material-personal-video:
+  title: icon personal-video
+si-material-pets:
+  title: icon pets
+si-material-phone-android:
+  title: icon phone-android
+si-material-phone-bluetooth-speaker:
+  title: icon phone-bluetooth-speaker
+si-material-phone-forwarded:
+  title: icon phone-forwarded
+si-material-phone-in-talk:
+  title: icon phone-in-talk
+si-material-phone-iphone:
+  title: icon phone-iphone
+si-material-phone-locked:
+  title: icon phone-locked
+si-material-phone-missed:
+  title: icon phone-missed
+si-material-phone-paused:
+  title: icon phone-paused
+si-material-phone:
+  title: icon phone
+si-material-phonelink-off:
+  title: icon phonelink-off
+si-material-phonelink:
+  title: icon phonelink
+si-material-photo-album:
+  title: icon photo-album
+si-material-photo-camera:
+  title: icon photo-camera
+si-material-photo-filter:
+  title: icon photo-filter
+si-material-photo-library:
+  title: icon photo-library
+si-material-photo:
+  title: icon photo
+si-material-picture-as-pdf:
+  title: icon picture-as-pdf
+si-material-picture-in-picture-alt:
+  title: icon picture-in-picture-alt
+si-material-picture-in-picture:
+  title: icon picture-in-picture
+si-material-pie-chart-outlined:
+  title: icon pie-chart-outlined
+si-material-pie-chart:
+  title: icon pie-chart
+si-material-pin-drop:
+  title: icon pin-drop
+si-material-place:
+  title: icon place
+si-material-play-arrow:
+  title: icon play-arrow
+si-material-play-circle-filled-white:
+  title: icon play-circle-filled-white
+si-material-play-circle-filled:
+  title: icon play-circle-filled
+si-material-play-circle-outline:
+  title: icon play-circle-outline
+si-material-play-for-work:
+  title: icon play-for-work
+si-material-playlist-add-check:
+  title: icon playlist-add-check
+si-material-playlist-add:
+  title: icon playlist-add
+si-material-playlist-play:
+  title: icon playlist-play
+si-material-plus-one:
+  title: icon plus-one
+si-material-poll:
+  title: icon poll
+si-material-polymer:
+  title: icon polymer
+si-material-pool:
+  title: icon pool
+si-material-portable-wifi-off:
+  title: icon portable-wifi-off
+si-material-portrait:
+  title: icon portrait
+si-material-power-input:
+  title: icon power-input
+si-material-power-settings-new:
+  title: icon power-settings-new
+si-material-power:
+  title: icon power
+si-material-pregnant-woman:
+  title: icon pregnant-woman
+si-material-present-to-all:
+  title: icon present-to-all
+si-material-print:
+  title: icon print
+si-material-priority-high:
+  title: icon priority-high
+si-material-public:
+  title: icon public
+si-material-publish:
+  title: icon publish
+si-material-query-builder:
+  title: icon query-builder
+si-material-question-answer:
+  title: icon question-answer
+si-material-queue-music:
+  title: icon queue-music
+si-material-queue-play-next:
+  title: icon queue-play-next
+si-material-queue:
+  title: icon queue
+si-material-radio-button-checked:
+  title: icon radio-button-checked
+si-material-radio-button-unchecked:
+  title: icon radio-button-unchecked
+si-material-radio:
+  title: icon radio
+si-material-rate-review:
+  title: icon rate-review
+si-material-receipt:
+  title: icon receipt
+si-material-recent-actors:
+  title: icon recent-actors
+si-material-record-voice-over:
+  title: icon record-voice-over
+si-material-redeem:
+  title: icon redeem
+si-material-redo:
+  title: icon redo
+si-material-refresh:
+  title: icon refresh
+si-material-remove-circle-outline:
+  title: icon remove-circle-outline
+si-material-remove-circle:
+  title: icon remove-circle
+si-material-remove-from-queue:
+  title: icon remove-from-queue
+si-material-remove-red-eye:
+  title: icon remove-red-eye
+si-material-remove-shopping-cart:
+  title: icon remove-shopping-cart
+si-material-remove:
+  title: icon remove
+si-material-repeat-one:
+  title: icon repeat-one
+si-material-repeat:
+  title: icon repeat
+si-material-replay-10:
+  title: icon replay-10
+si-material-replay-30:
+  title: icon replay-30
+si-material-replay-5:
+  title: icon replay-5
+si-material-replay:
+  title: icon replay
+si-material-reply-all:
+  title: icon reply-all
+si-material-reply:
+  title: icon reply
+si-material-report-problem:
+  title: icon report-problem
+si-material-report:
+  title: icon report
+si-material-restaurant-menu:
+  title: icon restaurant-menu
+si-material-restaurant:
+  title: icon restaurant
+si-material-restore-page:
+  title: icon restore-page
+si-material-restore:
+  title: icon restore
+si-material-ring-volume:
+  title: icon ring-volume
+si-material-room-service:
+  title: icon room-service
+si-material-room:
+  title: icon room
+si-material-rotate-90-degrees-ccw:
+  title: icon rotate-90-degrees-ccw
+si-material-rotate-left:
+  title: icon rotate-left
+si-material-rotate-right:
+  title: icon rotate-right
+si-material-rounded-corner:
+  title: icon rounded-corner
+si-material-router:
+  title: icon router
+si-material-rowing:
+  title: icon rowing
+si-material-rss-feed:
+  title: icon rss-feed
+si-material-rv-hookup:
+  title: icon rv-hookup
+si-material-satellite:
+  title: icon satellite
+si-material-save:
+  title: icon save
+si-material-scanner:
+  title: icon scanner
+si-material-schedule:
+  title: icon schedule
+si-material-school:
+  title: icon school
+si-material-screen-lock-landscape:
+  title: icon screen-lock-landscape
+si-material-screen-lock-portrait:
+  title: icon screen-lock-portrait
+si-material-screen-lock-rotation:
+  title: icon screen-lock-rotation
+si-material-screen-rotation:
+  title: icon screen-rotation
+si-material-screen-share:
+  title: icon screen-share
+si-material-sd-card:
+  title: icon sd-card
+si-material-sd-storage:
+  title: icon sd-storage
+si-material-search:
+  title: icon search
+si-material-security:
+  title: icon security
+si-material-select-all:
+  title: icon select-all
+si-material-send:
+  title: icon send
+si-material-sentiment-dissatisfied:
+  title: icon sentiment-dissatisfied
+si-material-sentiment-neutral:
+  title: icon sentiment-neutral
+si-material-sentiment-satisfied:
+  title: icon sentiment-satisfied
+si-material-sentiment-very-dissatisfied:
+  title: icon sentiment-very-dissatisfied
+si-material-sentiment-very-satisfied:
+  title: icon sentiment-very-satisfied
+si-material-settings-applications:
+  title: icon settings-applications
+si-material-settings-backup-restore:
+  title: icon settings-backup-restore
+si-material-settings-bluetooth:
+  title: icon settings-bluetooth
+si-material-settings-brightness:
+  title: icon settings-brightness
+si-material-settings-cell:
+  title: icon settings-cell
+si-material-settings-ethernet:
+  title: icon settings-ethernet
+si-material-settings-input-antenna:
+  title: icon settings-input-antenna
+si-material-settings-input-component:
+  title: icon settings-input-component
+si-material-settings-input-composite:
+  title: icon settings-input-composite
+si-material-settings-input-hdmi:
+  title: icon settings-input-hdmi
+si-material-settings-input-svideo:
+  title: icon settings-input-svideo
+si-material-settings-overscan:
+  title: icon settings-overscan
+si-material-settings-phone:
+  title: icon settings-phone
+si-material-settings-power:
+  title: icon settings-power
+si-material-settings-remote:
+  title: icon settings-remote
+si-material-settings-system-daydream:
+  title: icon settings-system-daydream
+si-material-settings-voice:
+  title: icon settings-voice
+si-material-settings:
+  title: icon settings
+si-material-share:
+  title: icon share
+si-material-shop-two:
+  title: icon shop-two
+si-material-shop:
+  title: icon shop
+si-material-shopping-basket:
+  title: icon shopping-basket
+si-material-shopping-cart:
+  title: icon shopping-cart
+si-material-short-text:
+  title: icon short-text
+si-material-show-chart:
+  title: icon show-chart
+si-material-shuffle:
+  title: icon shuffle
+si-material-signal-cellular-0-bar:
+  title: icon signal-cellular-0-bar
+si-material-signal-cellular-1-bar:
+  title: icon signal-cellular-1-bar
+si-material-signal-cellular-2-bar:
+  title: icon signal-cellular-2-bar
+si-material-signal-cellular-3-bar:
+  title: icon signal-cellular-3-bar
+si-material-signal-cellular-4-bar:
+  title: icon signal-cellular-4-bar
+si-material-signal-cellular-connected-no-internet-0-bar:
+  title: icon signal-cellular-connected-no-internet-0-bar
+si-material-signal-cellular-connected-no-internet-1-bar:
+  title: icon signal-cellular-connected-no-internet-1-bar
+si-material-signal-cellular-connected-no-internet-2-bar:
+  title: icon signal-cellular-connected-no-internet-2-bar
+si-material-signal-cellular-connected-no-internet-3-bar:
+  title: icon signal-cellular-connected-no-internet-3-bar
+si-material-signal-cellular-connected-no-internet-4-bar:
+  title: icon signal-cellular-connected-no-internet-4-bar
+si-material-signal-cellular-no-sim:
+  title: icon signal-cellular-no-sim
+si-material-signal-cellular-null:
+  title: icon signal-cellular-null
+si-material-signal-cellular-off:
+  title: icon signal-cellular-off
+si-material-signal-wifi-0-bar:
+  title: icon signal-wifi-0-bar
+si-material-signal-wifi-1-bar-lock:
+  title: icon signal-wifi-1-bar-lock
+si-material-signal-wifi-1-bar:
+  title: icon signal-wifi-1-bar
+si-material-signal-wifi-2-bar-lock:
+  title: icon signal-wifi-2-bar-lock
+si-material-signal-wifi-2-bar:
+  title: icon signal-wifi-2-bar
+si-material-signal-wifi-3-bar-lock:
+  title: icon signal-wifi-3-bar-lock
+si-material-signal-wifi-3-bar:
+  title: icon signal-wifi-3-bar
+si-material-signal-wifi-4-bar-lock:
+  title: icon signal-wifi-4-bar-lock
+si-material-signal-wifi-4-bar:
+  title: icon signal-wifi-4-bar
+si-material-signal-wifi-off:
+  title: icon signal-wifi-off
+si-material-sim-card-alert:
+  title: icon sim-card-alert
+si-material-sim-card:
+  title: icon sim-card
+si-material-skip-next:
+  title: icon skip-next
+si-material-skip-previous:
+  title: icon skip-previous
+si-material-slideshow:
+  title: icon slideshow
+si-material-slow-motion-video:
+  title: icon slow-motion-video
+si-material-smartphone:
+  title: icon smartphone
+si-material-smoke-free:
+  title: icon smoke-free
+si-material-smoking-rooms:
+  title: icon smoking-rooms
+si-material-sms-failed:
+  title: icon sms-failed
+si-material-sms:
+  title: icon sms
+si-material-snooze:
+  title: icon snooze
+si-material-sort:
+  title: icon sort
+si-material-spa:
+  title: icon spa
+si-material-space-bar:
+  title: icon space-bar
+si-material-speaker-group:
+  title: icon speaker-group
+si-material-speaker-notes-off:
+  title: icon speaker-notes-off
+si-material-speaker-notes:
+  title: icon speaker-notes
+si-material-speaker-phone:
+  title: icon speaker-phone
+si-material-speaker:
+  title: icon speaker
+si-material-spellcheck:
+  title: icon spellcheck
+si-material-star-half:
+  title: icon star-half
+si-material-stars:
+  title: icon stars
+si-material-stay-current-landscape:
+  title: icon stay-current-landscape
+si-material-stay-current-portrait:
+  title: icon stay-current-portrait
+si-material-stay-primary-landscape:
+  title: icon stay-primary-landscape
+si-material-stay-primary-portrait:
+  title: icon stay-primary-portrait
+si-material-stop-screen-share:
+  title: icon stop-screen-share
+si-material-stop:
+  title: icon stop
+si-material-storage:
+  title: icon storage
+si-material-store-mall-directory:
+  title: icon store-mall-directory
+si-material-store:
+  title: icon store
+si-material-straighten:
+  title: icon straighten
+si-material-streetview:
+  title: icon streetview
+si-material-strikethrough-s:
+  title: icon strikethrough-s
+si-material-style:
+  title: icon style
+si-material-subdirectory-arrow-left:
+  title: icon subdirectory-arrow-left
+si-material-subdirectory-arrow-right:
+  title: icon subdirectory-arrow-right
+si-material-subject:
+  title: icon subject
+si-material-subscriptions:
+  title: icon subscriptions
+si-material-subtitles:
+  title: icon subtitles
+si-material-subway:
+  title: icon subway
+si-material-supervisor-account:
+  title: icon supervisor-account
+si-material-surround-sound:
+  title: icon surround-sound
+si-material-swap-calls:
+  title: icon swap-calls
+si-material-swap-horiz:
+  title: icon swap-horiz
+si-material-swap-vert:
+  title: icon swap-vert
+si-material-swap-vertical-circle:
+  title: icon swap-vertical-circle
+si-material-switch-camera:
+  title: icon switch-camera
+si-material-switch-video:
+  title: icon switch-video
+si-material-sync-disabled:
+  title: icon sync-disabled
+si-material-sync-problem:
+  title: icon sync-problem
+si-material-sync:
+  title: icon sync
+si-material-system-update-alt:
+  title: icon system-update-alt
+si-material-system-update:
+  title: icon system-update
+si-material-tab-unselected:
+  title: icon tab-unselected
+si-material-tab:
+  title: icon tab
+si-material-tablet-android:
+  title: icon tablet-android
+si-material-tablet-mac:
+  title: icon tablet-mac
+si-material-tablet:
+  title: icon tablet
+si-material-tag-faces:
+  title: icon tag-faces
+si-material-tap-and-play:
+  title: icon tap-and-play
+si-material-terrain:
+  title: icon terrain
+si-material-text-fields:
+  title: icon text-fields
+si-material-text-format:
+  title: icon text-format
+si-material-textsms:
+  title: icon textsms
+si-material-texture:
+  title: icon texture
+si-material-theaters:
+  title: icon theaters
+si-material-thumb-down:
+  title: icon thumb-down
+si-material-thumb-up:
+  title: icon thumb-up
+si-material-thumbs-up-down:
+  title: icon thumbs-up-down
+si-material-time-to-leave:
+  title: icon time-to-leave
+si-material-timelapse:
+  title: icon timelapse
+si-material-timeline:
+  title: icon timeline
+si-material-timer-10:
+  title: icon timer-10
+si-material-timer-3:
+  title: icon timer-3
+si-material-timer-off:
+  title: icon timer-off
+si-material-timer:
+  title: icon timer
+si-material-title:
+  title: icon title
+si-material-toc:
+  title: icon toc
+si-material-today:
+  title: icon today
+si-material-toll:
+  title: icon toll
+si-material-tonality:
+  title: icon tonality
+si-material-touch-app:
+  title: icon touch-app
+si-material-toys:
+  title: icon toys
+si-material-track-changes:
+  title: icon track-changes
+si-material-traffic:
+  title: icon traffic
+si-material-train:
+  title: icon train
+si-material-tram:
+  title: icon tram
+si-material-transfer-within-a-station:
+  title: icon transfer-within-a-station
+si-material-transform:
+  title: icon transform
+si-material-translate:
+  title: icon translate
+si-material-trending-down:
+  title: icon trending-down
+si-material-trending-flat:
+  title: icon trending-flat
+si-material-trending-up:
+  title: icon trending-up
+si-material-tune:
+  title: icon tune
+si-material-turned-in-not:
+  title: icon turned-in-not
+si-material-turned-in:
+  title: icon turned-in
+si-material-tv:
+  title: icon tv
+si-material-unarchive:
+  title: icon unarchive
+si-material-undo:
+  title: icon undo
+si-material-unfold-less:
+  title: icon unfold-less
+si-material-unfold-more:
+  title: icon unfold-more
+si-material-update:
+  title: icon update
+si-material-usb:
+  title: icon usb
+si-material-verified-user:
+  title: icon verified-user
+si-material-vertical-align-bottom:
+  title: icon vertical-align-bottom
+si-material-vertical-align-center:
+  title: icon vertical-align-center
+si-material-vertical-align-top:
+  title: icon vertical-align-top
+si-material-vibration:
+  title: icon vibration
+si-material-video-call:
+  title: icon video-call
+si-material-video-label:
+  title: icon video-label
+si-material-video-library:
+  title: icon video-library
+si-material-videocam-off:
+  title: icon videocam-off
+si-material-videocam:
+  title: icon videocam
+si-material-videogame-asset:
+  title: icon videogame-asset
+si-material-view-agenda:
+  title: icon view-agenda
+si-material-view-array:
+  title: icon view-array
+si-material-view-carousel:
+  title: icon view-carousel
+si-material-view-column:
+  title: icon view-column
+si-material-view-comfy:
+  title: icon view-comfy
+si-material-view-compact:
+  title: icon view-compact
+si-material-view-day:
+  title: icon view-day
+si-material-view-headline:
+  title: icon view-headline
+si-material-view-list:
+  title: icon view-list
+si-material-view-module:
+  title: icon view-module
+si-material-view-quilt:
+  title: icon view-quilt
+si-material-view-stream:
+  title: icon view-stream
+si-material-view-week:
+  title: icon view-week
+si-material-visibility-off:
+  title: icon visibility-off
+si-material-visibility:
+  title: icon visibility
+si-material-voice-chat:
+  title: icon voice-chat
+si-material-voicemail:
+  title: icon voicemail
+si-material-volume-down:
+  title: icon volume-down
+si-material-volume-mute:
+  title: icon volume-mute
+si-material-volume-off:
+  title: icon volume-off
+si-material-volume-up:
+  title: icon volume-up
+si-material-vpn-key:
+  title: icon vpn-key
+si-material-vpn-lock:
+  title: icon vpn-lock
+si-material-wallpaper:
+  title: icon wallpaper
+si-material-warning:
+  title: icon warning
+si-material-watch-later:
+  title: icon watch-later
+si-material-watch:
+  title: icon watch
+si-material-wb-auto:
+  title: icon wb-auto
+si-material-wb-cloudy:
+  title: icon wb-cloudy
+si-material-wb-incandescent:
+  title: icon wb-incandescent
+si-material-wb-iridescent:
+  title: icon wb-iridescent
+si-material-wb-sunny:
+  title: icon wb-sunny
+si-material-wc:
+  title: icon wc
+si-material-web-asset:
+  title: icon web-asset
+si-material-web:
+  title: icon web
+si-material-weekend:
+  title: icon weekend
+si-material-whatshot:
+  title: icon whatshot
+si-material-widgets:
+  title: icon widgets
+si-material-wifi-lock:
+  title: icon wifi-lock
+si-material-wifi-tethering:
+  title: icon wifi-tethering
+si-material-wifi:
+  title: icon wifi
+si-material-work:
+  title: icon work
+si-material-wrap-text:
+  title: icon wrap-text
+si-material-youtube-searched-for:
+  title: icon youtube-searched-for
+si-material-zoom-out-map:
+  title: icon zoom-out-map

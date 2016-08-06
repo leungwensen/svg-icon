@@ -1,0 +1,446 @@
+si-open-account-login:
+  title: icon account-login
+si-open-account-logout:
+  title: icon account-logout
+si-open-action-redo:
+  title: icon action-redo
+si-open-action-undo:
+  title: icon action-undo
+si-open-align-center:
+  title: icon align-center
+si-open-align-left:
+  title: icon align-left
+si-open-align-right:
+  title: icon align-right
+si-open-aperture:
+  title: icon aperture
+si-open-arrow-bottom:
+  title: icon arrow-bottom
+si-open-arrow-circle-bottom:
+  title: icon arrow-circle-bottom
+si-open-arrow-circle-left:
+  title: icon arrow-circle-left
+si-open-arrow-circle-right:
+  title: icon arrow-circle-right
+si-open-arrow-circle-top:
+  title: icon arrow-circle-top
+si-open-arrow-left:
+  title: icon arrow-left
+si-open-arrow-right:
+  title: icon arrow-right
+si-open-arrow-thick-bottom:
+  title: icon arrow-thick-bottom
+si-open-arrow-thick-left:
+  title: icon arrow-thick-left
+si-open-arrow-thick-right:
+  title: icon arrow-thick-right
+si-open-arrow-thick-top:
+  title: icon arrow-thick-top
+si-open-arrow-top:
+  title: icon arrow-top
+si-open-audio-spectrum:
+  title: icon audio-spectrum
+si-open-audio:
+  title: icon audio
+si-open-badge:
+  title: icon badge
+si-open-ban:
+  title: icon ban
+si-open-bar-chart:
+  title: icon bar-chart
+si-open-basket:
+  title: icon basket
+si-open-battery-empty:
+  title: icon battery-empty
+si-open-battery-full:
+  title: icon battery-full
+si-open-beaker:
+  title: icon beaker
+si-open-bell:
+  title: icon bell
+si-open-bluetooth:
+  title: icon bluetooth
+si-open-bold:
+  title: icon bold
+si-open-bolt:
+  title: icon bolt
+si-open-book:
+  title: icon book
+si-open-bookmark:
+  title: icon bookmark
+si-open-box:
+  title: icon box
+si-open-briefcase:
+  title: icon briefcase
+si-open-british-pound:
+  title: icon british-pound
+si-open-browser:
+  title: icon browser
+si-open-brush:
+  title: icon brush
+si-open-bug:
+  title: icon bug
+si-open-bullhorn:
+  title: icon bullhorn
+si-open-calculator:
+  title: icon calculator
+si-open-calendar:
+  title: icon calendar
+si-open-camera-slr:
+  title: icon camera-slr
+si-open-caret-bottom:
+  title: icon caret-bottom
+si-open-caret-left:
+  title: icon caret-left
+si-open-caret-right:
+  title: icon caret-right
+si-open-caret-top:
+  title: icon caret-top
+si-open-cart:
+  title: icon cart
+si-open-chat:
+  title: icon chat
+si-open-check:
+  title: icon check
+si-open-chevron-bottom:
+  title: icon chevron-bottom
+si-open-chevron-left:
+  title: icon chevron-left
+si-open-chevron-right:
+  title: icon chevron-right
+si-open-chevron-top:
+  title: icon chevron-top
+si-open-circle-check:
+  title: icon circle-check
+si-open-circle-x:
+  title: icon circle-x
+si-open-clipboard:
+  title: icon clipboard
+si-open-clock:
+  title: icon clock
+si-open-cloud-download:
+  title: icon cloud-download
+si-open-cloud-upload:
+  title: icon cloud-upload
+si-open-cloud:
+  title: icon cloud
+si-open-cloudy:
+  title: icon cloudy
+si-open-code:
+  title: icon code
+si-open-cog:
+  title: icon cog
+si-open-collapse-down:
+  title: icon collapse-down
+si-open-collapse-left:
+  title: icon collapse-left
+si-open-collapse-right:
+  title: icon collapse-right
+si-open-collapse-up:
+  title: icon collapse-up
+si-open-command:
+  title: icon command
+si-open-comment-square:
+  title: icon comment-square
+si-open-compass:
+  title: icon compass
+si-open-contrast:
+  title: icon contrast
+si-open-copywriting:
+  title: icon copywriting
+si-open-credit-card:
+  title: icon credit-card
+si-open-crop:
+  title: icon crop
+si-open-dashboard:
+  title: icon dashboard
+si-open-data-transfer-download:
+  title: icon data-transfer-download
+si-open-data-transfer-upload:
+  title: icon data-transfer-upload
+si-open-delete:
+  title: icon delete
+si-open-dial:
+  title: icon dial
+si-open-document:
+  title: icon document
+si-open-dollar:
+  title: icon dollar
+si-open-double-quote-sans-left:
+  title: icon double-quote-sans-left
+si-open-double-quote-sans-right:
+  title: icon double-quote-sans-right
+si-open-double-quote-serif-left:
+  title: icon double-quote-serif-left
+si-open-double-quote-serif-right:
+  title: icon double-quote-serif-right
+si-open-droplet:
+  title: icon droplet
+si-open-eject:
+  title: icon eject
+si-open-elevator:
+  title: icon elevator
+si-open-ellipses:
+  title: icon ellipses
+si-open-envelope-closed:
+  title: icon envelope-closed
+si-open-envelope-open:
+  title: icon envelope-open
+si-open-euro:
+  title: icon euro
+si-open-excerpt:
+  title: icon excerpt
+si-open-expand-down:
+  title: icon expand-down
+si-open-expand-left:
+  title: icon expand-left
+si-open-expand-right:
+  title: icon expand-right
+si-open-expand-up:
+  title: icon expand-up
+si-open-external-link:
+  title: icon external-link
+si-open-eye:
+  title: icon eye
+si-open-eyedropper:
+  title: icon eyedropper
+si-open-file:
+  title: icon file
+si-open-fire:
+  title: icon fire
+si-open-flag:
+  title: icon flag
+si-open-flash:
+  title: icon flash
+si-open-folder:
+  title: icon folder
+si-open-fork:
+  title: icon fork
+si-open-fullscreen-enter:
+  title: icon fullscreen-enter
+si-open-fullscreen-exit:
+  title: icon fullscreen-exit
+si-open-globe:
+  title: icon globe
+si-open-graph:
+  title: icon graph
+si-open-grid-four-up:
+  title: icon grid-four-up
+si-open-grid-three-up:
+  title: icon grid-three-up
+si-open-grid-two-up:
+  title: icon grid-two-up
+si-open-hard-drive:
+  title: icon hard-drive
+si-open-header:
+  title: icon header
+si-open-headphones:
+  title: icon headphones
+si-open-heart:
+  title: icon heart
+si-open-home:
+  title: icon home
+si-open-image:
+  title: icon image
+si-open-inbox:
+  title: icon inbox
+si-open-infinity:
+  title: icon infinity
+si-open-info:
+  title: icon info
+si-open-italic:
+  title: icon italic
+si-open-justify-center:
+  title: icon justify-center
+si-open-justify-left:
+  title: icon justify-left
+si-open-justify-right:
+  title: icon justify-right
+si-open-key:
+  title: icon key
+si-open-laptop:
+  title: icon laptop
+si-open-layers:
+  title: icon layers
+si-open-lightbulb:
+  title: icon lightbulb
+si-open-link-broken:
+  title: icon link-broken
+si-open-link-intact:
+  title: icon link-intact
+si-open-list-rich:
+  title: icon list-rich
+si-open-list:
+  title: icon list
+si-open-location:
+  title: icon location
+si-open-lock-locked:
+  title: icon lock-locked
+si-open-lock-unlocked:
+  title: icon lock-unlocked
+si-open-loop-circular:
+  title: icon loop-circular
+si-open-loop-square:
+  title: icon loop-square
+si-open-loop:
+  title: icon loop
+si-open-magnifying-glass:
+  title: icon magnifying-glass
+si-open-map-marker:
+  title: icon map-marker
+si-open-map:
+  title: icon map
+si-open-media-pause:
+  title: icon media-pause
+si-open-media-play:
+  title: icon media-play
+si-open-media-record:
+  title: icon media-record
+si-open-media-skip-backward:
+  title: icon media-skip-backward
+si-open-media-skip-forward:
+  title: icon media-skip-forward
+si-open-media-step-backward:
+  title: icon media-step-backward
+si-open-media-step-forward:
+  title: icon media-step-forward
+si-open-media-stop:
+  title: icon media-stop
+si-open-medical-cross:
+  title: icon medical-cross
+si-open-menu:
+  title: icon menu
+si-open-microphone:
+  title: icon microphone
+si-open-minus:
+  title: icon minus
+si-open-monitor:
+  title: icon monitor
+si-open-moon:
+  title: icon moon
+si-open-move:
+  title: icon move
+si-open-musical-note:
+  title: icon musical-note
+si-open-paperclip:
+  title: icon paperclip
+si-open-pencil:
+  title: icon pencil
+si-open-people:
+  title: icon people
+si-open-person:
+  title: icon person
+si-open-phone:
+  title: icon phone
+si-open-pie-chart:
+  title: icon pie-chart
+si-open-pin:
+  title: icon pin
+si-open-play-circle:
+  title: icon play-circle
+si-open-plus:
+  title: icon plus
+si-open-power-standby:
+  title: icon power-standby
+si-open-print:
+  title: icon print
+si-open-project:
+  title: icon project
+si-open-pulse:
+  title: icon pulse
+si-open-puzzle-piece:
+  title: icon puzzle-piece
+si-open-question-mark:
+  title: icon question-mark
+si-open-rain:
+  title: icon rain
+si-open-random:
+  title: icon random
+si-open-reload:
+  title: icon reload
+si-open-resize-both:
+  title: icon resize-both
+si-open-resize-height:
+  title: icon resize-height
+si-open-resize-width:
+  title: icon resize-width
+si-open-rss-alt:
+  title: icon rss-alt
+si-open-rss:
+  title: icon rss
+si-open-script:
+  title: icon script
+si-open-share-boxed:
+  title: icon share-boxed
+si-open-share:
+  title: icon share
+si-open-shield:
+  title: icon shield
+si-open-signal:
+  title: icon signal
+si-open-signpost:
+  title: icon signpost
+si-open-sort-ascending:
+  title: icon sort-ascending
+si-open-sort-descending:
+  title: icon sort-descending
+si-open-spreadsheet:
+  title: icon spreadsheet
+si-open-star:
+  title: icon star
+si-open-sun:
+  title: icon sun
+si-open-tablet:
+  title: icon tablet
+si-open-tag:
+  title: icon tag
+si-open-tags:
+  title: icon tags
+si-open-target:
+  title: icon target
+si-open-task:
+  title: icon task
+si-open-terminal:
+  title: icon terminal
+si-open-text:
+  title: icon text
+si-open-thumb-down:
+  title: icon thumb-down
+si-open-thumb-up:
+  title: icon thumb-up
+si-open-timer:
+  title: icon timer
+si-open-transfer:
+  title: icon transfer
+si-open-trash:
+  title: icon trash
+si-open-underline:
+  title: icon underline
+si-open-vertical-align-bottom:
+  title: icon vertical-align-bottom
+si-open-vertical-align-center:
+  title: icon vertical-align-center
+si-open-vertical-align-top:
+  title: icon vertical-align-top
+si-open-video:
+  title: icon video
+si-open-volume-high:
+  title: icon volume-high
+si-open-volume-low:
+  title: icon volume-low
+si-open-volume-off:
+  title: icon volume-off
+si-open-warning:
+  title: icon warning
+si-open-wifi:
+  title: icon wifi
+si-open-wrench:
+  title: icon wrench
+si-open-x:
+  title: icon x
+si-open-yen:
+  title: icon yen
+si-open-zoom-in:
+  title: icon zoom-in
+si-open-zoom-out:
+  title: icon zoom-out

@@ -1,0 +1,512 @@
+si-flag-ad:
+  title: flag of ad
+si-flag-ae:
+  title: flag of ae
+si-flag-af:
+  title: flag of af
+si-flag-ag:
+  title: flag of ag
+si-flag-ai:
+  title: flag of ai
+si-flag-al:
+  title: flag of al
+si-flag-am:
+  title: flag of am
+si-flag-ao:
+  title: flag of ao
+si-flag-aq:
+  title: flag of aq
+si-flag-ar:
+  title: flag of ar
+si-flag-as:
+  title: flag of as
+si-flag-at:
+  title: flag of at
+si-flag-au:
+  title: flag of au
+si-flag-aw:
+  title: flag of aw
+si-flag-ax:
+  title: flag of ax
+si-flag-az:
+  title: flag of az
+si-flag-ba:
+  title: flag of ba
+si-flag-bb:
+  title: flag of bb
+si-flag-bd:
+  title: flag of bd
+si-flag-be:
+  title: flag of be
+si-flag-bf:
+  title: flag of bf
+si-flag-bg:
+  title: flag of bg
+si-flag-bh:
+  title: flag of bh
+si-flag-bi:
+  title: flag of bi
+si-flag-bj:
+  title: flag of bj
+si-flag-bl:
+  title: flag of bl
+si-flag-bm:
+  title: flag of bm
+si-flag-bn:
+  title: flag of bn
+si-flag-bo:
+  title: flag of bo
+si-flag-bq:
+  title: flag of bq
+si-flag-br:
+  title: flag of br
+si-flag-bs:
+  title: flag of bs
+si-flag-bt:
+  title: flag of bt
+si-flag-bv:
+  title: flag of bv
+si-flag-bw:
+  title: flag of bw
+si-flag-by:
+  title: flag of by
+si-flag-bz:
+  title: flag of bz
+si-flag-ca:
+  title: flag of ca
+si-flag-cc:
+  title: flag of cc
+si-flag-cd:
+  title: flag of cd
+si-flag-cf:
+  title: flag of cf
+si-flag-cg:
+  title: flag of cg
+si-flag-ch:
+  title: flag of ch
+si-flag-ci:
+  title: flag of ci
+si-flag-ck:
+  title: flag of ck
+si-flag-cl:
+  title: flag of cl
+si-flag-cm:
+  title: flag of cm
+si-flag-cn:
+  title: flag of cn
+si-flag-co:
+  title: flag of co
+si-flag-cr:
+  title: flag of cr
+si-flag-cu:
+  title: flag of cu
+si-flag-cv:
+  title: flag of cv
+si-flag-cw:
+  title: flag of cw
+si-flag-cx:
+  title: flag of cx
+si-flag-cy:
+  title: flag of cy
+si-flag-cz:
+  title: flag of cz
+si-flag-de:
+  title: flag of de
+si-flag-dj:
+  title: flag of dj
+si-flag-dk:
+  title: flag of dk
+si-flag-dm:
+  title: flag of dm
+si-flag-do:
+  title: flag of do
+si-flag-dz:
+  title: flag of dz
+si-flag-ec:
+  title: flag of ec
+si-flag-ee:
+  title: flag of ee
+si-flag-eg:
+  title: flag of eg
+si-flag-eh:
+  title: flag of eh
+si-flag-er:
+  title: flag of er
+si-flag-es:
+  title: flag of es
+si-flag-et:
+  title: flag of et
+si-flag-eu:
+  title: flag of eu
+si-flag-fi:
+  title: flag of fi
+si-flag-fj:
+  title: flag of fj
+si-flag-fk:
+  title: flag of fk
+si-flag-fm:
+  title: flag of fm
+si-flag-fo:
+  title: flag of fo
+si-flag-fr:
+  title: flag of fr
+si-flag-ga:
+  title: flag of ga
+si-flag-gb-eng:
+  title: flag of gb-eng
+si-flag-gb-nir:
+  title: flag of gb-nir
+si-flag-gb-sct:
+  title: flag of gb-sct
+si-flag-gb-wls:
+  title: flag of gb-wls
+si-flag-gb:
+  title: flag of gb
+si-flag-gd:
+  title: flag of gd
+si-flag-ge:
+  title: flag of ge
+si-flag-gf:
+  title: flag of gf
+si-flag-gg:
+  title: flag of gg
+si-flag-gh:
+  title: flag of gh
+si-flag-gi:
+  title: flag of gi
+si-flag-gl:
+  title: flag of gl
+si-flag-gm:
+  title: flag of gm
+si-flag-gn:
+  title: flag of gn
+si-flag-gp:
+  title: flag of gp
+si-flag-gq:
+  title: flag of gq
+si-flag-gr:
+  title: flag of gr
+si-flag-gs:
+  title: flag of gs
+si-flag-gt:
+  title: flag of gt
+si-flag-gu:
+  title: flag of gu
+si-flag-gw:
+  title: flag of gw
+si-flag-gy:
+  title: flag of gy
+si-flag-hk:
+  title: flag of hk
+si-flag-hm:
+  title: flag of hm
+si-flag-hn:
+  title: flag of hn
+si-flag-hr:
+  title: flag of hr
+si-flag-ht:
+  title: flag of ht
+si-flag-hu:
+  title: flag of hu
+si-flag-id:
+  title: flag of id
+si-flag-ie:
+  title: flag of ie
+si-flag-il:
+  title: flag of il
+si-flag-im:
+  title: flag of im
+si-flag-in:
+  title: flag of in
+si-flag-io:
+  title: flag of io
+si-flag-iq:
+  title: flag of iq
+si-flag-ir:
+  title: flag of ir
+si-flag-is:
+  title: flag of is
+si-flag-it:
+  title: flag of it
+si-flag-je:
+  title: flag of je
+si-flag-jm:
+  title: flag of jm
+si-flag-jo:
+  title: flag of jo
+si-flag-jp:
+  title: flag of jp
+si-flag-ke:
+  title: flag of ke
+si-flag-kg:
+  title: flag of kg
+si-flag-kh:
+  title: flag of kh
+si-flag-ki:
+  title: flag of ki
+si-flag-km:
+  title: flag of km
+si-flag-kn:
+  title: flag of kn
+si-flag-kp:
+  title: flag of kp
+si-flag-kr:
+  title: flag of kr
+si-flag-kw:
+  title: flag of kw
+si-flag-ky:
+  title: flag of ky
+si-flag-kz:
+  title: flag of kz
+si-flag-la:
+  title: flag of la
+si-flag-lb:
+  title: flag of lb
+si-flag-lc:
+  title: flag of lc
+si-flag-li:
+  title: flag of li
+si-flag-lk:
+  title: flag of lk
+si-flag-lr:
+  title: flag of lr
+si-flag-ls:
+  title: flag of ls
+si-flag-lt:
+  title: flag of lt
+si-flag-lu:
+  title: flag of lu
+si-flag-lv:
+  title: flag of lv
+si-flag-ly:
+  title: flag of ly
+si-flag-ma:
+  title: flag of ma
+si-flag-mc:
+  title: flag of mc
+si-flag-md:
+  title: flag of md
+si-flag-me:
+  title: flag of me
+si-flag-mf:
+  title: flag of mf
+si-flag-mg:
+  title: flag of mg
+si-flag-mh:
+  title: flag of mh
+si-flag-mk:
+  title: flag of mk
+si-flag-ml:
+  title: flag of ml
+si-flag-mm:
+  title: flag of mm
+si-flag-mn:
+  title: flag of mn
+si-flag-mo:
+  title: flag of mo
+si-flag-mp:
+  title: flag of mp
+si-flag-mq:
+  title: flag of mq
+si-flag-mr:
+  title: flag of mr
+si-flag-ms:
+  title: flag of ms
+si-flag-mt:
+  title: flag of mt
+si-flag-mu:
+  title: flag of mu
+si-flag-mv:
+  title: flag of mv
+si-flag-mw:
+  title: flag of mw
+si-flag-mx:
+  title: flag of mx
+si-flag-my:
+  title: flag of my
+si-flag-mz:
+  title: flag of mz
+si-flag-na:
+  title: flag of na
+si-flag-nc:
+  title: flag of nc
+si-flag-ne:
+  title: flag of ne
+si-flag-nf:
+  title: flag of nf
+si-flag-ng:
+  title: flag of ng
+si-flag-ni:
+  title: flag of ni
+si-flag-nl:
+  title: flag of nl
+si-flag-no:
+  title: flag of no
+si-flag-np:
+  title: flag of np
+si-flag-nr:
+  title: flag of nr
+si-flag-nu:
+  title: flag of nu
+si-flag-nz:
+  title: flag of nz
+si-flag-om:
+  title: flag of om
+si-flag-pa:
+  title: flag of pa
+si-flag-pe:
+  title: flag of pe
+si-flag-pf:
+  title: flag of pf
+si-flag-pg:
+  title: flag of pg
+si-flag-ph:
+  title: flag of ph
+si-flag-pk:
+  title: flag of pk
+si-flag-pl:
+  title: flag of pl
+si-flag-pm:
+  title: flag of pm
+si-flag-pn:
+  title: flag of pn
+si-flag-pr:
+  title: flag of pr
+si-flag-ps:
+  title: flag of ps
+si-flag-pt:
+  title: flag of pt
+si-flag-pw:
+  title: flag of pw
+si-flag-py:
+  title: flag of py
+si-flag-qa:
+  title: flag of qa
+si-flag-re:
+  title: flag of re
+si-flag-ro:
+  title: flag of ro
+si-flag-rs:
+  title: flag of rs
+si-flag-ru:
+  title: flag of ru
+si-flag-rw:
+  title: flag of rw
+si-flag-sa:
+  title: flag of sa
+si-flag-sb:
+  title: flag of sb
+si-flag-sc:
+  title: flag of sc
+si-flag-sd:
+  title: flag of sd
+si-flag-se:
+  title: flag of se
+si-flag-sg:
+  title: flag of sg
+si-flag-sh:
+  title: flag of sh
+si-flag-si:
+  title: flag of si
+si-flag-sj:
+  title: flag of sj
+si-flag-sk:
+  title: flag of sk
+si-flag-sl:
+  title: flag of sl
+si-flag-sm:
+  title: flag of sm
+si-flag-sn:
+  title: flag of sn
+si-flag-so:
+  title: flag of so
+si-flag-sr:
+  title: flag of sr
+si-flag-ss:
+  title: flag of ss
+si-flag-st:
+  title: flag of st
+si-flag-sv:
+  title: flag of sv
+si-flag-sx:
+  title: flag of sx
+si-flag-sy:
+  title: flag of sy
+si-flag-sz:
+  title: flag of sz
+si-flag-tc:
+  title: flag of tc
+si-flag-td:
+  title: flag of td
+si-flag-tf:
+  title: flag of tf
+si-flag-tg:
+  title: flag of tg
+si-flag-th:
+  title: flag of th
+si-flag-tj:
+  title: flag of tj
+si-flag-tk:
+  title: flag of tk
+si-flag-tl:
+  title: flag of tl
+si-flag-tm:
+  title: flag of tm
+si-flag-tn:
+  title: flag of tn
+si-flag-to:
+  title: flag of to
+si-flag-tr:
+  title: flag of tr
+si-flag-tt:
+  title: flag of tt
+si-flag-tv:
+  title: flag of tv
+si-flag-tw:
+  title: flag of tw
+si-flag-tz:
+  title: flag of tz
+si-flag-ua:
+  title: flag of ua
+si-flag-ug:
+  title: flag of ug
+si-flag-um:
+  title: flag of um
+si-flag-un:
+  title: flag of un
+si-flag-us:
+  title: flag of us
+si-flag-uy:
+  title: flag of uy
+si-flag-uz:
+  title: flag of uz
+si-flag-va:
+  title: flag of va
+si-flag-vc:
+  title: flag of vc
+si-flag-ve:
+  title: flag of ve
+si-flag-vg:
+  title: flag of vg
+si-flag-vi:
+  title: flag of vi
+si-flag-vn:
+  title: flag of vn
+si-flag-vu:
+  title: flag of vu
+si-flag-wf:
+  title: flag of wf
+si-flag-ws:
+  title: flag of ws
+si-flag-ye:
+  title: flag of ye
+si-flag-yt:
+  title: flag of yt
+si-flag-za:
+  title: flag of za
+si-flag-zm:
+  title: flag of zm
+si-flag-zw:
+  title: flag of zw
+si-flag-zz:
+  title: flag of zz

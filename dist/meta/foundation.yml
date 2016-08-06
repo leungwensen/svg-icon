@@ -1,0 +1,566 @@
+si-foundation-address-book:
+  title: icon address-book
+si-foundation-alert:
+  title: icon alert
+si-foundation-align-center:
+  title: icon align-center
+si-foundation-align-justify:
+  title: icon align-justify
+si-foundation-align-left:
+  title: icon align-left
+si-foundation-align-right:
+  title: icon align-right
+si-foundation-anchor:
+  title: icon anchor
+si-foundation-annotate:
+  title: icon annotate
+si-foundation-archive:
+  title: icon archive
+si-foundation-arrow-down:
+  title: icon arrow-down
+si-foundation-arrow-left:
+  title: icon arrow-left
+si-foundation-arrow-right:
+  title: icon arrow-right
+si-foundation-arrow-up:
+  title: icon arrow-up
+si-foundation-arrows-compress:
+  title: icon arrows-compress
+si-foundation-arrows-expand:
+  title: icon arrows-expand
+si-foundation-arrows-in:
+  title: icon arrows-in
+si-foundation-arrows-out:
+  title: icon arrows-out
+si-foundation-asl:
+  title: icon asl
+si-foundation-asterisk:
+  title: icon asterisk
+si-foundation-at-sign:
+  title: icon at-sign
+si-foundation-background-color:
+  title: icon background-color
+si-foundation-battery-empty:
+  title: icon battery-empty
+si-foundation-battery-full:
+  title: icon battery-full
+si-foundation-battery-half:
+  title: icon battery-half
+si-foundation-bitcoin-circle:
+  title: icon bitcoin-circle
+si-foundation-bitcoin:
+  title: icon bitcoin
+si-foundation-blind:
+  title: icon blind
+si-foundation-bluetooth:
+  title: icon bluetooth
+si-foundation-bold:
+  title: icon bold
+si-foundation-book-bookmark:
+  title: icon book-bookmark
+si-foundation-book:
+  title: icon book
+si-foundation-bookmark:
+  title: icon bookmark
+si-foundation-braille:
+  title: icon braille
+si-foundation-burst-new:
+  title: icon burst-new
+si-foundation-burst-sale:
+  title: icon burst-sale
+si-foundation-burst:
+  title: icon burst
+si-foundation-calendar:
+  title: icon calendar
+si-foundation-camera:
+  title: icon camera
+si-foundation-check:
+  title: icon check
+si-foundation-checkbox:
+  title: icon checkbox
+si-foundation-clipboard-notes:
+  title: icon clipboard-notes
+si-foundation-clipboard-pencil:
+  title: icon clipboard-pencil
+si-foundation-clipboard:
+  title: icon clipboard
+si-foundation-clock:
+  title: icon clock
+si-foundation-closed-caption:
+  title: icon closed-caption
+si-foundation-cloud:
+  title: icon cloud
+si-foundation-comment-minus:
+  title: icon comment-minus
+si-foundation-comment-quotes:
+  title: icon comment-quotes
+si-foundation-comment-video:
+  title: icon comment-video
+si-foundation-comment:
+  title: icon comment
+si-foundation-comments:
+  title: icon comments
+si-foundation-compass:
+  title: icon compass
+si-foundation-contrast:
+  title: icon contrast
+si-foundation-credit-card:
+  title: icon credit-card
+si-foundation-crop:
+  title: icon crop
+si-foundation-crown:
+  title: icon crown
+si-foundation-css3:
+  title: icon css3
+si-foundation-database:
+  title: icon database
+si-foundation-die-five:
+  title: icon die-five
+si-foundation-die-four:
+  title: icon die-four
+si-foundation-die-one:
+  title: icon die-one
+si-foundation-die-six:
+  title: icon die-six
+si-foundation-die-three:
+  title: icon die-three
+si-foundation-die-two:
+  title: icon die-two
+si-foundation-dislike:
+  title: icon dislike
+si-foundation-dollar-bill:
+  title: icon dollar-bill
+si-foundation-dollar:
+  title: icon dollar
+si-foundation-download:
+  title: icon download
+si-foundation-eject:
+  title: icon eject
+si-foundation-elevator:
+  title: icon elevator
+si-foundation-euro:
+  title: icon euro
+si-foundation-eye:
+  title: icon eye
+si-foundation-fast-forward:
+  title: icon fast-forward
+si-foundation-female-symbol:
+  title: icon female-symbol
+si-foundation-female:
+  title: icon female
+si-foundation-filter:
+  title: icon filter
+si-foundation-first-aid:
+  title: icon first-aid
+si-foundation-flag:
+  title: icon flag
+si-foundation-folder-add:
+  title: icon folder-add
+si-foundation-folder-lock:
+  title: icon folder-lock
+si-foundation-folder:
+  title: icon folder
+si-foundation-foot:
+  title: icon foot
+si-foundation-foundation:
+  title: icon foundation
+si-foundation-graph-bar:
+  title: icon graph-bar
+si-foundation-graph-horizontal:
+  title: icon graph-horizontal
+si-foundation-graph-pie:
+  title: icon graph-pie
+si-foundation-graph-trend:
+  title: icon graph-trend
+si-foundation-guide-dog:
+  title: icon guide-dog
+si-foundation-hearing-aid:
+  title: icon hearing-aid
+si-foundation-heart:
+  title: icon heart
+si-foundation-home:
+  title: icon home
+si-foundation-html5:
+  title: icon html5
+si-foundation-indent-less:
+  title: icon indent-less
+si-foundation-indent-more:
+  title: icon indent-more
+si-foundation-info:
+  title: icon info
+si-foundation-italic:
+  title: icon italic
+si-foundation-key:
+  title: icon key
+si-foundation-laptop:
+  title: icon laptop
+si-foundation-layout:
+  title: icon layout
+si-foundation-lightbulb:
+  title: icon lightbulb
+si-foundation-like:
+  title: icon like
+si-foundation-link:
+  title: icon link
+si-foundation-list-bullet:
+  title: icon list-bullet
+si-foundation-list-number:
+  title: icon list-number
+si-foundation-list-thumbnails:
+  title: icon list-thumbnails
+si-foundation-list:
+  title: icon list
+si-foundation-lock:
+  title: icon lock
+si-foundation-loop:
+  title: icon loop
+si-foundation-magnifying-glass:
+  title: icon magnifying-glass
+si-foundation-mail:
+  title: icon mail
+si-foundation-male-female:
+  title: icon male-female
+si-foundation-male-symbol:
+  title: icon male-symbol
+si-foundation-male:
+  title: icon male
+si-foundation-map:
+  title: icon map
+si-foundation-marker:
+  title: icon marker
+si-foundation-megaphone:
+  title: icon megaphone
+si-foundation-microphone:
+  title: icon microphone
+si-foundation-minus-circle:
+  title: icon minus-circle
+si-foundation-minus:
+  title: icon minus
+si-foundation-mobile-signal:
+  title: icon mobile-signal
+si-foundation-mobile:
+  title: icon mobile
+si-foundation-monitor:
+  title: icon monitor
+si-foundation-mountains:
+  title: icon mountains
+si-foundation-music:
+  title: icon music
+si-foundation-next:
+  title: icon next
+si-foundation-no-dogs:
+  title: icon no-dogs
+si-foundation-no-smoking:
+  title: icon no-smoking
+si-foundation-page-add:
+  title: icon page-add
+si-foundation-page-copy:
+  title: icon page-copy
+si-foundation-page-csv:
+  title: icon page-csv
+si-foundation-page-delete:
+  title: icon page-delete
+si-foundation-page-doc:
+  title: icon page-doc
+si-foundation-page-edit:
+  title: icon page-edit
+si-foundation-page-export-csv:
+  title: icon page-export-csv
+si-foundation-page-export-doc:
+  title: icon page-export-doc
+si-foundation-page-export-pdf:
+  title: icon page-export-pdf
+si-foundation-page-export:
+  title: icon page-export
+si-foundation-page-filled:
+  title: icon page-filled
+si-foundation-page-multiple:
+  title: icon page-multiple
+si-foundation-page-pdf:
+  title: icon page-pdf
+si-foundation-page-remove:
+  title: icon page-remove
+si-foundation-page-search:
+  title: icon page-search
+si-foundation-page:
+  title: icon page
+si-foundation-paint-bucket:
+  title: icon paint-bucket
+si-foundation-paperclip:
+  title: icon paperclip
+si-foundation-pause:
+  title: icon pause
+si-foundation-paw:
+  title: icon paw
+si-foundation-paypal:
+  title: icon paypal
+si-foundation-pencil:
+  title: icon pencil
+si-foundation-photo:
+  title: icon photo
+si-foundation-play-circle:
+  title: icon play-circle
+si-foundation-play-video:
+  title: icon play-video
+si-foundation-play:
+  title: icon play
+si-foundation-plus:
+  title: icon plus
+si-foundation-pound:
+  title: icon pound
+si-foundation-power:
+  title: icon power
+si-foundation-previous:
+  title: icon previous
+si-foundation-price-tag:
+  title: icon price-tag
+si-foundation-pricetag-multiple:
+  title: icon pricetag-multiple
+si-foundation-print:
+  title: icon print
+si-foundation-prohibited:
+  title: icon prohibited
+si-foundation-projection-screen:
+  title: icon projection-screen
+si-foundation-puzzle:
+  title: icon puzzle
+si-foundation-quote:
+  title: icon quote
+si-foundation-record:
+  title: icon record
+si-foundation-refresh:
+  title: icon refresh
+si-foundation-results-demographics:
+  title: icon results-demographics
+si-foundation-results:
+  title: icon results
+si-foundation-rewind-ten:
+  title: icon rewind-ten
+si-foundation-rewind:
+  title: icon rewind
+si-foundation-rss:
+  title: icon rss
+si-foundation-safety-cone:
+  title: icon safety-cone
+si-foundation-save:
+  title: icon save
+si-foundation-share:
+  title: icon share
+si-foundation-sheriff-badge:
+  title: icon sheriff-badge
+si-foundation-shield:
+  title: icon shield
+si-foundation-shopping-bag:
+  title: icon shopping-bag
+si-foundation-shopping-cart:
+  title: icon shopping-cart
+si-foundation-shuffle:
+  title: icon shuffle
+si-foundation-skull:
+  title: icon skull
+si-foundation-social-500px:
+  title: icon social-500px
+si-foundation-social-adobe:
+  title: icon social-adobe
+si-foundation-social-amazon:
+  title: icon social-amazon
+si-foundation-social-android:
+  title: icon social-android
+si-foundation-social-apple:
+  title: icon social-apple
+si-foundation-social-behance:
+  title: icon social-behance
+si-foundation-social-bing:
+  title: icon social-bing
+si-foundation-social-blogger:
+  title: icon social-blogger
+si-foundation-social-delicious:
+  title: icon social-delicious
+si-foundation-social-designer-news:
+  title: icon social-designer-news
+si-foundation-social-deviant-art:
+  title: icon social-deviant-art
+si-foundation-social-digg:
+  title: icon social-digg
+si-foundation-social-dribbble:
+  title: icon social-dribbble
+si-foundation-social-drive:
+  title: icon social-drive
+si-foundation-social-dropbox:
+  title: icon social-dropbox
+si-foundation-social-evernote:
+  title: icon social-evernote
+si-foundation-social-facebook:
+  title: icon social-facebook
+si-foundation-social-flickr:
+  title: icon social-flickr
+si-foundation-social-forrst:
+  title: icon social-forrst
+si-foundation-social-foursquare:
+  title: icon social-foursquare
+si-foundation-social-game-center:
+  title: icon social-game-center
+si-foundation-social-github:
+  title: icon social-github
+si-foundation-social-google-plus:
+  title: icon social-google-plus
+si-foundation-social-hacker-news:
+  title: icon social-hacker-news
+si-foundation-social-hi5:
+  title: icon social-hi5
+si-foundation-social-instagram:
+  title: icon social-instagram
+si-foundation-social-joomla:
+  title: icon social-joomla
+si-foundation-social-lastfm:
+  title: icon social-lastfm
+si-foundation-social-linkedin:
+  title: icon social-linkedin
+si-foundation-social-medium:
+  title: icon social-medium
+si-foundation-social-myspace:
+  title: icon social-myspace
+si-foundation-social-orkut:
+  title: icon social-orkut
+si-foundation-social-path:
+  title: icon social-path
+si-foundation-social-picasa:
+  title: icon social-picasa
+si-foundation-social-pinterest:
+  title: icon social-pinterest
+si-foundation-social-rdio:
+  title: icon social-rdio
+si-foundation-social-reddit:
+  title: icon social-reddit
+si-foundation-social-skillshare:
+  title: icon social-skillshare
+si-foundation-social-skype:
+  title: icon social-skype
+si-foundation-social-smashing-mag:
+  title: icon social-smashing-mag
+si-foundation-social-snapchat:
+  title: icon social-snapchat
+si-foundation-social-spotify:
+  title: icon social-spotify
+si-foundation-social-squidoo:
+  title: icon social-squidoo
+si-foundation-social-stack-overflow:
+  title: icon social-stack-overflow
+si-foundation-social-steam:
+  title: icon social-steam
+si-foundation-social-stumbleupon:
+  title: icon social-stumbleupon
+si-foundation-social-treehouse:
+  title: icon social-treehouse
+si-foundation-social-tumblr:
+  title: icon social-tumblr
+si-foundation-social-twitter:
+  title: icon social-twitter
+si-foundation-social-vimeo:
+  title: icon social-vimeo
+si-foundation-social-windows:
+  title: icon social-windows
+si-foundation-social-xbox:
+  title: icon social-xbox
+si-foundation-social-yahoo:
+  title: icon social-yahoo
+si-foundation-social-yelp:
+  title: icon social-yelp
+si-foundation-social-youtube:
+  title: icon social-youtube
+si-foundation-social-zerply:
+  title: icon social-zerply
+si-foundation-social-zurb:
+  title: icon social-zurb
+si-foundation-sound:
+  title: icon sound
+si-foundation-star:
+  title: icon star
+si-foundation-stop:
+  title: icon stop
+si-foundation-strikethrough:
+  title: icon strikethrough
+si-foundation-subscript:
+  title: icon subscript
+si-foundation-superscript:
+  title: icon superscript
+si-foundation-tablet-landscape:
+  title: icon tablet-landscape
+si-foundation-tablet-portrait:
+  title: icon tablet-portrait
+si-foundation-target-two:
+  title: icon target-two
+si-foundation-target:
+  title: icon target
+si-foundation-telephone-accessible:
+  title: icon telephone-accessible
+si-foundation-telephone:
+  title: icon telephone
+si-foundation-text-color:
+  title: icon text-color
+si-foundation-thumbnails:
+  title: icon thumbnails
+si-foundation-ticket:
+  title: icon ticket
+si-foundation-torso-business:
+  title: icon torso-business
+si-foundation-torso-female:
+  title: icon torso-female
+si-foundation-torso:
+  title: icon torso
+si-foundation-torsos-all-female:
+  title: icon torsos-all-female
+si-foundation-torsos-all:
+  title: icon torsos-all
+si-foundation-torsos-female-male:
+  title: icon torsos-female-male
+si-foundation-torsos-male-female:
+  title: icon torsos-male-female
+si-foundation-torsos:
+  title: icon torsos
+si-foundation-trash:
+  title: icon trash
+si-foundation-trees:
+  title: icon trees
+si-foundation-trophy:
+  title: icon trophy
+si-foundation-underline:
+  title: icon underline
+si-foundation-universal-access:
+  title: icon universal-access
+si-foundation-unlink:
+  title: icon unlink
+si-foundation-unlock:
+  title: icon unlock
+si-foundation-upload-cloud:
+  title: icon upload-cloud
+si-foundation-upload:
+  title: icon upload
+si-foundation-usb:
+  title: icon usb
+si-foundation-video:
+  title: icon video
+si-foundation-volume-none:
+  title: icon volume-none
+si-foundation-volume-strike:
+  title: icon volume-strike
+si-foundation-volume:
+  title: icon volume
+si-foundation-web:
+  title: icon web
+si-foundation-wheelchair:
+  title: icon wheelchair
+si-foundation-widget:
+  title: icon widget
+si-foundation-wrench:
+  title: icon wrench
+si-foundation-x-circle:
+  title: icon x-circle
+si-foundation-x:
+  title: icon x
+si-foundation-yen:
+  title: icon yen
+si-foundation-zoom-in:
+  title: icon zoom-in
+si-foundation-zoom-out:
+  title: icon zoom-out

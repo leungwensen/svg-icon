@@ -1,0 +1,2522 @@
+si-windows-3d-3ds:
+  title: icon 3d-3ds
+si-windows-3d-collada:
+  title: icon 3d-collada
+si-windows-3d-obj:
+  title: icon 3d-obj
+si-windows-3d-x:
+  title: icon 3d-x
+si-windows-acorn:
+  title: icon acorn
+si-windows-add-multiple:
+  title: icon add-multiple
+si-windows-add:
+  title: icon add
+si-windows-adobe-acrobat:
+  title: icon adobe-acrobat
+si-windows-adobe-aftereffects:
+  title: icon adobe-aftereffects
+si-windows-adobe-audition:
+  title: icon adobe-audition
+si-windows-adobe-bridge:
+  title: icon adobe-bridge
+si-windows-adobe-dreamweaver:
+  title: icon adobe-dreamweaver
+si-windows-adobe-encore:
+  title: icon adobe-encore
+si-windows-adobe-fireworks:
+  title: icon adobe-fireworks
+si-windows-adobe-flash:
+  title: icon adobe-flash
+si-windows-adobe-flashbuilder:
+  title: icon adobe-flashbuilder
+si-windows-adobe-illustrator:
+  title: icon adobe-illustrator
+si-windows-adobe-indesign:
+  title: icon adobe-indesign
+si-windows-adobe-lightroom:
+  title: icon adobe-lightroom
+si-windows-adobe-photoshop:
+  title: icon adobe-photoshop
+si-windows-adobe-prelude:
+  title: icon adobe-prelude
+si-windows-adobe-premierpro:
+  title: icon adobe-premierpro
+si-windows-adobe-speedgrade:
+  title: icon adobe-speedgrade
+si-windows-alert:
+  title: icon alert
+si-windows-alien:
+  title: icon alien
+si-windows-align-center:
+  title: icon align-center
+si-windows-align-justify:
+  title: icon align-justify
+si-windows-align-left:
+  title: icon align-left
+si-windows-align-right:
+  title: icon align-right
+si-windows-anchor:
+  title: icon anchor
+si-windows-app-favorite:
+  title: icon app-favorite
+si-windows-app-minus:
+  title: icon app-minus
+si-windows-app-plus:
+  title: icon app-plus
+si-windows-app-remove:
+  title: icon app-remove
+si-windows-app:
+  title: icon app
+si-windows-arcade-button:
+  title: icon arcade-button
+si-windows-archive:
+  title: icon archive
+si-windows-arrow-collapsed:
+  title: icon arrow-collapsed
+si-windows-arrow-corner-up-right:
+  title: icon arrow-corner-up-right
+si-windows-arrow-down-up:
+  title: icon arrow-down-up
+si-windows-arrow-down:
+  title: icon arrow-down
+si-windows-arrow-expand:
+  title: icon arrow-expand
+si-windows-arrow-left-right:
+  title: icon arrow-left-right
+si-windows-arrow-left:
+  title: icon arrow-left
+si-windows-arrow-right-left:
+  title: icon arrow-right-left
+si-windows-arrow-right:
+  title: icon arrow-right
+si-windows-arrow-up-down:
+  title: icon arrow-up-down
+si-windows-arrow-up:
+  title: icon arrow-up
+si-windows-at:
+  title: icon at
+si-windows-axis-three:
+  title: icon axis-three
+si-windows-axis-x-letter:
+  title: icon axis-x-letter
+si-windows-axis-x:
+  title: icon axis-x
+si-windows-axis-xy-parentheses:
+  title: icon axis-xy-parentheses
+si-windows-axis-xy:
+  title: icon axis-xy
+si-windows-axis-y-letter:
+  title: icon axis-y-letter
+si-windows-axis-y:
+  title: icon axis-y
+si-windows-axis-yx:
+  title: icon axis-yx
+si-windows-axis-z-letter:
+  title: icon axis-z-letter
+si-windows-axis-z:
+  title: icon axis-z
+si-windows-baby:
+  title: icon baby
+si-windows-barcode:
+  title: icon barcode
+si-windows-base-select:
+  title: icon base-select
+si-windows-base:
+  title: icon base
+si-windows-bath:
+  title: icon bath
+si-windows-battery-0:
+  title: icon battery-0
+si-windows-battery-1:
+  title: icon battery-1
+si-windows-battery-2:
+  title: icon battery-2
+si-windows-battery-3:
+  title: icon battery-3
+si-windows-battery-charging:
+  title: icon battery-charging
+si-windows-bed:
+  title: icon bed
+si-windows-bike-parking:
+  title: icon bike-parking
+si-windows-bike:
+  title: icon bike
+si-windows-billboard:
+  title: icon billboard
+si-windows-billing:
+  title: icon billing
+si-windows-bing:
+  title: icon bing
+si-windows-book-contact:
+  title: icon book-contact
+si-windows-book-hardcover-open-writing:
+  title: icon book-hardcover-open-writing
+si-windows-book-hardcover-open:
+  title: icon book-hardcover-open
+si-windows-book-list:
+  title: icon book-list
+si-windows-book-open-information:
+  title: icon book-open-information
+si-windows-book-open-text-image:
+  title: icon book-open-text-image
+si-windows-book-open-text:
+  title: icon book-open-text
+si-windows-book-open:
+  title: icon book-open
+si-windows-book-perspective-help:
+  title: icon book-perspective-help
+si-windows-book-perspective:
+  title: icon book-perspective
+si-windows-book-side:
+  title: icon book-side
+si-windows-book:
+  title: icon book
+si-windows-border-all:
+  title: icon border-all
+si-windows-border-bottom:
+  title: icon border-bottom
+si-windows-border-horizontal:
+  title: icon border-horizontal
+si-windows-border-inner:
+  title: icon border-inner
+si-windows-border-left:
+  title: icon border-left
+si-windows-border-none:
+  title: icon border-none
+si-windows-border-outside:
+  title: icon border-outside
+si-windows-border-right:
+  title: icon border-right
+si-windows-border-top:
+  title: icon border-top
+si-windows-border-vertical:
+  title: icon border-vertical
+si-windows-box-layered:
+  title: icon box-layered
+si-windows-box-unfolded:
+  title: icon box-unfolded
+si-windows-box:
+  title: icon box
+si-windows-brick:
+  title: icon brick
+si-windows-browser-chrome:
+  title: icon browser-chrome
+si-windows-browser-ie:
+  title: icon browser-ie
+si-windows-browser-wire:
+  title: icon browser-wire
+si-windows-browser:
+  title: icon browser
+si-windows-bug-remove:
+  title: icon bug-remove
+si-windows-bug:
+  title: icon bug
+si-windows-cabinet-files-variant:
+  title: icon cabinet-files-variant
+si-windows-cabinet-files:
+  title: icon cabinet-files
+si-windows-cabinet-in:
+  title: icon cabinet-in
+si-windows-cabinet-out:
+  title: icon cabinet-out
+si-windows-cabinet-variant:
+  title: icon cabinet-variant
+si-windows-cabinet:
+  title: icon cabinet
+si-windows-calculator:
+  title: icon calculator
+si-windows-calendar-14:
+  title: icon calendar-14
+si-windows-calendar-31:
+  title: icon calendar-31
+si-windows-calendar-day:
+  title: icon calendar-day
+si-windows-calendar-dollar:
+  title: icon calendar-dollar
+si-windows-calendar-future:
+  title: icon calendar-future
+si-windows-calendar-month:
+  title: icon calendar-month
+si-windows-calendar-plus:
+  title: icon calendar-plus
+si-windows-calendar-range:
+  title: icon calendar-range
+si-windows-calendar-tomorrow:
+  title: icon calendar-tomorrow
+si-windows-calendar-week:
+  title: icon calendar-week
+si-windows-calendar-year:
+  title: icon calendar-year
+si-windows-calendar:
+  title: icon calendar
+si-windows-camera-auto:
+  title: icon camera-auto
+si-windows-camera-flash-auto-selected:
+  title: icon camera-flash-auto-selected
+si-windows-camera-flash-auto:
+  title: icon camera-flash-auto
+si-windows-camera-flash-off-selected:
+  title: icon camera-flash-off-selected
+si-windows-camera-flash-off:
+  title: icon camera-flash-off
+si-windows-camera-flash-selected:
+  title: icon camera-flash-selected
+si-windows-camera-flash:
+  title: icon camera-flash
+si-windows-camera-send:
+  title: icon camera-send
+si-windows-camera-switch-invert:
+  title: icon camera-switch-invert
+si-windows-camera-switch:
+  title: icon camera-switch
+si-windows-camera:
+  title: icon camera
+si-windows-cancel:
+  title: icon cancel
+si-windows-candle:
+  title: icon candle
+si-windows-card-1:
+  title: icon card-1
+si-windows-card-2:
+  title: icon card-2
+si-windows-card-3:
+  title: icon card-3
+si-windows-card-4:
+  title: icon card-4
+si-windows-card-5:
+  title: icon card-5
+si-windows-card-6:
+  title: icon card-6
+si-windows-card-7:
+  title: icon card-7
+si-windows-card-8:
+  title: icon card-8
+si-windows-card-9:
+  title: icon card-9
+si-windows-card:
+  title: icon card
+si-windows-cards-club:
+  title: icon cards-club
+si-windows-cards-diamond:
+  title: icon cards-diamond
+si-windows-cards-heart:
+  title: icon cards-heart
+si-windows-cards-spade:
+  title: icon cards-spade
+si-windows-cart:
+  title: icon cart
+si-windows-cd-eject:
+  title: icon cd-eject
+si-windows-cd:
+  title: icon cd
+si-windows-cell-align:
+  title: icon cell-align
+si-windows-cell-column-delete:
+  title: icon cell-column-delete
+si-windows-cell-down:
+  title: icon cell-down
+si-windows-cell-function:
+  title: icon cell-function
+si-windows-cell-insert-above:
+  title: icon cell-insert-above
+si-windows-cell-insert-below:
+  title: icon cell-insert-below
+si-windows-cell-merge:
+  title: icon cell-merge
+si-windows-cell-row-delete:
+  title: icon cell-row-delete
+si-windows-cell-up:
+  title: icon cell-up
+si-windows-centerline:
+  title: icon centerline
+si-windows-chat:
+  title: icon chat
+si-windows-check:
+  title: icon check
+si-windows-checkmark-cross:
+  title: icon checkmark-cross
+si-windows-checkmark-pencil-top:
+  title: icon checkmark-pencil-top
+si-windows-checkmark-pencil:
+  title: icon checkmark-pencil
+si-windows-checkmark-thick-unchecked:
+  title: icon checkmark-thick-unchecked
+si-windows-checkmark-thick:
+  title: icon checkmark-thick
+si-windows-checkmark-uncrossed:
+  title: icon checkmark-uncrossed
+si-windows-checkmark:
+  title: icon checkmark
+si-windows-chess-bishop:
+  title: icon chess-bishop
+si-windows-chess-horse:
+  title: icon chess-horse
+si-windows-chess-king:
+  title: icon chess-king
+si-windows-chess-pawn:
+  title: icon chess-pawn
+si-windows-chess-queen:
+  title: icon chess-queen
+si-windows-chess-rook:
+  title: icon chess-rook
+si-windows-chevron-down:
+  title: icon chevron-down
+si-windows-chevron-left:
+  title: icon chevron-left
+si-windows-chevron-right:
+  title: icon chevron-right
+si-windows-chevron-up:
+  title: icon chevron-up
+si-windows-chromakey:
+  title: icon chromakey
+si-windows-church:
+  title: icon church
+si-windows-circle-decline:
+  title: icon circle-decline
+si-windows-circle-growth:
+  title: icon circle-growth
+si-windows-city-chicago:
+  title: icon city-chicago
+si-windows-city-sanfrancisco:
+  title: icon city-sanfrancisco
+si-windows-city-seattle:
+  title: icon city-seattle
+si-windows-city:
+  title: icon city
+si-windows-clean:
+  title: icon clean
+si-windows-clear-inverse-reflect-horizontal:
+  title: icon clear-inverse-reflect-horizontal
+si-windows-clear-inverse:
+  title: icon clear-inverse
+si-windows-clear-reflect-horizontal:
+  title: icon clear-reflect-horizontal
+si-windows-clear:
+  title: icon clear
+si-windows-clipboard-paper-check:
+  title: icon clipboard-paper-check
+si-windows-clipboard-paper:
+  title: icon clipboard-paper
+si-windows-clipboard-paste:
+  title: icon clipboard-paste
+si-windows-clipboard-variant-edit:
+  title: icon clipboard-variant-edit
+si-windows-clipboard-variant-text:
+  title: icon clipboard-variant-text
+si-windows-clipboard-variant:
+  title: icon clipboard-variant
+si-windows-clipboard:
+  title: icon clipboard
+si-windows-clock:
+  title: icon clock
+si-windows-close:
+  title: icon close
+si-windows-closedcaption-off:
+  title: icon closedcaption-off
+si-windows-closedcaption:
+  title: icon closedcaption
+si-windows-clothes-shirt:
+  title: icon clothes-shirt
+si-windows-clothes-tie:
+  title: icon clothes-tie
+si-windows-cloud-add:
+  title: icon cloud-add
+si-windows-cloud-delete:
+  title: icon cloud-delete
+si-windows-cloud-download:
+  title: icon cloud-download
+si-windows-cloud-pause:
+  title: icon cloud-pause
+si-windows-cloud-play:
+  title: icon cloud-play
+si-windows-cloud-upload:
+  title: icon cloud-upload
+si-windows-cloud:
+  title: icon cloud
+si-windows-cloudirc:
+  title: icon cloudirc
+si-windows-code-xml:
+  title: icon code-xml
+si-windows-cog:
+  title: icon cog
+si-windows-cogs:
+  title: icon cogs
+si-windows-column-one:
+  title: icon column-one
+si-windows-column-three:
+  title: icon column-three
+si-windows-column-two:
+  title: icon column-two
+si-windows-companioncube:
+  title: icon companioncube
+si-windows-cone-diagonal:
+  title: icon cone-diagonal
+si-windows-cone:
+  title: icon cone
+si-windows-confirm-yes-no:
+  title: icon confirm-yes-no
+si-windows-connect:
+  title: icon connect
+si-windows-connection-1x:
+  title: icon connection-1x
+si-windows-connection-3g:
+  title: icon connection-3g
+si-windows-connection-4g:
+  title: icon connection-4g
+si-windows-connection-bluetooth:
+  title: icon connection-bluetooth
+si-windows-connection-ev:
+  title: icon connection-ev
+si-windows-connection-nfc:
+  title: icon connection-nfc
+si-windows-connection-quality-extremelylow:
+  title: icon connection-quality-extremelylow
+si-windows-connection-quality-high:
+  title: icon connection-quality-high
+si-windows-connection-quality-low:
+  title: icon connection-quality-low
+si-windows-connection-quality-medium:
+  title: icon connection-quality-medium
+si-windows-connection-quality-veryhigh:
+  title: icon connection-quality-veryhigh
+si-windows-connection-quality-verylow:
+  title: icon connection-quality-verylow
+si-windows-connection-wifi-variant:
+  title: icon connection-wifi-variant
+si-windows-connection-wifi:
+  title: icon connection-wifi
+si-windows-console:
+  title: icon console
+si-windows-contrast:
+  title: icon contrast
+si-windows-control-eject:
+  title: icon control-eject
+si-windows-control-fastforward-variant:
+  title: icon control-fastforward-variant
+si-windows-control-fastforward:
+  title: icon control-fastforward
+si-windows-control-guide:
+  title: icon control-guide
+si-windows-control-pause:
+  title: icon control-pause
+si-windows-control-play-live:
+  title: icon control-play-live
+si-windows-control-play:
+  title: icon control-play
+si-windows-control-resume:
+  title: icon control-resume
+si-windows-control-rewind-variant:
+  title: icon control-rewind-variant
+si-windows-control-rewind:
+  title: icon control-rewind
+si-windows-control-stop:
+  title: icon control-stop
+si-windows-controller-snes:
+  title: icon controller-snes
+si-windows-controller-xbox:
+  title: icon controller-xbox
+si-windows-copyright:
+  title: icon copyright
+si-windows-corner:
+  title: icon corner
+si-windows-coupon:
+  title: icon coupon
+si-windows-creativecommons:
+  title: icon creativecommons
+si-windows-creditcard:
+  title: icon creditcard
+si-windows-crop:
+  title: icon crop
+si-windows-crosshair:
+  title: icon crosshair
+si-windows-crown:
+  title: icon crown
+si-windows-cup-empty:
+  title: icon cup-empty
+si-windows-cup-full:
+  title: icon cup-full
+si-windows-cup-half:
+  title: icon cup-half
+si-windows-cup-paper:
+  title: icon cup-paper
+si-windows-cup:
+  title: icon cup
+si-windows-currency-cent:
+  title: icon currency-cent
+si-windows-currency-dollar-free:
+  title: icon currency-dollar-free
+si-windows-currency-dollar:
+  title: icon currency-dollar
+si-windows-currency-euro:
+  title: icon currency-euro
+si-windows-currency-grivna:
+  title: icon currency-grivna
+si-windows-currency-pound:
+  title: icon currency-pound
+si-windows-currency-rubles:
+  title: icon currency-rubles
+si-windows-currency-rupee:
+  title: icon currency-rupee
+si-windows-currency-yen:
+  title: icon currency-yen
+si-windows-cursor-default-outline:
+  title: icon cursor-default-outline
+si-windows-cursor-default-transform-horizontal:
+  title: icon cursor-default-transform-horizontal
+si-windows-cursor-default:
+  title: icon cursor-default
+si-windows-cursor-hand:
+  title: icon cursor-hand
+si-windows-cursor-information:
+  title: icon cursor-information
+si-windows-cursor-move:
+  title: icon cursor-move
+si-windows-cusor-pointer:
+  title: icon cusor-pointer
+si-windows-customerservice:
+  title: icon customerservice
+si-windows-database-mysql:
+  title: icon database-mysql
+si-windows-database-sql:
+  title: icon database-sql
+si-windows-database:
+  title: icon database
+si-windows-debug-restart:
+  title: icon debug-restart
+si-windows-debug-step-into:
+  title: icon debug-step-into
+si-windows-debug-step-out:
+  title: icon debug-step-out
+si-windows-debug-step-over:
+  title: icon debug-step-over
+si-windows-debug-stop:
+  title: icon debug-stop
+si-windows-deeplink-round:
+  title: icon deeplink-round
+si-windows-deeplink:
+  title: icon deeplink
+si-windows-delete:
+  title: icon delete
+si-windows-devcenter:
+  title: icon devcenter
+si-windows-diagram:
+  title: icon diagram
+si-windows-dial:
+  title: icon dial
+si-windows-dimension-arrow-box-height:
+  title: icon dimension-arrow-box-height
+si-windows-dimension-arrow-box-width:
+  title: icon dimension-arrow-box-width
+si-windows-dimension-arrow-line-height-short:
+  title: icon dimension-arrow-line-height-short
+si-windows-dimension-arrow-line-height-thick:
+  title: icon dimension-arrow-line-height-thick
+si-windows-dimension-arrow-line-height:
+  title: icon dimension-arrow-line-height
+si-windows-dimension-arrow-line-width-short:
+  title: icon dimension-arrow-line-width-short
+si-windows-dimension-arrow-line-width-thick:
+  title: icon dimension-arrow-line-width-thick
+si-windows-dimension-arrow-line-width:
+  title: icon dimension-arrow-line-width
+si-windows-dimension-box-height:
+  title: icon dimension-box-height
+si-windows-dimension-box-width:
+  title: icon dimension-box-width
+si-windows-dimension-line-height-short:
+  title: icon dimension-line-height-short
+si-windows-dimension-line-height:
+  title: icon dimension-line-height
+si-windows-dimension-line-width-short:
+  title: icon dimension-line-width-short
+si-windows-dimension-line-width:
+  title: icon dimension-line-width
+si-windows-directions:
+  title: icon directions
+si-windows-disconnect:
+  title: icon disconnect
+si-windows-disk-download:
+  title: icon disk-download
+si-windows-disk-upload:
+  title: icon disk-upload
+si-windows-disk:
+  title: icon disk
+si-windows-dnd:
+  title: icon dnd
+si-windows-door-enter:
+  title: icon door-enter
+si-windows-door-leave:
+  title: icon door-leave
+si-windows-door-lock-closed:
+  title: icon door-lock-closed
+si-windows-door-lock-open:
+  title: icon door-lock-open
+si-windows-download:
+  title: icon download
+si-windows-drafting-centerline:
+  title: icon drafting-centerline
+si-windows-draw-brush-reflection:
+  title: icon draw-brush-reflection
+si-windows-draw-brush:
+  title: icon draw-brush
+si-windows-draw-button:
+  title: icon draw-button
+si-windows-draw-marker-reflection:
+  title: icon draw-marker-reflection
+si-windows-draw-marker:
+  title: icon draw-marker
+si-windows-draw-paintbrush:
+  title: icon draw-paintbrush
+si-windows-draw-pen-add:
+  title: icon draw-pen-add
+si-windows-draw-pen-minus:
+  title: icon draw-pen-minus
+si-windows-draw-pen-reflection:
+  title: icon draw-pen-reflection
+si-windows-draw-pen:
+  title: icon draw-pen
+si-windows-draw-pencil-reflection:
+  title: icon draw-pencil-reflection
+si-windows-draw-pencil:
+  title: icon draw-pencil
+si-windows-draw-pixel-fill-grid:
+  title: icon draw-pixel-fill-grid
+si-windows-draw-pixel-grid:
+  title: icon draw-pixel-grid
+si-windows-drinks-beer-guinness:
+  title: icon drinks-beer-guinness
+si-windows-drinks-beer:
+  title: icon drinks-beer
+si-windows-drinks-martini:
+  title: icon drinks-martini
+si-windows-dropper:
+  title: icon dropper
+si-windows-edit-add:
+  title: icon edit-add
+si-windows-edit-box:
+  title: icon edit-box
+si-windows-edit-minus:
+  title: icon edit-minus
+si-windows-edit:
+  title: icon edit
+si-windows-elevator-down:
+  title: icon elevator-down
+si-windows-elevator-up:
+  title: icon elevator-up
+si-windows-email-gmail:
+  title: icon email-gmail
+si-windows-email-hardedge:
+  title: icon email-hardedge
+si-windows-email-minimal:
+  title: icon email-minimal
+si-windows-email-outlook:
+  title: icon email-outlook
+si-windows-email-yahoo:
+  title: icon email-yahoo
+si-windows-email:
+  title: icon email
+si-windows-eye-hide:
+  title: icon eye-hide
+si-windows-eye:
+  title: icon eye
+si-windows-facebook-connect:
+  title: icon facebook-connect
+si-windows-facebook-disconnect:
+  title: icon facebook-disconnect
+si-windows-fan-box:
+  title: icon fan-box
+si-windows-ferry:
+  title: icon ferry
+si-windows-film-gallery:
+  title: icon film-gallery
+si-windows-film-list:
+  title: icon film-list
+si-windows-film-live:
+  title: icon film-live
+si-windows-film-select:
+  title: icon film-select
+si-windows-film:
+  title: icon film
+si-windows-filter-alphabetical:
+  title: icon filter-alphabetical
+si-windows-filter:
+  title: icon filter
+si-windows-finder:
+  title: icon finder
+si-windows-fingerprint:
+  title: icon fingerprint
+si-windows-flag-bear:
+  title: icon flag-bear
+si-windows-flag-texas:
+  title: icon flag-texas
+si-windows-flag-wavy:
+  title: icon flag-wavy
+si-windows-flag:
+  title: icon flag
+si-windows-folder-ellipsis:
+  title: icon folder-ellipsis
+si-windows-folder-lock:
+  title: icon folder-lock
+si-windows-folder-open:
+  title: icon folder-open
+si-windows-folder-people:
+  title: icon folder-people
+si-windows-folder-puzzle:
+  title: icon folder-puzzle
+si-windows-folder-star:
+  title: icon folder-star
+si-windows-folder:
+  title: icon folder
+si-windows-food-apple:
+  title: icon food-apple
+si-windows-food-candy-cane:
+  title: icon food-candy-cane
+si-windows-food-cupcake:
+  title: icon food-cupcake
+si-windows-food-icecream-bar:
+  title: icon food-icecream-bar
+si-windows-food-silverware-cross:
+  title: icon food-silverware-cross
+si-windows-food-silverware:
+  title: icon food-silverware
+si-windows-food:
+  title: icon food
+si-windows-foot:
+  title: icon foot
+si-windows-forklift-load:
+  title: icon forklift-load
+si-windows-forklift:
+  title: icon forklift
+si-windows-form-basic:
+  title: icon form-basic
+si-windows-form-editable:
+  title: icon form-editable
+si-windows-forrst:
+  title: icon forrst
+si-windows-forsale:
+  title: icon forsale
+si-windows-framework-net:
+  title: icon framework-net
+si-windows-fullscreen-box:
+  title: icon fullscreen-box
+si-windows-fullscreen:
+  title: icon fullscreen
+si-windows-futurama-bender:
+  title: icon futurama-bender
+si-windows-futurama-fry:
+  title: icon futurama-fry
+si-windows-gas:
+  title: icon gas
+si-windows-gauge-0:
+  title: icon gauge-0
+si-windows-gauge-100:
+  title: icon gauge-100
+si-windows-gauge-25:
+  title: icon gauge-25
+si-windows-gauge-50:
+  title: icon gauge-50
+si-windows-gauge-75:
+  title: icon gauge-75
+si-windows-gender-both:
+  title: icon gender-both
+si-windows-gender-female:
+  title: icon gender-female
+si-windows-gender-male:
+  title: icon gender-male
+si-windows-gift:
+  title: icon gift
+si-windows-globe-wire:
+  title: icon globe-wire
+si-windows-globe:
+  title: icon globe
+si-windows-google:
+  title: icon google
+si-windows-googleplus:
+  title: icon googleplus
+si-windows-grade-a-minus:
+  title: icon grade-a-minus
+si-windows-grade-a-plus:
+  title: icon grade-a-plus
+si-windows-grade-a:
+  title: icon grade-a
+si-windows-grade-b-minus:
+  title: icon grade-b-minus
+si-windows-grade-b-plus:
+  title: icon grade-b-plus
+si-windows-grade-b:
+  title: icon grade-b
+si-windows-grade-c-minus:
+  title: icon grade-c-minus
+si-windows-grade-c-plus:
+  title: icon grade-c-plus
+si-windows-grade-c:
+  title: icon grade-c
+si-windows-grade-d-minus:
+  title: icon grade-d-minus
+si-windows-grade-d-plus:
+  title: icon grade-d-plus
+si-windows-grade-d:
+  title: icon grade-d
+si-windows-grade-e:
+  title: icon grade-e
+si-windows-grade-f:
+  title: icon grade-f
+si-windows-graph-bar:
+  title: icon graph-bar
+si-windows-graph-boxplot:
+  title: icon graph-boxplot
+si-windows-graph-histogram-description:
+  title: icon graph-histogram-description
+si-windows-graph-histogram:
+  title: icon graph-histogram
+si-windows-graph-line-down:
+  title: icon graph-line-down
+si-windows-graph-line-up:
+  title: icon graph-line-up
+si-windows-graph-line:
+  title: icon graph-line
+si-windows-greek-sigma-lowercase:
+  title: icon greek-sigma-lowercase
+si-windows-greek-sigma-uppercase:
+  title: icon greek-sigma-uppercase
+si-windows-grid:
+  title: icon grid
+si-windows-group-add:
+  title: icon group-add
+si-windows-group-delete:
+  title: icon group-delete
+si-windows-group-minus:
+  title: icon group-minus
+si-windows-group:
+  title: icon group
+si-windows-handicap-in:
+  title: icon handicap-in
+si-windows-handicap-out:
+  title: icon handicap-out
+si-windows-handicap:
+  title: icon handicap
+si-windows-hardware-cpu:
+  title: icon hardware-cpu
+si-windows-hardware-headphones-bluetooth:
+  title: icon hardware-headphones-bluetooth
+si-windows-hardware-headphones:
+  title: icon hardware-headphones
+si-windows-hardware-headset:
+  title: icon hardware-headset
+si-windows-hardware-mouse:
+  title: icon hardware-mouse
+si-windows-hat-santa:
+  title: icon hat-santa
+si-windows-heart-break:
+  title: icon heart-break
+si-windows-heart-cross:
+  title: icon heart-cross
+si-windows-heart-outline:
+  title: icon heart-outline
+si-windows-heart:
+  title: icon heart
+si-windows-home-empty:
+  title: icon home-empty
+si-windows-home-garage-arrow-close:
+  title: icon home-garage-arrow-close
+si-windows-home-garage-arrow-open:
+  title: icon home-garage-arrow-open
+si-windows-home-garage-open:
+  title: icon home-garage-open
+si-windows-home-garage:
+  title: icon home-garage
+si-windows-home-gps:
+  title: icon home-gps
+si-windows-home-location-pin:
+  title: icon home-location-pin
+si-windows-home-location-round:
+  title: icon home-location-round
+si-windows-home-people-none:
+  title: icon home-people-none
+si-windows-home-people:
+  title: icon home-people
+si-windows-home-question:
+  title: icon home-question
+si-windows-home-variant-enter:
+  title: icon home-variant-enter
+si-windows-home-variant-leave:
+  title: icon home-variant-leave
+si-windows-home-variant:
+  title: icon home-variant
+si-windows-home:
+  title: icon home
+si-windows-hourglass:
+  title: icon hourglass
+si-windows-ie:
+  title: icon ie
+si-windows-image-ants:
+  title: icon image-ants
+si-windows-image-backlight:
+  title: icon image-backlight
+si-windows-image-beach:
+  title: icon image-beach
+si-windows-image-broken:
+  title: icon image-broken
+si-windows-image-export:
+  title: icon image-export
+si-windows-image-focus:
+  title: icon image-focus
+si-windows-image-gallery:
+  title: icon image-gallery
+si-windows-image-hdr:
+  title: icon image-hdr
+si-windows-image-landscape:
+  title: icon image-landscape
+si-windows-image-macro:
+  title: icon image-macro
+si-windows-image-multiple:
+  title: icon image-multiple
+si-windows-image-night-landscape:
+  title: icon image-night-landscape
+si-windows-image-night-person:
+  title: icon image-night-person
+si-windows-image-night-portrait:
+  title: icon image-night-portrait
+si-windows-image-night:
+  title: icon image-night
+si-windows-image-portrait:
+  title: icon image-portrait
+si-windows-image-redeye:
+  title: icon image-redeye
+si-windows-image-select:
+  title: icon image-select
+si-windows-image-snow:
+  title: icon image-snow
+si-windows-image-sports:
+  title: icon image-sports
+si-windows-image-sunset:
+  title: icon image-sunset
+si-windows-image:
+  title: icon image
+si-windows-inbox-in:
+  title: icon inbox-in
+si-windows-inbox-out:
+  title: icon inbox-out
+si-windows-inbox:
+  title: icon inbox
+si-windows-infinite:
+  title: icon infinite
+si-windows-information-circle:
+  title: icon information-circle
+si-windows-information:
+  title: icon information
+si-windows-input-down:
+  title: icon input-down
+si-windows-input-keyboard-down:
+  title: icon input-keyboard-down
+si-windows-input-keyboard:
+  title: icon input-keyboard
+si-windows-input-pen-down:
+  title: icon input-pen-down
+si-windows-input-pen:
+  title: icon input-pen
+si-windows-input-question:
+  title: icon input-question
+si-windows-input:
+  title: icon input
+si-windows-interface-button:
+  title: icon interface-button
+si-windows-interface-dropdown:
+  title: icon interface-dropdown
+si-windows-interface-list:
+  title: icon interface-list
+si-windows-interface-password:
+  title: icon interface-password
+si-windows-interface-textbox:
+  title: icon interface-textbox
+si-windows-iphone:
+  title: icon iphone
+si-windows-journal:
+  title: icon journal
+si-windows-key-old:
+  title: icon key-old
+si-windows-key:
+  title: icon key
+si-windows-lamp-desk-variant:
+  title: icon lamp-desk-variant
+si-windows-lamp-desk:
+  title: icon lamp-desk
+si-windows-lamp-variant:
+  title: icon lamp-variant
+si-windows-lamp:
+  title: icon lamp
+si-windows-language-csharp:
+  title: icon language-csharp
+si-windows-language-java-text:
+  title: icon language-java-text
+si-windows-language-java:
+  title: icon language-java
+si-windows-language-python-text:
+  title: icon language-python-text
+si-windows-language-python:
+  title: icon language-python
+si-windows-laptop:
+  title: icon laptop
+si-windows-laser:
+  title: icon laser
+si-windows-lavalamp:
+  title: icon lavalamp
+si-windows-layer-add:
+  title: icon layer-add
+si-windows-layer-arrange-bringforward:
+  title: icon layer-arrange-bringforward
+si-windows-layer-arrange-bringtofront:
+  title: icon layer-arrange-bringtofront
+si-windows-layer-arrange-sendbackward:
+  title: icon layer-arrange-sendbackward
+si-windows-layer-arrange-sendtoback:
+  title: icon layer-arrange-sendtoback
+si-windows-layer-arrange-solid-bringforward:
+  title: icon layer-arrange-solid-bringforward
+si-windows-layer-arrange-solid-bringtofront:
+  title: icon layer-arrange-solid-bringtofront
+si-windows-layer-arrange-solid-sendbackward:
+  title: icon layer-arrange-solid-sendbackward
+si-windows-layer-arrange-solid-sendtoback:
+  title: icon layer-arrange-solid-sendtoback
+si-windows-layer-delete:
+  title: icon layer-delete
+si-windows-layer-down:
+  title: icon layer-down
+si-windows-layer-minus:
+  title: icon layer-minus
+si-windows-layer-perspective-up:
+  title: icon layer-perspective-up
+si-windows-layer-thick:
+  title: icon layer-thick
+si-windows-layer-up:
+  title: icon layer-up
+si-windows-layer:
+  title: icon layer
+si-windows-layout-body:
+  title: icon layout-body
+si-windows-layout-collapse-left-variant:
+  title: icon layout-collapse-left-variant
+si-windows-layout-collapse-left:
+  title: icon layout-collapse-left
+si-windows-layout-collapse-right-variant:
+  title: icon layout-collapse-right-variant
+si-windows-layout-collapse-right:
+  title: icon layout-collapse-right
+si-windows-layout-expand-left-variant:
+  title: icon layout-expand-left-variant
+si-windows-layout-expand-left:
+  title: icon layout-expand-left
+si-windows-layout-expand-right-variant:
+  title: icon layout-expand-right-variant
+si-windows-layout-expand-right:
+  title: icon layout-expand-right
+si-windows-layout-header:
+  title: icon layout-header
+si-windows-layout-sidebar:
+  title: icon layout-sidebar
+si-windows-layout:
+  title: icon layout
+si-windows-leaderboard:
+  title: icon leaderboard
+si-windows-lifesaver:
+  title: icon lifesaver
+si-windows-lightbulb-coil:
+  title: icon lightbulb-coil
+si-windows-lightbulb-hue-on:
+  title: icon lightbulb-hue-on
+si-windows-lightbulb-hue:
+  title: icon lightbulb-hue
+si-windows-lightbulb:
+  title: icon lightbulb
+si-windows-lightning:
+  title: icon lightning
+si-windows-lines-horizontal-4:
+  title: icon lines-horizontal-4
+si-windows-link:
+  title: icon link
+si-windows-linkedin:
+  title: icon linkedin
+si-windows-list-add-above:
+  title: icon list-add-above
+si-windows-list-add-below:
+  title: icon list-add-below
+si-windows-list-add:
+  title: icon list-add
+si-windows-list-check:
+  title: icon list-check
+si-windows-list-create:
+  title: icon list-create
+si-windows-list-delete-inline:
+  title: icon list-delete-inline
+si-windows-list-delete:
+  title: icon list-delete
+si-windows-list-gear:
+  title: icon list-gear
+si-windows-list-hidden:
+  title: icon list-hidden
+si-windows-list-merge:
+  title: icon list-merge
+si-windows-list-one:
+  title: icon list-one
+si-windows-list-reorder-down:
+  title: icon list-reorder-down
+si-windows-list-reorder-up:
+  title: icon list-reorder-up
+si-windows-list-reorder:
+  title: icon list-reorder
+si-windows-list-select:
+  title: icon list-select
+si-windows-list-star:
+  title: icon list-star
+si-windows-list-two:
+  title: icon list-two
+si-windows-list:
+  title: icon list
+si-windows-location-add:
+  title: icon location-add
+si-windows-location-checkin:
+  title: icon location-checkin
+si-windows-location-circle:
+  title: icon location-circle
+si-windows-location-delete:
+  title: icon location-delete
+si-windows-location-foursquare:
+  title: icon location-foursquare
+si-windows-location-minus:
+  title: icon location-minus
+si-windows-location-round:
+  title: icon location-round
+si-windows-location:
+  title: icon location
+si-windows-lock:
+  title: icon lock
+si-windows-logic-and-add:
+  title: icon logic-and-add
+si-windows-logic-and:
+  title: icon logic-and
+si-windows-logic-or-add:
+  title: icon logic-or-add
+si-windows-logic-or:
+  title: icon logic-or
+si-windows-loop:
+  title: icon loop
+si-windows-magnify-add:
+  title: icon magnify-add
+si-windows-magnify-arrow-down:
+  title: icon magnify-arrow-down
+si-windows-magnify-arrow-up:
+  title: icon magnify-arrow-up
+si-windows-magnify-back:
+  title: icon magnify-back
+si-windows-magnify-browse:
+  title: icon magnify-browse
+si-windows-magnify-forward:
+  title: icon magnify-forward
+si-windows-magnify-minus:
+  title: icon magnify-minus
+si-windows-magnify:
+  title: icon magnify
+si-windows-man-sensor:
+  title: icon man-sensor
+si-windows-man-suitcase-fast:
+  title: icon man-suitcase-fast
+si-windows-man-suitcase-run:
+  title: icon man-suitcase-run
+si-windows-man-suitcase:
+  title: icon man-suitcase
+si-windows-man-walk:
+  title: icon man-walk
+si-windows-map-aerial-highway:
+  title: icon map-aerial-highway
+si-windows-map-aerial:
+  title: icon map-aerial
+si-windows-map-folds:
+  title: icon map-folds
+si-windows-map-gps:
+  title: icon map-gps
+si-windows-map-location-add:
+  title: icon map-location-add
+si-windows-map-location:
+  title: icon map-location
+si-windows-map-satellite:
+  title: icon map-satellite
+si-windows-map-treasure:
+  title: icon map-treasure
+si-windows-map:
+  title: icon map
+si-windows-marketplace-old:
+  title: icon marketplace-old
+si-windows-marketplace:
+  title: icon marketplace
+si-windows-markup:
+  title: icon markup
+si-windows-marvel-avengers:
+  title: icon marvel-avengers
+si-windows-marvel-captainamerica:
+  title: icon marvel-captainamerica
+si-windows-marvel-ironman-mask:
+  title: icon marvel-ironman-mask
+si-windows-marvel-ironman:
+  title: icon marvel-ironman
+si-windows-marvel-shield-variant:
+  title: icon marvel-shield-variant
+si-windows-marvel-shield:
+  title: icon marvel-shield
+si-windows-math-plus-minus:
+  title: icon math-plus-minus
+si-windows-measure-celcius:
+  title: icon measure-celcius
+si-windows-measure-centimeter:
+  title: icon measure-centimeter
+si-windows-measure-farenheit:
+  title: icon measure-farenheit
+si-windows-measure-foot:
+  title: icon measure-foot
+si-windows-measure-inch:
+  title: icon measure-inch
+si-windows-measure-kilometer:
+  title: icon measure-kilometer
+si-windows-measure-meter:
+  title: icon measure-meter
+si-windows-measure-mile:
+  title: icon measure-mile
+si-windows-medical-pill-broken:
+  title: icon medical-pill-broken
+si-windows-medical-pill:
+  title: icon medical-pill
+si-windows-medical-pulse:
+  title: icon medical-pulse
+si-windows-message-profanity:
+  title: icon message-profanity
+si-windows-message-send:
+  title: icon message-send
+si-windows-message-smiley:
+  title: icon message-smiley
+si-windows-message:
+  title: icon message
+si-windows-microphone-google:
+  title: icon microphone-google
+si-windows-microphone:
+  title: icon microphone
+si-windows-microsoft-tag:
+  title: icon microsoft-tag
+si-windows-minecraft-civcraft:
+  title: icon minecraft-civcraft
+si-windows-minus:
+  title: icon minus
+si-windows-money:
+  title: icon money
+si-windows-monitor-add:
+  title: icon monitor-add
+si-windows-monitor-delete:
+  title: icon monitor-delete
+si-windows-monitor-film:
+  title: icon monitor-film
+si-windows-monitor-identify:
+  title: icon monitor-identify
+si-windows-monitor-minus:
+  title: icon monitor-minus
+si-windows-monitor-play:
+  title: icon monitor-play
+si-windows-monitor-to:
+  title: icon monitor-to
+si-windows-monitor:
+  title: icon monitor
+si-windows-mono:
+  title: icon mono
+si-windows-moon-first-quarter:
+  title: icon moon-first-quarter
+si-windows-moon-full:
+  title: icon moon-full
+si-windows-moon-new:
+  title: icon moon-new
+si-windows-moon-sleep:
+  title: icon moon-sleep
+si-windows-moon-third-quarter:
+  title: icon moon-third-quarter
+si-windows-moon-waning-crescent:
+  title: icon moon-waning-crescent
+si-windows-moon-waning-gibbous:
+  title: icon moon-waning-gibbous
+si-windows-moon-waxing-crescent:
+  title: icon moon-waxing-crescent
+si-windows-moon-waxing-gibbous:
+  title: icon moon-waxing-gibbous
+si-windows-moon:
+  title: icon moon
+si-windows-movie-clapper-select:
+  title: icon movie-clapper-select
+si-windows-movie-clapper-solid-select:
+  title: icon movie-clapper-solid-select
+si-windows-movie-clapper-solid:
+  title: icon movie-clapper-solid
+si-windows-movie-clapper:
+  title: icon movie-clapper
+si-windows-music-live:
+  title: icon music-live
+si-windows-music-select:
+  title: icon music-select
+si-windows-music-wifi:
+  title: icon music-wifi
+si-windows-music:
+  title: icon music
+si-windows-na:
+  title: icon na
+si-windows-navigate-next:
+  title: icon navigate-next
+si-windows-navigate-previous:
+  title: icon navigate-previous
+si-windows-network-disconnect:
+  title: icon network-disconnect
+si-windows-network-home-disconnect:
+  title: icon network-home-disconnect
+si-windows-network-home:
+  title: icon network-home
+si-windows-network-port-disconnect:
+  title: icon network-port-disconnect
+si-windows-network-port:
+  title: icon network-port
+si-windows-network-server-connecting:
+  title: icon network-server-connecting
+si-windows-network-server-disconnect:
+  title: icon network-server-disconnect
+si-windows-network-server:
+  title: icon network-server
+si-windows-network:
+  title: icon network
+si-windows-new-window:
+  title: icon new-window
+si-windows-new:
+  title: icon new
+si-windows-newspaper-create:
+  title: icon newspaper-create
+si-windows-newspaper:
+  title: icon newspaper
+si-windows-noentry:
+  title: icon noentry
+si-windows-notification-above-multiple:
+  title: icon notification-above-multiple
+si-windows-notification-above:
+  title: icon notification-above
+si-windows-notification-multiple:
+  title: icon notification-multiple
+si-windows-notification-star:
+  title: icon notification-star
+si-windows-notification:
+  title: icon notification
+si-windows-nyan:
+  title: icon nyan
+si-windows-office-365:
+  title: icon office-365
+si-windows-office-access:
+  title: icon office-access
+si-windows-office-excel:
+  title: icon office-excel
+si-windows-office-infopath:
+  title: icon office-infopath
+si-windows-office-lync:
+  title: icon office-lync
+si-windows-office-onenote:
+  title: icon office-onenote
+si-windows-office-outlook:
+  title: icon office-outlook
+si-windows-office-powerpoint:
+  title: icon office-powerpoint
+si-windows-office-project:
+  title: icon office-project
+si-windows-office-publisher:
+  title: icon office-publisher
+si-windows-office-sharepoint:
+  title: icon office-sharepoint
+si-windows-office-visio:
+  title: icon office-visio
+si-windows-office-word:
+  title: icon office-word
+si-windows-office:
+  title: icon office
+si-windows-opacity:
+  title: icon opacity
+si-windows-ornament-variant:
+  title: icon ornament-variant
+si-windows-ornament:
+  title: icon ornament
+si-windows-os-android:
+  title: icon os-android
+si-windows-os-arm:
+  title: icon os-arm
+si-windows-os-blackberry:
+  title: icon os-blackberry
+si-windows-os-chromium:
+  title: icon os-chromium
+si-windows-os-gnome:
+  title: icon os-gnome
+si-windows-os-ios:
+  title: icon os-ios
+si-windows-os-ubuntu:
+  title: icon os-ubuntu
+si-windows-os-windows-8:
+  title: icon os-windows-8
+si-windows-os-windows-rt:
+  title: icon os-windows-rt
+si-windows-os-windows:
+  title: icon os-windows
+si-windows-os-windowsphone-round:
+  title: icon os-windowsphone-round
+si-windows-os-windowsphone:
+  title: icon os-windowsphone
+si-windows-os-x64:
+  title: icon os-x64
+si-windows-os-x86:
+  title: icon os-x86
+si-windows-outlet:
+  title: icon outlet
+si-windows-page-0:
+  title: icon page-0
+si-windows-page-1:
+  title: icon page-1
+si-windows-page-2:
+  title: icon page-2
+si-windows-page-3:
+  title: icon page-3
+si-windows-page-4:
+  title: icon page-4
+si-windows-page-5:
+  title: icon page-5
+si-windows-page-6:
+  title: icon page-6
+si-windows-page-7:
+  title: icon page-7
+si-windows-page-8:
+  title: icon page-8
+si-windows-page-9:
+  title: icon page-9
+si-windows-page-add:
+  title: icon page-add
+si-windows-page-arrow:
+  title: icon page-arrow
+si-windows-page-bold:
+  title: icon page-bold
+si-windows-page-break:
+  title: icon page-break
+si-windows-page-check:
+  title: icon page-check
+si-windows-page-code:
+  title: icon page-code
+si-windows-page-copy:
+  title: icon page-copy
+si-windows-page-corner-bookmark:
+  title: icon page-corner-bookmark
+si-windows-page-corner-break:
+  title: icon page-corner-break
+si-windows-page-corner-cells:
+  title: icon page-corner-cells
+si-windows-page-corner-folded-grid:
+  title: icon page-corner-folded-grid
+si-windows-page-corner-folded-text:
+  title: icon page-corner-folded-text
+si-windows-page-corner-folded:
+  title: icon page-corner-folded
+si-windows-page-corner-grid:
+  title: icon page-corner-grid
+si-windows-page-corner-text-break:
+  title: icon page-corner-text-break
+si-windows-page-corner-text:
+  title: icon page-corner-text
+si-windows-page-corner:
+  title: icon page-corner
+si-windows-page-cross:
+  title: icon page-cross
+si-windows-page-delete:
+  title: icon page-delete
+si-windows-page-download:
+  title: icon page-download
+si-windows-page-duplicate:
+  title: icon page-duplicate
+si-windows-page-edit:
+  title: icon page-edit
+si-windows-page-excel:
+  title: icon page-excel
+si-windows-page-file-gif-tag:
+  title: icon page-file-gif-tag
+si-windows-page-file-gif:
+  title: icon page-file-gif
+si-windows-page-file-pdf-tag:
+  title: icon page-file-pdf-tag
+si-windows-page-file-pdf:
+  title: icon page-file-pdf
+si-windows-page-heart:
+  title: icon page-heart
+si-windows-page-heartbreak:
+  title: icon page-heartbreak
+si-windows-page-hidden:
+  title: icon page-hidden
+si-windows-page-image:
+  title: icon page-image
+si-windows-page-jpg:
+  title: icon page-jpg
+si-windows-page-location-add:
+  title: icon page-location-add
+si-windows-page-location:
+  title: icon page-location
+si-windows-page-minus:
+  title: icon page-minus
+si-windows-page-multiple:
+  title: icon page-multiple
+si-windows-page-music:
+  title: icon page-music
+si-windows-page-new:
+  title: icon page-new
+si-windows-page-onenote:
+  title: icon page-onenote
+si-windows-page-pdf:
+  title: icon page-pdf
+si-windows-page-png:
+  title: icon page-png
+si-windows-page-powerpoint:
+  title: icon page-powerpoint
+si-windows-page-question:
+  title: icon page-question
+si-windows-page-search:
+  title: icon page-search
+si-windows-page-select:
+  title: icon page-select
+si-windows-page-small:
+  title: icon page-small
+si-windows-page-solid-add:
+  title: icon page-solid-add
+si-windows-page-solid-cross:
+  title: icon page-solid-cross
+si-windows-page-solid-move:
+  title: icon page-solid-move
+si-windows-page-solid:
+  title: icon page-solid
+si-windows-page-text:
+  title: icon page-text
+si-windows-page-upload:
+  title: icon page-upload
+si-windows-page-word:
+  title: icon page-word
+si-windows-page-xml:
+  title: icon page-xml
+si-windows-page:
+  title: icon page
+si-windows-palmtree-variant:
+  title: icon palmtree-variant
+si-windows-palmtree:
+  title: icon palmtree
+si-windows-paper:
+  title: icon paper
+si-windows-paperclip-rotated:
+  title: icon paperclip-rotated
+si-windows-paperclip:
+  title: icon paperclip
+si-windows-paw:
+  title: icon paw
+si-windows-paypal:
+  title: icon paypal
+si-windows-people-arrow-left:
+  title: icon people-arrow-left
+si-windows-people-arrow-right:
+  title: icon people-arrow-right
+si-windows-people-checkbox:
+  title: icon people-checkbox
+si-windows-people-down:
+  title: icon people-down
+si-windows-people-left:
+  title: icon people-left
+si-windows-people-magnify:
+  title: icon people-magnify
+si-windows-people-multiple-magnify:
+  title: icon people-multiple-magnify
+si-windows-people-multiple:
+  title: icon people-multiple
+si-windows-people-profile:
+  title: icon people-profile
+si-windows-people-right:
+  title: icon people-right
+si-windows-people-sensor-variant:
+  title: icon people-sensor-variant
+si-windows-people-sensor:
+  title: icon people-sensor
+si-windows-people-status:
+  title: icon people-status
+si-windows-people-up:
+  title: icon people-up
+si-windows-people:
+  title: icon people
+si-windows-percent-off:
+  title: icon percent-off
+si-windows-phone-hangup:
+  title: icon phone-hangup
+si-windows-phone-voicemail:
+  title: icon phone-voicemail
+si-windows-phone:
+  title: icon phone
+si-windows-pie-quarter:
+  title: icon pie-quarter
+si-windows-pie:
+  title: icon pie
+si-windows-pin-remove:
+  title: icon pin-remove
+si-windows-pin:
+  title: icon pin
+si-windows-places:
+  title: icon places
+si-windows-plane-rotated-135:
+  title: icon plane-rotated-135
+si-windows-plane-rotated-45:
+  title: icon plane-rotated-45
+si-windows-plane:
+  title: icon plane
+si-windows-plant:
+  title: icon plant
+si-windows-plus:
+  title: icon plus
+si-windows-pokeball:
+  title: icon pokeball
+si-windows-potion:
+  title: icon potion
+si-windows-power:
+  title: icon power
+si-windows-present:
+  title: icon present
+si-windows-printer-blank:
+  title: icon printer-blank
+si-windows-printer-text:
+  title: icon printer-text
+si-windows-printer:
+  title: icon printer
+si-windows-progress:
+  title: icon progress
+si-windows-projector-screen:
+  title: icon projector-screen
+si-windows-projector:
+  title: icon projector
+si-windows-protractor:
+  title: icon protractor
+si-windows-puzzle-round:
+  title: icon puzzle-round
+si-windows-puzzle:
+  title: icon puzzle
+si-windows-qr:
+  title: icon qr
+si-windows-question:
+  title: icon question
+si-windows-quill:
+  title: icon quill
+si-windows-quote-left:
+  title: icon quote-left
+si-windows-quote-right:
+  title: icon quote-right
+si-windows-radar-screen:
+  title: icon radar-screen
+si-windows-radar:
+  title: icon radar
+si-windows-radioactive:
+  title: icon radioactive
+si-windows-redo-curve:
+  title: icon redo-curve
+si-windows-redo-point:
+  title: icon redo-point
+si-windows-redo:
+  title: icon redo
+si-windows-refresh-clockwise-down:
+  title: icon refresh-clockwise-down
+si-windows-refresh-clockwise-up:
+  title: icon refresh-clockwise-up
+si-windows-refresh-counterclockwise-down:
+  title: icon refresh-counterclockwise-down
+si-windows-refresh-counterclockwise-up:
+  title: icon refresh-counterclockwise-up
+si-windows-refresh:
+  title: icon refresh
+si-windows-religion-christianity:
+  title: icon religion-christianity
+si-windows-religion-islamic:
+  title: icon religion-islamic
+si-windows-religion-judaism:
+  title: icon religion-judaism
+si-windows-repeat:
+  title: icon repeat
+si-windows-reply-calendar:
+  title: icon reply-calendar
+si-windows-reply-email:
+  title: icon reply-email
+si-windows-reply-people:
+  title: icon reply-people
+si-windows-reset:
+  title: icon reset
+si-windows-resource-group:
+  title: icon resource-group
+si-windows-resource:
+  title: icon resource
+si-windows-return:
+  title: icon return
+si-windows-ribbon-wave:
+  title: icon ribbon-wave
+si-windows-ribbon:
+  title: icon ribbon
+si-windows-ring:
+  title: icon ring
+si-windows-rocket-rotated-45:
+  title: icon rocket-rotated-45
+si-windows-rocket:
+  title: icon rocket
+si-windows-rss:
+  title: icon rss
+si-windows-ruler:
+  title: icon ruler
+si-windows-sailboat:
+  title: icon sailboat
+si-windows-save:
+  title: icon save
+si-windows-scale-unbalanced:
+  title: icon scale-unbalanced
+si-windows-scale:
+  title: icon scale
+si-windows-scissor:
+  title: icon scissor
+si-windows-scrabble-a:
+  title: icon scrabble-a
+si-windows-scrabble-b:
+  title: icon scrabble-b
+si-windows-scrabble-c:
+  title: icon scrabble-c
+si-windows-scrabble-d:
+  title: icon scrabble-d
+si-windows-scrabble-e:
+  title: icon scrabble-e
+si-windows-scrabble-f:
+  title: icon scrabble-f
+si-windows-scrabble-g:
+  title: icon scrabble-g
+si-windows-scrabble-h:
+  title: icon scrabble-h
+si-windows-scrabble-i:
+  title: icon scrabble-i
+si-windows-scrabble-j:
+  title: icon scrabble-j
+si-windows-scrabble-k:
+  title: icon scrabble-k
+si-windows-scrabble-l:
+  title: icon scrabble-l
+si-windows-scrabble-m:
+  title: icon scrabble-m
+si-windows-scrabble-n:
+  title: icon scrabble-n
+si-windows-scrabble-o:
+  title: icon scrabble-o
+si-windows-scrabble-p:
+  title: icon scrabble-p
+si-windows-scrabble-q:
+  title: icon scrabble-q
+si-windows-scrabble-r:
+  title: icon scrabble-r
+si-windows-scrabble-s:
+  title: icon scrabble-s
+si-windows-scrabble-t:
+  title: icon scrabble-t
+si-windows-scrabble-u:
+  title: icon scrabble-u
+si-windows-scrabble-v:
+  title: icon scrabble-v
+si-windows-scrabble-w:
+  title: icon scrabble-w
+si-windows-scrabble-x:
+  title: icon scrabble-x
+si-windows-scrabble-y:
+  title: icon scrabble-y
+si-windows-scrabble-z:
+  title: icon scrabble-z
+si-windows-sd-micro:
+  title: icon sd-micro
+si-windows-sd:
+  title: icon sd
+si-windows-section-collapse-all:
+  title: icon section-collapse-all
+si-windows-section-collapse:
+  title: icon section-collapse
+si-windows-section-expand-all:
+  title: icon section-expand-all
+si-windows-section-expand:
+  title: icon section-expand
+si-windows-server:
+  title: icon server
+si-windows-settings:
+  title: icon settings
+si-windows-share-open:
+  title: icon share-open
+si-windows-share:
+  title: icon share
+si-windows-shield-alert:
+  title: icon shield-alert
+si-windows-shield:
+  title: icon shield
+si-windows-shopping:
+  title: icon shopping
+si-windows-shotglass:
+  title: icon shotglass
+si-windows-shuffle:
+  title: icon shuffle
+si-windows-sidebar-left-collapse:
+  title: icon sidebar-left-collapse
+si-windows-sidebar-left-expand:
+  title: icon sidebar-left-expand
+si-windows-sidebar-right-collapse:
+  title: icon sidebar-right-collapse
+si-windows-sidebar-right-expand:
+  title: icon sidebar-right-expand
+si-windows-sign-caution:
+  title: icon sign-caution
+si-windows-sign-interstate-75:
+  title: icon sign-interstate-75
+si-windows-sign-interstate-94:
+  title: icon sign-interstate-94
+si-windows-sign-interstate-95:
+  title: icon sign-interstate-95
+si-windows-sign-interstate:
+  title: icon sign-interstate
+si-windows-sign-parking:
+  title: icon sign-parking
+si-windows-sign-stop:
+  title: icon sign-stop
+si-windows-simcard-micro:
+  title: icon simcard-micro
+si-windows-simcard:
+  title: icon simcard
+si-windows-skydrive-download:
+  title: icon skydrive-download
+si-windows-skydrive-upload:
+  title: icon skydrive-upload
+si-windows-skydrive:
+  title: icon skydrive
+si-windows-sleep:
+  title: icon sleep
+si-windows-slice:
+  title: icon slice
+si-windows-smiley-angry:
+  title: icon smiley-angry
+si-windows-smiley-cry:
+  title: icon smiley-cry
+si-windows-smiley-frown:
+  title: icon smiley-frown
+si-windows-smiley-glasses:
+  title: icon smiley-glasses
+si-windows-smiley-grin:
+  title: icon smiley-grin
+si-windows-smiley-grumpy:
+  title: icon smiley-grumpy
+si-windows-smiley-happy:
+  title: icon smiley-happy
+si-windows-smiley-kiki:
+  title: icon smiley-kiki
+si-windows-smiley-squint:
+  title: icon smiley-squint
+si-windows-smiley-tounge:
+  title: icon smiley-tounge
+si-windows-smiley-what:
+  title: icon smiley-what
+si-windows-snowflake:
+  title: icon snowflake
+si-windows-snowman:
+  title: icon snowman
+si-windows-social-aim-variant:
+  title: icon social-aim-variant
+si-windows-social-aim:
+  title: icon social-aim
+si-windows-social-amazon-appstore:
+  title: icon social-amazon-appstore
+si-windows-social-amazon:
+  title: icon social-amazon
+si-windows-social-apple-appstore:
+  title: icon social-apple-appstore
+si-windows-social-apple-mobileme:
+  title: icon social-apple-mobileme
+si-windows-social-apple:
+  title: icon social-apple
+si-windows-social-appnet:
+  title: icon social-appnet
+si-windows-social-artcom:
+  title: icon social-artcom
+si-windows-social-arto:
+  title: icon social-arto
+si-windows-social-aws:
+  title: icon social-aws
+si-windows-social-baidu:
+  title: icon social-baidu
+si-windows-social-basecamp:
+  title: icon social-basecamp
+si-windows-social-bebo:
+  title: icon social-bebo
+si-windows-social-behance:
+  title: icon social-behance
+si-windows-social-blogger:
+  title: icon social-blogger
+si-windows-social-cloudapp:
+  title: icon social-cloudapp
+si-windows-social-coding4fun:
+  title: icon social-coding4fun
+si-windows-social-delicious:
+  title: icon social-delicious
+si-windows-social-deviantart:
+  title: icon social-deviantart
+si-windows-social-digg-variant:
+  title: icon social-digg-variant
+si-windows-social-digg:
+  title: icon social-digg
+si-windows-social-disqus:
+  title: icon social-disqus
+si-windows-social-dribbble:
+  title: icon social-dribbble
+si-windows-social-dropbox-download:
+  title: icon social-dropbox-download
+si-windows-social-dropbox-upload:
+  title: icon social-dropbox-upload
+si-windows-social-dropbox:
+  title: icon social-dropbox
+si-windows-social-drupal:
+  title: icon social-drupal
+si-windows-social-engadget:
+  title: icon social-engadget
+si-windows-social-etsy:
+  title: icon social-etsy
+si-windows-social-evernote:
+  title: icon social-evernote
+si-windows-social-facebook-heart-break:
+  title: icon social-facebook-heart-break
+si-windows-social-facebook-heart:
+  title: icon social-facebook-heart
+si-windows-social-facebook-variant:
+  title: icon social-facebook-variant
+si-windows-social-facebook:
+  title: icon social-facebook
+si-windows-social-foursquare:
+  title: icon social-foursquare
+si-windows-social-gdgt:
+  title: icon social-gdgt
+si-windows-social-github-octocat-solid:
+  title: icon social-github-octocat-solid
+si-windows-social-github-octocat:
+  title: icon social-github-octocat
+si-windows-social-github:
+  title: icon social-github
+si-windows-social-grooveshark:
+  title: icon social-grooveshark
+si-windows-social-indiegogo:
+  title: icon social-indiegogo
+si-windows-social-instapaper:
+  title: icon social-instapaper
+si-windows-social-jira:
+  title: icon social-jira
+si-windows-social-kickstarter:
+  title: icon social-kickstarter
+si-windows-social-lastfm:
+  title: icon social-lastfm
+si-windows-social-line:
+  title: icon social-line
+si-windows-social-linkedin-variant:
+  title: icon social-linkedin-variant
+si-windows-social-linkedin:
+  title: icon social-linkedin
+si-windows-social-microsoft:
+  title: icon social-microsoft
+si-windows-social-nuget:
+  title: icon social-nuget
+si-windows-social-openid:
+  title: icon social-openid
+si-windows-social-picasa:
+  title: icon social-picasa
+si-windows-social-pinterest:
+  title: icon social-pinterest
+si-windows-social-playstation:
+  title: icon social-playstation
+si-windows-social-pocket:
+  title: icon social-pocket
+si-windows-social-rdio:
+  title: icon social-rdio
+si-windows-social-readability:
+  title: icon social-readability
+si-windows-social-reddit:
+  title: icon social-reddit
+si-windows-social-sharethis:
+  title: icon social-sharethis
+si-windows-social-skype:
+  title: icon social-skype
+si-windows-social-slashdot:
+  title: icon social-slashdot
+si-windows-social-soundcloud:
+  title: icon social-soundcloud
+si-windows-social-spotify:
+  title: icon social-spotify
+si-windows-social-stackoverflow:
+  title: icon social-stackoverflow
+si-windows-social-theverge:
+  title: icon social-theverge
+si-windows-social-trello:
+  title: icon social-trello
+si-windows-social-tumblr:
+  title: icon social-tumblr
+si-windows-social-twitter-hashtag:
+  title: icon social-twitter-hashtag
+si-windows-social-twitter-retweet:
+  title: icon social-twitter-retweet
+si-windows-social-twitter:
+  title: icon social-twitter
+si-windows-social-unity:
+  title: icon social-unity
+si-windows-social-untapped:
+  title: icon social-untapped
+si-windows-social-uservoice:
+  title: icon social-uservoice
+si-windows-social-vimeo:
+  title: icon social-vimeo
+si-windows-social-whatsapp:
+  title: icon social-whatsapp
+si-windows-social-wikipedia:
+  title: icon social-wikipedia
+si-windows-social-wordpress-variant:
+  title: icon social-wordpress-variant
+si-windows-social-wordpress:
+  title: icon social-wordpress
+si-windows-social-xing:
+  title: icon social-xing
+si-windows-social-yahoo:
+  title: icon social-yahoo
+si-windows-social-ycombinator:
+  title: icon social-ycombinator
+si-windows-social-yelp:
+  title: icon social-yelp
+si-windows-social-zappos:
+  title: icon social-zappos
+si-windows-sort-alphabetical-ascending:
+  title: icon sort-alphabetical-ascending
+si-windows-sort-alphabetical-descending:
+  title: icon sort-alphabetical-descending
+si-windows-sort-alphabetical:
+  title: icon sort-alphabetical
+si-windows-sort-numeric-ascending:
+  title: icon sort-numeric-ascending
+si-windows-sort-numeric-descending:
+  title: icon sort-numeric-descending
+si-windows-sort-numeric:
+  title: icon sort-numeric
+si-windows-sort:
+  title: icon sort
+si-windows-sound-0:
+  title: icon sound-0
+si-windows-sound-1:
+  title: icon sound-1
+si-windows-sound-2:
+  title: icon sound-2
+si-windows-sound-3:
+  title: icon sound-3
+si-windows-sound-left-right:
+  title: icon sound-left-right
+si-windows-sound-mute:
+  title: icon sound-mute
+si-windows-sound-stereo-stack:
+  title: icon sound-stereo-stack
+si-windows-sound-stereo:
+  title: icon sound-stereo
+si-windows-source-fork:
+  title: icon source-fork
+si-windows-source-pull:
+  title: icon source-pull
+si-windows-speakerphone:
+  title: icon speakerphone
+si-windows-sport-football:
+  title: icon sport-football
+si-windows-stairs-down-reflect-horizontal:
+  title: icon stairs-down-reflect-horizontal
+si-windows-stairs-down:
+  title: icon stairs-down
+si-windows-stairs-up-reflect-horizontal:
+  title: icon stairs-up-reflect-horizontal
+si-windows-stairs-up:
+  title: icon stairs-up
+si-windows-stamp-at:
+  title: icon stamp-at
+si-windows-stamp-empty:
+  title: icon stamp-empty
+si-windows-stamp:
+  title: icon stamp
+si-windows-star-add:
+  title: icon star-add
+si-windows-star-delete:
+  title: icon star-delete
+si-windows-star-invincible:
+  title: icon star-invincible
+si-windows-star-minus:
+  title: icon star-minus
+si-windows-star-remove:
+  title: icon star-remove
+si-windows-star:
+  title: icon star
+si-windows-starwars-jedi:
+  title: icon starwars-jedi
+si-windows-starwars-rebel:
+  title: icon starwars-rebel
+si-windows-starwars-sith:
+  title: icon starwars-sith
+si-windows-steam:
+  title: icon steam
+si-windows-stock-down:
+  title: icon stock-down
+si-windows-stock-up:
+  title: icon stock-up
+si-windows-stock:
+  title: icon stock
+si-windows-stocking:
+  title: icon stocking
+si-windows-stop:
+  title: icon stop
+si-windows-store:
+  title: icon store
+si-windows-stream:
+  title: icon stream
+si-windows-suitcase:
+  title: icon suitcase
+si-windows-swap:
+  title: icon swap
+si-windows-switch-off:
+  title: icon switch-off
+si-windows-symbol-braces:
+  title: icon symbol-braces
+si-windows-symbol-bracket:
+  title: icon symbol-bracket
+si-windows-table-add:
+  title: icon table-add
+si-windows-table-delete:
+  title: icon table-delete
+si-windows-table-select:
+  title: icon table-select
+si-windows-table-unselect:
+  title: icon table-unselect
+si-windows-table:
+  title: icon table
+si-windows-tablet-windows:
+  title: icon tablet-windows
+si-windows-tag-label:
+  title: icon tag-label
+si-windows-tag:
+  title: icon tag
+si-windows-tardis:
+  title: icon tardis
+si-windows-team:
+  title: icon team
+si-windows-text-align-center:
+  title: icon text-align-center
+si-windows-text-align-justify:
+  title: icon text-align-justify
+si-windows-text-align-left:
+  title: icon text-align-left
+si-windows-text-align-right:
+  title: icon text-align-right
+si-windows-text-bold:
+  title: icon text-bold
+si-windows-text-italic:
+  title: icon text-italic
+si-windows-text-overline:
+  title: icon text-overline
+si-windows-text-sans:
+  title: icon text-sans
+si-windows-text-script:
+  title: icon text-script
+si-windows-text-serif:
+  title: icon text-serif
+si-windows-text-size-down:
+  title: icon text-size-down
+si-windows-text-size-minus:
+  title: icon text-size-minus
+si-windows-text-size-plus:
+  title: icon text-size-plus
+si-windows-text-size-up:
+  title: icon text-size-up
+si-windows-text-size:
+  title: icon text-size
+si-windows-text-strikethrough:
+  title: icon text-strikethrough
+si-windows-text-underline:
+  title: icon text-underline
+si-windows-thermometer-celcius:
+  title: icon thermometer-celcius
+si-windows-thermometer-digital:
+  title: icon thermometer-digital
+si-windows-thermometer-fahrenheit:
+  title: icon thermometer-fahrenheit
+si-windows-thermometer-honeywell:
+  title: icon thermometer-honeywell
+si-windows-thermometer-kelvin:
+  title: icon thermometer-kelvin
+si-windows-thermometer-signs:
+  title: icon thermometer-signs
+si-windows-thermometer:
+  title: icon thermometer
+si-windows-thumb-up-add:
+  title: icon thumb-up-add
+si-windows-thumb-up-delete:
+  title: icon thumb-up-delete
+si-windows-thumb-up-minus:
+  title: icon thumb-up-minus
+si-windows-thumbs-down:
+  title: icon thumbs-down
+si-windows-thumbs-up:
+  title: icon thumbs-up
+si-windows-ticket:
+  title: icon ticket
+si-windows-tiles-four:
+  title: icon tiles-four
+si-windows-tiles-minus:
+  title: icon tiles-minus
+si-windows-tiles-nine:
+  title: icon tiles-nine
+si-windows-tiles-plus:
+  title: icon tiles-plus
+si-windows-tiles-sixteen:
+  title: icon tiles-sixteen
+si-windows-timer-1:
+  title: icon timer-1
+si-windows-timer-2:
+  title: icon timer-2
+si-windows-timer-3:
+  title: icon timer-3
+si-windows-timer-4:
+  title: icon timer-4
+si-windows-timer-5:
+  title: icon timer-5
+si-windows-timer-alert:
+  title: icon timer-alert
+si-windows-timer-check:
+  title: icon timer-check
+si-windows-timer-forward:
+  title: icon timer-forward
+si-windows-timer-pause:
+  title: icon timer-pause
+si-windows-timer-play:
+  title: icon timer-play
+si-windows-timer-record:
+  title: icon timer-record
+si-windows-timer-resume:
+  title: icon timer-resume
+si-windows-timer-rewind:
+  title: icon timer-rewind
+si-windows-timer-stop:
+  title: icon timer-stop
+si-windows-timer:
+  title: icon timer
+si-windows-tools:
+  title: icon tools
+si-windows-tournament-bracket-down:
+  title: icon tournament-bracket-down
+si-windows-tournament-bracket-left:
+  title: icon tournament-bracket-left
+si-windows-tournament-bracket-right:
+  title: icon tournament-bracket-right
+si-windows-tournament-bracket-up:
+  title: icon tournament-bracket-up
+si-windows-tournament-bracket:
+  title: icon tournament-bracket
+si-windows-tower:
+  title: icon tower
+si-windows-train-track:
+  title: icon train-track
+si-windows-train-tunnel:
+  title: icon train-tunnel
+si-windows-train:
+  title: icon train
+si-windows-transform-flip-horizontal:
+  title: icon transform-flip-horizontal
+si-windows-transform-flip-vertical:
+  title: icon transform-flip-vertical
+si-windows-transform-rotate-clockwise:
+  title: icon transform-rotate-clockwise
+si-windows-transform-rotate-counterclockwise:
+  title: icon transform-rotate-counterclockwise
+si-windows-transform-rotate-left:
+  title: icon transform-rotate-left
+si-windows-transform-rotate-right:
+  title: icon transform-rotate-right
+si-windows-transit-arrive:
+  title: icon transit-arrive
+si-windows-transit-bus:
+  title: icon transit-bus
+si-windows-transit-car-accident:
+  title: icon transit-car-accident
+si-windows-transit-car:
+  title: icon transit-car
+si-windows-transit-congestion:
+  title: icon transit-congestion
+si-windows-transit-connection-departure:
+  title: icon transit-connection-departure
+si-windows-transit-connection:
+  title: icon transit-connection
+si-windows-transit-construction:
+  title: icon transit-construction
+si-windows-transit-depart:
+  title: icon transit-depart
+si-windows-transit-distance-from:
+  title: icon transit-distance-from
+si-windows-transit-distance-to:
+  title: icon transit-distance-to
+si-windows-transit-hazard:
+  title: icon transit-hazard
+si-windows-tree-leaf-three:
+  title: icon tree-leaf-three
+si-windows-tree-leaf:
+  title: icon tree-leaf
+si-windows-tree-pine:
+  title: icon tree-pine
+si-windows-tree:
+  title: icon tree
+si-windows-trophy:
+  title: icon trophy
+si-windows-truck:
+  title: icon truck
+si-windows-tux:
+  title: icon tux
+si-windows-tv-news:
+  title: icon tv-news
+si-windows-tv-remote:
+  title: icon tv-remote
+si-windows-tv-syfy:
+  title: icon tv-syfy
+si-windows-tv:
+  title: icon tv
+si-windows-type-bit:
+  title: icon type-bit
+si-windows-type-boolean:
+  title: icon type-boolean
+si-windows-type-null:
+  title: icon type-null
+si-windows-undo-curve:
+  title: icon undo-curve
+si-windows-undo-point:
+  title: icon undo-point
+si-windows-undo:
+  title: icon undo
+si-windows-unlock-keyhole:
+  title: icon unlock-keyhole
+si-windows-unlock:
+  title: icon unlock
+si-windows-upload:
+  title: icon upload
+si-windows-usb-drive:
+  title: icon usb-drive
+si-windows-usb:
+  title: icon usb
+si-windows-user-add:
+  title: icon user-add
+si-windows-user-delete:
+  title: icon user-delete
+si-windows-user-minus:
+  title: icon user-minus
+si-windows-user-tie:
+  title: icon user-tie
+si-windows-user:
+  title: icon user
+si-windows-vector-circle:
+  title: icon vector-circle
+si-windows-vector-group-removed:
+  title: icon vector-group-removed
+si-windows-vector-group:
+  title: icon vector-group
+si-windows-vector-line-curve:
+  title: icon vector-line-curve
+si-windows-vector-line-spline:
+  title: icon vector-line-spline
+si-windows-vector-line:
+  title: icon vector-line
+si-windows-vector-pen-add:
+  title: icon vector-pen-add
+si-windows-vector-pen-convert:
+  title: icon vector-pen-convert
+si-windows-vector-pen-minus:
+  title: icon vector-pen-minus
+si-windows-vector-pen:
+  title: icon vector-pen
+si-windows-vector-polygon:
+  title: icon vector-polygon
+si-windows-vector-rectangle:
+  title: icon vector-rectangle
+si-windows-vector-star:
+  title: icon vector-star
+si-windows-video-basic:
+  title: icon video-basic
+si-windows-video-gallery:
+  title: icon video-gallery
+si-windows-video-highdefinition:
+  title: icon video-highdefinition
+si-windows-video-send:
+  title: icon video-send
+si-windows-video-standarddefinition:
+  title: icon video-standarddefinition
+si-windows-video:
+  title: icon video
+si-windows-vip-lowercase:
+  title: icon vip-lowercase
+si-windows-vip:
+  title: icon vip
+si-windows-visualstudio-news:
+  title: icon visualstudio-news
+si-windows-visualstudio:
+  title: icon visualstudio
+si-windows-warning-circle:
+  title: icon warning-circle
+si-windows-warning:
+  title: icon warning
+si-windows-water-droplet-alert:
+  title: icon water-droplet-alert
+si-windows-water-droplet-reflection:
+  title: icon water-droplet-reflection
+si-windows-water-droplet:
+  title: icon water-droplet
+si-windows-weather-chance:
+  title: icon weather-chance
+si-windows-weather-overcast:
+  title: icon weather-overcast
+si-windows-weather-rain:
+  title: icon weather-rain
+si-windows-weather-snow:
+  title: icon weather-snow
+si-windows-weather-station:
+  title: icon weather-station
+si-windows-weather-sun-rise:
+  title: icon weather-sun-rise
+si-windows-weather-sun-set:
+  title: icon weather-sun-set
+si-windows-weather-sun:
+  title: icon weather-sun
+si-windows-weather-symbol:
+  title: icon weather-symbol
+si-windows-weather-thunder:
+  title: icon weather-thunder
+si-windows-webcam:
+  title: icon webcam
+si-windows-window-casement-closed:
+  title: icon window-casement-closed
+si-windows-window-casement:
+  title: icon window-casement
+si-windows-window-closed:
+  title: icon window-closed
+si-windows-window-maximize:
+  title: icon window-maximize
+si-windows-window-minimize:
+  title: icon window-minimize
+si-windows-window-restore:
+  title: icon window-restore
+si-windows-window-simple:
+  title: icon window-simple
+si-windows-window:
+  title: icon window
+si-windows-windowsphone:
+  title: icon windowsphone
+si-windows-xbox:
+  title: icon xbox
+si-windows-youtube-play:
+  title: icon youtube-play
+si-windows-youtube:
+  title: icon youtube
+si-windows-zune:
+  title: icon zune

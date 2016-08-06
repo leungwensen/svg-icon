@@ -1,12 +1,12 @@
-const path = require('path');
-const lang = require('zero-lang');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
+const lang = require('zero-lang');
+const path = require('path');
 const plumber = require('gulp-plumber');
 const svgSprite = require('gulp-svg-sprite');
 const through = require('through2');
-const config = require('./config');
 const xmldom = require('xmldom');
+const config = require('./config');
 
 const domParser = new xmldom.DOMParser();
 
@@ -25,8 +25,14 @@ function reduceAttrs() {
       gutil.log(file.path);
       const doc = domParser.parseFromString(file.contents.toString('utf8'));
       const svgElement = doc.getElementsByTagName('svg')[0];
-      svgElement.setAttribute('style', 'width:0;height:0;position:absolute;opacity:0;');
-      file.contents = new Buffer(doc.toString());
+      svgElement.setAttribute('style', 'width:0;height:0;position:absolute;overflow:hidden;');
+      svgElement.setAttribute('version', '1.1');
+      const svgContent = doc.toString();
+      file.contents = new Buffer(
+        svgContent
+          .replace(/(<svg[^>]*>)/, '$1<defs>')
+          .replace(/(<\/svg>)$/, '</defs>$1')
+      );
     } catch (err) {
       this.emit('error', new gutil.PluginError('svg-sprite', err.toString()));
     }
@@ -55,7 +61,12 @@ lang.each(config.svgSpriteDirs, (dir) => {
                   .replace(/\s/g, '');
                 return `si-${dir}-${name}`;
               }
-            }
+            },
+            meta: path.resolve(__dirname, `../dist/meta/${dir}.yml`),
+          },
+          svg: {
+            xmlDeclaration: true,
+            doctypeDeclaration: true,
           }
         }))
         .pipe(reduceAttrs())

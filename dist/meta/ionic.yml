@@ -1,0 +1,1466 @@
+si-ionic-alert-circled:
+  title: icon alert-circled
+si-ionic-alert:
+  title: icon alert
+si-ionic-android-add-circle:
+  title: icon android-add-circle
+si-ionic-android-add:
+  title: icon android-add
+si-ionic-android-alarm-clock:
+  title: icon android-alarm-clock
+si-ionic-android-alert:
+  title: icon android-alert
+si-ionic-android-apps:
+  title: icon android-apps
+si-ionic-android-archive:
+  title: icon android-archive
+si-ionic-android-arrow-back:
+  title: icon android-arrow-back
+si-ionic-android-arrow-down:
+  title: icon android-arrow-down
+si-ionic-android-arrow-dropdown-circle:
+  title: icon android-arrow-dropdown-circle
+si-ionic-android-arrow-dropdown:
+  title: icon android-arrow-dropdown
+si-ionic-android-arrow-dropleft-circle:
+  title: icon android-arrow-dropleft-circle
+si-ionic-android-arrow-dropleft:
+  title: icon android-arrow-dropleft
+si-ionic-android-arrow-dropright-circle:
+  title: icon android-arrow-dropright-circle
+si-ionic-android-arrow-dropright:
+  title: icon android-arrow-dropright
+si-ionic-android-arrow-dropup-circle:
+  title: icon android-arrow-dropup-circle
+si-ionic-android-arrow-dropup:
+  title: icon android-arrow-dropup
+si-ionic-android-arrow-forward:
+  title: icon android-arrow-forward
+si-ionic-android-arrow-up:
+  title: icon android-arrow-up
+si-ionic-android-attach:
+  title: icon android-attach
+si-ionic-android-bar:
+  title: icon android-bar
+si-ionic-android-bicycle:
+  title: icon android-bicycle
+si-ionic-android-boat:
+  title: icon android-boat
+si-ionic-android-bookmark:
+  title: icon android-bookmark
+si-ionic-android-bulb:
+  title: icon android-bulb
+si-ionic-android-bus:
+  title: icon android-bus
+si-ionic-android-calendar:
+  title: icon android-calendar
+si-ionic-android-call:
+  title: icon android-call
+si-ionic-android-camera:
+  title: icon android-camera
+si-ionic-android-cancel:
+  title: icon android-cancel
+si-ionic-android-car:
+  title: icon android-car
+si-ionic-android-cart:
+  title: icon android-cart
+si-ionic-android-chat:
+  title: icon android-chat
+si-ionic-android-checkbox-blank:
+  title: icon android-checkbox-blank
+si-ionic-android-checkbox-outline-blank:
+  title: icon android-checkbox-outline-blank
+si-ionic-android-checkbox-outline:
+  title: icon android-checkbox-outline
+si-ionic-android-checkbox:
+  title: icon android-checkbox
+si-ionic-android-checkmark-circle:
+  title: icon android-checkmark-circle
+si-ionic-android-clipboard:
+  title: icon android-clipboard
+si-ionic-android-close:
+  title: icon android-close
+si-ionic-android-cloud-circle:
+  title: icon android-cloud-circle
+si-ionic-android-cloud-done:
+  title: icon android-cloud-done
+si-ionic-android-cloud-outline:
+  title: icon android-cloud-outline
+si-ionic-android-cloud:
+  title: icon android-cloud
+si-ionic-android-color-palette:
+  title: icon android-color-palette
+si-ionic-android-compass:
+  title: icon android-compass
+si-ionic-android-contact:
+  title: icon android-contact
+si-ionic-android-contacts:
+  title: icon android-contacts
+si-ionic-android-contract:
+  title: icon android-contract
+si-ionic-android-create:
+  title: icon android-create
+si-ionic-android-delete:
+  title: icon android-delete
+si-ionic-android-desktop:
+  title: icon android-desktop
+si-ionic-android-document:
+  title: icon android-document
+si-ionic-android-done-all:
+  title: icon android-done-all
+si-ionic-android-done:
+  title: icon android-done
+si-ionic-android-download:
+  title: icon android-download
+si-ionic-android-drafts:
+  title: icon android-drafts
+si-ionic-android-exit:
+  title: icon android-exit
+si-ionic-android-expand:
+  title: icon android-expand
+si-ionic-android-favorite-outline:
+  title: icon android-favorite-outline
+si-ionic-android-favorite:
+  title: icon android-favorite
+si-ionic-android-film:
+  title: icon android-film
+si-ionic-android-folder-open:
+  title: icon android-folder-open
+si-ionic-android-folder:
+  title: icon android-folder
+si-ionic-android-funnel:
+  title: icon android-funnel
+si-ionic-android-globe:
+  title: icon android-globe
+si-ionic-android-hand:
+  title: icon android-hand
+si-ionic-android-hangout:
+  title: icon android-hangout
+si-ionic-android-happy:
+  title: icon android-happy
+si-ionic-android-home:
+  title: icon android-home
+si-ionic-android-image:
+  title: icon android-image
+si-ionic-android-laptop:
+  title: icon android-laptop
+si-ionic-android-list:
+  title: icon android-list
+si-ionic-android-locate:
+  title: icon android-locate
+si-ionic-android-lock:
+  title: icon android-lock
+si-ionic-android-mail:
+  title: icon android-mail
+si-ionic-android-map:
+  title: icon android-map
+si-ionic-android-menu:
+  title: icon android-menu
+si-ionic-android-microphone-off:
+  title: icon android-microphone-off
+si-ionic-android-microphone:
+  title: icon android-microphone
+si-ionic-android-more-horizontal:
+  title: icon android-more-horizontal
+si-ionic-android-more-vertical:
+  title: icon android-more-vertical
+si-ionic-android-navigate:
+  title: icon android-navigate
+si-ionic-android-notifications-none:
+  title: icon android-notifications-none
+si-ionic-android-notifications-off:
+  title: icon android-notifications-off
+si-ionic-android-notifications:
+  title: icon android-notifications
+si-ionic-android-open:
+  title: icon android-open
+si-ionic-android-options:
+  title: icon android-options
+si-ionic-android-people:
+  title: icon android-people
+si-ionic-android-person-add:
+  title: icon android-person-add
+si-ionic-android-person:
+  title: icon android-person
+si-ionic-android-phone-landscape:
+  title: icon android-phone-landscape
+si-ionic-android-phone-portrait:
+  title: icon android-phone-portrait
+si-ionic-android-pin:
+  title: icon android-pin
+si-ionic-android-plane:
+  title: icon android-plane
+si-ionic-android-playstore:
+  title: icon android-playstore
+si-ionic-android-print:
+  title: icon android-print
+si-ionic-android-radio-button-off:
+  title: icon android-radio-button-off
+si-ionic-android-radio-button-on:
+  title: icon android-radio-button-on
+si-ionic-android-refresh:
+  title: icon android-refresh
+si-ionic-android-remove-circle:
+  title: icon android-remove-circle
+si-ionic-android-remove:
+  title: icon android-remove
+si-ionic-android-restaurant:
+  title: icon android-restaurant
+si-ionic-android-sad:
+  title: icon android-sad
+si-ionic-android-search:
+  title: icon android-search
+si-ionic-android-send:
+  title: icon android-send
+si-ionic-android-settings:
+  title: icon android-settings
+si-ionic-android-share-alt:
+  title: icon android-share-alt
+si-ionic-android-share:
+  title: icon android-share
+si-ionic-android-star-half:
+  title: icon android-star-half
+si-ionic-android-star-outline:
+  title: icon android-star-outline
+si-ionic-android-star:
+  title: icon android-star
+si-ionic-android-stopwatch:
+  title: icon android-stopwatch
+si-ionic-android-subway:
+  title: icon android-subway
+si-ionic-android-sunny:
+  title: icon android-sunny
+si-ionic-android-sync:
+  title: icon android-sync
+si-ionic-android-textsms:
+  title: icon android-textsms
+si-ionic-android-time:
+  title: icon android-time
+si-ionic-android-train:
+  title: icon android-train
+si-ionic-android-unlock:
+  title: icon android-unlock
+si-ionic-android-upload:
+  title: icon android-upload
+si-ionic-android-volume-down:
+  title: icon android-volume-down
+si-ionic-android-volume-mute:
+  title: icon android-volume-mute
+si-ionic-android-volume-off:
+  title: icon android-volume-off
+si-ionic-android-volume-up:
+  title: icon android-volume-up
+si-ionic-android-walk:
+  title: icon android-walk
+si-ionic-android-warning:
+  title: icon android-warning
+si-ionic-android-watch:
+  title: icon android-watch
+si-ionic-android-wifi:
+  title: icon android-wifi
+si-ionic-aperture:
+  title: icon aperture
+si-ionic-archive:
+  title: icon archive
+si-ionic-arrow-down-a:
+  title: icon arrow-down-a
+si-ionic-arrow-down-b:
+  title: icon arrow-down-b
+si-ionic-arrow-down-c:
+  title: icon arrow-down-c
+si-ionic-arrow-expand:
+  title: icon arrow-expand
+si-ionic-arrow-graph-down-left:
+  title: icon arrow-graph-down-left
+si-ionic-arrow-graph-down-right:
+  title: icon arrow-graph-down-right
+si-ionic-arrow-graph-up-left:
+  title: icon arrow-graph-up-left
+si-ionic-arrow-graph-up-right:
+  title: icon arrow-graph-up-right
+si-ionic-arrow-left-a:
+  title: icon arrow-left-a
+si-ionic-arrow-left-b:
+  title: icon arrow-left-b
+si-ionic-arrow-left-c:
+  title: icon arrow-left-c
+si-ionic-arrow-move:
+  title: icon arrow-move
+si-ionic-arrow-resize:
+  title: icon arrow-resize
+si-ionic-arrow-return-left:
+  title: icon arrow-return-left
+si-ionic-arrow-return-right:
+  title: icon arrow-return-right
+si-ionic-arrow-right-a:
+  title: icon arrow-right-a
+si-ionic-arrow-right-b:
+  title: icon arrow-right-b
+si-ionic-arrow-right-c:
+  title: icon arrow-right-c
+si-ionic-arrow-shrink:
+  title: icon arrow-shrink
+si-ionic-arrow-swap:
+  title: icon arrow-swap
+si-ionic-arrow-up-a:
+  title: icon arrow-up-a
+si-ionic-arrow-up-b:
+  title: icon arrow-up-b
+si-ionic-arrow-up-c:
+  title: icon arrow-up-c
+si-ionic-asterisk:
+  title: icon asterisk
+si-ionic-at:
+  title: icon at
+si-ionic-backspace-outline:
+  title: icon backspace-outline
+si-ionic-backspace:
+  title: icon backspace
+si-ionic-bag:
+  title: icon bag
+si-ionic-battery-charging:
+  title: icon battery-charging
+si-ionic-battery-empty:
+  title: icon battery-empty
+si-ionic-battery-full:
+  title: icon battery-full
+si-ionic-battery-half:
+  title: icon battery-half
+si-ionic-battery-low:
+  title: icon battery-low
+si-ionic-beaker:
+  title: icon beaker
+si-ionic-beer:
+  title: icon beer
+si-ionic-bluetooth:
+  title: icon bluetooth
+si-ionic-bonfire:
+  title: icon bonfire
+si-ionic-bookmark:
+  title: icon bookmark
+si-ionic-bowtie:
+  title: icon bowtie
+si-ionic-briefcase:
+  title: icon briefcase
+si-ionic-bug:
+  title: icon bug
+si-ionic-calculator:
+  title: icon calculator
+si-ionic-calendar:
+  title: icon calendar
+si-ionic-camera:
+  title: icon camera
+si-ionic-card:
+  title: icon card
+si-ionic-cash:
+  title: icon cash
+si-ionic-chatbox-working:
+  title: icon chatbox-working
+si-ionic-chatbox:
+  title: icon chatbox
+si-ionic-chatboxes:
+  title: icon chatboxes
+si-ionic-chatbubble-working:
+  title: icon chatbubble-working
+si-ionic-chatbubble:
+  title: icon chatbubble
+si-ionic-chatbubbles:
+  title: icon chatbubbles
+si-ionic-checkmark-circled:
+  title: icon checkmark-circled
+si-ionic-checkmark-round:
+  title: icon checkmark-round
+si-ionic-checkmark:
+  title: icon checkmark
+si-ionic-chevron-down:
+  title: icon chevron-down
+si-ionic-chevron-left:
+  title: icon chevron-left
+si-ionic-chevron-right:
+  title: icon chevron-right
+si-ionic-chevron-up:
+  title: icon chevron-up
+si-ionic-clipboard:
+  title: icon clipboard
+si-ionic-clock:
+  title: icon clock
+si-ionic-close-circled:
+  title: icon close-circled
+si-ionic-close-round:
+  title: icon close-round
+si-ionic-close:
+  title: icon close
+si-ionic-closed-captioning:
+  title: icon closed-captioning
+si-ionic-cloud:
+  title: icon cloud
+si-ionic-code-download:
+  title: icon code-download
+si-ionic-code-working:
+  title: icon code-working
+si-ionic-code:
+  title: icon code
+si-ionic-coffee:
+  title: icon coffee
+si-ionic-compass:
+  title: icon compass
+si-ionic-compose:
+  title: icon compose
+si-ionic-connection-bars:
+  title: icon connection-bars
+si-ionic-contrast:
+  title: icon contrast
+si-ionic-crop:
+  title: icon crop
+si-ionic-cube:
+  title: icon cube
+si-ionic-disc:
+  title: icon disc
+si-ionic-document-text:
+  title: icon document-text
+si-ionic-document:
+  title: icon document
+si-ionic-drag:
+  title: icon drag
+si-ionic-earth:
+  title: icon earth
+si-ionic-easel:
+  title: icon easel
+si-ionic-edit:
+  title: icon edit
+si-ionic-egg:
+  title: icon egg
+si-ionic-eject:
+  title: icon eject
+si-ionic-email-unread:
+  title: icon email-unread
+si-ionic-email:
+  title: icon email
+si-ionic-erlenmeyer-flask-bubbles:
+  title: icon erlenmeyer-flask-bubbles
+si-ionic-erlenmeyer-flask:
+  title: icon erlenmeyer-flask
+si-ionic-eye-disabled:
+  title: icon eye-disabled
+si-ionic-eye:
+  title: icon eye
+si-ionic-female:
+  title: icon female
+si-ionic-filing:
+  title: icon filing
+si-ionic-film-marker:
+  title: icon film-marker
+si-ionic-fireball:
+  title: icon fireball
+si-ionic-flag:
+  title: icon flag
+si-ionic-flame:
+  title: icon flame
+si-ionic-flash-off:
+  title: icon flash-off
+si-ionic-flash:
+  title: icon flash
+si-ionic-folder:
+  title: icon folder
+si-ionic-fork-repo:
+  title: icon fork-repo
+si-ionic-fork:
+  title: icon fork
+si-ionic-forward:
+  title: icon forward
+si-ionic-funnel:
+  title: icon funnel
+si-ionic-gear-a:
+  title: icon gear-a
+si-ionic-gear-b:
+  title: icon gear-b
+si-ionic-grid:
+  title: icon grid
+si-ionic-hammer:
+  title: icon hammer
+si-ionic-happy-outline:
+  title: icon happy-outline
+si-ionic-happy:
+  title: icon happy
+si-ionic-headphone:
+  title: icon headphone
+si-ionic-heart-broken:
+  title: icon heart-broken
+si-ionic-heart:
+  title: icon heart
+si-ionic-help-buoy:
+  title: icon help-buoy
+si-ionic-help-circled:
+  title: icon help-circled
+si-ionic-help:
+  title: icon help
+si-ionic-home:
+  title: icon home
+si-ionic-icecream:
+  title: icon icecream
+si-ionic-image:
+  title: icon image
+si-ionic-images:
+  title: icon images
+si-ionic-information-circled:
+  title: icon information-circled
+si-ionic-information:
+  title: icon information
+si-ionic-ionic:
+  title: icon ionic
+si-ionic-ios-alarm-outline:
+  title: icon ios-alarm-outline
+si-ionic-ios-alarm:
+  title: icon ios-alarm
+si-ionic-ios-albums-outline:
+  title: icon ios-albums-outline
+si-ionic-ios-albums:
+  title: icon ios-albums
+si-ionic-ios-americanfootball-outline:
+  title: icon ios-americanfootball-outline
+si-ionic-ios-americanfootball:
+  title: icon ios-americanfootball
+si-ionic-ios-analytics-outline:
+  title: icon ios-analytics-outline
+si-ionic-ios-analytics:
+  title: icon ios-analytics
+si-ionic-ios-arrow-back:
+  title: icon ios-arrow-back
+si-ionic-ios-arrow-down:
+  title: icon ios-arrow-down
+si-ionic-ios-arrow-forward:
+  title: icon ios-arrow-forward
+si-ionic-ios-arrow-left:
+  title: icon ios-arrow-left
+si-ionic-ios-arrow-right:
+  title: icon ios-arrow-right
+si-ionic-ios-arrow-thin-down:
+  title: icon ios-arrow-thin-down
+si-ionic-ios-arrow-thin-left:
+  title: icon ios-arrow-thin-left
+si-ionic-ios-arrow-thin-right:
+  title: icon ios-arrow-thin-right
+si-ionic-ios-arrow-thin-up:
+  title: icon ios-arrow-thin-up
+si-ionic-ios-arrow-up:
+  title: icon ios-arrow-up
+si-ionic-ios-at-outline:
+  title: icon ios-at-outline
+si-ionic-ios-at:
+  title: icon ios-at
+si-ionic-ios-barcode-outline:
+  title: icon ios-barcode-outline
+si-ionic-ios-barcode:
+  title: icon ios-barcode
+si-ionic-ios-baseball-outline:
+  title: icon ios-baseball-outline
+si-ionic-ios-baseball:
+  title: icon ios-baseball
+si-ionic-ios-basketball-outline:
+  title: icon ios-basketball-outline
+si-ionic-ios-basketball:
+  title: icon ios-basketball
+si-ionic-ios-bell-outline:
+  title: icon ios-bell-outline
+si-ionic-ios-bell:
+  title: icon ios-bell
+si-ionic-ios-body-outline:
+  title: icon ios-body-outline
+si-ionic-ios-body:
+  title: icon ios-body
+si-ionic-ios-bolt-outline:
+  title: icon ios-bolt-outline
+si-ionic-ios-bolt:
+  title: icon ios-bolt
+si-ionic-ios-book-outline:
+  title: icon ios-book-outline
+si-ionic-ios-book:
+  title: icon ios-book
+si-ionic-ios-bookmarks-outline:
+  title: icon ios-bookmarks-outline
+si-ionic-ios-bookmarks:
+  title: icon ios-bookmarks
+si-ionic-ios-box-outline:
+  title: icon ios-box-outline
+si-ionic-ios-box:
+  title: icon ios-box
+si-ionic-ios-briefcase-outline:
+  title: icon ios-briefcase-outline
+si-ionic-ios-briefcase:
+  title: icon ios-briefcase
+si-ionic-ios-browsers-outline:
+  title: icon ios-browsers-outline
+si-ionic-ios-browsers:
+  title: icon ios-browsers
+si-ionic-ios-calculator-outline:
+  title: icon ios-calculator-outline
+si-ionic-ios-calculator:
+  title: icon ios-calculator
+si-ionic-ios-calendar-outline:
+  title: icon ios-calendar-outline
+si-ionic-ios-calendar:
+  title: icon ios-calendar
+si-ionic-ios-camera-outline:
+  title: icon ios-camera-outline
+si-ionic-ios-camera:
+  title: icon ios-camera
+si-ionic-ios-cart-outline:
+  title: icon ios-cart-outline
+si-ionic-ios-cart:
+  title: icon ios-cart
+si-ionic-ios-chatboxes-outline:
+  title: icon ios-chatboxes-outline
+si-ionic-ios-chatboxes:
+  title: icon ios-chatboxes
+si-ionic-ios-chatbubble-outline:
+  title: icon ios-chatbubble-outline
+si-ionic-ios-chatbubble:
+  title: icon ios-chatbubble
+si-ionic-ios-checkmark-empty:
+  title: icon ios-checkmark-empty
+si-ionic-ios-checkmark-outline:
+  title: icon ios-checkmark-outline
+si-ionic-ios-checkmark:
+  title: icon ios-checkmark
+si-ionic-ios-circle-filled:
+  title: icon ios-circle-filled
+si-ionic-ios-circle-outline:
+  title: icon ios-circle-outline
+si-ionic-ios-clock-outline:
+  title: icon ios-clock-outline
+si-ionic-ios-clock:
+  title: icon ios-clock
+si-ionic-ios-close-empty:
+  title: icon ios-close-empty
+si-ionic-ios-close-outline:
+  title: icon ios-close-outline
+si-ionic-ios-close:
+  title: icon ios-close
+si-ionic-ios-cloud-download-outline:
+  title: icon ios-cloud-download-outline
+si-ionic-ios-cloud-download:
+  title: icon ios-cloud-download
+si-ionic-ios-cloud-outline:
+  title: icon ios-cloud-outline
+si-ionic-ios-cloud-upload-outline:
+  title: icon ios-cloud-upload-outline
+si-ionic-ios-cloud-upload:
+  title: icon ios-cloud-upload
+si-ionic-ios-cloud:
+  title: icon ios-cloud
+si-ionic-ios-cloudy-night-outline:
+  title: icon ios-cloudy-night-outline
+si-ionic-ios-cloudy-night:
+  title: icon ios-cloudy-night
+si-ionic-ios-cloudy-outline:
+  title: icon ios-cloudy-outline
+si-ionic-ios-cloudy:
+  title: icon ios-cloudy
+si-ionic-ios-cog-outline:
+  title: icon ios-cog-outline
+si-ionic-ios-cog:
+  title: icon ios-cog
+si-ionic-ios-color-filter-outline:
+  title: icon ios-color-filter-outline
+si-ionic-ios-color-filter:
+  title: icon ios-color-filter
+si-ionic-ios-color-wand-outline:
+  title: icon ios-color-wand-outline
+si-ionic-ios-color-wand:
+  title: icon ios-color-wand
+si-ionic-ios-compose-outline:
+  title: icon ios-compose-outline
+si-ionic-ios-compose:
+  title: icon ios-compose
+si-ionic-ios-contact-outline:
+  title: icon ios-contact-outline
+si-ionic-ios-contact:
+  title: icon ios-contact
+si-ionic-ios-copy-outline:
+  title: icon ios-copy-outline
+si-ionic-ios-copy:
+  title: icon ios-copy
+si-ionic-ios-crop-strong:
+  title: icon ios-crop-strong
+si-ionic-ios-crop:
+  title: icon ios-crop
+si-ionic-ios-download-outline:
+  title: icon ios-download-outline
+si-ionic-ios-download:
+  title: icon ios-download
+si-ionic-ios-drag:
+  title: icon ios-drag
+si-ionic-ios-email-outline:
+  title: icon ios-email-outline
+si-ionic-ios-email:
+  title: icon ios-email
+si-ionic-ios-eye-outline:
+  title: icon ios-eye-outline
+si-ionic-ios-eye:
+  title: icon ios-eye
+si-ionic-ios-fastforward-outline:
+  title: icon ios-fastforward-outline
+si-ionic-ios-fastforward:
+  title: icon ios-fastforward
+si-ionic-ios-filing-outline:
+  title: icon ios-filing-outline
+si-ionic-ios-filing:
+  title: icon ios-filing
+si-ionic-ios-film-outline:
+  title: icon ios-film-outline
+si-ionic-ios-film:
+  title: icon ios-film
+si-ionic-ios-flag-outline:
+  title: icon ios-flag-outline
+si-ionic-ios-flag:
+  title: icon ios-flag
+si-ionic-ios-flame-outline:
+  title: icon ios-flame-outline
+si-ionic-ios-flame:
+  title: icon ios-flame
+si-ionic-ios-flask-outline:
+  title: icon ios-flask-outline
+si-ionic-ios-flask:
+  title: icon ios-flask
+si-ionic-ios-flower-outline:
+  title: icon ios-flower-outline
+si-ionic-ios-flower:
+  title: icon ios-flower
+si-ionic-ios-folder-outline:
+  title: icon ios-folder-outline
+si-ionic-ios-folder:
+  title: icon ios-folder
+si-ionic-ios-football-outline:
+  title: icon ios-football-outline
+si-ionic-ios-football:
+  title: icon ios-football
+si-ionic-ios-game-controller-a-outline:
+  title: icon ios-game-controller-a-outline
+si-ionic-ios-game-controller-a:
+  title: icon ios-game-controller-a
+si-ionic-ios-game-controller-b-outline:
+  title: icon ios-game-controller-b-outline
+si-ionic-ios-game-controller-b:
+  title: icon ios-game-controller-b
+si-ionic-ios-gear-outline:
+  title: icon ios-gear-outline
+si-ionic-ios-gear:
+  title: icon ios-gear
+si-ionic-ios-glasses-outline:
+  title: icon ios-glasses-outline
+si-ionic-ios-glasses:
+  title: icon ios-glasses
+si-ionic-ios-grid-view-outline:
+  title: icon ios-grid-view-outline
+si-ionic-ios-grid-view:
+  title: icon ios-grid-view
+si-ionic-ios-heart-outline:
+  title: icon ios-heart-outline
+si-ionic-ios-heart:
+  title: icon ios-heart
+si-ionic-ios-help-empty:
+  title: icon ios-help-empty
+si-ionic-ios-help-outline:
+  title: icon ios-help-outline
+si-ionic-ios-help:
+  title: icon ios-help
+si-ionic-ios-home-outline:
+  title: icon ios-home-outline
+si-ionic-ios-home:
+  title: icon ios-home
+si-ionic-ios-infinite-outline:
+  title: icon ios-infinite-outline
+si-ionic-ios-infinite:
+  title: icon ios-infinite
+si-ionic-ios-information-empty:
+  title: icon ios-information-empty
+si-ionic-ios-information-outline:
+  title: icon ios-information-outline
+si-ionic-ios-information:
+  title: icon ios-information
+si-ionic-ios-ionic-outline:
+  title: icon ios-ionic-outline
+si-ionic-ios-keypad-outline:
+  title: icon ios-keypad-outline
+si-ionic-ios-keypad:
+  title: icon ios-keypad
+si-ionic-ios-lightbulb-outline:
+  title: icon ios-lightbulb-outline
+si-ionic-ios-lightbulb:
+  title: icon ios-lightbulb
+si-ionic-ios-list-outline:
+  title: icon ios-list-outline
+si-ionic-ios-list:
+  title: icon ios-list
+si-ionic-ios-location-outline:
+  title: icon ios-location-outline
+si-ionic-ios-location:
+  title: icon ios-location
+si-ionic-ios-locked-outline:
+  title: icon ios-locked-outline
+si-ionic-ios-locked:
+  title: icon ios-locked
+si-ionic-ios-loop-strong:
+  title: icon ios-loop-strong
+si-ionic-ios-loop:
+  title: icon ios-loop
+si-ionic-ios-medical-outline:
+  title: icon ios-medical-outline
+si-ionic-ios-medical:
+  title: icon ios-medical
+si-ionic-ios-medkit-outline:
+  title: icon ios-medkit-outline
+si-ionic-ios-medkit:
+  title: icon ios-medkit
+si-ionic-ios-mic-off:
+  title: icon ios-mic-off
+si-ionic-ios-mic-outline:
+  title: icon ios-mic-outline
+si-ionic-ios-mic:
+  title: icon ios-mic
+si-ionic-ios-minus-empty:
+  title: icon ios-minus-empty
+si-ionic-ios-minus-outline:
+  title: icon ios-minus-outline
+si-ionic-ios-minus:
+  title: icon ios-minus
+si-ionic-ios-monitor-outline:
+  title: icon ios-monitor-outline
+si-ionic-ios-monitor:
+  title: icon ios-monitor
+si-ionic-ios-moon-outline:
+  title: icon ios-moon-outline
+si-ionic-ios-moon:
+  title: icon ios-moon
+si-ionic-ios-more-outline:
+  title: icon ios-more-outline
+si-ionic-ios-more:
+  title: icon ios-more
+si-ionic-ios-musical-note:
+  title: icon ios-musical-note
+si-ionic-ios-musical-notes:
+  title: icon ios-musical-notes
+si-ionic-ios-navigate-outline:
+  title: icon ios-navigate-outline
+si-ionic-ios-navigate:
+  title: icon ios-navigate
+si-ionic-ios-nutrition-outline:
+  title: icon ios-nutrition-outline
+si-ionic-ios-nutrition:
+  title: icon ios-nutrition
+si-ionic-ios-paper-outline:
+  title: icon ios-paper-outline
+si-ionic-ios-paper:
+  title: icon ios-paper
+si-ionic-ios-paperplane-outline:
+  title: icon ios-paperplane-outline
+si-ionic-ios-paperplane:
+  title: icon ios-paperplane
+si-ionic-ios-partlysunny-outline:
+  title: icon ios-partlysunny-outline
+si-ionic-ios-partlysunny:
+  title: icon ios-partlysunny
+si-ionic-ios-pause-outline:
+  title: icon ios-pause-outline
+si-ionic-ios-pause:
+  title: icon ios-pause
+si-ionic-ios-paw-outline:
+  title: icon ios-paw-outline
+si-ionic-ios-paw:
+  title: icon ios-paw
+si-ionic-ios-people-outline:
+  title: icon ios-people-outline
+si-ionic-ios-people:
+  title: icon ios-people
+si-ionic-ios-person-outline:
+  title: icon ios-person-outline
+si-ionic-ios-person:
+  title: icon ios-person
+si-ionic-ios-personadd-outline:
+  title: icon ios-personadd-outline
+si-ionic-ios-personadd:
+  title: icon ios-personadd
+si-ionic-ios-photos-outline:
+  title: icon ios-photos-outline
+si-ionic-ios-photos:
+  title: icon ios-photos
+si-ionic-ios-pie-outline:
+  title: icon ios-pie-outline
+si-ionic-ios-pie:
+  title: icon ios-pie
+si-ionic-ios-pint-outline:
+  title: icon ios-pint-outline
+si-ionic-ios-pint:
+  title: icon ios-pint
+si-ionic-ios-play-outline:
+  title: icon ios-play-outline
+si-ionic-ios-play:
+  title: icon ios-play
+si-ionic-ios-plus-empty:
+  title: icon ios-plus-empty
+si-ionic-ios-plus-outline:
+  title: icon ios-plus-outline
+si-ionic-ios-plus:
+  title: icon ios-plus
+si-ionic-ios-pricetag-outline:
+  title: icon ios-pricetag-outline
+si-ionic-ios-pricetag:
+  title: icon ios-pricetag
+si-ionic-ios-pricetags-outline:
+  title: icon ios-pricetags-outline
+si-ionic-ios-pricetags:
+  title: icon ios-pricetags
+si-ionic-ios-printer-outline:
+  title: icon ios-printer-outline
+si-ionic-ios-printer:
+  title: icon ios-printer
+si-ionic-ios-pulse-strong:
+  title: icon ios-pulse-strong
+si-ionic-ios-pulse:
+  title: icon ios-pulse
+si-ionic-ios-rainy-outline:
+  title: icon ios-rainy-outline
+si-ionic-ios-rainy:
+  title: icon ios-rainy
+si-ionic-ios-recording-outline:
+  title: icon ios-recording-outline
+si-ionic-ios-recording:
+  title: icon ios-recording
+si-ionic-ios-redo-outline:
+  title: icon ios-redo-outline
+si-ionic-ios-redo:
+  title: icon ios-redo
+si-ionic-ios-refresh-empty:
+  title: icon ios-refresh-empty
+si-ionic-ios-refresh-outline:
+  title: icon ios-refresh-outline
+si-ionic-ios-refresh:
+  title: icon ios-refresh
+si-ionic-ios-reload:
+  title: icon ios-reload
+si-ionic-ios-reverse-camera-outline:
+  title: icon ios-reverse-camera-outline
+si-ionic-ios-reverse-camera:
+  title: icon ios-reverse-camera
+si-ionic-ios-rewind-outline:
+  title: icon ios-rewind-outline
+si-ionic-ios-rewind:
+  title: icon ios-rewind
+si-ionic-ios-rose-outline:
+  title: icon ios-rose-outline
+si-ionic-ios-rose:
+  title: icon ios-rose
+si-ionic-ios-search-strong:
+  title: icon ios-search-strong
+si-ionic-ios-search:
+  title: icon ios-search
+si-ionic-ios-settings-strong:
+  title: icon ios-settings-strong
+si-ionic-ios-settings:
+  title: icon ios-settings
+si-ionic-ios-shuffle-strong:
+  title: icon ios-shuffle-strong
+si-ionic-ios-shuffle:
+  title: icon ios-shuffle
+si-ionic-ios-skipbackward-outline:
+  title: icon ios-skipbackward-outline
+si-ionic-ios-skipbackward:
+  title: icon ios-skipbackward
+si-ionic-ios-skipforward-outline:
+  title: icon ios-skipforward-outline
+si-ionic-ios-skipforward:
+  title: icon ios-skipforward
+si-ionic-ios-snowy:
+  title: icon ios-snowy
+si-ionic-ios-speedometer-outline:
+  title: icon ios-speedometer-outline
+si-ionic-ios-speedometer:
+  title: icon ios-speedometer
+si-ionic-ios-star-half:
+  title: icon ios-star-half
+si-ionic-ios-star-outline:
+  title: icon ios-star-outline
+si-ionic-ios-star:
+  title: icon ios-star
+si-ionic-ios-stopwatch-outline:
+  title: icon ios-stopwatch-outline
+si-ionic-ios-stopwatch:
+  title: icon ios-stopwatch
+si-ionic-ios-sunny-outline:
+  title: icon ios-sunny-outline
+si-ionic-ios-sunny:
+  title: icon ios-sunny
+si-ionic-ios-telephone-outline:
+  title: icon ios-telephone-outline
+si-ionic-ios-telephone:
+  title: icon ios-telephone
+si-ionic-ios-tennisball-outline:
+  title: icon ios-tennisball-outline
+si-ionic-ios-tennisball:
+  title: icon ios-tennisball
+si-ionic-ios-thunderstorm-outline:
+  title: icon ios-thunderstorm-outline
+si-ionic-ios-thunderstorm:
+  title: icon ios-thunderstorm
+si-ionic-ios-time-outline:
+  title: icon ios-time-outline
+si-ionic-ios-time:
+  title: icon ios-time
+si-ionic-ios-timer-outline:
+  title: icon ios-timer-outline
+si-ionic-ios-timer:
+  title: icon ios-timer
+si-ionic-ios-toggle-outline:
+  title: icon ios-toggle-outline
+si-ionic-ios-toggle:
+  title: icon ios-toggle
+si-ionic-ios-trash-outline:
+  title: icon ios-trash-outline
+si-ionic-ios-trash:
+  title: icon ios-trash
+si-ionic-ios-undo-outline:
+  title: icon ios-undo-outline
+si-ionic-ios-undo:
+  title: icon ios-undo
+si-ionic-ios-unlocked-outline:
+  title: icon ios-unlocked-outline
+si-ionic-ios-unlocked:
+  title: icon ios-unlocked
+si-ionic-ios-upload-outline:
+  title: icon ios-upload-outline
+si-ionic-ios-upload:
+  title: icon ios-upload
+si-ionic-ios-videocam-outline:
+  title: icon ios-videocam-outline
+si-ionic-ios-videocam:
+  title: icon ios-videocam
+si-ionic-ios-volume-high:
+  title: icon ios-volume-high
+si-ionic-ios-volume-low:
+  title: icon ios-volume-low
+si-ionic-ios-wineglass-outline:
+  title: icon ios-wineglass-outline
+si-ionic-ios-wineglass:
+  title: icon ios-wineglass
+si-ionic-ios-world-outline:
+  title: icon ios-world-outline
+si-ionic-ios-world:
+  title: icon ios-world
+si-ionic-ipad:
+  title: icon ipad
+si-ionic-iphone:
+  title: icon iphone
+si-ionic-ipod:
+  title: icon ipod
+si-ionic-jet:
+  title: icon jet
+si-ionic-key:
+  title: icon key
+si-ionic-knife:
+  title: icon knife
+si-ionic-laptop:
+  title: icon laptop
+si-ionic-leaf:
+  title: icon leaf
+si-ionic-levels:
+  title: icon levels
+si-ionic-lightbulb:
+  title: icon lightbulb
+si-ionic-link:
+  title: icon link
+si-ionic-load-a:
+  title: icon load-a
+si-ionic-load-b:
+  title: icon load-b
+si-ionic-load-c:
+  title: icon load-c
+si-ionic-load-d:
+  title: icon load-d
+si-ionic-location:
+  title: icon location
+si-ionic-lock-combination:
+  title: icon lock-combination
+si-ionic-locked:
+  title: icon locked
+si-ionic-log-in:
+  title: icon log-in
+si-ionic-log-out:
+  title: icon log-out
+si-ionic-loop:
+  title: icon loop
+si-ionic-magnet:
+  title: icon magnet
+si-ionic-male:
+  title: icon male
+si-ionic-man:
+  title: icon man
+si-ionic-map:
+  title: icon map
+si-ionic-medkit:
+  title: icon medkit
+si-ionic-merge:
+  title: icon merge
+si-ionic-mic-a:
+  title: icon mic-a
+si-ionic-mic-b:
+  title: icon mic-b
+si-ionic-mic-c:
+  title: icon mic-c
+si-ionic-minus-circled:
+  title: icon minus-circled
+si-ionic-minus-round:
+  title: icon minus-round
+si-ionic-minus:
+  title: icon minus
+si-ionic-model-s:
+  title: icon model-s
+si-ionic-monitor:
+  title: icon monitor
+si-ionic-more:
+  title: icon more
+si-ionic-mouse:
+  title: icon mouse
+si-ionic-music-note:
+  title: icon music-note
+si-ionic-navicon-round:
+  title: icon navicon-round
+si-ionic-navicon:
+  title: icon navicon
+si-ionic-navigate:
+  title: icon navigate
+si-ionic-network:
+  title: icon network
+si-ionic-no-smoking:
+  title: icon no-smoking
+si-ionic-nuclear:
+  title: icon nuclear
+si-ionic-outlet:
+  title: icon outlet
+si-ionic-paintbrush:
+  title: icon paintbrush
+si-ionic-paintbucket:
+  title: icon paintbucket
+si-ionic-paper-airplane:
+  title: icon paper-airplane
+si-ionic-paperclip:
+  title: icon paperclip
+si-ionic-pause:
+  title: icon pause
+si-ionic-person-add:
+  title: icon person-add
+si-ionic-person-stalker:
+  title: icon person-stalker
+si-ionic-person:
+  title: icon person
+si-ionic-pie-graph:
+  title: icon pie-graph
+si-ionic-pin:
+  title: icon pin
+si-ionic-pinpoint:
+  title: icon pinpoint
+si-ionic-pizza:
+  title: icon pizza
+si-ionic-plane:
+  title: icon plane
+si-ionic-planet:
+  title: icon planet
+si-ionic-play:
+  title: icon play
+si-ionic-playstation:
+  title: icon playstation
+si-ionic-plus-circled:
+  title: icon plus-circled
+si-ionic-plus-round:
+  title: icon plus-round
+si-ionic-plus:
+  title: icon plus
+si-ionic-podium:
+  title: icon podium
+si-ionic-pound:
+  title: icon pound
+si-ionic-power:
+  title: icon power
+si-ionic-pricetag:
+  title: icon pricetag
+si-ionic-pricetags:
+  title: icon pricetags
+si-ionic-printer:
+  title: icon printer
+si-ionic-pull-request:
+  title: icon pull-request
+si-ionic-qr-scanner:
+  title: icon qr-scanner
+si-ionic-quote:
+  title: icon quote
+si-ionic-radio-waves:
+  title: icon radio-waves
+si-ionic-record:
+  title: icon record
+si-ionic-refresh:
+  title: icon refresh
+si-ionic-reply-all:
+  title: icon reply-all
+si-ionic-reply:
+  title: icon reply
+si-ionic-ribbon-a:
+  title: icon ribbon-a
+si-ionic-ribbon-b:
+  title: icon ribbon-b
+si-ionic-sad-outline:
+  title: icon sad-outline
+si-ionic-sad:
+  title: icon sad
+si-ionic-scissors:
+  title: icon scissors
+si-ionic-search:
+  title: icon search
+si-ionic-settings:
+  title: icon settings
+si-ionic-share:
+  title: icon share
+si-ionic-shuffle:
+  title: icon shuffle
+si-ionic-skip-backward:
+  title: icon skip-backward
+si-ionic-skip-forward:
+  title: icon skip-forward
+si-ionic-social-android-outline:
+  title: icon social-android-outline
+si-ionic-social-android:
+  title: icon social-android
+si-ionic-social-angular-outline:
+  title: icon social-angular-outline
+si-ionic-social-angular:
+  title: icon social-angular
+si-ionic-social-apple-outline:
+  title: icon social-apple-outline
+si-ionic-social-apple:
+  title: icon social-apple
+si-ionic-social-bitcoin-outline:
+  title: icon social-bitcoin-outline
+si-ionic-social-bitcoin:
+  title: icon social-bitcoin
+si-ionic-social-buffer-outline:
+  title: icon social-buffer-outline
+si-ionic-social-buffer:
+  title: icon social-buffer
+si-ionic-social-chrome-outline:
+  title: icon social-chrome-outline
+si-ionic-social-chrome:
+  title: icon social-chrome
+si-ionic-social-codepen-outline:
+  title: icon social-codepen-outline
+si-ionic-social-codepen:
+  title: icon social-codepen
+si-ionic-social-css3-outline:
+  title: icon social-css3-outline
+si-ionic-social-css3:
+  title: icon social-css3
+si-ionic-social-designernews-outline:
+  title: icon social-designernews-outline
+si-ionic-social-designernews:
+  title: icon social-designernews
+si-ionic-social-dribbble-outline:
+  title: icon social-dribbble-outline
+si-ionic-social-dribbble:
+  title: icon social-dribbble
+si-ionic-social-dropbox-outline:
+  title: icon social-dropbox-outline
+si-ionic-social-dropbox:
+  title: icon social-dropbox
+si-ionic-social-euro-outline:
+  title: icon social-euro-outline
+si-ionic-social-euro:
+  title: icon social-euro
+si-ionic-social-facebook-outline:
+  title: icon social-facebook-outline
+si-ionic-social-facebook:
+  title: icon social-facebook
+si-ionic-social-foursquare-outline:
+  title: icon social-foursquare-outline
+si-ionic-social-foursquare:
+  title: icon social-foursquare
+si-ionic-social-freebsd-devil:
+  title: icon social-freebsd-devil
+si-ionic-social-github-outline:
+  title: icon social-github-outline
+si-ionic-social-github:
+  title: icon social-github
+si-ionic-social-google-outline:
+  title: icon social-google-outline
+si-ionic-social-google:
+  title: icon social-google
+si-ionic-social-googleplus-outline:
+  title: icon social-googleplus-outline
+si-ionic-social-googleplus:
+  title: icon social-googleplus
+si-ionic-social-hackernews-outline:
+  title: icon social-hackernews-outline
+si-ionic-social-hackernews:
+  title: icon social-hackernews
+si-ionic-social-html5-outline:
+  title: icon social-html5-outline
+si-ionic-social-html5:
+  title: icon social-html5
+si-ionic-social-instagram-outline:
+  title: icon social-instagram-outline
+si-ionic-social-instagram:
+  title: icon social-instagram
+si-ionic-social-javascript-outline:
+  title: icon social-javascript-outline
+si-ionic-social-javascript:
+  title: icon social-javascript
+si-ionic-social-linkedin-outline:
+  title: icon social-linkedin-outline
+si-ionic-social-linkedin:
+  title: icon social-linkedin
+si-ionic-social-markdown:
+  title: icon social-markdown
+si-ionic-social-nodejs:
+  title: icon social-nodejs
+si-ionic-social-octocat:
+  title: icon social-octocat
+si-ionic-social-pinterest-outline:
+  title: icon social-pinterest-outline
+si-ionic-social-pinterest:
+  title: icon social-pinterest
+si-ionic-social-python:
+  title: icon social-python
+si-ionic-social-reddit-outline:
+  title: icon social-reddit-outline
+si-ionic-social-reddit:
+  title: icon social-reddit
+si-ionic-social-rss-outline:
+  title: icon social-rss-outline
+si-ionic-social-rss:
+  title: icon social-rss
+si-ionic-social-sass:
+  title: icon social-sass
+si-ionic-social-skype-outline:
+  title: icon social-skype-outline
+si-ionic-social-skype:
+  title: icon social-skype
+si-ionic-social-snapchat-outline:
+  title: icon social-snapchat-outline
+si-ionic-social-snapchat:
+  title: icon social-snapchat
+si-ionic-social-tumblr-outline:
+  title: icon social-tumblr-outline
+si-ionic-social-tumblr:
+  title: icon social-tumblr
+si-ionic-social-tux:
+  title: icon social-tux
+si-ionic-social-twitch-outline:
+  title: icon social-twitch-outline
+si-ionic-social-twitch:
+  title: icon social-twitch
+si-ionic-social-twitter-outline:
+  title: icon social-twitter-outline
+si-ionic-social-twitter:
+  title: icon social-twitter
+si-ionic-social-usd-outline:
+  title: icon social-usd-outline
+si-ionic-social-usd:
+  title: icon social-usd
+si-ionic-social-vimeo-outline:
+  title: icon social-vimeo-outline
+si-ionic-social-vimeo:
+  title: icon social-vimeo
+si-ionic-social-whatsapp-outline:
+  title: icon social-whatsapp-outline
+si-ionic-social-whatsapp:
+  title: icon social-whatsapp
+si-ionic-social-windows-outline:
+  title: icon social-windows-outline
+si-ionic-social-windows:
+  title: icon social-windows
+si-ionic-social-wordpress-outline:
+  title: icon social-wordpress-outline
+si-ionic-social-wordpress:
+  title: icon social-wordpress
+si-ionic-social-yahoo-outline:
+  title: icon social-yahoo-outline
+si-ionic-social-yahoo:
+  title: icon social-yahoo
+si-ionic-social-yen-outline:
+  title: icon social-yen-outline
+si-ionic-social-yen:
+  title: icon social-yen
+si-ionic-social-youtube-outline:
+  title: icon social-youtube-outline
+si-ionic-social-youtube:
+  title: icon social-youtube
+si-ionic-soup-can-outline:
+  title: icon soup-can-outline
+si-ionic-soup-can:
+  title: icon soup-can
+si-ionic-speakerphone:
+  title: icon speakerphone
+si-ionic-speedometer:
+  title: icon speedometer
+si-ionic-spoon:
+  title: icon spoon
+si-ionic-star:
+  title: icon star
+si-ionic-stats-bars:
+  title: icon stats-bars
+si-ionic-steam:
+  title: icon steam
+si-ionic-stop:
+  title: icon stop
+si-ionic-thermometer:
+  title: icon thermometer
+si-ionic-thumbsdown:
+  title: icon thumbsdown
+si-ionic-thumbsup:
+  title: icon thumbsup
+si-ionic-toggle-filled:
+  title: icon toggle-filled
+si-ionic-toggle:
+  title: icon toggle
+si-ionic-transgender:
+  title: icon transgender
+si-ionic-trash-a:
+  title: icon trash-a
+si-ionic-trash-b:
+  title: icon trash-b
+si-ionic-trophy:
+  title: icon trophy
+si-ionic-tshirt-outline:
+  title: icon tshirt-outline
+si-ionic-tshirt:
+  title: icon tshirt
+si-ionic-umbrella:
+  title: icon umbrella
+si-ionic-university:
+  title: icon university
+si-ionic-unlocked:
+  title: icon unlocked
+si-ionic-upload:
+  title: icon upload
+si-ionic-usb:
+  title: icon usb
+si-ionic-videocamera:
+  title: icon videocamera
+si-ionic-volume-high:
+  title: icon volume-high
+si-ionic-volume-low:
+  title: icon volume-low
+si-ionic-volume-medium:
+  title: icon volume-medium
+si-ionic-volume-mute:
+  title: icon volume-mute
+si-ionic-wand:
+  title: icon wand
+si-ionic-waterdrop:
+  title: icon waterdrop
+si-ionic-wifi:
+  title: icon wifi
+si-ionic-wineglass:
+  title: icon wineglass
+si-ionic-woman:
+  title: icon woman
+si-ionic-wrench:
+  title: icon wrench
+si-ionic-xbox:
+  title: icon xbox

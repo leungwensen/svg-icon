@@ -1,0 +1,502 @@
+si-simple-500px:
+  title: logo of 500px
+si-simple-Diaspora:
+  title: logo of Diaspora
+si-simple-aboutme:
+  title: logo of aboutme
+si-simple-air:
+  title: logo of air
+si-simple-airbnb:
+  title: logo of airbnb
+si-simple-amazon:
+  title: logo of amazon
+si-simple-americanexpress:
+  title: logo of americanexpress
+si-simple-android:
+  title: logo of android
+si-simple-apple:
+  title: logo of apple
+si-simple-appnet:
+  title: logo of appnet
+si-simple-asana:
+  title: logo of asana
+si-simple-automatic:
+  title: logo of automatic
+si-simple-baidu:
+  title: logo of baidu
+si-simple-bandcamp:
+  title: logo of bandcamp
+si-simple-basecamp:
+  title: logo of basecamp
+si-simple-bathasu:
+  title: logo of bathasu
+si-simple-bebo:
+  title: logo of bebo
+si-simple-behance:
+  title: logo of behance
+si-simple-bigcartel:
+  title: logo of bigcartel
+si-simple-bing:
+  title: logo of bing
+si-simple-bitbucket:
+  title: logo of bitbucket
+si-simple-bitcoin:
+  title: logo of bitcoin
+si-simple-bitly:
+  title: logo of bitly
+si-simple-bootstrap:
+  title: logo of bootstrap
+si-simple-buzzfeed:
+  title: logo of buzzfeed
+si-simple-campaignmonitor:
+  title: logo of campaignmonitor
+si-simple-circleci:
+  title: logo of circleci
+si-simple-codecademy:
+  title: logo of codecademy
+si-simple-codepen:
+  title: logo of codepen
+si-simple-coderwall:
+  title: logo of coderwall
+si-simple-codeschool:
+  title: logo of codeschool
+si-simple-codio:
+  title: logo of codio
+si-simple-compropago:
+  title: logo of compropago
+si-simple-conekta:
+  title: logo of conekta
+si-simple-coop:
+  title: logo of coop
+si-simple-coursera:
+  title: logo of coursera
+si-simple-csswizardry:
+  title: logo of csswizardry
+si-simple-dailymotion:
+  title: logo of dailymotion
+si-simple-deezer:
+  title: logo of deezer
+si-simple-delicious:
+  title: logo of delicious
+si-simple-designernews:
+  title: logo of designernews
+si-simple-deviantart:
+  title: logo of deviantart
+si-simple-digg:
+  title: logo of digg
+si-simple-digitalocean:
+  title: logo of digitalocean
+si-simple-discord:
+  title: logo of discord
+si-simple-disqus:
+  title: logo of disqus
+si-simple-draugiemlv:
+  title: logo of draugiemlv
+si-simple-dribbble:
+  title: logo of dribbble
+si-simple-dropbox:
+  title: logo of dropbox
+si-simple-drupal:
+  title: logo of drupal
+si-simple-ebay:
+  title: logo of ebay
+si-simple-ello:
+  title: logo of ello
+si-simple-email:
+  title: logo of email
+si-simple-empirekred:
+  title: logo of empirekred
+si-simple-ethereum:
+  title: logo of ethereum
+si-simple-etsy:
+  title: logo of etsy
+si-simple-eventbrite:
+  title: logo of eventbrite
+si-simple-eventstore:
+  title: logo of eventstore
+si-simple-evernote:
+  title: logo of evernote
+si-simple-everplaces:
+  title: logo of everplaces
+si-simple-facebook:
+  title: logo of facebook
+si-simple-feedly:
+  title: logo of feedly
+si-simple-fitbit:
+  title: logo of fitbit
+si-simple-flickr:
+  title: logo of flickr
+si-simple-flipboard:
+  title: logo of flipboard
+si-simple-foursquare:
+  title: logo of foursquare
+si-simple-freecodecamp:
+  title: logo of freecodecamp
+si-simple-gauges:
+  title: logo of gauges
+si-simple-geeklist:
+  title: logo of geeklist
+si-simple-geocaching:
+  title: logo of geocaching
+si-simple-ghost:
+  title: logo of ghost
+si-simple-git:
+  title: logo of git
+si-simple-github:
+  title: logo of github
+si-simple-gitlab:
+  title: logo of gitlab
+si-simple-gitter:
+  title: logo of gitter
+si-simple-glassdoor:
+  title: logo of glassdoor
+si-simple-goldenline:
+  title: logo of goldenline
+si-simple-goodreads:
+  title: logo of goodreads
+si-simple-google:
+  title: logo of google
+si-simple-googleanalytics:
+  title: logo of googleanalytics
+si-simple-googledrive:
+  title: logo of googledrive
+si-simple-googleplay:
+  title: logo of googleplay
+si-simple-googleplus:
+  title: logo of googleplus
+si-simple-govuk:
+  title: logo of govuk
+si-simple-gratipay:
+  title: logo of gratipay
+si-simple-grav:
+  title: logo of grav
+si-simple-gravatar:
+  title: logo of gravatar
+si-simple-gulp:
+  title: logo of gulp
+si-simple-gumtree:
+  title: logo of gumtree
+si-simple-hatenabookmark:
+  title: logo of hatenabookmark
+si-simple-heroku:
+  title: logo of heroku
+si-simple-hipchat:
+  title: logo of hipchat
+si-simple-hootsuite:
+  title: logo of hootsuite
+si-simple-houzz:
+  title: logo of houzz
+si-simple-html5:
+  title: logo of html5
+si-simple-hulu:
+  title: logo of hulu
+si-simple-imdb:
+  title: logo of imdb
+si-simple-instacart:
+  title: logo of instacart
+si-simple-instagram:
+  title: logo of instagram
+si-simple-intercom:
+  title: logo of intercom
+si-simple-invision:
+  title: logo of invision
+si-simple-javascript:
+  title: logo of javascript
+si-simple-jekyll:
+  title: logo of jekyll
+si-simple-jenkins:
+  title: logo of jenkins
+si-simple-joomla:
+  title: logo of joomla
+si-simple-jsfiddle:
+  title: logo of jsfiddle
+si-simple-json:
+  title: logo of json
+si-simple-justgiving:
+  title: logo of justgiving
+si-simple-kaggle:
+  title: logo of kaggle
+si-simple-khanacademy:
+  title: logo of khanacademy
+si-simple-kickstarter:
+  title: logo of kickstarter
+si-simple-kik:
+  title: logo of kik
+si-simple-kirby:
+  title: logo of kirby
+si-simple-klout:
+  title: logo of klout
+si-simple-koding:
+  title: logo of koding
+si-simple-lanyrd:
+  title: logo of lanyrd
+si-simple-laravel:
+  title: logo of laravel
+si-simple-lastfm:
+  title: logo of lastfm
+si-simple-launchpad:
+  title: logo of launchpad
+si-simple-line:
+  title: logo of line
+si-simple-linkedin:
+  title: logo of linkedin
+si-simple-linuxfoundation:
+  title: logo of linuxfoundation
+si-simple-livejournal:
+  title: logo of livejournal
+si-simple-livestream:
+  title: logo of livestream
+si-simple-macys:
+  title: logo of macys
+si-simple-magento:
+  title: logo of magento
+si-simple-mailchimp:
+  title: logo of mailchimp
+si-simple-makerbot:
+  title: logo of makerbot
+si-simple-mastercard:
+  title: logo of mastercard
+si-simple-matternet:
+  title: logo of matternet
+si-simple-mediatemple:
+  title: logo of mediatemple
+si-simple-medium:
+  title: logo of medium
+si-simple-meetup:
+  title: logo of meetup
+si-simple-messenger:
+  title: logo of messenger
+si-simple-microgenetics:
+  title: logo of microgenetics
+si-simple-microsoft:
+  title: logo of microsoft
+si-simple-microsoftaccess:
+  title: logo of microsoftaccess
+si-simple-microsoftexcel:
+  title: logo of microsoftexcel
+si-simple-microsoftonenote:
+  title: logo of microsoftonenote
+si-simple-microsoftoutlook:
+  title: logo of microsoftoutlook
+si-simple-microsoftpowerpoint:
+  title: logo of microsoftpowerpoint
+si-simple-microsoftword:
+  title: logo of microsoftword
+si-simple-minecraft:
+  title: logo of minecraft
+si-simple-minutemailer:
+  title: logo of minutemailer
+si-simple-mixcloud:
+  title: logo of mixcloud
+si-simple-monkeytie:
+  title: logo of monkeytie
+si-simple-monogram:
+  title: logo of monogram
+si-simple-moo:
+  title: logo of moo
+si-simple-myspace:
+  title: logo of myspace
+si-simple-netflix:
+  title: logo of netflix
+si-simple-nintendo:
+  title: logo of nintendo
+si-simple-oculus:
+  title: logo of oculus
+si-simple-odnoklassniki:
+  title: logo of odnoklassniki
+si-simple-onedrive:
+  title: logo of onedrive
+si-simple-opera:
+  title: logo of opera
+si-simple-overcast:
+  title: logo of overcast
+si-simple-patreon:
+  title: logo of patreon
+si-simple-paypal:
+  title: logo of paypal
+si-simple-periscope:
+  title: logo of periscope
+si-simple-pingup:
+  title: logo of pingup
+si-simple-pinterest:
+  title: logo of pinterest
+si-simple-playerme:
+  title: logo of playerme
+si-simple-playstation:
+  title: logo of playstation
+si-simple-pocket:
+  title: logo of pocket
+si-simple-podcasts:
+  title: logo of podcasts
+si-simple-protoio:
+  title: logo of protoio
+si-simple-quantopian:
+  title: logo of quantopian
+si-simple-quora:
+  title: logo of quora
+si-simple-raspberrypi:
+  title: logo of raspberrypi
+si-simple-rdio:
+  title: logo of rdio
+si-simple-react:
+  title: logo of react
+si-simple-readability:
+  title: logo of readability
+si-simple-readthedocs:
+  title: logo of readthedocs
+si-simple-reddit:
+  title: logo of reddit
+si-simple-reverbnation:
+  title: logo of reverbnation
+si-simple-rss:
+  title: logo of rss
+si-simple-ruby:
+  title: logo of ruby
+si-simple-runkeeper:
+  title: logo of runkeeper
+si-simple-sass:
+  title: logo of sass
+si-simple-saucelabs:
+  title: logo of saucelabs
+si-simple-scribd:
+  title: logo of scribd
+si-simple-sega:
+  title: logo of sega
+si-simple-sellfy:
+  title: logo of sellfy
+si-simple-sentiayoga:
+  title: logo of sentiayoga
+si-simple-shopify:
+  title: logo of shopify
+si-simple-simpleicons:
+  title: logo of simpleicons
+si-simple-sinaweibo:
+  title: logo of sinaweibo
+si-simple-sitepoint:
+  title: logo of sitepoint
+si-simple-skype:
+  title: logo of skype
+si-simple-slack:
+  title: logo of slack
+si-simple-slides:
+  title: logo of slides
+si-simple-smashingmagazine:
+  title: logo of smashingmagazine
+si-simple-snapchat:
+  title: logo of snapchat
+si-simple-songkick:
+  title: logo of songkick
+si-simple-soundcloud:
+  title: logo of soundcloud
+si-simple-speakerdeck:
+  title: logo of speakerdeck
+si-simple-spotify:
+  title: logo of spotify
+si-simple-spreaker:
+  title: logo of spreaker
+si-simple-squarespace:
+  title: logo of squarespace
+si-simple-stackoverflow:
+  title: logo of stackoverflow
+si-simple-statamic:
+  title: logo of statamic
+si-simple-steam:
+  title: logo of steam
+si-simple-stitcher:
+  title: logo of stitcher
+si-simple-storify:
+  title: logo of storify
+si-simple-stripe:
+  title: logo of stripe
+si-simple-stubhub:
+  title: logo of stubhub
+si-simple-stumbleupon:
+  title: logo of stumbleupon
+si-simple-styleshare:
+  title: logo of styleshare
+si-simple-subversion:
+  title: logo of subversion
+si-simple-swarm:
+  title: logo of swarm
+si-simple-ted:
+  title: logo of ted
+si-simple-telegram:
+  title: logo of telegram
+si-simple-tesla:
+  title: logo of tesla
+si-simple-tinder:
+  title: logo of tinder
+si-simple-topcoder:
+  title: logo of topcoder
+si-simple-trakt:
+  title: logo of trakt
+si-simple-travisci:
+  title: logo of travisci
+si-simple-treehouse:
+  title: logo of treehouse
+si-simple-trello:
+  title: logo of trello
+si-simple-tripadvisor:
+  title: logo of tripadvisor
+si-simple-trulia:
+  title: logo of trulia
+si-simple-tumblr:
+  title: logo of tumblr
+si-simple-twilio:
+  title: logo of twilio
+si-simple-twitch:
+  title: logo of twitch
+si-simple-twitter:
+  title: logo of twitter
+si-simple-twoo:
+  title: logo of twoo
+si-simple-ubuntu:
+  title: logo of ubuntu
+si-simple-udacity:
+  title: logo of udacity
+si-simple-viadeo:
+  title: logo of viadeo
+si-simple-viber:
+  title: logo of viber
+si-simple-vimeo:
+  title: logo of vimeo
+si-simple-vine:
+  title: logo of vine
+si-simple-virb:
+  title: logo of virb
+si-simple-visa:
+  title: logo of visa
+si-simple-vk:
+  title: logo of vk
+si-simple-vuejs:
+  title: logo of vuejs
+si-simple-wechat:
+  title: logo of wechat
+si-simple-whatsapp:
+  title: logo of whatsapp
+si-simple-wikipedia:
+  title: logo of wikipedia
+si-simple-windows:
+  title: logo of windows
+si-simple-wix:
+  title: logo of wix
+si-simple-wordpress:
+  title: logo of wordpress
+si-simple-xbox:
+  title: logo of xbox
+si-simple-xero:
+  title: logo of xero
+si-simple-xing:
+  title: logo of xing
+si-simple-yahoo:
+  title: logo of yahoo
+si-simple-yammer:
+  title: logo of yammer
+si-simple-yelp:
+  title: logo of yelp
+si-simple-youtube:
+  title: logo of youtube
+si-simple-zapier:
+  title: logo of zapier
+si-simple-zillow:
+  title: logo of zillow
