@@ -27,6 +27,7 @@ flag-icon        | flag-           | https://github.com/lipis/flag-icon-css     
 flat-ui          | flat-           | https://github.com/designmodo/Flat-UI              | yes
 font-awesome     | awesome-        | https://github.com/FortAwesome/Font-Awesome        | yes
 foundation       | foundation-     | https://github.com/zurb/foundation-icon-fonts      | yes
+game-icons       | game-           | https://github.com/game-icons/icons                | yes
 geomicons-open   | geom-           | https://github.com/jxnblk/geomicons-open           | yes
 icomoon-free     | icomoon-        | https://github.com/Keyamoon/IcoMoon-Free           | yes
 ioncons          | ionic-          | https://github.com/driftyco/ionicons               | yes
