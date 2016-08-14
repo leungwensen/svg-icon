@@ -100,7 +100,7 @@ $('#download').on('click', () => {
   } else {
     const symbols = $.map(ids, (id) => {
       if ($(`#${id}`)[0]) {
-        return $(`#${id}`)[0].outerHTML;
+        return $(`#${id}`)[0].outerHTML.replace(/><\/path>/g, '/>');
       }
       return '';
     });

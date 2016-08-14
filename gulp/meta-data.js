@@ -20,7 +20,7 @@ lang.each(config.svgSpriteDirs, (dir) => {
             case dir === 'flag':
               title = `flag of ${basename}`;
               break;
-            case dir === 'logos' || dir === 'simple' ||  dir === 'payment' || dir === 'payment-web':
+            case dir === 'logos' || dir === 'simple' || dir === 'payment' || dir === 'payment-web':
               title = `logo of ${basename}`;
               break;
             case 'weather':
@@ -31,7 +31,7 @@ lang.each(config.svgSpriteDirs, (dir) => {
           }
           meta[`si-${dir}-${basename}`] = {
             title,
-          }
+          };
         }
       });
       fs.writeFileSync(targetFile, yaml.dump(meta), 'utf8');
