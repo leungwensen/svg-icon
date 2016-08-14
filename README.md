@@ -13,6 +13,27 @@ You can download as many SVG icons as you need in [homepage][homepage], or downl
 npm install svg-icon --save
 ```
 
+## custom element
+
+files:
+
+```
+dist/
+    ├── svg-icon-element.js
+    └── svg-icon-element.css
+```
+
+usage:
+
+```
+<svg-icon url="http://leungwensen.github.io/svg-icon/dist/sprite/symbol/logos.svg" type="si-logos-javascript"></svg-icon>
+```
+
+limitation:
+
+* [Can I use custom elements?](http://caniuse.com/#search=custom%20elements)
+* [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs)
+
 ## SVG icon collections
 
 name | id prefix | source | supported

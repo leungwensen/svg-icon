@@ -4,6 +4,7 @@
  * @module svg-icon-element
  * @see module:index
  */
+import './style/svg-icon-element.less';
 const svgIcon = Object.create(HTMLElement.prototype);
 
 function generateSvgIcon(url, id) {

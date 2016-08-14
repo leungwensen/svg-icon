@@ -5,7 +5,8 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     'dist/index': path.resolve(__dirname, './src/index.js'),
-    'spec/index': path.resolve(__dirname, './spec/index.spec.js')
+    'spec/index': path.resolve(__dirname, './spec/index.spec.js'),
+    'dist/svg-icon-element': path.resolve(__dirname, './src/svg-icon-element.js'),
   },
   output: {
     libraryTarget: 'var',
