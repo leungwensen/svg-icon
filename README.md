@@ -34,6 +34,18 @@ limitation:
 * [Can I use custom elements?](http://caniuse.com/#search=custom%20elements)
 * [webcomponentsjs](https://github.com/webcomponents/webcomponentsjs)
 
+## use it locally
+
+```shell
+# clone the project
+git clone https://github.com/leungwensen/svg-icon.git
+# install dependencies
+cd svg-icon
+npm i
+# startup a local server
+gulp
+```
+
 ## SVG icon collections
 
 name | id prefix | source | supported
