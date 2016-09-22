@@ -5,6 +5,13 @@
   "main": "index.js",
   "homepage": "https://github.com/leungwensen/svg-icon#readme",
   "scripts": {
+    "eslint": "gulp eslint",
+    "publish-all": "npm run push-all && npm publish && npm run sync-cnpm",
+    "push-all": "npm run push-master && npm run push-tags && npm run push-gh-pages",
+    "push-gh-pages": "git checkout gh-pages && git merge master && git push && git checkout master",
+    "push-master": "git checkout master && git push",
+    "push-tags": "git push --tag",
+    "sync-cnpm": "cnpm sync svg-icon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
