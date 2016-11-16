@@ -1,5 +1,14 @@
-svg-icon API文档
-====================
+svg-icon API
+============
 
-## 全局变量：`svgIcon`
+## command line client
 
+```shell
+$ svg-icon separate
+    --src(-s) ${source-dir}
+    --dist(-d) ${dist-dir}
+```
+
+## in browser
+
+## in NodeJS

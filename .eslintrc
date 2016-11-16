@@ -3,23 +3,23 @@
     "eslint-config-airbnb"
   ],
   "rules": {
+    "comma-dangle": 0,
+    "import/no-unresolved": 0,
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "strict": 0,
+    "id-length": [
+      2,
+      {
+        "min": 1
+      }
+    ],
     "max-len": [
       2,
       120,
       4,
       {
         "ignoreUrls": true
-      }
-    ],
-    "no-param-reassign": 0,
-    "no-underscore-dangle": 1,
-    "comma-dangle": 1,
-    "import/no-unresolved": 1,
-    "strict": 0,
-    "id-length": [
-      2,
-      {
-        "min": 1
       }
     ]
   }

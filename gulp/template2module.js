@@ -1,54 +1,55 @@
 const gulp = require('gulp');
-const gutil = require('gulp-util');
+const lang = require('zero-lang');
 const path = require('path');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const through = require('through2');
-const tpl2mod = require('template2module');
-const underscoreEngine = tpl2mod.engines.underscore;
-const lang = require('zero-lang');
-const config = require('./config');
+const util = require('gulp-util');
+const template2module = require('../common/template2module');
 
-underscoreEngine.outerScopeVars.JSON = true;
+const dirs = [
+  'lib',
+  'src',
+];
+function relative(pathname) {
+  return path.resolve(__dirname, pathname);
+}
 
-function renderTemplates() {
-  return through.obj(function render(file, enc, cb) {
+function render() {
+  return through.obj(function (file, enc, cb) {
+    const me = this;
     if (file.isNull()) {
-      this.push(file);
+      me.push(file);
       return cb();
     }
-
     if (file.isStream()) {
-      this.emit('error', new gutil.PluginError('template2module', 'Streaming not supported'));
+      me.emit('error', new util.PluginError('template2module', 'Streaming not supported'));
     }
 
     try {
-      gutil.log(file.path);
-      // @TODO add svg sprite file as needed, instead of putting the whole evil-icons svg file
-      const content = underscoreEngine.render(file.contents.toString('utf8'), file.path, 'commonjs');
-      file.contents = new Buffer(`/* eslint-disable */ ${content}`);
-    } catch (err) {
-      this.emit('error', new gutil.PluginError('template2module', err.toString()));
+      util.log(file.path);
+      file.contents = new Buffer(template2module(file.contents.toString('utf8'), file.path));
+    } catch (e) {
+      me.emit('error', new util.PluginError('template2module', e.toString()));
     }
-
-    this.push(file);
+    me.push(file);
     return cb();
-  });
+  })
 }
 
-lang.each(config.templateDirs, (dir) => {
-  gulp.task(`template2module-${dir}`, () =>
-    gulp.src(path.resolve(__dirname, `../${dir}/**/*.html`))
+lang.each(dirs, (dir) => {
+  gulp.task(
+    `template2module-${dir}`,
+    () => gulp.src(relative(`../${dir}/**/*.tpl`))
       .pipe(plumber())
-      .pipe(renderTemplates())
+      .pipe(render())
       .on('error', (err) => {
-        gutil.log(gutil.colors.red(err.message));
+        util.log(util.colors.red(err.message));
       })
       .pipe(rename((pathname) => {
         pathname.extname = '.js';
       }))
-      .pipe(gulp.dest(path.resolve(__dirname, `../${dir}/`))));
+      .pipe(gulp.dest(relative(`../${dir}/`)))
+  );
 });
-
-gulp.task('template2module', lang.map(config.templateDirs, (dir) => `template2module-${dir}`));
-
+gulp.task('template2module', lang.map(dirs, dir => `template2module-${dir}`));
