@@ -32,7 +32,7 @@ function parseImportTag(content, resourcePath) {
       const sourcePath = m.match(REGEXP.srcPath)[1];
       const absoluteSourcePath = path.resolve(path.dirname(resourcePath), sourcePath);
       const sourceOriginContent = fs.readFileSync(absoluteSourcePath, 'utf8');
-      const sourceDistContent = importing(sourceOriginContent, absoluteSourcePath);
+      const sourceDistContent = parseImportTag(sourceOriginContent, absoluteSourcePath);
       content = content.replace(m, sourceDistContent);
     });
   }
@@ -45,7 +45,7 @@ const lang = require('zero-lang');
 const __e = require('../../common/escape');
 `;
 
-module.exports = (str, pathname) => {
+module.exports = (content, pathname) => {
   const templateContent = parseSvgSpriteTag(parseImportTag(content, pathname))
     .replace(REGEXP.spacesBetweenTags, '><');
 

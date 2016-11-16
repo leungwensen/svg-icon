@@ -1,7 +1,12 @@
 {
   "extends": [
-    "eslint-config-airbnb"
+    "eslint:recommended"
   ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
   "rules": {
     "comma-dangle": 0,
     "import/no-unresolved": 0,

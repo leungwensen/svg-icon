@@ -20,7 +20,7 @@ module.exports = (invert) => {
     escapeMap = UNESCAPE_MAP;
   }
   const escaping = match => escapeMap[match];
-  const source = '(?:' + lang.keys(map).join('|') + ')';
+  const source = '(?:' + lang.keys(escapeMap).join('|') + ')';
   const testRegexp = RegExp(source);
   const replaceRegexp = RegExp(source, 'g');
   return function(str) {
