@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
-    "xml-lite": "^0.7.0",
+    "xml-lite": "^0.7.3",
     "zero-lang": "^0.2.1"
   },
   "devDependencies": {
