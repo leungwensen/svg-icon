@@ -51,5 +51,10 @@ lang.each(dirs, (dir) => {
       }))
       .pipe(gulp.dest(relative(`../${dir}/`)))
   );
+
+  gulp.task(`watch-templates-${dir}`, () => {
+    gulp.watch(relative(`../${dir}/**/*.tpl`), [`template2module-${dir}`]);
+  });
 });
 gulp.task('template2module', lang.map(dirs, dir => `template2module-${dir}`));
+gulp.task('watch-templates', lang.map(dirs, dir => `watch-templates-${dir}`));
