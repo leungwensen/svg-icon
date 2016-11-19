@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
+    "nightmare": "^2.8.1",
+    "svgo": "^0.7.1",
     "xml-lite": "^0.7.3",
     "zero-lang": "^0.2.1"
   },
