@@ -2,14 +2,14 @@
 const commander = require('commander');
 const fs = require('fs');
 const pkg = require('../package.json');
-const webFontsExtractor = require('../lib/extract-web-fonts');
+const extractSvgFonts = require('../lib/extract-svg-fonts');
 
 commander
   .version(pkg.version)
   .arguments('<file>')
   .action((file) => {
     if (file) {
-      webFontsExtractor(fs.readFileSync(file, 'utf8'), (result) => {
+      extractSvgFonts(fs.readFileSync(file, 'utf8'), (result) => {
         console.log(result);
       });
     }
