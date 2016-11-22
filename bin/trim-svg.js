@@ -13,9 +13,7 @@ commander
         console.log(result);
       });
     }
-  });
-
-commander.parse(process.argv);
+  }).parse(process.argv);
 
 if (process.argv.length === 2) {
   commander.outputHelp();
