@@ -1,3 +1,3 @@
 <symbol id="<%= id %>" viewBox="<%= viewBox %>">
-  <%= pathData %>
+  <%= body %>
 </symbol>
