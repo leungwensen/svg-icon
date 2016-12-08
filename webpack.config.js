@@ -9,8 +9,8 @@ function relative(pathname) {
 module.exports = {
   entry: {
     'dist/index': relative('./src/index.js'),
-    'dist/webcomponent-svg-icon': relative('./src/element/webcomponent.js'),
-    'dist/react-svg-icon': relative('./src/element/react.js'),
+    'dist/element/webcomponent': relative('./src/element/webcomponent.js'),
+    'dist/element/react': relative('./src/element/react.js'),
   },
   output: {
     libraryTarget: 'var',
@@ -31,7 +31,9 @@ module.exports = {
         exclude: /locale/,
         query: {
           presets: [
-            'es2015'
+            'es2015',
+            'react',
+            'stage-2'
           ]
         }
       },
@@ -59,5 +61,6 @@ module.exports = {
   ],
   externals: {
     jquery: 'jQuery',
+    react: 'React',
   },
 };

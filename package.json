@@ -18,7 +18,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pre-commit": [
-    "eslint"
   ],
   "repository": {
     "type": "git",
@@ -45,6 +44,8 @@
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
     "css-loader": "^0.25.0",
     "cssnano": "^3.8.0",
     "eslint": "^3.10.2",

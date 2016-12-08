@@ -10,10 +10,10 @@
   "rules": {
     "comma-dangle": 0,
     "import/no-unresolved": 0,
+    "no-console": 1,
     "no-param-reassign": 0,
     "no-underscore-dangle": 0,
     "no-unused-vars": 1,
-    "no-console": 1,
     "strict": 0,
     "id-length": [
       2,
