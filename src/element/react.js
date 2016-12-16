@@ -15,9 +15,9 @@ class SvgIcon extends Component {
     const url = props.url || '';
     const title = props.title || type;
     delete props.prefix;
+    delete props.title;
     delete props.type;
     delete props.url;
-    delete props.title;
 
     return (
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" data-type={type} {...props}>
