@@ -17,8 +17,7 @@
     "template2module": "gulp template2module",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "pre-commit": [
-  ],
+  "pre-commit": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leungwensen/svg-icon.git"
@@ -33,9 +32,12 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
+    "fstream": "^1.0.10",
     "jszip": "^3.1.3",
     "nightmare": "^2.8.1",
+    "shelljs": "^0.7.6",
     "svgo": "^0.7.1",
+    "unzip2": "^0.2.5",
     "xml-lite": "^0.7.3",
     "zero-lang": "^0.2.1"
   },
