@@ -24,6 +24,8 @@ function extractIcons(options) {
         if (!line) {
           return;
         }
+        // icon font pattern
+        // .glyphicon-asterisk { &:before { content: "\002a"; } }
         const match = /\.glyphicon-([^{\s]+)\s*\{\s*&:before\s*\{\s*content:\s*"\\([0-9a-f]+)"\s*;/.exec(line);
         if (match) {
           const name = match[1];

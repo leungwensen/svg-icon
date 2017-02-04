@@ -24,6 +24,8 @@ function extractIcons(options) {
         if (!line) {
           return;
         }
+        // icon font pattern
+        // @fa-var-500px: "\f26e";
         const match = /@fa-var-([^\s:]+)\s*:\s*"\\([0-9a-f]+)"\s*;/.exec(line);
         if (match) {
           const name = match[1];

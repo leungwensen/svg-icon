@@ -23,6 +23,8 @@ function extractIcons(options) {
         if (!line) {
           return;
         }
+        // icon font pattern
+        // .@{iconfont-css-prefix}-step-forward:before { content: "\e600"; }
         const match = /\.@\{iconfont-css-prefix}-([^:]+):before\s*\{\s*content:\s*"\\([0-9a-f]+)"\s*;/.exec(line);
         if (match) {
           const name = match[1];
