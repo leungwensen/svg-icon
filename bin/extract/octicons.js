@@ -9,6 +9,7 @@ const pkg = require('../../package.json');
 const extractSvgFiles = require('../../lib/extract-svg-files');
 const filterIcons = require('../../lib/filter-icons');
 const syncGitRepo = require('../sync-git-repo');
+const svgoOptionRemoveAllFill = require('../svgo-option/remove-all-fill');
 
 const URL_GIT_REPO = 'git@github.com:primer/octicons.git';
 const ICON_PATH = './lib/svg';
@@ -19,26 +20,7 @@ function extractIcons(options) {
   // less file for icon fonts
   syncGitRepo(URL_GIT_REPO, options.dir, () => {
     extractSvgFiles(path.join(options.dir, ICON_PATH), {
-      svgoInit: new SVGO({
-        plugins: [
-          {
-            removeAttrs: {
-              attrs: [
-                'baseProfile',
-                'class',
-                'data-name',
-                'svg:height',
-                'svg:id',
-                'svg:viewBox',
-                'svg:width',
-                // remove all fills
-                'fill',
-                'fill-rule',
-              ]
-            }
-          },
-        ]
-      }),
+      svgoInit: new SVGO(svgoOptionRemoveAllFill),
     }, (result) => {
       fs.writeFile(options.output, JSON.stringify(filterIcons(result), null, '\t'), (err) => {
         if (err) {

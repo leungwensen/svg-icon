@@ -9,6 +9,7 @@ const pkg = require('../../package.json');
 const extractSvgFiles = require('../../lib/extract-svg-files');
 const filterIcons = require('../../lib/filter-icons');
 const syncGitRepo = require('../sync-git-repo');
+const svgoOptionRemoveAllFill = require('../svgo-option/remove-all-fill');
 
 const URL_GIT_REPO = 'git@github.com:evil-icons/evil-icons.git';
 const ICON_PATH = './assets/icons/';
@@ -18,7 +19,9 @@ const DEFAULT_REPO_DIR = path.resolve(__dirname, '../../temp/.git-repo/evil-icon
 function extractIcons(options) {
   // less file for icon fonts
   syncGitRepo(URL_GIT_REPO, options.dir, () => {
-    extractSvgFiles(path.join(options.dir, ICON_PATH), {}, (result) => {
+    extractSvgFiles(path.join(options.dir, ICON_PATH), {
+      svgoInit: new SVGO(svgoOptionRemoveAllFill),
+    }, (result) => {
       lang.each(result, (icon) => {
         icon.name = lang.trim(icon.name).replace(/^ei-/, '');
       });
