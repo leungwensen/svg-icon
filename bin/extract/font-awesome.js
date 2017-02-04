@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// NOTICE: this is bootstrap v3
 const commander = require('commander');
 const fs = require('fs');
 const lang = require('zero-lang');
