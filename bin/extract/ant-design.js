@@ -12,7 +12,7 @@ const URL_THEME_LESS = 'https://raw.githubusercontent.com/ant-design/ant-design/
 const URL_ICON_LESS = 'https://raw.githubusercontent.com/ant-design/ant-design/master/components/style/core/iconfont.less';
 const DEFAULT_OUTPUT = path.resolve(__dirname, '../../dist/data/ant-design.json');
 
-function extractAntDesignIcons(options) {
+function extractIcons(options) {
   // less file for icon fonts
   request(URL_ICON_LESS, (iconLessErr, iconLessRes, iconLessBody) => {
     if (!iconLessErr && iconLessRes.statusCode === 200) {
@@ -76,4 +76,4 @@ commander
   .option('-o, --output [output]', 'output filename', DEFAULT_OUTPUT)
   .parse(process.argv);
 
-extractAntDesignIcons(commander);
+extractIcons(commander);
