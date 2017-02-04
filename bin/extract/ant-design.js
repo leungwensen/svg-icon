@@ -23,7 +23,7 @@ function extractIcons(options) {
         if (!line) {
           return;
         }
-        const match = /\.@\{iconfont-css-prefix}-([^:]+):before\s*\{\s*content:\s*"\\([0-9a-f]+)";/.exec(line);
+        const match = /\.@\{iconfont-css-prefix}-([^:]+):before\s*\{\s*content:\s*"\\([0-9a-f]+)"\s*;/.exec(line);
         if (match) {
           const name = match[1];
           const unicodeHex = match[2];

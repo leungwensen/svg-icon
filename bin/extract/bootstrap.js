@@ -24,7 +24,7 @@ function extractIcons(options) {
         if (!line) {
           return;
         }
-        const match = /\.glyphicon-([^{\s]+)\s*\{\s*&:before\s*\{\s*content:\s*"\\([0-9a-f]+)";/.exec(line);
+        const match = /\.glyphicon-([^{\s]+)\s*\{\s*&:before\s*\{\s*content:\s*"\\([0-9a-f]+)"\s*;/.exec(line);
         if (match) {
           const name = match[1];
           const unicodeHex = match[2];
@@ -57,7 +57,6 @@ function extractIcons(options) {
         } else {
           console.error(svgFontsErr, svgFontsRes);
         }
-
       });
     } else {
       console.error(iconLessErr, iconLessRes);
