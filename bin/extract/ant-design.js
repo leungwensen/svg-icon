@@ -41,7 +41,7 @@ function extractIcons(options) {
           // svg fonts file
           request(`${svgFontsUrl}.svg`, (svgFontsErr, svgFontsRes, svgFontsBody) => {
             if (!svgFontsErr && svgFontsRes.statusCode === 200) {
-              extractSvgFonts(svgFontsBody, (icons) => {
+              extractSvgFonts(svgFontsBody, {}, (icons) => {
                 lang.each(icons, (icon) => {
                   if (icon.unicode) {
                     const dec = icon.unicode.charCodeAt(0);

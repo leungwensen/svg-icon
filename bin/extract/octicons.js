@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const SVGO = require('svgo');
 const commander = require('commander');
 const fs = require('fs');
 const lang = require('zero-lang');
@@ -17,7 +18,28 @@ const DEFAULT_REPO_DIR = path.resolve(__dirname, '../../temp/.git-repo/octicons'
 function extractIcons(options) {
   // less file for icon fonts
   syncGitRepo(URL_GIT_REPO, options.dir, () => {
-    extractSvgFiles(path.join(options.dir, ICON_PATH), {}, (result) => {
+    extractSvgFiles(path.join(options.dir, ICON_PATH), {
+      svgoInit: new SVGO({
+        plugins: [
+          {
+            removeAttrs: {
+              attrs: [
+                'baseProfile',
+                'class',
+                'data-name',
+                'svg:height',
+                'svg:id',
+                'svg:viewBox',
+                'svg:width',
+                // remove all fills
+                'fill',
+                'fill-rule',
+              ]
+            }
+          },
+        ]
+      }),
+    }, (result) => {
       fs.writeFile(options.output, JSON.stringify(filterIcons(result), null, '\t'), (err) => {
         if (err) {
           console.error(err);

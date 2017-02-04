@@ -9,7 +9,7 @@ commander
   .arguments('<file>')
   .action((file) => {
     if (file) {
-      extractSvgFonts(fs.readFileSync(file, 'utf8'), (result) => {
+      extractSvgFonts(fs.readFileSync(file, 'utf8'), {}, (result) => {
         console.log(result);
       });
     }
