@@ -23,13 +23,13 @@ const COMMON_ICONS = [
   'map-color',
 ];
 
+// prepare options
 const svgoCommon = new SVGO(svgoOptionCommon);
 const svgoRemoveAllFill = new SVGO(svgoOptionRemoveAllFill);
 const options = {
   svgoInit: svgoRemoveAllFill,
   svgoMap: {},
 };
-
 lang.each(COMMON_ICONS, (iconName) => {
   options.svgoMap[iconName] = {
     init: svgoCommon
@@ -50,4 +50,3 @@ extractSvgFiles(DIRNAME, options, (result) => {
     }
   });
 });
-

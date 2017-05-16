@@ -14,7 +14,7 @@ const svgoOptionRemoveAllFill = require('../svgo-option/remove-all-fill');
 const URL_GIT_REPO = 'git@github.com:evil-icons/evil-icons.git';
 const ICON_PATH = './assets/icons/';
 const DEFAULT_OUTPUT = path.resolve(__dirname, '../../dist/data/evil-icons.json');
-const DEFAULT_REPO_DIR = path.resolve(__dirname, '../../temp/.git-repo/evil-icons');
+const DEFAULT_REPO_DIR = path.resolve(__dirname, '../../temp/git-repo/evil-icons');
 
 function extractIcons(options) {
   // less file for icon fonts
