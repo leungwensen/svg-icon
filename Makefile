@@ -10,7 +10,7 @@ all:
 
 # tasks
 preinstall:
-	npm  install -g cnpm --registry=http://registry.npm.taobao.org
+	npm  install -g cnpm --registry=https://registry.npmmirror.com
 install:
 	cnpm install
 	npm  install
